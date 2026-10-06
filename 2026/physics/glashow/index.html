@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#03060f">
+<title>IceCube's 6 PeV neutrino, replayed from the real data</title>
+<meta name="description" content="Replay the light of IceCube's 6 PeV particle shower of 8 December 2016, consistent with the Glashow resonance, sensor by sensor from the public data. Orbit, zoom and scrub through time. Educational demo made to show an open-source tool.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nobel 2026 Lab">
+<meta property="og:title" content="IceCube's 6 PeV neutrino, replayed from the real data">
+<meta property="og:description" content="18,135 light pulses on 453 sensors deep in the Antarctic ice, replayed in 3D from IceCube's public data. Orbit, zoom and scrub through time.">
+<meta property="og:url" content="https://faviovazquez.github.io/nobel-2026-lab/2026/physics/glashow/">
+<meta property="og:image" content="https://faviovazquez.github.io/nobel-2026-lab/2026/physics/glashow/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The IceCube detector drawn as faint dots on 86 vertical strings, with sensors near one corner glowing red to blue where the light of the shower arrived.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="IceCube's 6 PeV neutrino, replayed from the real data">
+<meta name="twitter:description" content="18,135 light pulses on 453 sensors deep in the Antarctic ice, replayed in 3D from IceCube's public data.">
+<meta name="twitter:image" content="https://faviovazquez.github.io/nobel-2026-lab/2026/physics/glashow/og.jpg">
+<style>
+:root {
+  --bg: #03060f; --fg: #e8eefc; --muted: #93a1c2; --dim: #61709a; --line: rgba(150, 175, 230, .18);
+  --panel: rgba(8, 13, 30, .78); --accent: #8fc3ff;
+  --pad: max(14px, env(safe-area-inset-left));
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg); overflow: hidden;
+  font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-text-size-adjust: 100%; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:hover { color: #fff; }
+canvas { position: fixed; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; cursor: grab; }
+canvas.drag { cursor: grabbing; }
+.ui { position: fixed; z-index: 2; }
+#top { top: 0; left: 0; right: 0; padding: max(14px, env(safe-area-inset-top)) var(--pad) 0; display: flex;
+  justify-content: space-between; align-items: flex-start; gap: 16px; pointer-events: none; }
+#top > * { pointer-events: auto; }
+.kicker { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 4px; }
+.kicker a { color: inherit; text-decoration: none; }
+h1 { font-size: clamp(20px, 2.6vw, 30px); line-height: 1.15; margin: 0; font-weight: 650; letter-spacing: -.01em;
+  text-shadow: 0 2px 18px #000; }
+.sub { margin: 6px 0 0; color: var(--muted); font-size: 14px; }
+#stats { display: flex; gap: 22px; text-align: right; font-variant-numeric: tabular-nums; flex: none; }
+#stats div { line-height: 1.15; }
+#stats b { font-size: 26px; font-weight: 600; color: #fff; }
+#stats .of { color: var(--dim); font-size: 14px; }
+#stats .lab { display: block; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: 3px; }
+#about { right: var(--pad); top: 118px; width: min(360px, calc(100vw - 2 * var(--pad))); background: var(--panel);
+  border: 1px solid var(--line); border-radius: 12px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  max-height: calc(100vh - 118px - 150px); overflow: auto; }
+#about summary { cursor: pointer; padding: 10px 14px; font-weight: 600; font-size: 14px; list-style: none; display: flex;
+  justify-content: space-between; align-items: center; }
+#about summary::-webkit-details-marker { display: none; }
+#about summary::after { content: "+"; color: var(--muted); font-weight: 400; font-size: 18px; }
+#about[open] summary::after { content: "\2212"; }
+#about .body { padding: 0 14px 12px; font-size: 14px; color: #cdd6ee; }
+#about p { margin: 0 0 9px; }
+#about .note { color: var(--muted); font-size: 13px; }
+#bottom { left: 0; right: 0; bottom: 0; padding: 0 var(--pad) max(10px, env(safe-area-inset-bottom));
+  background: linear-gradient(transparent, rgba(3, 6, 15, .85) 40%); }
+#bar { display: flex; align-items: center; gap: 12px; padding-top: 18px; }
+button { font: inherit; color: var(--fg); background: rgba(255, 255, 255, .07); border: 1px solid var(--line);
+  border-radius: 999px; height: 40px; min-width: 40px; padding: 0 12px; cursor: pointer; display: inline-flex;
+  align-items: center; justify-content: center; gap: 6px; flex: none; }
+button:hover { background: rgba(255, 255, 255, .14); }
+button:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+#play { width: 44px; height: 44px; padding: 0; background: #e8eefc; color: #03060f; border: 0; }
+#play svg { width: 18px; height: 18px; }
+#loop[aria-pressed="true"] { background: rgba(143, 195, 255, .22); border-color: var(--accent); }
+#loop svg { width: 16px; height: 16px; }
+.scrub { flex: 1; min-width: 0; position: relative; padding-bottom: 14px; }
+input[type=range] { width: 100%; margin: 0; height: 24px; background: transparent; -webkit-appearance: none; appearance: none; cursor: pointer; }
+input[type=range]::-webkit-slider-runnable-track { height: 4px; border-radius: 2px;
+  background: linear-gradient(90deg, #8fc3ff var(--p, 0%), rgba(255, 255, 255, .16) var(--p, 0%)); }
+input[type=range]::-moz-range-track { height: 4px; border-radius: 2px; background: rgba(255, 255, 255, .16); }
+input[type=range]::-moz-range-progress { height: 4px; border-radius: 2px; background: #8fc3ff; }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%; background: #fff;
+  margin-top: -6px; border: 0; box-shadow: 0 0 0 4px rgba(143, 195, 255, .25); }
+input[type=range]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: #fff; border: 0; }
+.ticks { position: absolute; left: 8px; right: 8px; bottom: 0; height: 12px; font-size: 10px; color: var(--dim);
+  font-variant-numeric: tabular-nums; pointer-events: none; }
+.ticks span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+#clock { font-variant-numeric: tabular-nums; min-width: 9.5em; text-align: right; font-size: 14px; color: #fff; flex: none; }
+#clock small { display: block; color: var(--muted); font-size: 11px; }
+#meta { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; margin-top: 6px; flex-wrap: wrap; }
+#legend { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); flex-wrap: wrap; }
+#legend .grad { width: 120px; height: 8px; border-radius: 4px;
+  background: linear-gradient(90deg, hsl(0 95% 58%), hsl(45 95% 58%), hsl(100 85% 55%), hsl(180 90% 55%), hsl(225 95% 65%)); }
+#legend .dots { display: inline-flex; align-items: center; gap: 3px; margin-left: 6px; }
+#legend .dots i { display: inline-block; border-radius: 50%; background: #cfe1ff; box-shadow: 0 0 6px #8fc3ff; }
+#credit { font-size: 11.5px; color: var(--dim); text-align: right; }
+#credit a { color: var(--muted); }
+#hint { position: fixed; left: 50%; bottom: 120px; transform: translateX(-50%); max-width: calc(100vw - 28px); text-align: center; z-index: 1; font-size: 13px; color: var(--muted);
+  background: rgba(3, 6, 15, .6); padding: 6px 12px; border-radius: 999px; pointer-events: none; transition: opacity .8s;
+  opacity: 0; }
+#hint.show { opacity: 1; }
+@media (max-width: 760px) {
+  body { font-size: 14px; }
+  #top { flex-direction: column; gap: 10px; }
+  h1 { font-size: 21px; }
+  .sub { font-size: 13px; margin-top: 3px; }
+  #stats { gap: 18px; text-align: left; }
+  #stats b { font-size: 21px; }
+  #about { top: auto; bottom: 168px; left: var(--pad); right: var(--pad); width: auto; max-height: calc(100vh - 340px); }
+  #about summary { padding: 8px 12px; }
+  #clock { min-width: 6.6em; font-size: 13px; }
+  #loop .t { display: none; }
+  #bar { gap: 9px; }
+  #meta { flex-direction: column; align-items: flex-start; gap: 6px; }
+  #credit { text-align: left; }
+  #legend .grad { width: 70px; }
+  #hint { bottom: auto; top: 172px; font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { #hint { transition: none; } }
+</style>
+</head>
+<body>
+<canvas id="c" aria-label="3D view of the IceCube detector: 5,160 light sensors on 86 strings; sensors glow as the light of the 8 December 2016 shower reaches them. Drag to orbit, scroll or pinch to zoom, double-click to reset." role="img"></canvas>
+
+<header id="top" class="ui">
+  <div>
+    <p class="kicker"><a href="https://faviovazquez.github.io/nobel-2026-lab/">Nobel 2026 Lab</a> · Physics</p>
+    <h1>IceCube's 6 PeV neutrino, replayed</h1>
+    <p class="sub">Every light pulse from the real data, as it reached the sensors in the ice</p>
+  </div>
+  <div id="stats" aria-live="off">
+    <div><b id="np">0</b> <span class="of">/ <span id="npt">18,135</span></span><span class="lab">light pulses shown</span></div>
+    <div><b id="ns">0</b> <span class="of">/ <span id="nst">453</span></span><span class="lab">sensors lit</span></div>
+  </div>
+</header>
+
+<details id="about" class="ui" open>
+  <summary>About this event</summary>
+  <div class="body">
+    <p><a href="https://icecube.wisc.edu/news/press-releases/2021/03/icecube-detection-of-a-high-energy-particle-proves-60-year-old-theory/" target="_blank" rel="noopener">On 8 December 2016</a>, the IceCube Neutrino Observatory at the South Pole recorded
+      <a href="https://arxiv.org/abs/2110.15051" target="_blank" rel="noopener">a shower with an energy of 6.05 ± 0.72 PeV</a>.</p>
+    <p>That is close to the energy of <a href="https://arxiv.org/abs/2110.15051" target="_blank" rel="noopener">the Glashow resonance</a>: an electron antineutrino hits an electron and forms a W<sup>−</sup> boson, with a peak at an antineutrino energy of 6.3 PeV. The event is consistent with the Glashow resonance.</p>
+    <p><a href="https://icecube.wisc.edu/news/press-releases/2021/03/icecube-detection-of-a-high-energy-particle-proves-60-year-old-theory/" target="_blank" rel="noopener">Sheldon Glashow first proposed this resonance in 1960</a>.</p>
+    <p class="note">How to read it: each faint dot is one of the 5,160 sensors on 86 strings. A sensor lights up when its first light arrives; its colour shows when (red first, then yellow, green and blue) and its size grows with the logarithm of the light it has collected so far. The <span id="span">17 µs</span> of the event are slowed down to 12 seconds, slowest at the start, where most of the light arrives; the clock shows the real time.</p>
+  </div>
+</details>
+
+<div id="hint">Drag to orbit · scroll or pinch to zoom · double-click to reset</div>
+
+<footer id="bottom" class="ui">
+  <div id="bar">
+    <button id="play" aria-label="Pause" title="Play / pause (space)"></button>
+    <div class="scrub">
+      <input id="scrub" type="range" min="0" max="1000" step="1" value="0" aria-label="Replay time">
+      <div class="ticks" id="ticks"></div>
+    </div>
+    <output id="clock" for="scrub">0 ns<small>since the first hit</small></output>
+    <button id="loop" aria-pressed="false" title="Loop the replay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg><span class="t">Loop</span></button>
+  </div>
+  <div id="meta">
+    <div id="legend"><span>first light</span><span>0</span><span class="grad" aria-hidden="true"></span><span id="lmax">4,000+ ns</span>
+      <span class="dots" aria-hidden="true"><i style="width:4px;height:4px"></i><i style="width:7px;height:7px"></i><i style="width:11px;height:11px"></i></span><span>size = log(charge)</span></div>
+    <div id="credit">Data: IceCube Collaboration, <a href="https://doi.org/10.21234/gr2021" target="_blank" rel="noopener">DOI 10.21234/gr2021</a>. Drawn by <a href="https://faviovazquez.github.io/nobel-2026-lab/">nobel-2026-lab</a>; not an official IceCube visualisation.<br>Educational demo made to show an open-source tool.</div>
+  </div>
+</footer>
+
+<script src="event.js"></script>
+<script>
+(() => {
+  "use strict";
+  const G = window.GLASHOW;
+  const NS = G.n_sensors, NOM = 60, T_END = G.t_end, DUR = 12; // replay length [s]
+  const C_MAX = Math.ceil(G.first_hit_p95 / 1000) * 1000;      // colour scale top [ns]
+  const fmt = (n) => Math.round(n).toLocaleString("en-US");
+  const $ = (id) => document.getElementById(id);
+
+  // ---- geometry (IceCube coordinates, metres, z up)
+  const X = new Float32Array(NS), Y = new Float32Array(NS), Z = new Float32Array(NS);
+  for (let i = 0; i < NS; i++) { const s = (i / NOM) | 0; X[i] = G.sx[s]; Y[i] = G.sy[s]; Z[i] = G.z[i]; }
+  const P = G.pulses, NP = P.length / 3;
+  const firstT = new Float32Array(NS).fill(Infinity);
+  for (const h of G.hits) firstT[h[0]] = h[1];
+  const hitIdx = G.hits.map((h) => h[0]);
+  // camera target: between the detector centre and the light-weighted centre of the event
+  let ex = 0, ey = 0, ez = 0, ew = 0;
+  for (const [i, , q] of G.hits) { ex += q * X[i]; ey += q * Y[i]; ez += q * Z[i]; ew += q; }
+  const TARGET = [0.42 * ex / ew, 0.42 * ey / ew, 0.25 * ez / ew];
+  const SURF = G.surface_z;
+
+  // ---- replay clock: u in [0, 1] -> real time t = T_END * u^2 (slow start, where most light arrives)
+  const tOf = (u) => T_END * u * u, uOf = (t) => Math.sqrt(Math.max(0, t) / T_END);
+
+  // ---- view
+  const HOME = { yaw: -1.0, pitch: 0.3, zoom: 1 };
+  const view = { ...HOME };
+  const canvas = $("c"), ctx = canvas.getContext("2d");
+  let W = 0, H = 0, DPR = 1, cx = 0, cy = 0, fit = 1, bg = null;
+  const DIST = 3200;
+
+  function layout() {
+    DPR = Math.min(window.devicePixelRatio || 1, 2);
+    W = innerWidth; H = innerHeight;
+    canvas.width = Math.round(W * DPR); canvas.height = Math.round(H * DPR);
+    const mobile = W <= 760;
+    const topB = mobile ? $("stats").getBoundingClientRect().bottom : $("top").getBoundingClientRect().bottom;
+    const botT = $("bottom").getBoundingClientRect().top + 14;
+    const rightPanel = !mobile && $("about").open ? $("about").getBoundingClientRect().width + 20 : 0;
+    const aw = W - rightPanel, ah = Math.max(160, botT - topB);
+    cx = aw / 2; cy = topB + ah / 2;
+    fit = Math.min(aw / (mobile ? 1380 : 1500), ah / 1480);
+    bg = document.createElement("canvas"); bg.width = canvas.width; bg.height = canvas.height;
+    const b = bg.getContext("2d");
+    const g = b.createRadialGradient(cx * DPR, cy * DPR, 0, cx * DPR, cy * DPR, Math.max(W, H) * 0.75 * DPR);
+    g.addColorStop(0, "#0b1430"); g.addColorStop(0.55, "#050a1a"); g.addColorStop(1, "#020409");
+    b.fillStyle = g; b.fillRect(0, 0, bg.width, bg.height);
+    dirty = true;
+  }
+
+  // projected positions
+  const SX = new Float32Array(NS), SY = new Float32Array(NS), SD = new Float32Array(NS), SK = new Float32Array(NS);
+  let cyw, syw, cp, sp, F;
+  function setCam() {
+    cyw = Math.cos(view.yaw); syw = Math.sin(view.yaw); cp = Math.cos(view.pitch); sp = Math.sin(view.pitch);
+    F = DIST * fit * view.zoom;
+  }
+  function proj(x, y, z, out) {
+    x -= TARGET[0]; y -= TARGET[1]; z -= TARGET[2];
+    const x1 = x * cyw - y * syw, y1 = x * syw + y * cyw;
+    const up = z * cp - y1 * sp, d = y1 * cp + z * sp, zc = DIST + d, k = F / zc;
+    out[0] = cx + x1 * k; out[1] = cy - up * k; out[2] = d; out[3] = k;
+    return out;
+  }
+
+  // glow sprites, one per colour bucket
+  const NB = 48, SPR = 64, sprites = [];
+  const hueOf = (t) => 230 * Math.min(1, Math.max(0, t / C_MAX));
+  for (let b = 0; b < NB; b++) {
+    const h = 230 * b / (NB - 1), c = document.createElement("canvas");
+    c.width = c.height = SPR;
+    const x = c.getContext("2d"), g = x.createRadialGradient(SPR / 2, SPR / 2, 0, SPR / 2, SPR / 2, SPR / 2);
+    g.addColorStop(0, `hsla(${h},100%,92%,1)`); g.addColorStop(0.12, `hsla(${h},100%,68%,.95)`);
+    g.addColorStop(0.35, `hsla(${h},100%,55%,.42)`); g.addColorStop(0.7, `hsla(${h},100%,50%,.1)`);
+    g.addColorStop(1, `hsla(${h},100%,50%,0)`);
+    x.fillStyle = g; x.fillRect(0, 0, SPR, SPR);
+    sprites.push(c);
+  }
+
+  // ---- state
+  let u = 0, playing = true, loop = false, endHold = 0, autoSpin = true, dirty = true, last = performance.now();
+  const qNow = new Float32Array(NS);
+  let shownPulses = 0, litSensors = 0;
+  function accumulate(t) {
+    qNow.fill(0); let n = 0;
+    while (n < NP && P[3 * n + 1] <= t) { qNow[P[3 * n]] += P[3 * n + 2]; n++; }
+    shownPulses = n; litSensors = 0;
+    for (const i of hitIdx) if (firstT[i] <= t) litSensors++;
+  }
+
+  const tmp = [0, 0, 0, 0];
+  function draw() {
+    const t = tOf(u);
+    accumulate(t);
+    setCam();
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.globalCompositeOperation = "source-over";
+    ctx.drawImage(bg, 0, 0);
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    for (let i = 0; i < NS; i++) { proj(X[i], Y[i], Z[i], tmp); SX[i] = tmp[0]; SY[i] = tmp[1]; SD[i] = tmp[2]; SK[i] = tmp[3]; }
+    const fog = (d) => Math.min(1, Math.max(0.18, 0.62 - d / 1500));
+    // strings
+    ctx.lineWidth = 1;
+    for (let s = 0; s < 86; s++) {
+      const a = s * NOM, b = a + NOM - 1;
+      ctx.strokeStyle = `rgba(120,150,215,${0.13 * fog(SD[a])})`;
+      ctx.beginPath(); ctx.moveTo(SX[a], SY[a]); ctx.lineTo(SX[b], SY[b]); ctx.stroke();
+    }
+    // sensors
+    const ds = Math.max(1, Math.min(2.2, fit * view.zoom * 2.1));
+    for (let i = 0; i < NS; i++) {
+      if (qNow[i] > 0) continue;
+      ctx.fillStyle = `rgba(165,190,240,${0.55 * fog(SD[i])})`;
+      ctx.fillRect(SX[i] - ds / 2, SY[i] - ds / 2, ds, ds);
+    }
+    drawScale();
+    // hits: a soft additive halo, then solid cores drawn back to front
+    const lit = [];
+    for (const i of hitIdx) if (qNow[i] > 0) lit.push(i);
+    lit.sort((a, b) => SD[b] - SD[a]);
+    const coreR = new Float32Array(lit.length), flashA = new Float32Array(lit.length);
+    ctx.globalCompositeOperation = "lighter";
+    lit.forEach((i, n) => {
+      const flash = Math.max(0, 1 - (t - firstT[i]) / 260);
+      coreR[n] = Math.max(1.6, (2.5 + 4.2 * Math.log10(1 + qNow[i])) * SK[i]);
+      flashA[n] = flash;
+      const r = coreR[n] * (3.2 + 3 * flash), b = Math.round(hueOf(firstT[i]) / 230 * (NB - 1));
+      ctx.globalAlpha = 0.16 + 0.5 * flash;
+      ctx.drawImage(sprites[b], SX[i] - r, SY[i] - r, 2 * r, 2 * r);
+    });
+    ctx.globalCompositeOperation = "source-over";
+    lit.forEach((i, n) => {
+      const h = hueOf(firstT[i]), f = fog(SD[i]);
+      ctx.globalAlpha = 0.75 + 0.25 * f;
+      ctx.fillStyle = `hsl(${h.toFixed(0)} 95% ${(56 + 30 * flashA[n]).toFixed(0)}%)`;
+      ctx.beginPath(); ctx.arc(SX[i], SY[i], coreR[n], 0, 6.2832); ctx.fill();
+    });
+    ctx.globalAlpha = 1;
+    ctx.globalCompositeOperation = "source-over";
+    hud(t);
+  }
+
+  function line3(a, b, style, w) {
+    const p = proj(a[0], a[1], a[2], [0, 0, 0, 0]), q = proj(b[0], b[1], b[2], [0, 0, 0, 0]);
+    ctx.strokeStyle = style; ctx.lineWidth = w;
+    ctx.beginPath(); ctx.moveTo(p[0], p[1]); ctx.lineTo(q[0], q[1]); ctx.stroke();
+    return [p, q];
+  }
+  function label(p, text, dx, dy, align) {
+    ctx.textAlign = align || "left"; ctx.fillText(text, p[0] + dx, p[1] + dy);
+  }
+  function drawScale() {
+    // scale cues kept square to the view, at the depth of the detector's centre:
+    // a depth bar (1,450-2,450 m below the surface) at the left edge and a 1 km bar under the strings
+    const zt = SURF - 1450, zb = SURF - 2450, rx = cyw, ry = -syw, zf = -640;
+    const at = (s, z) => [s * rx, s * ry, z];
+    let o = -660;
+    for (const z of [zt, zb]) { const p = proj(...at(o, z), [0, 0, 0, 0]); if (p[0] < 10) o += (10 - p[0]) / p[3]; }
+    const st = "rgba(190,205,240,.6)";
+    ctx.font = "11px system-ui, -apple-system, Segoe UI, Roboto, sans-serif";
+    const [a, b] = line3(at(o, zt), at(o, zb), st, 1.2);
+    for (let k = 0; k <= 10; k++) line3(at(o, zt - k * 100), at(o + (k % 5 ? 12 : 26), zt - k * 100), "rgba(190,205,240,.42)", 1);
+    ctx.fillStyle = "rgba(190,205,240,.85)";
+    label(a, "1,450 m below the surface", -2, -8, "left");
+    label(b, "2,450 m", -2, 17, "left");
+    ctx.fillStyle = "#fff";
+    label([(a[0] + b[0]) / 2, (a[1] + b[1]) / 2], "1 km", 32, 4, "left");
+    let m0 = 0;
+    const pl = proj(...at(-500, zf), [0, 0, 0, 0]);
+    if (pl[0] < 10) m0 += (10 - pl[0]) / pl[3];
+    const [c, d] = line3(at(m0 - 500, zf), at(m0 + 500, zf), st, 1.2);
+    line3(at(m0 - 500, zf - 18), at(m0 - 500, zf + 18), st, 1.2);
+    line3(at(m0 + 500, zf - 18), at(m0 + 500, zf + 18), st, 1.2);
+    label([(c[0] + d[0]) / 2, (c[1] + d[1]) / 2], "1 km", 0, 17, "center");
+  }
+
+  // ---- HUD
+  const np = $("np"), ns = $("ns"), clock = $("clock"), scrub = $("scrub"), play = $("play");
+  $("npt").textContent = fmt(G.n_pulses); $("nst").textContent = fmt(G.n_hit);
+  $("lmax").textContent = fmt(C_MAX) + "+ ns";
+  $("span").textContent = (T_END / 1000).toFixed(1) + " µs";
+  let lastHud = "";
+  function hud(t) {
+    const key = shownPulses + "|" + litSensors + "|" + Math.round(t) + "|" + Math.round(u * 1000);
+    if (key === lastHud) return;
+    lastHud = key;
+    np.textContent = fmt(shownPulses); ns.textContent = fmt(litSensors);
+    clock.innerHTML = `${fmt(t)} ns<small>since the first hit</small>`;
+    if (document.activeElement !== scrub || playing) scrub.value = Math.round(u * 1000);
+    scrub.style.setProperty("--p", (u * 100).toFixed(2) + "%");
+  }
+  const ICON_PLAY = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>';
+  const ICON_PAUSE = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="5.5" y="4" width="4.5" height="16" rx="1"/><rect x="14" y="4" width="4.5" height="16" rx="1"/></svg>';
+  const ICON_AGAIN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>';
+  function setPlaying(p) {
+    playing = p;
+    play.innerHTML = p ? ICON_PAUSE : (u >= 1 ? ICON_AGAIN : ICON_PLAY);
+    play.setAttribute("aria-label", p ? "Pause" : (u >= 1 ? "Replay" : "Play"));
+    dirty = true;
+  }
+  function togglePlay() {
+    if (playing) return setPlaying(false);
+    if (u >= 1) u = 0;
+    endHold = 0; setPlaying(true);
+  }
+  play.addEventListener("click", togglePlay);
+  $("loop").addEventListener("click", (e) => {
+    loop = !loop; e.currentTarget.setAttribute("aria-pressed", String(loop));
+    if (loop && !playing) { if (u >= 1) u = 0; setPlaying(true); }
+  });
+  scrub.addEventListener("input", () => { u = scrub.value / 1000; setPlaying(false); });
+  addEventListener("keydown", (e) => {
+    if (e.code === "Space" && e.target === document.body) { e.preventDefault(); togglePlay(); }
+  });
+  // ticks at real times, placed on the slowed-down clock
+  const ticks = $("ticks");
+  for (const us of [0, 1, 2, 4, 8, 16]) {
+    if (us * 1000 > T_END) continue;
+    const s = document.createElement("span");
+    s.style.left = (uOf(us * 1000) * 100).toFixed(2) + "%";
+    s.textContent = us === 0 ? "0" : us === 16 ? "16 µs" : String(us);
+    ticks.appendChild(s);
+  }
+
+  // ---- orbit, zoom, reset
+  const ptrs = new Map();
+  let pinch0 = 0, zoom0 = 1, lastTap = 0, moved = 0;
+  const stopSpin = () => { autoSpin = false; $("hint").classList.remove("show"); };
+  canvas.addEventListener("pointerdown", (e) => {
+    canvas.setPointerCapture(e.pointerId); ptrs.set(e.pointerId, [e.clientX, e.clientY]); moved = 0;
+    canvas.classList.add("drag"); stopSpin();
+    if (ptrs.size === 2) { const [a, b] = [...ptrs.values()]; pinch0 = Math.hypot(a[0] - b[0], a[1] - b[1]); zoom0 = view.zoom; }
+  });
+  canvas.addEventListener("pointermove", (e) => {
+    if (!ptrs.has(e.pointerId)) return;
+    const prev = ptrs.get(e.pointerId), dx = e.clientX - prev[0], dy = e.clientY - prev[1];
+    ptrs.set(e.pointerId, [e.clientX, e.clientY]); moved += Math.abs(dx) + Math.abs(dy);
+    if (ptrs.size === 1) {
+      view.yaw += dx * 0.006;
+      view.pitch = Math.max(-0.35, Math.min(1.45, view.pitch + dy * 0.005));
+    } else if (ptrs.size === 2 && pinch0) {
+      const [a, b] = [...ptrs.values()];
+      view.zoom = clampZoom(zoom0 * Math.hypot(a[0] - b[0], a[1] - b[1]) / pinch0);
+    }
+    dirty = true;
+  });
+  const up = (e) => {
+    ptrs.delete(e.pointerId); if (ptrs.size < 2) pinch0 = 0;
+    if (!ptrs.size) canvas.classList.remove("drag");
+    if (e.type === "pointerup" && e.pointerType !== "mouse" && moved < 10) {
+      const now = performance.now();
+      if (now - lastTap < 320) reset();
+      lastTap = now;
+    }
+  };
+  canvas.addEventListener("pointerup", up); canvas.addEventListener("pointercancel", up);
+  const clampZoom = (z) => Math.max(0.45, Math.min(5, z));
+  canvas.addEventListener("wheel", (e) => {
+    e.preventDefault(); stopSpin();
+    view.zoom = clampZoom(view.zoom * Math.exp(-e.deltaY * (e.deltaMode ? 0.05 : 0.0015))); dirty = true;
+  }, { passive: false });
+  function reset() { Object.assign(view, HOME); dirty = true; }
+  canvas.addEventListener("dblclick", reset);
+
+  // ---- loop
+  function frame(now) {
+    const dt = Math.min(0.1, (now - last) / 1000); last = now;
+    if (playing) {
+      if (u >= 1) {
+        endHold += dt;
+        if (loop && endHold > 2) { u = 0; endHold = 0; } else if (!loop) setPlaying(false);
+      } else u = Math.min(1, u + dt / DUR);
+      dirty = true;
+    }
+    if (autoSpin) { view.yaw += dt * 0.06; dirty = true; }
+    if (dirty) { dirty = false; draw(); }
+    requestAnimationFrame(frame);
+  }
+  const about = $("about");
+  if (innerWidth <= 760) about.open = false;
+  about.addEventListener("toggle", layout);
+  addEventListener("resize", layout);
+  layout(); setPlaying(true);
+  if (matchMedia("(pointer: coarse)").matches) $("hint").textContent = "Drag to orbit · pinch to zoom · double-tap to reset";
+  setTimeout(() => { if (autoSpin) $("hint").classList.add("show"); }, 1200);
+  setTimeout(() => $("hint").classList.remove("show"), 7000);
+  requestAnimationFrame((t) => { last = t; frame(t); });
+
+  // hooks for tests and screenshots
+  window.GV = {
+    seek(x) { u = Math.max(0, Math.min(1, x)); setPlaying(false); dirty = true; },
+    play() { if (u >= 1) u = 0; setPlaying(true); },
+    view(v) { Object.assign(view, v); dirty = true; },
+    still() { autoSpin = false; $("hint").classList.remove("show"); dirty = true; },
+    state: () => ({ u, t: tOf(u), playing, yaw: view.yaw, pitch: view.pitch, zoom: view.zoom, shownPulses, litSensors }),
+  };
+})();
+</script>
+</body>
+</html>

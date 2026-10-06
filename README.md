@@ -28,7 +28,7 @@ Every October the Nobel Prizes are announced. This repository turns each prize i
 | Prize | 2026 topic | Folder | Status |
 |---|---|---|---|
 | Medicine | Light-gated ion channels and optogenetics: Karl Deisseroth, Peter Hegemann, Georg Nagel | [2026/medicine](2026/medicine/README.md) | facts, claims ledger (27 claims), pictures, simulator, heat budget and interactive page done and independently reviewed; video done |
-| Physics | Neutrino astronomy: Francis Halzen, for the IceCube Neutrino Observatory (announced 6 October) | none yet | coming |
+| Physics | Neutrino astronomy: Francis Halzen, for the IceCube Neutrino Observatory (announced 6 October) | [2026/physics/glashow](2026/physics/glashow/README.md) | first piece: [replay IceCube's real 6 PeV event in 3D](https://faviovazquez.github.io/nobel-2026-lab/2026/physics/glashow/); more coming |
 | Chemistry | to be announced | none yet | coming |
 | Economics | to be announced | none yet | coming |
 

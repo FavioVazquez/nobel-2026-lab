@@ -7,7 +7,7 @@ One folder per Nobel Prize. A folder is added when its prize has been announced 
 | Prize | 2026 topic | Folder | Status |
 |---|---|---|---|
 | Medicine | Light-gated ion channels and optogenetics | [medicine](medicine/README.md) | done |
-| Physics | Neutrino astronomy: Francis Halzen, for the IceCube Neutrino Observatory (announced 6 October) | none yet | coming |
+| Physics | Neutrino astronomy: Francis Halzen, for the IceCube Neutrino Observatory (announced 6 October) | [physics/glashow](physics/glashow/README.md) | first piece ready (3D replay of the 6 PeV event); more coming |
 | Chemistry | to be announced | none yet | coming |
 | Economics | to be announced | none yet | coming |
 
