@@ -1,0 +1,26 @@
+{
+  "status": "fixture",
+  "p_interact_1km": {
+    "100TeV": 1.73e-05,
+    "1PeV": 5.4e-05
+  },
+  "one_in_N_100TeV": 57686,
+  "earth_survival_vertical": {
+    "100TeV": 0.127,
+    "1PeV": 0.00161
+  },
+  "events_per_year": {
+    "10m": 9e-06,
+    "100m": 0.009000000000000001,
+    "1km": 9.0
+  },
+  "hese_check": {
+    "observed_per_year_above_60TeV": 8.0,
+    "ours_1km3_per_year": 9.0,
+    "note": "placeholder fixture"
+  },
+  "sources": {
+    "cross_sections": "nuFATE tables (placeholder use)"
+  },
+  "label": "our toy model, trend only"
+}

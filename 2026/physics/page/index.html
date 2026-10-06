@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Catching neutrinos: guess first, then see (IceCube toy models)</title>
+<meta name="description" content="Guess first, then see: the odds that a neutrino interacts in a kilometre of ice, how big a detector must be, and how string spacing sets a telescope's aim. Toy models for the 2026 Nobel Prize in Physics. Educational demo, not research.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nobel 2026 Lab">
+<meta property="og:title" content="Catching neutrinos: guess first, then see">
+<meta property="og:description" content="Why IceCube is a cubic kilometre of ice: three guesses and three toy models for the 2026 Nobel Prize in Physics. Educational demo, toy models. Not research.">
+<meta property="og:url" content="https://faviovazquez.github.io/nobel-2026-lab/2026/physics/page/">
+<meta property="og:image" content="https://faviovazquez.github.io/nobel-2026-lab/2026/physics/page/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A simulated muon track in a toy model of IceCube, seen from above, with the light sensors coloured by arrival time">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root {
+  --bg: #f7f9fb; --fg: #16202a; --muted: #55606c; --card: #ffffff; --line: #d3dae2; --accent: #1f5fae;
+  --warn-bg: #fff4d6; --warn-fg: #5a4300; --warn-line: #e6c868;
+  --pre-bg: #ffe9e4; --pre-fg: #7a2412; --pre-line: #f0a796;
+  --ok: #1d7a3a; --bad: #a3361f; --grid: #e4e9ee;
+  --c-km: #1f5fae; --c-earth: #a35a12; --c-line: #8a5a00; --c-pandel: #1f5fae; --c-true: #16202a; --c-real: #b0247a;
+  --c-guess: #16202a; --string: #b7c1cc; --hit-l: 44%; --focus: #1f5fae;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e141b; --fg: #e8eef4; --muted: #a2adb9; --card: #17202a; --line: #2f3b48; --accent: #7fb6ff;
+    --warn-bg: #2e2610; --warn-fg: #f3dc94; --warn-line: #6b5a1f;
+    --pre-bg: #3a1a14; --pre-fg: #ffc2b3; --pre-line: #7a3424;
+    --ok: #6fd08c; --bad: #ff9a85; --grid: #24303c;
+    --c-km: #7fb6ff; --c-earth: #f0a85a; --c-line: #f2c14e; --c-pandel: #7fb6ff; --c-true: #e8eef4; --c-real: #ff7ac8;
+    --c-guess: #e8eef4; --string: #3b4856; --hit-l: 62%; --focus: #7fb6ff;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg);
+  font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+main, header, footer { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
+a { color: var(--accent); }
+h1 { font-size: 1.75rem; line-height: 1.2; margin: 1.2rem 0 .6rem; }
+h2 { font-size: 1.3rem; line-height: 1.25; margin: 0 0 .5rem; }
+h3 { font-size: 1.05rem; margin: 1.1rem 0 .3rem; }
+p { margin: .5rem 0; }
+.banner { background: var(--warn-bg); color: var(--warn-fg); border: 1px solid var(--warn-line);
+  border-radius: 8px; padding: .55rem .8rem; font-weight: 600; margin-top: 1rem; }
+.prelim { background: var(--pre-bg); color: var(--pre-fg); border: 1px solid var(--pre-line);
+  border-radius: 8px; padding: .5rem .8rem; margin-top: .5rem; font-size: .95rem; }
+.prelim[hidden] { display: none; }
+.step { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.1rem 1.1rem; margin: 1.2rem 0; }
+.step-num { display: inline-block; font-size: .8rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: .2rem; }
+fieldset { border: 0; padding: 0; margin: .6rem 0; min-width: 0; }
+legend { font-weight: 650; padding: 0; margin-bottom: .35rem; }
+.choices { display: flex; flex-wrap: wrap; gap: .5rem; }
+.choice { display: inline-flex; align-items: center; gap: .45rem; border: 1px solid var(--line); border-radius: 999px;
+  padding: .4rem .8rem; cursor: pointer; background: var(--bg); }
+.choice:has(input:checked) { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.choice input { margin: 0; accent-color: var(--accent); }
+.ctl { display: grid; grid-template-columns: 1fr; gap: .2rem; margin: .7rem 0; }
+.ctl label { font-weight: 650; }
+.ctl .row { display: flex; align-items: center; gap: .7rem; }
+.ctl input[type=range] { flex: 1; min-width: 0; accent-color: var(--accent); height: 2rem; }
+.ctl output { min-width: 5.6rem; font-variant-numeric: tabular-nums; font-weight: 650; text-align: right; }
+.readout { font-size: 1.02rem; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: .5rem .7rem; margin: .4rem 0; }
+.readout strong { font-variant-numeric: tabular-nums; }
+button { font: inherit; font-weight: 650; color: #fff; background: var(--accent); border: 0; border-radius: 8px;
+  padding: .55rem 1rem; cursor: pointer; margin-top: .4rem; }
+@media (prefers-color-scheme: dark) { button { color: #0e141b; } }
+button:disabled { opacity: .45; cursor: not-allowed; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; margin: .3rem 0; }
+.seg button { margin: 0; border-radius: 0; background: var(--bg); color: var(--fg); font-weight: 600; padding: .35rem .8rem; }
+.seg button[aria-pressed=true] { background: var(--accent); color: #fff; }
+@media (prefers-color-scheme: dark) { .seg button[aria-pressed=true] { color: #0e141b; } }
+.hint { color: var(--muted); font-size: .92rem; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.reveal { border-top: 1px dashed var(--line); margin-top: 1rem; padding-top: .8rem; }
+.reveal[hidden] { display: none; }
+.reveal:focus { outline: none; }
+.verdict { font-size: 1.08rem; font-weight: 650; }
+.ok { color: var(--ok); } .bad { color: var(--bad); } .close { color: var(--accent); }
+.chart { margin: .6rem 0 .2rem; width: 100%; }
+.chart svg { display: block; overflow: visible; max-width: 100%; }
+.chart text, .pic text { fill: var(--muted); font-size: 13px; font-family: inherit; }
+.chart .axis-label, .pic .axis-label { fill: var(--fg); font-size: 13px; }
+.chart .gridline { stroke: var(--grid); stroke-width: 1; }
+.chart .axis { stroke: var(--muted); stroke-width: 1; }
+.chart .ref { stroke: var(--muted); stroke-dasharray: 5 4; stroke-width: 1.5; }
+.chart .vref { stroke: var(--c-real); stroke-dasharray: 3 4; stroke-width: 1.5; }
+.legend { display: flex; flex-wrap: wrap; gap: .3rem 1rem; list-style: none; padding: 0; margin: .2rem 0 .4rem; font-size: .92rem; }
+.legend li { display: inline-flex; align-items: center; gap: .4rem; }
+.legend .key { width: 1.6rem; height: 0; border-top: 3px solid; display: inline-block; }
+.legend .dot { width: .8rem; height: .8rem; border-radius: 50%; display: inline-block; border: 2px solid; }
+.timebar { display: inline-block; width: 6rem; height: .7rem; border-radius: 4px; vertical-align: middle; }
+figure { margin: 0; }
+figcaption { font-size: .92rem; color: var(--muted); }
+.pics { display: grid; grid-template-columns: 1fr; gap: .8rem; align-items: start; }
+@media (min-width: 700px) { .pics { grid-template-columns: 3fr 2fr; } }
+.pic svg { display: block; width: 100%; height: auto; }
+details { margin: .4rem 0; font-size: .92rem; }
+summary { cursor: pointer; color: var(--accent); }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: .3rem .4rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+.table-wrap { overflow-x: auto; }
+.note { background: var(--bg); border-left: 3px solid var(--warn-line); padding: .4rem .7rem; margin: .6rem 0; font-size: .95rem; }
+.tag { display: inline-block; font-size: .78rem; font-weight: 700; padding: .05rem .45rem; border-radius: 999px;
+  border: 1px solid var(--line); color: var(--muted); vertical-align: .1em; white-space: nowrap; }
+.tag.pre { border-color: var(--pre-line); color: var(--pre-fg); background: var(--pre-bg); }
+.result-list { padding-left: 1.1rem; }
+.result-list li { margin: .35rem 0; }
+.card { display: grid; grid-template-columns: 1fr; gap: .8rem; text-decoration: none; color: inherit; }
+@media (min-width: 560px) { .card { grid-template-columns: 2fr 3fr; align-items: center; } }
+.card img { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--line); display: block; aspect-ratio: 1200 / 630; object-fit: cover; background: #000; }
+.card .go { color: var(--accent); font-weight: 650; text-decoration: underline; }
+.missing { color: var(--muted); font-style: italic; }
+footer { color: var(--muted); font-size: .92rem; padding-bottom: 2rem; }
+footer h2 { color: var(--fg); font-size: 1.1rem; margin-top: 1.4rem; }
+footer ul { padding-left: 1.1rem; }
+footer li { margin: .2rem 0; }
+@media (max-width: 420px) {
+  body { font-size: 16px; }
+  h1 { font-size: 1.45rem; }
+  .step { padding: .85rem .8rem 1rem; }
+  .ctl output { min-width: 4.8rem; }
+  table { font-size: .82rem; }
+  th, td { padding: .3rem .25rem; }
+}
+/* share-image layout: index.html#og, 1200 x 630 */
+#og { display: none; }
+html.og body > :not(#og):not(script) { display: none; }
+html.og #og { display: grid; grid-template-columns: 560px 1fr; gap: 36px; width: 1200px; height: 630px; padding: 44px 52px; overflow: hidden; }
+html.og #og .og-pic svg { width: 560px; height: 542px; display: block; }
+html.og #og h1 { font-size: 52px; margin: 0 0 18px; }
+html.og #og p { font-size: 25px; line-height: 1.35; margin: 0 0 16px; }
+html.og #og .og-tag { font-size: 20px; font-weight: 700; display: inline-block; }
+</style>
+</head>
+<body>
+<header>
+  <p class="banner" role="note">Educational demo, toy models. Not research.</p>
+  <p class="prelim" id="prelim" role="note" hidden></p>
+  <h1>Catching neutrinos: guess first, then see</h1>
+  <p>Neutrinos are tiny particles that pass through almost anything, including the whole Earth. The 2026 Nobel Prize in Physics
+    went to Francis Halzen <q>for decisive contributions to the IceCube Neutrino Observatory and the discovery of high-energy
+    neutrinos of astrophysical origin</q>. IceCube watches a cubic kilometre of deep Antarctic ice with 5,160 light sensors.</p>
+  <p>Why so big, and why so many sensors? Three questions. For each one, make a guess first, then reveal what our small
+    computer models say. They are toy models: they show the trend, not IceCube's real numbers. Everything was worked out
+    in advance; nothing is computed live and nothing is sent anywhere.</p>
+</header>
+
+<main>
+<!-- Step 1 -->
+<section class="step" id="step1" aria-labelledby="s1-title">
+  <span class="step-num">Step 1 of 4: the odds</span>
+  <h2 id="s1-title">If a high-energy neutrino crosses a kilometre of ice, what are the odds it hits anything?</h2>
+  <p>Take one neutrino with an energy of 100&nbsp;TeV, the kind IceCube hunts. It flies straight through 1&nbsp;km of ice.
+    To leave a trace it must hit an atomic nucleus on the way.</p>
+  <fieldset>
+    <legend>Your guess: the chance that it hits something</legend>
+    <div class="choices" id="s1-choices"></div>
+  </fieldset>
+  <button type="button" id="s1-go" disabled>Reveal the answer</button>
+  <p class="hint" id="s1-hint">Pick one first.</p>
+  <div class="reveal" id="s1-out" hidden tabindex="-1" aria-live="polite"></div>
+</section>
+
+<!-- Step 2 -->
+<section class="step" id="step2" aria-labelledby="s2-title">
+  <span class="step-num">Step 2 of 4: how big a detector?</span>
+  <h2 id="s2-title">How many cosmic neutrinos does a block of ice catch in a year?</h2>
+  <p>Neutrinos from space arrive all the time, from every direction, but very few interact. A bigger block of ice holds more
+    targets. Picture a cube of ice 1&nbsp;km on each side.</p>
+  <fieldset>
+    <legend>Your guess: cosmic neutrinos caught per year in a 1&nbsp;km cube</legend>
+    <div class="choices" id="s2-choices"></div>
+  </fieldset>
+  <button type="button" id="s2-go" disabled>Reveal the answer</button>
+  <p class="hint" id="s2-hint">Pick one first.</p>
+  <div class="reveal" id="s2-out" hidden tabindex="-1" aria-live="polite"></div>
+
+  <h3 id="s2b-title">The Earth as a shield</h3>
+  <p>IceCube also uses the Earth as a filter: neutrinos coming up from below have crossed the planet. At high energy, the Earth
+    starts to stop them.</p>
+  <fieldset>
+    <legend>Your guess: of 1&nbsp;PeV neutrinos coming straight up through the whole Earth, how many get through?</legend>
+    <div class="choices" id="s2b-choices"></div>
+  </fieldset>
+  <button type="button" id="s2b-go" disabled>Reveal the answer</button>
+  <p class="hint" id="s2b-hint">Pick one first.</p>
+  <div class="reveal" id="s2b-out" hidden tabindex="-1" aria-live="polite"></div>
+</section>
+
+<!-- Step 3 -->
+<section class="step" id="step3" aria-labelledby="s3-title">
+  <span class="step-num">Step 3 of 4: build a telescope</span>
+  <h2 id="s3-title">How far apart can the strings of sensors be?</h2>
+  <p>A muon made by a neutrino crosses the ice and gives off a cone of blue light. The sensors record when the light arrives,
+    and a fit turns those times into a direction on the sky. IceCube's strings of sensors stand about 125&nbsp;m apart.
+    Spread them twice as far over the same patch of ice (a quarter as many strings) and fewer sensors see the light.</p>
+  <fieldset>
+    <legend>Your guess: at 250&nbsp;m instead of 125&nbsp;m (same patch, 1&nbsp;TeV muons), how much worse does the aim get?</legend>
+    <div class="choices" id="s3-choices"></div>
+  </fieldset>
+  <button type="button" id="s3-go" disabled>Reveal the answer</button>
+  <p class="hint" id="s3-hint">Pick one first.</p>
+  <div class="reveal" id="s3-out" hidden tabindex="-1" aria-live="polite"></div>
+</section>
+
+<!-- Step 4 -->
+<section class="step" id="step4" aria-labelledby="s4-title">
+  <span class="step-num">Step 4 of 4: a real one</span>
+  <h2 id="s4-title">Now see a real event</h2>
+  <a class="card" href="../glashow/" id="s4-card">
+    <img src="../glashow/og.jpg" alt="The light of IceCube's 6 PeV event of 8 December 2016, drawn in 3D" width="1200" height="630" loading="lazy">
+    <span>
+      <span>On 8 December 2016 IceCube recorded a particle shower of about 6&nbsp;PeV, consistent with the Glashow resonance.
+        Replay all 18,135 light pulses in 3D, from IceCube's public data. Real data, not a toy.</span><br>
+      <span class="go">Open the 3D replay</span>
+    </span>
+  </a>
+</section>
+
+<section class="step" id="summary" aria-labelledby="sum-title">
+  <h2 id="sum-title">Our toy models at a glance</h2>
+  <p>Every number below is from our toy models: trend only, not IceCube's measured values.</p>
+  <div class="table-wrap"><table id="sum-table"></table></div>
+</section>
+</main>
+
+<footer>
+  <h2>What is real and what is a toy</h2>
+  <p>Real (taken from published sources, listed in each experiment's README):</p>
+  <ul>
+    <li>Neutrino cross sections from published tables (the nuFATE tables, MIT licence) and a fitted model of the Earth's density (from nuFATE).</li>
+    <li>The size of the cosmic neutrino flux and its spectrum, from an IceCube measurement (the 7.5-year high-energy starting-event fit).</li>
+    <li>The positions of IceCube's 5,160 in-ice sensors (from the public ice-model archive), the Cherenkov angle and the Frank&ndash;Tamm light yield.</li>
+  </ul>
+  <p>Toy (our simplifications):</p>
+  <ul>
+    <li>Steps 1 and 2 count every neutrino interaction in a block of ice (step 2: above 60&nbsp;TeV of neutrino energy, one power-law flux). No light, sensors, trigger or selection, and no atmospheric neutrinos.</li>
+    <li>Through the Earth: straight-line absorption only. Neutrinos that scatter and carry on with less energy are not followed, and the Glashow resonance is left out.</li>
+    <li>The telescope: <span id="f-emu">one-energy</span> muons on straight lines, uniform ice (no dust layer, no direction dependence), no noise hits, one arrival time per sensor, and a fit that uses exactly the light-delay model the simulation used, which flatters it. One light constant is tuned, so its angles show the trend, not IceCube's performance.</li>
+    <li>The full list of simplifications is in each experiment's README.</li>
+  </ul>
+  <h2>Where things live</h2>
+  <ul id="f-links">
+    <li><a href="https://github.com/FavioVazquez/nobel-2026-lab/tree/main/2026/physics/kilometre">Why a kilometre (steps 1 and 2)</a>: code, results and README</li>
+    <li><a href="https://github.com/FavioVazquez/nobel-2026-lab/tree/main/2026/physics/telescope">Build a neutrino telescope (step 3)</a>: code, results and README</li>
+    <li><a href="https://github.com/FavioVazquez/nobel-2026-lab/tree/main/2026/physics/glashow">The 6 PeV event replay (step 4)</a></li>
+    <li><a href="https://github.com/FavioVazquez/nobel-2026-lab/tree/main/2026/physics/page">How this page is built</a></li>
+  </ul>
+  <p id="f-inputs"></p>
+  <p>MIT licence. No tracking, no cookies, no network: this page is two local files.</p>
+  <p>Made with showtime, an open-source local video tool: <a href="https://github.com/FavioVazquez/showtime">github.com/FavioVazquez/showtime</a>.</p>
+</footer>
+
+<div id="og" aria-hidden="true">
+  <div class="og-pic" id="og-pic"></div>
+  <div>
+    <p class="banner og-tag">Educational demo, toy models. Not research.</p>
+    <h1>Catching neutrinos: guess first, then see</h1>
+    <p id="og-lines"></p>
+    <p>Three toy models for the 2026 Nobel Prize in Physics (IceCube).</p>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script>
+(function () {
+  "use strict";
+  var D = window.NOBEL_PHYS_DATA;
+  if (location.hash === "#og") document.documentElement.classList.add("og");
+  if (!D) { document.querySelector("main").insertAdjacentHTML("afterbegin",
+    '<p class="note">data.js is missing. Run <code>python3 build_data.py</code> in this folder.</p>'); return; }
+  var KM = D.km, TEL = D.tel, NB = "\u00a0", TREND = "our toy model, trend only";
+
+  function $(id) { return document.getElementById(id); }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function log10(v) { return Math.log(v) / Math.LN10; }
+  function group(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+  // n significant figures, digits grouped: 57834 -> "58,000", 0.00161 -> "0.0016"
+  function sigf(v, n) {
+    n = n || 2; if (!isFinite(v)) return "?"; if (v === 0) return "0";
+    var e = Math.floor(log10(Math.abs(v))), f = Math.pow(10, e - n + 1), r = Math.round(v / f) * f;
+    return e - n + 1 >= 0 ? group(Math.round(r)) : r.toFixed(Math.min(12, n - 1 - e)).replace(/(\.\d*?)0+$/, "$1").replace(/\.$/, "");
+  }
+  function oneIn(p) { return "1" + NB + "in" + NB + sigf(1 / p, 2); }
+  function perYear(n) {
+    if (n >= 1) return "about " + sigf(n, 2) + " a year";
+    return "about one every " + sigf(1 / n, 2) + " years";
+  }
+  function deg(v, d) { return Number(v).toFixed(d === undefined ? (v < 1 ? 2 : 1) : d) + "\u00b0"; }
+  function tagFor(status) {
+    if (status === "final") return "";
+    var t = status === "preliminary" ? "preliminary" : status === "fixture" ? "placeholder" : status;
+    return ' <span class="tag pre">' + esc(t) + "</span>";
+  }
+  function trend(status) { return ' <span class="tag">' + TREND + "</span>" + tagFor(status); }
+  function nearest(values, v) { // index of the value nearest to v on a log scale
+    var best = 0;
+    values.forEach(function (x, i) { if (Math.abs(log10(x) - log10(v)) < Math.abs(log10(values[best]) - log10(v))) best = i; });
+    return best;
+  }
+  function interp(xs, ys, x, logx, logy) {
+    var fx = logx ? log10 : function (v) { return v; };
+    if (x <= xs[0]) return ys[0]; if (x >= xs[xs.length - 1]) return ys[ys.length - 1];
+    for (var i = 1; i < xs.length; i++) if (x <= xs[i]) {
+      var f = (fx(x) - fx(xs[i - 1])) / (fx(xs[i]) - fx(xs[i - 1]));
+      return logy ? Math.pow(10, log10(ys[i - 1]) + f * (log10(ys[i]) - log10(ys[i - 1]))) : ys[i - 1] + f * (ys[i] - ys[i - 1]);
+    }
+  }
+  function decTicks(lo, hi, fmt) { var t = []; for (var e = Math.ceil(log10(lo) - 1e-9); e <= Math.floor(log10(hi) + 1e-9); e++) t.push({ v: Math.pow(10, e), label: fmt(Math.pow(10, e), e) }); return t; }
+  function logMap(lo, hi) { return function (v) { return (log10(v) - log10(lo)) / (log10(hi) - log10(lo)); }; }
+  var SUP = { "-": "\u207b", "0": "\u2070", "1": "\u00b9", "2": "\u00b2", "3": "\u00b3", "4": "\u2074", "5": "\u2075", "6": "\u2076", "7": "\u2077", "8": "\u2078", "9": "\u2079" };
+  function pow10(e) { return "10" + String(e).split("").map(function (c) { return SUP[c]; }).join(""); }
+  function oneInShort(e) { var n = Math.pow(10, -e); return e === 0 ? "1" : "1 in " + (n < 1e4 ? group(n) : n < 1e6 ? (n / 1e3) + "k" : (n / 1e6) + "M"); }
+  function eLabel(v) { return v >= 1e6 ? (v / 1e6) + " PeV" : (v / 1e3) + " TeV"; }
+  function sizeLabel(m) { return m >= 1000 ? sigf(m / 1000, 2) + NB + "km" : sigf(m, 2) + NB + "m"; }
+
+  // ---------- banners ----------
+  var IN = D.inputs, NAMES = { kilometre: "steps 1 and 2 (why a kilometre)", telescope: "step 3 (the telescope)" };
+  if (D.preliminary) {
+    var bits = Object.keys(IN).filter(function (k) { return IN[k] !== "final"; }).map(function (k) {
+      return NAMES[k] + ": " + (IN[k] === "fixture" ? "placeholder numbers, the experiment has not run yet" : IN[k] === "missing" ? "not available yet" : IN[k]);
+    });
+    $("prelim").innerHTML = "<strong>Preliminary.</strong> Some numbers on this page may still change. " + esc(bits.join("; ")) + ".";
+    $("prelim").hidden = false;
+  }
+  if (TEL && TEL.muon_energy_GeV) $("f-emu").textContent = sigf(TEL.muon_energy_GeV / 1000, 2) + NB + "TeV";
+  $("f-inputs").textContent = "Inputs used for this copy of the page: why a kilometre " + IN.kilometre + ", telescope " + IN.telescope + ".";
+
+  // ---------- tiny SVG chart ----------
+  var SVGNS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, text) {
+    var e = document.createElementNS(SVGNS, tag);
+    for (var k in attrs) if (attrs[k] !== undefined && attrs[k] !== null) e.setAttribute(k, attrs[k]);
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+  function svgRoot(host, W, H, title, desc) {
+    var id = host.id + "-t";
+    var svg = el("svg", { width: W, height: H, viewBox: "0 0 " + W + " " + H, role: "img", "aria-labelledby": id + " " + id + "d" });
+    svg.appendChild(el("title", { id: id }, title));
+    svg.appendChild(el("desc", { id: id + "d" }, desc));
+    return svg;
+  }
+  // opts: {title, desc, x:{map, ticks, label}, y:{map, ticks, label}, series:[{points,css,dash,width,dots}],
+  //        refs:[{y,label}], vrefs:[{x,label}], marks:[{x,y,css,label,shape,dy}]}
+  function drawChart(host, opts) {
+    var W = Math.max(280, Math.min(host.clientWidth || 600, 720));
+    var H = Math.round(Math.max(240, Math.min(340, W * 0.6)));
+    var m = { l: opts.ml || 62, r: 14, t: 14, b: 46 };
+    var iw = W - m.l - m.r, ih = H - m.t - m.b;
+    var X = function (v) { return m.l + opts.x.map(v) * iw; };
+    var Y = function (v) { return m.t + (1 - opts.y.map(v)) * ih; };
+    var svg = svgRoot(host, W, H, opts.title, opts.desc);
+    opts.y.ticks.forEach(function (t) {
+      svg.appendChild(el("line", { x1: m.l, x2: m.l + iw, y1: Y(t.v), y2: Y(t.v), "class": "gridline" }));
+      svg.appendChild(el("text", { x: m.l - 6, y: Y(t.v) + 4, "text-anchor": "end" }, t.label));
+    });
+    (typeof opts.x.ticks === "function" ? opts.x.ticks(iw) : opts.x.ticks).forEach(function (t) {
+      svg.appendChild(el("line", { x1: X(t.v), x2: X(t.v), y1: m.t + ih, y2: m.t + ih + 4, "class": "axis" }));
+      svg.appendChild(el("text", { x: X(t.v), y: m.t + ih + 18, "text-anchor": "middle" }, t.label));
+    });
+    svg.appendChild(el("line", { x1: m.l, x2: m.l + iw, y1: m.t + ih, y2: m.t + ih, "class": "axis" }));
+    svg.appendChild(el("line", { x1: m.l, x2: m.l, y1: m.t, y2: m.t + ih, "class": "axis" }));
+    svg.appendChild(el("text", { x: m.l + iw / 2, y: H - 6, "text-anchor": "middle", "class": "axis-label" }, opts.x.label));
+    svg.appendChild(el("text", { x: 14, y: m.t + ih / 2, "text-anchor": "middle", "class": "axis-label",
+      transform: "rotate(-90 14 " + (m.t + ih / 2) + ")" }, opts.y.label));
+    (opts.refs || []).forEach(function (r) {
+      svg.appendChild(el("line", { x1: m.l, x2: m.l + iw, y1: Y(r.y), y2: Y(r.y), "class": "ref" }));
+      if (r.label) svg.appendChild(el("text", { x: m.l + iw - 4, y: Y(r.y) + (r.below ? 16 : -6), "text-anchor": "end" }, r.label));
+    });
+    (opts.vrefs || []).forEach(function (r) {
+      svg.appendChild(el("line", { x1: X(r.x), x2: X(r.x), y1: m.t, y2: m.t + ih, "class": "vref" }));
+      if (r.label) svg.appendChild(el("text", { x: X(r.x) + 5, y: m.t + 12, "text-anchor": "start", "class": "axis-label" }, r.label));
+    });
+    (opts.bands || []).forEach(function (b) {
+      var up = b.hi.map(function (p) { return X(p[0]).toFixed(1) + " " + Y(p[1]).toFixed(1); }), dn = b.lo.slice().reverse().map(function (p) { return X(p[0]).toFixed(1) + " " + Y(p[1]).toFixed(1); });
+      svg.appendChild(el("path", { d: "M" + up.join("L") + "L" + dn.join("L") + "Z", fill: b.css, opacity: b.opacity || 0.15, stroke: "none" }));
+    });
+    opts.series.forEach(function (s) {
+      var pen = "M", d = s.points.map(function (p) {
+        if (p[1] === null) { pen = "M"; return ""; }
+        var seg = pen + X(p[0]).toFixed(1) + " " + Y(p[1]).toFixed(1); pen = "L"; return seg;
+      }).join("");
+      svg.appendChild(el("path", { d: d, fill: "none", stroke: s.css, "stroke-width": s.width || 2.5,
+        "stroke-dasharray": s.dash || null, "stroke-linejoin": "round", "stroke-linecap": "round", opacity: s.opacity || 1 }));
+      (s.dots || []).forEach(function (p) { svg.appendChild(el("circle", { cx: X(p[0]), cy: Y(p[1]), r: 3.5, fill: s.css })); });
+    });
+    (opts.marks || []).forEach(function (k) {
+      var cx = X(k.x), cy = Y(k.y);
+      if (k.shape === "tick") svg.appendChild(el("line", { x1: cx - 10, x2: cx + 10, y1: cy, y2: cy, stroke: k.css, "stroke-width": 3 }));
+      else if (k.shape === "diamond") svg.appendChild(el("path", { d: "M" + cx + " " + (cy - 8) + "l8 8l-8 8l-8 -8z", fill: "var(--card)", stroke: k.css, "stroke-width": 3 }));
+      else svg.appendChild(el("circle", { cx: cx, cy: cy, r: k.r || 6, fill: k.fill || "var(--card)", stroke: k.css, "stroke-width": 3 }));
+      if (k.label) {
+        var right = k.side ? k.side === "right" : cx < m.l + iw * 0.6;
+        svg.appendChild(el("text", { x: cx + (right ? 12 : -12), y: cy + (k.dy || -8), "text-anchor": right ? "start" : "end", "class": "axis-label" }, k.label));
+      }
+    });
+    host.innerHTML = "";
+    host.appendChild(svg);
+  }
+  var redraws = {}, rt;
+  window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(function () { for (var k in redraws) redraws[k](); }, 120); });
+  function chart(host, build, draw) {
+    var box = host.closest(".reveal");
+    if (box) box.hidden = false; // measure the real width before drawing
+    var f = function () { (draw || drawChart)(host, build()); };
+    redraws[host.id] = f; f();
+    return f;
+  }
+  function legend(items) {
+    return '<ul class="legend" aria-hidden="true">' + items.map(function (i) {
+      var key = i.dot ? '<span class="dot" style="border-color:' + i.css + '"></span>' :
+        '<span class="key" style="border-top-color:' + i.css + ";border-top-style:" + (i.dashed ? "dashed" : i.dotted ? "dotted" : "solid") + '"></span>';
+      return "<li>" + key + esc(i.label) + "</li>";
+    }).join("") + "</ul>";
+  }
+  function radios(host, name, items) {
+    host.innerHTML = items.map(function (it) {
+      return '<label class="choice"><input type="radio" name="' + name + '" value="' + esc(it.value) + '">' + esc(it.label) + "</label>";
+    }).join("");
+  }
+  function picked(name) { var r = document.querySelector('input[name="' + name + '"]:checked'); return r ? r.value : null; }
+  function show(out) { out.hidden = false; out.focus({ preventScroll: true }); out.scrollIntoView({ behavior: "smooth", block: "nearest" }); }
+  function guessStep(prefix, items) {
+    radios($(prefix + "-choices"), prefix, items);
+    $(prefix + "-choices").addEventListener("change", function () { $(prefix + "-go").disabled = false; $(prefix + "-hint").textContent = "Ready when you are."; });
+  }
+  function missing(prefix, what) {
+    $(prefix + "-go").disabled = true;
+    $(prefix + "-hint").innerHTML = '<span class="missing">The ' + what + " results are not in this copy of the page yet.</span>";
+  }
+  function verdict(right, close, text) {
+    return '<p class="verdict ' + (right ? "ok" : close ? "close" : "bad") + '">' + (right ? "Yes. " : close ? "Close. " : "Not quite. ") + text + "</p>";
+  }
+  function tableHtml(head, rows) {
+    return '<details><summary>Chart as a table</summary><div class="table-wrap"><table><thead><tr>' + head.map(function (h) { return "<th>" + h + "</th>"; }).join("") +
+      "</tr></thead><tbody>" + rows.map(function (r) { return "<tr>" + r.map(function (c) { return "<td>" + c + "</td>"; }).join("") + "</tr>"; }).join("") + "</tbody></table></div></details>";
+  }
+
+  // ---------- Step 1: the odds ----------
+  var S1 = [10, 100, 1e3, 1e4, 1e5, 1e6, 1e7];
+  guessStep("s1", S1.map(function (n) { return { value: String(n), label: n === 1e6 ? "1 in a million" : n === 1e7 ? "1 in 10 million" : "1 in " + group(n) }; }));
+  if (!KM) missing("s1", "kilometre");
+  $("s1-go").addEventListener("click", function () {
+    var g = +picked("s1"); if (!g || !KM) return;
+    var p100 = KM.p_interact_1km["100TeV"], p1 = KM.p_interact_1km["1PeV"], N = KM.one_in_N_100TeV || 1 / p100;
+    var best = S1[nearest(S1, N)], gi = S1.indexOf(g), bi = S1.indexOf(best);
+    var cur = KM.curves && KM.curves.interaction, st = IN.kilometre;
+    var out = $("s1-out");
+    out.innerHTML =
+      verdict(g === best, Math.abs(gi - bi) === 1, "Our toy model gives about " + oneIn(1 / N) + " at 100" + NB + "TeV" + trend(st) + ". You picked 1 in " + group(g) + ".") +
+      "<p>So for every neutrino that interacts, about " + sigf(N - 1, 2) + " fly straight through. At 1" + NB + "PeV (ten times the energy) the odds rise to about " +
+      oneIn(p1) + trend(st) + ": the target grows with energy, but stays tiny. That is why a detector needs a huge volume of ice.</p>" +
+      (cur ? '<figure><div class="chart" id="s1-chart"></div>' +
+        legend([{ css: "var(--c-km)", label: "Our toy model" }, { css: "var(--c-guess)", dashed: true, label: "Your guess" }]) +
+        "<figcaption>Chance that one muon neutrino interacts while crossing 1" + NB + "km of ice, against its energy" +
+        (/mean/.test(cur.column || "") ? " (neutrino and antineutrino averaged, like the numbers above)" : "") + ". Both scales are logarithmic. " +
+        "Circles: 100" + NB + "TeV and 1" + NB + "PeV. Our toy model, trend only.</figcaption></figure>" +
+        tableHtml(["Energy", "Chance in 1 km of ice"], cur.energy_GeV.filter(function (_, i) { return i % 4 === 0; }).map(function (e) {
+          var i = cur.energy_GeV.indexOf(e); return [eLabel(e).replace(" ", NB), oneIn(cur.p[i])]; })) : "") +
+      '<p class="note"><strong>Caveat.</strong> Our toy model, trend only. It multiplies a published cross section (how big a target one nucleus is) by the ' +
+      "number of nuclei in 1" + NB + "km of ice. Hitting a nucleus is needed for a trace, not enough: a real detector must also see and pick out the light.</p>";
+    if (cur) chart($("s1-chart"), function () {
+      var narrow = $("s1-chart").clientWidth < 560, xs = cur.energy_GeV, lo = Math.pow(10, Math.floor(log10(Math.min.apply(null, cur.p)))), hi = Math.pow(10, Math.ceil(log10(Math.max.apply(null, cur.p.concat([1 / g])))) + 1e-9);
+      return {
+        title: "Chance that a neutrino interacts in 1 km of ice versus its energy (our toy model)",
+        desc: "Log-log line from 1 TeV to 10 PeV. At 100 TeV about " + oneIn(p100).replace(/\u00a0/g, " ") + ", at 1 PeV about " + oneIn(p1).replace(/\u00a0/g, " ") +
+          ". Your guess, 1 in " + group(g) + ", is drawn as a dashed line.",
+        x: { map: logMap(xs[0], xs[xs.length - 1]), label: "Neutrino energy",
+             ticks: decTicks(xs[0], xs[xs.length - 1], function (v) { return eLabel(v); }) },
+        ml: 84,
+        y: { map: logMap(lo, hi), label: "Chance (log scale)", ticks: decTicks(lo, hi, function (v, e) { return oneInShort(e); }) },
+        refs: [{ y: 1 / g, label: "your guess: 1 in " + group(g), below: 1 / g >= hi * 0.99 }],
+        series: [{ css: "var(--c-km)", points: xs.map(function (e, i) { return [e, Math.max(lo, Math.min(hi, cur.p[i]))]; }) }],
+        marks: [{ x: 1e5, y: p100, css: "var(--c-km)", label: oneIn(p100).replace(/\u00a0/g, " "), side: "right", dy: 22 },
+                { x: 1e6, y: p1, css: "var(--c-km)", label: narrow ? null : oneIn(p1).replace(/\u00a0/g, " "), side: "right", dy: 22 }]
+      };
+    });
+    show(out);
+  });
+
+  // ---------- Step 2: how big a detector ----------
+  var S2 = [0.1, 1, 10, 100, 1000];
+  guessStep("s2", S2.map(function (n) { return { value: String(n), label: n < 1 ? "less than 1" : "about " + group(n) }; }));
+  var S2B = [{ v: 0.9, l: "almost all" }, { v: 0.5, l: "about half" }, { v: 0.1, l: "about 1 in 10" }, { v: 0.01, l: "about 1 in 100" }, { v: 0.001, l: "1 in 1,000 or fewer" }];
+  guessStep("s2b", S2B.map(function (o) { return { value: String(o.v), label: o.l }; }));
+  if (!KM) { missing("s2", "kilometre"); missing("s2b", "kilometre"); }
+
+  function sizeModel() { // events per year against cube side: the experiment's curve, or its three headline sizes
+    var c = KM.curves && KM.curves.size;
+    if (c) return { xs: c.side_m, ys: c.events, from: "curve" };
+    var e = KM.events_per_year; return { xs: [10, 100, 1000], ys: [e["10m"], e["100m"], e["1km"]], from: "points" };
+  }
+  var SIDE_MIN = 10, SIDE_MAX = 2000;
+  function sideFromSlider(v) { return Number((SIDE_MIN * Math.pow(SIDE_MAX / SIDE_MIN, v / 1000)).toPrecision(2)); }
+  function sliderFromSide(s) { return Math.round(1000 * log10(s / SIDE_MIN) / log10(SIDE_MAX / SIDE_MIN)); }
+
+  $("s2-go").addEventListener("click", function () {
+    var g = +picked("s2"); if (!g || !KM) return;
+    var E = KM.events_per_year, st = IN.kilometre, M = sizeModel(), best = S2[nearest(S2, E["1km"])];
+    var gi = S2.indexOf(g), bi = S2.indexOf(best), hc = KM.hese_check;
+    var out = $("s2-out");
+    out.innerHTML =
+      verdict(g === best, Math.abs(gi - bi) === 1, "Our toy model gives " + perYear(E["1km"]) + " in a 1" + NB + "km cube" + trend(st) + ".") +
+      "<p>Shrink the cube and the catch falls with its volume: a 100" + NB + "m cube catches " + perYear(E["100m"]) +
+      ", a 10" + NB + "m cube (a big swimming pool) " + perYear(E["10m"]) + trend(st) + ". Try other sizes:</p>" +
+      '<div class="ctl"><label for="s2-size">Side of the cube of ice</label>' +
+      '<div class="row"><input type="range" id="s2-size" min="0" max="1000" step="1" value="' + sliderFromSide(1000) + '"><output id="s2-size-out" for="s2-size"></output></div></div>' +
+      '<p class="readout" id="s2-readout" aria-live="polite"></p>' +
+      '<figure><div class="chart" id="s2-chart"></div>' +
+      legend([{ css: "var(--c-km)", label: "Our toy model" }, { css: "var(--c-guess)", dot: true, label: "Your size (slider)" }]) +
+      "<figcaption>Cosmic neutrinos per year that interact inside a cube of ice, against the side of the cube. Both scales are logarithmic. " +
+      "Marked: 10" + NB + "m, 100" + NB + "m and 1" + NB + "km. Our toy model, trend only.</figcaption></figure>" +
+      tableHtml(["Side of the cube", "Per year (our toy model)"], [["10" + NB + "m", sigf(E["10m"], 2)], ["100" + NB + "m", sigf(E["100m"], 2)], ["1" + NB + "km", sigf(E["1km"], 2)]]) +
+      (hc ? "<h3>Beside a real number</h3><p>IceCube's public sample of high-energy events that start inside the detector has about " +
+        sigf(hc.observed_per_year_above_60TeV, 2) + " a year above 60" + NB + "TeV of deposited energy" +
+        (hc.hese_public_simulation_same_flux_per_year ? ", and IceCube's own public simulation of that sample, for the same cosmic flux, keeps about " + sigf(hc.hese_public_simulation_same_flux_per_year, 2) + " a year" : "") +
+        ". Our toy model's 1" + NB + "km cube counts about " + sigf(hc.ours_1km3_per_year, 2) + " a year" + trend(st) + ". That is not a match, and it is not meant to be: " +
+        "we count every interaction in the whole cube, while a real analysis keeps only the events it can see and select.</p>" +
+        (hc.note ? "<details><summary>Why the numbers differ</summary><p>" + esc(hc.note) + "</p></details>" : "") : "") +
+      '<p class="note"><strong>Caveat.</strong> Our toy model, trend only. It counts cosmic neutrinos above 60' + NB + "TeV (all three kinds) that interact inside the cube, " +
+      "using IceCube's measured cosmic flux. It does not model how many of them a real detector would see, select or measure.</p>";
+    var size = $("s2-size");
+    var draw = chart($("s2-chart"), function () {
+      var s = sideFromSlider(+size.value), n = interp(M.xs, M.ys, s, true, true);
+      var lo = Math.pow(10, Math.floor(log10(Math.min.apply(null, M.ys.concat([E["10m"]]))))), hi = Math.pow(10, Math.ceil(log10(Math.max.apply(null, M.ys.concat([E["1km"]])))));
+      return {
+        title: "Cosmic neutrinos per year versus detector size (our toy model)",
+        desc: "Log-log line from 10 m to 2 km. 10 m: " + sigf(E["10m"], 2) + " per year; 100 m: " + sigf(E["100m"], 2) + "; 1 km: " + sigf(E["1km"], 2) +
+          ". Your size, " + sizeLabel(s).replace(NB, " ") + ", gives " + sigf(n, 2) + " per year.",
+        x: { map: logMap(SIDE_MIN, SIDE_MAX), label: "Side of the cube", ticks: [10, 100, 1000].map(function (v) { return { v: v, label: sizeLabel(v).replace(NB, " ") }; }) },
+        y: { map: logMap(lo, hi), label: "Per year (log scale)", ticks: decTicks(lo, hi, function (v, e) { return e >= 0 ? group(v) : e >= -3 ? String(v) : pow10(e); }).filter(function (_, i, a) { return a.length < 8 || i % 2 === 0; }) },
+        refs: [{ y: 1, label: "1 a year" }],
+        series: [{ css: "var(--c-km)", points: M.xs.filter(function (x) { return x <= SIDE_MAX; }).map(function (x, i) { return [x, M.ys[i]]; }) }],
+        marks: [{ x: 10, y: E["10m"], css: "var(--c-km)", r: 4, fill: "var(--c-km)", label: "10 m", side: "right", dy: 4 },
+                { x: 100, y: E["100m"], css: "var(--c-km)", r: 4, fill: "var(--c-km)", label: "100 m", side: "right", dy: 4 },
+                { x: 1000, y: E["1km"], css: "var(--c-km)", r: 4, fill: "var(--c-km)", label: "1 km", side: "left", dy: -8 },
+                { x: s, y: n, css: "var(--c-guess)", r: 7 }]
+      };
+    });
+    function sync() {
+      var s = sideFromSlider(+size.value), n = interp(M.xs, M.ys, s, true, true);
+      $("s2-size-out").textContent = sizeLabel(s);
+      var beyond = M.from === "points" && (s < 10 || s > 1000);
+      $("s2-readout").innerHTML = "A cube " + sizeLabel(s) + " on each side: <strong>" + perYear(n) + "</strong>" + trend(st) +
+        (M.from === "points" ? ' <span class="tag">' + (beyond ? "beyond the computed sizes" : "between computed sizes") + "</span>" : "");
+      draw();
+    }
+    size.addEventListener("input", sync); sync();
+    show(out);
+  });
+
+  // Earth as a shield
+  var R_EARTH = 6371;
+  function earthPic(host, a, T) { // a = angle below the horizon (deg)
+    var W = Math.max(200, Math.min(host.clientWidth || 300, 300)), H = W, cx = W / 2, R = W * 0.4, cy = H / 2 + W * 0.04;
+    var svg = svgRoot(host, W, H, "Path of a neutrino through the Earth", "A neutrino arriving " + Math.round(a) + " degrees below the horizon crosses " +
+      group(Math.round(2 * R_EARTH * Math.sin(a * Math.PI / 180))) + " km of Earth before reaching IceCube at the South Pole; our toy model lets " + sigf(T, 2) + " of them through.");
+    svg.setAttribute("class", "earth");
+    svg.appendChild(el("circle", { cx: cx, cy: cy, r: R, fill: "var(--bg)", stroke: "var(--muted)", "stroke-width": 1.5 }));
+    svg.appendChild(el("circle", { cx: cx, cy: cy, r: R * 3480 / R_EARTH, fill: "none", stroke: "var(--line)", "stroke-width": 1.5 }));
+    svg.appendChild(el("text", { x: cx + R * 0.22, y: cy + 4, "text-anchor": "middle" }, "core"));
+    var dx = cx, dy = cy - R, L = 2 * R * Math.sin(a * Math.PI / 180), r = a * Math.PI / 180;
+    var ex = dx - L * Math.cos(r), ey = dy + L * Math.sin(r);
+    svg.appendChild(el("line", { x1: dx - R * 0.9, x2: dx + R * 0.9, y1: dy, y2: dy, stroke: "var(--line)", "stroke-dasharray": "4 4" }));
+    svg.appendChild(el("text", { x: dx - R * 0.9, y: dy - 6, "text-anchor": "start" }, "horizon"));
+    svg.appendChild(el("line", { x1: ex - (dx - ex) * 0.15, y1: ey - (dy - ey) * 0.15, x2: dx, y2: dy, stroke: "var(--c-earth)", "stroke-width": 3, "stroke-linecap": "round" }));
+    svg.appendChild(el("circle", { cx: dx, cy: dy, r: 5, fill: "var(--c-real)" }));
+    svg.appendChild(el("text", { x: dx + 8, y: dy - 6, "class": "axis-label" }, "IceCube"));
+    host.innerHTML = ""; host.appendChild(svg);
+  }
+  $("s2b-go").addEventListener("click", function () {
+    var g = +picked("s2b"); if (!g || !KM) return;
+    var V = KM.earth_survival_vertical, st = IN.kilometre, T1 = V["1PeV"];
+    var vals = S2B.map(function (o) { return o.v; }), best = vals[nearest(vals, Math.max(T1, 0.001))];
+    if (T1 <= 0.001) best = 0.001;
+    var gi = vals.indexOf(g), bi = vals.indexOf(best), cur = KM.curves && KM.curves.transmission_1PeV, VS = KM.earth_survival_vertical_per_species || {};
+    var out = $("s2b-out");
+    out.innerHTML =
+      verdict(g === best, Math.abs(gi - bi) === 1, "In our toy model about " + oneIn(T1) + " get through straight up at 1" + NB + "PeV (" + sigf(T1 * 100, 2) + NB + "%" +
+        (VS.numubar ? ", muon neutrinos and antineutrinos averaged" : "") + ")" + trend(st) + ".") +
+      "<p>At 100" + NB + "TeV, ten times less energy, about " + sigf(V["100TeV"] * 100, 2) + NB + "% make it" + trend(st) +
+      ". The higher the energy, the bigger the target, so the Earth stops more of them. Neutrinos skimming in near the horizon cross much less rock.</p>" +
+      (cur ? '<div class="ctl"><label for="s2b-angle">Arrival direction: degrees below the horizon</label>' +
+        '<div class="row"><input type="range" id="s2b-angle" min="0" max="90" step="1" value="90"><output id="s2b-angle-out" for="s2b-angle"></output></div></div>' +
+        '<p class="readout" id="s2b-readout" aria-live="polite"></p>' +
+        '<div class="pics"><figure><div class="chart" id="s2b-chart"></div>' +
+        legend([{ css: "var(--c-earth)", label: "Our toy model, 1 PeV" }]) +
+        "<figcaption>Share of 1" + NB + "PeV muon neutrinos that cross the Earth without interacting, against how far below the horizon they arrive (90\u00b0: straight up through the centre). Log scale. " +
+        (cur.species === "numu" ? "Neutrinos only: antineutrinos interact less and get through more often" + (VS.numubar ? " (straight up: " + sigf(VS.numu["1PeV"] * 100, 2) + NB + "% against " + sigf(VS.numubar["1PeV"] * 100, 2) + NB + "%)" : "") +
+          ", which is why the averaged number above is higher. " : "") + "Our toy model, trend only.</figcaption></figure>" +
+        '<figure class="pic"><div id="s2b-pic"></div><figcaption>The path through the Earth for the direction you chose.</figcaption></figure></div>' +
+        tableHtml(["Below the horizon", "Get through (1 PeV)"], cur.zenith_deg.filter(function (_, i) { return i % Math.max(1, Math.round(cur.zenith_deg.length / 10)) === 0 || i === cur.zenith_deg.length - 1; }).map(function (z) {
+          var i = cur.zenith_deg.indexOf(z); return [Math.round(z - 90) + "\u00b0", sigf(cur.T[i] * 100, 2) + NB + "%"]; })) : "") +
+      '<p class="note"><strong>Caveat.</strong> Our toy model, trend only: straight-line absorption through a smooth model of the Earth\u2019s density. ' +
+      "It ignores neutrinos that bounce off a nucleus and carry on with less energy, and tau neutrinos that reappear, so real survival is somewhat higher.</p>";
+    if (cur) {
+      var ang = $("s2b-angle");
+      var Tat = function (a) { return interp(cur.zenith_deg, cur.T, 90 + a, false, true); };
+      var draw = chart($("s2b-chart"), function () {
+        var a = +ang.value, lo = Math.pow(10, Math.floor(log10(Math.max(1e-6, Math.min.apply(null, cur.T))))), t = Tat(a);
+        return {
+          title: "Share of 1 PeV neutrinos that cross the Earth versus arrival angle (our toy model)",
+          desc: "From 100 percent near the horizon down to " + sigf(T1 * 100, 2) + " percent straight up. At your angle, " + a + " degrees below the horizon, " + sigf(t * 100, 2) + " percent.",
+          x: { map: function (v) { return v / 90; }, label: "Degrees below the horizon", ticks: [0, 30, 60, 90].map(function (v) { return { v: v, label: String(v) }; }) },
+          y: { map: logMap(lo, 1), label: "Get through (log)", ticks: decTicks(lo, 1, function (v, e) { return e >= -2 ? (v * 100) + "%" : pow10(e); }) },
+          series: [{ css: "var(--c-earth)", points: cur.zenith_deg.map(function (z, i) { return [z - 90, Math.max(lo, cur.T[i])]; }) }],
+          marks: [{ x: a, y: Math.max(lo, t), css: "var(--c-guess)", r: 7 }]
+        };
+      });
+      var syncA = function () {
+        var a = +ang.value, t = Tat(a);
+        $("s2b-angle-out").textContent = a + "\u00b0";
+        $("s2b-readout").innerHTML = a + "\u00b0 below the horizon, " + group(Math.round(2 * R_EARTH * Math.sin(a * Math.PI / 180))) + NB + "km of Earth: <strong>" +
+          (t >= 0.01 ? sigf(t * 100, 2) + NB + "%" : oneIn(t)) + " get through</strong>" + (cur.species === "numu" ? " (muon neutrinos)" : "") + trend(st);
+        draw(); earthPic($("s2b-pic"), a, t);
+      };
+      redraws["s2b-pic"] = function () { earthPic($("s2b-pic"), +ang.value, Tat(+ang.value)); };
+      ang.addEventListener("input", syncA); syncA();
+    }
+    show(out);
+  });
+
+  // ---------- Step 3: build a telescope ----------
+  var S3 = [{ v: 1, hi: 1.5, l: "about the same" }, { v: 2, hi: 3, l: "about 2 times worse" }, { v: 5, hi: 10, l: "3 to 10 times worse" }, { v: 20, hi: Infinity, l: "more than 10 times worse" }];
+  guessStep("s3", S3.map(function (o) { return { value: String(o.v), label: o.l }; }));
+  if (!TEL) missing("s3", "telescope");
+  function timeColour(f) { return "hsl(" + Math.round(f * 230) + " 85% var(--hit-l))"; } // red first, blue last
+  function sub(a, b) { return [a[0] - b[0], a[1] - b[1], a[2] - b[2]]; }
+  function dot(a, b) { return a[0] * b[0] + a[1] * b[1] + a[2] * b[2]; }
+  function cross(a, b) { return [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]]; }
+  function unit(a) { var n = Math.sqrt(dot(a, a)); return [a[0] / n, a[1] / n, a[2] / n]; }
+
+  function eventPic(host, ev, view, big) {
+    var W = big ? 560 : Math.max(260, Math.min(host.clientWidth || 400, 520)), H = big ? 542 : W, pad = 16, foot = big ? 0 : 20;
+    var hits = ev.hits, D3 = ev.track.dir, top = view === "top";
+    // side view: looking across the track, so the horizontal axis runs along the track's horizontal direction
+    var hn = Math.hypot(D3[0], D3[1]), ux = hn > 1e-3 ? D3[0] / hn : 1, uy = hn > 1e-3 ? D3[1] / hn : 0;
+    var pr = top ? function (p) { return [p[0], p[1]]; } : function (p) { return [p[0] * ux + p[1] * uy, p[2]]; };
+    var name = top ? "Seen from above" : "Seen from the side, across the track";
+    var str = ev.strings_xy.map(function (q) { return pr([q[0], q[1], 0])[0]; });
+    var hp = hits.map(function (h) { return pr(h); });
+    var xs = top ? ev.strings_xy.map(function (q) { return q[0]; }) : str;
+    var ys = top ? ev.strings_xy.map(function (q) { return q[1]; }) : hp.map(function (q) { return q[1]; }).concat([-500, 500]);
+    var x0 = Math.min.apply(null, xs) - 40, x1 = Math.max.apply(null, xs) + 40, y0 = Math.min.apply(null, ys) - 40, y1 = Math.max.apply(null, ys) + 40;
+    var s = Math.min((W - 2 * pad) / (x1 - x0), (H - 2 * pad - foot) / (y1 - y0));
+    var ox = (W - s * (x1 - x0)) / 2, oy = (H - foot - s * (y1 - y0)) / 2;
+    var X = function (v) { return ox + (v - x0) * s; }, Y = function (v) { return oy + (y1 - v) * s; };
+    var tmax = hits.length ? hits[hits.length - 1][3] : 1;
+    var svg = svgRoot(host, W, H, "Example event in our toy model, " + name.toLowerCase(),
+      name + ": " + ev.strings_xy.length + " strings of sensors, " + hits.length + " sensors that saw light, coloured from red (first) to blue (last, " + Math.round(tmax) +
+      " ns later). The true muon direction and the two fitted directions are drawn as lines; the fits are " + deg(ev.error_deg.line || 0) + " (line fit) and " +
+      deg(ev.error_deg.pandel || 0) + " (Pandel fit) off.");
+    if (top) ev.strings_xy.forEach(function (q) { svg.appendChild(el("circle", { cx: X(q[0]), cy: Y(q[1]), r: big ? 3.2 : 2.4, fill: "var(--string)" })); });
+    else str.forEach(function (h) { svg.appendChild(el("line", { x1: X(h), x2: X(h), y1: Y(-500), y2: Y(500), stroke: "var(--string)", "stroke-width": 1, opacity: 0.5 })); });
+    function trackLine(d, css, dash, w, P3) {
+      var P = pr(P3), u = top ? [d[0], d[1]] : [d[0] * ux + d[1] * uy, d[2]], n = Math.hypot(u[0], u[1]);
+      if (n < 1e-6) { svg.appendChild(el("circle", { cx: X(P[0]), cy: Y(P[1]), r: 6, fill: "none", stroke: css, "stroke-width": w })); return; }
+      var L = 2000, a = [P[0] - u[0] / n * L, P[1] - u[1] / n * L], b = [P[0] + u[0] / n * L, P[1] + u[1] / n * L];
+      svg.appendChild(el("line", { x1: X(a[0]), y1: Y(a[1]), x2: X(b[0]), y2: Y(b[1]), stroke: css, "stroke-width": w, "stroke-dasharray": dash || null, "stroke-linecap": "round" }));
+      var m = [P[0] + u[0] / n * 380, P[1] + u[1] / n * 380], hx = X(m[0]), hy = Y(m[1]), ang = Math.atan2(-(u[1]), u[0]);
+      if (!dash) svg.appendChild(el("path", { d: "M" + hx + " " + hy + "l" + (-12 * Math.cos(ang - 0.45)) + " " + (-12 * Math.sin(ang - 0.45)) + "M" + hx + " " + hy + "l" + (-12 * Math.cos(ang + 0.45)) + " " + (-12 * Math.sin(ang + 0.45)),
+        stroke: css, "stroke-width": w, fill: "none", "stroke-linecap": "round" }));
+    }
+    var clip = el("clipPath", { id: host.id + "-clip" }); clip.appendChild(el("rect", { x: 0, y: 0, width: W, height: H - foot })); svg.appendChild(clip);
+    var g = el("g", { "clip-path": "url(#" + host.id + "-clip)" }); var keep = svg; svg = g;
+    hits.forEach(function (h, i) {
+      svg.appendChild(el("circle", { cx: X(hp[i][0]), cy: Y(hp[i][1]), r: (big ? 3.2 : 2.6) + (big ? 2.4 : 1.8) * Math.sqrt(Math.min(h[4], 25)),
+        fill: timeColour(h[3] / tmax), "fill-opacity": 0.85, stroke: "var(--card)", "stroke-width": 0.8 }));
+    });
+    trackLine(ev.track.dir, "var(--c-true)", "", 2.2, ev.track.point);
+    trackLine(ev.line_fit_dir, "var(--c-line)", "2 5", 2.4, ev.line_fit_point || ev.track.point);
+    trackLine(ev.pandel_fit_dir, "var(--c-pandel)", "9 6", 2.4, ev.pandel_fit_point || ev.track.point);
+    svg = keep; svg.appendChild(g);
+    if (!big) {
+      svg.appendChild(el("line", { x1: W - pad - 100 * s, x2: W - pad, y1: H - 8, y2: H - 8, stroke: "var(--muted)", "stroke-width": 2 }));
+      svg.appendChild(el("text", { x: W - pad - 50 * s, y: H - 13, "text-anchor": "middle" }, "100 m"));
+      svg.appendChild(el("text", { x: pad, y: H - 4, "class": "axis-label" }, top ? name : "From the side"));
+    }
+    host.innerHTML = ""; host.appendChild(svg);
+  }
+  function skyPic(host, ev) { // where each fit points, relative to the true direction (tangent plane, degrees)
+    var W = Math.max(200, Math.min(host.clientWidth || 260, 280)), H = W, c = W / 2, R = W / 2 - 22;
+    var d = unit(ev.track.dir), e1 = unit(Math.abs(d[2]) < 0.9 ? cross(d, [0, 0, 1]) : cross(d, [1, 0, 0])), e2 = cross(d, e1);
+    var off = [ev.line_fit_dir, ev.pandel_fit_dir].map(function (f) { f = unit(f); var w = dot(f, d); return [Math.atan2(dot(f, e1), w) * 180 / Math.PI, Math.atan2(dot(f, e2), w) * 180 / Math.PI]; });
+    var mx = Math.max.apply(null, off.map(function (o) { return Math.hypot(o[0], o[1]); }).concat([0.1])) * 1.25;
+    var nice = [0.25, 0.5, 1, 2, 5, 10, 20, 45].filter(function (v) { return v >= mx; })[0] || 45, k = R / nice;
+    var svg = svgRoot(host, W, H, "Where each fit points, relative to the true direction",
+      "The true direction is the centre. The line fit lands " + deg(Math.hypot(off[0][0], off[0][1])) + " away and the Pandel fit " + deg(Math.hypot(off[1][0], off[1][1])) + " away. The outer ring is " + nice + " degrees.");
+    [nice, nice / 2].forEach(function (r) {
+      svg.appendChild(el("circle", { cx: c, cy: c, r: r * k, fill: "none", stroke: "var(--line)", "stroke-width": 1.2 }));
+      svg.appendChild(el("text", { x: c + r * k * 0.71 + 3, y: c - r * k * 0.71 - 3 }, sigf(r, 2) + "\u00b0"));
+    });
+    svg.appendChild(el("path", { d: "M" + (c - 8) + " " + c + "h16M" + c + " " + (c - 8) + "v16", stroke: "var(--c-true)", "stroke-width": 2.5 }));
+    [["var(--c-line)", "line fit"], ["var(--c-pandel)", "Pandel fit"]].forEach(function (p, i) {
+      var x = c + off[i][0] * k, y = c - off[i][1] * k;
+      svg.appendChild(el("circle", { cx: x, cy: y, r: 6, fill: p[0], stroke: "var(--card)", "stroke-width": 1.5 }));
+      svg.appendChild(el("text", { x: x + (x > c ? 9 : -9), y: y + 4, "text-anchor": x > c ? "start" : "end", "class": "axis-label" }, p[1]));
+    });
+    svg.appendChild(el("text", { x: c - 8, y: c + 20, "text-anchor": "end", "class": "axis-label" }, "true"));
+    host.innerHTML = ""; host.appendChild(svg);
+  }
+
+  $("s3-go").addEventListener("click", function () {
+    var g = +picked("s3"); if (!g || !TEL) return;
+    var sp = TEL.spacings_m, E = TEL.median_error_deg, H = TEL.median_hits, st = IN.telescope, real = TEL.icecube_real || {};
+    var at = function (k, s) { return interp(sp, E[k], s, false, false); };
+    var e125 = at("pandel", 125), e250 = at("pandel", 250), ratio = e250 / e125;
+    var vals = S3.map(function (o) { return o.v; }), best = S3.filter(function (o) { return ratio < o.hi; })[0].v, gi = vals.indexOf(g), bi = vals.indexOf(best);
+    var ev = TEL.event, out = $("s3-out"), TT = ' <span class="tag">our toy model, tuned constants, trend only</span>' + tagFor(st);
+    out.innerHTML =
+      verdict(g === best, Math.abs(gi - bi) === 1, "In our toy model the aim gets about " + sigf(ratio, 2) + " times worse: " + deg(e125) + " at 125" + NB + "m, " + deg(e250) + " at 250" + NB + "m" + TT + ".") +
+      "<p>With the strings further apart, fewer sensors see the light (" + group(Math.round(interp(sp, H, 125, false, false))) + " at 125" + NB + "m, " +
+      group(Math.round(interp(sp, H, 250, false, false))) + " at 250" + NB + "m, median per event), so the fit has fewer arrival times to work with. Try other spacings:</p>" +
+      '<div class="ctl"><label for="s3-spacing">Distance between strings</label>' +
+      '<div class="row"><input type="range" id="s3-spacing" min="' + sp[0] + '" max="' + sp[sp.length - 1] + '" step="5" value="125"><output id="s3-spacing-out" for="s3-spacing"></output></div></div>' +
+      '<p class="readout" id="s3-readout" aria-live="polite"></p>' +
+      '<figure><div class="chart" id="s3-chart"></div>' +
+      legend([{ css: "var(--c-pandel)", label: "Pandel fit (median" + (TEL.p16_error_deg ? ", shaded: middle 68 %" : "") + ")" }, { css: "var(--c-line)", dashed: true, label: "Line fit (median)" }]
+        .concat(real.median_error_deg ? [{ css: "var(--c-real)", dot: true, label: "Real IceCube layout (Pandel fit)" }] : [])) +
+      "<figcaption>Median angle between the true and the fitted muon direction, against the distance between strings (grids of the same size, " +
+      (TEL.tracks_generated_per_point ? group(TEL.tracks_generated_per_point) + " simulated " : TEL.events_per_point ? group(TEL.events_per_point) + " simulated " : "simulated ") +
+      (TEL.muon_energy_GeV ? sigf(TEL.muon_energy_GeV / 1000, 2) + NB + "TeV " : "") + "muons per point). Log scale. " +
+      (TEL.p16_error_deg ? "Shaded: the middle 68" + NB + "% of events for the Pandel fit. " : "") + "Dotted line: IceCube's 125" + NB + "m. " +
+      (TEL.trigger_fraction && TEL.trigger_fraction[sp.length - 1] < 0.99 ? "At wide spacings some muons light too few sensors to be fitted at all (at " + sp[sp.length - 1] + NB + "m, " +
+        Math.round(TEL.trigger_fraction[sp.length - 1] * 100) + NB + "% are fitted); the medians count fitted muons only. " : "") +
+      "Our toy model: tuned constants, trend only, not IceCube's performance.</figcaption></figure>" +
+      tableHtml(["Spacing", "Pandel fit", "Line fit", "Sensors hit"], sp.map(function (s, i) { return [s + NB + "m", deg(E.pandel[i]), deg(E.line[i]), group(H[i])]; })
+        .concat(real.median_error_deg ? [["real IceCube", deg(real.median_error_deg.pandel), deg(real.median_error_deg.line), group(real.median_hits)]] : [])) +
+      (ev ? "<h3>One event, drawn</h3>" +
+        '<div class="seg" role="group" aria-label="View"><button type="button" id="s3-top" aria-pressed="true">From above</button><button type="button" id="s3-side" aria-pressed="false">From the side</button></div>' +
+        '<div class="pics"><figure class="pic"><div id="s3-event"></div></figure><figure class="pic"><div id="s3-sky"></div>' +
+        "<figcaption>Zoom on the sky: the cross is the true direction, the dots are where the two fits point.</figcaption></figure></div>" +
+        legend([{ css: "var(--c-true)", label: "True muon path" }, { css: "var(--c-line)", dotted: true, label: "Line fit" }, { css: "var(--c-pandel)", dashed: true, label: "Pandel fit" }]) +
+        '<p class="hint">Sensors that saw light, coloured by arrival time: <span class="timebar" id="s3-bar"></span> first to last (' + Math.round(ev.hits[ev.hits.length - 1][3]) +
+        NB + "ns). Bigger dot, more light. Grey: the other strings.</p>" +
+        "<p>One simulated " + (TEL.muon_energy_GeV ? sigf(TEL.muon_energy_GeV / 1000, 2) + NB + "TeV " : "") + "muon on the real IceCube sensor layout, picked as a typical event (its error is near the median), not the best one. " +
+        "The line fit is off by " + deg(ev.error_deg.line) + " and the Pandel fit by " + deg(ev.error_deg.pandel) + TT + ". Over a kilometre both fitted lines lie almost on top of the true one.</p>" : "") +
+      '<p class="note"><strong>Caveat.</strong> Our toy model: tuned constants, trend only, not IceCube\u2019s performance. The ice is uniform, there are no noise hits, ' +
+      (TEL.muon_energy_GeV ? "every muon has the same energy (" + sigf(TEL.muon_energy_GeV / 1000, 2) + NB + "TeV), " : "") + "and the fit uses exactly the light-delay model the simulation used, which flatters it. One light constant was tuned, so read the shape of the curve (wider spacing, worse aim), not the degrees.</p>";
+    var spc = $("s3-spacing");
+    var draw = chart($("s3-chart"), function () {
+      var s = +spc.value, all = E.pandel.concat(E.line).concat(TEL.p16_error_deg ? TEL.p16_error_deg.pandel.concat(TEL.p84_error_deg.pandel) : []), lo = Math.pow(10, Math.floor(log10(Math.min.apply(null, all)))), hi = Math.pow(10, Math.ceil(log10(Math.max.apply(null, all))));
+      return {
+        title: "Median pointing error versus string spacing (our toy model)",
+        desc: "Pandel fit: " + sp.map(function (x, i) { return x + " m " + E.pandel[i] + " degrees"; }).join(", ") + ". Line fit: " +
+          sp.map(function (x, i) { return x + " m " + E.line[i] + " degrees"; }).join(", ") + ". IceCube's spacing, 125 m, is marked. Your spacing: " + s + " m.",
+        x: { map: function (v) { return (v - sp[0]) / (sp[sp.length - 1] - sp[0]); }, label: "Distance between strings (m)", ticks: sp.map(function (v) { return { v: v, label: String(v) }; })
+             .filter(function (t, i, a) { return (host3w() > 420 || [50, 125, 200, 300].indexOf(t.v) >= 0 || i === 0 || i === a.length - 1); }) },
+        y: { map: logMap(lo, hi), label: "Median error (degrees, log)", ticks: decTicks(lo, hi, function (v) { return v >= 1 ? String(v) : String(v); }) },
+        vrefs: [{ x: 125, label: "IceCube 125 m" }],
+        bands: TEL.p16_error_deg && TEL.p84_error_deg ? [{ css: "var(--c-pandel)", lo: sp.map(function (x, i) { return [x, Math.max(lo, TEL.p16_error_deg.pandel[i])]; }),
+          hi: sp.map(function (x, i) { return [x, Math.min(hi, TEL.p84_error_deg.pandel[i])]; }) }] : [],
+        series: [{ css: "var(--c-line)", dash: "7 5", points: sp.map(function (x, i) { return [x, E.line[i]]; }), dots: sp.map(function (x, i) { return [x, E.line[i]]; }) },
+                 { css: "var(--c-pandel)", points: sp.map(function (x, i) { return [x, E.pandel[i]]; }), dots: sp.map(function (x, i) { return [x, E.pandel[i]]; }) }],
+        marks: [{ x: s, y: at("pandel", s), css: "var(--c-guess)", r: 7 }]
+          .concat(real.median_error_deg ? [{ x: 125, y: real.median_error_deg.pandel, css: "var(--c-real)", shape: "diamond" }] : [])
+      };
+    });
+    function host3w() { return $("s3-chart").clientWidth; }
+    function TF(s) { return TEL.trigger_fraction ? interp(sp, TEL.trigger_fraction, s, false, false) : 1; }
+    function sync() {
+      var s = +spc.value, on = sp.indexOf(s) >= 0;
+      $("s3-spacing-out").textContent = s + NB + "m";
+      $("s3-readout").innerHTML = "Strings " + s + NB + "m apart: median error <strong>" + deg(at("pandel", s)) + "</strong> with the Pandel fit, " +
+        deg(at("line", s)) + " with the line fit; about " + group(Math.round(interp(sp, H, s, false, false))) + " sensors hit" + TT +
+        (on ? "" : ' <span class="tag">interpolated between ' + sp.filter(function (x) { return x < s; }).pop() + " and " + sp.filter(function (x) { return x > s; })[0] + NB + "m</span>") +
+        (TF(s) < 0.99 ? "; only " + Math.round(TF(s) * 100) + NB + "% of muons light enough sensors to be fitted" : "") +
+        (s === 125 && real.median_error_deg ? ". On the real IceCube layout: " + deg(real.median_error_deg.pandel) + " (Pandel), " + deg(real.median_error_deg.line) + " (line fit)" : "");
+      draw();
+    }
+    spc.addEventListener("input", sync); sync();
+    if (ev) {
+      var view = "top";
+      $("s3-bar").style.background = "linear-gradient(90deg," + [0, 0.25, 0.5, 0.75, 1].map(timeColour).join(",") + ")";
+      var drawEv = function () { eventPic($("s3-event"), ev, view); skyPic($("s3-sky"), ev); };
+      redraws["s3-event"] = drawEv;
+      ["top", "side"].forEach(function (v) { $("s3-" + v).addEventListener("click", function () {
+        view = v; $("s3-top").setAttribute("aria-pressed", v === "top"); $("s3-side").setAttribute("aria-pressed", v === "side"); drawEv(); }); });
+      drawEv();
+    }
+    show(out);
+  });
+
+  // ---------- At a glance ----------
+  (function () {
+    var rows = [];
+    if (KM) {
+      var st = IN.kilometre;
+      rows.push(["Chance a 100 TeV neutrino interacts in 1 km of ice", oneIn(KM.p_interact_1km["100TeV"]), st]);
+      rows.push(["The same at 1 PeV", oneIn(KM.p_interact_1km["1PeV"]), st]);
+      rows.push(["1 PeV neutrinos getting straight up through the Earth", sigf(KM.earth_survival_vertical["1PeV"] * 100, 2) + NB + "%", st]);
+      [["10m", "10 m"], ["100m", "100 m"], ["1km", "1 km"]].forEach(function (k) { rows.push(["Cosmic neutrinos caught by a " + k[1] + " cube of ice", perYear(KM.events_per_year[k[0]]), st]); });
+    }
+    if (TEL) {
+      var i = TEL.spacings_m.indexOf(125);
+      rows.push(["Median pointing error at 125 m spacing (Pandel fit)", i >= 0 ? deg(TEL.median_error_deg.pandel[i]) : "\u2013", IN.telescope]);
+      rows.push(["\u2026 at " + TEL.spacings_m[TEL.spacings_m.length - 1] + " m spacing", deg(TEL.median_error_deg.pandel[TEL.spacings_m.length - 1]), IN.telescope]);
+      if (TEL.icecube_real && TEL.icecube_real.median_error_deg) rows.push(["\u2026 on the real IceCube layout, in our toy", deg(TEL.icecube_real.median_error_deg.pandel), IN.telescope]);
+    }
+    $("sum-table").innerHTML = "<thead><tr><th>Question</th><th>Our toy model (trend only)</th></tr></thead><tbody>" +
+      rows.map(function (r) { return "<tr><td>" + esc(r[0]) + "</td><td>" + r[1] + tagFor(r[2]) + "</td></tr>"; }).join("") + "</tbody>";
+    if (!rows.length) $("summary").hidden = true;
+  })();
+
+  // ---------- share image (index.html#og) ----------
+  if (location.hash === "#og") {
+    if (TEL && TEL.event) eventPic($("og-pic"), TEL.event, Math.hypot(TEL.event.track.dir[0], TEL.event.track.dir[1]) < 0.6 ? "side" : "top", true);
+    var L = [];
+    if (KM) L.push("1 in " + sigf(1 / KM.p_interact_1km["100TeV"], 2) + ": the odds a 100 TeV neutrino interacts in 1 km of ice");
+    if (KM) L.push(perYear(KM.events_per_year["1km"]).replace(/^a/, "A") + " in a 1 km cube of ice; " + perYear(KM.events_per_year["100m"]).replace(/^about /, "") + " in a 100 m cube");
+    if (TEL) L.push("Spread the sensors out and the aim gets worse");
+    $("og-lines").innerHTML = L.map(function (l) { return "\u2022 " + esc(l); }).join("<br>") + (L.length ? '<br><span style="font-size:20px">Our toy models, trend only.' + (D.preliminary ? " Preliminary numbers." : "") + "</span>" : "");
+  }
+})();
+</script>
+</body>
+</html>

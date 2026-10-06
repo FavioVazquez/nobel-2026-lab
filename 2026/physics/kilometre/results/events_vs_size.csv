@@ -1,0 +1,10 @@
+# Educational demo made to show an open-source tool. Toy model, not research. Values: our toy model, trend only.
+cube_side_m,events_per_year
+10,4.5794e-05
+20,3.6636e-04
+50,5.7243e-03
+100,4.5794e-02
+200,3.6636e-01
+500,5.7243e+00
+1000,4.5794e+01
+2000,3.6636e+02

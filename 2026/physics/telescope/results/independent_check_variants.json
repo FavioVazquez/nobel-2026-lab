@@ -1,0 +1,167 @@
+{
+ "what": "reviewer's sensitivity runs of the telescope toy (phys-telescope 90c0b9a), 4,000 tracks (seed 2026), 125 m vs 250 m hex grids, Pandel and line fit medians over triggered events; 'allfail' counts untriggered tracks as failures. Box run name rv-review.",
+ "variants": {
+  "accept=0.1": {
+   "125": {
+    "n_strings": 73,
+    "trigger_fraction": 0.9998,
+    "median_hits": 35.0,
+    "median_strings_hit": 11.0,
+    "pandel_median": 0.97,
+    "pandel_median_allfail": 0.97,
+    "line_median": 3.114
+   },
+   "250": {
+    "n_strings": 19,
+    "trigger_fraction": 0.605,
+    "median_hits": 11.0,
+    "median_strings_hit": 3.0,
+    "pandel_median": 4.395,
+    "pandel_median_allfail": 12.879,
+    "line_median": 6.4
+   },
+   "ratio_pandel": 4.53,
+   "ratio_pandel_allfail": 13.28,
+   "ratio_line": 2.06
+  },
+  "accept=0.4": {
+   "125": {
+    "n_strings": 73,
+    "trigger_fraction": 1.0,
+    "median_hits": 85.0,
+    "median_strings_hit": 15.0,
+    "pandel_median": 0.6,
+    "pandel_median_allfail": 0.6,
+    "line_median": 2.667
+   },
+   "250": {
+    "n_strings": 19,
+    "trigger_fraction": 0.9623,
+    "median_hits": 22.0,
+    "median_strings_hit": 4.0,
+    "pandel_median": 3.392,
+    "pandel_median_allfail": 3.563,
+    "line_median": 6.281
+   },
+   "ratio_pandel": 5.65,
+   "ratio_pandel_allfail": 5.94,
+   "ratio_line": 2.36
+  },
+  "base": {
+   "125": {
+    "n_strings": 73,
+    "trigger_fraction": 1.0,
+    "median_hits": 56.0,
+    "median_strings_hit": 13.0,
+    "pandel_median": 0.723,
+    "pandel_median_allfail": 0.723,
+    "line_median": 2.773
+   },
+   "250": {
+    "n_strings": 19,
+    "trigger_fraction": 0.8575,
+    "median_hits": 15.0,
+    "median_strings_hit": 3.0,
+    "pandel_median": 3.964,
+    "pandel_median_allfail": 5.076,
+    "line_median": 6.518
+   },
+   "ratio_pandel": 5.48,
+   "ratio_pandel_allfail": 7.02,
+   "ratio_line": 2.35
+  },
+  "energy=10000": {
+   "125": {
+    "n_strings": 73,
+    "trigger_fraction": 1.0,
+    "median_hits": 152.0,
+    "median_strings_hit": 20.0,
+    "pandel_median": 0.572,
+    "pandel_median_allfail": 0.572,
+    "line_median": 2.738
+   },
+   "250": {
+    "n_strings": 19,
+    "trigger_fraction": 1.0,
+    "median_hits": 39.0,
+    "median_strings_hit": 5.0,
+    "pandel_median": 2.392,
+    "pandel_median_allfail": 2.392,
+    "line_median": 5.774
+   },
+   "ratio_pandel": 4.18,
+   "ratio_pandel_allfail": 4.18,
+   "ratio_line": 2.11
+  },
+  "energy=100000": {
+   "125": {
+    "n_strings": 73,
+    "trigger_fraction": 1.0,
+    "median_hits": 334.0,
+    "median_strings_hit": 27.0,
+    "pandel_median": 0.527,
+    "pandel_median_allfail": 0.527,
+    "line_median": 3.875
+   },
+   "250": {
+    "n_strings": 19,
+    "trigger_fraction": 1.0,
+    "median_hits": 86.0,
+    "median_strings_hit": 7.0,
+    "pandel_median": 1.666,
+    "pandel_median_allfail": 1.666,
+    "line_median": 6.048
+   },
+   "ratio_pandel": 3.16,
+   "ratio_pandel_allfail": 3.16,
+   "ratio_line": 1.56
+  },
+  "fixedstrings": {
+   "125": {
+    "n_strings": 73,
+    "trigger_fraction": 1.0,
+    "median_hits": 56.0,
+    "median_strings_hit": 13.0,
+    "pandel_median": 0.723,
+    "pandel_median_allfail": 0.723,
+    "line_median": 2.773
+   },
+   "250": {
+    "n_strings": 73,
+    "trigger_fraction": 0.9705,
+    "median_hits": 25.0,
+    "median_strings_hit": 6.0,
+    "pandel_median": 1.115,
+    "pandel_median_allfail": 1.172,
+    "line_median": 2.314
+   },
+   "ratio_pandel": 1.54,
+   "ratio_pandel_allfail": 1.62,
+   "ratio_line": 0.83
+  },
+  "jitter=1": {
+   "125": {
+    "n_strings": 73,
+    "trigger_fraction": 1.0,
+    "median_hits": 56.0,
+    "median_strings_hit": 13.0,
+    "pandel_median": 0.724,
+    "pandel_median_allfail": 0.724,
+    "line_median": 2.772
+   },
+   "250": {
+    "n_strings": 19,
+    "trigger_fraction": 0.8575,
+    "median_hits": 15.0,
+    "median_strings_hit": 3.0,
+    "pandel_median": 3.983,
+    "pandel_median_allfail": 5.065,
+    "line_median": 6.516
+   },
+   "ratio_pandel": 5.5,
+   "ratio_pandel_allfail": 7.0,
+   "ratio_line": 2.35
+  },
+  "fixedstrings_own_selection_250": "73 strings at 250 m, muons >=300 m inside r=1000 m (disc 1400 m): trig 0.918, hits 20, strings hit 5, Pandel 2.006 deg (2.408 counting misses), line 3.506; vs base 125 m 0.723 -> 2.8x (3.3x counting misses)"
+ }
+}

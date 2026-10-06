@@ -1,0 +1,346 @@
+{
+ "status": "final",
+ "label": "our toy model, tuned constants, trend only",
+ "demo": "Educational demo made to show an open-source tool. Toy model, not research.",
+ "spacings_m": [
+  50,
+  80,
+  125,
+  160,
+  200,
+  250,
+  300
+ ],
+ "median_error_deg": {
+  "line": [
+   1.386,
+   1.816,
+   2.792,
+   3.928,
+   4.543,
+   6.467,
+   8.678
+  ],
+  "pandel": [
+   0.179,
+   0.313,
+   0.713,
+   1.302,
+   2.107,
+   4.023,
+   7.128
+  ]
+ },
+ "p68_error_deg": {
+  "line": [
+   2.267,
+   2.698,
+   4.1,
+   5.807,
+   6.669,
+   9.558,
+   13.296
+  ],
+  "pandel": [
+   0.247,
+   0.445,
+   1.086,
+   2.141,
+   3.576,
+   7.053,
+   12.473
+  ]
+ },
+ "p16_error_deg": {
+  "line": [
+   0.597,
+   0.786,
+   1.217,
+   1.714,
+   1.98,
+   2.673,
+   3.318
+  ],
+  "pandel": [
+   0.083,
+   0.139,
+   0.288,
+   0.484,
+   0.695,
+   1.238,
+   1.978
+  ]
+ },
+ "p84_error_deg": {
+  "line": [
+   4.219,
+   4.53,
+   6.673,
+   9.373,
+   10.427,
+   14.885,
+   21.466
+  ],
+  "pandel": [
+   0.356,
+   0.672,
+   1.814,
+   4.019,
+   6.948,
+   13.231,
+   21.815
+  ]
+ },
+ "median_error_ci68_deg": {
+  "line": [
+   [
+    1.371,
+    1.404
+   ],
+   [
+    1.793,
+    1.837
+   ],
+   [
+    2.768,
+    2.815
+   ],
+   [
+    3.893,
+    3.97
+   ],
+   [
+    4.491,
+    4.587
+   ],
+   [
+    6.389,
+    6.552
+   ],
+   [
+    8.541,
+    8.799
+   ]
+  ],
+  "pandel": [
+   [
+    0.177,
+    0.18
+   ],
+   [
+    0.31,
+    0.316
+   ],
+   [
+    0.705,
+    0.721
+   ],
+   [
+    1.284,
+    1.315
+   ],
+   [
+    2.076,
+    2.137
+   ],
+   [
+    3.954,
+    4.089
+   ],
+   [
+    6.95,
+    7.257
+   ]
+  ]
+ },
+ "median_hits": [
+  361.0,
+  144.0,
+  56.0,
+  33.0,
+  23.0,
+  15.0,
+  12.0
+ ],
+ "trigger_fraction": [
+  1.0,
+  1.0,
+  1.0,
+  0.9995,
+  0.9785,
+  0.8598,
+  0.5961
+ ],
+ "fitted_events": [
+  10000,
+  10000,
+  10000,
+  9995,
+  9785,
+  8598,
+  5961
+ ],
+ "n_strings": [
+  463,
+  187,
+  73,
+  43,
+  31,
+  19,
+  13
+ ],
+ "icecube_real": {
+  "median_error_deg": {
+   "line": 2.795,
+   "pandel": 0.641
+  },
+  "p68_error_deg": {
+   "line": 4.003,
+   "pandel": 0.972
+  },
+  "p16_error_deg": {
+   "line": 1.228,
+   "pandel": 0.267
+  },
+  "p84_error_deg": {
+   "line": 6.25,
+   "pandel": 1.616
+  },
+  "median_error_ci68_deg": {
+   "line": [
+    2.773,
+    2.822
+   ],
+   "pandel": [
+    0.634,
+    0.647
+   ]
+  },
+  "median_hits": 61.0,
+  "trigger_fraction": 1.0,
+  "fitted_events": 10000,
+  "n_strings": 86
+ },
+ "events_per_point": 5961,
+ "events_per_point_note": "smallest number of fitted (triggered) events at any point; tracks_generated_per_point tracks were simulated at every point",
+ "tracks_generated_per_point": 10000,
+ "definitions": {
+  "median": "median angular error between the true and the fitted direction, over fitted events",
+  "p68": "68% of fitted events have a smaller error (68% containment)",
+  "p16_p84": "the middle 68% of fitted events lies between these errors (the band in the figure)",
+  "median_ci68": "bootstrap 68% interval of the median itself (statistical precision)",
+  "median_hits": "median number of hit sensors over fitted events",
+  "trigger": "at least 8 hit sensors"
+ },
+ "model": {
+  "muon_energy_gev": 1000.0,
+  "cherenkov_angle_deg": 40.75,
+  "photons_per_m": 72184,
+  "mean_pe_amplitude": 5.308,
+  "diffusion_length_m": 28.28,
+  "time_jitter_ns": 2.0
+ },
+ "sensitivity_walk_delays": {
+  "what": "same sweep, but simulation AND fit use Pandel delays fitted to our photon random walk (results/photon_check.json) instead of AMANDA's published values",
+  "pandel": {
+   "lambda_m": 63.07919722806972,
+   "tau_ns": 683.6348116161147,
+   "lambda_a_m": 86.3,
+   "fit_range_m": [
+    10.0,
+    150.0
+   ]
+  },
+  "median_error_deg": {
+   "line": [
+    1.145,
+    1.486,
+    2.298,
+    3.297,
+    3.958,
+    5.695,
+    7.852
+   ],
+   "pandel": [
+    0.096,
+    0.178,
+    0.474,
+    1.061,
+    1.87,
+    3.942,
+    7.149
+   ]
+  },
+  "median_hits": [
+   361.0,
+   144.0,
+   56.0,
+   33.0,
+   23.0,
+   15.0,
+   12.0
+  ],
+  "icecube_real": {
+   "median_error_deg": {
+    "line": 2.287,
+    "pandel": 0.422
+   },
+   "median_hits": 61.0
+  }
+ },
+ "photon_check": {
+  "file": "results/photon_check.json",
+  "summary": {
+   "20": {
+    "rho_bin_centre_m": 22.5,
+    "fluence_ratio_walk_over_diffusion": 0.968171218226007,
+    "median_delay_walk_ns": 42.110028895540644,
+    "median_delay_pandel_ns": 152.46570732447552
+   },
+   "50": {
+    "rho_bin_centre_m": 52.5,
+    "fluence_ratio_walk_over_diffusion": 0.81528549292322,
+    "median_delay_walk_ns": 204.6911574438612,
+    "median_delay_pandel_ns": 483.3789723142954
+   },
+   "100": {
+    "rho_bin_centre_m": 102.5,
+    "fluence_ratio_walk_over_diffusion": 0.6978322817672034,
+    "median_delay_walk_ns": 478.9223842172613,
+    "median_delay_pandel_ns": 1038.9541850634662
+   }
+  },
+  "pandel_fitted_to_walk": {
+   "lambda_m": 63.07919722806972,
+   "tau_ns": 683.6348116161147,
+   "lambda_a_m": 86.3,
+   "fit_range_m": [
+    10.0,
+    150.0
+   ]
+  },
+  "n_photons": 300000
+ },
+ "seed": 2026,
+ "timings_s": {
+  "generate_tracks_s": 0.69,
+  "sweep_50_s": 8.2,
+  "sweep_80_s": 6.7,
+  "sweep_125_s": 5.84,
+  "sweep_160_s": 5.82,
+  "sweep_200_s": 5.71,
+  "sweep_250_s": 5.25,
+  "sweep_300_s": 3.86,
+  "sweep_icecube_s": 6.08,
+  "photon_check_s": 27.3,
+  "sensitivity_sweep_s": 50.1,
+  "total_s": 127.0
+ },
+ "machine": {
+  "system": "Linux",
+  "cpus": 64,
+  "workers": 60,
+  "python": "3.12.3",
+  "numpy": "2.5.3"
+ }
+}

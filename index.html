@@ -5,19 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <title>Nobel 2026 Lab</title>
-<meta name="description" content="Hands-on demos of the 2026 Nobel Prizes: a sourced fact sheet, a toy model you can run, and a video that stops and asks you questions. Educational demos, not research.">
+<meta name="description" content="Hands-on demos of the 2026 Nobel Prizes: sourced facts, toy models you can run, pages that ask you to guess first, and videos that stop and ask, made with showtime. Educational demos, not research.">
 <link rel="canonical" href="https://faviovazquez.github.io/nobel-2026-lab/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Nobel 2026 Lab">
 <meta property="og:title" content="Nobel 2026 Lab: hands-on demos of this year's Nobel Prizes">
-<meta property="og:description" content="Medicine 2026: in 1999 Francis Crick called light-switched neurons &quot;rather far-fetched&quot;. A 2-minute video that stops and asks you three questions, and a toy model you can run.">
+<meta property="og:description" content="Medicine and Physics 2026: videos that stop and ask you to guess, toy models you can run, and a real 6 PeV neutrino event in 3D. Every video made with showtime.">
 <meta property="og:url" content="https://faviovazquez.github.io/nobel-2026-lab/">
-<meta property="og:image" content="https://faviovazquez.github.io/nobel-2026-lab/assets/og-medicine.jpg">
+<meta property="og:image" content="https://faviovazquez.github.io/nobel-2026-lab/assets/og-lab.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="A neuron drawn in thin blue lines with a pulse of light along it, under the words: 1999, Francis Crick, light, 'rather far-fetched'. Nobel Prize in Physiology or Medicine 2026.">
+<meta property="og:image:alt" content="Nobel 2026 Lab: hands-on demos of this year's Nobel Prizes, with drawings of a neuron lit by a pulse of blue light and of light sensors on strings in dark ice.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://faviovazquez.github.io/nobel-2026-lab/assets/og-medicine.jpg">
+<meta name="twitter:image" content="https://faviovazquez.github.io/nobel-2026-lab/assets/og-lab.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B1220'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2358A9FF'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%2358A9FF' stroke-opacity='.45' stroke-width='2'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,6 +61,10 @@ h1 em { font-style: italic; color: var(--blue) }
 .lede { font-size: clamp(18px, 2.2vw, 20px); color: var(--muted); margin: 0; max-width: 60ch }
 .label { display: inline-block; border: 1px solid var(--warm); background: var(--warm-soft); color: var(--fg); border-radius: 8px; padding: 8px 12px; font-size: 14px; line-height: 1.45; max-width: 64ch }
 .label b { color: var(--warm) }
+.made { margin: 0; font-size: 15px }
+.made a { text-decoration: none; color: var(--muted) }
+.made a b { color: var(--blue); font-weight: 600 }
+.made a:hover b { text-decoration: underline }
 
 h2 { font: 600 clamp(26px, 3.6vw, 34px)/1.15 var(--serif); margin: 0; text-wrap: balance }
 h3 { font: 600 18px/1.3 var(--sans); margin: 0 }
@@ -124,6 +128,7 @@ footer p { margin: 0; max-width: 72ch }
     <a class="name" href="./"><b>●</b> nobel-2026-lab</a>
     <nav aria-label="Site">
       <a href="#medicine">Medicine</a>
+      <a href="#physics">Physics</a>
       <a class="hide-sm" href="#prizes">The prizes</a>
       <a href="https://github.com/FavioVazquez/nobel-2026-lab">GitHub</a>
     </nav>
@@ -135,6 +140,7 @@ footer p { margin: 0; max-width: 72ch }
       <h1>This year's Nobel Prizes, <em>hands on</em></h1>
       <p class="lede">Each prize gets a fact sheet where every sentence has a source, a small model you can run on a laptop, and a video that stops and asks you to guess before it tells you.</p>
       <p class="label"><b>Educational demos made to show an open-source tool.</b> Not research, and not for any lab or clinical use. The models are teaching toys.</p>
+      <p class="made"><a href="https://github.com/FavioVazquez/showtime">Every video here is <b>made with showtime</b>, an open-source video studio for coding agents →</a></p>
     </div>
 
     <section id="medicine" aria-labelledby="med-h">
@@ -170,6 +176,43 @@ footer p { margin: 0; max-width: 72ch }
       </article>
     </section>
 
+    <section id="physics" aria-labelledby="phys-h">
+      <div class="sec-head">
+        <h2 id="phys-h">Physics: a telescope made of ice</h2>
+        <p>Physics 2026</p>
+      </div>
+      <article class="prize">
+        <a class="poster" href="2026/physics/video/interactive/" aria-label="Play the Physics video that stops and asks (2 minutes 37 seconds)">
+          <img src="2026/physics/video/exports/poster.jpg" width="1920" height="1080" alt="A line drawing of a fingertip with a stream of neutrinos passing through it, under the words: 65 billion per second. Nobel Prize in Physics 2026." loading="lazy">
+          <span class="play"><i aria-hidden="true"></i>Play · 2:37 · stops at 3 questions</span>
+        </a>
+        <div class="prize-body">
+          <p class="kicker">The story in one line</p>
+          <p class="quote">About 65 billion neutrinos from the Sun pass through your little fingernail every second, and almost none of them touch anything. So how do you catch one?</p>
+          <p class="cite">On 6 October 2026 the prize went to Francis Halzen “for decisive contributions to the IceCube Neutrino Observatory and the discovery of high-energy neutrinos of astrophysical origin” (<a href="https://www.nobelprize.org/prizes/physics/2026/press-release/">press release</a>).</p>
+          <div class="actions">
+            <a class="btn primary" href="2026/physics/video/interactive/">
+              <i class="dot" aria-hidden="true"></i>
+              <span><strong>Play the video that asks</strong><small>Three guesses: the odds a neutrino hits anything, how a telescope aims, how many come from space.</small></span>
+            </a>
+            <a class="btn" href="2026/physics/page/">
+              <img src="assets/icons/station-kilometre.svg" alt="" width="30" height="30">
+              <span><strong>Try the toy models</strong><small>Why a cubic kilometre, the Earth as a shield, and a toy telescope with a spacing slider. Guess first, then see.</small></span>
+            </a>
+            <a class="btn" href="2026/physics/glashow/">
+              <img src="assets/icons/station-replay.svg" alt="" width="30" height="30">
+              <span><strong>Replay a real 6 PeV event in 3D</strong><small>18,135 flashes of light from IceCube's public data, 8 December 2016.</small></span>
+            </a>
+          </div>
+          <div class="more">
+            <a href="2026/physics/video/exports/nobel-2026-physics.mp4">Plain MP4</a>
+            <a href="https://github.com/FavioVazquez/nobel-2026-lab/blob/main/2026/physics/CLAIMS.md">The 41 claims and their sources</a>
+            <a href="https://github.com/FavioVazquez/nobel-2026-lab/tree/main/2026/physics">Code and how to rerun it</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
     <section id="prizes" aria-labelledby="prizes-h">
       <div class="sec-head">
         <h2 id="prizes-h">The prizes</h2>
@@ -182,9 +225,9 @@ footer p { margin: 0; max-width: 72ch }
           <p>Light-gated ion channels and optogenetics: a light-and-heat toy model, a heat budget, a page and a video.</p>
         </div>
         <div class="card">
-          <span class="tag live">First piece ready · more coming</span>
-          <h3><a href="2026/physics/glashow/">Physics</a></h3>
-          <p>Francis Halzen, for the IceCube Neutrino Observatory and the discovery of high-energy neutrinos of astrophysical origin (<a href="https://www.nobelprize.org/prizes/physics/2026/press-release/">press release</a>). <a href="2026/physics/glashow/">Replay IceCube's real 6 PeV event in 3D</a>.</p>
+          <span class="tag live">Ready</span>
+          <h3><a href="#physics">Physics</a></h3>
+          <p>Neutrinos from space and IceCube: a toy telescope, why a cubic kilometre, a real 6 PeV event in 3D, a page and a video.</p>
         </div>
         <div class="card">
           <span class="tag">7 and 12 October</span>
@@ -202,15 +245,15 @@ footer p { margin: 0; max-width: 72ch }
         <div class="card real">
           <h3>Real</h3>
           <ul>
-            <li>The prize, the people, the dates and the papers. Every sentence is in a claims ledger with its source.</li>
+            <li>The prizes, the people, the dates and the papers. Every sentence is in a claims ledger with its source.</li>
             <li>Numbers quoted from published papers, each with a link.</li>
-            <li>The published parameters the models start from.</li>
+            <li>The published parameters the models start from, and IceCube's public event data (the 6 PeV replay).</li>
           </ul>
         </div>
         <div class="card toy">
           <h3>A toy</h3>
           <ul>
-            <li>The light, heat and nerve-cell models: textbook ideas with simplified settings. No skull, no vessels, no real brain shape.</li>
+            <li>The models: light, heat and nerve cells for Medicine; light in ice, a telescope fit and event rates for Physics. Textbook ideas with simplified settings, every simplification listed.</li>
             <li>Their outputs are for learning. They are not checked against experiments and must not be used to plan an experiment, a device or a treatment.</li>
           </ul>
         </div>

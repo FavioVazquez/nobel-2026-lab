@@ -6,10 +6,10 @@ One folder per Nobel Prize. A folder is added when its prize has been announced 
 
 | Prize | 2026 topic | Folder | Status |
 |---|---|---|---|
-| Medicine | Light-gated ion channels and optogenetics | [medicine](medicine/README.md) | done |
-| Physics | Neutrino astronomy: Francis Halzen, for the IceCube Neutrino Observatory (announced 6 October) | [physics/glashow](physics/glashow/README.md) | first piece ready (3D replay of the 6 PeV event); more coming |
-| Chemistry | to be announced | none yet | coming |
-| Economics | to be announced | none yet | coming |
+| Medicine | Light-gated ion channels and optogenetics (announced 5 October) | [medicine](medicine/README.md) | done |
+| Physics | Neutrino astronomy: Francis Halzen, for the IceCube Neutrino Observatory (announced 6 October) | [physics](physics/README.md) | done |
+| Chemistry | to be announced on 7 October | none yet | coming |
+| Economics | to be announced on 12 October | none yet | coming |
 
 ## What every prize folder holds
 
@@ -19,5 +19,7 @@ One folder per Nobel Prize. A folder is added when its prize has been announced 
 | `FACTS.md` | A fact sheet where every statement names its source. |
 | `CLAIMS.md` | A ledger of the exact sentences we say in a video or README, each with its source and the date it was checked. |
 | code and results | Small models you can run on a laptop, if the topic suits one. Each has its own README. |
+| `page/` | A page in the browser: guess first, then see what the toy model says. |
+| `video/` | The video, and a version that stops and asks. Every video is made with [showtime](https://github.com/FavioVazquez/showtime), an open-source video studio for coding agents. |
 
-Pictures shared by all folders live in [`../assets`](../assets/hero-light.svg). Back to the [front page](../README.md).
+Pictures shared by all folders live in [`../assets`](../assets/hero-light.svg). The lab's site: <https://faviovazquez.github.io/nobel-2026-lab/>. Back to the [front page](../README.md).

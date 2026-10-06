@@ -1,0 +1,70 @@
+{
+  "status": "fixture",
+  "spacings_m": [
+    50,
+    80,
+    125,
+    160,
+    200,
+    250,
+    300
+  ],
+  "median_error_deg": {
+    "line": [
+      0.9,
+      1.37,
+      2.05,
+      2.56,
+      3.13,
+      3.83,
+      4.51
+    ],
+    "pandel": [
+      0.2,
+      0.42,
+      0.87,
+      1.29,
+      1.84,
+      2.63,
+      3.52
+    ]
+  },
+  "p68_error_deg": {
+    "line": [
+      1.62,
+      2.47,
+      3.69,
+      4.61,
+      5.63,
+      6.89,
+      8.12
+    ],
+    "pandel": [
+      0.38,
+      0.8,
+      1.65,
+      2.45,
+      3.5,
+      5.0,
+      6.69
+    ]
+  },
+  "median_hits": [
+    1500,
+    585,
+    240,
+    146,
+    93,
+    60,
+    41
+  ],
+  "icecube_real": {
+    "median_error_deg": {
+      "line": 2.0,
+      "pandel": 0.5
+    },
+    "median_hits": 250
+  },
+  "events_per_point": 0,
+  "label": "our toy model, tuned constants, trend only"
+}

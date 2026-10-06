@@ -1,0 +1,6 @@
+# Versions used for the published results (build box, Python 3.12). Also tested on Python 3.11 with
+# numpy 1.26.3, scipy 1.15.2, matplotlib 3.8.2. All BSD/PSF-style licences (MIT-compatible).
+numpy==2.5.3
+scipy==1.18.1
+matplotlib==3.11.2
+pytest==8.3.3

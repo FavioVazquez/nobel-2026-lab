@@ -220,7 +220,7 @@ def check_claims(claims: pathlib.Path) -> int:
     ids: list[int] = []
     rows = 0
     for line in claims.read_text(encoding="utf-8").splitlines():
-        m = re.match(r"^\|\s*(C(\d+))\s*\|", line)
+        m = re.match(r"^\|\s*([A-Z](\d+))\s*\|", line)  # C01 (Medicine), P01 (Physics), ...
         if not m:
             continue
         rows += 1
@@ -238,7 +238,7 @@ def check_claims(claims: pathlib.Path) -> int:
         if not re.search(r"\b20\d\d-\d\d-\d\d\b", cells[4]):
             errors.append(f"{rel(claims)}: {m.group(1)} status has no check date")
     if ids != list(range(1, len(ids) + 1)):
-        errors.append(f"{rel(claims)}: claim ids are not C01, C02, ... in order: {ids}")
+        errors.append(f"{rel(claims)}: claim ids are not 01, 02, ... in order: {ids}")
     return rows
 
 
