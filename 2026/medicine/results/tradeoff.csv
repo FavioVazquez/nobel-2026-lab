@@ -1,0 +1,14 @@
+# Educational demo, toy model. Not research. 200 um / NA 0.22 fibre, homogeneous brain tissue model.
+# row=colour: reach and warming per colour (every switch borrows ChR2's light sensitivity, so these depend on colour only). row=switch: speed only.
+# Volumes: light >= threshold at 10 mW output, divided by 10. Warming: steady state, continuous light.
+# Following rate (toy result; read the order, not the numbers): highest tested rate up to which EVERY tested rate (2 ms pulses at 3 mW/mm^2, 20 pulses) has >=95% of pulses giving exactly one spike (one miss allowed); the first failure ends the run. first_failure_Hz: lowest failing rate. follows_again_Hz: rates above it where 1:1 returns, a resonance of this toy cell, not of the light switch.
+# Measured (Klapoetke 2014): ChrimsonR follows at least 20 Hz, comparable to ChR2(H134R); Chronos 5-60 Hz (530 nm, 2 ms, 40 pulses). The ChrimsonR row is a limit of the simplified stand-in.
+# Red result ignores absorption outside blood, so it looks better than it is.
+row,name,wavelength_nm,status,volume_mm3_per_mW_at_3mWmm2,volume_mm3_per_mW_at_1mWmm2,volume_mm3_per_mW_at_10mWmm2,peak_warming_C_per_mW,peak_warming_C_per_mW_low_perfusion,peak_warming_C_per_mW_high_perfusion,slice_mean_warming_C_per_mW,max_following_rate_Hz,first_failure_Hz,follows_again_Hz,note
+colour,470 nm (blue),470,,0.09211,0.3361,0.01668,0.3834,0.3923,0.3769,0.2883,,,,
+colour,590 nm (amber),590,,0.1084,0.4913,0.01794,0.2607,0.2689,0.2549,0.2018,,,,
+colour,635 nm (red),635,,0.3579,3.183,0.02962,0.04152,0.04583,0.03883,0.0364,,,,no absorption outside blood in this model: looks better than it is
+switch,ChR2 (Williams 2013),470,published,,,,,,,,50,60,130 140,"ChR2(H134R) 4-state, Table 1, 22 C values"
+switch,ChR2 (PyRhO fit),470,published,,,,,,,,60,70,130 140 150,PyRhO modelFits['4']['ChR2']
+switch,Chronos (simplified),470,simplified,,,,,,,,160,175,,"Williams structure, closing rates rescaled to tau_off 3.6 ms (Klapoetke 2014)"
+switch,ChrimsonR (simplified),590,simplified,,,,,,,,10,20,,"Williams structure, closing rates rescaled to tau_off 15.8 ms (Klapoetke 2014); driven at 590 nm, Chrimson's peak"

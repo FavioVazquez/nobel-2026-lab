@@ -1,0 +1,477 @@
+{
+ "tag": "Educational demo, toy model. Not research, not for lab or clinical use.",
+ "machine": "i386",
+ "python": "3.11.4",
+ "heat_model": {
+  "470": {
+   "steady_C_per_mW": 0.3833717393226887,
+   "one_pulse_rise_C_per_mW": {
+    "0.5ms": 0.0022550829649743034,
+    "1ms": 0.004480412766705837,
+    "2ms": 0.00880885739472745,
+    "5ms": 0.020999642295454927,
+    "10ms": 0.03812906547963892
+   }
+  },
+  "590": {
+   "steady_C_per_mW": 0.2607036587759292,
+   "one_pulse_rise_C_per_mW": {
+    "0.5ms": 0.0013442150211801823,
+    "1ms": 0.0026682960997222948,
+    "2ms": 0.005238383321053036,
+    "5ms": 0.012591944707361913,
+    "10ms": 0.02301160158681167
+   }
+  },
+  "635": {
+   "steady_C_per_mW": 0.04151821095820607,
+   "one_pulse_rise_C_per_mW": {
+    "0.5ms": 0.00011703953829757621,
+    "1ms": 0.0002323877298695205,
+    "2ms": 0.00045987749199654184,
+    "5ms": 0.0011089644020816842,
+    "10ms": 0.0020327745793803738
+   }
+  }
+ },
+ "recipe_info": {
+  "0.5mm": {
+   "g_mS_cm2": [
+    0.48663157294841997,
+    0.5319316089863835,
+    0.4134866017705592
+   ],
+   "ref_irradiance_per_mW": [
+    2.4966850876808167,
+    2.4966850876808167,
+    4.0241369381546965
+   ]
+  },
+  "1mm": {
+   "g_mS_cm2": [
+    0.48663157294841997,
+    0.5319316089863835,
+    0.4134866017705592
+   ],
+   "ref_irradiance_per_mW": [
+    0.2576579060405493,
+    0.2576579060405493,
+    0.48848783597350126
+   ]
+  }
+ },
+ "best_recipes": [
+  {
+   "switch": "ChR2 (Williams 2013)",
+   "wavelength_nm": 470,
+   "ref_depth_mm": 0.5,
+   "width_ms": 1.0,
+   "rate_Hz": 100.0,
+   "peak_mW": 11.3137,
+   "duty": 0.1,
+   "irradiance_at_ref_mW_mm2": 28.246746076494457,
+   "following_score": 0.95,
+   "warming_C_estimate": 0.4844253306361902,
+   "follows_at_all_lower_rates": true,
+   "within_0.5C": true,
+   "within_1C": true,
+   "within_2C": true,
+   "limit_C": 0.5,
+   "reaches_95": true
+  },
+  {
+   "switch": "ChR2 (Williams 2013)",
+   "wavelength_nm": 470,
+   "ref_depth_mm": 0.5,
+   "width_ms": 1.0,
+   "rate_Hz": 150.0,
+   "peak_mW": 11.3137,
+   "duty": 0.15,
+   "irradiance_at_ref_mW_mm2": 28.246746076494457,
+   "following_score": 1.0,
+   "warming_C_estimate": 0.7012929729949452,
+   "follows_at_all_lower_rates": true,
+   "within_0.5C": false,
+   "within_1C": true,
+   "within_2C": true,
+   "limit_C": 1.0,
+   "reaches_95": true
+  },
+  {
+   "switch": "ChR2 (Williams 2013)",
+   "wavelength_nm": 470,
+   "ref_depth_mm": 0.5,
+   "width_ms": 1.0,
+   "rate_Hz": 150.0,
+   "peak_mW": 11.3137,
+   "duty": 0.15,
+   "irradiance_at_ref_mW_mm2": 28.246746076494457,
+   "following_score": 1.0,
+   "warming_C_estimate": 0.7012929729949452,
+   "follows_at_all_lower_rates": true,
+   "within_0.5C": false,
+   "within_1C": true,
+   "within_2C": true,
+   "limit_C": 2.0,
+   "reaches_95": true
+  },
+  {
+   "switch": "ChR2 (Williams 2013)",
+   "wavelength_nm": 470,
+   "ref_depth_mm": 1.0,
+   "width_ms": 2.0,
+   "rate_Hz": 40.0,
+   "peak_mW": 11.3137,
+   "duty": 0.08,
+   "irradiance_at_ref_mW_mm2": 2.9150642515709624,
+   "following_score": 1.0,
+   "warming_C_estimate": 0.4466489976807363,
+   "follows_at_all_lower_rates": true,
+   "within_0.5C": true,
+   "within_1C": true,
+   "within_2C": true,
+   "limit_C": 0.5,
+   "reaches_95": true
+  },
+  {
+   "switch": "ChR2 (Williams 2013)",
+   "wavelength_nm": 470,
+   "ref_depth_mm": 1.0,
+   "width_ms": 2.0,
+   "rate_Hz": 60.0,
+   "peak_mW": 16.0,
+   "duty": 0.12,
+   "irradiance_at_ref_mW_mm2": 4.1225264966487885,
+   "following_score": 1.0,
+   "warming_C_estimate": 0.8770154578152015,
+   "follows_at_all_lower_rates": true,
+   "within_0.5C": false,
+   "within_1C": true,
+   "within_2C": true,
+   "limit_C": 1.0,
+   "reaches_95": true
+  },
+  {
+   "switch": "ChR2 (Williams 2013)",
+   "wavelength_nm": 470,
+   "ref_depth_mm": 1.0,
+   "width_ms": 2.0,
+   "rate_Hz": 60.0,
+   "peak_mW": 16.0,
+   "duty": 0.12,
+   "irradiance_at_ref_mW_mm2": 4.1225264966487885,
+   "following_score": 1.0,
+   "warming_C_estimate": 0.8770154578152015,
+   "follows_at_all_lower_rates": true,
+   "within_0.5C": false,
+   "within_1C": true,
+   "within_2C": true,
+   "limit_C": 2.0,
+   "reaches_95": true
+  },
+  {
+   "switch": "Chronos (simplified)",
+   "wavelength_nm": 470,
+   "ref_depth_mm": 0.5,
+   "width_ms": 2.0,
+   "rate_Hz": 150.0,
+   "peak_mW": 1.0,
+   "duty": 0.3,
+   "irradiance_at_ref_mW_mm2": 2.4966850876808167,
+   "following_score": 1.0,
+   "warming_C_estimate": 0.12382037919153405,
+   "follows_at_all_lower_rates": true,
+   "within_0.5C": true,
+   "within_1C": true,
+   "within_2C": true,
+   "limit_C": 0.5,
+   "reaches_95": true
+  },
+  {
+   "switch": "Chronos (simplified)",
+   "wavelength_nm": 470,
+   "ref_depth_mm": 0.5,
+   "width_ms": 2.0,
+   "rate_Hz": 150.0,
+   "peak_mW": 1.0,
+   "duty": 0.3,
+   "irradiance_at_ref_mW_mm2": 2.4966850876808167,
+   "following_score": 1.0,
+   "warming_C_estimate": 0.12382037919153405,
+   "follows_at_all_lower_rates": true,
+   "within_0.5C": true,
+   "within_1C": true,
+   "within_2C": true,
+   "limit_C": 1.0,
+   "reaches_95": true
+  },
+  {
+   "switch": "Chronos (simplified)",
+   "wavelength_nm": 470,
+   "ref_depth_mm": 0.5,
+   "width_ms": 2.0,
+   "rate_Hz": 150.0,
+   "peak_mW": 1.0,
+   "duty": 0.3,
+   "irradiance_at_ref_mW_mm2": 2.4966850876808167,
+   "following_score": 1.0,
+   "warming_C_estimate": 0.12382037919153405,
+   "follows_at_all_lower_rates": true,
+   "within_0.5C": true,
+   "within_1C": true,
+   "within_2C": true,
+   "limit_C": 2.0,
+   "reaches_95": true
+  },
+  {
+   "switch": "Chronos (simplified)",
+   "wavelength_nm": 470,
+   "ref_depth_mm": 1.0,
+   "width_ms": 2.0,
+   "rate_Hz": 60.0,
+   "peak_mW": 8.0,
+   "duty": 0.12,
+   "irradiance_at_ref_mW_mm2": 2.0612632483243942,
+   "following_score": 1.0,
+   "warming_C_estimate": 0.43850772890760076,
+   "follows_at_all_lower_rates": true,
+   "within_0.5C": true,
+   "within_1C": true,
+   "within_2C": true,
+   "limit_C": 0.5,
+   "reaches_95": true
+  },
+  {
+   "switch": "Chronos (simplified)",
+   "wavelength_nm": 470,
+   "ref_depth_mm": 1.0,
+   "width_ms": 2.0,
+   "rate_Hz": 150.0,
+   "peak_mW": 8.0,
+   "duty": 0.3,
+   "irradiance_at_ref_mW_mm2": 2.0612632483243942,
+   "following_score": 0.95,
+   "warming_C_estimate": 0.9905630335322724,
+   "follows_at_all_lower_rates": true,
+   "within_0.5C": false,
+   "within_1C": true,
+   "within_2C": true,
+   "limit_C": 1.0,
+   "reaches_95": true
+  },
+  {
+   "switch": "Chronos (simplified)",
+   "wavelength_nm": 470,
+   "ref_depth_mm": 1.0,
+   "width_ms": 2.0,
+   "rate_Hz": 150.0,
+   "peak_mW": 11.3137,
+   "duty": 0.3,
+   "irradiance_at_ref_mW_mm2": 2.9150642515709624,
+   "following_score": 1.0,
+   "warming_C_estimate": 1.4008666240592589,
+   "follows_at_all_lower_rates": true,
+   "within_0.5C": false,
+   "within_1C": false,
+   "within_2C": true,
+   "limit_C": 2.0,
+   "reaches_95": true
+  },
+  {
+   "switch": "ChrimsonR (simplified)",
+   "wavelength_nm": 590,
+   "ref_depth_mm": 0.5,
+   "width_ms": 2.0,
+   "rate_Hz": 60.0,
+   "peak_mW": 5.6569,
+   "duty": 0.12,
+   "irradiance_at_ref_mW_mm2": 22.764140245447305,
+   "following_score": 1.0,
+   "warming_C_estimate": 0.2066059538884114,
+   "follows_at_all_lower_rates": true,
+   "within_0.5C": true,
+   "within_1C": true,
+   "within_2C": true,
+   "limit_C": 0.5,
+   "reaches_95": true
+  },
+  {
+   "switch": "ChrimsonR (simplified)",
+   "wavelength_nm": 590,
+   "ref_depth_mm": 0.5,
+   "width_ms": 2.0,
+   "rate_Hz": 60.0,
+   "peak_mW": 5.6569,
+   "duty": 0.12,
+   "irradiance_at_ref_mW_mm2": 22.764140245447305,
+   "following_score": 1.0,
+   "warming_C_estimate": 0.2066059538884114,
+   "follows_at_all_lower_rates": true,
+   "within_0.5C": true,
+   "within_1C": true,
+   "within_2C": true,
+   "limit_C": 1.0,
+   "reaches_95": true
+  },
+  {
+   "switch": "ChrimsonR (simplified)",
+   "wavelength_nm": 590,
+   "ref_depth_mm": 0.5,
+   "width_ms": 2.0,
+   "rate_Hz": 60.0,
+   "peak_mW": 5.6569,
+   "duty": 0.12,
+   "irradiance_at_ref_mW_mm2": 22.764140245447305,
+   "following_score": 1.0,
+   "warming_C_estimate": 0.2066059538884114,
+   "follows_at_all_lower_rates": true,
+   "within_0.5C": true,
+   "within_1C": true,
+   "within_2C": true,
+   "limit_C": 2.0,
+   "reaches_95": true
+  },
+  {
+   "switch": "ChrimsonR (simplified)",
+   "wavelength_nm": 590,
+   "ref_depth_mm": 1.0,
+   "width_ms": 2.0,
+   "rate_Hz": 40.0,
+   "peak_mW": 16.0,
+   "duty": 0.08,
+   "irradiance_at_ref_mW_mm2": 7.81580537557602,
+   "following_score": 1.0,
+   "warming_C_estimate": 0.41751481637003807,
+   "follows_at_all_lower_rates": true,
+   "within_0.5C": true,
+   "within_1C": true,
+   "within_2C": true,
+   "limit_C": 0.5,
+   "reaches_95": true
+  },
+  {
+   "switch": "ChrimsonR (simplified)",
+   "wavelength_nm": 590,
+   "ref_depth_mm": 1.0,
+   "width_ms": 2.0,
+   "rate_Hz": 40.0,
+   "peak_mW": 16.0,
+   "duty": 0.08,
+   "irradiance_at_ref_mW_mm2": 7.81580537557602,
+   "following_score": 1.0,
+   "warming_C_estimate": 0.41751481637003807,
+   "follows_at_all_lower_rates": true,
+   "within_0.5C": true,
+   "within_1C": true,
+   "within_2C": true,
+   "limit_C": 1.0,
+   "reaches_95": true
+  },
+  {
+   "switch": "ChrimsonR (simplified)",
+   "wavelength_nm": 590,
+   "ref_depth_mm": 1.0,
+   "width_ms": 2.0,
+   "rate_Hz": 60.0,
+   "peak_mW": 45.2548,
+   "duty": 0.12,
+   "irradiance_at_ref_mW_mm2": 22.106419319413607,
+   "following_score": 1.0,
+   "warming_C_estimate": 1.6528330219783416,
+   "follows_at_all_lower_rates": true,
+   "within_0.5C": false,
+   "within_1C": false,
+   "within_2C": true,
+   "limit_C": 2.0,
+   "reaches_95": true
+  }
+ ],
+ "neurons_recruited_continuous_light": {
+  "470": {
+   "0.5C": {
+    "recruited": 6185,
+    "per_mW": 4742.308415421659,
+    "per_C": 12370.0
+   },
+   "1C": {
+    "recruited": 16441,
+    "per_mW": 6303.014766204325,
+    "per_C": 16441.0
+   },
+   "2C": {
+    "recruited": 42851,
+    "per_mW": 8213.931200858267,
+    "per_C": 21425.5
+   }
+  },
+  "590": {
+   "0.5C": {
+    "recruited": 11235,
+    "per_mW": 5858.011212695129,
+    "per_C": 22470.0
+   },
+   "1C": {
+    "recruited": 31136,
+    "per_mW": 8117.2691196473315,
+    "per_C": 31136.0
+   },
+   "2C": {
+    "recruited": 86884,
+    "per_mW": 11325.488344543917,
+    "per_C": 43442.0
+   }
+  }
+ },
+ "recruited_at_1C_by_expression_spread": {
+  "470": {
+   "0.25": 13419,
+   "0.5": 16441,
+   "1": 31329
+  },
+  "590": {
+   "0.25": 25010,
+   "0.5": 31136,
+   "1": 65396
+  }
+ },
+ "toy_upper_bound_only": {
+  "635": {
+   "note": "635 nm: toy upper bound only (no absorption outside blood, no 635 nm switch, uniform block much bigger than a thin cortex)",
+   "at_limit": {
+    "0.5C": {
+     "recruited": 784750,
+     "per_mW": 65162.83209890443,
+     "per_C": 1569500.0
+    },
+    "1C": {
+     "recruited": 2763107,
+     "per_mW": 114719.2593260959,
+     "per_C": 2763107.0
+    },
+    "2C": {
+     "recruited": 8218659,
+     "per_mW": 170612.00907777948,
+     "per_C": 4109329.5
+    }
+   },
+   "by_spread_at_1C": {
+    "0.25": 2146542,
+    "0.5": 2763107,
+    "1": 5867243
+   }
+  }
+ },
+ "caveats": [
+  "toy model: homogeneous tissue, one activation threshold (3 mW/mm^2), one expression law (lognormal)",
+  "every switch borrows ChR2's light sensitivity; no 635 nm switch is modelled, 635 nm uses the same threshold",
+  "red (635 nm) is a labelled toy upper bound only, never a headline: it ignores absorption outside blood and uses a uniform block much bigger than a thin cortex",
+  "B's heat model runs about 1.5-3x hotter than Stujenske et al. 2015, so per-degree counts may be underestimates"
+ ],
+ "timings_s": {
+  "heat_model_s": 63.40626176598016,
+  "recipe_s": 764.5927717679879,
+  "recruit_s": 20.29904946894385,
+  "frames_s": 8.96070288401097,
+  "frames_vertical_s": 8.249969559023157
+ }
+}

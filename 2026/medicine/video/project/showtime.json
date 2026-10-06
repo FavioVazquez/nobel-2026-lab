@@ -1,0 +1,104 @@
+{
+  "title": "The light switch: the 2026 Nobel Prize in Medicine",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration": 141.0,
+  "background": "#0f1020",
+  "poster": 11.32,
+  "chapters": [
+    [
+      0,
+      "Light, 'rather far-fetched'"
+    ],
+    [
+      11.421,
+      "The prize"
+    ],
+    [
+      21.284,
+      "Step 1: the alga"
+    ],
+    [
+      42.174,
+      "Step 2: the switch"
+    ],
+    [
+      55.75,
+      "Neurons and mice"
+    ],
+    [
+      68.761,
+      "Step 3: how deep light goes (toy model)"
+    ],
+    [
+      94.824,
+      "Light is heat"
+    ],
+    [
+      110.011,
+      "Neurons per degree (toy model)"
+    ],
+    [
+      125.764,
+      "Step 4: the limit"
+    ]
+  ],
+  "audio": "audio/mix.json",
+  "startTitle": false,
+  "template": "dom",
+  "look": "nocturne",
+  "questions": [
+    {
+      "id": "q1",
+      "at": "shot-3",
+      "prompt": "How much faster than a human eye does the alga react to light?",
+      "choices": [
+        "About the same",
+        "About 5 times faster",
+        "More than 20 times faster"
+      ],
+      "answer": 2,
+      "reply": {
+        "0": "Not quite: the Nobel Committee says it is more than twenty times faster.",
+        "1": "Closer, but the Nobel Committee says more than twenty times faster.",
+        "2": "Yes. The Nobel Committee says: more than twenty times faster, about half a millisecond after light reaches its eyespot."
+      },
+      "think": 3
+    },
+    {
+      "id": "q2",
+      "at": "shot-7",
+      "prompt": "In our toy model, which colour of light reaches deepest into brain tissue?",
+      "choices": [
+        "Blue",
+        "Yellow",
+        "Red"
+      ],
+      "answer": 2,
+      "reply": {
+        "0": "Blue fades fastest in our toy model.",
+        "1": "Yellow goes further than blue, but not furthest.",
+        "2": "Red, in our toy model. It ignores absorption outside blood, so read every depth as rough."
+      },
+      "think": 3
+    },
+    {
+      "id": "q3",
+      "at": "shot-10",
+      "prompt": "In our toy model, how many neurons can one degree of warming recruit with blue light?",
+      "choices": [
+        "About a hundred",
+        "About a thousand",
+        "More than ten thousand"
+      ],
+      "answer": 2,
+      "reply": {
+        "0": "Far more, in our toy model.",
+        "1": "More than that, in our toy model.",
+        "2": "More than ten thousand, in our toy model with its assumptions: one threshold, one expression law."
+      },
+      "think": 3
+    }
+  ]
+}

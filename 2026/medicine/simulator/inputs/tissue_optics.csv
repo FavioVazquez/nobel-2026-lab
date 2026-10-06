@@ -1,0 +1,25 @@
+# Educational demo, toy model. Inputs for simulator/light.py.
+# Section 1: haemoglobin molar extinction (cm^-1 per mol/L), a handful of rows from
+#   S. Prahl, "Tabulated molar extinction coefficient for hemoglobin in water", OMLC,
+#   https://omlc.org/spectra/hemoglobin/summary.html (values copied for the 7 wavelengths we need;
+#   intermediate wavelengths are linearly interpolated by the code).
+# Section 2 (key,value rows): brain reduced-scattering power law mu_s'(lambda) = a*(lambda/500nm)^-b,
+#   S. L. Jacques, "Optical properties of biological tissues: a review", Phys. Med. Biol. 58 (2013) R37,
+#   Table 2, brain mean of 8 studies; CSV on the author's site:
+#   https://omlc.org/news/dec14/Jacques_PMB2013/table2_JacquesPMB2013.csv
+# Anisotropy g = 0.86 and the 473 nm cross-check mu_s = 211 cm^-1 are from Yona, Farah & Shoham 2016,
+#   eNeuro 3(1):ENEURO.0059-15.2015, Table 1 / Results (adult mouse cortex, 473 nm), CC BY,
+#   https://www.eneuro.org/content/3/1/ENEURO.0059-15.2015
+# Refractive index n = 1.36 for brain as used by Stujenske, Spellman & Gordon 2015, Cell Reports 12:525,
+#   https://doi.org/10.1016/j.celrep.2015.06.036, Methods ("n=1.36", verified in the full text, PMC4512881);
+#   it only sets the launch cone angle here.
+# Blood volume fraction 3 %, oxygen saturation 75 %, haemoglobin 150 g/L and molar mass 64500 g/mol are
+#   MODELLING ASSUMPTIONS (typical textbook values), not measurements of any specific brain.
+wavelength_nm,eps_HbO2,eps_Hb
+444,81444,282724
+446,76324,237224
+470,33209.2,16156.4
+532,43876,40584
+590,14400.8,28324.4
+634,512.4,4730.8
+636,478.8,4602.4

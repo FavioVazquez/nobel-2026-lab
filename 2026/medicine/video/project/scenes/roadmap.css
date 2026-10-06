@@ -1,0 +1,12 @@
+/* Roadmap bar: stage-level, VIDEO time. Occupies the bottom 7% of the frame (height 7cqh = 75.6 px at 1080p). */
+.roadmap { position: absolute; left: 0; right: 0; bottom: 0; height: 15cqh; z-index: 60; pointer-events: none; font-family: var(--font-body); }
+.roadmap .rm-scrim { position: absolute; left: 0; right: 0; bottom: 0; height: 100%; background: linear-gradient(to top, rgb(10 11 24 / 0.82), rgb(10 11 24 / 0)); }
+.roadmap .rm-steps { position: absolute; left: 7.3cqw; right: 7.3cqw; bottom: 8.6cqh; margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.6cqw; }
+.roadmap .rm-step { display: flex; flex-direction: column; gap: 0.9cqh; --k: 0; --cur: 0; --bump: 0; }
+.roadmap .rm-bar { display: block; height: 0.45cqh; border-radius: 1cqh; background: rgb(238 240 251 / 0.22); position: relative; overflow: hidden; }
+.roadmap .rm-bar::after { content: ''; position: absolute; inset: 0; background: var(--accent); transform-origin: left; transform: scaleX(var(--k)); }
+.roadmap .rm-row { display: flex; align-items: center; gap: 1.2cqh; }
+.roadmap b { position: relative; display: grid; place-items: center; width: 5.4cqh; height: 5.4cqh; border-radius: 50%; border: 2px solid var(--muted); font: 600 3.1cqh/1 var(--font-body); color: var(--muted); transform: scale(calc(1 + 0.22 * var(--bump))); box-shadow: 0 0 calc(2.6cqh * var(--cur)) rgb(157 140 255 / calc(0.7 * var(--cur))); }
+.roadmap b::before { content: ''; position: absolute; inset: -2px; border-radius: 50%; background: var(--accent); opacity: var(--k); z-index: -1; }
+.roadmap b { z-index: 0; isolation: isolate; color: color-mix(in oklab, var(--accent-ink) calc(var(--k) * 100%), var(--muted)); border-color: color-mix(in oklab, var(--accent) calc(var(--k) * 100%), var(--muted)); }
+.roadmap .rm-lab { font: 600 3.4cqh/1.1 var(--font-body); color: color-mix(in oklab, var(--fg) calc(100% * var(--k) + 70% * var(--bump) * (1 - var(--k))), var(--muted)); white-space: nowrap; }

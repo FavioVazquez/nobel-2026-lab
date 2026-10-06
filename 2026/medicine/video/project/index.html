@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project</title>
+<script src="/_st/stage.js"></script>
+<link rel="stylesheet" href="/_st/themes/bold.css">
+<script type="module" src="/_st/components/index.js"></script>
+<!-- Written by `showtime new --from-storyboard` (13 shots, 123 s planned). Each <section> is one shot of
+     storyboard.json, timed from its length. The dashed .brief is the storyboard's Visual as written: build
+     that shot's picture in its section and delete the brief (check warns while one is left). Words in
+     .copy are the storyboard's own card or on-screen text. data-silent marks a shot without narration.
+     After the voice (narration.md): showtime retime . --from-voice voice/timeline.json -->
+<style>
+  /* storyboard scaffold: every colour and face is the theme's, so a brand kit or another theme restyles it */
+  .stage { background: var(--bg); }
+  .scene { --s-label: 2.4cqh; --s-copy: 8.6cqh; --s-copy-sm: 6cqh; --s-brief: 5cqh; --s-brief-sm: 3.1cqh;
+           --s-note: 2.6cqh; font-family: var(--font-body, var(--font-display)); }
+  .world { position: absolute; inset: 0; overflow: hidden; pointer-events: none;
+           background: radial-gradient(70% 80% at 30% 35%, color-mix(in oklab, var(--accent) 9%, transparent), transparent 70%); }
+  .cam { position: absolute; inset: 0; }
+  .board { position: absolute; left: 8cqw; right: 8cqw; top: 50%; translate: 0 -50%; display: flex;
+           flex-direction: column; gap: 3cqh; }
+  .label { font: 500 var(--s-label)/1.3 var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase;
+           color: var(--muted); margin: 0; }
+  .label b { color: var(--accent); font-weight: 600; }
+  .copy { font: var(--weight-display, 700) var(--s-copy)/1.05 var(--font-display); letter-spacing: var(--tracking-display, -0.03em);
+          color: var(--fg); margin: 0; max-width: 24em; text-wrap: balance; overflow-wrap: anywhere; }
+  .copy.many { font-size: var(--s-copy-sm); }
+  .brief { margin: 0; padding: 2.6cqh 3cqh; border-radius: 1.4cqh; max-width: 30em; align-self: flex-start;
+           border: max(2px, 0.25cqh) dashed color-mix(in oklab, var(--fg) 45%, transparent);
+           font: 450 var(--s-brief)/1.3 var(--font-body, var(--font-display)); color: var(--fg); overflow-wrap: anywhere; }
+  .copy + .brief, .copy ~ .brief { font-size: var(--s-brief-sm); color: var(--muted); }
+  .note { font: 450 var(--s-note)/1.35 var(--font-mono); color: var(--muted); margin: 0; max-width: 60em; }
+  :lang(zh) .copy, :lang(zh) .brief, :lang(ja) .copy, :lang(ja) .brief, :lang(ko) .copy, :lang(ko) .brief {
+    font-family: 'Noto Sans SC', 'Noto Sans KR', 'Noto Sans JP', sans-serif; letter-spacing: 0; }
+  @keyframes rise { from { opacity: 0; transform: translateY(0.4em); } to { opacity: 1; transform: none; } }
+  .board > * { animation: rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) calc(0.1s + var(--i, 0) * 0.12s) both; }
+  .scene:first-of-type .board > * { animation: none; }   /* the first frame is the poster: complete at t=0 */
+  @container (max-aspect-ratio: 5/4) {
+    .scene { --s-label: 2.6cqw; --s-copy: 9cqw; --s-copy-sm: 6.4cqw; --s-brief: 4.6cqw; --s-brief-sm: 3.6cqw; --s-note: 3cqw; }
+    .board { left: 7cqw; right: 7cqw; }
+  }
+  @container (max-aspect-ratio: 3/4) {
+    .scene { --s-label: 4.2cqw; --s-copy: 10cqw; --s-copy-sm: 7.4cqw; --s-brief: 5.4cqw; --s-brief-sm: 4.6cqw; --s-note: 4.2cqw; }
+    .board { left: 9cqw; right: 16cqw; top: 42%; }
+  }
+</style>
+<!-- look signature: Nocturne (nocturne), picked by `showtime new`; another: showtime signature apply <project> <id> -->
+<link rel="stylesheet" href="/_st/themes/fonts/fraunces.css" data-st-look>
+<link rel="stylesheet" href="/_st/themes/fonts/inter.css" data-st-look>
+<link rel="stylesheet" href="/_st/themes/fonts/jetbrains-mono.css" data-st-look>
+<style id="st-look">
+  :root {
+    --bg: #0f1020;
+    --fg: #eef0fb;
+    --muted: #a4a9c6;
+    --accent: #9d8cff;
+    --accent-ink: #120f2a;
+    --surface: #1a1c31;
+    --win-bg: #1a1c31;
+    --win-fg: #eef0fb;
+    --win-muted: #a2a4b2;
+    --win-line: rgb(238 240 251 / 0.1);
+    --chip-bg: #1a1c31;
+    --chip-fg: #eef0fb;
+    --win-accent: #9f8fff;
+    --chip-accent: #9f8fff;
+    --line: rgb(238 240 251 / 0.09);
+    color-scheme: dark;
+    --surface-2: #24263f;
+    --border: rgb(238 240 251 / 0.14);
+    --accent-2: #ff9e7a;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Inter', 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    --weight-display: 600;
+    --tracking-display: -0.02em;
+    --leading-display: 1.0;
+    --case-display: none;
+    --cap-font: 'Fraunces', Georgia, serif;
+    --cap-weight: 600;
+    --cap-case: none;
+    --cap-ink: #eef0fb;
+    --cap-outline: #000000;
+    --cap-accent: #9d8cff;
+    --cap-active-ink: #120f2a;
+    --cap-plate: rgb(15 16 32 / 0.8);
+    --ground-glow: 0.55;
+    --ground-grid: 0.5;
+    --ground-vignette: 0.7;
+    --grain: 0.03;
+    --motion-energy: medium;
+    --dur-in: 0.6s;
+    --dur-out: 0.35s;
+    --dur-beat: 0.4s;
+    --stagger: 0.055s;
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-move: cubic-bezier(0.65, 0, 0.35, 1);
+    --ease-emph: cubic-bezier(0.34, 1.2, 0.64, 1);
+    --rim-b: rgb(255 158 122 / 0.07);
+  }
+</style>
+<!--st-merged--><link rel="stylesheet" href="scenes/s-shot-1.css"><link rel="stylesheet" href="scenes/s-shot-2.css"><link rel="stylesheet" href="scenes/s-shot-3.css"><link rel="stylesheet" href="scenes/s-shot-4.css"><link rel="stylesheet" href="scenes/s-shot-5.css"><link rel="stylesheet" href="scenes/s-shot-6.css"><link rel="stylesheet" href="scenes/s-shot-7.css"><link rel="stylesheet" href="scenes/s-shot-8.css"><link rel="stylesheet" href="scenes/s-shot-9.css"><link rel="stylesheet" href="scenes/s-shot-10.css"><link rel="stylesheet" href="scenes/s-shot-11.css"><link rel="stylesheet" href="scenes/s-shot-12.css"><link rel="stylesheet" href="scenes/s-shot-13.css"><link rel="stylesheet" href="scenes/roadmap.css"><style>[data-st="caption-karaoke"]{translate:0 -9cqh}</style><!--/st-merged-->
+</head>
+<body>
+<div class="stage">
+  <div class="world" data-st-decor></div>
+  <section id="shot-1" class="scene s-shot-1" data-start="0" data-dur="11.421">
+  <div class="cam">
+    <div class="bg"></div>
+    <div class="sweep"></div>
+    <svg class="sky" viewBox="0 0 1920 1080" aria-hidden="true"></svg>
+    <svg class="neuron" viewBox="0 0 1920 1080" aria-hidden="true">
+      <defs>
+        <radialGradient id="s1-halo"><stop offset="0" stop-color="#cfe7ff" stop-opacity="0.95"/><stop offset="0.35" stop-color="#5aa9ff" stop-opacity="0.55"/><stop offset="1" stop-color="#5aa9ff" stop-opacity="0"/></radialGradient>
+        <filter id="s1-blur" x="-20%" y="-300%" width="140%" height="700%"><feGaussianBlur stdDeviation="7"/></filter>
+      </defs>
+      <g id="s1-lines" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path id="s1-soma" d="M470 760 C470 722 505 708 540 716 C580 724 592 760 580 792 C568 826 520 836 490 820 C462 806 468 780 470 760 Z"/>
+        <path d="M480 740 C430 700 400 660 340 640 M400 668 C380 640 390 610 360 590 M340 640 C300 640 270 620 240 625"/>
+        <path d="M500 718 C500 680 520 650 510 610 M512 640 C540 620 560 600 580 592 M510 610 C495 595 480 590 470 575"/>
+        <path d="M470 790 C420 800 370 790 320 810 M380 797 C360 830 330 850 300 880 M320 810 C290 805 260 815 235 800"/>
+        <path d="M505 825 C490 870 500 900 470 940 M490 880 C450 890 420 905 395 935 M470 940 C465 960 455 975 440 985"/>
+        <path d="M560 722 C600 690 640 680 690 690 M640 683 C650 660 680 650 700 630"/>
+        <path id="s1-axon" d="M580 780 C700 780 760 820 880 805 C1000 790 1060 760 1180 775 C1300 790 1380 830 1480 815 C1540 806 1580 800 1620 805"/>
+        <path d="M1620 805 C1660 790 1700 770 1740 750 M1620 805 C1670 805 1720 810 1770 815 M1620 805 C1660 830 1700 860 1740 880"/>
+      </g>
+      <g class="idle" stroke="#a89bff" stroke-width="2.4" fill="rgba(157,140,255,0.06)"><use href="#s1-lines"/></g>
+      <g class="lit" stroke="#8fc8ff" stroke-width="2.6" fill="rgba(90,169,255,0.22)"><use href="#s1-lines"/></g>
+      <g class="boutons" fill="#8fc8ff"><circle cx="1740" cy="750" r="9"/><circle cx="1770" cy="815" r="9"/><circle cx="1740" cy="880" r="9"/></g>
+      <circle class="halo" cx="525" cy="772" r="260" fill="url(#s1-halo)"/>
+      <circle class="ring" cx="525" cy="772" r="60" fill="none" stroke="#bfe0ff" stroke-width="3"/>
+      <g class="idle-sig"><path class="ig-glow" fill="none" stroke="#5aa9ff" stroke-width="26" stroke-linecap="round" filter="url(#s1-blur)"/><path class="ig-core" fill="none" stroke="#cfe7ff" stroke-width="5" stroke-linecap="round"/></g>
+      <g class="spikes">
+        <path class="sp-glow" fill="none" stroke="#5aa9ff" stroke-width="16" stroke-linecap="round" filter="url(#s1-blur)"/>
+        <path class="sp-core" fill="none" stroke="#e8f3ff" stroke-width="4" stroke-linecap="round"/>
+        <circle class="sp-head" r="22" fill="url(#s1-halo)"/>
+      </g>
+      <g class="orb"></g>
+    </svg>
+    <div class="txt">
+      <p class="tag"><span class="y">1999</span><span class="who">Francis Crick</span></p>
+      <p class="quote"><span class="w-light">light</span><span class="w-c">,</span> <span class="w-r">&lsquo;rather</span> <span class="w-f">far-fetched&rsquo;</span></p>
+      <p class="sub s-ideal">the ideal signal for switching neurons</p>
+      <p class="sub s-prize">Nobel Prize in Physiology or Medicine 2026</p>
+    </div>
+  </div>
+</section>
+  <section id="shot-2" class="scene s-shot-2" data-start="#shot-1" data-dur="9.863">
+  <div class="cam">
+    <div class="bg"></div>
+    <p class="kicker">Nobel Prize in Physiology or Medicine 2026</p>
+    <div class="names">
+      <div class="nm" style="--a:0.33;--b:0.62"><span class="fn">Karl</span><span class="sn">Deisseroth</span></div>
+      <div class="nm" style="--a:1.51;--b:1.78"><span class="fn">Peter</span><span class="sn">Hegemann</span></div>
+      <div class="nm" style="--a:2.41;--b:2.74"><span class="fn">Georg</span><span class="sn">Nagel</span></div>
+    </div>
+    <div class="cite-wrap">
+      <p class="cite-label">The Nobel Committee&rsquo;s citation</p>
+      <p class="cite">&ldquo;for their discoveries concerning <span class="hl">light-gated ion channels</span> and optogenetics&rdquo;</p>
+    </div>
+  </div>
+</section>
+  <section id="shot-3" class="scene s-shot-3" data-start="#shot-2" data-dur="11.837">
+  <svg class="s3-art" viewBox="0 0 1920 1080" role="img" aria-label="A green alga swims toward a lamp; its width is labelled about 0.015 mm">
+    <defs>
+      <radialGradient id="s3-glow"><stop offset="0" stop-color="#fff6d6" stop-opacity=".95"/><stop offset=".35" stop-color="#ffe9a8" stop-opacity=".35"/><stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/></radialGradient>
+      <linearGradient id="s3-beam" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe9a8" stop-opacity=".30"/><stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/></linearGradient>
+      <radialGradient id="s3-body" cx=".4" cy=".35" r=".8"><stop offset="0" stop-color="#9af0bf"/><stop offset="1" stop-color="#2f9e6a"/></radialGradient>
+    </defs>
+    <g class="s3-motes"></g>
+    <polygon class="s3-beam" points="1480,250 1522,262 330,700 160,440" fill="url(#s3-beam)"/>
+    <g class="s3-lamp" data-in="3.2,0.6">
+      <line x1="1500" y1="0" x2="1500" y2="150" stroke="#a4a9c6" stroke-width="4"/>
+      <path d="M1440 215 L1460 150 L1540 150 L1560 215 Z" fill="#2a2d4a" stroke="#a4a9c6" stroke-width="4" stroke-linejoin="round"/>
+      <circle class="s3-halo" cx="1500" cy="236" r="150" fill="url(#s3-glow)"/>
+      <circle class="s3-bulb" cx="1500" cy="236" r="26" fill="#ffe9a8"/>
+    </g>
+    <g class="s3-alga"><g class="s3-rot">
+      <path class="s3-fl1" fill="none" stroke="#6fd6a0" stroke-width="4" stroke-linecap="round"/>
+      <path class="s3-fl2" fill="none" stroke="#6fd6a0" stroke-width="4" stroke-linecap="round"/>
+      <circle r="50" fill="url(#s3-body)" stroke="#bff5d8" stroke-width="3"/>
+      <path d="M-18 -28 C-40 -6 -36 24 -10 36 C6 24 2 -8 -18 -28 Z" fill="#1f7a50" opacity=".75"/>
+      <circle cx="-14" cy="4" r="9" fill="#d8ffe9" opacity=".75"/>
+      <ellipse cx="30" cy="-18" rx="10" ry="7" fill="#ff9e7a"/>
+      <g class="s3-glint"><circle cx="30" cy="-18" r="30" fill="#fff" opacity=".28"/><path d="M30 -52 L34 -22 L64 -18 L34 -14 L30 16 L26 -14 L-4 -18 L26 -22 Z" fill="#fff"/></g>
+    </g>
+    <g class="s3-lab" data-in="1.53,0.5">
+      <path d="M-72 108 L-72 122 L72 122 L72 108" fill="none" stroke="#eef0fb" stroke-width="3"/>
+      <text x="0" y="170" text-anchor="middle" class="s3-t-label">about 0.015 mm</text>
+    </g></g>
+    <g data-in="0.32,0.6">
+      <text x="96" y="112" class="s3-t-kick">STEP 1 OF 4</text>
+      <text x="96" y="196" class="s3-t-head">The alga</text>
+    </g>
+  </svg>
+  <div class="s3-q" data-st="question-beat" data-id="q1" data-at="8.1" data-reply="false" data-caption></div>
+</section>
+  <section id="shot-4" class="scene s-shot-4" data-start="#shot-3" data-dur="9.053">
+  <svg class="s4-art" viewBox="0 0 1920 1080" role="img" aria-label="Two bars: the alga's response bar is more than twenty times shorter than a human eye's">
+    <defs>
+      <linearGradient id="s4-eye" x1="0" x2="1"><stop offset="0" stop-color="#7d86b8"/><stop offset="1" stop-color="#4a5280"/></linearGradient>
+      <linearGradient id="s4-alga" x1="0" x2="1"><stop offset="0" stop-color="#6fd6a0"/><stop offset="1" stop-color="#9af0bf"/></linearGradient>
+      <radialGradient id="s4-g"><stop offset="0" stop-color="#9af0bf" stop-opacity=".8"/><stop offset="1" stop-color="#9af0bf" stop-opacity="0"/></radialGradient>
+    </defs>
+    <g data-in="0.32,0.6"><text x="96" y="120" class="s4-t-says">The Nobel Committee says</text></g>
+    <g data-in="1.84,0.7"><text x="96" y="260" class="s4-t-big">more than <tspan class="s4-acc">20 times</tspan> faster</text></g>
+    <g data-in="2.2,0.5"><text x="330" y="395" class="s4-t-cap">time to react to light</text></g>
+
+    <!-- row 1: human eye -->
+    <g data-in="2.3,0.5">
+      <path d="M96 500 C130 460 190 460 224 500 C190 540 130 540 96 500 Z" fill="none" stroke="#a4a9c6" stroke-width="5" stroke-linejoin="round"/>
+      <circle cx="160" cy="500" r="15" fill="#a4a9c6"/>
+      <text x="330" y="452" class="s4-t-row">Human eye</text>
+      <rect x="330" y="470" width="1460" height="64" rx="14" fill="#1a1c31"/>
+    </g>
+    <rect class="s4-eye" x="330" y="470" width="0" height="64" rx="14" fill="url(#s4-eye)"/>
+
+    <!-- row 2: alga -->
+    <g data-in="2.3,0.5">
+      <circle cx="160" cy="650" r="36" fill="#4cbf88" stroke="#bff5d8" stroke-width="3"/>
+      <ellipse cx="179" cy="637" rx="7" ry="5" fill="#ff9e7a"/>
+      <text x="330" y="600" class="s4-t-row">Alga</text>
+      <rect x="330" y="618" width="1460" height="64" rx="14" fill="#1a1c31"/>
+    </g>
+    <circle class="s4-pulse" cx="365" cy="650" r="90" fill="url(#s4-g)"/>
+    <rect class="s4-alg" x="330" y="618" width="0" height="64" rx="14" fill="url(#s4-alga)"/>
+
+    <g data-in="3.8,0.6"><text x="330" y="760" class="s4-t-note">about half a millisecond after light reaches its eyespot</text></g>
+    <g data-in="6.58,0.6">
+      <path class="s4-spike" transform="translate(0,-90)" d="M410 740 L440 740 L456 700 L476 780 L494 714 L508 740 L536 740" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="1790" y="568" text-anchor="end" class="s4-t-fine" data-in="2.6,0.5">Bar lengths are illustrative.</text>
+  </svg>
+</section>
+  <section id="shot-5" class="scene s-shot-5" data-start="#shot-4" data-dur="13.576">
+  <svg class="s5-art" viewBox="0 0 1920 1080" role="img" aria-label="Step two: one protein catches light and opens a pore in a membrane; algal genes are injected into a frog egg and its channels open in light">
+    <defs>
+      <linearGradient id="s5-egg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b608f"/><stop offset=".5" stop-color="#6d7199"/><stop offset=".52" stop-color="#d9d4f0"/><stop offset="1" stop-color="#b9b3dc"/></linearGradient>
+      <radialGradient id="s5-blue"><stop offset="0" stop-color="#58a9ff" stop-opacity=".9"/><stop offset="1" stop-color="#58a9ff" stop-opacity="0"/></radialGradient>
+      <linearGradient id="s5-ray" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#58a9ff" stop-opacity=".55"/><stop offset="1" stop-color="#58a9ff" stop-opacity="0"/></linearGradient>
+      <linearGradient id="s5-prot" x1="0" x2="1"><stop offset="0" stop-color="#b3a6ff"/><stop offset="1" stop-color="#8a78f0"/></linearGradient>
+    </defs>
+    <g data-in="0.34,0.6"><text x="96" y="112" class="s5-t-kick">STEP 2 OF 4</text><text x="96" y="196" class="s5-t-head">The switch</text></g>
+
+    <!-- phase 1: one protein, one piece -->
+    <g class="s5-p1">
+      <g data-in="2.13,0.6"><text x="96" y="300" class="s5-t-name">Peter Hegemann</text></g>
+      <g data-in="2.89,0.6"><text x="96" y="356" class="s5-t-sub">proposed that one protein could catch light</text><text x="96" y="404" class="s5-t-sub">and form a channel</text></g>
+      <g class="s5-mem"></g>
+      <g class="s5-prot" data-in="3.4,0.7">
+        <path class="s5-body" d="M-110 -120 Q-110 -150 -80 -150 L80 -150 Q110 -150 110 -120 L110 120 Q110 150 80 150 L-80 150 Q-110 150 -110 120 Z" fill="url(#s5-prot)" stroke="#ddd6ff" stroke-width="4"/>
+        <rect class="s5-hx" data-s="-1" x="-92" y="-130" width="40" height="260" rx="20" fill="#7b69e0" opacity=".85"/>
+        <rect class="s5-hx" data-s="-1" x="-50" y="-130" width="34" height="260" rx="17" fill="#6c59d6" opacity=".85"/>
+        <rect class="s5-hx" data-s="1" x="16" y="-130" width="34" height="260" rx="17" fill="#6c59d6" opacity=".85"/>
+        <rect class="s5-hx" data-s="1" x="52" y="-130" width="40" height="260" rx="20" fill="#7b69e0" opacity=".85"/>
+        <rect class="s5-pore" x="-16" y="-150" width="32" height="300" fill="#58a9ff"/>
+        <circle class="s5-ret" cx="0" cy="-30" r="20" fill="#ff9e7a" stroke="#ffd7c6" stroke-width="3"/>
+      </g>
+      <g class="s5-rays"></g>
+      <g data-in="3.7,0.5"><path d="M790 412 L790 426 L1130 426 L1130 412" fill="none" stroke="#eef0fb" stroke-width="3"/><text x="960" y="396" text-anchor="middle" class="s5-t-lab">one protein</text></g>
+      <g class="s5-bubble" data-in="6.45,0.3">
+        <path d="M1340 790 L1190 700 L1430 790" fill="#1a1c31" stroke="#eef0fb" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M1360 780 L1570 780 Q1640 780 1640 840 Q1640 900 1570 900 L1360 900 Q1290 900 1290 840 Q1290 780 1360 780 Z" fill="#1a1c31" stroke="#eef0fb" stroke-width="3"/>
+        <text x="1465" y="858" text-anchor="middle" class="s5-t-bub">scepticism</text>
+      </g>
+    </g>
+
+    <!-- phase 2: frog egg -->
+    <g class="s5-p2">
+      <g data-in="7.82,0.6"><text x="96" y="300" class="s5-t-name">Georg Nagel</text></g>
+      <g class="s5-light"><polygon points="1130,0 1370,0 1500,440 1000,440" fill="url(#s5-ray)" opacity="0"/></g>
+      <g class="s5-eggg">
+        <circle cx="1250" cy="650" r="220" fill="url(#s5-egg)"/>
+        <circle class="s5-eggglow" cx="1250" cy="650" r="300" fill="url(#s5-blue)" opacity="0"/>
+        <circle cx="1250" cy="650" r="220" fill="none" stroke="#c9c1f5" stroke-width="7"/>
+        <g class="s5-genes"></g>
+        <g class="s5-pills"></g>
+      </g>
+      <g class="s5-pipette">
+        <path d="M1740 200 L1310 520" stroke="#a4a9c6" stroke-width="14" stroke-linecap="round"/>
+        <path d="M1314 517 L1278 545" stroke="#eef0fb" stroke-width="5" stroke-linecap="round"/>
+      </g>
+      <g data-in="8.58,0.6"><text x="96" y="560" class="s5-t-sub2">Algal genes injected into a frog egg</text></g>
+      <g data-in="10.4,0.6"><text x="96" y="640" class="s5-t-sub2">Proteins built in its outer membrane</text></g>
+      <g data-in="11.1,0.6"><text x="96" y="720" class="s5-t-sub3">Light hits: the channels open</text></g>
+    </g>
+  </svg>
+</section>
+  <section id="shot-6" class="scene s-shot-6" data-start="#shot-5" data-dur="13.011">
+  <svg class="s6-art" viewBox="0 0 1920 1080" role="img" aria-label="Date card 4 Aug 2004, around 1 a.m.; the four-step channel drawing with Chlamydomonas reinhardtii; then a mouse head in outline with a thin optical fibre">
+    <defs>
+      <linearGradient id="s6-prot" x1="0" x2="1"><stop offset="0" stop-color="#b3a6ff"/><stop offset="1" stop-color="#8a78f0"/></linearGradient>
+      <radialGradient id="s6-blue"><stop offset="0" stop-color="#58a9ff" stop-opacity=".95"/><stop offset="1" stop-color="#58a9ff" stop-opacity="0"/></radialGradient>
+    </defs>
+    <!-- date card -->
+    <g class="s6-card">
+      <rect x="410" y="300" width="1100" height="420" rx="40" fill="#1a1c31" stroke="#3a3d5e" stroke-width="3"/>
+      <path d="M960 340 A34 34 0 1 0 992 392 A28 28 0 1 1 960 340 Z" fill="#eef0fb" transform="translate(0,6)"/>
+      <g data-in="0.33,0.6"><text x="960" y="500" text-anchor="middle" class="s6-t-when">around 1 a.m.</text></g>
+      <g data-in="1.65,0.7"><text x="960" y="640" text-anchor="middle" class="s6-t-date">4 Aug 2004</text></g>
+    </g>
+    <g class="s6-chip" data-in="3.5,0.6">
+      <path d="M110 92 A20 20 0 1 0 128 120 A16 16 0 1 1 110 92 Z" fill="#eef0fb"/>
+      <text x="150" y="118" class="s6-t-chip">4 Aug 2004, around 1 a.m.</text>
+    </g>
+    <g class="s6-name" data-in="3.53,0.6"><text x="96" y="210" class="s6-t-name">Edward Boyden</text></g>
+    <!-- four steps -->
+    <g class="s6-panels"></g>
+    <!-- phase C -->
+    <g class="s6-c">
+      <g data-in="8.63,0.6"><text x="96" y="360" class="s6-t-year">2007</text></g>
+      <g data-in="9.76,0.6"><text x="96" y="450" class="s6-t-says">The Nobel Committee says</text></g>
+      <g data-in="10.93,0.6"><text x="96" y="548" class="s6-t-mice">it worked in <tspan class="s6-acc">living mice</tspan></text></g>
+      <g transform="translate(150,40)">
+        <g class="s6-mouse">
+          <circle cx="1370" cy="520" r="72" fill="#0f1020" stroke="#eef0fb" stroke-width="5"/>
+          <path d="M930 690 C960 600 1040 540 1130 500 C1230 430 1400 440 1470 540 C1530 630 1480 780 1360 830 C1250 870 1060 850 980 770 C955 745 925 715 930 690 Z" fill="#161830" stroke="#eef0fb" stroke-width="5" stroke-linejoin="round"/>
+          <circle cx="1060" cy="600" r="14" fill="#eef0fb"/><circle cx="936" cy="686" r="16" fill="#eef0fb"/>
+          <g class="s6-whisk" stroke="#a4a9c6" stroke-width="4" stroke-linecap="round" fill="none">
+            <path d="M985 700 L800 650"/><path d="M985 715 L790 715"/><path d="M990 730 L805 782"/>
+          </g>
+        </g>
+        <path class="s6-fib" d="M1230 20 L1230 520" stroke="#a4a9c6" stroke-width="7" fill="none" stroke-linecap="round"/>
+        <circle class="s6-tip" cx="1230" cy="520" r="90" fill="url(#s6-blue)" opacity="0"/>
+        <circle class="s6-tipc" cx="1230" cy="520" r="11" fill="#d7ebff" opacity="0"/>
+        <g data-in="9.4,0.6"><text x="1262" y="150" class="s6-t-lab">thin optical fibre</text></g>
+      </g>
+    </g>
+  </svg>
+</section>
+  <section id="shot-7" class="scene s-shot-7" data-start="#shot-6" data-dur="13.348">
+  <svg class="s7-art" viewBox="0 0 1920 1080" role="img" aria-label="Step three, our toy model: a thin fibre sends blue, yellow or red light into brain tissue; three equal glows spread from three fibre tips">
+    <defs>
+      <radialGradient id="s7-gb"><stop offset="0" stop-color="#2f8cff" stop-opacity=".95"/><stop offset=".45" stop-color="#2f8cff" stop-opacity=".42"/><stop offset="1" stop-color="#2f8cff" stop-opacity="0"/></radialGradient>
+      <radialGradient id="s7-gy"><stop offset="0" stop-color="#f5a623" stop-opacity=".95"/><stop offset=".45" stop-color="#f5a623" stop-opacity=".42"/><stop offset="1" stop-color="#f5a623" stop-opacity="0"/></radialGradient>
+      <radialGradient id="s7-gr"><stop offset="0" stop-color="#e5484d" stop-opacity=".95"/><stop offset=".45" stop-color="#e5484d" stop-opacity=".42"/><stop offset="1" stop-color="#e5484d" stop-opacity="0"/></radialGradient>
+      <clipPath id="s7-c0"><rect x="180" y="290" width="440" height="300" rx="30"/></clipPath>
+      <clipPath id="s7-c1"><rect x="740" y="290" width="440" height="300" rx="30"/></clipPath>
+      <clipPath id="s7-c2"><rect x="1300" y="290" width="440" height="300" rx="30"/></clipPath>
+    </defs>
+    <g data-in="0.32,0.6"><text x="96" y="112" class="s7-t-kick">STEP 3 OF 4</text><text x="96" y="196" class="s7-t-head">A toy model</text></g>
+    <g data-in="1.04,0.5"><rect x="1250" y="64" width="574" height="62" rx="31" class="s7-pill"/><text x="1537" y="106" text-anchor="middle" class="s7-t-pill">our toy model: educational demo</text></g>
+
+    <g class="s7-panels"></g>
+    <g data-in="3.62,0.6"><text x="1010" y="252" class="s7-t-small">thin fibre</text></g>
+  </svg>
+  <div class="s7-q" data-st="question-beat" data-id="q2" data-at="9.73" data-reply="false" data-caption></div>
+</section>
+  <section id="shot-8" class="scene s-shot-8" data-start="#shot-7" data-dur="12.715">
+  <svg class="s8-art" viewBox="0 0 1920 1080" role="img" aria-label="Our toy model: depth where light falls below 3 milliwatts per square millimetre: red 1.54 mm, yellow 1.19 mm, blue 0.96 mm; red reaches deepest">
+    <defs><radialGradient id="s8-warm"><stop offset="0" stop-color="#ff9e7a" stop-opacity=".85"/><stop offset=".55" stop-color="#ff7a45" stop-opacity=".28"/><stop offset="1" stop-color="#ff7a45" stop-opacity="0"/></radialGradient></defs>
+    <ellipse class="s8-warm" cx="1100" cy="1120" rx="1100" ry="420" fill="url(#s8-warm)" opacity="0"/>
+    <g data-in="0.33,0.6"><text x="96" y="112" class="s8-t-kick">THE ANSWER</text><text x="96" y="196" class="s8-t-head">Red goes deepest</text></g>
+    <g data-in="0.1,0.5"><rect x="96" y="226" width="574" height="62" rx="31" class="s8-pill"/><text x="383" y="268" text-anchor="middle" class="s8-t-pill">our toy model: educational demo</text></g>
+    <g data-in="0.74,0.5"><text x="96" y="338" class="s8-t-small">depth where light falls below 3 mW/mm&#178;</text></g>
+    <g data-in="1.04,0.5"><circle cx="112" cy="384" r="14" fill="#e5484d"/><text x="146" y="396" class="s8-t-row">red 635 nm</text><text x="690" y="396" text-anchor="end" class="s8-t-val s8-red">1.54 mm</text></g>
+    <g data-in="2.07,0.5"><circle cx="112" cy="430" r="14" fill="#f5a623"/><text x="146" y="442" class="s8-t-row">yellow 590 nm</text><text x="690" y="442" text-anchor="end" class="s8-t-val">1.19 mm</text></g>
+    <g data-in="2.99,0.5"><circle cx="112" cy="476" r="14" fill="#2f8cff"/><text x="146" y="488" class="s8-t-row">blue 470 nm</text><text x="690" y="488" text-anchor="end" class="s8-t-val">0.96 mm</text></g>
+
+    <svg x="740" y="24" width="1160" height="815" viewBox="0 156 1600 1124" class="s8-chart" data-in="0.1,0.6">
+      <image href="assets/shot-8/light_depth_crop.png" x="0" y="156" width="1600" height="1124"/>
+      <!-- drop lines from the 3 mW/mm2 crossings to the bracket -->
+      <g data-in="2.2,0.4"><line x1="657" y1="586" x2="657" y2="1030" class="s8-drop s8-dy"/><circle cx="657" cy="586" r="12" class="s8-dot s8-dy"/></g>
+      <g data-in="2.99,0.4"><line x1="585" y1="586" x2="585" y2="1030" class="s8-drop s8-db"/><circle cx="585" cy="586" r="12" class="s8-dot s8-db"/></g>
+      <g data-in="1.04,0.5"><line x1="766" y1="586" x2="766" y2="1030" class="s8-drop s8-dr"/><circle cx="766" cy="586" r="30" class="s8-ring"/><circle cx="766" cy="586" r="13" class="s8-dot s8-dr"/>
+        <text x="750" y="1096" class="s8-c-val s8-c-red" text-anchor="start">1.54 mm</text></g>
+      <g data-in="3.35,0.5"><path d="M585 1030 L766 1030 M585 1016 L585 1044 M766 1016 L766 1044" class="s8-brk"/>
+        <text x="600" y="1096" class="s8-c-val s8-c-blue" text-anchor="end">0.96 mm</text></g>
+    </svg>
+
+    <foreignObject x="96" y="516" width="620" height="170" style="overflow:visible" data-in="4.13,0.5"><div xmlns="http://www.w3.org/1999/xhtml" class="s8-chip">our model ignores absorption outside blood: read every depth as rough</div></foreignObject>
+    <foreignObject x="96" y="678" width="620" height="160" style="overflow:visible" data-in="2.6,0.5"><div xmlns="http://www.w3.org/1999/xhtml" class="s8-card"><b>Real fibres:</b> about 100x more light than cells need, because the brain scatters it <i>(Deisseroth describes)</i></div></foreignObject>
+    <g class="s8-th" opacity="0"><rect x="697" y="206" width="18" height="60" rx="9" fill="none" stroke="#c9cde6" stroke-width="4"/><circle cx="706" cy="278" r="16" fill="none" stroke="#c9cde6" stroke-width="4"/><circle cx="706" cy="278" r="9" class="s8-hot"/><rect class="s8-merc" x="702" y="262" width="8" height="0"/></g>
+  </svg>
+</section>
+  <section id="shot-9" class="scene s-shot-9" data-start="#shot-8" data-dur="15.187">
+  <svg class="s9-art" viewBox="0 0 1920 1080" role="img" aria-label="Light is heat: a 2019 study measured 0.2 to 2 degrees C of warming. In our toy model, pulsing the light cuts the warming from about 3.45 to about 0.60 degrees C">
+    <defs>
+      <radialGradient id="s9-blue"><stop offset="0" stop-color="#2f8cff" stop-opacity=".95"/><stop offset="1" stop-color="#2f8cff" stop-opacity="0"/></radialGradient>
+      <radialGradient id="s9-heat"><stop offset="0" stop-color="#ff9e7a" stop-opacity=".55"/><stop offset=".6" stop-color="#ff7a45" stop-opacity=".18"/><stop offset="1" stop-color="#ff7a45" stop-opacity="0"/></radialGradient>
+      <clipPath id="s9-tc"><rect x="900" y="150" width="880" height="640" rx="34"/></clipPath>
+    </defs>
+    <g data-in="0.33,0.6"><text x="96" y="112" class="s9-t-kick">STEP 3 OF 4</text><text x="96" y="196" class="s9-t-head">Light is heat</text></g>
+    <g data-in="1.83,0.6"><text x="96" y="268" class="s9-t-line">illumination heats tissue</text></g>
+
+    <!-- 0-8 s: the picture of light turning into heat -->
+    <g class="s9-heatpic">
+      <rect x="900" y="150" width="880" height="640" rx="34" class="s9-tissue"/>
+      <g clip-path="url(#s9-tc)">
+        <g class="s9-dots"></g>
+        <circle class="s9-hglow" cx="1340" cy="360" r="1" fill="url(#s9-heat)"/>
+        <g class="s9-rings"></g>
+        <circle class="s9-bglow" cx="1340" cy="360" r="1" fill="url(#s9-blue)"/>
+      </g>
+      <line x1="1340" y1="140" x2="1340" y2="352" class="s9-fibre"/><circle cx="1340" cy="360" r="10" fill="#eef0fb"/>
+    </g>
+
+    <!-- thermometer chip -->
+    <g data-in="3.06,0.6">
+      <rect x="96" y="310" width="566" height="262" rx="28" class="s9-card"/>
+      <text x="250" y="372" class="s9-t-cap">2019 STUDY</text>
+      <g transform="translate(150,0)"><rect x="-13" y="340" width="26" height="150" rx="13" fill="none" stroke="#c9cde6" stroke-width="5"/><circle cx="0" cy="512" r="32" fill="none" stroke="#c9cde6" stroke-width="5"/>
+        <circle cx="0" cy="512" r="21" fill="#ff7a45"/><rect class="s9-merc" x="-6" y="500" width="12" height="0" fill="#ff7a45"/></g>
+      <text x="250" y="470" class="s9-t-range"><tspan class="s9-r1">0.2</tspan><tspan class="s9-r2"> to 2</tspan><tspan class="s9-r3"> &#176;C</tspan></text>
+      <text x="250" y="518" class="s9-t-sm">measured warming,</text><text x="250" y="554" class="s9-t-sm">common light protocols</text>
+    </g>
+
+    <!-- from 8.4 s: the toy model -->
+    <g data-in="8.39,0.5"><rect x="96" y="610" width="574" height="62" rx="31" class="s9-pill"/><text x="383" y="652" text-anchor="middle" class="s9-t-pill">our toy model: educational demo</text></g>
+    <g data-in="8.89,0.5"><text x="96" y="722" class="s9-t-sm2">470 nm light, 10 mW peak, 10 s</text><text x="96" y="764" class="s9-t-sm2">warming at the hottest point</text></g>
+
+    <svg x="704" y="40" width="1160" height="790" viewBox="0 190 1600 1090" class="s9-chart" data-in="7.9,0.7">
+      <image href="assets/shot-9/heat_transient_crop.png" x="0" y="190" width="1600" height="1090"/>
+      <g data-in="8.45,0.5"><rect x="215" y="222" width="370" height="66" rx="33" class="s9-cpill"/><text x="400" y="268" text-anchor="middle" class="s9-c-pill">our toy model</text></g>
+      <g data-in="11.65,0.5"><circle cx="1525" cy="494" r="24" class="s9-cring"/><text x="1440" y="446" text-anchor="end" class="s9-c-val">3.45 &#176;C</text></g>
+      <g data-in="12.3,0.5"><text x="1440" y="738" text-anchor="end" class="s9-c-val s9-c-mid">1.96 &#176;C</text></g>
+      <g data-in="12.82,0.5"><line x1="1568" y1="540" x2="1568" y2="1000" class="s9-arrow"/><path d="M1546 975 L1568 1008 L1590 975" class="s9-arrow s9-head"/></g>
+      <g data-in="13.24,0.5"><circle cx="1525" cy="1040" r="26" class="s9-cring s9-cring2"/><text x="1440" y="990" text-anchor="end" class="s9-c-val s9-c-key">0.60 &#176;C</text></g>
+    </svg>
+  </svg>
+</section>
+  <section id="shot-10" class="scene s-shot-10" data-start="#shot-9" data-dur="9.879">
+  <div class="cam">
+    <div class="bg"></div>
+    <div class="plate" aria-hidden="true"></div>
+    <div class="plate-tag">1 in 40 neurons drawn &middot; fibre at top</div>
+    <div class="txt">
+      <p class="kick">Our toy model &middot; neurons per degree</p>
+      <h2 class="q">How many neurons can <span class="em">one degree</span> of warming recruit?</h2>
+      <div class="gauge">
+        <div class="g-head"><span>warming at the hottest point</span><b class="g-val">+0.00 &deg;C</b></div>
+        <div class="g-track"><i class="g-fill"></i><span class="g-lim"></span></div>
+        <div class="g-foot"><span>0</span><span class="g-cap">one assumed limit: 1 &deg;C</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="s10-q" data-st="question-beat" data-id="q3" data-at="6.26" data-reply="false" data-caption></div>
+</section>
+  <section id="shot-11" class="scene s-shot-11" data-start="#shot-10" data-dur="5.874">
+  <div class="cam">
+    <div class="bg"></div>
+    <div class="wrap">
+      <p class="chip" data-caption><span class="dot"></span>our toy model, assumed 1 &deg;C limit</p>
+      <h2 class="lead">Recruited at <span class="em">1 &deg;C</span></h2>
+      <div class="row r-blue">
+        <div class="lab"><b>Blue light</b></div>
+        <div class="num"><span class="n" data-to="16441">0</span></div>
+        <div class="bar"><i></i></div>
+      </div>
+      <div class="row r-yel">
+        <div class="lab"><b>Yellow light</b></div>
+        <div class="num"><span class="n" data-to="31136">0</span></div>
+        <div class="bar"><i></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+  <section id="shot-12" class="scene s-shot-12" data-start="#shot-11" data-dur="9.333">
+  <div class="cam">
+    <div class="bg"></div>
+    <svg class="tissue" viewBox="0 0 1920 1080" aria-hidden="true">
+      <defs>
+        <linearGradient id="s12-tis" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a2a4d"/><stop offset="1" stop-color="#1c1a30"/></linearGradient>
+        <linearGradient id="s12-cone" x1="0" y1="0" x2="0" y2="1"><stop class="c-a" offset="0" stop-color="#bfe0ff" stop-opacity="0.9"/><stop class="c-b" offset="0.9" stop-color="#5aa9ff" stop-opacity="0"/></linearGradient>
+        <filter id="s12-bl" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="10"/></filter>
+        <clipPath id="s12-clip"><rect x="1060" y="190" width="720" height="560" rx="30"/></clipPath>
+      </defs>
+      <rect x="1060" y="190" width="720" height="560" rx="30" fill="url(#s12-tis)" stroke="rgb(238 240 251 / 0.18)" stroke-width="2"/>
+      <g class="cells" clip-path="url(#s12-clip)"></g>
+      <g clip-path="url(#s12-clip)"><polygon class="cone" points="1370,190 1470,190 1640,750 1200,750" fill="url(#s12-cone)" filter="url(#s12-bl)"/></g>
+      <rect x="1388" y="96" width="64" height="96" rx="10" fill="#a9afc9"/>
+      <rect x="1388" y="96" width="22" height="96" rx="10" fill="#d7dbef"/>
+      <circle class="tip" cx="1420" cy="192" r="26" fill="#bfe0ff" opacity="0.9"/>
+      <path d="M1812 210 V730" stroke="#a4a9c6" stroke-width="3" stroke-linecap="round"/>
+      <path d="M1798 712 L1812 732 L1826 712" fill="none" stroke="#a4a9c6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <p class="tcap">Light fades with depth in tissue &middot; illustration, not to scale</p>
+    <div class="txt">
+      <p class="kick">Step 4 &middot; the limit</p>
+      <h2 class="c20">Visible light cannot penetrate deep inside brain tissue</h2>
+      <p class="card c24"><b>2021</b>Partial sight reported back in one blind patient, with gene therapy and goggles</p>
+      <p class="card c25"><b>Under review</b>An optogenetic gene therapy is under FDA review, not approved</p>
+    </div>
+    <svg class="neuron" viewBox="0 0 1920 1080" aria-hidden="true">
+      <defs>
+        <radialGradient id="s12-halo"><stop offset="0" stop-color="#cfe7ff" stop-opacity="0.95"/><stop offset="0.35" stop-color="#5aa9ff" stop-opacity="0.55"/><stop offset="1" stop-color="#5aa9ff" stop-opacity="0"/></radialGradient>
+        <filter id="s12-blur" x="-20%" y="-300%" width="140%" height="700%"><feGaussianBlur stdDeviation="7"/></filter>
+      </defs>
+      <g id="s12-lines" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M470 760 C470 722 505 708 540 716 C580 724 592 760 580 792 C568 826 520 836 490 820 C462 806 468 780 470 760 Z"/>
+        <path d="M480 740 C430 700 400 660 340 640 M400 668 C380 640 390 610 360 590 M340 640 C300 640 270 620 240 625"/>
+        <path d="M500 718 C500 680 520 650 510 610 M512 640 C540 620 560 600 580 592 M510 610 C495 595 480 590 470 575"/>
+        <path d="M470 790 C420 800 370 790 320 810 M380 797 C360 830 330 850 300 880 M320 810 C290 805 260 815 235 800"/>
+        <path d="M505 825 C490 870 500 900 470 940 M490 880 C450 890 420 905 395 935 M470 940 C465 960 455 975 440 985"/>
+        <path d="M560 722 C600 690 640 680 690 690 M640 683 C650 660 680 650 700 630"/>
+        <path id="s12-axon" d="M580 780 C700 780 760 820 880 805 C1000 790 1060 760 1180 775 C1300 790 1380 830 1480 815 C1540 806 1580 800 1620 805"/>
+        <path d="M1620 805 C1660 790 1700 770 1740 750 M1620 805 C1670 805 1720 810 1770 815 M1620 805 C1660 830 1700 860 1740 880"/>
+      </g>
+      <g class="idle" stroke="#a89bff" stroke-width="2.4" fill="rgba(157,140,255,0.06)"><use href="#s12-lines"/></g>
+      <g class="lit" stroke="#8fc8ff" stroke-width="2.6" fill="rgba(90,169,255,0.22)"><use href="#s12-lines"/></g>
+      <g class="boutons" fill="#8fc8ff"><circle cx="1740" cy="750" r="9"/><circle cx="1770" cy="815" r="9"/><circle cx="1740" cy="880" r="9"/></g>
+      <circle class="halo" cx="525" cy="772" r="260" fill="url(#s12-halo)"/>
+      <circle class="ring" cx="525" cy="772" r="60" fill="none" stroke="#bfe0ff" stroke-width="3"/>
+      <g class="spikes">
+        <path class="sp-glow" fill="none" stroke="#5aa9ff" stroke-width="16" stroke-linecap="round" filter="url(#s12-blur)"/>
+        <path class="sp-core" fill="none" stroke="#e8f3ff" stroke-width="4" stroke-linecap="round"/>
+        <circle class="sp-head" r="22" fill="url(#s12-halo)"/>
+      </g>
+    </svg>
+  </div>
+</section>
+  <section id="shot-13" class="scene s-shot-13" data-start="#shot-12" data-dur="5.903">
+  <div class="cam">
+    <div class="bg"></div>
+    <div class="ec">
+      <h2 class="name">nobel-2026-lab</h2>
+      <i class="rule"></i>
+      <p class="line">Educational demos of this year&rsquo;s Nobel Prizes. Not research.</p>
+      <p class="repo">github.com/FavioVazquez/nobel-2026-lab</p>
+      <p class="made">Made with showtime</p>
+    </div>
+  </div>
+</section>
+<!--st-tail-->
+<div class="roadmap" data-start="0" data-end="132" aria-hidden="true">
+  <div class="rm-scrim"></div>
+  <ol class="rm-steps">
+    <li class="rm-step"><i class="rm-bar"></i><span class="rm-row"><b>1</b><span class="rm-lab">The alga</span></span></li>
+    <li class="rm-step"><i class="rm-bar"></i><span class="rm-row"><b>2</b><span class="rm-lab">The switch</span></span></li>
+    <li class="rm-step"><i class="rm-bar"></i><span class="rm-row"><b>3</b><span class="rm-lab">A toy model</span></span></li>
+    <li class="rm-step"><i class="rm-bar"></i><span class="rm-row"><b>4</b><span class="rm-lab">The limit</span></span></li>
+  </ol>
+</div>
+<script src="scenes/s-shot-1.js"></script>
+<script src="scenes/s-shot-3.js"></script>
+<script src="scenes/s-shot-4.js"></script>
+<script src="scenes/s-shot-5.js"></script>
+<script src="scenes/s-shot-6.js"></script>
+<script src="scenes/s-shot-7.js"></script>
+<script src="scenes/s-shot-8.js"></script>
+<script src="scenes/s-shot-9.js"></script>
+<script src="scenes/s-shot-10.js"></script>
+<script src="scenes/s-shot-11.js"></script>
+<script src="scenes/s-shot-12.js"></script>
+<script src="scenes/roadmap.js"></script>
+<!--/st-tail-->
+</div>
+</body>
+</html>

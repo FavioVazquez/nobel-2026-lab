@@ -1,0 +1,12 @@
+.s-shot-5 { position: absolute; inset: 0; overflow: hidden; font-family: var(--font-body);
+  background: radial-gradient(50% 60% at 60% 70%, rgb(157 140 255 / .09), transparent 70%), var(--bg); }
+.s-shot-5 .s5-art { position: absolute; inset: 0; width: 100%; height: 100%; transform-origin: 55% 55%; }
+.s-shot-5 [data-in] { opacity: 0; }
+.s-shot-5 .s5-t-kick { font: 600 28px var(--font-body); letter-spacing: .16em; fill: var(--accent); }
+.s-shot-5 .s5-t-head { font: 600 72px var(--font-display); letter-spacing: -.02em; fill: var(--fg); }
+.s-shot-5 .s5-t-name { font: 600 60px var(--font-display); fill: var(--fg); }
+.s-shot-5 .s5-t-sub { font: 500 38px var(--font-body); fill: var(--muted); }
+.s-shot-5 .s5-t-sub2 { font: 500 38px var(--font-body); fill: var(--fg); }
+.s-shot-5 .s5-t-sub3 { font: 600 40px var(--font-body); fill: #8cc4ff; }
+.s-shot-5 .s5-t-lab { font: 600 32px var(--font-body); fill: var(--fg); }
+.s-shot-5 .s5-t-bub { font: italic 600 54px var(--font-display); fill: var(--fg); }

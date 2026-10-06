@@ -1,0 +1,56 @@
+{
+  "title": "The light switch: the 2026 Nobel Prize in Medicine",
+  "questions": [
+    {
+      "id": "q1",
+      "pause": 29.5,
+      "resume": 32.5,
+      "prompt": "How much faster than a human eye does the alga react to light?",
+      "choices": [
+        "About the same",
+        "About 5 times faster",
+        "More than 20 times faster"
+      ],
+      "answer": 2,
+      "feedback": [
+        "Not quite: the Nobel Committee says it is more than twenty times faster.",
+        "Closer, but the Nobel Committee says more than twenty times faster.",
+        "Yes. The Nobel Committee says: more than twenty times faster, about half a millisecond after light reaches its eyespot."
+      ]
+    },
+    {
+      "id": "q2",
+      "pause": 78.5,
+      "resume": 81.5,
+      "prompt": "In our toy model, which colour of light reaches deepest into brain tissue?",
+      "choices": [
+        "Blue",
+        "Yellow",
+        "Red"
+      ],
+      "answer": 2,
+      "feedback": [
+        "Blue fades fastest in our toy model.",
+        "Yellow goes further than blue, but not furthest.",
+        "Red, in our toy model. It ignores absorption outside blood, so read every depth as rough."
+      ]
+    },
+    {
+      "id": "q3",
+      "pause": 116.2667,
+      "resume": 119.2667,
+      "prompt": "In our toy model, how many neurons can one degree of warming recruit with blue light?",
+      "choices": [
+        "About a hundred",
+        "About a thousand",
+        "More than ten thousand"
+      ],
+      "answer": 2,
+      "feedback": [
+        "Far more, in our toy model.",
+        "More than that, in our toy model.",
+        "More than ten thousand, in our toy model with its assumptions: one threshold, one expression law."
+      ]
+    }
+  ]
+}

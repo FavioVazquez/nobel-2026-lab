@@ -1,0 +1,23 @@
+.s-shot-11 { position: absolute; inset: 0; overflow: hidden; background: var(--bg); font-family: var(--font-body); color: var(--fg); }
+.s-shot-11 .cam { position: absolute; inset: 0; }
+.s-shot-11 .bg { position: absolute; inset: 0;
+  background: radial-gradient(40% 40% at 30% 45%, rgb(90 169 255 / 0.12), transparent 70%),
+              radial-gradient(40% 40% at 30% 70%, rgb(255 214 120 / 0.09), transparent 70%),
+              radial-gradient(120% 100% at 50% 50%, transparent 55%, rgb(0 0 0 / 0.4) 100%); }
+.s-shot-11 .wrap { position: absolute; left: 7.3cqw; right: 7.3cqw; top: 12cqh; }
+.s-shot-11 .chip { display: inline-flex; align-items: center; gap: 1.4cqh; margin: 0; padding: 1.2cqh 2.4cqh; border-radius: 3cqh; border: 2px solid var(--border); background: var(--surface); font: 600 3.2cqh/1.2 var(--font-body); color: var(--fg); }
+.s-shot-11 .chip .dot { width: 1.4cqh; height: 1.4cqh; border-radius: 50%; background: var(--accent); }
+.s-shot-11 .lead { margin: 3cqh 0 4.5cqh; font: 600 6cqh/1.1 var(--font-display); letter-spacing: -0.02em; }
+.s-shot-11 .lead .em { color: var(--accent-2); font-style: italic; }
+.s-shot-11 .row { display: grid; grid-template-columns: 24cqh 1fr; column-gap: 4cqh; row-gap: 1.4cqh; align-items: center; margin-bottom: 6.5cqh; }
+.s-shot-11 .lab { grid-row: 1 / 3; display: flex; flex-direction: column; gap: 0.6cqh; }
+.s-shot-11 .lab b { font: 600 3.8cqh/1.1 var(--font-body); }
+.s-shot-11 .lab span { font: 500 2.8cqh/1.1 var(--font-body); color: var(--muted); }
+.s-shot-11 .num { display: flex; align-items: baseline; gap: 2.6cqh; }
+.s-shot-11 .n { font: 600 11cqh/1 var(--font-display); letter-spacing: -0.02em; font-variant-numeric: tabular-nums; min-width: 5.4em; }
+.s-shot-11 .u { font: 500 3cqh/1.2 var(--font-body); color: var(--muted); }
+.s-shot-11 .bar { height: 1.6cqh; border-radius: 1cqh; background: rgb(238 240 251 / 0.12); }
+.s-shot-11 .bar i { display: block; height: 100%; width: 0; border-radius: 1cqh; }
+.s-shot-11 .r-blue .n { color: #bfe0ff; } .s-shot-11 .r-blue .bar i { background: linear-gradient(90deg, #5aa9ff, #bfe0ff); box-shadow: 0 0 2cqh rgb(90 169 255 / 0.55); }
+.s-shot-11 .r-yel .n { color: #ffe3a0; } .s-shot-11 .r-yel .bar i { background: linear-gradient(90deg, #f2b84b, #ffe3a0); box-shadow: 0 0 2cqh rgb(242 184 75 / 0.5); }
+.s-shot-11 .fine { margin: 0; font: 500 2.6cqh/1.35 var(--font-body); color: var(--muted); max-width: 52em; }

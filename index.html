@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Nobel 2026 Lab</title>
+<meta name="description" content="Hands-on demos of the 2026 Nobel Prizes: a sourced fact sheet, a toy model you can run, and a video that stops and asks you questions. Educational demos, not research.">
+<link rel="canonical" href="https://faviovazquez.github.io/nobel-2026-lab/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nobel 2026 Lab">
+<meta property="og:title" content="Nobel 2026 Lab: hands-on demos of this year's Nobel Prizes">
+<meta property="og:description" content="Medicine 2026: in 1999 Francis Crick called light-switched neurons &quot;rather far-fetched&quot;. A 2-minute video that stops and asks you three questions, and a toy model you can run.">
+<meta property="og:url" content="https://faviovazquez.github.io/nobel-2026-lab/">
+<meta property="og:image" content="https://faviovazquez.github.io/nobel-2026-lab/assets/og-medicine.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A neuron drawn in thin blue lines with a pulse of light along it, under the words: 1999, Francis Crick, light, 'rather far-fetched'. Nobel Prize in Physiology or Medicine 2026.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://faviovazquez.github.io/nobel-2026-lab/assets/og-medicine.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B1220'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2358A9FF'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%2358A9FF' stroke-opacity='.45' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root {
+  --bg: #F5F7FB; --surface: #FFFFFF; --fg: #14213D; --muted: #4A5878; --line: #D5DDEB;
+  --blue: #1A62D3; --blue-soft: #E3ECFA; --warm: #A85900; --warm-soft: #FBEBD6;
+  --on-blue: #FFFFFF; --shadow: 0 1px 2px rgb(20 33 61 / .06), 0 8px 24px rgb(20 33 61 / .06);
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0B1220; --surface: #111C36; --fg: #EAF0FA; --muted: #A3B4D2; --line: #22304F;
+    --blue: #58A9FF; --blue-soft: #14274A; --warm: #FFB84D; --warm-soft: #2E2410;
+    --on-blue: #0B1220; --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 8px 24px rgb(0 0 0 / .25);
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box }
+html { -webkit-text-size-adjust: 100% }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 400 17px/1.6 var(--sans); }
+a { color: var(--blue); text-underline-offset: .18em }
+a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 4px }
+img { max-width: 100%; height: auto; display: block }
+.wrap { max-width: 1040px; margin: 0 auto; padding-inline: max(16px, env(safe-area-inset-left, 0px)); padding-block: 0 48px }
+
+.top { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-block: 20px; font: 500 13px/1.2 var(--mono); letter-spacing: .04em }
+.top .name { color: var(--fg); text-decoration: none }
+.top .name b { color: var(--blue); font-weight: 500 }
+.top nav { display: flex; gap: 18px; flex-wrap: wrap }
+.top nav a { color: var(--muted); text-decoration: none }
+.top nav a:hover { color: var(--fg) }
+
+.hero { padding-block: 28px 8px; display: grid; gap: 18px }
+.kicker { font: 500 12px/1.2 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 }
+h1 { font: 500 clamp(36px, 6.4vw, 64px)/1.04 var(--serif); letter-spacing: -.015em; margin: 0; text-wrap: balance; max-width: 15ch }
+h1 em { font-style: italic; color: var(--blue) }
+.lede { font-size: clamp(18px, 2.2vw, 20px); color: var(--muted); margin: 0; max-width: 60ch }
+.label { display: inline-block; border: 1px solid var(--warm); background: var(--warm-soft); color: var(--fg); border-radius: 8px; padding: 8px 12px; font-size: 14px; line-height: 1.45; max-width: 64ch }
+.label b { color: var(--warm) }
+
+h2 { font: 600 clamp(26px, 3.6vw, 34px)/1.15 var(--serif); margin: 0; text-wrap: balance }
+h3 { font: 600 18px/1.3 var(--sans); margin: 0 }
+section { margin-top: 56px }
+.sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 20px }
+.sec-head p { margin: 0; color: var(--muted); font-size: 15px }
+
+.prize { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 32px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 20px; box-shadow: var(--shadow) }
+.poster { position: relative; display: block; border-radius: 10px; overflow: hidden; background: #0B1220; aspect-ratio: 16 / 9 }
+.poster img { width: 100%; height: 100%; object-fit: cover }
+.poster .play { position: absolute; left: 14px; bottom: 14px; display: inline-flex; align-items: center; gap: 10px; background: rgb(11 18 32 / .82); color: #EAF0FA; border: 1px solid rgb(88 169 255 / .5); border-radius: 999px; padding: 8px 14px 8px 10px; font: 500 14px/1 var(--sans); backdrop-filter: blur(6px) }
+.poster .play i { width: 26px; height: 26px; border-radius: 50%; background: #58A9FF; display: grid; place-items: center }
+.poster .play i::before { content: ""; border-left: 9px solid #0B1220; border-top: 6px solid transparent; border-bottom: 6px solid transparent; margin-left: 3px }
+.poster:hover .play { border-color: #58A9FF }
+.prize-body { display: grid; gap: 14px; min-width: 0 }
+.prize-body .kicker { color: var(--blue) }
+.prize-body p { margin: 0 }
+.quote { font: italic 500 21px/1.35 var(--serif) }
+.cite { font-size: 15px; color: var(--muted) }
+.actions { display: grid; gap: 10px; margin-top: 4px }
+.btn { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--fg); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; background: var(--bg) }
+.btn:hover { border-color: var(--blue) }
+.btn img { width: 30px; height: 30px; flex: none }
+.btn span { display: grid; min-width: 0 }
+.btn small { color: var(--muted); font-size: 13.5px; line-height: 1.4 }
+.btn strong { font-weight: 600; font-size: 16px; line-height: 1.35 }
+.btn.primary { background: var(--blue); border-color: var(--blue); color: var(--on-blue) }
+.btn.primary small { color: var(--on-blue); opacity: .85 }
+.btn.primary .dot { width: 30px; height: 30px; border-radius: 50%; background: var(--on-blue); display: grid; place-items: center; flex: none }
+.btn.primary .dot::before { content: ""; border-left: 10px solid var(--blue); border-top: 7px solid transparent; border-bottom: 7px solid transparent; margin-left: 3px }
+.more { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 15px; margin-top: 2px }
+
+.prizes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px }
+.card { border: 1px solid var(--line); border-radius: 12px; padding: 16px; background: var(--surface); display: grid; gap: 6px; align-content: start }
+.card .tag { font: 500 11.5px/1.2 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted) }
+.card .tag.live { color: var(--blue) }
+.card p { margin: 0; font-size: 15px; color: var(--muted) }
+
+.rt { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px }
+.rt .card h3 { display: flex; align-items: center; gap: 8px }
+.rt .card h3::before { content: ""; width: 10px; height: 10px; border-radius: 50% }
+.rt .real h3::before { background: var(--blue) }
+.rt .toy h3::before { background: var(--warm) }
+.rt ul { margin: 4px 0 0; padding-left: 18px; color: var(--muted); font-size: 15px; display: grid; gap: 6px }
+
+footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; display: grid; gap: 6px }
+footer p { margin: 0; max-width: 72ch }
+
+@media (max-width: 820px) {
+  .prize { grid-template-columns: minmax(0, 1fr); gap: 20px; padding: 14px }
+  .prizes { grid-template-columns: minmax(0, 1fr) }
+  .rt { grid-template-columns: minmax(0, 1fr) }
+  .top nav { gap: 14px }
+}
+@media (max-width: 420px) { .top nav a.hide-sm { display: none } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="name" href="./"><b>●</b> nobel-2026-lab</a>
+    <nav aria-label="Site">
+      <a href="#medicine">Medicine</a>
+      <a class="hide-sm" href="#prizes">The prizes</a>
+      <a href="https://github.com/FavioVazquez/nobel-2026-lab">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <p class="kicker">October 2026 · a lab for learning</p>
+      <h1>This year's Nobel Prizes, <em>hands on</em></h1>
+      <p class="lede">Each prize gets a fact sheet where every sentence has a source, a small model you can run on a laptop, and a video that stops and asks you to guess before it tells you.</p>
+      <p class="label"><b>Educational demos made to show an open-source tool.</b> Not research, and not for any lab or clinical use. The models are teaching toys.</p>
+    </div>
+
+    <section id="medicine" aria-labelledby="med-h">
+      <div class="sec-head">
+        <h2 id="med-h">Medicine: the light switch</h2>
+        <p>Physiology or Medicine 2026</p>
+      </div>
+      <article class="prize">
+        <a class="poster" href="2026/medicine/video/interactive/" aria-label="Play the video that stops and asks (2 minutes 21 seconds)">
+          <img src="2026/medicine/video/exports/poster.jpg" width="1920" height="1080" alt="A neuron drawn in thin blue lines with a pulse of light along it, under the words: 1999, Francis Crick, light, 'rather far-fetched'. Nobel Prize in Physiology or Medicine 2026.">
+          <span class="play"><i aria-hidden="true"></i>Play · 2:21 · stops at 3 questions</span>
+        </a>
+        <div class="prize-body">
+          <p class="kicker">The story in one line</p>
+          <p class="quote">In 1999 Francis Crick wrote that light would be the ideal signal for switching neurons, then called the idea “rather far-fetched”.</p>
+          <p class="cite">On 5 October 2026 the prize went to Karl Deisseroth, Peter Hegemann and Georg Nagel “for their discoveries concerning light-gated ion channels and optogenetics” (<a href="https://www.nobelprize.org/prizes/medicine/2026/press-release/">press release</a>).</p>
+          <div class="actions">
+            <a class="btn primary" href="2026/medicine/video/interactive/">
+              <i class="dot" aria-hidden="true"></i>
+              <span><strong>Play the video that asks</strong><small>It pauses at three questions, takes your guess, then plays on. Sound on.</small></span>
+            </a>
+            <a class="btn" href="2026/medicine/page/">
+              <img src="assets/icons/station-page.svg" alt="" width="30" height="30">
+              <span><strong>Try the toy model</strong><small>How deep does blue, yellow or red light reach, and how much does it heat? Guess first, then see.</small></span>
+            </a>
+          </div>
+          <div class="more">
+            <a href="2026/medicine/video/exports/nobel-2026-medicine.mp4">Plain MP4</a>
+            <a href="https://github.com/FavioVazquez/nobel-2026-lab/blob/main/2026/medicine/CLAIMS.md">The 27 claims and their sources</a>
+            <a href="https://github.com/FavioVazquez/nobel-2026-lab/tree/main/2026/medicine">Code and how to rerun it</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="prizes" aria-labelledby="prizes-h">
+      <div class="sec-head">
+        <h2 id="prizes-h">The prizes</h2>
+        <p>A prize joins the lab once it is announced and its facts are sourced.</p>
+      </div>
+      <div class="prizes">
+        <div class="card">
+          <span class="tag live">Ready</span>
+          <h3><a href="#medicine">Medicine</a></h3>
+          <p>Light-gated ion channels and optogenetics: a light-and-heat toy model, a heat budget, a page and a video.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Announced 6 October · coming</span>
+          <h3>Physics</h3>
+          <p>Francis Halzen, for the IceCube Neutrino Observatory and the discovery of high-energy neutrinos of astrophysical origin (<a href="https://www.nobelprize.org/prizes/physics/2026/press-release/">press release</a>).</p>
+        </div>
+        <div class="card">
+          <span class="tag">7 and 12 October</span>
+          <h3>Chemistry and Economics</h3>
+          <p>To be announced. Each gets a folder of its own when its facts are sourced.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="rt-h">
+      <div class="sec-head">
+        <h2 id="rt-h">What is real, and what is a toy</h2>
+      </div>
+      <div class="rt">
+        <div class="card real">
+          <h3>Real</h3>
+          <ul>
+            <li>The prize, the people, the dates and the papers. Every sentence is in a claims ledger with its source.</li>
+            <li>Numbers quoted from published papers, each with a link.</li>
+            <li>The published parameters the models start from.</li>
+          </ul>
+        </div>
+        <div class="card toy">
+          <h3>A toy</h3>
+          <ul>
+            <li>The light, heat and nerve-cell models: textbook ideas with simplified settings. No skull, no vessels, no real brain shape.</li>
+            <li>Their outputs are for learning. They are not checked against experiments and must not be used to plan an experiment, a device or a treatment.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>MIT licence. Facts and quotations belong to their sources, linked next to every statement. Not affiliated with, or endorsed by, the Nobel Foundation, the Nobel Committee or anyone named here.</p>
+    <p>Made with <a href="https://github.com/FavioVazquez/showtime">showtime</a>, a local video studio for coding agents. Source: <a href="https://github.com/FavioVazquez/nobel-2026-lab">github.com/FavioVazquez/nobel-2026-lab</a>.</p>
+  </footer>
+</div>
+</body>
+</html>

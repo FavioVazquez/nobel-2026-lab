@@ -1,0 +1,432 @@
+{
+ "tag": "Educational demo, toy model",
+ "machine": "i386",
+ "python": "3.11.4",
+ "light": {
+  "470": {
+   "photons": 200000,
+   "seconds": 32.221120659960434,
+   "photon_steps": 59701892,
+   "mua_per_cm": 4.650043821056208,
+   "mus_per_cm": 190.97580887592238,
+   "g": 0.86,
+   "absorbed_fraction_in_tally": 0.999994709493834,
+   "mu_eff_fit_per_mm": 2.020541356756959,
+   "mu_eff_transport_exact_per_mm": 2.0226232575208023,
+   "rel_error_vs_transport": 0.001029307240536416,
+   "mu_eff_diffusion_per_mm": 2.092481761516216,
+   "diffusion_theory_bias": 0.03453856457729145,
+   "rel_error": 0.03438042141267181
+  },
+  "590": {
+   "photons": 200000,
+   "seconds": 32.40582639304921,
+   "photon_steps": 66775139,
+   "mua_per_cm": 2.872614129585462,
+   "mus_per_cm": 132.39921694173944,
+   "g": 0.86,
+   "absorbed_fraction_in_tally": 0.999990601044959,
+   "mu_eff_fit_per_mm": 1.3160376110463416,
+   "mu_eff_transport_exact_per_mm": 1.3174090453695346,
+   "rel_error_vs_transport": 0.001041008734540978,
+   "mu_eff_diffusion_per_mm": 1.3582897981369682,
+   "diffusion_theory_bias": 0.031031176619837487,
+   "rel_error": 0.03110690159683129
+  },
+  "635": {
+   "photons": 200000,
+   "seconds": 268.34780006308574,
+   "photon_steps": 682652061,
+   "mua_per_cm": 0.2471289612423761,
+   "mus_per_cm": 117.6141395937318,
+   "g": 0.86,
+   "absorbed_fraction_in_tally": 0.999994736588452,
+   "mu_eff_fit_per_mm": 0.34948527384833605,
+   "mu_eff_transport_exact_per_mm": 0.3508824735071764,
+   "rel_error_vs_transport": 0.003981959101219557,
+   "mu_eff_diffusion_per_mm": 0.35200681003986856,
+   "diffusion_theory_bias": 0.0032043108949104475,
+   "rel_error": 0.0071633165030157
+  }
+ },
+ "heat_comparison": {
+  "case_532nm_62um_10mW": {
+   "slice_plateau_C": 3.5188303726919883,
+   "published_slice_plateau_C": 2.2,
+   "max_voxel_C": 6.500997195397451,
+   "published_max_voxel_C": 4.1,
+   "volume_ge_1C_mm3": 5.260351461510046,
+   "published_volume_ge_1C_mm3": 1.0,
+   "extra_rise_60_to_120s_fraction": 0.006757781413942809,
+   "published_extra_rise_60_to_120s": "< 5 %"
+  },
+  "case_445nm_200um": {
+   "peak_C_per_mW": 0.9427502954044725,
+   "slice_C_per_mW": 0.5927817109724991,
+   "published_model_C_per_mW": 0.35,
+   "published_measured_C_per_mW": 0.42
+  }
+ },
+ "heat_pulse_trains_470nm_10mW": {
+  "continuous": 3.453377804965081,
+  "50 % duty (25 ms on, 20 Hz)": 1.9565474745931557,
+  "10 % duty (10 ms on, 10 Hz)": 0.604959065870702,
+  "published_band_C (5-10 mW, <=50 % duty)": [
+   0.5,
+   0.9
+  ]
+ },
+ "heat_per_wavelength": {
+  "470": {
+   "peak_per_mW": 0.3833717392981088,
+   "peak_per_mW_low": 0.39230314026875357,
+   "peak_per_mW_high": 0.37685100276695693,
+   "slice_per_mW": 0.2883102041612511
+  },
+  "590": {
+   "peak_per_mW": 0.26070365936519646,
+   "peak_per_mW_low": 0.26887935511786437,
+   "peak_per_mW_high": 0.2548685429482317,
+   "slice_per_mW": 0.2017628002065294
+  },
+  "635": {
+   "peak_per_mW": 0.04151821093462837,
+   "peak_per_mW_low": 0.04583045215656169,
+   "peak_per_mW_high": 0.038834468898986424,
+   "slice_per_mW": 0.036401499017971274
+  }
+ },
+ "switches": {
+  "ChR2 (Williams 2013)": {
+   "status": "published",
+   "wavelength": 470,
+   "gd_scale": 1.0,
+   "tau_off_ms": 8.317995020761636,
+   "max_following_rate_Hz": 50.0,
+   "first_failure_Hz": 60.0,
+   "follows_again_Hz": [
+    130.0,
+    140.0
+   ],
+   "g_mS_cm2": 0.48663157294841997,
+   "fraction_by_rate": {
+    "10.0": 1.0,
+    "20.0": 1.0,
+    "30.0": 1.0,
+    "40.0": 1.0,
+    "50.0": 0.95,
+    "60.0": 0.85,
+    "70.0": 0.8,
+    "80.0": 0.6,
+    "90.0": 0.45,
+    "100.0": 0.4,
+    "110.0": 0.3,
+    "120.0": 0.25,
+    "130.0": 1.0,
+    "140.0": 1.0,
+    "150.0": 0.9,
+    "160.0": 0.7,
+    "175.0": 0.45,
+    "200.0": 0.2
+   }
+  },
+  "ChR2 (PyRhO fit)": {
+   "status": "published",
+   "wavelength": 470,
+   "gd_scale": 1.0,
+   "tau_off_ms": 10.427319711842621,
+   "max_following_rate_Hz": 60.0,
+   "first_failure_Hz": 70.0,
+   "follows_again_Hz": [
+    130.0,
+    140.0,
+    150.0
+   ],
+   "g_mS_cm2": 0.8122923001252474,
+   "fraction_by_rate": {
+    "10.0": 1.0,
+    "20.0": 1.0,
+    "30.0": 1.0,
+    "40.0": 1.0,
+    "50.0": 1.0,
+    "60.0": 1.0,
+    "70.0": 0.9,
+    "80.0": 0.65,
+    "90.0": 0.45,
+    "100.0": 0.4,
+    "110.0": 0.45,
+    "120.0": 0.4,
+    "130.0": 1.0,
+    "140.0": 1.0,
+    "150.0": 1.0,
+    "160.0": 0.85,
+    "175.0": 0.55,
+    "200.0": 0.25
+   }
+  },
+  "Chronos (simplified)": {
+   "status": "simplified",
+   "wavelength": 470,
+   "gd_scale": 2.338449033427603,
+   "tau_off_ms": 3.5999999668284017,
+   "max_following_rate_Hz": 160.0,
+   "first_failure_Hz": 175.0,
+   "follows_again_Hz": [],
+   "g_mS_cm2": 0.5319316089863835,
+   "fraction_by_rate": {
+    "10.0": 1.0,
+    "20.0": 1.0,
+    "30.0": 1.0,
+    "40.0": 1.0,
+    "50.0": 1.0,
+    "60.0": 1.0,
+    "70.0": 1.0,
+    "80.0": 1.0,
+    "90.0": 1.0,
+    "100.0": 1.0,
+    "110.0": 1.0,
+    "120.0": 1.0,
+    "130.0": 1.0,
+    "140.0": 1.0,
+    "150.0": 1.0,
+    "160.0": 0.95,
+    "175.0": 0.6,
+    "200.0": 0.25
+   }
+  },
+  "ChrimsonR (simplified)": {
+   "status": "simplified",
+   "wavelength": 590,
+   "gd_scale": 0.5289627053556559,
+   "tau_off_ms": 15.800436639876942,
+   "max_following_rate_Hz": 10.0,
+   "first_failure_Hz": 20.0,
+   "follows_again_Hz": [],
+   "g_mS_cm2": 0.4134866017705592,
+   "fraction_by_rate": {
+    "10.0": 1.0,
+    "20.0": 0.75,
+    "30.0": 0.6,
+    "40.0": 0.5,
+    "50.0": 0.4,
+    "60.0": 0.3,
+    "70.0": 0.3,
+    "80.0": 0.25,
+    "90.0": 0.15,
+    "100.0": 0.1,
+    "110.0": 0.05,
+    "120.0": 0.05,
+    "130.0": 0.05,
+    "140.0": 0.1,
+    "150.0": 0.55,
+    "160.0": 0.45,
+    "175.0": 0.3,
+    "200.0": 0.15
+   }
+  }
+ },
+ "following_rule": "headline speed = highest tested rate up to which every tested rate has >= 95 % of pulses giving exactly one spike (20 pulses: at most one miss); the first failure ends the run. follows_again_Hz: a resonance of this toy cell, not of the light switch",
+ "following_resonance_window_Hz": [
+  130.0,
+  150.0
+ ],
+ "following_dt_check": {
+  "dt_ms": 0.01,
+  "dt_check_ms": 0.005,
+  "method": "explicit midpoint (RK2), fixed step",
+  "max_rate_at_dt_check": {
+   "ChR2 (Williams 2013)": 50.0,
+   "Chronos (simplified)": 160.0,
+   "ChrimsonR (simplified)": 10.0,
+   "ChR2 (PyRhO fit)": 60.0
+  },
+  "follows_again_at_dt_check": {
+   "ChR2 (Williams 2013)": [
+    130.0,
+    140.0
+   ],
+   "Chronos (simplified)": [],
+   "ChrimsonR (simplified)": [],
+   "ChR2 (PyRhO fit)": [
+    130.0,
+    140.0,
+    150.0
+   ]
+  },
+  "max_abs_fraction_change": 0.10000000000000003,
+  "max_abs_fraction_change_up_to_headline": 0.0,
+  "fractions_that_moved_dt_vs_dt_check": {
+   "ChR2 (Williams 2013)": {},
+   "ChR2 (PyRhO fit)": {
+    "110": [
+     0.45,
+     0.35
+    ]
+   },
+   "Chronos (simplified)": {},
+   "ChrimsonR (simplified)": {}
+  },
+  "converged": true
+ },
+ "tradeoff": {
+  "colours": [
+   {
+    "row": "colour",
+    "name": "470 nm (blue)",
+    "wavelength_nm": 470,
+    "status": "",
+    "volume_mm3_per_mW_at_3mWmm2": 0.09210756961243574,
+    "volume_mm3_per_mW_at_1mWmm2": 0.33609641781037436,
+    "volume_mm3_per_mW_at_10mWmm2": 0.01667989349515331,
+    "peak_warming_C_per_mW": 0.3833717392981088,
+    "peak_warming_C_per_mW_low_perfusion": 0.39230314026875357,
+    "peak_warming_C_per_mW_high_perfusion": 0.37685100276695693,
+    "slice_mean_warming_C_per_mW": 0.2883102041612511,
+    "max_following_rate_Hz": "",
+    "first_failure_Hz": "",
+    "follows_again_Hz": "",
+    "note": ""
+   },
+   {
+    "row": "colour",
+    "name": "590 nm (amber)",
+    "wavelength_nm": 590,
+    "status": "",
+    "volume_mm3_per_mW_at_3mWmm2": 0.10838494654884787,
+    "volume_mm3_per_mW_at_1mWmm2": 0.4912616424665826,
+    "volume_mm3_per_mW_at_10mWmm2": 0.017936530556589222,
+    "peak_warming_C_per_mW": 0.26070365936519646,
+    "peak_warming_C_per_mW_low_perfusion": 0.26887935511786437,
+    "peak_warming_C_per_mW_high_perfusion": 0.2548685429482317,
+    "slice_mean_warming_C_per_mW": 0.2017628002065294,
+    "max_following_rate_Hz": "",
+    "first_failure_Hz": "",
+    "follows_again_Hz": "",
+    "note": ""
+   },
+   {
+    "row": "colour",
+    "name": "635 nm (red)",
+    "wavelength_nm": 635,
+    "status": "",
+    "volume_mm3_per_mW_at_3mWmm2": 0.35785194693648364,
+    "volume_mm3_per_mW_at_1mWmm2": 3.1829144144615413,
+    "volume_mm3_per_mW_at_10mWmm2": 0.029624236975647495,
+    "peak_warming_C_per_mW": 0.04151821093462837,
+    "peak_warming_C_per_mW_low_perfusion": 0.04583045215656169,
+    "peak_warming_C_per_mW_high_perfusion": 0.038834468898986424,
+    "slice_mean_warming_C_per_mW": 0.036401499017971274,
+    "max_following_rate_Hz": "",
+    "first_failure_Hz": "",
+    "follows_again_Hz": "",
+    "note": "no absorption outside blood in this model: looks better than it is"
+   }
+  ],
+  "switches": [
+   {
+    "row": "switch",
+    "name": "ChR2 (Williams 2013)",
+    "wavelength_nm": 470,
+    "status": "published",
+    "volume_mm3_per_mW_at_3mWmm2": "",
+    "volume_mm3_per_mW_at_1mWmm2": "",
+    "volume_mm3_per_mW_at_10mWmm2": "",
+    "peak_warming_C_per_mW": "",
+    "peak_warming_C_per_mW_low_perfusion": "",
+    "peak_warming_C_per_mW_high_perfusion": "",
+    "slice_mean_warming_C_per_mW": "",
+    "max_following_rate_Hz": 50.0,
+    "first_failure_Hz": 60.0,
+    "follows_again_Hz": "130 140",
+    "note": "ChR2(H134R) 4-state, Table 1, 22 C values"
+   },
+   {
+    "row": "switch",
+    "name": "ChR2 (PyRhO fit)",
+    "wavelength_nm": 470,
+    "status": "published",
+    "volume_mm3_per_mW_at_3mWmm2": "",
+    "volume_mm3_per_mW_at_1mWmm2": "",
+    "volume_mm3_per_mW_at_10mWmm2": "",
+    "peak_warming_C_per_mW": "",
+    "peak_warming_C_per_mW_low_perfusion": "",
+    "peak_warming_C_per_mW_high_perfusion": "",
+    "slice_mean_warming_C_per_mW": "",
+    "max_following_rate_Hz": 60.0,
+    "first_failure_Hz": 70.0,
+    "follows_again_Hz": "130 140 150",
+    "note": "PyRhO modelFits['4']['ChR2']"
+   },
+   {
+    "row": "switch",
+    "name": "Chronos (simplified)",
+    "wavelength_nm": 470,
+    "status": "simplified",
+    "volume_mm3_per_mW_at_3mWmm2": "",
+    "volume_mm3_per_mW_at_1mWmm2": "",
+    "volume_mm3_per_mW_at_10mWmm2": "",
+    "peak_warming_C_per_mW": "",
+    "peak_warming_C_per_mW_low_perfusion": "",
+    "peak_warming_C_per_mW_high_perfusion": "",
+    "slice_mean_warming_C_per_mW": "",
+    "max_following_rate_Hz": 160.0,
+    "first_failure_Hz": 175.0,
+    "follows_again_Hz": "",
+    "note": "Williams structure, closing rates rescaled to tau_off 3.6 ms (Klapoetke 2014)"
+   },
+   {
+    "row": "switch",
+    "name": "ChrimsonR (simplified)",
+    "wavelength_nm": 590,
+    "status": "simplified",
+    "volume_mm3_per_mW_at_3mWmm2": "",
+    "volume_mm3_per_mW_at_1mWmm2": "",
+    "volume_mm3_per_mW_at_10mWmm2": "",
+    "peak_warming_C_per_mW": "",
+    "peak_warming_C_per_mW_low_perfusion": "",
+    "peak_warming_C_per_mW_high_perfusion": "",
+    "slice_mean_warming_C_per_mW": "",
+    "max_following_rate_Hz": 10.0,
+    "first_failure_Hz": 20.0,
+    "follows_again_Hz": "",
+    "note": "Williams structure, closing rates rescaled to tau_off 15.8 ms (Klapoetke 2014); driven at 590 nm, Chrimson's peak"
+   }
+  ]
+ },
+ "tradeoff_per_switch_legacy": [
+  {
+   "switch": "ChR2 (Williams 2013)",
+   "wavelength_nm": 470,
+   "volume_mm3_per_mW_at_3mWmm2": 0.09210756961243574,
+   "peak_warming_C_per_mW": 0.3833717392981088,
+   "max_following_rate_Hz": 50.0
+  },
+  {
+   "switch": "ChR2 (PyRhO fit)",
+   "wavelength_nm": 470,
+   "volume_mm3_per_mW_at_3mWmm2": 0.09210756961243574,
+   "peak_warming_C_per_mW": 0.3833717392981088,
+   "max_following_rate_Hz": 60.0
+  },
+  {
+   "switch": "Chronos (simplified)",
+   "wavelength_nm": 470,
+   "volume_mm3_per_mW_at_3mWmm2": 0.09210756961243574,
+   "peak_warming_C_per_mW": 0.3833717392981088,
+   "max_following_rate_Hz": 160.0
+  },
+  {
+   "switch": "ChrimsonR (simplified)",
+   "wavelength_nm": 590,
+   "volume_mm3_per_mW_at_3mWmm2": 0.10838494654884787,
+   "peak_warming_C_per_mW": 0.26070365936519646,
+   "max_following_rate_Hz": 10.0
+  }
+ ],
+ "timings_s": {
+  "light_main_s": 333.19359375804197,
+  "light_comparison_s": 10.978350141085684,
+  "heat_s": 237.14387235301547,
+  "opsin_neuron_s": 665.9332226190018
+ }
+}

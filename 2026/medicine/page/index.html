@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Light, heat and speed: try the optogenetics toy model</title>
+<meta name="description" content="Guess first, then see: how deep blue, yellow and red light reach in a toy model of brain tissue, how much they heat it, and how fast light switches can follow. Educational demo, not research.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nobel 2026 Lab">
+<meta property="og:title" content="Try the optogenetics toy model: guess first, then see">
+<meta property="og:description" content="How deep does light reach in brain tissue, and how much does it heat? A toy model for the 2026 Nobel Prize in Medicine. Educational demo, not research.">
+<meta property="og:url" content="https://faviovazquez.github.io/nobel-2026-lab/2026/medicine/page/">
+<meta property="og:image" content="https://faviovazquez.github.io/nobel-2026-lab/assets/og-medicine.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root {
+  --bg: #fbfaf7; --fg: #1d1d1f; --muted: #5b5b63; --card: #ffffff; --line: #d9d6cf; --accent: #3b3bb3;
+  --warn-bg: #fff4d6; --warn-fg: #5a4300; --warn-line: #e6c868;
+  --ok: #1d7a3a; --bad: #a3361f; --grid: #e7e4dd;
+  --c470: #1f5fd6; --c590: #a86b00; --c635: #c62828;
+  --s-chr2: #1f5fd6; --s-chronos: #0f7d77; --s-chrimson: #b0560c;
+  --focus: #3b3bb3;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121217; --fg: #ececf1; --muted: #a8a8b3; --card: #1c1c24; --line: #34343f; --accent: #a5a5ff;
+    --warn-bg: #2e2610; --warn-fg: #f3dc94; --warn-line: #6b5a1f;
+    --ok: #6fd08c; --bad: #ff9a85; --grid: #2a2a33;
+    --c470: #6ea2ff; --c590: #f2c14e; --c635: #ff7a70;
+    --s-chr2: #6ea2ff; --s-chronos: #4fd1c5; --s-chrimson: #ffa95e;
+    --focus: #a5a5ff;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg);
+  font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+main, header, footer { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
+a { color: var(--accent); }
+h1 { font-size: 1.75rem; line-height: 1.2; margin: 1.2rem 0 .6rem; }
+h2 { font-size: 1.3rem; line-height: 1.25; margin: 0 0 .5rem; }
+h3 { font-size: 1.05rem; margin: 1rem 0 .3rem; }
+p { margin: .5rem 0; }
+.banner { background: var(--warn-bg); color: var(--warn-fg); border: 1px solid var(--warn-line);
+  border-radius: 8px; padding: .55rem .8rem; font-weight: 600; margin-top: 1rem; }
+.step { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.1rem 1.1rem; margin: 1.2rem 0; }
+.step-num { display: inline-block; font-size: .8rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: .2rem; }
+fieldset { border: 0; padding: 0; margin: .6rem 0; min-width: 0; }
+legend { font-weight: 650; padding: 0; margin-bottom: .35rem; }
+.choices { display: flex; flex-wrap: wrap; gap: .5rem; }
+.choice { display: inline-flex; align-items: center; gap: .45rem; border: 1px solid var(--line); border-radius: 999px;
+  padding: .4rem .8rem; cursor: pointer; background: var(--bg); }
+.choice:has(input:checked) { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.choice input { margin: 0; accent-color: var(--accent); }
+.swatch { width: .9rem; height: .9rem; border-radius: 50%; display: inline-block; flex: none; }
+.ctl { display: grid; grid-template-columns: 1fr; gap: .2rem; margin: .7rem 0; }
+.ctl label { font-weight: 650; }
+.ctl .row { display: flex; align-items: center; gap: .7rem; }
+.ctl input[type=range] { flex: 1; min-width: 0; accent-color: var(--accent); height: 2rem; }
+.ctl output { min-width: 5.2rem; font-variant-numeric: tabular-nums; font-weight: 650; text-align: right; }
+input[type=number], select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line);
+  border-radius: 8px; padding: .35rem .5rem; }
+input[type=number] { width: 7rem; }
+button { font: inherit; font-weight: 650; color: #fff; background: var(--accent); border: 0; border-radius: 8px;
+  padding: .55rem 1rem; cursor: pointer; margin-top: .4rem; }
+@media (prefers-color-scheme: dark) { button { color: #121217; } }
+button:disabled { opacity: .45; cursor: not-allowed; }
+.hint { color: var(--muted); font-size: .92rem; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.reveal { border-top: 1px dashed var(--line); margin-top: 1rem; padding-top: .8rem; }
+.reveal[hidden] { display: none; }
+.reveal:focus { outline: none; }
+.verdict { font-size: 1.08rem; font-weight: 650; }
+.ok { color: var(--ok); } .bad { color: var(--bad); }
+.chart { margin: .6rem 0 .2rem; width: 100%; }
+.chart svg { display: block; overflow: visible; }
+.chart text { fill: var(--muted); font-size: 13px; font-family: inherit; }
+.chart .axis-label { fill: var(--fg); font-size: 13px; }
+.chart .gridline { stroke: var(--grid); stroke-width: 1; }
+.chart .axis { stroke: var(--muted); stroke-width: 1; }
+.chart .ref { stroke: var(--muted); stroke-dasharray: 5 4; stroke-width: 1.5; }
+.legend { display: flex; flex-wrap: wrap; gap: .3rem 1rem; list-style: none; padding: 0; margin: .2rem 0 .4rem; font-size: .92rem; }
+.legend li { display: inline-flex; align-items: center; gap: .4rem; }
+.legend .key { width: 1.6rem; height: 0; border-top: 3px solid; display: inline-block; }
+figure { margin: 0; }
+figcaption { font-size: .92rem; color: var(--muted); }
+details { margin: .4rem 0; font-size: .92rem; }
+summary { cursor: pointer; color: var(--accent); }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: .3rem .4rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+.table-wrap { overflow-x: auto; }
+.note { background: var(--bg); border-left: 3px solid var(--warn-line); padding: .4rem .7rem; margin: .6rem 0; font-size: .95rem; }
+.tag { display: inline-block; font-size: .78rem; font-weight: 700; padding: .05rem .45rem; border-radius: 999px;
+  border: 1px solid var(--line); color: var(--muted); vertical-align: .1em; }
+.switch { border: 1px solid var(--line); border-radius: 10px; padding: .6rem .8rem; margin: .6rem 0; }
+.switch .row { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; }
+.result-list { padding-left: 1.1rem; }
+.result-list li { margin: .35rem 0; }
+footer { color: var(--muted); font-size: .92rem; padding-bottom: 2rem; }
+footer h2 { color: var(--fg); font-size: 1.1rem; margin-top: 1.4rem; }
+footer ul { padding-left: 1.1rem; }
+footer li { margin: .2rem 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (max-width: 420px) {
+  body { font-size: 16px; }
+  h1 { font-size: 1.45rem; }
+  .step { padding: .85rem .8rem 1rem; }
+  .ctl output { min-width: 4.4rem; }
+  table { font-size: .82rem; }
+  th, td { padding: .3rem .25rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <p class="banner" role="note">Educational demo, toy model. Not research, not for lab or clinical use.</p>
+  <h1>Light, heat and speed: try the optogenetics toy model</h1>
+  <p>Optogenetics puts light-gated switches into nerve cells. Shine the right colour and the cell fires.
+    The 2026 Nobel Prize in Physiology or Medicine went to this idea, and this page goes with our explainer videos about it.</p>
+  <p>Three questions. For each one, make a guess first. Then reveal what a small computer model says.
+    All answers come from numbers the model worked out in advance; nothing is computed live and nothing is sent anywhere.</p>
+</header>
+
+<main>
+<!-- Step 1 -->
+<section class="step" id="step1" aria-labelledby="s1-title">
+  <span class="step-num">Step 1 of 3</span>
+  <h2 id="s1-title">Which colour reaches deepest into the brain?</h2>
+  <p>A thin glass fibre (0.2&nbsp;mm wide) shines 10&nbsp;mW of light into brain tissue. The tissue scatters and absorbs it.</p>
+  <fieldset>
+    <legend>Your guess: which colour gets deepest?</legend>
+    <div class="choices" id="s1-choices"></div>
+  </fieldset>
+  <button type="button" id="s1-go" disabled>Reveal the answer</button>
+  <p class="hint" id="s1-hint">Pick a colour first.</p>
+  <div class="reveal" id="s1-out" hidden tabindex="-1" aria-live="polite"></div>
+</section>
+
+<!-- Step 2 -->
+<section class="step" id="step2" aria-labelledby="s2-title">
+  <span class="step-num">Step 2 of 3</span>
+  <h2 id="s2-title">How warm does the tissue get?</h2>
+  <p>Light that is absorbed turns into heat. Here the light is blue (470&nbsp;nm) and runs for 10&nbsp;seconds.
+    You can pulse it: the duty cycle is the share of time the light is on.</p>
+  <div class="ctl">
+    <label for="s2-power">Power out of the fibre</label>
+    <div class="row"><input type="range" id="s2-power" min="1" max="20" step="1" value="10"><output id="s2-power-out" for="s2-power"></output></div>
+  </div>
+  <div class="ctl">
+    <label for="s2-duty">Duty cycle (share of time the light is on)</label>
+    <div class="row"><input type="range" id="s2-duty" min="5" max="100" step="5" value="50"><output id="s2-duty-out" for="s2-duty"></output></div>
+  </div>
+  <div class="ctl">
+    <label for="s2-guess">Your guess: warming at the hottest point after 10&nbsp;s, in &deg;C</label>
+    <div class="row"><input type="number" id="s2-guess" min="0" max="100" step="0.1" inputmode="decimal" placeholder="e.g. 1.5"><span>&deg;C</span></div>
+  </div>
+  <button type="button" id="s2-go" disabled>Reveal the answer</button>
+  <p class="hint" id="s2-hint">Type a guess first. You can change the settings and reveal again.</p>
+  <div class="reveal" id="s2-out" hidden tabindex="-1" aria-live="polite"></div>
+</section>
+
+<!-- Step 3 -->
+<section class="step" id="step3" aria-labelledby="s3-title">
+  <span class="step-num">Step 3 of 3</span>
+  <h2 id="s3-title">Can the neuron keep up?</h2>
+  <p>Flash the light in short pulses (2&nbsp;ms each). The cell keeps up if at least 95&nbsp;% of the pulses
+    each give exactly one spike. Different light switches close at different speeds.</p>
+  <div id="s3-switches"></div>
+  <button type="button" id="s3-go" disabled>Reveal the answers</button>
+  <p class="hint" id="s3-hint">Make a guess for all three switches first.</p>
+  <div class="reveal" id="s3-out" hidden tabindex="-1" aria-live="polite"></div>
+</section>
+
+<!-- Optional step 4: only when results/recruitment.json was built into data.js -->
+<section class="step" id="step4" aria-labelledby="s4-title" hidden>
+  <span class="step-num">Bonus</span>
+  <h2 id="s4-title">Neurons switched on per degree of warming</h2>
+  <p>More light switches on more neurons, but it also warms the tissue. Blue or yellow: which colour gets more neurons
+    for each degree of warming at the hottest point?</p>
+  <fieldset>
+    <legend>Your guess: which colour recruits more neurons per &deg;C?</legend>
+    <div class="choices" id="s4-choices"></div>
+  </fieldset>
+  <button type="button" id="s4-go" disabled>Reveal the answer</button>
+  <div class="reveal" id="s4-out" hidden tabindex="-1" aria-live="polite"></div>
+</section>
+
+<section class="step" id="summary" aria-labelledby="sum-title">
+  <h2 id="sum-title">The trade-off at a glance</h2>
+  <p>In this toy model, colour sets reach and heat; closing speed sets following.</p>
+  <h3>Reach and heat, per colour</h3>
+  <div class="table-wrap"><table id="sum-colours"></table></div>
+  <p class="hint">Volume lit above 3&nbsp;mW/mm&sup2; and warming are per mW of light out of the fibre.
+    Reach and heat depend only on colour here: every switch shares ChR2's light sensitivity and one 3&nbsp;mW/mm&sup2; threshold.
+    The 590&nbsp;nm and 635&nbsp;nm advantages come only from wavelength, and absorption outside blood is not modelled, so they look better than they are (635&nbsp;nm: a toy upper bound).</p>
+  <h3>Speed, per switch (toy result: read the order, not the numbers)</h3>
+  <div class="table-wrap"><table id="sum-switches"></table></div>
+  <p class="hint" id="sum-speed-note"></p>
+</section>
+</main>
+
+<footer>
+  <h2>What is real and what is a toy</h2>
+  <p>Real (taken from published sources, listed in the simulator's SOURCES.md):</p>
+  <ul>
+    <li>How brain tissue scatters each colour (Jacques 2013), and how forward the scattering is (Yona 2016).</li>
+    <li>How blood absorbs each colour (Prahl, OMLC tables).</li>
+    <li>Heat constants of brain and blood (Elwassif 2006).</li>
+    <li>The ChR2 switch models (Williams 2013, and the PyRhO fit).</li>
+    <li>Off-times of Chronos and ChrimsonR (Klapoetke 2014).</li>
+    <li>The Hodgkin-Huxley nerve-cell equations (1952).</li>
+    <li>Heating figures from Stujenske et al. 2015, used only as a comparison.</li>
+  </ul>
+  <p>Toy (our simplifications):</p>
+  <ul>
+    <li>The tissue is one uniform block: no layers, no blood vessels, no skull, no fibre body.</li>
+    <li>Only blood absorbs light (3&nbsp;% blood volume, 75&nbsp;% oxygen assumed). No other absorption, so red light probably looks better than it is.</li>
+    <li>One scattering set for every colour, with the forward-scattering value from 473&nbsp;nm.</li>
+    <li>One Williams 2013 rate read as 10<sup>-5</sup> instead of the printed 10<sup>5</sup>.</li>
+    <li>Chronos and ChrimsonR are simplified: the ChR2 model with only the closing speed changed. Their real light sensitivity, fading and recovery are not modelled.</li>
+    <li>The nerve cell is a squid-axon model sped up 3 times (16.3&nbsp;&deg;C instead of 6.3&nbsp;&deg;C). Every switch gives the same 15&nbsp;&micro;A/cm&sup2; peak current, so only speed differs. One cell, no dendrites, no network.</li>
+    <li>One switch-on level, 3&nbsp;mW/mm&sup2;, for every switch. Real levels differ by switch, expression and cell type.</li>
+    <li>The fibre sends light evenly inside its cone. The heat model's edges stay at body temperature about <span id="f-box"></span>&nbsp;mm from the tip. The glass fibre's own heat flow is ignored.</li>
+    <li>20-pulse trains of 2&nbsp;ms pulses, rates 10 to 200&nbsp;Hz. "Keeps up" means at least 95&nbsp;% of pulses give exactly one spike (one miss allowed). A switch's speed is the last rate before its first failure.</li>
+    <li>This model runs about <span id="f-hot"></span> times hotter than a published model of the same kind (Stujenske et al. 2015).</li>
+  </ul>
+  <h2>Where things live</h2>
+  <ul>
+    <li><a href="https://github.com/FavioVazquez/nobel-2026-lab/tree/main/2026/medicine/simulator">Simulator code</a> and its <a href="https://github.com/FavioVazquez/nobel-2026-lab/blob/main/2026/medicine/simulator/README.md">README</a> and <a href="https://github.com/FavioVazquez/nobel-2026-lab/blob/main/2026/medicine/simulator/SOURCES.md">sources</a></li>
+    <li><a href="https://github.com/FavioVazquez/nobel-2026-lab/tree/main/2026/medicine/results">Precomputed results</a> (run_summary.json, tradeoff.csv, light maps)</li>
+    <li><a href="https://github.com/FavioVazquez/nobel-2026-lab/blob/main/2026/medicine/page/README.md">How this page is built</a></li>
+  </ul>
+  <p>MIT licence. No tracking, no cookies, no network: everything on this page is in two local files.</p>
+  <p>The explainer videos were made with showtime, an open-source local video tool: <a href="https://github.com/FavioVazquez/showtime">github.com/FavioVazquez/showtime</a>.</p>
+</footer>
+
+<script src="data.js"></script>
+<script>
+(function () {
+  "use strict";
+  var D = window.NOBEL_MED_DATA;
+  if (!D) { document.querySelector("main").insertAdjacentHTML("afterbegin",
+    '<p class="note">data.js is missing. Run <code>python3 build_data.py</code> in this folder.</p>'); return; }
+
+  var COLOUR = {
+    "470": { name: "Blue", nm: "470 nm", css: "var(--c470)" },
+    "590": { name: "Yellow", nm: "590 nm", css: "var(--c590)" },
+    "635": { name: "Red", nm: "635 nm", css: "var(--c635)" }
+  };
+  var SW = [
+    { key: "ChR2 (Williams 2013)", short: "ChR2", css: "var(--s-chr2)", dash: "", simplified: false },
+    { key: "Chronos (simplified)", short: "Chronos", css: "var(--s-chronos)", dash: "8 5", simplified: true },
+    { key: "ChrimsonR (simplified)", short: "ChrimsonR", css: "var(--s-chrimson)", dash: "2 4", simplified: true }
+  ];
+  var NB = "\u00a0";
+
+  function $(id) { return document.getElementById(id); }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function fmt(v, d) { return Number(v).toFixed(d === undefined ? 1 : d); }
+  function u(v, unit, d) { return fmt(v, d) + NB + unit; }
+  function pct(v) { return Math.round(v * 100) + NB + "%"; }
+
+  // ---------- tiny SVG line chart ----------
+  var SVGNS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, text) {
+    var e = document.createElementNS(SVGNS, tag);
+    for (var k in attrs) if (attrs[k] !== undefined && attrs[k] !== null) e.setAttribute(k, attrs[k]);
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+  // opts: {title, desc, x:{map(v)->0..1, ticks:[{v,label}], label}, y:{...}, series:[{points,css,dash,width,label}],
+  //        refs:[{y,label}], marks:[{x,y,css,label,shape}]}
+  function drawChart(host, opts) {
+    var W = Math.max(280, Math.min(host.clientWidth || 600, 720));
+    var H = Math.round(Math.max(230, Math.min(340, W * 0.58)));
+    var m = { l: 58, r: 14, t: 12, b: 46 };
+    var iw = W - m.l - m.r, ih = H - m.t - m.b;
+    var X = function (v) { return m.l + opts.x.map(v) * iw; };
+    var Y = function (v) { return m.t + (1 - opts.y.map(v)) * ih; };
+    var id = host.id + "-t";
+    var svg = el("svg", { width: W, height: H, viewBox: "0 0 " + W + " " + H, role: "img", "aria-labelledby": id + " " + id + "d" });
+    svg.appendChild(el("title", { id: id }, opts.title));
+    svg.appendChild(el("desc", { id: id + "d" }, opts.desc));
+    opts.y.ticks.forEach(function (t) {
+      svg.appendChild(el("line", { x1: m.l, x2: m.l + iw, y1: Y(t.v), y2: Y(t.v), "class": "gridline" }));
+      svg.appendChild(el("text", { x: m.l - 6, y: Y(t.v) + 4, "text-anchor": "end" }, t.label));
+    });
+    (typeof opts.x.ticks === "function" ? opts.x.ticks(iw) : opts.x.ticks).forEach(function (t) {
+      svg.appendChild(el("line", { x1: X(t.v), x2: X(t.v), y1: m.t + ih, y2: m.t + ih + 4, "class": "axis" }));
+      svg.appendChild(el("text", { x: X(t.v), y: m.t + ih + 18, "text-anchor": "middle" }, t.label));
+    });
+    svg.appendChild(el("line", { x1: m.l, x2: m.l + iw, y1: m.t + ih, y2: m.t + ih, "class": "axis" }));
+    svg.appendChild(el("line", { x1: m.l, x2: m.l, y1: m.t, y2: m.t + ih, "class": "axis" }));
+    svg.appendChild(el("text", { x: m.l + iw / 2, y: H - 6, "text-anchor": "middle", "class": "axis-label" }, opts.x.label));
+    svg.appendChild(el("text", { x: 14, y: m.t + ih / 2, "text-anchor": "middle", "class": "axis-label",
+      transform: "rotate(-90 14 " + (m.t + ih / 2) + ")" }, opts.y.label));
+    (opts.refs || []).forEach(function (r) {
+      svg.appendChild(el("line", { x1: m.l, x2: m.l + iw, y1: Y(r.y), y2: Y(r.y), "class": "ref" }));
+      if (r.label) svg.appendChild(el("text", { x: m.l + iw - 4, y: Y(r.y) - 5, "text-anchor": "end" }, r.label));
+    });
+    opts.series.forEach(function (s) {
+      var pen = "M", d = s.points.map(function (p) {
+        if (p[1] === null) { pen = "M"; return ""; }
+        var seg = pen + X(p[0]).toFixed(1) + " " + Y(p[1]).toFixed(1); pen = "L"; return seg;
+      }).join("");
+      svg.appendChild(el("path", { d: d, fill: "none", stroke: s.css, "stroke-width": s.width || 2.5,
+        "stroke-dasharray": s.dash || null, "stroke-linejoin": "round", "stroke-linecap": "round", opacity: s.opacity || 1 }));
+      (s.dots || []).forEach(function (p) {
+        svg.appendChild(el("circle", { cx: X(p[0]), cy: Y(p[1]), r: 3.5, fill: s.css }));
+      });
+    });
+    (opts.marks || []).forEach(function (k) {
+      var cx = X(k.x), cy = Y(k.y);
+      if (k.shape === "tick") {
+        svg.appendChild(el("line", { x1: cx - 10, x2: cx + 10, y1: cy, y2: cy, stroke: k.css, "stroke-width": 3 }));
+      } else {
+        svg.appendChild(el("circle", { cx: cx, cy: cy, r: 7, fill: "var(--card)", stroke: k.css, "stroke-width": 3 }));
+      }
+      if (k.label) {
+        var right = cx < m.l + iw * 0.6;
+        svg.appendChild(el("text", { x: cx + (right ? 12 : -12), y: cy + (k.dy || -8), "text-anchor": right ? "start" : "end",
+          "class": "axis-label" }, k.label));
+      }
+    });
+    host.innerHTML = "";
+    host.appendChild(svg);
+  }
+  var redraws = {};
+  var rt;
+  window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(function () { for (var k in redraws) redraws[k](); }, 120); });
+  function chart(host, build) {
+    var box = host.closest(".reveal");
+    if (box) box.hidden = false; // measure the real width before drawing
+    var f = function () { drawChart(host, build()); };
+    redraws[host.id] = f; f();
+  }
+  function legend(items) {
+    return '<ul class="legend" aria-hidden="true">' + items.map(function (i) {
+      return '<li><span class="key" style="border-top-color:' + i.css + ';border-top-style:' + (i.dashed ? "dashed" : "solid") +
+        (i.bold ? ";border-top-width:5px" : "") + '"></span>' + esc(i.label) + "</li>";
+    }).join("") + "</ul>";
+  }
+  function radios(host, name, items) {
+    host.innerHTML = items.map(function (it) {
+      return '<label class="choice"><input type="radio" name="' + name + '" value="' + esc(it.value) + '">' +
+        (it.css ? '<span class="swatch" style="background:' + it.css + '"></span>' : "") + esc(it.label) + "</label>";
+    }).join("");
+  }
+  function picked(name) { var r = document.querySelector('input[name="' + name + '"]:checked'); return r ? r.value : null; }
+  function show(out) { out.hidden = false; out.focus({ preventScroll: true }); out.scrollIntoView({ behavior: "smooth", block: "nearest" }); }
+  function log10(v) { return Math.log(v) / Math.LN10; }
+
+  // ---------- Step 1: depth ----------
+  (function () {
+    var L = D.light, cols = ["470", "590", "635"];
+    radios($("s1-choices"), "s1", cols.map(function (c) { return { value: c, label: COLOUR[c].name + " " + COLOUR[c].nm, css: COLOUR[c].css }; }));
+    $("s1-choices").addEventListener("change", function () { $("s1-go").disabled = false; $("s1-hint").textContent = "Ready when you are."; });
+    $("s1-go").addEventListener("click", function () {
+      var pick = picked("s1"); if (!pick) return;
+      var best = cols.reduce(function (a, c) { return L.reach_mm[c]["3"] > L.reach_mm[a]["3"] ? c : a; }, cols[0]);
+      var out = $("s1-out");
+      var right = pick === best;
+      var lines = cols.map(function (c) {
+        return "<li>" + COLOUR[c].name + " (" + COLOUR[c].nm + "): above 3" + NB + "mW/mm\u00b2 down to " + u(L.reach_mm[c]["3"], "mm", 2) +
+          (c === pick ? " <strong>(your pick)</strong>" : "") + "</li>";
+      }).join("");
+      out.innerHTML =
+        '<p class="verdict ' + (right ? "ok" : "bad") + '">' + (right ? "Yes. " : "Not quite. ") +
+        COLOUR[best].name + " light reaches deepest in this model. You picked " + COLOUR[pick].name.toLowerCase() + ".</p>" +
+        "<p>Blue light is scattered and absorbed the most, so it fades fastest. Red is barely absorbed by blood, so it goes furthest.</p>" +
+        '<figure><div class="chart" id="s1-chart"></div>' +
+        legend(cols.map(function (c) { return { css: COLOUR[c].css, label: COLOUR[c].name + " " + COLOUR[c].nm + (c === pick ? " (your pick)" : ""), bold: c === pick }; })) +
+        "<figcaption>Light left at each depth below the fibre tip, at 10" + NB + "mW out of the fibre. The scale is logarithmic: each grid line is 10 times less light. " +
+        "Dashed line: 3" + NB + "mW/mm\u00b2, the one switch-on level the toy model uses for every switch.</figcaption></figure>" +
+        '<ul class="result-list">' + lines + "</ul>" +
+        '<details><summary>Chart as a table</summary><div class="table-wrap"><table><thead><tr><th>Depth</th>' +
+        cols.map(function (c) { return "<th>" + COLOUR[c].name + " (mW/mm\u00b2)</th>"; }).join("") + "</tr></thead><tbody>" +
+        L.depth_mm.map(function (z, i) {
+          if (i % 4 !== 1) return "";
+          return "<tr><td>" + u(z, "mm", 2) + "</td>" + cols.map(function (c) { var v = L.profiles[c][i]; return "<td>" + (v >= 10 ? fmt(v, 0) : v >= 1 ? fmt(v, 1) : fmt(v, 2)) + "</td>"; }).join("") + "</tr>";
+        }).join("") + "</tbody></table></div></details>" +
+        '<p class="note"><strong>Caveat.</strong> The model only counts light absorbed by blood. Real brain tissue also absorbs some light outside blood, ' +
+        "so the red result is probably too good. Read it as \u201cred goes further\u201d, not as an exact depth.</p>";
+      chart($("s1-chart"), function () {
+        var ymin = 0.1, ymax = 1000;
+        var series = cols.slice().sort(function (a) { return a === pick ? 1 : -1; }).map(function (c) {
+          return { css: COLOUR[c].css, width: c === pick ? 5 : 2.5, opacity: c === pick ? 1 : 0.8,
+            points: L.depth_mm.map(function (z, i) { var v = L.profiles[c][i]; return [z, v < ymin ? null : Math.min(ymax, v)]; }) };
+        });
+        return {
+          title: "Light versus depth for blue, yellow and red light",
+          desc: "Light at 10 mW out of the fibre, in milliwatts per square millimetre, against depth from 0 to 4 mm, log scale. " +
+            cols.map(function (c) { return COLOUR[c].name + " stays above 3 mW per square millimetre down to " + L.reach_mm[c]["3"] + " mm"; }).join("; ") +
+            ". Your pick, " + COLOUR[pick].name.toLowerCase() + ", is drawn thicker.",
+          x: { map: function (v) { return v / 4; }, label: "Depth below the fibre tip (mm)",
+               ticks: [0, 1, 2, 3, 4].map(function (v) { return { v: v, label: String(v) }; }) },
+          y: { map: function (v) { return (log10(v) - log10(ymin)) / (log10(ymax) - log10(ymin)); }, label: "Light (mW/mm\u00b2)",
+               ticks: [0.1, 1, 10, 100, 1000].map(function (v) { return { v: v, label: String(v) }; }) },
+          refs: [{ y: 3, label: "3 mW/mm\u00b2" }],
+          series: series
+        };
+      });
+      show(out);
+    });
+  })();
+
+  // ---------- Step 2: heat ----------
+  (function () {
+    var H = D.heat, P0 = H.sim_power_mW, pts = H.duty_points;
+    var power = $("s2-power"), duty = $("s2-duty"), guess = $("s2-guess");
+    function sync() {
+      $("s2-power-out").textContent = power.value + NB + "mW";
+      $("s2-duty-out").textContent = duty.value + NB + "%" + (duty.value === "100" ? " (always on)" : "");
+      var g = parseFloat(guess.value);
+      var ok = guess.value !== "" && isFinite(g) && g >= 0;
+      $("s2-go").disabled = !ok;
+      $("s2-hint").textContent = ok ? "Ready when you are. You can change the settings and reveal again." : "Type a guess first (a number of \u00b0C, 0 or more).";
+    }
+    [power, duty, guess].forEach(function (e) { e.addEventListener("input", sync); });
+    sync();
+    function at10(d) {
+      if (d <= pts[0].duty) return { C: pts[0].C * d / pts[0].duty, kind: d === pts[0].duty ? "simulated" : "extrapolated" };
+      for (var i = 1; i < pts.length; i++) {
+        if (d <= pts[i].duty + 1e-9) {
+          if (Math.abs(d - pts[i].duty) < 1e-9) return { C: pts[i].C, kind: "simulated", lo: pts[i], hi: pts[i] };
+          var a = pts[i - 1], b = pts[i], f = (d - a.duty) / (b.duty - a.duty);
+          return { C: a.C + f * (b.C - a.C), kind: "interpolated", lo: a, hi: b };
+        }
+      }
+      return { C: pts[pts.length - 1].C, kind: "simulated" };
+    }
+    $("s2-go").addEventListener("click", function () {
+      var P = +power.value, d = +duty.value / 100, g = parseFloat(guess.value);
+      var r = at10(d), C = r.C * P / P0, diff = g - C;
+      var close = Math.abs(diff) <= Math.max(0.2, 0.15 * C);
+      var how = [];
+      how.push("The model ran blue light at " + P0 + NB + "mW for 10" + NB + "s three times: light always on (" + u(pts[2].C, "\u00b0C", 2) +
+        "), 50" + NB + "% duty (" + u(pts[1].C, "\u00b0C", 2) + ") and 10" + NB + "% duty (" + u(pts[0].C, "\u00b0C", 2) + ").");
+      if (P !== P0) how.push("Heat is linear in power in this model (one of its tests checks this), so " + P + NB + "mW gives " +
+        fmt(P / P0, 1) + " times the " + P0 + NB + "mW result. That scaling is exact for the model.");
+      if (r.kind === "simulated") how.push("Your duty cycle is one of the three runs, so the number comes straight from the model.");
+      if (r.kind === "interpolated") how.push("<strong>Estimate.</strong> Your duty cycle, " + Math.round(d * 100) + NB + "%, lies between the " +
+        Math.round(r.lo.duty * 100) + NB + "% and " + Math.round(r.hi.duty * 100) + NB + "% runs, so we draw a straight line between them. " +
+        "The model did not run this exact setting" + (r.lo.duty === 0.1 ? ", and the two runs used different pulses (" + r.lo.pattern + "; " + r.hi.pattern + ")." : "."));
+      if (r.kind === "extrapolated") how.push("<strong>Extrapolation.</strong> Your duty cycle, " + Math.round(d * 100) + NB +
+        "%, is below the lowest run (10" + NB + "%). We extend a straight line down to no warming at 0" + NB + "%. The model never ran this setting, so treat it as rough.");
+      var steady = d === 1 ? "<p>If the light stayed on for minutes, the warming would settle near " + u(H.steady_C_per_mW["470"] * P, "\u00b0C", 1) +
+        " (" + fmt(H.steady_C_per_mW["470"], 2) + NB + "\u00b0C per mW, steady state).</p>" : "";
+      var out = $("s2-out");
+      out.innerHTML =
+        '<p class="verdict">The model says: ' + u(C, "\u00b0C", 2) + " warmer at the hottest point after 10" + NB + "s " +
+        '<span class="tag">' + r.kind + "</span></p>" +
+        '<p class="' + (close ? "ok" : "bad") + '">Your guess: ' + u(g, "\u00b0C", 1) + ". " +
+        (close ? "Close." : "That is " + u(Math.abs(diff), "\u00b0C", 1) + (diff > 0 ? " too high." : " too low.")) + "</p>" +
+        "<p>Pulsing helps because the tissue cools a little between pulses, and less light goes in overall.</p>" + steady +
+        '<figure><div class="chart" id="s2-chart"></div>' +
+        legend([{ css: "var(--c470)", label: "From the model's runs (dots), straight lines between" },
+                { css: "var(--c470)", label: "Extrapolated below 10 %", dashed: true }]) +
+        "<figcaption>Warming after 10" + NB + "s against duty cycle, at your power of " + P + NB + "mW. Circle: your setting. Short bar: your guess.</figcaption></figure>" +
+        '<details><summary>Chart as a table</summary><div class="table-wrap"><table><thead><tr><th>Duty cycle</th><th>Warming at ' + P + NB + "mW</th><th>Where it comes from</th></tr></thead><tbody>" +
+        pts.map(function (p) { return "<tr><td>" + pct(p.duty) + "</td><td>" + u(p.C * P / P0, "\u00b0C", 2) + "</td><td>model run (" + esc(p.pattern) + ")" + (P !== P0 ? ", scaled from " + P0 + NB + "mW" : "") + "</td></tr>"; }).join("") +
+        "<tr><td>" + pct(d) + " (yours)</td><td>" + u(C, "\u00b0C", 2) + "</td><td>" + r.kind + "</td></tr></tbody></table></div></details>" +
+        "<h3>How this number was made</h3><ul class=\"result-list\">" + how.map(function (h) { return "<li>" + h + "</li>"; }).join("") + "</ul>" +
+        '<p class="note"><strong>Caveat.</strong> This toy model runs about " + H.hotter_than_stujenske[0] + " to " + H.hotter_than_stujenske[1] + " times hotter than a published model of the same kind (Stujenske et al. 2015). ' +
+        "For 50" + NB + "% duty pulses at 10" + NB + "mW it gives " + u(pts[1].C, "\u00b0C", 1) + "; that paper predicts " + H.published_band_C[0] + " to " + H.published_band_C[1] + NB +
+        "\u00b0C for 5 to 10" + NB + "mW. So real warming may well be lower. This page is not a safety guide.</p>";
+      chart($("s2-chart"), function () {
+        var ymax = Math.max(1, Math.ceil(Math.max(pts[2].C * P / P0, g) * 1.1));
+        var step = ymax <= 4 ? 1 : ymax <= 10 ? 2 : 5, yt = [];
+        for (var v = 0; v <= ymax + 1e-9; v += step) yt.push({ v: v, label: String(v) });
+        ymax = yt[yt.length - 1].v < ymax ? yt[yt.length - 1].v + step : ymax;
+        if (yt[yt.length - 1].v < ymax) yt.push({ v: ymax, label: String(ymax) });
+        var sim = pts.map(function (p) { return [p.duty * 100, p.C * P / P0]; });
+        return {
+          title: "Warming after 10 seconds versus duty cycle",
+          desc: "At " + P + " mW of blue light: " + pts.map(function (p) { return Math.round(p.duty * 100) + " % duty gives " + fmt(p.C * P / P0, 2) + " degrees C"; }).join(", ") +
+            ". Your setting, " + Math.round(d * 100) + " %, gives " + fmt(C, 2) + " degrees C (" + r.kind + "). Your guess was " + fmt(g, 1) + " degrees C.",
+          x: { map: function (v) { return v / 100; }, label: "Duty cycle (%)", ticks: [0, 25, 50, 75, 100].map(function (v) { return { v: v, label: String(v) }; }) },
+          y: { map: function (v) { return Math.min(1, v / ymax); }, label: "Warming (\u00b0C)", ticks: yt },
+          series: [{ css: "var(--c470)", dash: "6 5", points: [[0, 0], sim[0]] }, { css: "var(--c470)", points: sim, dots: sim }],
+          marks: [{ x: d * 100, y: Math.min(g, ymax), css: "var(--fg)", shape: "tick", label: "guess " + u(g, "\u00b0C", 1), dy: g > C ? -8 : 18 },
+                  { x: d * 100, y: C, css: "var(--c470)", label: "model " + u(C, "\u00b0C", 2), dy: g > C ? 20 : -10 }]
+        };
+      });
+      show(out);
+    });
+  })();
+
+  // ---------- Step 3: speed ----------
+  (function () {
+    var SP = D.speed, S = SP.switches, host = $("s3-switches"), win = SP.resonance_window_Hz;
+    var RES = "a resonance of this toy cell, not of the light switch";
+    host.innerHTML = SW.map(function (sw, i) {
+      var s = S[sw.key];
+      return '<fieldset class="switch"><legend><span class="swatch" style="background:' + sw.css + '"></span> ' + sw.short +
+        (sw.simplified ? ' <span class="tag">simplified</span>' : "") + "</legend>" +
+        '<p class="hint">Closes in about ' + u(s.tau_off_ms, "ms", 1) + ", driven with " + s.wavelength + NB + "nm light.</p>" +
+        '<div class="row"><label for="s3-rate' + i + '">Pulse rate</label><select id="s3-rate' + i + '">' +
+        s.rates_Hz.map(function (r) { return '<option value="' + r + '"' + (r === 50 ? " selected" : "") + ">" + r + NB + "Hz (pulses per second)</option>"; }).join("") +
+        '</select></div><div class="choices" role="radiogroup" aria-label="Your guess for ' + sw.short + '" style="margin-top:.5rem">' +
+        '<label class="choice"><input type="radio" name="s3p' + i + '" value="yes">Keeps up</label>' +
+        '<label class="choice"><input type="radio" name="s3p' + i + '" value="no">Falls behind</label></div></fieldset>';
+    }).join("");
+    function ready() {
+      var ok = SW.every(function (_, i) { return picked("s3p" + i); });
+      $("s3-go").disabled = !ok;
+      $("s3-hint").textContent = ok ? "Ready when you are. You can change the rates and reveal again." : "Make a guess for all three switches first.";
+    }
+    host.addEventListener("change", ready);
+    $("s3-go").addEventListener("click", function () {
+      var choice = SW.map(function (sw, i) {
+        var s = S[sw.key], rate = +$("s3-rate" + i).value, j = s.rates_Hz.indexOf(rate), f = s.fraction[j];
+        return { sw: sw, s: s, rate: rate, j: j, f: f, keeps: f >= 0.95, guess: picked("s3p" + i) === "yes" };
+      });
+      var nRight = choice.filter(function (c) { return c.keeps === c.guess; }).length;
+      var items = choice.map(function (c) {
+        var quirk = c.keeps && c.rate > c.s.max_following_rate_Hz;
+        var ff = c.s.first_failure_Hz;
+        return "<li><strong>" + c.sw.short + (c.sw.simplified ? " (simplified)" : "") + " at " + c.rate + NB + "Hz:</strong> " + pct(c.f) +
+          " of pulses gave exactly one spike, so it " + (c.keeps ? "keeps up" : "falls behind") + ". " +
+          '<span class="' + (c.keeps === c.guess ? "ok" : "bad") + '">You guessed ' + (c.guess ? "keeps up" : "falls behind") + ".</span>" +
+          (quirk ? " Odd point: 1:1 firing returns here although it already fails at " + ff + NB + "Hz. That is " + RES + ", so the model's speed stops at the first failure." : "") + "</li>";
+      }).join("");
+      var out = $("s3-out");
+      var rates = S[SW[0].key].rates_Hz;
+      out.innerHTML =
+        '<p class="verdict">' + nRight + " of 3 guesses match the model.</p>" +
+        '<ul class="result-list">' + items + "</ul>" +
+        "<p>The model's speed for each switch (the last tested rate before the first failure, so every slower rate keeps up): " +
+        SW.map(function (sw) { return sw.short + " " + S[sw.key].max_following_rate_Hz + NB + "Hz"; }).join(", ") +
+        ". In this toy, a switch that closes faster lets the cell reset sooner. (The other published ChR2 set, the PyRhO fit, gets " +
+        S["ChR2 (PyRhO fit)"].max_following_rate_Hz + NB + "Hz; the two ChR2 sets agree for short pulses but not for long light.)</p>" +
+        '<figure><div class="chart" id="s3-chart"></div>' +
+        legend(SW.map(function (sw) { return { css: sw.css, dashed: !!sw.dash, label: sw.short + (sw.simplified ? " (simplified)" : "") }; })
+          .concat([{ css: "var(--muted)", dashed: true, label: "95 % rule" }])) +
+        "<figcaption>Share of pulses that gave exactly one spike, at each tested pulse rate. Circles: your choices. Dashed line: the 95" + NB + "% rule. " +
+        "Rates are evenly spaced on the axis, not to scale." + (win ? " Above its first failure, ChR2 follows 1:1 again at " + win[0] + "\u2013" + win[1] + NB + "Hz: " + RES + "." : "") +
+        "</figcaption></figure>" +
+        '<details><summary>Chart as a table</summary><div class="table-wrap"><table><thead><tr><th>Rate</th>' +
+        SW.map(function (sw) { return "<th>" + sw.short + "</th>"; }).join("") + "</tr></thead><tbody>" +
+        rates.map(function (r, j) { return "<tr><td>" + r + NB + "Hz</td>" + SW.map(function (sw) { return "<td>" + pct(S[sw.key].fraction[j]) + "</td>"; }).join("") + "</tr>"; }).join("") +
+        "</tbody></table></div></details>" +
+        '<p class="note"><strong>Caveat.</strong> These are toy results: read the order, not the numbers. With 10 pulses instead of 20, or a stronger current, the limits move a lot. ' +
+        "Measured in real cells (Klapoetke et al. 2014; " + esc(SP.chrimsonr_conditions) + "), ChrimsonR gives \u201c" + esc(SP.chrimsonr_quote) + "\u201d. " +
+        "So the simplified ChrimsonR's " + S["ChrimsonR (simplified)"].max_following_rate_Hz + NB + "Hz here is a limit of the stand-in, not of real ChrimsonR. " +
+        "Chronos and ChrimsonR are simplified: the ChR2 model with only the closing speed changed, so this toy orders the switches by closing speed only.</p>";
+      chart($("s3-chart"), function () {
+        var n = rates.length, xm = function (v) { return rates.indexOf(v) / (n - 1); };
+        return {
+          title: "Share of pulses followed versus pulse rate for three light switches",
+          desc: SW.map(function (sw) { return sw.short + ": keeps up to " + S[sw.key].max_following_rate_Hz + " Hz"; }).join("; ") + ". " +
+            choice.map(function (c) { return "Your " + c.sw.short + " choice, " + c.rate + " Hz, gives " + pct(c.f).replace(NB, " "); }).join("; ") + ".",
+          x: { map: xm, label: "Pulse rate (Hz)", ticks: function (iw) {
+                 var keep = iw < 330 ? [10, 40, 80, 130, 200] : iw < 520 ? [10, 30, 50, 80, 110, 140, 200] : iw < 640 ? rates.filter(function (_, j) { return j % 2 === 0 || j === n - 1; }) : rates;
+                 return keep.filter(function (r) { return rates.indexOf(r) >= 0; }).map(function (r) { return { v: r, label: String(r) }; }); } },
+          y: { map: function (v) { return v; }, label: "Pulses followed (%)", ticks: [0, 0.25, 0.5, 0.75, 1].map(function (v) { return { v: v, label: String(v * 100) }; }) },
+          refs: [{ y: 0.95 }],
+          series: SW.map(function (sw) { return { css: sw.css, dash: sw.dash, points: rates.map(function (r, j) { return [r, S[sw.key].fraction[j]]; }) }; }),
+          marks: choice.map(function (c) { return { x: c.rate, y: c.f, css: c.sw.css }; })
+        };
+      });
+      show(out);
+    });
+  })();
+
+  // ---------- Optional step 4: the heat budget's recruitment.json, built into data.js ----------
+  function validRecruitment(r) {
+    try {
+      return r.colours.length > 0 && r.colours.every(function (c) {
+        var d = r.data[c], n = d.power_mW.length;
+        return n > 0 && d.warming_C.length === n && d.neurons_recruited.length === n && isFinite(d.at_1C);
+      });
+    } catch (e) { return false; }
+  }
+  function setupRecruitment(R) {
+    if (!validRecruitment(R)) return;
+    var cols = R.colours.map(String).filter(function (c) { return COLOUR[c]; });
+    if (!cols.length) return;
+    $("step4").hidden = false;
+    document.querySelectorAll(".step-num").forEach(function (s) { s.textContent = s.textContent.replace("of 3", "of 3 (plus a bonus)"); });
+    radios($("s4-choices"), "s4", cols.map(function (c) { return { value: c, label: COLOUR[c].name + " " + COLOUR[c].nm, css: COLOUR[c].css }; }));
+    $("s4-choices").addEventListener("change", function () { $("s4-go").disabled = false; });
+    function n(v) { return Math.round(v).toLocaleString("en-US"); }
+    $("s4-go").addEventListener("click", function () {
+      var pick = picked("s4"); if (!pick) return;
+      var best = cols.reduce(function (a, c) { return R.data[c].at_1C > R.data[a].at_1C ? c : a; }, cols[0]);
+      var out = $("s4-out"), rows = [];
+      cols.forEach(function (c) {
+        var d = R.data[c];
+        d.power_mW.forEach(function (p, i) {
+          rows.push("<tr><td>" + COLOUR[c].name + " " + COLOUR[c].nm + "</td><td>" + u(p, "mW", 2) + "</td><td>" + u(d.warming_C[i], "\u00b0C", 2) +
+            "</td><td>" + n(d.neurons_recruited[i]) + "</td></tr>");
+        });
+      });
+      var ub = Object.keys(R.upper_bound || {}).filter(function (c) { return COLOUR[c]; }).map(function (c) {
+        var d = R.upper_bound[c];
+        return COLOUR[c].name + " (" + COLOUR[c].nm + ") would give " + n(d.at_1C) + " neurons at 1" + NB + "\u00b0C, but only as a <strong>toy upper bound</strong>: " +
+          "absorption outside blood is not modelled, no " + COLOUR[c].nm + " switch is modelled (it borrows ChR2's light sensitivity), and the uniform block is far bigger than a thin cortex.";
+      });
+      out.innerHTML =
+        '<p class="verdict ' + (pick === best ? "ok" : "bad") + '">' + (pick === best ? "Yes. " : "Not quite. ") + COLOUR[best].name +
+        " recruits more neurons per degree of warming in this model. You picked " + COLOUR[pick].name.toLowerCase() + ".</p>" +
+        '<ul class="result-list">' + cols.map(function (c) {
+          var d = R.data[c];
+          return "<li>" + COLOUR[c].name + " (" + COLOUR[c].nm + "): 1" + NB + "\u00b0C at the hottest point takes " + u(d.power_for_1C_mW, "mW", 2) +
+            " of continuous light and recruits about " + n(d.at_1C) + " neurons.</li>";
+        }).join("") + "</ul>" +
+        '<figure><div class="chart" id="s4-chart"></div>' +
+        legend(cols.map(function (c) { return { css: COLOUR[c].css, label: COLOUR[c].name + " " + COLOUR[c].nm + (c === pick ? " (your pick)" : ""), bold: c === pick }; })) +
+        "<figcaption>Neurons recruited against warming at the hottest point, continuous light. A steeper line means more neurons for each degree. " +
+        "Counts grow faster than the warming, so \u201cper degree\u201d depends on how warm you allow.</figcaption></figure>" +
+        '<details><summary>Chart as a table</summary><div class="table-wrap"><table><thead><tr><th>Colour</th><th>Power</th><th>Warming</th><th>Neurons recruited</th></tr></thead><tbody>' +
+        rows.join("") + "</tbody></table></div></details>" +
+        (ub.length ? '<p class="note"><strong>Red is left out of the guess.</strong> ' + ub.join(" ") + "</p>" : "") +
+        '<p class="note"><strong>Caveat.</strong> Toy model: ' + n(R.density_per_mm3) + " neurons per mm\u00b3 in one uniform block, one switch-on level (" +
+        R.threshold_mW_mm2 + NB + "mW/mm\u00b2) for every neuron, an assumed spread of expression (lognormal, spread " + R.sigma + "; a wider spread roughly doubles every count), " +
+        "and warming that runs hotter than a published model. Data: " + esc(R.source) + ".</p>";
+      chart($("s4-chart"), function () {
+        var wmax = 0, nmax = 0;
+        cols.forEach(function (c) { wmax = Math.max.apply(null, [wmax].concat(R.data[c].warming_C)); nmax = Math.max.apply(null, [nmax].concat(R.data[c].neurons_recruited)); });
+        function niceMax(v) {
+          var raw = (v || 1) / 4, e = Math.pow(10, Math.floor(log10(raw))), f = raw / e;
+          var step = (f <= 1 ? 1 : f <= 2 ? 2 : f <= 2.5 ? 2.5 : f <= 5 ? 5 : 10) * e;
+          return { max: Math.ceil(v / step) * step, step: step };
+        }
+        var wn = niceMax(wmax), nn = niceMax(nmax);
+        wmax = wn.max; nmax = nn.max;
+        var tk = function (q, k) { var t = []; for (var v = 0; v <= q.max + 1e-9; v += q.step) t.push({ v: v, label: k ? (v >= 1000 ? +(v / 1000).toPrecision(3) + "k" : String(v)) : String(+v.toPrecision(3)) }); return t; };
+        return {
+          title: "Neurons recruited versus warming for blue and amber light",
+          desc: cols.map(function (c) { return COLOUR[c].name + ": about " + n(R.data[c].at_1C) + " neurons at 1 degree C"; }).join("; ") + ". Your pick: " + COLOUR[pick].name.toLowerCase() + ".",
+          x: { map: function (v) { return v / wmax; }, label: "Warming (\u00b0C)", ticks: tk(wn) },
+          y: { map: function (v) { return v / nmax; }, label: "Neurons recruited", ticks: tk(nn, true) },
+          series: cols.map(function (c) {
+            var d = R.data[c], p = d.power_mW.map(function (_, i) { return [d.warming_C[i], d.neurons_recruited[i]]; });
+            return { css: COLOUR[c].css, width: c === pick ? 5 : 2.5, points: p, dots: p };
+          })
+        };
+      });
+      show(out);
+    });
+  }
+  if (D.recruitment) setupRecruitment(D.recruitment);
+
+  // ---------- Summary table ----------
+  (function () {
+    var t = D.tradeoff;
+    $("sum-colours").innerHTML = "<thead><tr><th>Colour</th><th>Volume lit per mW</th><th>Warming per mW</th></tr></thead><tbody>" +
+      t.colours.map(function (r) {
+        return "<tr><td>" + esc(r.name) + (+r.wavelength_nm >= 635 ? " (toy upper bound)" : "") + "</td><td>" + u(+r.volume_mm3_per_mW_at_3mWmm2, "mm\u00b3", 3) +
+          "</td><td>" + u(+r.peak_warming_C_per_mW, "\u00b0C", 2) + "</td></tr>";
+      }).join("") + "</tbody>";
+    $("sum-switches").innerHTML = "<thead><tr><th>Switch and light</th><th>Speed (toy)</th></tr></thead><tbody>" +
+      t.switches.map(function (r) {
+        return "<tr><td>" + esc(r.name) + ", " + r.wavelength_nm + NB + "nm</td><td>" + (+r.max_following_rate_Hz) + NB + "Hz" +
+          (/Chrimson/.test(r.name) ? "*" : "") + "</td></tr>";
+      }).join("") + "</tbody>";
+    $("sum-speed-note").textContent = "Speed = the last tested rate before the first failure (2 ms pulses at 3 mW/mm\u00b2, 20 pulses, squid-axon toy neuron). " +
+      "*A limit of the simplified stand-in: real ChrimsonR follows at least 20 Hz, comparable to ChR2(H134R) (Klapoetke et al. 2014).";
+    $("f-box").textContent = Math.round(D.model.heat_box_edge_mm);
+    $("f-hot").textContent = D.heat.hotter_than_stujenske[0] + " to " + D.heat.hotter_than_stujenske[1];
+  })();
+})();
+</script>
+</body>
+</html>

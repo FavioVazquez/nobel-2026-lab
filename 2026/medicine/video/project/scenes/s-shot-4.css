@@ -1,0 +1,12 @@
+.s-shot-4 { position: absolute; inset: 0; overflow: hidden; font-family: var(--font-body);
+  background: radial-gradient(55% 60% at 22% 70%, rgb(111 214 160 / .08), transparent 70%), var(--bg); }
+.s-shot-4 .s4-art { position: absolute; inset: 0; width: 100%; height: 100%; transform-origin: 40% 50%; }
+.s-shot-4 [data-in] { opacity: 0; }
+.s-shot-4 .s4-t-says { font: 500 38px var(--font-body); fill: var(--muted); letter-spacing: .01em; }
+.s-shot-4 .s4-t-big { font: 600 112px var(--font-display); letter-spacing: -.025em; fill: var(--fg); }
+.s-shot-4 .s4-acc { fill: #9af0bf; }
+.s-shot-4 .s4-t-cap { font: 600 28px var(--font-body); letter-spacing: .14em; text-transform: uppercase; fill: var(--accent); }
+.s-shot-4 .s4-t-row { font: 600 36px var(--font-body); fill: var(--fg); }
+.s-shot-4 .s4-t-note { font: 500 40px var(--font-body); fill: var(--fg); }
+.s-shot-4 .s4-t-note2 { font: 500 40px var(--font-display); font-style: italic; fill: #9af0bf; }
+.s-shot-4 .s4-t-fine { font: 400 28px var(--font-body); fill: var(--muted); }

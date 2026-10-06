@@ -1,0 +1,25 @@
+# Educational demo, toy model. Not research, not for lab or clinical use.
+# Neuron on axis, 0.5 or 1 mm below a 200 um / NA 0.22 fibre tip. 20 pulses per train.
+# following_score = fraction of pulses answered by exactly one spike (B's Hodgkin-Huxley neuron + photocycle).
+# warming_C_estimate = upper estimate of the peak rise at the hottest point for a long train (steady mean + one pulse).
+# Grid points with more than 30 mW/mm^2 at the neuron are not computed (B's fixed step is not accurate there).
+# Best = fastest rate that follows (>= 95 %, all slower rates too) within the limit.
+switch,wavelength_nm,ref_depth_mm,width_ms,rate_Hz,peak_mW,duty,irradiance_at_ref_mW_mm2,following_score,warming_C_estimate,follows_at_all_lower_rates,within_0.5C,within_1C,within_2C,limit_C,reaches_95
+ChR2 (Williams 2013),470,0.5,1,100,11.31,0.1,28.25,0.95,0.4844,True,True,True,True,0.5,True
+ChR2 (Williams 2013),470,0.5,1,150,11.31,0.15,28.25,1,0.7013,True,False,True,True,1,True
+ChR2 (Williams 2013),470,0.5,1,150,11.31,0.15,28.25,1,0.7013,True,False,True,True,2,True
+ChR2 (Williams 2013),470,1,2,40,11.31,0.08,2.915,1,0.4466,True,True,True,True,0.5,True
+ChR2 (Williams 2013),470,1,2,60,16,0.12,4.123,1,0.877,True,False,True,True,1,True
+ChR2 (Williams 2013),470,1,2,60,16,0.12,4.123,1,0.877,True,False,True,True,2,True
+Chronos (simplified),470,0.5,2,150,1,0.3,2.497,1,0.1238,True,True,True,True,0.5,True
+Chronos (simplified),470,0.5,2,150,1,0.3,2.497,1,0.1238,True,True,True,True,1,True
+Chronos (simplified),470,0.5,2,150,1,0.3,2.497,1,0.1238,True,True,True,True,2,True
+Chronos (simplified),470,1,2,60,8,0.12,2.061,1,0.4385,True,True,True,True,0.5,True
+Chronos (simplified),470,1,2,150,8,0.3,2.061,0.95,0.9906,True,False,True,True,1,True
+Chronos (simplified),470,1,2,150,11.31,0.3,2.915,1,1.401,True,False,False,True,2,True
+ChrimsonR (simplified),590,0.5,2,60,5.657,0.12,22.76,1,0.2066,True,True,True,True,0.5,True
+ChrimsonR (simplified),590,0.5,2,60,5.657,0.12,22.76,1,0.2066,True,True,True,True,1,True
+ChrimsonR (simplified),590,0.5,2,60,5.657,0.12,22.76,1,0.2066,True,True,True,True,2,True
+ChrimsonR (simplified),590,1,2,40,16,0.08,7.816,1,0.4175,True,True,True,True,0.5,True
+ChrimsonR (simplified),590,1,2,40,16,0.08,7.816,1,0.4175,True,True,True,True,1,True
+ChrimsonR (simplified),590,1,2,60,45.25,0.12,22.11,1,1.653,True,False,False,True,2,True

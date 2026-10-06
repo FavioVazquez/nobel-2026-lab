@@ -1,0 +1,17 @@
+# Educational demo, toy model. Pennes bioheat parameters for simulator/heat.py.
+# Source: Elwassif, Kong, Vazquez & Bikson 2006, "Bio-heat transfer model of deep brain
+#   stimulation-induced temperature changes", J. Neural Eng. 3:306, doi:10.1088/1741-2560/3/4/008,
+#   parameter list in Methods (read from a full-text copy, not the publisher PDF).
+#   These are among the sources Stujenske et al. 2015 (Cell Reports 12:525) cite for their
+#   Supplemental Table 1. Stujenske's exact chosen values were NOT verified by this build.
+# Arterial blood temperature 36.7 C and baseline brain 37 C appear in both Elwassif 2006 and
+#   Stujenske 2015 (Methods, eq. 8). We solve for the temperature RISE, so they cancel.
+key,value,unit,note
+k_brain,0.527,W/m/K,"default of the 0.45-0.6 range (Elwassif 2006 Table 1)"
+rho_brain,1040,kg/m^3,
+c_brain,3650,J/kg/K,
+rho_blood,1057,kg/m^3,
+c_blood,3600,J/kg/K,
+w_blood,0.008,1/s,"mid-point of the 0.004-0.012 ml/s/cm^3 range; our choice"
+w_blood_low,0.004,1/s,"range low end, used for the sensitivity band"
+w_blood_high,0.012,1/s,"range high end, used for the sensitivity band"
