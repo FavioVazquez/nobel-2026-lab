@@ -50,14 +50,14 @@
 .s-shot-5 .kp-pct1 { top: calc(var(--u) * 290); } .s-shot-5 .kp-pct2 { top: calc(var(--u) * 480); } .s-shot-5 .kp-pct3 { top: calc(var(--u) * 670); }
 .s-shot-5 .kp-barely { left: calc(var(--u) * 1236); top: calc(var(--u) * 566); font: 600 calc(var(--u) * 38)/1.2 'IBM Plex Sans', sans-serif; opacity: 0; }
 .s-shot-5 .kp-plab { left: calc(var(--u) * 172); top: calc(var(--u) * 622); font: 600 calc(var(--u) * 44)/1.2 'IBM Plex Sans', sans-serif; opacity: 0; }
-.s-shot-5 .kp-credit { left: calc(var(--u) * 172); top: calc(var(--u) * 862); font: 500 calc(var(--u) * 28)/1.25 'IBM Plex Mono', monospace;
+.s-shot-5 .kp-credit { left: calc(var(--u) * 68); top: calc(var(--u) * 160); font: 500 calc(var(--u) * 28)/1.25 'IBM Plex Mono', monospace;
   color: #59534a; opacity: 0; }
 .s-shot-5 .kp-chip { left: calc(var(--u) * 880); top: calc(var(--u) * 758); font: 600 calc(var(--u) * 50)/1.2 'Fraunces', serif;
   transform-origin: 50% 0; opacity: 0; }
 .s-shot-5 .kp-chip-b { font-weight: 700; color: #1c1a17; }
 .s-shot-5 .cp { opacity: 0; }
 .s-shot-5 .cp-ylab { left: calc(var(--u) * 296); top: calc(var(--u) * 520); transform: translate(-50%, -50%) rotate(-90deg); font-size: calc(var(--u) * 40); }
-.s-shot-5 .cp-xlab { left: calc(var(--u) * 830); top: calc(var(--u) * 842); transform: translateX(-50%); font-size: calc(var(--u) * 40); }
+.s-shot-5 .cp-xlab { left: calc(var(--u) * 1420); top: calc(var(--u) * 768); transform: translateX(-100%); font-size: calc(var(--u) * 36); }
 .s-shot-5 .cp-exp { left: calc(var(--u) * 1040); top: calc(var(--u) * 450); color: #59534a; font-size: calc(var(--u) * 36);
   transform: translate(-50%, -50%) rotate(-31.68deg); opacity: 0; }
 .s-shot-5 .cp-purer { left: calc(var(--u) * 1336); top: calc(var(--u) * 196); font: 700 calc(var(--u) * 46)/1.2 'Fraunces', serif;
