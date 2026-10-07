@@ -1,0 +1,28 @@
+{
+ "status": "fixture",
+ "soai_2003_pct": [
+  5e-05,
+  57,
+  99,
+  99.5
+ ],
+ "layer1": {
+  "ee0_0p01_ton1e4_pct": 61.8,
+  "ee0_0p5_pct": 99.0
+ },
+ "toy_rounds": {
+  "K": 1000,
+  "turnovers_per_round": 5,
+  "ee_pct": [
+   66,
+   94,
+   99
+  ]
+ },
+ "k4_fails": {
+  "turnovers_needed_to_57": 1700000.0
+ },
+ "layer3": {},
+ "notes": "one published toy model of several; the real mechanism is still debated",
+ "label": "placeholder for tests, not a result"
+}

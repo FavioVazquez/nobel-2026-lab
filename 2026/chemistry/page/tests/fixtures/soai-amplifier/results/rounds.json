@@ -1,0 +1,22 @@
+{
+ "status": "fixture",
+ "label": "placeholder for tests, not a result",
+ "rounds": [
+  {
+   "round": 0,
+   "ee_pct": 5e-05
+  },
+  {
+   "round": 1,
+   "ee_pct": 66
+  },
+  {
+   "round": 2,
+   "ee_pct": 94
+  },
+  {
+   "round": 3,
+   "ee_pct": 99
+  }
+ ]
+}

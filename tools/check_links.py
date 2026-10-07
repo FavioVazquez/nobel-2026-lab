@@ -35,6 +35,12 @@ SKIP_DIRS = {".git", ".venv", "node_modules", "__pycache__", "work"}
 # Remove an entry once the file is on main.
 PENDING = {
     "2026/medicine/simulator/README.md": "origin/b-simulator",
+    # Chemistry 2026: the stations are built on their own branches.
+    "2026/chemistry/kagan-curve/README.md": "chem-amp",
+    "2026/chemistry/soai-amplifier/README.md": "chem-amp",
+    "2026/chemistry/mirror-race/README.md": "chem-mirror",
+    "2026/chemistry/page/README.md": "chem-page",
+    "2026/chemistry/page/index.html": "chem-page",
 }
 
 # Phrases that must never appear in a public file (built from parts so this file does not trip itself).

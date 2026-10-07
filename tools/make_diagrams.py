@@ -111,7 +111,7 @@ def bg_rect(w, h, T, r=28):
 
 
 # ---------------------------------------------------------------- hero
-# One card per prize, side by side, and a quiet dashed slot for the prizes still to come.
+# One card per prize, side by side, and a quiet dashed slot for the prize still to come.
 # Colours only the banner uses live here, so the shared THEMES table stays as the diagrams use it.
 HERO_EXTRA = {
     "dark": dict(ice1="#13284A", ice2="#091629", ice_top="#26446F", sensor_off="#5D7299",
@@ -119,7 +119,7 @@ HERO_EXTRA = {
     "light": dict(ice1="#E4EEFB", ice2="#C9DAF1", ice_top="#F8FBFF", sensor_off="#8293B6",
                   neuron="#5A45C4", next_fill="#FFFFFF"),
 }
-CARD_W, CARD_H, WIN_H, NEXT_W, CARD_GAP = 290, 432, 308, 180, 20
+CARD_W, CARD_H, WIN_H, NEXT_W, CARD_GAP = 290, 432, 308, 160, 20
 
 
 def _hero_defs(T: dict, X: dict) -> str:
@@ -278,18 +278,41 @@ def _hero_arrow(x: float, y: float, ux: float, uy: float, size: float, col: str)
             f'{bx - uy * w:.1f},{by + ux * w:.1f}" fill="{col}"/>')
 
 
+def _card_chemistry(T: dict, X: dict) -> str:
+    """A left hand and its mirror image across a dashed mirror; above them, three molecules of one hand, one of the other."""
+    C = chem_theme(T)
+    cx = CARD_W / 2
+    s = '<g clip-path="url(#cardclip)">'
+    s += f'<rect width="{CARD_W}" height="{WIN_H}" fill="{C["bg"]}"/><rect width="{CARD_W}" height="{WIN_H}" fill="url(#ruled)"/>'
+    s += f'<line x1="22" y1="0" x2="22" y2="{WIN_H}" stroke="{ONE}" stroke-opacity=".28" stroke-width="2"/>'
+    # the mirror
+    s += f'<rect x="{cx - 4:g}" y="52" width="8" height="{WIN_H - 52}" fill="{C["mixed_soft"]}"/>'
+    s += (f'<line x1="{cx:g}" y1="52" x2="{cx:g}" y2="{WIN_H}" stroke="{C["muted"]}" stroke-width="3" '
+          f'stroke-dasharray="9 7"/>')
+    s += text(cx, 36, "mirror", 18, C["muted"], 700, "middle", 'letter-spacing="1"')
+    # one hand wins: many copies of it, one of its mirror image
+    hs, hx, hy = .74, 76, 286
+    s += "".join(token(cx - hx + dx, 94, 13, "one", C) for dx in (-34, 0, 34))
+    s += token(cx + hx, 94, 13, "mirror", C)
+    # the hands (the mirror one flipped, so its thumb points back at the mirror too)
+    s += f'<g transform="translate({cx - hx:g},{hy}) scale({hs:g})">' + _hand(C, "one") + '</g>'
+    s += f'<g transform="translate({cx + hx:g},{hy}) scale({-hs:g} {hs:g})">' + _hand(C, "mirror") + '</g>'
+    s += '</g>'
+    s += _hero_caption(T, "CHEMISTRY", C["one_text"], ("One hand wins:", "mirror molecules"))
+    return s
+
+
 def _card_next(T: dict, X: dict) -> str:
-    """A dashed slot: the prizes still to be announced join here."""
+    """A dashed slot: the prize still to be announced joins here."""
     cx = NEXT_W / 2
     s = (f'<rect x="1.25" y="1.25" width="{NEXT_W - 2.5}" height="{CARD_H - 2.5}" rx="21" fill="{X["next_fill"]}" '
          f'fill-opacity=".55" stroke="{T["dots"]}" stroke-opacity=".75" stroke-width="2.5" stroke-dasharray="10 9"/>')
-    s += (f'<circle cx="{cx:g}" cy="104" r="28" fill="none" stroke="{T["muted"]}" stroke-width="3"/>'
-          f'<path d="M{cx-12:g} 104 H{cx+12:g} M{cx:g} 92 V116" stroke="{T["muted"]}" stroke-width="3.5" stroke-linecap="round"/>')
-    s += text(cx, 178, "NEXT", 18, T["muted"], 800, "middle", 'letter-spacing="3"')
-    for y, prize, day in ((236, "Chemistry", "7 Oct"), (336, "Economics", "12 Oct")):
-        s += text(cx, y, prize, 25, T["text"], 700, "middle")
-        s += text(cx, y + 32, day, 21, T["muted"], 500, "middle")
-    s += f'<line x1="{cx-34:g}" y1="292" x2="{cx+34:g}" y2="292" stroke="{T["border"]}" stroke-width="2"/>'
+    s += (f'<circle cx="{cx:g}" cy="138" r="28" fill="none" stroke="{T["muted"]}" stroke-width="3"/>'
+          f'<path d="M{cx-12:g} 138 H{cx+12:g} M{cx:g} 126 V150" stroke="{T["muted"]}" stroke-width="3.5" stroke-linecap="round"/>')
+    s += text(cx, 212, "NEXT", 18, T["muted"], 800, "middle", 'letter-spacing="3"')
+    s += f'<line x1="{cx-30:g}" y1="236" x2="{cx+30:g}" y2="236" stroke="{T["border"]}" stroke-width="2"/>'
+    s += text(cx, 280, "Economics", 23, T["text"], 700, "middle")
+    s += text(cx, 312, "12 Oct", 21, T["muted"], 500, "middle")
     return s
 
 
@@ -314,17 +337,20 @@ def hero(name: str, T: dict, og: bool = False) -> str:
     X = HERO_EXTRA["dark" if T is THEMES["dark"] else "light"]
     if og:   # the 1200 x 630 share image: full bleed, everything clear of the outer 40 px
         W, H, rx = 1200, 630, 0
-        words = (64, 93, .78)
-        cards = (1200 - 64 - .68 * (2 * CARD_W + NEXT_W + 2 * CARD_GAP), (630 - .68 * CARD_H) / 2, .68)
+        ws, cs = .66, .62
+        words = (48, 315 - 285 * ws, ws)
+        cards = (1200 - 48 - cs * (3 * CARD_W + NEXT_W + 3 * CARD_GAP), (630 - cs * CARD_H) / 2, cs)
     else:
-        W, H, rx = 1600, 560, 30
+        W, H, rx = 736 + 3 * (CARD_W + CARD_GAP) + NEXT_W + 64, 560, 30
         words = (88, -6, 1.0)
         cards = (736, 64, 1.0)
     alt = ("Nobel 2026 Lab. Hands-on demos of this year’s Nobel Prizes, one card per prize. Medicine: a nerve cell "
            "lit by a pulse of blue light from the tip of an optical fibre, with a spike running down its axon. Physics: "
            "strings of light sensors hanging in dark ice, a particle track with a cone of blue Cherenkov light behind it, "
-           "and the sensors near the track lit up. A third, dashed slot holds the prizes still to come: Chemistry on "
-           "7 October and Economics on 12 October. Toy models, not research, not for lab or clinical use. Videos made "
+           "and the sensors near the track lit up. Chemistry: a left hand drawn solid orange and its mirror image, a right "
+           "hand drawn hatched teal, on either side of a dashed mirror line, with three small orange molecules above "
+           "the left hand and only one teal one above the right: one hand wins. A smaller dashed slot holds the prize still to come: Economics "
+           "on 12 October. Toy models, not research, not for lab or clinical use. Videos made "
            "with showtime, an open-source video studio for coding agents.")
     s = svg_open(W, H, "Nobel 2026 Lab: hands-on demos of this year’s Nobel Prizes", alt, T, extra_style=(
         ".pulse{animation:pulse 5s ease-in-out infinite}"
@@ -336,7 +362,7 @@ def hero(name: str, T: dict, og: bool = False) -> str:
         ".spk{stroke-dasharray:14 186;stroke-dashoffset:-40;animation:spk 5s linear infinite}"
         "@keyframes spk{0%{stroke-dashoffset:14}100%{stroke-dashoffset:-186}}"
     ))
-    s += _hero_defs(T, X)
+    s += _hero_defs(T, X) + chem_defs(chem_theme(T))
     s += f'<rect width="{W}" height="{H}" rx="{rx}" fill="url(#bg)"/><rect width="{W}" height="{H}" rx="{rx}" fill="url(#dots)"/>'
     if not og:
         s += f'<rect x="1.5" y="1.5" width="{W-3}" height="{H-3}" rx="{rx-1}" fill="none" stroke="{T["border"]}" stroke-width="3"/>'
@@ -346,7 +372,8 @@ def hero(name: str, T: dict, og: bool = False) -> str:
     s += f'<g transform="translate({cx0:g},{cy0:g}) scale({cs:g})">'
     s += _card_medicine(T, X)
     s += f'<g transform="translate({CARD_W + CARD_GAP},0)">' + _card_physics(T, X) + '</g>'
-    s += f'<g transform="translate({2 * (CARD_W + CARD_GAP)},0)">' + _card_next(T, X) + '</g>'
+    s += f'<g transform="translate({2 * (CARD_W + CARD_GAP)},0)">' + _card_chemistry(T, X) + '</g>'
+    s += f'<g transform="translate({3 * (CARD_W + CARD_GAP)},0)">' + _card_next(T, X) + '</g>'
     s += '</g>'
     s += SVG_CLOSE
     return s
@@ -952,6 +979,481 @@ def icecube_scale(name: str, T: dict) -> str:
     return s
 
 
+# ---------------------------------------------------------------- chemistry: its own look
+# A warm paper notebook in light, a night notebook in dark. One hand is always burnt orange and solid;
+# the mirror hand is always teal and hatched (so the two differ without colour too); mixed pairs are grey.
+ONE, MIRROR = "#c4622d", "#2b8a8f"
+CHEM = {
+    "light": dict(bg="#F6EFE2", panel="#FFFAF0", border="#D8C9AE", text="#2B2118", muted="#66563F",
+                  one_text="#A34B1C", mirror_text="#1B6A6E", mixed="#9B9283", mixed_soft="#ECE5D8",
+                  rule="#E6D9C2", stick="#8A7B66", ball="#FFFDF8", hatch_line="#FFFAF0", chip="#F1E7D6"),
+    "dark": dict(bg="#10141B", panel="#171D27", border="#323C4C", text="#EEE6D6", muted="#ABA394",
+                 one_text="#EC8A5A", mirror_text="#5FC0C5", mixed="#8A867F", mixed_soft="#252C37",
+                 rule="#1C2330", stick="#8C8577", ball="#F3ECDF", hatch_line="#10141B", chip="#202835"),
+}
+
+
+def chem_theme(T: dict) -> dict:
+    return CHEM["dark" if T is THEMES["dark"] else "light"]
+
+
+def chem_defs(C: dict) -> str:
+    """The hatch for the mirror hand, and the notebook ruling behind the panels."""
+    return (f'<defs>'
+            f'<pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">'
+            f'<rect width="9" height="9" fill="{MIRROR}"/>'
+            f'<line x1="1.5" y1="0" x2="1.5" y2="9" stroke="{C["hatch_line"]}" stroke-width="2.6" stroke-opacity=".7"/></pattern>'
+            f'<pattern id="ruled" width="32" height="32" patternUnits="userSpaceOnUse">'
+            f'<line x1="0" y1="31" x2="32" y2="31" stroke="{C["rule"]}" stroke-width="1.5"/></pattern>'
+            f'</defs>')
+
+
+def chem_bg(w: float, h: float, C: dict, r: int = 28) -> str:
+    return (f'<rect width="{w}" height="{h}" rx="{r}" fill="{C["bg"]}"/>'
+            f'<rect x="8" y="8" width="{w-16}" height="{h-16}" rx="{r-6}" fill="url(#ruled)"/>'
+            f'<line x1="22" y1="8" x2="22" y2="{h-8}" stroke="{ONE}" stroke-opacity=".28" stroke-width="2"/>'
+            f'<rect x="1.5" y="1.5" width="{w-3}" height="{h-3}" rx="{r-1}" fill="none" stroke="{C["border"]}" stroke-width="3"/>')
+
+
+def chem_panel(x: float, y: float, w: float, h: float, C: dict) -> str:
+    return f'<rect x="{x:g}" y="{y:g}" width="{w:g}" height="{h:g}" rx="20" fill="{C["panel"]}" stroke="{C["border"]}" stroke-width="2"/>'
+
+
+def hand_fill(hand: str) -> str:
+    return ONE if hand == "one" else ("url(#hatch)" if hand == "mirror" else "")
+
+
+def step_badge(x: float, y: float, num: str, C: dict) -> str:
+    return (f'<circle cx="{x:g}" cy="{y:g}" r="21" fill="{C["text"]}"/>'
+            + text(x, y + 8.5, num, 24, C["panel"], 800, "middle"))
+
+
+def chem_title(W: float, title: str, sub: str, C: dict) -> tuple[str, float]:
+    s = text(44, 78, title, 38, C["text"], 800)
+    sl = wrap(sub, 25, W - 88)
+    s += para(44, 118, sl, 25, C["muted"], 32, 500)
+    return s, 118 + (len(sl) - 1) * 32
+
+
+def chem_footer(W: float, y: float, lines: list[tuple[str, bool]], C: dict) -> tuple[str, float]:
+    s = ""
+    for body, strong in lines:
+        size = 21 if strong else 19
+        lh = 28 if strong else 26
+        ls = wrap(body, size, W - 88)
+        s += para(44, y, ls, size, C["text"] if strong else C["muted"], lh)
+        y += len(ls) * lh + 10
+    return s, y
+
+
+def token(x: float, y: float, r: float, hand: str, C: dict, grey: bool = False) -> str:
+    """A molecule with a hand: a ball with a knob on one side. Its mirror image has the knob on the other side."""
+    import math
+    ang = math.radians(-40 if hand == "one" else -140)
+    kx, ky = x + r * 0.95 * math.cos(ang), y + r * 0.95 * math.sin(ang)
+    fill = C["mixed"] if grey else hand_fill(hand)
+    edge = C["panel"]
+    return (f'<circle cx="{kx:.1f}" cy="{ky:.1f}" r="{r * .46:.1f}" fill="{fill}" stroke="{edge}" stroke-width="2"/>'
+            f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r:.1f}" fill="{fill}" stroke="{edge}" stroke-width="2"/>'
+            f'<circle cx="{kx:.1f}" cy="{ky:.1f}" r="{r * .46 - 1:.1f}" fill="{fill}"/>')
+
+
+def chem_arrow(x0: float, y0: float, x1: float, y1: float, col: str, w: float = 4) -> str:
+    import math
+    L = math.hypot(x1 - x0, y1 - y0)
+    ux, uy = (x1 - x0) / L, (y1 - y0) / L
+    return (f'<line x1="{x0:.1f}" y1="{y0:.1f}" x2="{x1 - ux * 10:.1f}" y2="{y1 - uy * 10:.1f}" stroke="{col}" '
+            f'stroke-width="{w}" stroke-linecap="round"/>' + arrowhead(x1, y1, ux, uy, 14, col))
+
+
+# ---------------------------------------------------------------- chemistry: mirror hands and alanine
+def _hand(C: dict, hand: str) -> str:
+    """A left hand seen from the back, fingers up, thumb on the right; origin at the wrist.
+
+    Every part is drawn without its own transform, so the mirror hand's hatching runs the same way across it."""
+    shapes = [
+        '<rect x="-27" y="-28" width="54" height="40" rx="12"/>',                      # wrist
+        '<rect x="-44" y="-110" width="88" height="96" rx="26"/>',                     # palm
+    ]
+    fingers = ((-32, -168), (-11, -192), (11, -200), (32, -184))                       # little to index finger
+    for cx, top in fingers:
+        shapes.append(f'<rect x="{cx - 10}" y="{top}" width="20" height="{-top - 80}" rx="10"/>')
+    body = "".join(shapes)
+    thumb = 'x1="30" y1="-34" x2="78" y2="-84"'
+    out = (f'<g fill="none" stroke="{C["text"]}" stroke-width="7" stroke-linejoin="round">{body}</g>'
+           f'<line {thumb} stroke="{C["text"]}" stroke-width="31" stroke-linecap="round"/>')
+    out += f'<g fill="{hand_fill(hand)}">{body}</g>'
+    out += f'<line {thumb} stroke="{hand_fill(hand)}" stroke-width="24" stroke-linecap="round"/>'
+    # fingernails do not show from the back; knuckles do: small arcs at the base of each finger
+    out += (f'<g stroke="{C["panel"]}" stroke-opacity=".7" stroke-width="3" stroke-linecap="round" fill="none">'
+            + "".join(f'<path d="M{cx - 6} -86 q6 -5 12 0"/>' for cx, _ in fingers) + '</g>')
+    return out
+
+
+ALA_PRIORITY = {"NH₂": 1, "COOH": 2, "CH₃": 3, "H": 4}
+
+
+def _alanine_vectors() -> dict[str, tuple[float, float, float]]:
+    """Unit bond vectors of L-alanine, (S)-2-aminopropanoic acid: x right, y up, z toward the viewer.
+
+    A regular tetrahedron with H up and leaning back, tilted so all four groups show; the three heavy
+    groups are placed so that the centre is S (checked with the sign of a triple product)."""
+    import math
+    t = math.radians(-24)
+    def tilt(v):
+        x, y, z = v
+        return (x, y * math.cos(t) - z * math.sin(t), y * math.sin(t) + z * math.cos(t))
+    h = tilt((0.0, 1.0, 0.0))
+    r = math.sqrt(8) / 3
+    pos = [tilt((r * math.sin(math.radians(a)), -1 / 3, r * math.cos(math.radians(a)))) for a in (75, 195, 315)]
+    # pos[0] right and to the front, pos[1] down and to the back, pos[2] left and to the front
+    v = {"H": h, "NH₂": pos[0], "COOH": pos[2], "CH₃": pos[1]}
+    def det(a, b, c):
+        return (a[0] * (b[1] * c[2] - b[2] * c[1]) - a[1] * (b[0] * c[2] - b[2] * c[0]) + a[2] * (b[0] * c[1] - b[1] * c[0]))
+    if det(v["NH₂"], v["COOH"], v["CH₃"]) < 0:        # R: swap two groups to make it S
+        v["NH₂"], v["COOH"] = v["COOH"], v["NH₂"]
+    assert det(v["NH₂"], v["COOH"], v["CH₃"]) > 0      # positive = S with these axes (checked on a Fischer projection)
+    return v
+
+
+def _molecule(cx: float, cy: float, C: dict, hand: str) -> str:
+    """Ball-and-stick alanine. hand='one' draws L-alanine; 'mirror' draws its mirror image, D-alanine."""
+    vec = _alanine_vectors()
+    sgn = 1 if hand == "one" else -1
+    Lb = 114
+    items = []
+    for name, (x, y, z) in vec.items():
+        px, py = cx + sgn * x * Lb, cy - y * Lb
+        base = 17 if name == "H" else 35
+        items.append((z, name, px, py, base * (1 + 0.16 * z)))
+    items.sort()
+    s = ""
+    def stick(px, py, front):
+        import math
+        L = math.hypot(px - cx, py - cy)
+        x0, y0 = (cx + (px - cx) / L * 22, cy + (py - cy) / L * 22) if front else (cx, cy)   # front sticks leave the C ball's surface
+        return (f'<line x1="{x0:.1f}" y1="{y0:.1f}" x2="{px:.1f}" y2="{py:.1f}" stroke="{C["text"]}" stroke-width="15" stroke-linecap="round"/>'
+                f'<line x1="{x0:.1f}" y1="{y0:.1f}" x2="{px:.1f}" y2="{py:.1f}" stroke="{C["stick"]}" stroke-width="9" stroke-linecap="round"/>')
+    def ball(name, px, py, r, back=False):
+        fill = C["mixed_soft"] if back else C["ball"]
+        b = (f'<circle cx="{px:.1f}" cy="{py:.1f}" r="{r:.1f}" fill="{fill}" stroke="{C["text"]}" stroke-width="3"/>')
+        size = 16 if name == "COOH" else (18 if name != "H" else 17)
+        return b + text(px, py + size * 0.36, name, size, C["text"] if back else "#2B2118", 800, "middle")
+    for z, name, px, py, r in items:
+        if z < 0:
+            s += stick(px, py, False) + ball(name, px, py, r, back=True)
+    s += (f'<circle cx="{cx:g}" cy="{cy:g}" r="27" fill="{hand_fill(hand)}" stroke="{C["text"]}" stroke-width="3"/>'
+          + text(cx, cy + 8, "C", 23, "#FFFFFF", 800, "middle", f'stroke="{C["text"]}" stroke-width="3" paint-order="stroke"'))
+    for z, name, px, py, r in items:
+        if z >= 0:
+            s += stick(px, py, True) + ball(name, px, py, r)
+    return s
+
+
+def mirror_hands(name: str, T: dict) -> str:
+    C = chem_theme(T)
+    W = 800
+    mx = 400
+    desc = ("Two hands and an amino acid, each next to its mirror image across a dashed mirror line. Top: a left hand, "
+            "drawn solid orange, and its mirror image, a right hand, drawn hatched teal. Bottom: a ball-and-stick model of "
+            "the amino acid alanine: a central carbon atom holding four different groups, a hydrogen atom (H), an amino "
+            "group (NH2), a carboxylic acid group (COOH) and a methyl group (CH3), in a tetrahedral shape. On the left is "
+            "L-alanine, the form found in the proteins of living things; on the right its mirror image, D-alanine. The two "
+            "have the same atoms joined the same way, but they cannot be laid on top of each other, like a left and a right "
+            "hand. Chemists call such molecules chiral, and the two forms enantiomers. Life uses one hand: the amino acids "
+            "in our proteins are the L form. Our own drawing, not to scale.")
+    s_title, ty = chem_title(W, "Mirror molecules", "Life uses one hand", C)
+    top = ty + 34
+    hand_y = top + 252
+    mol_top = hand_y + 92
+    mol_y = mol_top + 168
+    lab_y = mol_y + 152
+    foot_y = lab_y + 92
+    foot, end = chem_footer(W, foot_y, [
+        ("Same atoms, joined the same way, yet one cannot be laid on top of the other, like your two hands. "
+         "Chemists call such molecules chiral, and the two forms enantiomers.", True),
+        ("Like hands, amino acids come in two mirror forms, but only one is found in the proteins in your cells. "
+         "Source: the Nobel Committee’s popular science background, 2026. Our own drawing, not to scale.", False),
+    ], C)
+    H = end + 34
+    s = svg_open(W, H, "Mirror molecules: life uses one hand", desc, T)
+    s += chem_defs(C) + chem_bg(W, H, C) + s_title
+    s += chem_panel(36, top, W - 72, lab_y + 44 - top, C)
+    # the mirror
+    s += f'<rect x="{mx - 5}" y="{top + 54}" width="10" height="{lab_y - top - 60}" fill="{C["mixed_soft"]}"/>'
+    s += (f'<line x1="{mx}" y1="{top + 54}" x2="{mx}" y2="{lab_y + 6}" stroke="{C["muted"]}" stroke-width="3" '
+          f'stroke-dasharray="10 8"/>')
+    s += text(mx, top + 38, "mirror", 21, C["muted"], 700, "middle", 'letter-spacing="1"')
+    # hands
+    s += f'<g transform="translate({mx - 175},{hand_y})">' + _hand(C, "one") + '</g>'
+    s += f'<g transform="translate({mx + 175},{hand_y}) scale(-1 1)">' + _hand(C, "mirror") + '</g>'
+    s += text(mx - 175, hand_y + 50, "a left hand", 22, C["one_text"], 800, "middle")
+    s += text(mx + 175, hand_y + 50, "its mirror image: a right hand", 22, C["mirror_text"], 800, "middle")
+    s += f'<line x1="60" y1="{mol_top - 10}" x2="{W - 60}" y2="{mol_top - 10}" stroke="{C["rule"]}" stroke-width="2"/>'
+    # molecules
+    s += _molecule(mx - 180, mol_y, C, "one")
+    s += _molecule(mx + 180, mol_y, C, "mirror")
+    s += text(mx - 180, lab_y, "L-alanine", 26, C["one_text"], 800, "middle")
+    s += text(mx - 180, lab_y + 28, "the form in our proteins", 20, C["muted"], 600, "middle")
+    s += text(mx + 180, lab_y, "D-alanine", 26, C["mirror_text"], 800, "middle")
+    s += text(mx + 180, lab_y + 28, "its mirror image", 20, C["muted"], 600, "middle")
+    s += foot
+    s += SVG_CLOSE
+    return s
+
+
+# ---------------------------------------------------------------- chemistry: Kagan's bend
+def _pair(x: float, y: float, a: str, b: str, C: dict, grey: bool = False, faded: bool = False) -> str:
+    """A metal (M) holding two ligands, one on each side."""
+    op = ' opacity=".45"' if faded else ""
+    s = f'<g{op}>'
+    for dx, hand in ((-24, a), (24, b)):
+        fill = C["mixed"] if grey else hand_fill(hand)
+        s += f'<circle cx="{x + dx:g}" cy="{y:g}" r="15" fill="{fill}" stroke="{C["text"]}" stroke-width="2.5"/>'
+    s += f'<circle cx="{x:g}" cy="{y:g}" r="14" fill="{C["chip"]}" stroke="{C["text"]}" stroke-width="2.5"/>'
+    s += text(x, y + 6, "M", 16, C["text"], 800, "middle")
+    return s + '</g>'
+
+
+def _bar(x: float, y: float, w: float, h: float, frac_one: float, C: dict) -> str:
+    w1 = w * frac_one
+    return (f'<rect x="{x:g}" y="{y:g}" width="{w1:g}" height="{h:g}" fill="{ONE}"/>'
+            f'<rect x="{x + w1:g}" y="{y:g}" width="{w - w1:g}" height="{h:g}" fill="url(#hatch)"/>'
+            f'<rect x="{x:g}" y="{y:g}" width="{w:g}" height="{h:g}" rx="3" fill="none" stroke="{C["text"]}" stroke-width="2.5"/>')
+
+
+def kagan_bend(name: str, T: dict) -> str:
+    C = chem_theme(T)
+    W = 800
+    desc = ("Kagan's non-linear effect in three steps and a curve. Step 1: the chiral part of a catalyst, the ligand, is a "
+            "mix of 75 per cent one hand and 25 per cent the mirror hand, an excess (ee) of 50 per cent. Step 2: each metal "
+            "atom holds two ligands, which pair up by chance: 56 per cent one-hand pairs, 38 per cent mixed pairs and 6 per "
+            "cent mirror pairs. Step 3: the mixed pairs barely work and sit out, so the reaction is driven by the other two "
+            "in the ratio 56 to 6, which is 90 to 10: the product has an 80 per cent excess of one hand. A straight line "
+            "would have given 50 per cent. Below, a sketch of the curve, shape only: the product's ee against the ligand's ee, "
+            "with the straight line that chemists expected, the curve bulging above it (a positive non-linear effect, with "
+            "the example at 50 per cent in and 80 per cent out) and a curve that sags below it when the mixed pair works "
+            "faster (a negative effect). The numbers follow the worked example in the Nobel Committee's popular science "
+            "background. Our own drawing.")
+    s_title, ty = chem_title(W, "Kagan’s bend", "A catalyst made from a mix of both hands does not add up in a straight line", C)
+    px, pw = 36, W - 72
+    ill_w = 268                         # illustration column inside each step panel
+    tx = px + ill_w + 30                # text column
+    tw_ = px + pw - tx - 24
+    steps = [
+        ("1", "Mix the hands", "The chiral part of the catalyst, the ligand, is 75% one hand and 25% the mirror hand: an excess (ee) of 50%."),
+        ("2", "They pair up", "Each metal atom (M) holds two ligands, chosen by chance: 56% one-hand pairs, 38% mixed pairs, 6% mirror pairs."),
+        ("3", "Mixed pairs sit out", "The mixed pair barely works. The other two drive the reaction, 56 to 6, which is 90 to 10: an 80% excess of one hand."),
+    ]
+    y = ty + 36
+    s_body = ""
+    for i, (num, ttl, cap) in enumerate(steps):
+        cl = wrap(cap, 20, tw_)
+        h = max(176, 74 + len(cl) * 27 + 20)
+        s_body += chem_panel(px, y, pw, h, C)
+        s_body += step_badge(tx + 18, y + 40, num, C) + text(tx + 50, y + 49, ttl, 26, C["text"], 800)
+        s_body += para(tx, y + 88, cl, 20, C["muted"], 27)
+        cx, cy = px + 24 + ill_w / 2, y + h / 2
+        if i == 0:
+            k = 0
+            for r_ in range(4):
+                for c_ in range(5):
+                    hand = "one" if k < 15 else "mirror"
+                    s_body += (f'<circle cx="{cx - 88 + c_ * 44:g}" cy="{cy - 54 + r_ * 30:g}" r="12" fill="{hand_fill(hand)}" '
+                               f'stroke="{C["text"]}" stroke-width="2"/>')
+                    k += 1
+            s_body += text(cx, cy + 82, "75 : 25", 22, C["text"], 800, "middle")
+        if i == 1:
+            for k, (a, b, pct, lab) in enumerate((("one", "one", "56%", ""), ("one", "mirror", "38%", "mixed"),
+                                                   ("mirror", "mirror", "6%", ""))):
+                gx = cx - 86 + k * 86
+                s_body += _pair(gx, cy - 18, a, b, C)
+                s_body += text(gx, cy + 30, pct, 23, C["text"], 800, "middle")
+                if lab:
+                    s_body += text(gx, cy + 56, lab, 18, C["muted"], 700, "middle")
+        if i == 2:
+            s_body += _pair(cx - 86, cy - 44, "one", "one", C)
+            s_body += _pair(cx, cy - 44, "one", "mirror", C, grey=True, faded=True)
+            s_body += f'<line x1="{cx - 40}" y1="{cy - 70}" x2="{cx + 40}" y2="{cy - 18}" stroke="{C["muted"]}" stroke-width="3.5" stroke-linecap="round"/>'
+            s_body += _pair(cx + 86, cy - 44, "mirror", "mirror", C)
+            s_body += _bar(cx - 112, cy + 2, 224, 26, 0.9, C)
+            s_body += text(cx - 112, cy + 56, "90 : 10", 21, C["text"], 800)
+            s_body += text(cx + 112, cy + 56, "ee 80%", 21, C["one_text"], 800, "end")
+        y += h + 16
+    # the curve
+    ch_top = y
+    plot_x, plot_w, plot_h = px + 92, 360, 300
+    plot_y = ch_top + 70
+    ch_h = plot_h + 70 + 92
+    s_body += chem_panel(px, ch_top, pw, ch_h, C)
+    s_body += text(px + 28, ch_top + 46, "The curve", 26, C["text"], 800)
+    tagw = tw("shape only", 18, True) + 26
+    s_body += (f'<rect x="{px + 168}" y="{ch_top + 22}" width="{tagw:.0f}" height="32" rx="16" fill="{C["chip"]}" stroke="{C["border"]}" stroke-width="2"/>'
+               + text(px + 168 + tagw / 2, ch_top + 44, "shape only", 18, C["muted"], 800, "middle"))
+    X = lambda v: plot_x + v * plot_w
+    Y = lambda v: plot_y + plot_h - v * plot_h
+    s_body += (f'<rect x="{plot_x}" y="{plot_y}" width="{plot_w}" height="{plot_h}" fill="{C["bg"]}" fill-opacity=".55"/>'
+               f'<path d="M{plot_x} {plot_y} V{plot_y + plot_h} H{plot_x + plot_w}" fill="none" stroke="{C["text"]}" stroke-width="3"/>')
+    for v, lab in ((0, "0%"), (0.5, "50%"), (1, "100%")):
+        s_body += text(X(v), plot_y + plot_h + 28, lab, 18, C["muted"], 600, "middle")
+        s_body += text(plot_x - 10, Y(v) + 6, lab, 18, C["muted"], 600, "end")
+    s_body += text(X(0.5), plot_y + plot_h + 58, "lead of one hand in the ligand (ee)", 20, C["text"], 700, "middle")
+    s_body += text(plot_x - 62, Y(0.5), "lead in the product (ee)", 20, C["text"], 700, "middle",
+                   f'transform="rotate(-90 {plot_x - 62} {Y(0.5):g})"')
+    def curve(f):
+        pts = [(X(k / 60), Y(f(k / 60))) for k in range(61)]
+        return "M" + " L".join(f"{a:.1f} {b:.1f}" for a, b in pts)
+    # ML2 with chance pairing: beta = (1 - x^2) / (1 + x^2); ee = x (1 + beta) / (1 + g beta)
+    def ml2(g):
+        return lambda x: x * (1 + (1 - x * x) / (1 + x * x)) / (1 + g * (1 - x * x) / (1 + x * x))
+    s_body += f'<path d="{curve(ml2(2.5))}" fill="none" stroke="{C["mixed"]}" stroke-width="3.5" stroke-dasharray="2 7" stroke-linecap="round"/>'
+    s_body += f'<line x1="{X(0)}" y1="{Y(0)}" x2="{X(1)}" y2="{Y(1)}" stroke="{C["text"]}" stroke-width="3" stroke-dasharray="12 8"/>'
+    s_body += f'<path d="{curve(ml2(0))}" fill="none" stroke="{ONE}" stroke-width="5.5" stroke-linecap="round"/>'
+    s_body += f'<line x1="{X(.5)}" y1="{Y(.5)}" x2="{X(.5)}" y2="{Y(.8)}" stroke="{C["text"]}" stroke-width="2" stroke-dasharray="3 5"/>'
+    s_body += f'<circle cx="{X(.5)}" cy="{Y(.5)}" r="7" fill="{C["panel"]}" stroke="{C["muted"]}" stroke-width="3"/>'
+    s_body += f'<circle cx="{X(.5)}" cy="{Y(.8)}" r="9" fill="{ONE}" stroke="{C["panel"]}" stroke-width="3"/>'
+    # labels to the right of the plot
+    lx = plot_x + plot_w + 34
+    lw = px + pw - 22 - lx
+    def label(yy, col, title_, body):
+        out = text(lx, yy, title_, 21, col, 800)
+        bl = wrap(body, 18, lw)
+        out += para(lx, yy + 25, bl, 18, C["muted"], 24)
+        return out, yy + 25 + len(bl) * 24 + 16
+    o, ny = label(plot_y + 12, C["one_text"], "Kagan’s bend", "The mixed pair is slow: the product beats the straight line. Our example: 50% in, 80% out.")
+    s_body += o
+    o, ny = label(ny, C["text"], "Straight line", "What chemists expected: 50% in, 50% out.")
+    s_body += o
+    o, ny = label(ny, C["muted"], "Bend below", "If the mixed pair is faster, the curve sags under the line.")
+    s_body += o
+    y = ch_top + ch_h + 40
+    foot, end = chem_footer(W, y, [
+        ("Kagan reported this non-linear effect in 1986. Before that, chemists assumed that a ligand with a 50% "
+         "lead of one hand gives a product with a 50% lead.", True),
+        ("Simplified: the numbers follow the worked example in the Nobel Committee’s popular science background, "
+         "with the mixed pair doing nothing and the two same-hand pairs equally good. Our own drawing.", False),
+    ], C)
+    H = end + 34
+    s = svg_open(W, H, "Kagan’s bend: a mixed-hand catalyst beats a straight line", desc, T)
+    s += chem_defs(C) + chem_bg(W, H, C) + s_title + s_body + foot
+    s += SVG_CLOSE
+    return s
+
+
+# ---------------------------------------------------------------- chemistry: Soai's copier
+def soai_copier(name: str, T: dict) -> str:
+    import random
+    C = chem_theme(T)
+    W = 800
+    desc = ("How Soai's reaction copies one hand, and his group's 2003 numbers. Top, the copier: grey dots are a simple "
+            "ingredient with no hand; a molecule with one hand, solid orange, turns an ingredient into a new molecule of "
+            "its own hand, so 1 molecule becomes 2, and 2 become 4. Middle, a bar chart of the lead of one hand (ee) in "
+            "three runs in a row, Soai's group, 2003: the start, 0.00005 per cent, too small to draw (one hand ahead by "
+            "about one molecule in two million); after run 1, 57 per cent; after run 2, 99 per cent; after run 3, more "
+            "than 99.5 per cent. Bottom: with no head start at all, 37 runs: 19 gave one hand and 18 the other, with a "
+            "lead between 15 and 91 per cent, never one hand only; the hand was chosen at random. Why the reaction "
+            "amplifies the lead is still debated. The tokens are symbols, not real molecules. Our own drawing.")
+    s_title, ty = chem_title(W, "Soai’s copier", "A molecule that makes copies of its own hand", C)
+    px, pw = 36, W - 72
+    y = ty + 36
+    s_body = ""
+    # --- the copier: autocatalysis only (1 -> 2 -> 4); no claim about how the other hand is held back
+    mh = 330
+    s_body += chem_panel(px, y, pw, mh, C)
+    s_body += text(px + 28, y + 46, "Each copy makes another copy", 26, C["text"], 800)
+    s_body += para(px + 28, y + 76, wrap("A molecule of one hand turns a simple ingredient into a new molecule "
+                                         "of the same hand.", 19, pw - 56), 19, C["muted"], 25, 600)
+    def ingredient(x, yy):
+        return f'<circle cx="{x:g}" cy="{yy:g}" r="9" fill="{C["mixed"]}" stroke="{C["panel"]}" stroke-width="2"/>'
+    cy = y + 186
+    r_ = 17
+    # 1
+    gx1 = px + 70
+    s_body += token(gx1, cy, r_, "one", C)
+    s_body += text(px + 118, cy + 10, "+", 30, C["text"], 800, "middle")
+    s_body += ingredient(px + 148, cy)
+    s_body += chem_arrow(px + 172, cy, px + 226, cy, C["muted"])
+    # 2
+    gx2 = px + 262
+    s_body += token(gx2, cy - 22, r_, "one", C) + token(gx2, cy + 22, r_, "one", C)
+    s_body += text(px + 310, cy + 10, "+", 30, C["text"], 800, "middle")
+    s_body += ingredient(px + 340, cy - 16) + ingredient(px + 340, cy + 16)
+    s_body += chem_arrow(px + 364, cy, px + 418, cy, C["muted"])
+    # 4
+    gx4 = px + 476
+    for dx in (-22, 22):
+        for dy in (-22, 22):
+            s_body += token(gx4 + dx, cy + dy, r_, "one", C)
+    s_body += chem_arrow(px + 530, cy, px + 584, cy, C["muted"])
+    s_body += text(px + 600, cy + 9, "8, 16 …", 24, C["one_text"], 800)
+    for gx, n in ((gx1, "1"), (gx2, "2"), (gx4, "4")):
+        s_body += text(gx, cy + 70, n, 24, C["text"], 800, "middle")
+    # legend
+    ly = y + mh - 34
+    s_body += ingredient(px + 40, ly - 6) + text(px + 58, ly, "simple ingredient, no hand", 18, C["muted"], 700)
+    lx2 = px + 58 + tw("simple ingredient, no hand", 18, True) + 40
+    s_body += token(lx2, ly - 6, 11, "one", C) + text(lx2 + 20, ly, "molecule of one hand", 18, C["muted"], 700)
+    y += mh + 16
+    # --- the 2003 bars
+    bh_top = y
+    plot_x, plot_w, plot_h = px + 112, 520, 250
+    plot_y = bh_top + 136
+    bh = plot_h + 136 + 128
+    s_body += chem_panel(px, bh_top, pw, bh, C)
+    s_body += text(px + 28, bh_top + 46, "Three runs in a row", 26, C["text"], 800)
+    s_body += text(px + 28, bh_top + 74, "Soai’s group, 2003: the lead of one hand (ee) after each run", 19, C["muted"], 600)
+    Y = lambda v: plot_y + plot_h - v / 100 * plot_h
+    for v in (0, 50, 100):
+        s_body += f'<line x1="{plot_x}" y1="{Y(v):.1f}" x2="{plot_x + plot_w}" y2="{Y(v):.1f}" stroke="{C["rule"]}" stroke-width="2"/>'
+        s_body += text(plot_x - 12, Y(v) + 6, f"{v}%", 18, C["muted"], 600, "end")
+    bars = (("start", 0.00005, "0.00005%"), ("run 1", 57, "57%"), ("run 2", 99, "99%"), ("run 3", 99.5, ">99.5%"))
+    bw, gap = 66, (plot_w - 4 * 66) / 4
+    for k, (lab, v, vl) in enumerate(bars):
+        bx = plot_x + gap / 2 + k * (bw + gap)
+        if k == 0:
+            s_body += f'<rect x="{bx:.1f}" y="{Y(0) - 3:.1f}" width="{bw}" height="3" fill="{ONE}"/>'
+        else:
+            s_body += f'<rect x="{bx:.1f}" y="{Y(v):.1f}" width="{bw}" height="{Y(0) - Y(v):.1f}" rx="4" fill="{ONE}"/>'
+            s_body += text(bx + bw / 2, Y(v) - 10, vl, 20, C["text"], 800, "middle")
+        s_body += text(bx + bw / 2, Y(0) + 28, lab, 19, C["text"], 700, "middle")
+    s_body += f'<line x1="{plot_x}" y1="{Y(0)}" x2="{plot_x + plot_w}" y2="{Y(0)}" stroke="{C["text"]}" stroke-width="3"/>'
+    # the callout for the start bar, under the axis
+    b0 = plot_x + gap / 2 + bw / 2
+    cy_ = Y(0) + 70
+    s_body += f'<path d="M{b0:.1f} {Y(0) + 38:.1f} V{cy_ - 6:.1f}" stroke="{C["muted"]}" stroke-width="2" stroke-dasharray="3 4"/>'
+    s_body += f'<circle cx="{b0:.1f}" cy="{Y(0) - 3:.1f}" r="7" fill="none" stroke="{C["muted"]}" stroke-width="2"/>'
+    s_body += (f'<text x="{b0 - 30:.1f}" y="{cy_ + 14:.1f}" font-size="19" fill="{C["muted"]}" font-weight="600">'
+               f'<tspan fill="{C["one_text"]}" font-weight="800">Start, 0.00005%: too small to draw.</tspan></text>')
+    s_body += text(b0 - 30, cy_ + 40, "One hand was ahead by about 1 molecule in 2 million.", 19, C["muted"], 600)
+    y = bh_top + bh + 16
+    # --- no head start
+    nh_top = y
+    nh = 222
+    s_body += chem_panel(px, nh_top, pw, nh, C)
+    s_body += text(px + 28, nh_top + 46, "No head start at all", 26, C["text"], 800)
+    s_body += text(px + 28, nh_top + 74, "37 runs with nothing added to choose a hand", 19, C["muted"], 600)
+    runs = ["one"] * 19 + ["mirror"] * 18
+    random.Random(2003).shuffle(runs)
+    for k, hnd in enumerate(runs):
+        rx, ry = px + 46 + (k % 19) * 36.5, nh_top + 110 + (k // 19) * 40
+        s_body += token(rx, ry + 4, 11, hnd, C)
+    s_body += text(px + pw - 28, nh_top + 46, "19 one hand · 18 the other", 19, C["text"], 800, "end")
+    s_body += text(px + 28, nh_top + 196, "Each run ended between 15% and 91% ee: a lead, never one hand only.", 19, C["muted"], 700)
+    y = nh_top + nh + 40
+    foot, end = chem_footer(W, y, [
+        ("Each molecule makes more of its own hand. Copying alone does not explain why the lead grows; "
+         "how the reaction amplifies it is still debated.", True),
+        ("ee, the lead of one hand: % of one hand minus % of the other; 0% is an even mix, 100% is one hand only. "
+         "Numbers: Soai and co-workers, 2003, as given in the Nobel Committee’s scientific background. "
+         "The tokens are symbols, not real molecules. Our own drawing.", False),
+    ], C)
+    H = end + 34
+    s = svg_open(W, H, "Soai’s copier: a molecule that makes copies of its own hand", desc, T)
+    s += chem_defs(C) + chem_bg(W, H, C) + s_title + s_body + foot
+    s += SVG_CLOSE
+    return s
+
+
 # ---------------------------------------------------------------- station icons (work on light and dark pages)
 def icons() -> dict[str, str]:
     slate, blue, amber, teal, coral = "#64748B", "#3B82F6", "#F59E0B", "#14B8A6", "#F43F5E"
@@ -1023,6 +1525,40 @@ def icons() -> dict[str, str]:
         + "".join(f'<circle cx="{x}" cy="{y}" r="{rr}" fill="{c}"/>' for x, y, rr, c in (
             (27, 54, 3.5, blue), (69, 44, 3.5, blue), (51, 27, 3.5, blue), (44, 70, 3.5, blue),
             (62, 34, 4.5, teal), (34, 62, 4.5, teal), (33, 38, 6, amber), (62, 59, 6, amber), (48, 48, 9, coral))))
+    # chemistry: one hand burnt orange and solid, the mirror hand teal and hatched
+    hatch = (f'<defs><pattern id="h" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">'
+             f'<rect width="7" height="7" fill="{MIRROR}"/><line x1="1" y1="0" x2="1" y2="7" stroke="#FFFFFF" '
+             f'stroke-width="2" stroke-opacity=".6"/></pattern></defs>')
+    def blob(x, y, r, fill, side):
+        kx = x + side * r * 0.75
+        return (f'<circle cx="{kx:g}" cy="{y - r * 0.68:g}" r="{r * .5:g}" fill="{fill}"/>'
+                f'<circle cx="{x:g}" cy="{y:g}" r="{r:g}" fill="{fill}"/>')
+    out["station-mirror"] = wrap_icon("Icon: a molecule and its mirror image on either side of a dashed mirror line",
+        hatch + f'<line x1="48" y1="6" x2="48" y2="90" stroke="{slate}" stroke-width="4" stroke-dasharray="7 6" stroke-linecap="round"/>'
+        + f'<g stroke="{slate}" stroke-width="4" stroke-linecap="round"><line x1="26" y1="50" x2="12" y2="70"/><line x1="26" y1="50" x2="38" y2="68"/>'
+          f'<line x1="70" y1="50" x2="84" y2="70"/><line x1="70" y1="50" x2="58" y2="68"/></g>'
+        + blob(26, 46, 12, ONE, 1) + blob(70, 46, 12, "url(#h)", -1)
+        + f'<circle cx="12" cy="72" r="6" fill="{slate}"/><circle cx="38" cy="70" r="6" fill="{slate}"/>'
+          f'<circle cx="84" cy="72" r="6" fill="{slate}"/><circle cx="58" cy="70" r="6" fill="{slate}"/>')
+    pts = []
+    for k in range(25):
+        xx = k / 24
+        pts.append(f"{12 + xx * 72:.1f} {84 - 2 * xx / (1 + xx * xx) * 72:.1f}")
+    out["station-kagan"] = wrap_icon("Icon: a curve bulging above a straight dashed line",
+        f'<path d="M12 8 V84 H88" fill="none" stroke="{slate}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
+        f'<line x1="12" y1="84" x2="84" y2="12" stroke="{slate}" stroke-width="4" stroke-dasharray="6 6"/>'
+        f'<path d="M{" L".join(pts)}" fill="none" stroke="{ONE}" stroke-width="6" stroke-linecap="round"/>')
+    out["station-soai"] = wrap_icon("Icon: an orange molecule making two copies of itself",
+        blob(20, 52, 12, ONE, 1)
+        + f'<line x1="36" y1="50" x2="50" y2="50" stroke="{slate}" stroke-width="5" stroke-linecap="round"/>'
+          f'<polygon points="58,50 48,43 48,57" fill="{slate}"/>'
+        + blob(74, 30, 11, ONE, 1) + blob(74, 74, 11, ONE, 1))
+    out["station-race"] = wrap_icon("Icon: an orange dot and a hatched teal dot racing to a finish line, the orange one ahead",
+        hatch + f'<line x1="88" y1="8" x2="88" y2="88" stroke="{slate}" stroke-width="4" stroke-dasharray="6 5" stroke-linecap="round"/>'
+        + f'<g stroke="{slate}" stroke-width="4" stroke-linecap="round">'
+          f'<line x1="8" y1="26" x2="36" y2="26"/><line x1="16" y1="38" x2="40" y2="38"/>'
+          f'<line x1="8" y1="62" x2="20" y2="62"/><line x1="12" y1="74" x2="24" y2="74"/></g>'
+        + f'<circle cx="62" cy="32" r="16" fill="{ONE}"/><circle cx="40" cy="68" r="14" fill="url(#h)"/>')
     return out
 
 
@@ -1033,7 +1569,9 @@ def main() -> None:
     for variant, T in THEMES.items():
         for stem, fn in (("hero", hero), ("diagram-timeline", timeline),
                          ("diagram-light-gated-channel", channel), ("diagram-credit-map", credit),
-                         ("diagram-neutrino-telescope", telescope), ("diagram-icecube-scale", icecube_scale)):
+                         ("diagram-neutrino-telescope", telescope), ("diagram-icecube-scale", icecube_scale),
+                         ("diagram-mirror-hands", mirror_hands), ("diagram-kagan-bend", kagan_bend),
+                         ("diagram-soai-copier", soai_copier)):
             p = ASSETS / f"{stem}-{variant}.svg"
             p.write_text(fn(stem, T), encoding="utf-8")
             made.append(p)

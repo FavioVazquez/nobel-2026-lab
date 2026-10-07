@@ -1,0 +1,1065 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Mirror chemistry: guess first, then see (Kagan and Soai toy models)</title>
+<meta name="description" content="Guess first, then see: why a catalyst can give a product a bigger lead of one hand than its own, how a molecule copies its own hand, and how chance picks a winner in a mirror race. Toy models for the 2026 Nobel Prize in Chemistry. Educational demo, not research.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nobel 2026 Lab">
+<meta property="og:title" content="Mirror chemistry: guess first, then see">
+<meta property="og:description" content="Your hands are mirror images, and so are many molecules. Three guesses and three toy models for the 2026 Nobel Prize in Chemistry (Kagan and Soai). Educational demo, toy models. Not research.">
+<meta property="og:url" content="https://faviovazquez.github.io/nobel-2026-lab/2026/chemistry/page/">
+<meta property="og:image" content="https://faviovazquez.github.io/nobel-2026-lab/2026/chemistry/page/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A ball-and-stick molecule in burnt orange and its mirror image in hatched teal, drawn on graph paper like a lab notebook">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root {
+  --paper: #f5eedf; --card: #fbf7ee; --ink: #2b2620; --muted: #6a604f; --line: #d9ccb2; --grid: rgba(70, 105, 150, .10);
+  --margin: #e3a99c; --accent: #8f4319; --btn: #2b2620; --btn-fg: #fbf7ee;
+  --one: #c4622d; --one-ink: #a14d1f; --one-pale: #ecc3a8;
+  --mirror: #2b8a8f; --mirror-ink: #1f6f74; --mirror-bg: #d3ebec; --mirror-pale: #bfe0e2;
+  --mixed: #8d8780; --mixed-pale: #cfc9c0;
+  --pre-bg: #fde4d8; --pre-fg: #7a2a10; --pre-line: #e9a283;
+  --tag-bg: #fff6d9; --tag-fg: #5b4508; --tag-line: #e2c76d;
+  --ok: #2f6f3a; --bad: #9b3a1e; --focus: #c4622d;
+  --hand: "Noteworthy", "Bradley Hand", "Segoe Print", "Chalkboard SE", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1a1814; --card: #221f1a; --ink: #ece3cf; --muted: #ab9f89; --line: #3e372d; --grid: rgba(190, 210, 235, .055);
+    --margin: #6e3a31; --accent: #e8935f; --btn: #ece3cf; --btn-fg: #1a1814;
+    --one: #c4622d; --one-ink: #e8915f; --one-pale: #5a3220;
+    --mirror: #2b8a8f; --mirror-ink: #58b9be; --mirror-bg: #173d40; --mirror-pale: #1d4447;
+    --mixed: #8d8780; --mixed-pale: #4a4640;
+    --pre-bg: #3b1d12; --pre-fg: #ffc4ab; --pre-line: #7b3b22;
+    --tag-bg: #2f2812; --tag-fg: #f1da93; --tag-line: #6b5a1f;
+    --ok: #86cf93; --bad: #ff9f82; --focus: #e8935f;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; color: var(--ink); font: 17.5px/1.6 var(--serif);
+  background-color: var(--paper);
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 22px 22px; }
+main, header, footer { max-width: 47rem; margin: 0 auto; padding: 0 1rem; }
+a { color: var(--accent); text-underline-offset: .15em; }
+h1 { font-size: 2.1rem; line-height: 1.12; margin: .6rem 0 .5rem; letter-spacing: -.01em; }
+h1 .sub { display: block; font-family: var(--hand); font-weight: 400; font-size: 1.15rem; color: var(--one-ink); letter-spacing: 0; margin-top: .35rem; }
+h2 { font-size: 1.42rem; line-height: 1.22; margin: 0 0 .5rem; }
+h3 { font-size: 1.08rem; margin: 1.2rem 0 .3rem; }
+p { margin: .55rem 0; }
+.squiggle { display: block; max-width: 70%; height: auto; margin: -.2rem 0 .4rem; }
+.kicker { font-family: var(--hand); color: var(--muted); font-size: 1rem; margin: 1.2rem 0 0; }
+.banner { display: inline-block; background: var(--tag-bg); color: var(--tag-fg); border: 1.5px dashed var(--tag-line);
+  border-radius: 6px; padding: .35rem .75rem; font-weight: 700; margin-top: 1rem; font-size: .95rem; transform: rotate(-.6deg); }
+.prelim { background: var(--pre-bg); color: var(--pre-fg); border: 1.5px solid var(--pre-line); border-radius: 8px;
+  padding: .5rem .8rem; margin: .7rem 0 0; font-size: .95rem; }
+.prelim[hidden] { display: none; }
+.step { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 4px 14px 14px 4px;
+  padding: 1.1rem 1.15rem 1.2rem 1.6rem; margin: 1.6rem 0; box-shadow: 0 1px 0 var(--line), 0 10px 24px -18px rgba(60, 40, 10, .35); }
+.step::before { content: ""; position: absolute; left: .7rem; top: 0; bottom: 0; border-left: 2px solid var(--margin); opacity: .8; }
+.step-num { display: inline-block; font-family: var(--hand); font-size: 1rem; color: var(--one-ink); margin-bottom: .1rem; }
+fieldset { border: 0; padding: 0; margin: .7rem 0; min-width: 0; }
+legend { font-weight: 700; padding: 0; margin-bottom: .4rem; }
+.choices { display: flex; flex-wrap: wrap; gap: .5rem; }
+.choice { display: inline-flex; align-items: center; gap: .45rem; border: 1.5px solid var(--ink); border-radius: 18px 14px 16px 13px / 13px 16px 14px 18px;
+  padding: .38rem .85rem; cursor: pointer; background: var(--card); line-height: 1.3; }
+.choice:has(input:checked) { background: var(--ink); color: var(--card); }
+.choice input { margin: 0; accent-color: var(--one); }
+button { font: inherit; font-weight: 700; color: var(--btn-fg); background: var(--btn); border: 0; border-radius: 10px 8px 11px 9px;
+  padding: .55rem 1.05rem; cursor: pointer; margin-top: .45rem; }
+button.ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+button:disabled { opacity: .4; cursor: not-allowed; }
+.btns { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.seg { display: inline-flex; flex-wrap: wrap; border: 1.5px solid var(--ink); border-radius: 10px; overflow: hidden; margin: .4rem 0; }
+.seg button { margin: 0; border-radius: 0; background: transparent; color: var(--ink); font-weight: 600; padding: .35rem .75rem; font-size: .95rem; }
+.seg button[aria-pressed=true] { background: var(--ink); color: var(--card); }
+.hint { color: var(--muted); font-size: .93rem; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.reveal { border-top: 1.5px dashed var(--line); margin-top: 1rem; padding-top: .8rem; }
+.reveal[hidden] { display: none; }
+.reveal:focus { outline: none; }
+.verdict { font-size: 1.1rem; font-weight: 700; }
+.ok { color: var(--ok); } .bad { color: var(--bad); }
+.big { font-size: 1.6rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.toy { font-family: var(--hand); font-style: normal; color: var(--muted); white-space: nowrap; }
+.real { font-family: var(--hand); color: var(--one-ink); white-space: nowrap; }
+.caveat { border-left: 3px solid var(--tag-line); background: color-mix(in srgb, var(--tag-bg) 55%, transparent);
+  padding: .4rem .75rem; margin: .7rem 0; font-size: .95rem; }
+.caveat b { color: var(--tag-fg); }
+.note { font-family: var(--hand); color: var(--muted); font-size: 1rem; }
+.tag { display: inline-block; font: 700 .76rem/1.5 system-ui, sans-serif; padding: 0 .45rem; border-radius: 999px; vertical-align: .12em;
+  border: 1px solid var(--pre-line); color: var(--pre-fg); background: var(--pre-bg); white-space: nowrap; }
+.chart { margin: .6rem 0 .2rem; width: 100%; min-width: 0; }
+.chart svg { display: block; max-width: 100%; overflow: visible; }
+svg text { fill: var(--muted); font-size: 13px; font-family: var(--serif); }
+svg .lbl { fill: var(--ink); font-size: 13.5px; }
+svg .hand { font-family: var(--hand); font-size: 14px; }
+svg .num { fill: var(--ink); font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums; }
+svg .grid { stroke: var(--line); stroke-width: 1; }
+svg .axis { stroke: var(--ink); stroke-width: 1.4; fill: none; }
+svg .ink { stroke: var(--ink); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.legend { display: flex; flex-wrap: wrap; gap: .3rem 1.1rem; list-style: none; padding: 0; margin: .3rem 0; font-size: .93rem; }
+.legend li { display: inline-flex; align-items: center; gap: .4rem; }
+.sw { width: 1.05rem; height: 1.05rem; border-radius: 3px; display: inline-block; border: 1.5px solid var(--ink); flex: none; }
+.sw.one { background: var(--one); }
+.sw.mirror { background: repeating-linear-gradient(45deg, var(--mirror) 0 2.5px, var(--mirror-bg) 2.5px 5px); }
+.sw.mixed { background: var(--mixed); }
+.sw.dot { border-radius: 50%; width: .8rem; height: .8rem; }
+.sw.ring { border-radius: 50%; width: .8rem; height: .8rem; background: transparent; border: 2px solid var(--mirror); }
+.sw.free { border-radius: 50%; width: .45rem; height: .45rem; background: var(--muted); border: 0; opacity: .6; }
+.ctl { margin: .7rem 0; }
+.ctl label { font-weight: 700; display: block; }
+.ctl .row { display: flex; align-items: center; gap: .7rem; }
+.ctl input[type=range] { flex: 1; min-width: 0; accent-color: var(--one); height: 2rem; }
+.ctl output { min-width: 6.4rem; text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+.readout { font-size: 1.04rem; background: var(--paper); border: 1.5px solid var(--line); border-radius: 8px; padding: .5rem .75rem; margin: .5rem 0; }
+.readout strong { font-variant-numeric: tabular-nums; }
+.panels { display: grid; grid-template-columns: repeat(auto-fit, minmax(132px, 1fr)); gap: .8rem; margin: .6rem 0; }
+.panel { text-align: center; }
+.panel svg { width: 100%; max-width: 210px; height: auto; display: block; margin: 0 auto; overflow: visible; }
+.panel p { font-size: .95rem; margin: .2rem 0; }
+.panel .arrow { font-family: var(--hand); color: var(--muted); }
+canvas { display: block; width: 100%; touch-action: none; }
+.viewer { position: relative; margin: .6rem 0; border: 1.5px solid var(--line); border-radius: 10px; background: var(--paper); }
+.viewer canvas { cursor: grab; }
+.viewer canvas:active { cursor: grabbing; }
+.racebox { border: 1.5px solid var(--line); border-radius: 10px; background: var(--paper); padding: .4rem; margin: .6rem 0; }
+.result { font-weight: 700; min-height: 1.6em; }
+.coin { display: grid; grid-template-columns: minmax(0, 1fr); gap: .7rem; margin: .6rem 0; }
+.coin .row { display: grid; grid-template-columns: minmax(0, 1fr); gap: .15rem; }
+.coin .bar { display: flex; height: 1.5rem; border: 1.5px solid var(--ink); border-radius: 5px; overflow: hidden; }
+.coin .bar span { display: flex; align-items: center; padding: 0 .4rem; font: 700 .85rem/1 system-ui, sans-serif; white-space: nowrap; min-width: 0; overflow: hidden; }
+.coin .bar .o { background: var(--one); color: #fff; }
+.coin .bar .m { background: repeating-linear-gradient(45deg, var(--mirror) 0 3px, var(--mirror-bg) 3px 6px); color: var(--ink); justify-content: flex-end; }
+.coin .bar .m b { background: var(--card); padding: 0 .25rem; border-radius: 3px; }
+.coin .who { font-size: .95rem; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: .8rem; margin: .8rem 0; }
+.card { display: block; border: 1.5px solid var(--ink); border-radius: 12px 9px 13px 10px; padding: .7rem .8rem; text-decoration: none; color: inherit; background: var(--card); }
+.card:hover { box-shadow: 3px 3px 0 var(--ink); }
+.card svg { width: 56px; height: 56px; display: block; margin-bottom: .2rem; }
+.card b { display: block; }
+.card span { font-size: .93rem; color: var(--muted); }
+.card .go { color: var(--accent); font-weight: 700; text-decoration: underline; font-size: .93rem; }
+.lead { font-size: 1.07rem; }
+figure { margin: 0; }
+figcaption { font-size: .93rem; color: var(--muted); }
+footer { color: var(--muted); font-size: .93rem; padding-bottom: 2.4rem; }
+footer h2 { color: var(--ink); font-size: 1.15rem; margin-top: 1.6rem; }
+footer ul { padding-left: 1.1rem; }
+footer li { margin: .25rem 0; }
+.made { font-family: var(--hand); font-size: 1.05rem; }
+@media (max-width: 420px) {
+  body { font-size: 16.5px; }
+  h1 { font-size: 1.7rem; }
+  .step { padding: .9rem .8rem 1rem 1.25rem; }
+  .step::before { left: .5rem; }
+  .ctl output { min-width: 5.2rem; }
+  .seg { display: grid; grid-template-columns: 1fr 1fr; }
+  .seg button { border-bottom: 1px solid var(--line); }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+/* share-image layout: index.html#og, 1200 x 630 */
+#og { display: none; }
+html.og body > :not(#og):not(script):not(svg) { display: none; }
+html.og body { background-size: 30px 30px; }
+html.og #og { display: grid; grid-template-columns: 600px 1fr; gap: 20px; width: 1200px; height: 630px; padding: 52px 40px 40px 64px; overflow: hidden; align-items: center; }
+html.og #og .og-kicker { font-family: var(--hand); font-size: 28px; color: var(--one-ink); margin: 0 0 10px; }
+html.og #og h1 { font-size: 64px; line-height: 1.04; margin: 0 0 22px; }
+html.og #og p { font-size: 27px; line-height: 1.35; margin: 0 0 22px; }
+html.og #og .banner { font-size: 21px; margin: 0; }
+html.og #og canvas { width: 500px; height: 520px; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="ink" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.8"/>
+    </filter>
+    <pattern id="hatch" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(45)">
+      <rect width="7" height="7" style="fill: var(--mirror-bg)"/>
+      <line x1="1.5" y1="0" x2="1.5" y2="7" style="stroke: var(--mirror); stroke-width: 3.2"/>
+    </pattern>
+  </defs>
+</svg>
+
+<header>
+  <p class="banner" role="note">Educational demo, toy models. Not research.</p>
+  <p class="prelim" id="prelim" role="note" hidden></p>
+  <p class="kicker">Nobel Prize in Chemistry 2026 &middot; notebook page</p>
+  <h1>Mirror chemistry: guess first, then see<span class="sub">how a reaction can pick one hand</span></h1>
+  <svg class="squiggle" viewBox="0 0 300 14" width="300" height="14" aria-hidden="true" focusable="false"><path d="M3 9 C 40 2, 70 13, 110 7 S 180 3, 220 8 S 275 11, 297 5" fill="none" stroke="#c4622d" stroke-width="3" stroke-linecap="round" filter="url(#ink)"/></svg>
+  <p class="lead">The 2026 Nobel Prize in Chemistry went to Henri B. Kagan and Kenso Soai <q id="citation"></q>.
+    Many molecules come in two mirror-image forms, like your left and right hands. This page shows you one pair, then asks
+    three questions about them. Make a guess first, then reveal the answer. Some answers are real measurements; the rest come from
+    small toy models, and each number says which it is.</p>
+</header>
+
+<main>
+<!-- Step 0 -->
+<section class="step" id="step0" aria-labelledby="s0-title">
+  <span class="step-num">Start here</span>
+  <h2 id="s0-title">Your hands are mirror images</h2>
+  <p>Hold your hands palm to palm: they match. Now lay one on top of the other, both palms down: the thumbs point
+    opposite ways. No turn makes them fit. Many molecules are like that. Below is one, alanine (a building block of
+    proteins), and its mirror image. Drag to turn them.</p>
+  <figure class="viewer">
+    <canvas id="mol" role="img" aria-label="Two ball-and-stick models of alanine: one hand on the left in solid orange and its mirror image on the right in hatched teal, either side of a dashed mirror line. Drag to rotate both."></canvas>
+  </figure>
+  <ul class="legend" aria-label="Key">
+    <li><span class="sw one"></span>one hand (solid)</li>
+    <li><span class="sw mirror"></span>mirror hand (hatched)</li>
+  </ul>
+  <div class="btns"><button type="button" id="s0-stack">Try to stack them</button>
+    <span class="hint" id="s0-hint">Drag either molecule to turn both.</span></div>
+  <p id="s0-out" class="readout" aria-live="polite" hidden></p>
+  <p class="hint">Structures: PubChem (NCBI), compounds <span id="s0-cids"></span>, public domain. Letters on the balls: C carbon,
+    N nitrogen, O oxygen; small balls are hydrogen.</p>
+</section>
+
+<!-- Step 1 -->
+<section class="step" id="step1" aria-labelledby="s1-title">
+  <span class="step-num">Question 1 of 3 &middot; Kagan's bend</span>
+  <h2 id="s1-title">A catalyst that is 75% one hand and 25% the mirror hand: how big is the product's lead of one hand?</h2>
+  <p>A catalyst speeds up a reaction without being used up. A handed catalyst makes more of one hand of the product.
+    Chemists measure the lead of one hand as the <em>excess</em> (ee, enantiomeric excess): 75 to 25 is an excess of 50% (75 minus 25).
+    A catalyst that is all one hand gives a product with some best excess; call that 100% here.</p>
+  <fieldset>
+    <legend>Your guess: the product's excess of one hand</legend>
+    <div class="choices" id="s1-choices"></div>
+  </fieldset>
+  <button type="button" id="s1-go" disabled>Reveal the answer</button>
+  <p class="hint" id="s1-hint">Pick one first.</p>
+  <div class="reveal" id="s1-out" hidden tabindex="-1" aria-live="polite"></div>
+</section>
+
+<!-- Step 2 -->
+<section class="step" id="step2" aria-labelledby="s2-title">
+  <span class="step-num">Question 2 of 3 &middot; a molecule that copies its own hand</span>
+  <h2 id="s2-title">Start with a head start of five parts in ten million. After three runs, how much of one hand?</h2>
+  <p>In 1995 Kenso Soai's group showed a reaction whose product is the catalyst for making more of itself, copies its
+    own hand, and pulls further ahead each time (his first self-copying reaction, in 1990, lost its lead instead). In 2003 they started it with an almost even mix: an excess of one hand of only 0.00005%, prepared on
+    purpose. That is five parts in ten million. Each run's product was the start of the next run.</p>
+  <fieldset>
+    <legend>Your guess: the excess of one hand after three runs</legend>
+    <div class="choices" id="s2-choices"></div>
+  </fieldset>
+  <button type="button" id="s2-go" disabled>Reveal the answer</button>
+  <p class="hint" id="s2-hint">Pick one first.</p>
+  <div class="reveal" id="s2-out" hidden tabindex="-1" aria-live="polite"></div>
+</section>
+
+<!-- Step 3 -->
+<section class="step" id="step3" aria-labelledby="s3-title">
+  <span class="step-num">Question 3 of 3 &middot; the mirror race</span>
+  <h2 id="s3-title">Start perfectly balanced. Run it 1,000 times. What do you get?</h2>
+  <p>Now take a toy reaction that starts with no handed molecules at all. Plain molecules slowly turn into one hand or
+    the mirror hand at the same rate. Each handed molecule copies its own hand. And when a molecule meets its mirror image,
+    the two lock into an idle mixed pair (chemists call this mutual antagonism). Nothing favours either hand.</p>
+  <fieldset>
+    <legend>Your guess: over 1,000 runs, you get&hellip;</legend>
+    <div class="choices" id="s3-choices"></div>
+  </fieldset>
+  <button type="button" id="s3-go" disabled>Reveal the answer</button>
+  <p class="hint" id="s3-hint">Pick one first.</p>
+  <div class="reveal" id="s3-out" hidden tabindex="-1" aria-live="polite"></div>
+</section>
+
+<!-- Step 4 -->
+<section class="step" id="step4" aria-labelledby="s4-title">
+  <span class="step-num">Why it matters</span>
+  <h2 id="s4-title">Medicines, and a very old question</h2>
+  <p>Many medicines come in two mirror forms. The Nobel Committee's popular explanation says one form can have the
+    effect you want, while the mirror form <q>can cause unnecessary and sometimes harmful side effects</q>. So chemists
+    need reactions that make one hand on purpose, and Kagan's non-linear effects help them understand and tune those
+    reactions.</p>
+  <p>Life itself is one-handed: your proteins use one hand of each amino acid. How that began is still open.
+    Soai's reaction shows that a flask can pick a hand by chance and keep it, but the Committee is clear that this kind of
+    model <q>is not an answer to the origin of biological homochirality</q>.</p>
+  <h3>Look inside</h3>
+  <div class="cards" id="cards"></div>
+</section>
+</main>
+
+<footer>
+  <h2>Sources</h2>
+  <ul id="sources"></ul>
+  <p>Every number on this page is read from <code>data.js</code>, which <code>build_data.py</code> writes from the three
+    experiments' results. Toy-model numbers are in dimensionless model units and say <em>our toy model, trend only</em>.
+    The drawings are our own.</p>
+  <p class="made">Made with <a href="https://github.com/FavioVazquez/showtime">showtime</a>, an open-source tool for
+    making videos and pages like this one, on one computer. Part of
+    <a href="https://faviovazquez.github.io/nobel-2026-lab/">nobel-2026-lab</a>. MIT licence.</p>
+</footer>
+
+<div id="og" aria-hidden="true">
+  <div>
+    <p class="og-kicker">Nobel Prize in Chemistry 2026 &middot; Kagan and Soai</p>
+    <h1>Mirror chemistry: guess first, then see</h1>
+    <p>Your hands are mirror images, and so are many molecules. How does a reaction pick one hand? Three guesses, three toy models.</p>
+    <p class="banner">Educational demo, toy models. Not research.</p>
+  </div>
+  <canvas id="og-mol" width="500" height="520"></canvas>
+</div>
+
+<script src="data.js"></script>
+<script>
+"use strict";
+const D = window.NOBEL_CHEM_DATA || { inputs: {}, preliminary: true };
+const $ = (s) => document.querySelector(s);
+const NS = "http://www.w3.org/2000/svg";
+const REDUCED = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+const OG = location.hash === "#og";
+if (OG) document.documentElement.classList.add("og");
+const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const nb = (s) => s.replace(/ /g, "\u00a0");
+const TOY = '<span class="toy">our toy model, trend only</span>';
+const REAL = '<span class="real">real measurement</span>';
+function pct(x, d) { // x in percent
+  if (x == null || !isFinite(x)) return "?";
+  if (d == null) d = Math.abs(x) >= 10 ? 0 : Math.abs(x) >= 1 ? 1 : 2;
+  return nb(Number(x).toLocaleString("en-US", { maximumFractionDigits: d, minimumFractionDigits: 0 }) + "%");
+}
+const int = (x) => Number(x).toLocaleString("en-US");
+function tpct(x) { // toy numbers near 100%: two decimals, never rounded up to a "pure" 100%
+  if (x >= 99) { const r = Math.round(x * 100) / 100; return r >= 100 - 0.01 ? nb("more than 99.9%") : nb(r.toFixed(2) + "%"); }
+  return pct(x);
+}
+function eepct(x) { // a curve's ee in percent: exactly 100 only when it is 100; near 100 never rounded up
+  return x >= 100 - 1e-9 ? pct(100) : x >= 99 ? tpct(x) : pct(x, x >= 10 ? 0 : 1);
+}
+function tagFor(key) {
+  const s = (D.inputs || {})[key];
+  if (!s || s === "final") return "";
+  return ` <span class="tag">${s === "fixture" ? "placeholder" : s === "missing" ? "missing" : "preliminary"}</span>`;
+}
+function el(tag, attrs = {}, parent, text) {
+  const e = document.createElementNS(NS, tag);
+  for (const [k, v] of Object.entries(attrs)) if (v != null) e.setAttribute(k, v);
+  if (text != null) e.textContent = text;
+  if (parent) parent.appendChild(e);
+  return e;
+}
+function svgIn(box, h, title, desc, w) {
+  box.textContent = "";
+  w = w || Math.max(280, Math.round(box.clientWidth || 600));
+  const s = el("svg", { viewBox: `0 0 ${w} ${h}`, width: w, height: h, role: "img" }, box);
+  el("title", {}, s, title); el("desc", {}, s, desc);
+  return [s, w];
+}
+const onResize = [];
+let rsT; window.addEventListener("resize", () => { clearTimeout(rsT); rsT = setTimeout(() => onResize.forEach((f) => f()), 120); });
+
+// ---------- preliminary box and citation ----------
+$("#citation").textContent = "for the discovery of non-linear effects and autocatalysis in asymmetric organic synthesis";
+(function prelim() {
+  const names = { mirror_race: "the mirror race", kagan_curve: "Kagan's curve", soai_amplifier: "Soai's amplifier" };
+  const bad = Object.entries(D.inputs || {}).filter(([, s]) => s !== "final");
+  if (!D.preliminary && !bad.length) return;
+  const box = $("#prelim");
+  box.hidden = false;
+  box.textContent = "Preliminary: " + (bad.length ? bad.map(([k, s]) => `${names[k] || k} (${s === "fixture" ? "placeholder numbers, not results" : s})`).join(", ") : "some inputs")
+    + ". Numbers marked with a tag may still change.";
+})();
+
+// ---------- guess helpers ----------
+function makeChoices(n, opts) {
+  const box = $(`#s${n}-choices`);
+  opts.forEach(([value, label]) => {
+    const l = document.createElement("label"); l.className = "choice";
+    const i = document.createElement("input"); i.type = "radio"; i.name = `s${n}`; i.value = value;
+    l.append(i, document.createTextNode(label)); box.appendChild(l);
+  });
+  box.addEventListener("change", () => { $(`#s${n}-go`).disabled = false; $(`#s${n}-hint`).textContent = "Ready when you are."; });
+}
+const picked = (n) => { const i = document.querySelector(`input[name="s${n}"]:checked`); return i ? i.value : null; };
+const labelOf = (n, v) => { const i = document.querySelector(`input[name="s${n}"][value="${v}"]`); return i ? i.parentElement.textContent.trim() : v; };
+function verdict(n, right, msgRight, msgWrong) {
+  const g = labelOf(n, picked(n));
+  return `<p class="verdict ${right ? "ok" : "bad"}">You picked ${g}. ${right ? msgRight : msgWrong}</p>`;
+}
+function openReveal(n, html, after) {
+  const out = $(`#s${n}-out`);
+  out.innerHTML = html; out.hidden = false;
+  $(`#s${n}-go`).textContent = "Reveal again";
+  if (after) after();
+  out.focus({ preventScroll: true });
+}
+
+// ---------- Kagan adapter: kagan.js from ../kagan-curve (inlined by build_data.py), else the same closed form ----------
+const KG = (function () {
+  const K = window.NOBEL_CHEM_KAGAN || {};
+  const builtin = {
+    shares(eeL, k) {
+      const z = Math.abs(k - 4) < 1e-12 ? (1 - eeL * eeL) / 2 : (-k + Math.sqrt(k * (4 * (1 - eeL * eeL) + k * eeL * eeL))) / (4 - k);
+      return { one: (1 - z + eeL) / 2, mixed: z, mirror: (1 - z - eeL) / 2 };
+    },
+    ee(eeL, k, g) { const z = builtin.shares(eeL, k).mixed, b = z / (1 - z); return eeL * (1 + b) / (1 + g * b); },
+  };
+  const f = K.eeProd || K.ee_prod || K.eeProduct || K.productEe;
+  const s = K.complexes || K.catalystShares || K.shares || K.complexShares || K.speciation;
+  const normShares = (r) => {
+    if (Array.isArray(r)) return { one: r[0], mixed: r[1], mirror: r[2] };
+    const g = (re) => { for (const k in r) if (re.test(k)) return r[k]; return null; };
+    return { one: g(/one|homo_?1|^x$|same_one|RR|LL/i), mixed: g(/mix|hetero|meso|^z$/i), mirror: g(/mirror|homo_?2|^y$|same_mirror|SS|DD/i) };
+  };
+  return {
+    source: f ? "kagan.js" : "built-in",
+    ee: f ? (eeL, k, g) => f(eeL, k, g, 1) : builtin.ee,
+    shares: s ? (eeL, k) => normShares(s(eeL, k)) : builtin.shares,
+  };
+})();
+
+// ================= Step 0: the mirror molecules =================
+const MOLV = (function () {
+  const M = D.molecules || {};
+  if (!M.one || !M.mirror) return null;
+  const mk = (m) => ({ m, P: m.atoms.map((a) => [a[1], a[2], a[3]]), E: m.atoms.map((a) => a[0]) });
+  const L = mk(M.one), R = mk(M.mirror);
+  const mul = (A, B) => A.map((r) => [0, 1, 2].map((j) => r[0] * B[0][j] + r[1] * B[1][j] + r[2] * B[2][j]));
+  const app = (A, p) => [0, 1, 2].map((i) => A[i][0] * p[0] + A[i][1] * p[1] + A[i][2] * p[2]);
+  const T = (A) => [0, 1, 2].map((i) => [0, 1, 2].map((j) => A[j][i]));
+  const Rx = (t) => [[1, 0, 0], [0, Math.cos(t), -Math.sin(t)], [0, Math.sin(t), Math.cos(t)]];
+  const Ry = (t) => [[Math.cos(t), 0, Math.sin(t)], [0, 1, 0], [-Math.sin(t), 0, Math.cos(t)]];
+  const F = [[-1, 0, 0], [0, 1, 0], [0, 0, 1]], Fy = [[1, 0, 0], [0, -1, 0], [0, 0, 1]], Fz = [[1, 0, 0], [0, 1, 0], [0, 0, -1]];
+  const norm = (v) => { const l = Math.hypot(...v); return v.map((x) => x / l); };
+  const subv = (a, b) => a.map((x, i) => x - b[i]);
+  const crs = (u, v) => [u[1] * v[2] - u[2] * v[1], u[2] * v[0] - u[0] * v[2], u[0] * v[1] - u[1] * v[0]];
+  const dt = (u, v) => u[0] * v[0] + u[1] * v[1] + u[2] * v[2];
+  function frame(X) { // columns: centre->N, centre->acid C (orthogonalised), their cross product
+    const c = X.P[X.m.center], u1 = norm(subv(X.P[X.m.arms[0]], c));
+    let u2 = subv(X.P[X.m.arms[1]], c); const k = dt(u2, u1); u2 = norm(u2.map((x, i) => x - k * u1[i]));
+    const u3 = crs(u1, u2);
+    return [[u1[0], u2[0], u3[0]], [u1[1], u2[1], u3[1]], [u1[2], u2[2], u3[2]]];
+  }
+  const Q = mul(frame(L), T(frame(R))); // proper rotation: lines up the mirror molecule's N and acid arms with ours
+  const cL = L.P[L.m.center], cR = R.P[R.m.center];
+  const Rfit = R.P.map((p) => { const q = app(Q, subv(p, cR)); return q.map((x, i) => x + cL[i]); });
+  const mis = [2, 3].map((k) => Math.hypot(...subv(Rfit[R.m.arms[k]], L.P[L.m.arms[k]])));
+  // quaternions for the slide
+  function m2q(m) {
+    const t = m[0][0] + m[1][1] + m[2][2]; let w, x, y, z;
+    if (t > 0) { const s = Math.sqrt(t + 1) * 2; w = s / 4; x = (m[2][1] - m[1][2]) / s; y = (m[0][2] - m[2][0]) / s; z = (m[1][0] - m[0][1]) / s; }
+    else if (m[0][0] > m[1][1] && m[0][0] > m[2][2]) { const s = Math.sqrt(1 + m[0][0] - m[1][1] - m[2][2]) * 2; w = (m[2][1] - m[1][2]) / s; x = s / 4; y = (m[0][1] + m[1][0]) / s; z = (m[0][2] + m[2][0]) / s; }
+    else if (m[1][1] > m[2][2]) { const s = Math.sqrt(1 + m[1][1] - m[0][0] - m[2][2]) * 2; w = (m[0][2] - m[2][0]) / s; x = (m[0][1] + m[1][0]) / s; y = s / 4; z = (m[1][2] + m[2][1]) / s; }
+    else { const s = Math.sqrt(1 + m[2][2] - m[0][0] - m[1][1]) * 2; w = (m[1][0] - m[0][1]) / s; x = (m[0][2] + m[2][0]) / s; y = (m[1][2] + m[2][1]) / s; z = s / 4; }
+    return [w, x, y, z];
+  }
+  function q2m([w, x, y, z]) {
+    return [[1 - 2 * (y * y + z * z), 2 * (x * y - z * w), 2 * (x * z + y * w)], [2 * (x * y + z * w), 1 - 2 * (x * x + z * z), 2 * (y * z - x * w)], [2 * (x * z - y * w), 2 * (y * z + x * w), 1 - 2 * (x * x + y * y)]];
+  }
+  function slerp(a, b, t) {
+    let d = a[0] * b[0] + a[1] * b[1] + a[2] * b[2] + a[3] * b[3];
+    if (d < 0) { b = b.map((x) => -x); d = -d; }
+    if (d > 0.9995) { const r = a.map((x, i) => x + t * (b[i] - x)); const l = Math.hypot(...r); return r.map((x) => x / l); }
+    const th = Math.acos(d), s = Math.sin(th);
+    return a.map((x, i) => (Math.sin((1 - t) * th) * x + Math.sin(t * th) * b[i]) / s);
+  }
+  const B = mul(Rx(-0.35), Ry(Math.PI / 2)); // world z (the mirror's normal) -> screen x, tilted a little
+  return { L, R, Rfit, mis, mul, app, Rx, Ry, F, Fy, Fz, B, m2q, q2m, slerp };
+})();
+
+function hatchPattern(ctx, scale = 1) {
+  const c = document.createElement("canvas"), n = Math.round(8 * scale);
+  c.width = c.height = n;
+  const g = c.getContext("2d");
+  g.fillStyle = css("--mirror-bg"); g.fillRect(0, 0, n, n);
+  g.strokeStyle = css("--mirror"); g.lineWidth = 2.6 * scale;
+  g.beginPath(); for (let k = -1; k <= 1; k++) { g.moveTo(k * n, n); g.lineTo(k * n + n, 0); } g.stroke();
+  return ctx.createPattern(c, "repeat");
+}
+
+function drawMolecules(cv, st, opts = {}) {
+  const V = MOLV, dpr = window.devicePixelRatio || 1;
+  const w = opts.w || cv.clientWidth || 600;
+  if (!opts.w) opts.vertical = w < 520;
+  const h = opts.h || (opts.vertical ? Math.round(Math.min(480, w * 1.25)) : Math.round(Math.min(360, Math.max(240, w * 0.55))));
+  if (cv.width !== Math.round(w * dpr) || cv.height !== Math.round(h * dpr)) { cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); if (!opts.w) cv.style.height = h + "px"; }
+  const ctx = cv.getContext("2d");
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  ctx.clearRect(0, 0, w, h);
+  const ink = css("--ink"), muted = css("--muted");
+  const vertical = !!opts.vertical;
+  let s = vertical ? Math.min(w, h / 2) / 5.6 : Math.min(w / 2, h) / (opts.big ? 5.4 : 6.2);
+  const ML = V.mul(V.mul(V.Rx(st.pitch), V.Ry(st.yaw)), V.B);
+  const MR = V.mul(V.mul(vertical ? V.Fy : V.F, ML), V.Fz);
+  const e = st.stack, ease = e * e * (3 - 2 * e);
+  if (vertical) s *= 1 + 0.5 * ease; // the stacked pair gets the whole box on a phone
+  const cxC = w / 2, cyC = vertical ? h / 2 : h * 0.47;
+  const cxL0 = vertical ? w / 2 : w * 0.26, cyL0 = vertical ? h * 0.26 : h * 0.47;
+  const cxR0 = vertical ? w / 2 : w * 0.74, cyR0 = vertical ? h * 0.74 : h * 0.47;
+  const cxL = cxL0 + (cxC - cxL0) * ease, cyL = cyL0 + (cyC - cyL0) * ease;
+  // mirror line and labels
+  ctx.save(); ctx.strokeStyle = muted; ctx.setLineDash([6, 6]); ctx.lineWidth = 1.4; ctx.globalAlpha = 1 - ease * 0.8;
+  ctx.beginPath();
+  if (vertical) { ctx.moveTo(w * 0.12, h / 2); ctx.lineTo(w * 0.88, h / 2); } else { ctx.moveTo(w / 2, 14); ctx.lineTo(w / 2, h - 30); }
+  ctx.stroke(); ctx.setLineDash([]);
+  ctx.fillStyle = muted; ctx.font = `${opts.big ? 22 : 15}px ${css("--hand")}`; ctx.textAlign = "center";
+  if (!vertical) ctx.fillText("mirror", w / 2, h - 12);
+  ctx.restore();
+  ctx.font = `${opts.big ? 24 : 15}px ${css("--hand")}`; ctx.textAlign = "center";
+  ctx.fillStyle = css("--one-ink");
+  ctx.fillText(e > 0.5 ? "one hand + mirror hand, stacked" : "one hand", e > 0.5 ? w / 2 : cxL0, vertical ? (opts.big ? 30 : 20) : h - 12);
+  if (e < 0.5) { ctx.fillStyle = css("--mirror-ink"); ctx.globalAlpha = 1 - e * 2; ctx.fillText("mirror hand", cxR0, vertical ? h - 10 : h - 12); ctx.globalAlpha = 1; }
+  if (vertical && e < 0.5) { ctx.fillStyle = muted; ctx.textAlign = "right"; ctx.globalAlpha = 1 - e * 2; ctx.fillText("mirror", w - 8, h / 2 - 7); ctx.globalAlpha = 1; ctx.textAlign = "center"; }
+  // positions
+  const items = [];
+  const put = (X, M, coords, cx, cy, who, alpha) => {
+    const pts = coords.map((p) => { const q = V.app(M, p); const f = 1 + q[2] * 0.045; return [cx + q[0] * s * f, cy - q[1] * s * f, q[2], f]; });
+    X.m.bonds.forEach(([a, b]) => items.push({ z: (pts[a][2] + pts[b][2]) / 2 - 0.05, kind: "b", a: pts[a], b: pts[b], who, alpha }));
+    pts.forEach((p, i) => items.push({ z: p[2], kind: "a", p, el: X.E[i], who, alpha, idx: i }));
+    return pts;
+  };
+  put(V.L, ML, V.L.P, cxL, cyL, "one", 1);
+  let MRt = MR, coordsR = V.R.P;
+  if (e > 0) { // slide and turn the mirror molecule onto ours (proper rotations only)
+    const qa = V.m2q(MR), qb = V.m2q(ML);
+    MRt = V.q2m(V.slerp(qa, qb, ease));
+    coordsR = V.R.P.map((p, i) => p.map((x, k) => x + (V.Rfit[i][k] - x) * ease));
+  }
+  const ptsR = put(V.R, MRt, coordsR, cxR0 + (cxC - cxR0) * ease, cyR0 + (cyC - cyR0) * ease, "mirror", e > 0 ? 0.82 : 1);
+  items.sort((a, b) => a.z - b.z);
+  const hp = hatchPattern(ctx, opts.big ? 1.4 : 1);
+  const rad = { H: 0.2, C: 0.36, N: 0.34, O: 0.33 };
+  for (const it of items) {
+    ctx.globalAlpha = it.alpha;
+    if (it.kind === "b") {
+      ctx.strokeStyle = ink; ctx.lineWidth = Math.max(2, s * 0.09); ctx.lineCap = "round";
+      ctx.beginPath(); ctx.moveTo(it.a[0], it.a[1]); ctx.lineTo(it.b[0], it.b[1]); ctx.stroke();
+    } else {
+      const r = (rad[it.el] || 0.3) * s * it.p[3];
+      ctx.beginPath(); ctx.arc(it.p[0], it.p[1], r, 0, 7);
+      if (it.who === "one") ctx.fillStyle = it.el === "H" ? css("--one-pale") : css("--one");
+      else ctx.fillStyle = it.el === "H" ? css("--mirror-pale") : hp;
+      ctx.fill(); ctx.lineWidth = 1.6; ctx.strokeStyle = ink; ctx.stroke();
+      if (it.el !== "H") {
+        ctx.font = `700 ${Math.max(11, r * 1.15)}px system-ui, sans-serif`; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        if (it.who === "mirror") { ctx.fillStyle = css("--card"); ctx.beginPath(); ctx.arc(it.p[0], it.p[1], r * 0.62, 0, 7); ctx.fill(); ctx.fillStyle = ink; }
+        else ctx.fillStyle = "#fff";
+        ctx.fillText(it.el, it.p[0], it.p[1] + 0.5); ctx.textBaseline = "alphabetic";
+      }
+    }
+  }
+  ctx.globalAlpha = 1;
+  if (e >= 1) { // ring the two arms that do not match
+    ctx.strokeStyle = css("--bad"); ctx.lineWidth = 2.2; ctx.setLineDash([4, 4]);
+    [2, 3].forEach((k) => { const p = ptsR[V.R.m.arms[k]]; ctx.beginPath(); ctx.arc(p[0], p[1], s * 0.62, 0, 7); ctx.stroke(); });
+    ctx.setLineDash([]);
+  }
+}
+
+(function step0() {
+  const cv = $("#mol");
+  if (!MOLV) { cv.replaceWith(Object.assign(document.createElement("p"), { className: "hint", textContent: "The molecule data are not in this copy." })); return; }
+  $("#s0-cids").textContent = `${D.molecules.one.cid} and ${D.molecules.mirror.cid}`;
+  const st = { yaw: 0.5, pitch: 0, stack: 0, target: 0, auto: !REDUCED, raf: 0 };
+  let drag = null;
+  const draw = () => drawMolecules(cv, st);
+  function loop() {
+    let again = false;
+    if (st.auto) { st.yaw += 0.006; again = true; }
+    if (st.stack !== st.target) {
+      st.stack = REDUCED ? st.target : Math.max(0, Math.min(1, st.stack + (st.target > st.stack ? 1 : -1) / 70));
+      again = true;
+      if (st.stack === 1) showOut();
+    }
+    draw();
+    st.raf = again && !document.hidden ? requestAnimationFrame(loop) : 0;
+  }
+  const kick = () => { if (!st.raf) st.raf = requestAnimationFrame(loop); };
+  cv.addEventListener("pointerdown", (ev) => { drag = [ev.clientX, ev.clientY]; st.auto = false; cv.setPointerCapture(ev.pointerId); });
+  cv.addEventListener("pointermove", (ev) => {
+    if (!drag) return;
+    st.yaw += (ev.clientX - drag[0]) * 0.012; st.pitch = Math.max(-1.4, Math.min(1.4, st.pitch + (ev.clientY - drag[1]) * 0.012));
+    drag = [ev.clientX, ev.clientY]; draw();
+  });
+  cv.addEventListener("pointerup", () => { drag = null; });
+  cv.addEventListener("pointercancel", () => { drag = null; });
+  function showOut() {
+    const o = $("#s0-out"); o.hidden = false;
+    o.innerHTML = `Two arms line up (the N group and the acid group), but the other two, the CH<sub>3</sub> group and the H,
+      point the wrong way (ringed): they miss by ${MOLV.mis.map((m) => nb(m.toFixed(1) + " Å")).join(" and ")}. No turn fixes it.
+      The two are mirror images that do not stack, like your hands. Chemists call such molecules <em>chiral</em>, from the Greek for hand.`;
+  }
+  $("#s0-stack").addEventListener("click", () => {
+    st.target = st.target ? 0 : 1;
+    $("#s0-stack").textContent = st.target ? "Pull them apart" : "Try to stack them";
+    if (!st.target) $("#s0-out").hidden = true;
+    kick();
+  });
+  document.addEventListener("visibilitychange", kick);
+  onResize.push(draw);
+  window.__mol = st;
+  draw(); kick();
+})();
+
+// ================= Step 1: Kagan's bend =================
+(function step1() {
+  const K = D.kagan;
+  makeChoices(1, [["25", "25% (less)"], ["50", "50% (the same)"], ["80", "80%"], ["100", "100% (all one hand)"]]);
+  if (!K) { $("#s1-go").disabled = true; $("#s1-hint").textContent = "The Kagan-curve results are not in this copy yet."; $("#s1-choices").onchange = null; return; }
+  const pie = K.pie, ans = pie.ee_prod_pct;
+  $("#s1-go").addEventListener("click", () => {
+    const g = Number(picked(1)), right = g === 80;
+    openReveal(1, verdict(1, right, "That's it.", g > ans ? "Not quite: a bit less than that." : "Not quite: more than that.") + `
+      <p>The product has an excess of <span class="big">${pct(ans)}</span>: 90 parts one hand to 10 parts mirror hand, from a catalyst
+        that is only 75 to 25. That is a bigger lead of one hand than the catalyst's own 50%. Henri Kagan reported such <em>non-linear effects</em> in 1986.
+        Here is the textbook picture, drawn as three pies.</p>
+      <div class="panels" id="s1-pies"></div>
+      <div class="caveat"><b>Caveat:</b> the textbook ML<sub>2</sub> model; real systems vary. It assumes two handed pieces sit on each
+        catalyst, they pair up at random (K = 4), and the mixed pairs do nothing (g = 0). Numbers from the Nobel Committee's popular
+        information; the drawing is ours.</div>
+      <h3>Bend it yourself</h3>
+      <p>Change the catalyst's share of one hand, how much the pieces like to form mixed pairs (K), and how active a mixed pair is (g).
+        Watch the curve: a straight line, a bulge above it, or a sag below it.</p>
+      <div class="ctl"><label for="s1-p">Catalyst: share of one hand</label>
+        <div class="row"><input type="range" id="s1-p" min="50" max="100" step="1" value="75"><output id="s1-pv" for="s1-p"></output></div></div>
+      <div class="ctl"><label for="s1-k">K: how much the pieces prefer mixed pairs</label>
+        <div class="row"><input type="range" id="s1-k" min="-1" max="3" step="0.01" value="0.60206"><output id="s1-kv" for="s1-k"></output></div></div>
+      <div class="ctl"><label for="s1-g">g: how active a mixed pair is (1 = as active as a same-hand pair)</label>
+        <div class="row"><input type="range" id="s1-g" min="0" max="3" step="0.05" value="0"><output id="s1-gv" for="s1-g"></output></div></div>
+      <p class="readout" id="s1-readout" aria-live="polite"></p>
+      <div class="chart" id="s1-curve"></div>
+      <ul class="legend"><li><span class="sw one"></span>model curve</li><li><svg width="26" height="8" aria-hidden="true"><line x1="0" y1="4" x2="26" y2="4" stroke="currentColor" stroke-dasharray="4 3" stroke-width="2"/></svg>straight line (no bend)</li></ul>
+      <div class="chart" id="s1-mix"></div>`, () => { drawPies(); setupSliders(); });
+  });
+
+  function pieSvg(box, parts, title, desc, centre) {
+    const [s] = svgIn(box, 200, title, desc, 200);
+    const cx = 100, cy = 104, r = 70;
+    let a0 = -Math.PI / 2;
+    const tot = parts.reduce((a, p) => a + p.v, 0);
+    for (const p of parts) {
+      const a1 = a0 + (p.v / tot) * 2 * Math.PI, large = a1 - a0 > Math.PI ? 1 : 0;
+      const d = `M${cx},${cy} L${cx + r * Math.cos(a0)},${cy + r * Math.sin(a0)} A${r},${r} 0 ${large} 1 ${cx + r * Math.cos(a1)},${cy + r * Math.sin(a1)} Z`;
+      el("path", { d, fill: p.fill, style: p.style, stroke: css("--ink"), "stroke-width": 1.8, "stroke-linejoin": "round", filter: "url(#ink)", opacity: p.op || 1 }, s);
+      if (p.cross) { const am = (a0 + a1) / 2, x = cx + r * 0.62 * Math.cos(am), y = cy + r * 0.62 * Math.sin(am);
+        el("path", { d: `M${x - 14},${y - 14} L${x + 14},${y + 14} M${x + 14},${y - 14} L${x - 14},${y + 14}`, class: "ink", "stroke-width": 3, filter: "url(#ink)" }, s); }
+      const am = (a0 + a1) / 2, rr = p.v / tot < 0.12 ? r + 17 : r * 0.6;
+      if (p.label) { const t = el("text", { x: cx + rr * Math.cos(am), y: cy + rr * Math.sin(am) + 6, "text-anchor": "middle", class: "num" }, s, p.label);
+        t.style.fontSize = "19px";
+        if (p.v / tot >= 0.12 && p.dark) t.style.fill = "#fff"; if (p.v / tot >= 0.12 && p.boxed) { t.style.paintOrder = "stroke"; t.style.stroke = css("--card"); t.style.strokeWidth = "4px"; } }
+      a0 = a1;
+    }
+    if (centre) el("text", { x: cx, y: 196, "text-anchor": "middle", class: "lbl hand" }, s, centre);
+  }
+  function drawPies() {
+    const box = $("#s1-pies"), sh = KG.shares(0.5, 4), c = pie.catalysts_pct;
+    const P = (cls) => { const d = document.createElement("div"); d.className = "panel"; box.appendChild(d); const f = document.createElement("div"); d.appendChild(f); return [d, f]; };
+    const one = css("--one"), mix = css("--mixed");
+    let [d, f] = P();
+    pieSvg(f, [{ v: pie.ligand[0], fill: one, label: pie.ligand[0] + "%", dark: 1 }, { v: pie.ligand[1], fill: "url(#hatch)", label: pie.ligand[1] + "%", boxed: 1 }],
+      "Pie 1: the catalyst's handed pieces", `${pie.ligand[0]}% one hand, ${pie.ligand[1]}% mirror hand.`);
+    d.insertAdjacentHTML("beforeend", `<p><b>1. Handed pieces</b><br>${pie.ligand[0]} one hand : ${pie.ligand[1]} mirror hand</p>`);
+    [d, f] = P();
+    pieSvg(f, [{ v: c[0], fill: one, label: Math.round(c[0]) + "%", dark: 1 }, { v: c[1], fill: mix, label: Math.round(c[1]) + "%", dark: 1 }, { v: c[2], fill: "url(#hatch)", label: Math.round(c[2]) + "%" }],
+      "Pie 2: catalysts with two pieces each", `Random pairs: ${c[0]}% two one-hand pieces, ${c[1]}% mixed pairs, ${c[2]}% two mirror-hand pieces.`);
+    d.insertAdjacentHTML("beforeend", `<p><span class="arrow">&rarr; pair up at random</span><br><b>2. Catalysts</b><br>${Math.round(c[0])}% same hand, ${Math.round(c[1])}% mixed (grey), ${Math.round(c[2])}% mirror pair <span class="hint">(exactly ${c.join(" / ")})</span></p>`);
+    [d, f] = P();
+    pieSvg(f, [{ v: c[0], fill: one, label: pie.effective[0] + "%", dark: 1 }, { v: c[1], fill: mix, op: 0.28, cross: 1 }, { v: c[2], fill: "url(#hatch)", label: pie.effective[1] + "%" }],
+      "Pie 3: only same-hand catalysts work", `The mixed pairs sit idle, so the working catalysts are ${pie.effective[0]} to ${pie.effective[1]}: an excess of ${pie.ee_prod_pct}%.`);
+    d.insertAdjacentHTML("beforeend", `<p><span class="arrow">&rarr; mixed pairs sit idle</span><br><b>3. Working catalysts</b><br>${pie.effective[0]} : ${pie.effective[1]}, so the product's excess is ${pie.effective[0]} &minus; ${pie.effective[1]} = <b>${pie.ee_prod_pct}%</b></p>`);
+    box.dataset.check = (sh.mixed * 100).toFixed(2);
+  }
+  function setupSliders() {
+    const p = $("#s1-p"), k = $("#s1-k"), g = $("#s1-g");
+    const Kof = () => { const v = Number(k.value); return Math.abs(v - Math.log10(4)) < 0.015 ? 4 : Math.pow(10, v); };
+    function update() {
+      const share = Number(p.value) / 100, eeL = 2 * share - 1, Kv = Kof(), gv = Number(g.value);
+      const ee = KG.ee(eeL, Kv, gv) * 100;
+      $("#s1-pv").textContent = pct(share * 100, 0);
+      $("#s1-kv").textContent = "K = " + (Kv === 4 ? "4" : Kv < 10 ? Kv.toFixed(2) : Math.round(Kv).toLocaleString("en-US"));
+      $("#s1-gv").textContent = "g = " + gv.toFixed(2);
+      const shape = gv === 1 ? "a straight line" : gv < 1 ? "a bulge above the line (a positive non-linear effect)" : "a sag below the line (a negative non-linear effect)";
+      $("#s1-readout").innerHTML = `Catalyst ${pct(share * 100, 0)} one hand (excess ${pct(eeL * 100, 0)}) &rarr; product excess
+        <strong id="s1-ee">${eepct(ee)}</strong>. The curve makes ${shape}.${Kv === 4 ? " K = 4 means the pieces pair up at random." : ""}
+        <span class="hint">Textbook ML<sub>2</sub> model; real systems vary.</span>`;
+      drawCurve(eeL, Kv, gv, ee); drawMix(eeL, Kv);
+    }
+    [p, k, g].forEach((e) => e.addEventListener("input", update));
+    onResize.push(update);
+    update();
+  }
+  function drawCurve(eeL, Kv, gv, ee) {
+    const box = $("#s1-curve");
+    const [s, W] = svgIn(box, 300, "Product excess against catalyst excess", `The ML2 model with K = ${Kv.toFixed(2)} and g = ${gv.toFixed(2)}: at a catalyst excess of ${Math.round(eeL * 100)}% the product excess is ${Math.round(ee)}%. The dashed straight line is what you would get with no bend.`);
+    const L = 52, R = 16, T = 14, B = 46, w = W - L - R, h = 300 - T - B;
+    const X = (v) => L + v * w, Y = (v) => T + h - v * h;
+    for (let i = 0; i <= 4; i++) {
+      el("line", { x1: X(i / 4), x2: X(i / 4), y1: T, y2: T + h, class: "grid" }, s);
+      el("line", { x1: L, x2: L + w, y1: Y(i / 4), y2: Y(i / 4), class: "grid" }, s);
+      el("text", { x: X(i / 4), y: T + h + 18, "text-anchor": "middle" }, s, i * 25 + "%");
+      el("text", { x: L - 8, y: Y(i / 4) + 4, "text-anchor": "end" }, s, i * 25 + "%");
+    }
+    el("text", { x: L + w / 2, y: 296, "text-anchor": "middle", class: "lbl" }, s, "catalyst's excess of one hand");
+    el("text", { x: 14, y: T + h / 2, "text-anchor": "middle", class: "lbl", transform: `rotate(-90 14 ${T + h / 2})` }, s, "product's excess");
+    el("path", { d: `M${X(0)},${Y(0)} L${X(1)},${Y(1)}`, class: "ink", "stroke-dasharray": "6 5", style: "stroke: var(--muted)" }, s);
+    let d = "";
+    for (let i = 0; i <= 100; i++) { const x = i / 100, y = Math.max(0, Math.min(1.02, KG.ee(x, Kv, gv))); d += (i ? "L" : "M") + X(x).toFixed(1) + "," + Y(y).toFixed(1); }
+    el("path", { d, fill: "none", stroke: css("--one"), "stroke-width": 3.4, "stroke-linecap": "round", "stroke-linejoin": "round" }, s);
+    const yy = Math.max(0, Math.min(1.02, ee / 100));
+    el("path", { d: `M${X(eeL)},${T + h} L${X(eeL)},${Y(yy)} L${L},${Y(yy)}`, class: "ink", "stroke-dasharray": "2 4", "stroke-width": 1.4 }, s);
+    el("circle", { cx: X(eeL), cy: Y(yy), r: 7, fill: css("--one"), stroke: css("--ink"), "stroke-width": 2 }, s);
+    const tx = el("text", { x: Math.min(X(eeL) + 12, L + w - 4), y: Y(yy) + (yy > 0.9 ? 22 : -12), "text-anchor": X(eeL) + 60 > L + w ? "end" : "start", class: "num" }, s, eepct(ee));
+    tx.style.paintOrder = "stroke"; tx.style.stroke = css("--card"); tx.style.strokeWidth = "4px";
+  }
+  function drawMix(eeL, Kv) {
+    const box = $("#s1-mix"), sh = KG.shares(eeL, Kv);
+    const [s, W] = svgIn(box, 62, "Which catalysts form", `Same-hand pairs ${Math.round(sh.one * 100)}%, mixed pairs ${Math.round(sh.mixed * 100)}%, mirror-hand pairs ${Math.round(sh.mirror * 100)}%.`);
+    el("text", { x: 0, y: 14, class: "lbl" }, s, "Catalysts that form:");
+    let x = 0; const parts = [[sh.one, css("--one"), "same hand"], [sh.mixed, css("--mixed"), "mixed"], [sh.mirror, "url(#hatch)", "mirror pair"]];
+    for (const [v, f, lab] of parts) {
+      const wd = Math.max(0, v) * (W - 2);
+      el("rect", { x: x + 1, y: 22, width: wd, height: 22, fill: f, stroke: css("--ink"), "stroke-width": 1.4 }, s);
+      if (wd > 64) { const t = el("text", { x: x + wd / 2 + 1, y: 37.5, "text-anchor": "middle", class: "num" }, s, Math.round(v * 100) + "%"); t.style.fontSize = "13px"; t.style.paintOrder = "stroke"; t.style.stroke = css("--card"); t.style.strokeWidth = "3.5px"; }
+      x += wd;
+    }
+    el("text", { x: 0, y: 60 }, s, `same hand ${Math.round(sh.one * 100)}% · mixed ${Math.round(sh.mixed * 100)}% · mirror pair ${Math.round(sh.mirror * 100)}%`);
+  }
+})();
+
+// ================= Step 2: Soai's staircase =================
+(function step2() {
+  const real = D.soai_2003_pct, A = D.amp;
+  makeChoices(2, [["0.00005", "still about 0.00005%"], ["1", "about 1%"], ["50", "about 50%"], ["99", "more than 99%"]]);
+  $("#s2-go").addEventListener("click", () => {
+    const g = picked(2), right = g === "99";
+    const toy = A && A.toy_rounds && A.toy_rounds.ee_pct && A.toy_rounds.ee_pct.length >= 4 ? A.toy_rounds : null;
+    openReveal(2, verdict(2, right, "Yes: almost all one hand.", "Not quite: it went much further.") + `
+      <p>After three runs the excess was more than <span class="big">${pct(real[3], 1)}</span> ${REAL}:
+        ${pct(real[0], 5)} &rarr; ${pct(real[1])} &rarr; ${pct(real[2])} &rarr; &gt;${pct(real[3], 1)}
+        (Soai's group, 2003). More than 99.75% of the molecules were the same hand.</p>
+      <div class="chart" id="s2-stairs"></div>
+      <ul class="legend"><li><span class="sw one"></span>Soai 2003, real data</li>${toy ? '<li><span class="sw" style="background:var(--one-pale);border-style:dashed"></span>our toy model, trend only</li>' : ""}</ul>
+      <div class="chart" id="s2-log"></div>
+      <p>The start was a head start that the chemists <em>prepared on purpose</em>, not a chance wobble. Each run, the product
+        copies its own hand, and the minority hand falls behind faster than it can catch up.</p>
+      ${toy ? `<p>Our toy model next to it (dashed bars): same-hand catalysts work, mixed pairs sit idle, and each run's product
+        seeds the next. Two toy numbers, K &asymp; ${int(Math.round(toy.K))} and about ${int(Math.round(toy.turnovers_per_round))} turnovers per run, were
+        <em>fitted</em> so that runs 1 and 2 land on ${pct(real[1])} and ${pct(real[2])}; they are not Soai's values. Run 3 is the toy's own
+        answer: ${tpct(toy.ee_pct[3])} ${TOY}${tagFor("soai_amplifier")}, against more than ${pct(real[3], 1)} measured.
+        ${A.k4_fails && A.k4_fails.turnovers_needed_to_57 ? `If the pieces paired up at random (K = 4), the same toy would need about
+        ${int(Number(Number(A.k4_fails.turnovers_needed_to_57).toPrecision(2)))} turnovers just to reach ${pct(real[1])} ${TOY}.` : ""}</p>` :
+        `<p class="hint">The toy model's rounds are not in this copy yet.</p>`}
+      <div class="caveat"><b>Caveat:</b> one published toy model of several; the real mechanism is still debated
+        (the Nobel Committee's scientific background describes two competing detailed mechanisms). Real data: Sato, Urabe,
+        Ishiguro, Shibata and Soai, 2003.</div>`, () => { draw(toy); onResize.push(() => draw(toy)); });
+  });
+  function draw(toy) {
+    const lab = ["start", "run 1", "run 2", "run 3"];
+    const rl = (x, i) => (i === 3 ? ">" : "") + pct(x, i === 0 ? 5 : x >= 99 ? 1 : 0);
+    { const box = $("#s2-stairs");
+      const [s, W] = svgIn(box, 270, "Excess of one hand after each run", `Soai 2003 (real data): ${real.map(rl).join(", ")}.` + (toy ? ` Our toy model (fitted to runs 1 and 2): ${toy.ee_pct.map((x) => tpct(x)).join(", ")}.` : ""));
+      const L = 44, R = 8, T = 22, B = 40, w = W - L - R, h = 270 - T - B;
+      const Y = (v) => T + h - (v / 100) * h;
+      [0, 50, 100].forEach((v) => { if (v) el("text", { x: L - 6, y: Y(v) + 4, "text-anchor": "end" }, s, v + "%"); el("line", { x1: L, x2: L + w, y1: Y(v), y2: Y(v), class: "grid" }, s); });
+      const cw = w / 4, bw = toy ? cw * 0.36 : cw * 0.55;
+      real.forEach((v, i) => {
+        const x0 = L + i * cw + (cw - (toy ? bw * 2 + 6 : bw)) / 2;
+        el("rect", { x: x0, y: Y(v), width: bw, height: Math.max(0, Y(0) - Y(v)), fill: css("--one"), stroke: css("--ink"), "stroke-width": 1.6, filter: "url(#ink)" }, s);
+        if (v < 2) el("line", { x1: x0, x2: x0 + bw, y1: Y(0) - 1, y2: Y(0) - 1, stroke: css("--one"), "stroke-width": 3 }, s);
+        const t = el("text", { x: x0 + bw / 2, y: Y(v) - 6, "text-anchor": "middle", class: "num" }, s, rl(v, i)); t.style.fontSize = W < 420 ? "12px" : "14px";
+        if (toy) {
+          const tv = toy.ee_pct[i];
+          el("rect", { x: x0 + bw + 6, y: Y(tv), width: bw, height: Math.max(0, Y(0) - Y(tv)), fill: css("--one-pale"), stroke: css("--ink"), "stroke-width": 1.4, "stroke-dasharray": "5 4" }, s);
+        }
+        el("text", { x: L + i * cw + cw / 2, y: T + h + 20, "text-anchor": "middle", class: "lbl" }, s, lab[i]);
+      });
+      el("text", { x: L + w, y: 268, "text-anchor": "end", class: "hand" }, s, "the start is too small to see here: see below");
+    }
+    { const box = $("#s2-log");
+      const [s, W] = svgIn(box, 210, "The same numbers on a log scale", `On a log scale the start, ${pct(real[0], 5)}, is visible: each run multiplies the excess.`);
+      const L = 66, R = 12, T = 26, B = 34, w = W - L - R, h = 210 - T - B;
+      const lo = -5, hi = 2, Y = (v) => T + h - ((Math.log10(Math.max(v, 1e-5)) - lo) / (hi - lo)) * h, X = (i) => L + (i + 0.5) * (w / 4);
+      el("text", { x: L, y: 14, class: "lbl hand" }, s, "zoom: log scale, each line is ten times more");
+      for (let e = lo; e <= hi; e++) { el("line", { x1: L, x2: L + w, y1: Y(10 ** e), y2: Y(10 ** e), class: "grid" }, s);
+        el("text", { x: L - 6, y: Y(10 ** e) + 4, "text-anchor": "end" }, s, e >= 0 ? 10 ** e + "%" : (10 ** e).toFixed(-e).replace(/0+$/, "") + "%"); }
+      const path = (vals) => vals.map((v, i) => (i ? "L" : "M") + X(i) + "," + Y(v)).join("");
+      if (toy) { el("path", { d: path(toy.ee_pct.map((v) => Math.min(v, 99.9))), class: "ink", "stroke-dasharray": "5 4", style: "stroke: var(--muted)" }, s);
+        toy.ee_pct.forEach((v, i) => el("circle", { cx: X(i), cy: Y(Math.min(v, 99.9)), r: 5, fill: css("--card"), stroke: css("--ink"), "stroke-width": 1.6, "stroke-dasharray": "3 2" }, s)); }
+      el("path", { d: path(real), fill: "none", stroke: css("--one"), "stroke-width": 3, "stroke-linejoin": "round" }, s);
+      real.forEach((v, i) => { el("circle", { cx: X(i), cy: Y(v), r: 6.5, fill: css("--one"), stroke: css("--ink"), "stroke-width": 1.6 }, s);
+        el("text", { x: X(i), y: T + h + 20, "text-anchor": "middle", class: "lbl" }, s, lab[i]); });
+      const t = el("text", { x: X(0) + 10, y: Y(real[0]) - 10, class: "num" }, s, pct(real[0], 5)); t.style.fontSize = "13px";
+    }
+  }
+})();
+
+// ================= Step 3: the mirror race =================
+(function step3() {
+  const M = D.mirror;
+  makeChoices(3, [["5050", "always 50:50"], ["same", "one hand always wins"], ["random", "a random hand wins each time"]]);
+  $("#s3-go").addEventListener("click", () => {
+    const g = picked(3), right = g === "random";
+    const wa = (M && M.with_antagonism) || {}, se = (M && M.stopped_early) || {}, rr = D.real_runs;
+    const nRuns = M && M.runs ? int(M.runs) : "10,000";
+    const fr = wa.frac_abs_ee_above_90;
+    openReveal(3, verdict(3, right, "Right: chance picks the winner, and it is a different hand each time.",
+      g === "5050" ? "Not quite: the balance breaks almost every time." : "Not quite: the winner changes from run to run.") + `
+      <p>Each run ends with almost only one hand, but which hand is a coin toss. Try it: this race runs live in your browser,
+        ${int(D.race_N)} molecules, from a perfectly even start.</p>
+      <div class="racebox">
+        <canvas id="race" role="img" aria-label="A live race: dots turn into one hand (solid orange) or the mirror hand (teal rings); grey dots are idle mixed pairs. A trace below shows the count of each hand."></canvas>
+      </div>
+      <ul class="legend"><li><span class="sw dot one"></span>one hand</li><li><span class="sw ring"></span>mirror hand</li><li><span class="sw dot mixed"></span>idle mixed pair</li><li><span class="sw free"></span>not yet handed</li></ul>
+      <div class="btns"><button type="button" id="race-go">Run again</button>
+        <button type="button" class="ghost" id="race-anta" aria-pressed="true">Mutual antagonism: on</button></div>
+      <p class="result" id="race-result" aria-live="polite"></p>
+      <div class="chart" id="s3-runs"></div>
+      <p class="hint" id="s3-runs-note"></p>
+      <h3>${nRuns} runs, counted</h3>
+      <p>Each bar counts runs that ended with that excess. Left is all mirror hand, right is all one hand.
+        With our chosen rates (the chance step as fast as copying), copying alone gives a flat spread: any mix is equally likely.
+        A slower chance step makes lopsided runs common even without antagonism; a faster one keeps runs near 50:50. Add mutual antagonism and the runs pile up at the two ends.</p>
+      <div class="seg" role="group" aria-label="Which runs to show">
+        <button type="button" id="h-copy" aria-pressed="false">copying only</button><button type="button" id="h-anta" aria-pressed="true">copying + antagonism</button><button type="button" id="h-early" aria-pressed="false">stopped early</button><button type="button" id="h-build" aria-pressed="false">watch 400 runs land</button>
+      </div>
+      <div class="chart" id="s3-hist"></div>
+      <p class="readout" id="s3-hist-note"></p>
+      <h3>Is the coin fair?</h3>
+      <p>If nothing favours a hand, each hand should win about half the time. Real flasks agree: no chiral substance was added, and
+        the winner was random.</p>
+      <div class="coin" id="s3-coin"></div>
+      <p>Real runs did <em>not</em> end all one hand: Soai's ${rr.soai_2003.runs} runs gave an excess of ${rr.soai_2003.ee_range_pct[0]} to ${rr.soai_2003.ee_range_pct[1]}%.
+        Real flasks stop early and their antagonism is weaker. Our toy model stopped early gives a spread too
+        ${se.median_abs_ee != null ? `(read early, the middle run has ${pct(se.median_abs_ee * 100)} excess) ` : ""}${TOY}${tagFor("mirror_race")}.
+        It is not fitted to any experiment.</p>
+      <div class="caveat"><b>Caveat:</b> toy network, not the Soai mechanism, and not the origin of life (Nobel Committee: Frank's model
+        <q>is not an answer to the origin of biological homochirality</q>). The toy uses ${int(D.race_N)} to ${M && M.N ? int(M.N) : "10,000"} molecules; a real flask
+        holds about 10<sup>20</sup>. Rates are dimensionless model units${fr != null ? `; with antagonism ${pct(fr * 100, 1)} of the toy runs ended above 90% excess ${TOY}${tagFor("mirror_race")}` : ""}.</div>`,
+      () => { setupRace(); drawRuns(); onResize.push(drawRuns); setupHist(); drawCoin(); });
+  });
+
+  // ---- live race (exact stochastic simulation, jump chain; same network and rates as the mirror-race experiment) ----
+  const RATES = D.race_rates || { k0: 1, k1: 1, k2: 100 };
+  let raceState = null;
+  function simulate(N, anta) {
+    const k0 = RATES.k0, k1 = RATES.k1, k2 = anta ? RATES.k2 : 0;
+    let a = N, x = 0, y = 0;
+    const ev = [];
+    for (;;) {
+      const w1 = k0 * a + k1 * a * x, w2 = k0 * a + k1 * a * y, w3 = k2 * x * y, W = w1 + w2 + w3;
+      if (W <= 0) break;
+      const u = Math.random() * W;
+      if (u < w1) { a--; x++; ev.push(0); } else if (u < w1 + w2) { a--; y++; ev.push(1); } else { x--; y--; ev.push(2); }
+    }
+    return { ev, x, y, a };
+  }
+  function setupRace() {
+    const cv = $("#race"), N = D.race_N || 2000;
+    let anta = true;
+    const go = () => {
+      const sim = simulate(N, anta);
+      const order = Array.from({ length: N }, (_, i) => i);
+      for (let i = N - 1; i > 0; i--) { const j = (Math.random() * (i + 1)) | 0; [order[i], order[j]] = [order[j], order[i]]; }
+      raceState = { sim, anta, i: 0, state: new Uint8Array(N), free: order, ones: [], mirrors: [], x: 0, y: 0, trace: [[0, 0]], N, done: false };
+      $("#race-result").textContent = "Racing\u2026"; $("#race-result").removeAttribute("data-winner");
+      cancelAnimationFrame(raceState.raf); tick();
+    };
+    function step(S) {
+      const e = S.sim.ev[S.i++];
+      if (e === 0) { const k = S.free.pop(); S.state[k] = 1; S.ones.push(k); S.x++; }
+      else if (e === 1) { const k = S.free.pop(); S.state[k] = 2; S.mirrors.push(k); S.y++; }
+      else { const p = S.ones.splice((Math.random() * S.ones.length) | 0, 1)[0], q = S.mirrors.splice((Math.random() * S.mirrors.length) | 0, 1)[0]; S.state[p] = 3; S.state[q] = 3; S.x--; S.y--; }
+    }
+    function tick() {
+      const S = raceState, per = REDUCED ? S.sim.ev.length : Math.max(1, Math.ceil(S.sim.ev.length / 210));
+      for (let k = 0; k < per && S.i < S.sim.ev.length; k++) { step(S); if (S.i % 10 === 0) S.trace.push([S.x, S.y]); }
+      if (S.i >= S.sim.ev.length) { S.trace.push([S.x, S.y]); finish(S); }
+      drawRace(cv, S);
+      if (!S.done) S.raf = requestAnimationFrame(tick);
+    }
+    function finish(S) {
+      S.done = true;
+      const pairs = (N - S.free.length - S.x - S.y) / 2, made = S.x + S.y + 2 * pairs; // same ee as the mirror-race experiment:
+      const x = S.x, y = S.y, ee = made ? (x - y) / made : 0;                       // idle pairs count one of each hand
+      const win = x > y ? "one" : y > x ? "mirror" : "tie";
+      const r = $("#race-result"); r.dataset.winner = win;
+      r.innerHTML = win === "tie" ? "A tie this time (rare). Run it again." :
+        `This run: ${win === "one" ? '<span style="color:var(--one-ink)">one hand</span>' : '<span style="color:var(--mirror-ink)">the mirror hand</span>'} won,
+         excess ${tpct(Math.abs(ee) * 100)}${S.anta ? ` (${int(pairs)} idle mixed pairs, counted as one of each hand)` : ""} ${TOY}.`;
+    }
+    $("#race-go").addEventListener("click", go);
+    $("#race-anta").addEventListener("click", () => {
+      anta = !anta; const b = $("#race-anta");
+      b.setAttribute("aria-pressed", anta); b.textContent = "Mutual antagonism: " + (anta ? "on" : "off"); go();
+    });
+    onResize.push(() => raceState && drawRace(cv, raceState));
+    go();
+  }
+  function drawRace(cv, S) {
+    const dpr = window.devicePixelRatio || 1, w = cv.clientWidth || 600;
+    const cols = w < 420 ? 50 : 80, rows = Math.ceil(S.N / cols), gap = (w - 8) / cols, gridH = rows * gap + 8, traceH = 110, h = Math.round(gridH + traceH + 14);
+    if (cv.width !== Math.round(w * dpr) || cv.height !== Math.round(h * dpr)) { cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); cv.style.height = h + "px"; }
+    const c = cv.getContext("2d"); c.setTransform(dpr, 0, 0, dpr, 0, 0); c.clearRect(0, 0, w, h);
+    const one = css("--one"), mir = css("--mirror"), mix = css("--mixed"), muted = css("--muted"), ink = css("--ink");
+    const r = Math.max(1.6, gap * 0.36);
+    for (let i = 0; i < S.N; i++) {
+      const cx = 4 + (i % cols + 0.5) * gap, cy = 4 + (((i / cols) | 0) + 0.5) * gap, st = S.state[i];
+      c.beginPath();
+      if (st === 0) { c.fillStyle = muted; c.globalAlpha = 0.35; c.arc(cx, cy, r * 0.45, 0, 7); c.fill(); c.globalAlpha = 1; }
+      else if (st === 1) { c.fillStyle = one; c.arc(cx, cy, r, 0, 7); c.fill(); }
+      else if (st === 2) { c.strokeStyle = mir; c.lineWidth = Math.max(1.3, r * 0.5); c.arc(cx, cy, r * 0.78, 0, 7); c.stroke(); }
+      else { c.fillStyle = mix; c.globalAlpha = 0.8; c.arc(cx, cy, r * 0.7, 0, 7); c.fill(); c.globalAlpha = 1; }
+    }
+    const T = gridH + 10, L = 6, W = w - 12, H = traceH - 22, maxv = S.N;
+    c.strokeStyle = css("--line"); c.lineWidth = 1; c.strokeRect(L, T, W, H);
+    const n = Math.max(2, Math.ceil(S.sim.ev.length / 10) + 2);
+    const line = (k, col, dash) => { c.strokeStyle = col; c.lineWidth = 2.6; c.setLineDash(dash); c.beginPath();
+      S.trace.forEach((p, i) => { const X = L + (i / n) * W, Y = T + H - (p[k] / maxv) * H; i ? c.lineTo(X, Y) : c.moveTo(X, Y); }); c.stroke(); c.setLineDash([]); };
+    line(0, one, []); line(1, mir, [6, 4]);
+    c.fillStyle = muted; c.font = `13px ${css("--serif")}`; c.textAlign = "left";
+    c.fillText("how many of each hand, as the race goes on", L, T + H + 16);
+    c.fillStyle = ink;
+  }
+
+  // ---- eight precomputed runs from the mirror-race experiment ----
+  function drawRuns() {
+    const RR = M && M.race_runs, runs = RR && RR.with_antagonism;
+    if (!runs || !runs.length) return;
+    const box = $("#s3-runs");
+    const [s, W] = svgIn(box, 230, "Eight precomputed toy runs", `Excess of one hand as the reaction goes on, in ${runs.length} runs of ${int(RR.N || M.N)} molecules with antagonism: each line drifts to one end and stays.`);
+    const L = 48, R = 12, T = 26, B = 42, w = W - L - R, h = 230 - T - B;
+    const lo = -4, X = (p) => L + ((Math.log10(Math.max(p, 1e-4)) - lo) / -lo) * w, Y = (e) => T + h / 2 - e * (h / 2);
+    el("text", { x: L, y: 13, class: "lbl hand" }, s, `${runs.length} toy runs, ${int(RR.N || M.N)} molecules each`);
+    [[1, "all one hand"], [0, "50:50"], [-1, "all mirror"]].forEach(([e, t]) => { el("line", { x1: L, x2: L + w, y1: Y(e), y2: Y(e), class: "grid" }, s);
+      el("text", { x: L - 6, y: Y(e) + 4, "text-anchor": "end" }, s, e === 0 ? "0" : (e > 0 ? "+" : "−") + "100%"); });
+    [1e-4, 1e-3, 1e-2, 0.1, 1].forEach((p) => el("text", { x: X(p), y: T + h + 16, "text-anchor": "middle" }, s, p >= 0.01 ? Math.round(p * 100) + "%" : p * 100 + "%"));
+    el("text", { x: L + w / 2, y: T + h + 34, "text-anchor": "middle", class: "lbl" }, s, "share of plain molecules used up (log scale)");
+    runs.forEach((r) => {
+      const ee = r.p.map((_, i) => { const m = r.one[i] + r.mirror[i] + 2 * (r.pairs ? r.pairs[i] : 0); return m ? (r.one[i] - r.mirror[i]) / m : 0; });
+      const pts = r.p.map((p, i) => [p, ee[i]]).filter(([p]) => p > 0);
+      const win = ee[ee.length - 1] >= 0;
+      el("path", { d: pts.map(([p, e], i) => (i ? "L" : "M") + X(p).toFixed(1) + "," + Y(e).toFixed(1)).join(""), fill: "none",
+        stroke: css(win ? "--one" : "--mirror"), "stroke-width": 2.4, "stroke-dasharray": win ? null : "6 4", opacity: 0.9 }, s);
+    });
+    const nOne = runs.filter((r) => { const k = r.one.length - 1; return r.one[k] >= r.mirror[k]; }).length;
+    $("#s3-runs-note").innerHTML = `Here ${nOne} of ${runs.length} runs went to one hand (solid) and ${runs.length - nOne} to the mirror hand (dashed). The hand is decided in the first few molecules; after that the leading hand only pulls further ahead ${TOY}${tagFor("mirror_race")}.`;
+  }
+
+  // ---- precomputed histograms ----
+  function setupHist() {
+    const H = M && M.hist;
+    if (!H || !H.edges) { $("#s3-hist").innerHTML = '<p class="hint">The mirror-race histograms are not in this copy yet.</p>'; return; }
+    const modes = { copy: H.copy_only, anta: H.with_antagonism, early: H.stopped_early };
+    let cur = (H.copy_only || []).slice(), raf = 0, mode = "anta";
+    const notes = {
+      copy: () => `Copying only: a flat spread; any mix of hands is about as likely as any other${M.copy_only.std_ee != null ? ` (spread ${M.copy_only.std_ee.toFixed(3)}, the exact answer for this case is ${Number(M.copy_only.std_predicted).toFixed(3)})` : ""} (flat only for our chosen rates) ${TOY}${tagFor("mirror_race")}.`,
+      anta: () => `With antagonism: two spikes, one at each end${M.with_antagonism.one_hand_wins != null ? `. One hand won ${int(M.with_antagonism.one_hand_wins)} runs, the mirror hand ${int(M.with_antagonism.mirror_hand_wins)}` : ""} ${TOY}${tagFor("mirror_race")}.`,
+      early: () => `Stopped early: the same runs with antagonism, read when only ${pct((M.stopped_early.read_after_fraction_of_A_used || H.stopped_early_fraction || 0) * 100)} of the plain molecules are used up (our choice of when to stop; not fitted to Soai's runs). Most are partly one hand, not all one hand${M.stopped_early.q05_q95_abs_ee ? ` (nine runs in ten between ${pct(M.stopped_early.q05_q95_abs_ee[0] * 100)} and ${pct(M.stopped_early.q05_q95_abs_ee[1] * 100)} excess)` : ""} ${TOY}${tagFor("mirror_race")}.`,
+      build: () => `The first ${(H.first_runs.with_antagonism || []).length} runs with antagonism, landing one by one ${TOY}${tagFor("mirror_race")}.`,
+    };
+    function draw(vals, ymaxOverride) {
+      const box = $("#s3-hist");
+      const [s, W] = svgIn(box, 250, "Final excess over many toy runs", `Histogram of the final excess of one hand, ${mode === "copy" ? "copying only" : mode === "early" ? "stopped early" : "copying plus mutual antagonism"}: bars from all mirror hand on the left to all one hand on the right.`);
+      const L = 8, R = 8, T = 12, B = 46, w = W - L - R, h = 250 - T - B, n = vals.length;
+      const ymax = ymaxOverride || Math.max(...vals, 1);
+      const bw = w / n;
+      vals.forEach((v, i) => {
+        const mid = (H.edges[i] + H.edges[i + 1]) / 2, bh = (Math.min(v, ymax) / ymax) * h;
+        const fill = mid > 0.05 ? css("--one") : mid < -0.05 ? "url(#hatch)" : css("--mixed");
+        if (bh > 0.3) el("rect", { x: L + i * bw + 0.5, y: T + h - bh, width: Math.max(1, bw - 1), height: bh, fill, stroke: css("--ink"), "stroke-width": bw > 8 ? 1 : 0.5 }, s);
+      });
+      el("line", { x1: L, x2: L + w, y1: T + h, y2: T + h, class: "axis" }, s);
+      [[0, "all mirror hand", "start"], [0.5, "50:50", "middle"], [1, "all one hand", "end"]].forEach(([f, t, a]) => el("text", { x: L + f * w, y: T + h + 18, "text-anchor": a, class: "lbl" }, s, t));
+      el("text", { x: L + w / 2, y: T + h + 38, "text-anchor": "middle" }, s, "final excess of one hand in each run");
+    }
+    function morph(target) {
+      cancelAnimationFrame(raf);
+      const from = cur.slice(), t0 = performance.now(), dur = REDUCED ? 0 : 900;
+      const fs = Math.max(...from, 1), ts = Math.max(...target, 1);
+      const f = (now) => {
+        const t = dur ? Math.min(1, (now - t0) / dur) : 1, e = t * t * (3 - 2 * t);
+        cur = target.map((v, i) => from[i] / fs * (1 - e) + (v / ts) * e);
+        draw(cur, 1); if (t < 1) raf = requestAnimationFrame(f); else cur = target.map((v) => v / ts);
+      };
+      raf = requestAnimationFrame(f);
+    }
+    function build() {
+      cancelAnimationFrame(raf);
+      const runs = H.first_runs.with_antagonism || [], n = H.edges.length - 1, counts = new Array(n).fill(0);
+      let i = 0;
+      const f = () => {
+        for (let k = 0; k < (REDUCED ? runs.length : 4) && i < runs.length; k++, i++) {
+          let b = H.edges.findIndex((e, j) => j < n && runs[i] >= e && runs[i] < H.edges[j + 1]); if (b < 0) b = runs[i] >= 1 ? n - 1 : 0; counts[b]++; }
+        cur = counts.map((c) => c / Math.max(...counts, 1)); draw(counts);
+        if (i < runs.length) raf = requestAnimationFrame(f);
+      };
+      raf = requestAnimationFrame(f);
+    }
+    const btn = { copy: "#h-copy", anta: "#h-anta", early: "#h-early", build: "#h-build" };
+    function set(m) {
+      mode = m; Object.entries(btn).forEach(([k, s]) => $(s).setAttribute("aria-pressed", k === m));
+      $("#s3-hist-note").innerHTML = notes[m]();
+      if (m === "build") build(); else if (modes[m]) morph(modes[m]); else $("#s3-hist-note").textContent = "This set of runs is not in this copy yet.";
+    }
+    Object.entries(btn).forEach(([k, s]) => { $(s).addEventListener("click", () => set(k)); if ((k === "early" && !H.stopped_early) || (k === "build" && !(H.first_runs.with_antagonism || []).length)) $(s).disabled = true; });
+    const total = (H.copy_only || []).reduce((a, b) => a + b, 0) || 1;
+    draw(cur = (H.copy_only || []).map((v) => v / total), null);
+    $("#s3-hist-note").innerHTML = notes.copy();
+    setTimeout(() => set("anta"), REDUCED ? 0 : 1100);
+    onResize.push(() => draw(cur, 1));
+  }
+  function drawCoin() {
+    const rr = D.real_runs, wa = (M && M.with_antagonism) || {}, box = $("#s3-coin");
+    const rows = [];
+    if (wa.one_hand_wins != null) rows.push([`Our toy model, ${int(wa.one_hand_wins + wa.mirror_hand_wins)} runs ${TOY}${tagFor("mirror_race")}`, wa.one_hand_wins, wa.mirror_hand_wins, wa.binomial_p]);
+    rows.push([`Soai's group, 2003: ${rr.soai_2003.runs} real runs, no chiral substance added ${REAL}`, rr.soai_2003.one, rr.soai_2003.mirror, rr.soai_2003.binomial_p]);
+    rows.push([`Singleton and Vo, 2003: ${rr.singleton_vo_2003.runs} real runs ${REAL}`, rr.singleton_vo_2003.one, rr.singleton_vo_2003.mirror, rr.singleton_vo_2003.binomial_p]);
+    box.innerHTML = rows.map(([who, a, b, p]) => {
+      const f = a / (a + b) * 100;
+      return `<div class="row"><div class="who">${who}</div>
+        <div class="bar" role="img" aria-label="${int(a)} won by one hand, ${int(b)} by the mirror hand"><span class="o" style="width:${f}%">${int(a)}</span><span class="m" style="width:${100 - f}%"><b>${int(b)}</b></span></div>
+        <div class="hint">one hand ${int(a)} : mirror hand ${int(b)}${p != null ? `; chance of a split at least this uneven from a fair coin: ${p >= 0.995 ? "1 (as even as it gets)" : Number(p).toFixed(2)}` : ""}</div></div>`;
+    }).join("") + `<p class="hint">Which real hand we call "one hand" is our choice: Soai's split was 19 (S) to 18 (R); Singleton and Vo's 27 (R) to 27 (S).</p>`;
+  }
+  window.__race = () => raceState;
+})();
+
+// ================= Step 4: cards; footer =================
+(function cards() {
+  const G = D.github || "https://github.com/FavioVazquez/nobel-2026-lab/tree/main/2026/chemistry/";
+  const icon = (body) => `<svg viewBox="0 0 56 56" aria-hidden="true">${body}</svg>`;
+  const C = [
+    ["mirror-race", "The mirror race", "Frank's toy network, run 10,000 times from a perfectly even start.",
+      icon('<rect x="6" y="30" width="6" height="20" fill="url(#hatch)" stroke="currentColor"/><rect x="14" y="44" width="6" height="6" fill="#8d8780" stroke="currentColor"/><rect x="22" y="47" width="6" height="3" fill="#8d8780" stroke="currentColor"/><rect x="30" y="47" width="6" height="3" fill="#8d8780" stroke="currentColor"/><rect x="38" y="44" width="6" height="6" fill="#c4622d" stroke="currentColor"/><rect x="46" y="28" width="6" height="22" fill="#c4622d" stroke="currentColor"/>')],
+    ["kagan-curve", "Kagan's curve", "The textbook ML\u2082 model: line, bulge and sag, with our own pie drawing.",
+      icon('<path d="M6 50 L50 6" stroke="currentColor" stroke-dasharray="4 3" fill="none"/><path d="M6 50 C12 20 26 10 50 6" stroke="#c4622d" stroke-width="3.5" fill="none"/>')],
+    ["soai-amplifier", "Soai's amplifier", "Published toy models next to Soai's three runs. One of several; the mechanism is debated.",
+      icon('<rect x="6" y="48" width="9" height="2" fill="#c4622d" stroke="currentColor"/><rect x="18" y="24" width="9" height="26" fill="#c4622d" stroke="currentColor"/><rect x="30" y="8" width="9" height="42" fill="#c4622d" stroke="currentColor"/><rect x="42" y="7" width="9" height="43" fill="#c4622d" stroke="currentColor"/>')],
+    ["video", "The video", "The explainer video for this prize, with its sources.",
+      icon('<rect x="5" y="11" width="46" height="34" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M23 20 L36 28 L23 36 Z" fill="#c4622d"/>')],
+  ];
+  $("#cards").innerHTML = C.map(([dir, t, s, ic]) => `<a class="card" href="${G}${dir}">${ic}<b>${t}</b><span>${s}</span><br><span class="go">Open the folder</span></a>`).join("");
+  const S = [
+    ["Nobel Prize press release, 7 October 2026", "https://www.nobelprize.org/prizes/chemistry/2026/press-release/"],
+    ["Popular information: They solved chemistry's asymmetric mystery (the 75:25 pie numbers; the medicines quote)", "https://www.nobelprize.org/prizes/chemistry/2026/popular-information/"],
+    ["Scientific background, Nobel Committee for Chemistry (Frank's model quote, p. 4; Soai's runs, pp. 12-13; the mechanism debate, pp. 14-16)", "https://www.nobelprize.org/uploads/2026/10/advanced-chemistryprize2026.pdf"],
+    ["Sato, Urabe, Ishiguro, Shibata, Soai, Angew. Chem. Int. Ed. 2003, 42, 315 (0.00005% to more than 99.5% in three runs)", "https://doi.org/10.1002/anie.200390105"],
+    ["Soai et al., Tetrahedron: Asymmetry 2003, 14, 185 (37 runs: 19 and 18, excess 15-91%)", "https://doi.org/10.1016/s0957-4166(02)00791-7"],
+    ["Singleton and Vo, Org. Lett. 2003, 5, 4337 (54 runs: 27 and 27)", "https://doi.org/10.1021/ol035605p"],
+    ["Puchot, Samuel, Duñach, Zhao, Agami, Kagan, J. Am. Chem. Soc. 1986, 108, 2353 (non-linear effects)", "https://doi.org/10.1021/ja00269a036"],
+    ["Frank, Biochim. Biophys. Acta 1953, 11, 459 (the copying-plus-antagonism model)", "https://doi.org/10.1016/0006-3002(53)90082-1"],
+    ["Structures: PubChem (NCBI), compound 5950 (L-alanine)", "https://pubchem.ncbi.nlm.nih.gov/compound/5950"],
+    ["Structures: PubChem (NCBI), compound 71080 (D-alanine)", "https://pubchem.ncbi.nlm.nih.gov/compound/71080"],
+    ["The experiments behind the toy numbers: mirror-race, kagan-curve, soai-amplifier (READMEs on GitHub)", G],
+  ];
+  $("#sources").innerHTML = S.map(([t, u]) => `<li><a href="${u}">${t}</a></li>`).join("");
+})();
+
+// ---------- share image ----------
+if (OG && MOLV) {
+  const cv = $("#og-mol");
+  drawMolecules(cv, { yaw: 0.9, pitch: 0.25, stack: 0 }, { w: 500, h: 520, vertical: false, big: true });
+}
+</script>
+</body>
+</html>

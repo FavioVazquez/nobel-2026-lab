@@ -1,0 +1,82 @@
+{
+  "status": "final",
+  "label": "Educational demo made to show an open-source tool. Toy model, not research.",
+  "notes": "one published toy model of several; the real mechanism is still debated (SCI pp. 14-16)",
+  "what": "our toy model (layer 2), trend only: each round's whole product seeds the next; amounts are relative to the round-0 seed (= 1), dimensionless",
+  "K": 73.0582,
+  "turnovers_per_round": 42.8738,
+  "fitted": "K and turnovers_per_round are fitted toy numbers (to 57 % and 99 %); not Soai's values",
+  "soai_2003_note": "Soai 2003 (S03a): 0.00005 -> 57 -> 99 -> >99.5 % ee; the last is a lower bound",
+  "rounds": [
+    {
+      "round": 0,
+      "ee_pct": 5e-05,
+      "mirror_hand_share_pct": 50.0,
+      "one_hand_amount": 0.5,
+      "mirror_hand_amount": 0.5,
+      "log10_one_hand": -0.30103,
+      "log10_mirror_hand": -0.30103,
+      "soai_2003_pct": 5e-05
+    },
+    {
+      "round": 1,
+      "ee_pct": 57.0,
+      "mirror_hand_share_pct": 21.5,
+      "one_hand_amount": 34.4409,
+      "mirror_hand_amount": 9.43287,
+      "log10_one_hand": 1.5371,
+      "log10_mirror_hand": 0.97464,
+      "soai_2003_pct": 57.0
+    },
+    {
+      "round": 2,
+      "ee_pct": 99.0,
+      "mirror_hand_share_pct": 0.5,
+      "one_hand_amount": 1915.29,
+      "mirror_hand_amount": 9.62456,
+      "log10_one_hand": 3.2822,
+      "log10_mirror_hand": 0.98338,
+      "soai_2003_pct": 99.0
+    },
+    {
+      "round": 3,
+      "ee_pct": 99.9772,
+      "mirror_hand_share_pct": 0.0113994,
+      "one_hand_amount": 84443.6,
+      "mirror_hand_amount": 9.62716,
+      "log10_one_hand": 4.9266,
+      "log10_mirror_hand": 0.9835,
+      "soai_2003_pct": 99.5
+    },
+    {
+      "round": 4,
+      "ee_pct": 99.9995,
+      "mirror_hand_share_pct": 0.000259824,
+      "one_hand_amount": 3705270.0,
+      "mirror_hand_amount": 9.62722,
+      "log10_one_hand": 6.5688,
+      "log10_mirror_hand": 0.9835,
+      "soai_2003_pct": null
+    },
+    {
+      "round": 5,
+      "ee_pct": 100.0,
+      "mirror_hand_share_pct": 5.92208e-06,
+      "one_hand_amount": 162565000.0,
+      "mirror_hand_amount": 9.62722,
+      "log10_one_hand": 8.211,
+      "log10_mirror_hand": 0.9835,
+      "soai_2003_pct": null
+    },
+    {
+      "round": 6,
+      "ee_pct": 100.0,
+      "mirror_hand_share_pct": 1.34978e-07,
+      "one_hand_amount": 7132340000.0,
+      "mirror_hand_amount": 9.62712,
+      "log10_one_hand": 9.8532,
+      "log10_mirror_hand": 0.9835,
+      "soai_2003_pct": null
+    }
+  ]
+}

@@ -2,13 +2,13 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
-    <img alt="Nobel 2026 Lab. Hands-on demos of this year's Nobel Prizes, one card per prize. Medicine: a nerve cell lit by a pulse of blue light from the tip of an optical fibre. Physics: strings of light sensors in dark ice, a particle track with a cone of blue light behind it, and the sensors near the track lit up. A third, dashed slot holds the prizes still to come: Chemistry on 7 October and Economics on 12 October. Toy models, not research, not for lab or clinical use. Videos made with showtime, an open-source video studio for coding agents." src="assets/hero-light.svg" width="100%">
+    <img alt="Nobel 2026 Lab. Hands-on demos of this year's Nobel Prizes, one card per prize. Medicine: a nerve cell lit by a pulse of blue light from the tip of an optical fibre. Physics: strings of light sensors in dark ice, a particle track with a cone of blue light behind it, and the sensors near the track lit up. Chemistry: a left hand drawn solid orange and its mirror image, a right hand drawn hatched teal, on either side of a dashed mirror line, with three small orange molecules above the left hand and only one teal one above the right: one hand wins. A smaller dashed slot holds the prize still to come: Economics on 12 October. Toy models, not research, not for lab or clinical use. Videos made with showtime, an open-source video studio for coding agents." src="assets/hero-light.svg" width="100%">
   </picture>
 </p>
 
 > **Educational demos made to show an open-source tool. Not research, and not for any lab or clinical use.**
 
-<p align="center"><b>Live:</b> <a href="https://faviovazquez.github.io/nobel-2026-lab/">the lab's site</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/medicine/video/interactive/">the Medicine video that asks</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/physics/video/interactive/">the Physics video that asks</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/physics/glashow/">a real 6 PeV event in 3D</a></p>
+<p align="center"><b>Live:</b> <a href="https://faviovazquez.github.io/nobel-2026-lab/">the lab's site</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/medicine/video/interactive/">the Medicine video that asks</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/physics/video/interactive/">the Physics video that asks</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/physics/glashow/">a real 6 PeV event in 3D</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/chemistry/page/">the Chemistry page</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/chemistry/video/exports/nobel-2026-chemistry.mp4">the Chemistry video</a></p>
 
 <p align="center">
   <a href="#what-is-this"><b>What is this</b></a> ·
@@ -16,6 +16,7 @@
   <a href="#the-prizes"><b>The prizes</b></a> ·
   <a href="#medicine-the-stations"><b>Medicine</b></a> ·
   <a href="#physics-the-stations"><b>Physics</b></a> ·
+  <a href="#chemistry-the-stations"><b>Chemistry</b></a> ·
   <a href="#what-is-real-and-what-is-a-toy"><b>Real or toy?</b></a> ·
   <a href="#rerun-it-yourself"><b>Rerun it</b></a> ·
   <a href="#glossary"><b>Glossary</b></a>
@@ -29,7 +30,7 @@ Every October the Nobel Prizes are announced. This repository turns each prize i
 - **a claims ledger:** the exact sentences we use, each with its source and the date it was checked;
 - **toy models you can run** on your own computer;
 - **a page that asks you to guess first**, then shows what the toy model says;
-- **a video that stops and asks** you questions along the way.
+- **a short video** that tells the story; for Medicine and Physics, also a version that **stops and asks** you questions along the way.
 
 They are teaching toys. They are not science, and nothing here is a result.
 
@@ -43,7 +44,7 @@ Every video in this lab, including the versions that stop and ask, was made with
 |---|---|---|---|
 | Medicine | Light-gated ion channels and optogenetics: Karl Deisseroth, Peter Hegemann, Georg Nagel (announced 5 October) | [2026/medicine](2026/medicine/README.md) | done: facts, claims ledger (27 claims), toy models, page and video |
 | Physics | Neutrino astronomy: Francis Halzen, for the IceCube Neutrino Observatory (announced 6 October) | [2026/physics](2026/physics/README.md) | done: facts, claims ledger (41 claims), toy models, a replay of a real event, page and video |
-| Chemistry | to be announced on 7 October | none yet | coming |
+| Chemistry | Mirror-image molecules: Henri B. Kagan and Kenso Soai, for non-linear effects and autocatalysis in asymmetric synthesis (announced 7 October) | [2026/chemistry](2026/chemistry/README.md) | done: facts, claims ledger (39 claims), toy models, page and video |
 | Economics | to be announced on 12 October | none yet | coming |
 
 The Nobel announcements run from 5 to 12 October 2026 ([nobelprize.org](https://www.nobelprize.org/prizes/medicine/2026/press-release/)). A folder is added only when its prize has been announced and its facts are sourced. The year index is in [2026/README.md](2026/README.md).
@@ -167,6 +168,56 @@ The 2026 Nobel Prize in Physics went to Francis Halzen, "for decisive contributi
 
 </details>
 
+## Chemistry: the stations
+
+The 2026 Nobel Prize in Chemistry went to Henri B. Kagan and Kenso Soai, "for the discovery of non-linear effects and autocatalysis in asymmetric organic synthesis." Many molecules come in two mirror-image forms, like a left and a right hand, and life uses only one. Kagan and Soai showed how a reaction can be made to choose one hand. Six stops; the details are in [2026/chemistry](2026/chemistry/README.md).
+
+<table>
+  <tr>
+    <td width="96" valign="top"><img src="assets/icons/station-mirror.svg" alt="Icon: a molecule and its mirror image on either side of a dashed mirror line" width="72"></td>
+    <td valign="top"><b>1. Mirror molecules</b> <i>(ready)</i><br>
+    Your hands, and the amino acid alanine, next to their mirror images. Life uses one hand. See it below.</td>
+  </tr>
+  <tr>
+    <td width="96" valign="top"><img src="assets/icons/station-kagan.svg" alt="Icon: a curve bulging above a straight dashed line" width="72"></td>
+    <td valign="top"><b>2. Kagan's curve</b> <i>(ready)</i><br>
+    Mix both hands in a catalyst and the product's lead of one hand (ee) bends away from the straight line. In our toy model (trend only), the committee's 75:25 ligand, a 50% lead, gives a product with an 80% lead. Code and results: <a href="2026/chemistry/kagan-curve/README.md">kagan-curve</a>.</td>
+  </tr>
+  <tr>
+    <td width="96" valign="top"><img src="assets/icons/station-soai.svg" alt="Icon: an orange molecule making two copies of itself" width="72"></td>
+    <td valign="top"><b>3. Soai's amplifier</b> <i>(ready)</i><br>
+    A molecule that copies its own hand: published kinetic models set against Soai's 2003 numbers. In our toy model (trend only), pairs formed at random (K = 4) would need about 1.7 million turnovers to reach Soai's 57%; a fitted toy (K = 73) gives 57%, 99%, then 99.98%. Code and results: <a href="2026/chemistry/soai-amplifier/README.md">soai-amplifier</a>.</td>
+  </tr>
+  <tr>
+    <td width="96" valign="top"><img src="assets/icons/station-race.svg" alt="Icon: an orange dot and a hatched teal dot racing to a finish line, the orange one ahead" width="72"></td>
+    <td valign="top"><b>4. The mirror race</b> <i>(ready)</i><br>
+    Frank's 1953 model, run molecule by molecule from an exact 50:50 start, 10,000 times. In our toy model (trend only, for our chosen rates), copying alone gives a flat spread; with mutual antagonism 99.7% of runs end with a lead past 90%, about half for each hand. Code and results: <a href="2026/chemistry/mirror-race/README.md">mirror-race</a>.</td>
+  </tr>
+  <tr>
+    <td width="96" valign="top"><img src="assets/icons/station-page.svg" alt="Icon: a web page with a slider" width="72"></td>
+    <td valign="top"><b>5. The interactive page</b> <i>(ready)</i><br>
+    Guess first, then see what the toy models say. <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/chemistry/page/">Try it online</a>, or open <a href="2026/chemistry/page/index.html"><code>2026/chemistry/page/index.html</code></a> after cloning.</td>
+  </tr>
+  <tr>
+    <td width="96" valign="top"><img src="assets/icons/station-video.svg" alt="Icon: a video frame with a play button" width="72"></td>
+    <td valign="top"><b>6. The video</b> <i>(ready)</i><br>
+    A 2:30 explainer that tells the story, from Frank's recipe to Kagan's bend, Soai's copier and our mirror race; it asks no questions. Every fact in it comes from the <a href="2026/chemistry/CLAIMS.md">claims ledger</a>. <a href="2026/chemistry/video/exports/nobel-2026-chemistry.mp4">Watch the MP4</a>. Files and how it was made: <a href="2026/chemistry/video/README.md">video</a>.</td>
+  </tr>
+</table>
+
+<details open>
+<summary><b>Station 1 in pictures: mirror molecules</b></summary>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/diagram-mirror-hands-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/diagram-mirror-hands-light.svg">
+    <img alt="Two hands and an amino acid, each next to its mirror image across a dashed mirror line. Top: a left hand, solid orange, and its mirror image, a right hand, hatched teal. Bottom: a ball-and-stick model of alanine, a central carbon atom holding four different groups (H, NH2, COOH and CH3) in a tetrahedral shape. On the left is L-alanine, the form in our proteins; on the right its mirror image, D-alanine. Same atoms, joined the same way, yet one cannot be laid on top of the other. Our own drawing, not to scale." src="assets/diagram-mirror-hands-light.svg" width="560">
+  </picture>
+</p>
+
+</details>
+
 ## What is real, and what is a toy
 
 <table>
@@ -177,7 +228,7 @@ The 2026 Nobel Prize in Physics went to Francis Halzen, "for decisive contributi
   </tr>
   <tr>
     <td valign="top"><b>Every prize</b></td>
-    <td valign="top">The prize, the people, the dates and the papers. Every sentence is sourced in the prize's FACTS.md and checked in its CLAIMS.md: <a href="2026/medicine/CLAIMS.md">Medicine</a>, <a href="2026/physics/CLAIMS.md">Physics</a>.</td>
+    <td valign="top">The prize, the people, the dates and the papers. Every sentence is sourced in the prize's FACTS.md and checked in its CLAIMS.md: <a href="2026/medicine/CLAIMS.md">Medicine</a>, <a href="2026/physics/CLAIMS.md">Physics</a>, <a href="2026/chemistry/CLAIMS.md">Chemistry</a>.</td>
     <td valign="top">Every model we built. The outputs are for learning. They are not checked against experiments, and they must not be used to plan an experiment, a device or a treatment. Each model's README lists every simplification.</td>
   </tr>
   <tr>
@@ -189,6 +240,11 @@ The 2026 Nobel Prize in Physics went to Francis Halzen, "for decisive contributi
     <td valign="top"><b>Physics</b></td>
     <td valign="top">IceCube's published results and numbers, such as the size of the detector and the energy of the 6 PeV event, each with a link to its paper or page. The public event data in the 3D replay: IceCube's own data release for that event (DOI <a href="https://doi.org/10.21234/gr2021">10.21234/gr2021</a>), replayed at its recorded times. The drawing is ours, not an official IceCube visualisation.</td>
     <td valign="top">Our light, detector and rate models: how the particles make light and how it travels through the ice; simplified strings, sensors and ice; and how many neutrinos a toy detector would catch. They are not predictions, and they are not IceCube results.</td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Chemistry</b></td>
+    <td valign="top">The published numbers we quote, such as the Nobel Committee's 75:25 worked example and Soai's 2003 runs (about 0.00005%, then 57%, 99% and more than 99.5%), each with its source in the ledger. Textbook level only: no lab procedures, amounts or conditions anywhere.</td>
+    <td valign="top">Kagan's curve, Soai's amplifier and the mirror race: published mathematical models with numbers we chose. They show the shape of the ideas. They are not the laureates' results, and they do not explain how life chose its hand.</td>
   </tr>
 </table>
 
@@ -215,7 +271,8 @@ Everything runs on an ordinary laptop processor, with no GPU and no accounts. Af
   ```
 
 - **Physics**, the 6 PeV replay: rebuilt from IceCube's data release, see [glashow](2026/physics/glashow/README.md).
-- The pages need nothing: open `2026/medicine/page/index.html` or `2026/physics/page/index.html` in a browser.
+- **Chemistry**, Kagan's curve, Soai's amplifier and the mirror race: each runs in seconds, from its own folder; the steps are in [2026/chemistry](2026/chemistry/README.md#rerun-and-check).
+- The pages need nothing: open `2026/medicine/page/index.html`, `2026/physics/page/index.html` or `2026/chemistry/page/index.html` in a browser.
 - Check every link, picture and source in this repository, offline: `python3 tools/check_links.py`
 - Rebuild the pictures: `python3 tools/make_diagrams.py`
 
@@ -237,6 +294,12 @@ Everything runs on an ordinary laptop processor, with no GPU and no accounts. Af
 | Cherenkov light | The faint blue light given off by a charged particle that moves through ice faster than light travels in ice. It is what IceCube's sensors record. |
 | PeV | Petaelectronvolt, a unit of energy: a million billion electronvolts. The event in station 4 had about 6 PeV. |
 | Sigma (σ) | A way to say how unlikely a result would be if it were only chance. More sigma means less likely to be a fluke. The Nobel Committee's texts call 5 sigma the threshold for a discovery. |
+| Chirality | Handedness. A chiral molecule differs from its mirror image, like a left and a right hand: you cannot lay one on top of the other. |
+| Enantiomer | One of the two mirror-image forms of a chiral molecule. |
+| ee (enantiomeric excess) | How far a mix of the two forms is from 50:50: the share of one form minus the share of the other. A 50:50 mix has 0%, one form alone 100%. |
+| Autocatalysis | A reaction whose product speeds up its own formation. In Soai's reaction, the product copies its own hand. |
+| Non-linear effect | When the product's ee is not in proportion to the catalyst's ee: the curve bends away from the straight line. Kagan found it in 1986. |
+| Homochiral | Of one hand only. Life is homochiral: the amino acids in our proteins are all one mirror form. |
 | Toy model | A deliberately simple model that shows an idea. It is good for learning and not for decisions. |
 
 ## Licence and credit

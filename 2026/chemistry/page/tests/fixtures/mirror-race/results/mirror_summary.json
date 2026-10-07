@@ -1,0 +1,56 @@
+{
+ "status": "fixture",
+ "N": 10000,
+ "runs": 10000,
+ "model": {
+  "k0": 1.0,
+  "k1": 1.0,
+  "k2_strong": 100.0,
+  "ee_definition": "(one - mirror) / all product made, mixed pairs count one of each hand"
+ },
+ "copy_only": {
+  "std_ee": 0.577,
+  "std_predicted": 0.5774,
+  "flatness_p": 0.5,
+  "p_one_hand_wins": 0.501
+ },
+ "with_antagonism": {
+  "frac_abs_ee_above_90": 0.97,
+  "one_hand_wins": 5012,
+  "mirror_hand_wins": 4988,
+  "binomial_p": 0.81
+ },
+ "stopped_early": {
+  "read_after_fraction_of_A_used": 0.05,
+  "median_abs_ee": 0.55,
+  "range_abs_ee": [
+   0.05,
+   0.99
+  ],
+  "q05_q95_abs_ee": [
+   0.1,
+   0.98
+  ]
+ },
+ "real": {
+  "soai_2003": {
+   "runs": 37,
+   "one": 19,
+   "mirror": 18,
+   "ee_range_pct": [
+    15,
+    91
+   ],
+   "binomial_p": 1.0
+  },
+  "singleton_vo_2003": {
+   "runs": 54,
+   "one": 27,
+   "mirror": 27,
+   "binomial_p": 1.0
+  }
+ },
+ "seeded": {},
+ "sources": {},
+ "label": "placeholder for tests, not a result"
+}

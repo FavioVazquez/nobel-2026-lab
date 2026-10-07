@@ -1,0 +1,5 @@
+# All BSD-licensed (MIT-compatible). Same pins as 2026/physics/kilometre. Python 3.11.
+numpy==1.26.4
+scipy==1.13.1
+matplotlib==3.9.2
+pytest==8.3.3
