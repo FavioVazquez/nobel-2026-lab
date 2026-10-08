@@ -1,0 +1,1209 @@
+{
+ "status": "fixture",
+ "label": "Educational demos made to show an open-source tool. Not research.",
+ "sources": {
+  "papyrus": {
+   "cite": "B. P. Grenfell and A. S. Hunt, The Oxyrhynchus Papyri, Part X (1914)",
+   "url": "https://archive.org/details/oxyrhynchuspapyr10gren",
+   "licence": "public domain"
+  },
+  "wharton": {
+   "cite": "H. T. Wharton, Sappho: Memoir, Text, Selected Renderings and a Literal Translation, 5th ed. (London: John Lane, 1908), Project Gutenberg eBook #57390",
+   "url": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html",
+   "licence": "public domain",
+   "local_copy": "sources/pg57390-images.html",
+   "sha256": "bf616822d86ef89b75aa0ee68698568a81a9f3620edf642af73daaa4545cb247"
+  },
+  "roberts": {
+   "cite": "W. Rhys Roberts, Longinus On the Sublime: the Greek text edited after the Paris manuscript (Cambridge University Press, 1899)",
+   "url": "https://archive.org/details/longinusonsubli00waygoog",
+   "licence": "public domain"
+  },
+  "concordance": {
+   "file": "sources/concordance_wharton_voigt.csv",
+   "numbers_from": "https://digitalsappho.org/fragments/",
+   "counts": {
+    "hand": 36,
+    "auto": 71,
+    "gap": 45,
+    "probable": 18
+   }
+  }
+ },
+ "papyrus": {
+  "title": "P.Oxy. 1231 fr. 1 col. i 13-34 = Sappho fr. 16 Voigt (= Wharton 13, in part)",
+  "printed_by": "B. P. Grenfell and A. S. Hunt, The Oxyrhynchus Papyri, Part X (London, 1914), pp. 23, 25",
+  "source_url": "https://archive.org/details/oxyrhynchuspapyr10gren",
+  "transcription": "typed by hand from the page images, second pass character by character (2026-10-08)",
+  "lines": [
+   {
+    "line": 13,
+    "text": "[Ο]ἰ μὲν ἰππήων στρότον οἰ δὲ πέσδων",
+    "spans": [
+     {
+      "text": "[Ο]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "ἰ μὲν ἰππήων στρότον οἰ δὲ πέσδων",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 13,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 14,
+    "text": "οἰ δὲ νάων φαῖσ’ ἐπ[ὶ] γᾶν μέλαι[ν]αν",
+    "spans": [
+     {
+      "text": "οἰ δὲ νάων φαῖσ’ ἐπ",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "[ὶ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": " γᾶν μέλαι",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "[ν]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "αν",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 14,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 15,
+    "text": "[ἔ]μμεναι κάλλιστον, ἔγω δὲ κῆν’ ὄτ-",
+    "spans": [
+     {
+      "text": "[ἔ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "μμεναι κάλλιστον, ἔγω δὲ κῆν’ ὄτ-",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 15,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 16,
+    "text": "τω τις ἔραται.",
+    "spans": [
+     {
+      "text": "τω τις ἔραται.",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 16,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 17,
+    "text": "[πά]γχυ δ’ εὔμαρες σύνετον πόησαι",
+    "spans": [
+     {
+      "text": "[πά]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "γχυ δ’ εὔμαρες σύνετον πόησαι",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 17,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 18,
+    "text": "[π]άντι τ[ο]ῦτ’· ἀ γὰρ πόλυ περσκόπει[σ]α",
+    "spans": [
+     {
+      "text": "[π]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "άντι τ",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "[ο]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "ῦτ’· ἀ γὰρ πόλυ περσκόπει",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "[σ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "α",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 18,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 19,
+    "text": "[κάλ]λος [ἀνθ]ρώπων Ἐλένα [τὸ]ν ἄνδρα",
+    "spans": [
+     {
+      "text": "[κάλ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "λος ",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "[ἀνθ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "ρώπων Ἐλένα ",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "[τὸ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "ν ἄνδρα",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 19,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 20,
+    "text": "[κρίννεν ἄρ]ιστον,",
+    "spans": [
+     {
+      "text": "[κρίννεν ἄρ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "ιστον,",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 20,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   }
+  ],
+  "english_1914": {
+   "text": "‘Some say that the fairest thing on the black earth is a host of horsemen, others of foot, others of ships; but I say that is fairest which is the object of one’s desire. And it is quite easy to make this plain to all; for Helen observing well the beauty of men judged the best to be that one who destroyed the whole glory of Troy, nor bethought herself at all of child or parents dear, but through love Cypris led her astray. [Verily the wills of mortals are easily bent when they are moved by vain thoughts.] And I now have called to mind Anactoria, far away, whose gracious step and radiant glance I would rather see than the chariots of the Lydians and the charge of accoutred knights. We know well that this cannot come to pass among men . . .’",
+   "translator": "B. P. Grenfell and A. S. Hunt (1914), literal prose",
+   "anchor": {
+    "page": 40,
+    "note": "13-34",
+    "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0064.jp2"
+   },
+   "bracketed": "[Verily the wills of mortals are easily bent when they are moved by vain thoughts.]",
+   "bracket_meaning": "G&H's own brackets: their rendering of a conjectured restoration of lines 25-6"
+  }
+ },
+ "sappho31": {
+  "title": "Sappho 31 Voigt = Wharton 2 (Bergk 2), 'That man seems to me peer of gods'",
+  "greek_lines": [
+   {
+    "n": 1,
+    "text": "Φαίνεταί μοι κήνος ἴσος θέοισιν",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 1
+    }
+   },
+   {
+    "n": 2,
+    "text": "ἔμμεν ὤνηρ, ὄστις ἐναντίος τοι",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 2
+    }
+   },
+   {
+    "n": 3,
+    "text": "ἰζάνει, καὶ πλασίον ἆδυ φωνεύ-",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 3
+    }
+   },
+   {
+    "n": 4,
+    "text": "σας ὑπακούει",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 4
+    }
+   },
+   {
+    "n": 5,
+    "text": "καὶ γελαίσας ἰμερόεν, τό μοι μάν",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 5
+    }
+   },
+   {
+    "n": 6,
+    "text": "καρδίαν ἐν στήθεσιν ἐπτόασεν·",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 6
+    }
+   },
+   {
+    "n": 7,
+    "text": "ὡς γὰρ εὔιδον βροχέως σε, φώνας",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 7
+    }
+   },
+   {
+    "n": 8,
+    "text": "οὐδὲν ἔτ' εἴκει·",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 8
+    }
+   },
+   {
+    "n": 9,
+    "text": "ἀλλὰ κὰμ μὲν γλῶσσα ἔαγε, λέπτον δ'",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 9
+    }
+   },
+   {
+    "n": 10,
+    "text": "αὔτικα χρῷ πῦρ ὐπαδεδρόμακεν,",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 10
+    }
+   },
+   {
+    "n": 11,
+    "text": "ὀππάτεσσι δ' οὐδὲν ὄρημ', ἐπιρρόμ-",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 11
+    }
+   },
+   {
+    "n": 12,
+    "text": "βεισι δ' ἄκουαι.",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 12
+    }
+   },
+   {
+    "n": 13,
+    "text": "ἀ δέ μίδρως κακχέεται, τρόμος δέ",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 13
+    }
+   },
+   {
+    "n": 14,
+    "text": "παῖσαν ἄγρει, χλωροτέρα δὲ ποίας",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 14
+    }
+   },
+   {
+    "n": 15,
+    "text": "ἔμμι, τεθνάκην δ' ὀλίγω 'πιδεύης",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 15
+    }
+   },
+   {
+    "n": 16,
+    "text": "φαίνομαι [ἄλλα].",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 16
+    }
+   },
+   {
+    "n": 17,
+    "text": "ἀλλὰ πᾶν τόλματον, [ἐπεὶ καὶ πένητα].",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 17
+    }
+   }
+  ],
+  "stanzas": [
+   [
+    1,
+    2,
+    3,
+    4
+   ],
+   [
+    5,
+    6,
+    7,
+    8
+   ],
+   [
+    9,
+    10,
+    11,
+    12
+   ],
+   [
+    13,
+    14,
+    15,
+    16
+   ],
+   [
+    17
+   ]
+  ],
+  "english_literal": {
+   "text": "That man seems to me peer of gods, who sits in thy presence, and hears close to him thy sweet speech and lovely laughter; that indeed makes my heart flutter in my bosom. For when I see thee but a little, I have no utterance left, my tongue is broken down, and straightway a subtle fire has run under my skin, with my eyes I have no sight, my ears ring, sweat pours down, and a trembling seizes all my body; I am paler than grass, and seem in my madness little better than one dead. But I must dare all, since one so poor ...",
+   "translator": "H. T. Wharton (literal prose, 1885-1908)",
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2"
+  },
+  "quoted_in": "[Longinus], On the Sublime, chapter 10, sections 1-2",
+  "cut_point": {
+   "after_line": 17,
+   "after_text": "ἀλλὰ πᾶν τόλματον, [ἐπεὶ καὶ πένητα].",
+   "stanza": 5,
+   "line_in_stanza": 1,
+   "what_happens": "The quotation in On the Sublime runs through four full Sapphic stanzas and the first line of a fifth, then the critic's own words resume ('Are you not amazed ...', section 3). Nothing more of the poem survives.",
+   "uncertain_words": {
+    "wharton_brackets": [
+     "[ἄλλα]",
+     "[ἐπεὶ καὶ πένητα]"
+    ],
+    "note": "Wharton prints these words in square brackets. Rhys Roberts (1899, Appendix A, pp. 172-173) reports that Bergk bracketed 'ἐπεὶ καὶ πένητα' because the words may be Longinus' own, not Sappho's; Crusius (1897) ends the ode at 'φαίνομαι ἄλλα'."
+   },
+   "evidence": [
+    {
+     "cite": "W. Rhys Roberts, Longinus On the Sublime: the Greek text edited after the Paris manuscript (Cambridge University Press, 1899)",
+     "url": "https://archive.org/details/longinusonsubli00waygoog",
+     "page": 70,
+     "scan_leaf": 90,
+     "what": "Greek text: lines 1-16 printed as four stanzas, then line 17 'ἀλλὰ πᾶν τολματόν, ἐπεὶ καὶ πένητα' set apart, then section 3 'οὐ θαυμάζεις ...' (Longinus' words)"
+    },
+    {
+     "cite": "W. Rhys Roberts, Longinus On the Sublime: the Greek text edited after the Paris manuscript (Cambridge University Press, 1899)",
+     "url": "https://archive.org/details/longinusonsubli00waygoog",
+     "page": 71,
+     "scan_leaf": 91,
+     "what": "English (verse by A. S. Way): four stanzas, then section 3 'Are you not amazed ...'"
+    },
+    {
+     "cite": "W. Rhys Roberts, Longinus On the Sublime: the Greek text edited after the Paris manuscript (Cambridge University Press, 1899)",
+     "url": "https://archive.org/details/longinusonsubli00waygoog",
+     "page": "172-173",
+     "what": "Appendix A, textual note on p. 70: Bergk's brackets and Crusius' ending"
+    }
+   ]
+  }
+ },
+ "wharton_fragments": [
+  {
+   "wharton_no": 1,
+   "shares_entry_with": null,
+   "voigt_no": "1",
+   "voigt_status": "hand",
+   "source_author": "Dionysius of Halicarnassus",
+   "words": 131,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag1"
+  },
+  {
+   "wharton_no": 2,
+   "shares_entry_with": null,
+   "voigt_no": "31",
+   "voigt_status": "hand",
+   "source_author": "Longinus",
+   "words": 77,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2"
+  },
+  {
+   "wharton_no": 3,
+   "shares_entry_with": null,
+   "voigt_no": "34",
+   "voigt_status": "auto",
+   "source_author": "Eustathius",
+   "words": 17,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag3"
+  },
+  {
+   "wharton_no": 4,
+   "shares_entry_with": null,
+   "voigt_no": "2",
+   "voigt_status": "auto",
+   "source_author": "Hermogenes",
+   "words": 12,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag4"
+  },
+  {
+   "wharton_no": 5,
+   "shares_entry_with": null,
+   "voigt_no": "2",
+   "voigt_status": "hand",
+   "source_author": "Athenaeus",
+   "words": 10,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag5"
+  },
+  {
+   "wharton_no": 6,
+   "shares_entry_with": null,
+   "voigt_no": "35",
+   "voigt_status": "auto",
+   "source_author": "Strabo",
+   "words": 7,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag6"
+  },
+  {
+   "wharton_no": 7,
+   "shares_entry_with": 8,
+   "voigt_no": "40",
+   "voigt_status": "auto",
+   "source_author": "Apollonius Dyscolus",
+   "words": 9,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag7"
+  },
+  {
+   "wharton_no": 8,
+   "shares_entry_with": 7,
+   "voigt_no": "40",
+   "voigt_status": "auto",
+   "source_author": "Apollonius Dyscolus",
+   "words": 9,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag7"
+  },
+  {
+   "wharton_no": 9,
+   "shares_entry_with": null,
+   "voigt_no": "33",
+   "voigt_status": "auto",
+   "source_author": "Apollonius Dyscolus",
+   "words": 8,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag9"
+  },
+  {
+   "wharton_no": 10,
+   "shares_entry_with": null,
+   "voigt_no": "32",
+   "voigt_status": "auto",
+   "source_author": "Apollonius Dyscolus",
+   "words": 8,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag10"
+  },
+  {
+   "wharton_no": 11,
+   "shares_entry_with": null,
+   "voigt_no": "160",
+   "voigt_status": "auto",
+   "source_author": "Athenaeus",
+   "words": 8,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag11"
+  },
+  {
+   "wharton_no": 12,
+   "shares_entry_with": null,
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "source_author": "Etymologicum Magnum",
+   "words": 8,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag12"
+  },
+  {
+   "wharton_no": 13,
+   "shares_entry_with": null,
+   "voigt_no": "16",
+   "voigt_status": "hand",
+   "source_author": "Apollonius Dyscolus",
+   "words": 6,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag13"
+  },
+  {
+   "wharton_no": 14,
+   "shares_entry_with": null,
+   "voigt_no": "41",
+   "voigt_status": "hand",
+   "source_author": "Apollonius Dyscolus",
+   "words": 8,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag14"
+  },
+  {
+   "wharton_no": 15,
+   "shares_entry_with": null,
+   "voigt_no": "26",
+   "voigt_status": "hand",
+   "source_author": "Apollonius Dyscolus",
+   "words": 5,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag15"
+  },
+  {
+   "wharton_no": 16,
+   "shares_entry_with": null,
+   "voigt_no": "42",
+   "voigt_status": "auto",
+   "source_author": "Scholiast on Pindar",
+   "words": 11,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag16"
+  },
+  {
+   "wharton_no": 17,
+   "shares_entry_with": null,
+   "voigt_no": "37",
+   "voigt_status": "hand",
+   "source_author": "Etymologicum Magnum",
+   "words": 10,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag17"
+  },
+  {
+   "wharton_no": 18,
+   "shares_entry_with": null,
+   "voigt_no": "123",
+   "voigt_status": "hand",
+   "source_author": "Ammonius",
+   "words": 5,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag18"
+  },
+  {
+   "wharton_no": 19,
+   "shares_entry_with": null,
+   "voigt_no": "39",
+   "voigt_status": "auto",
+   "source_author": "Scholiast on Aristophanes",
+   "words": 8,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag19"
+  },
+  {
+   "wharton_no": 20,
+   "shares_entry_with": null,
+   "voigt_no": "152",
+   "voigt_status": "hand",
+   "source_author": "Scholiast on Apollonius Rhodius",
+   "words": 3,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag20"
+  },
+  {
+   "wharton_no": 21,
+   "shares_entry_with": null,
+   "voigt_no": "129a",
+   "voigt_status": "hand",
+   "source_author": "Apollonius Dyscolus",
+   "words": 4,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag21"
+  },
+  {
+   "wharton_no": 22,
+   "shares_entry_with": null,
+   "voigt_no": "129b",
+   "voigt_status": "hand",
+   "source_author": "Apollonius Dyscolus",
+   "words": 7,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag22"
+  },
+  {
+   "wharton_no": 23,
+   "shares_entry_with": null,
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "source_author": "Apollonius Dyscolus",
+   "words": 4,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag23"
+  },
+  {
+   "wharton_no": 24,
+   "shares_entry_with": null,
+   "voigt_no": "45",
+   "voigt_status": "hand",
+   "source_author": "Apollonius Dyscolus",
+   "words": 3,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag24"
+  },
+  {
+   "wharton_no": 25,
+   "shares_entry_with": null,
+   "voigt_no": "36",
+   "voigt_status": "auto",
+   "source_author": "Etymologicum Magnum",
+   "words": 4,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag25"
+  },
+  {
+   "wharton_no": 26,
+   "shares_entry_with": null,
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "source_author": "Athenaeus",
+   "words": 17,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag26"
+  },
+  {
+   "wharton_no": 27,
+   "shares_entry_with": null,
+   "voigt_no": "158",
+   "voigt_status": "auto",
+   "source_author": "Plutarch",
+   "words": 7,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag27"
+  },
+  {
+   "wharton_no": 28,
+   "shares_entry_with": null,
+   "voigt_no": "137",
+   "voigt_status": "auto",
+   "source_author": "Aristotle",
+   "words": 25,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag28"
+  },
+  {
+   "wharton_no": 29,
+   "shares_entry_with": null,
+   "voigt_no": "138",
+   "voigt_status": "auto",
+   "source_author": "Athenaeus",
+   "words": 9,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag29"
+  },
+  {
+   "wharton_no": 30,
+   "shares_entry_with": null,
+   "voigt_no": "143",
+   "voigt_status": "auto",
+   "source_author": "Athenaeus",
+   "words": 6,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag30"
+  },
+  {
+   "wharton_no": 31,
+   "shares_entry_with": null,
+   "voigt_no": "142",
+   "voigt_status": "auto",
+   "source_author": "Athenaeus",
+   "words": 8,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag31"
+  },
+  {
+   "wharton_no": 32,
+   "shares_entry_with": null,
+   "voigt_no": "147",
+   "voigt_status": "hand",
+   "source_author": "Dio Chrysostom",
+   "words": 6,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag32"
+  },
+  {
+   "wharton_no": 33,
+   "shares_entry_with": null,
+   "voigt_no": "49",
+   "voigt_status": "auto",
+   "source_author": "Hephaestion",
+   "words": 7,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag33"
+  },
+  {
+   "wharton_no": 34,
+   "shares_entry_with": null,
+   "voigt_no": "49",
+   "voigt_status": "auto",
+   "source_author": "Plutarch",
+   "words": 6,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag34"
+  },
+  {
+   "wharton_no": 35,
+   "shares_entry_with": null,
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "source_author": "Herodian",
+   "words": 5,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag35"
+  },
+  {
+   "wharton_no": 36,
+   "shares_entry_with": null,
+   "voigt_no": "51",
+   "voigt_status": "auto",
+   "source_author": "Chrysippus",
+   "words": 8,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag36"
+  },
+  {
+   "wharton_no": 37,
+   "shares_entry_with": null,
+   "voigt_no": "52",
+   "voigt_status": "auto",
+   "source_author": "Herodian",
+   "words": 7,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag37"
+  },
+  {
+   "wharton_no": 38,
+   "shares_entry_with": null,
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "source_author": "Etymologicum Magnum",
+   "words": 6,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag38"
+  },
+  {
+   "wharton_no": 39,
+   "shares_entry_with": null,
+   "voigt_no": "136",
+   "voigt_status": "auto",
+   "source_author": "Scholiast on Sophocles",
+   "words": 4,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag39"
+  },
+  {
+   "wharton_no": 40,
+   "shares_entry_with": null,
+   "voigt_no": "130",
+   "voigt_status": "auto",
+   "source_author": "Hephaestion",
+   "words": 9,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag40"
+  },
+  {
+   "wharton_no": 41,
+   "shares_entry_with": null,
+   "voigt_no": "131",
+   "voigt_status": "auto",
+   "source_author": "Hephaestion",
+   "words": 11,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag41"
+  },
+  {
+   "wharton_no": 42,
+   "shares_entry_with": null,
+   "voigt_no": "47",
+   "voigt_status": "hand",
+   "source_author": "Maximus Tyrius",
+   "words": 10,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag42"
+  },
+  {
+   "wharton_no": 43,
+   "shares_entry_with": null,
+   "voigt_no": "149",
+   "voigt_status": "auto",
+   "source_author": "Apollonius Dyscolus",
+   "words": 4,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag43"
+  },
+  {
+   "wharton_no": 44,
+   "shares_entry_with": null,
+   "voigt_no": "101",
+   "voigt_status": "hand",
+   "source_author": "Athenaeus",
+   "words": 14,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag44"
+  },
+  {
+   "wharton_no": 45,
+   "shares_entry_with": null,
+   "voigt_no": "118",
+   "voigt_status": "auto",
+   "source_author": "Hermogenes",
+   "words": 7,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag45"
+  },
+  {
+   "wharton_no": 46,
+   "shares_entry_with": null,
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "source_author": "Athenaeus",
+   "words": 6,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag46"
+  },
+  {
+   "wharton_no": 47,
+   "shares_entry_with": null,
+   "voigt_no": "178",
+   "voigt_status": "hand",
+   "source_author": "Zenobius",
+   "words": 2,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag47"
+  },
+  {
+   "wharton_no": 48,
+   "shares_entry_with": null,
+   "voigt_no": "144",
+   "voigt_status": "hand",
+   "source_author": "Choeroboscus",
+   "words": 4,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag48"
+  },
+  {
+   "wharton_no": 49,
+   "shares_entry_with": null,
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "source_author": "Athenaeus",
+   "words": 2,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag49"
+  },
+  {
+   "wharton_no": 50,
+   "shares_entry_with": null,
+   "voigt_no": "46",
+   "voigt_status": "auto",
+   "source_author": "Herodian",
+   "words": 7,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag50"
+  },
+  {
+   "wharton_no": 51,
+   "shares_entry_with": null,
+   "voigt_no": "141",
+   "voigt_status": "auto",
+   "source_author": "Athenaeus",
+   "words": 26,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag51"
+  },
+  {
+   "wharton_no": 52,
+   "shares_entry_with": null,
+   "voigt_no": "154",
+   "voigt_status": "hand",
+   "source_author": "Hephaestion",
+   "words": 17,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag52"
+  },
+  {
+   "wharton_no": 53,
+   "shares_entry_with": null,
+   "voigt_no": "154",
+   "voigt_status": "hand",
+   "source_author": "Hephaestion",
+   "words": 11,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag53"
+  },
+  {
+   "wharton_no": 54,
+   "shares_entry_with": null,
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "source_author": "Hephaestion",
+   "words": 16,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag54"
+  },
+  {
+   "wharton_no": 55,
+   "shares_entry_with": null,
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "source_author": "Herodian",
+   "words": 5,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag55"
+  },
+  {
+   "wharton_no": 56,
+   "shares_entry_with": null,
+   "voigt_no": "166",
+   "voigt_status": "auto",
+   "source_author": "Etymologicum Magnum",
+   "words": 10,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag56"
+  },
+  {
+   "wharton_no": 57,
+   "shares_entry_with": null,
+   "voigt_no": "151",
+   "voigt_status": "auto",
+   "source_author": "Etymologicum Magnum",
+   "words": 5,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag57"
+  },
+  {
+   "wharton_no": 58,
+   "shares_entry_with": null,
+   "voigt_no": "133",
+   "voigt_status": "auto",
+   "source_author": "Hephaestion",
+   "words": 5,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag58"
+  },
+  {
+   "wharton_no": 59,
+   "shares_entry_with": null,
+   "voigt_no": "133",
+   "voigt_status": "auto",
+   "source_author": "Hephaestion",
+   "words": 5,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag59"
+  },
+  {
+   "wharton_no": 60,
+   "shares_entry_with": null,
+   "voigt_no": "128",
+   "voigt_status": "auto",
+   "source_author": "Hephaestion",
+   "words": 7,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag60"
+  }
+ ],
+ "quoters_network": {
+  "label": "as printed by Wharton, 1908",
+  "nodes_authors": [
+   {
+    "author": "Hephaestion",
+    "kind": "metrician",
+    "fragments": [
+     33,
+     40,
+     41,
+     52,
+     53,
+     54,
+     58,
+     59,
+     60,
+     62,
+     76,
+     77,
+     82,
+     84,
+     85,
+     87,
+     88,
+     90,
+     91,
+     98,
+     99,
+     103,
+     104
+    ],
+    "n_fragments": 23,
+    "n_first_named": 23
+   },
+   {
+    "author": "Athenaeus",
+    "kind": "anthology or miscellany",
+    "fragments": [
+     5,
+     11,
+     26,
+     29,
+     30,
+     31,
+     44,
+     46,
+     49,
+     51,
+     56,
+     67,
+     70,
+     78,
+     79,
+     112,
+     121,
+     138,
+     139,
+     154
+    ],
+    "n_fragments": 20,
+    "n_first_named": 19
+   },
+   {
+    "author": "Apollonius Dyscolus",
+    "kind": "grammarian or lexicon",
+    "fragments": [
+     7,
+     8,
+     9,
+     10,
+     13,
+     14,
+     15,
+     21,
+     22,
+     23,
+     24,
+     43,
+     102,
+     111,
+     115,
+     117,
+     152
+    ],
+    "n_fragments": 17,
+    "n_first_named": 17
+   },
+   {
+    "author": "Etymologicum Magnum",
+    "kind": "grammarian or lexicon",
+    "fragments": [
+     12,
+     17,
+     25,
+     38,
+     56,
+     57,
+     72,
+     83,
+     95,
+     150,
+     151,
+     153,
+     168
+    ],
+    "n_fragments": 13,
+    "n_first_named": 13
+   },
+   {
+    "author": "Demetrius",
+    "kind": "critic or rhetorician",
+    "fragments": [
+     92,
+     94,
+     95,
+     109,
+     122,
+     123,
+     124
+    ],
+    "n_fragments": 7,
+    "n_first_named": 6
+   },
+   {
+    "author": "Herodian",
+    "kind": "grammarian or lexicon",
+    "fragments": [
+     35,
+     37,
+     50,
+     55,
+     80,
+     110
+    ],
+    "n_fragments": 6,
+    "n_first_named": 6
+   }
+  ],
+  "by_kind": {
+   "critic or rhetorician": 25,
+   "scholiast or commentator": 20,
+   "anthology or miscellany": 27,
+   "other": 5,
+   "grammarian or lexicon": 58,
+   "philosopher": 6,
+   "metrician": 27
+  },
+  "by_reason": {
+   "language": 41,
+   "style": 12,
+   "subject or unstated": 85,
+   "metre": 30
+  },
+  "no_author_named": [
+   65,
+   141
+  ],
+  "caveat": "Wharton's notes reflect 1908 knowledge. Some attributions are disputed, and modern editions add many papyrus fragments Wharton never saw. 'kind' and 'reason' are our rough classification of his notes."
+ },
+ "note": "FIXTURE: a trimmed copy of the experiment's output (2026-10-08), kept so the page can be built and tested without it. Not a result; the page labels it 'placeholder'."
+}

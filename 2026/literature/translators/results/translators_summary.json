@@ -1,0 +1,216 @@
+{
+ "status": "final",
+ "experiment": "One poem, 2,000 years of translators (Sappho 31 = Wharton 2 = Voigt 31)",
+ "label": "Educational demos made to show an open-source tool. Not research.",
+ "counts_label": "our rough count, not a quality score",
+ "scope": "Greek lines 1-16 (four stanzas) as printed by Wharton",
+ "versions": [
+  {
+   "translator": "Catullus",
+   "year": -55,
+   "greek_stanzas_compared": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "greek_words_in_scope": 71,
+   "greek_words_carried": 34,
+   "carried_close": 26,
+   "carried_loose": 8,
+   "greek_words_dropped": 37,
+   "version_words": 70,
+   "words_added": 34,
+   "greek_words_moved_to_another_stanza": 1,
+   "range_over_passes": {
+    "greek_words_carried": [
+     32,
+     34
+    ],
+    "greek_words_dropped": [
+     37,
+     39
+    ],
+    "words_added": [
+     34,
+     36
+    ]
+   },
+   "id": "catullus",
+   "kind": "Latin version"
+  },
+  {
+   "translator": "Ambrose Philips",
+   "year": 1711,
+   "greek_stanzas_compared": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "greek_words_in_scope": 71,
+   "greek_words_carried": 40,
+   "carried_close": 25,
+   "carried_loose": 15,
+   "greek_words_dropped": 31,
+   "version_words": 107,
+   "words_added": 56,
+   "greek_words_moved_to_another_stanza": 3,
+   "range_over_passes": {
+    "greek_words_carried": [
+     38,
+     40
+    ],
+    "greek_words_dropped": [
+     31,
+     33
+    ],
+    "words_added": [
+     56,
+     59
+    ]
+   },
+   "id": "philips",
+   "kind": "version (Addison, 1711, printed it as the \"English Translation\")"
+  },
+  {
+   "translator": "Tobias Smollett",
+   "year": 1748,
+   "greek_stanzas_compared": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "greek_words_in_scope": 71,
+   "greek_words_carried": 11,
+   "carried_close": 7,
+   "carried_loose": 4,
+   "greek_words_dropped": 60,
+   "version_words": 94,
+   "words_added": 79,
+   "greek_words_moved_to_another_stanza": 5,
+   "range_over_passes": {
+    "greek_words_carried": [
+     9,
+     11
+    ],
+    "greek_words_dropped": [
+     60,
+     62
+    ],
+    "words_added": [
+     79,
+     81
+    ]
+   },
+   "id": "smollett",
+   "kind": "version (a love song in his novel Roderick Random that Wharton prints among the renderings of this ode)"
+  },
+  {
+   "translator": "John Herman Merivale",
+   "year": 1833,
+   "greek_stanzas_compared": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "greek_words_in_scope": 71,
+   "greek_words_carried": 44,
+   "carried_close": 25,
+   "carried_loose": 19,
+   "greek_words_dropped": 27,
+   "version_words": 94,
+   "words_added": 33,
+   "greek_words_moved_to_another_stanza": 5,
+   "range_over_passes": {
+    "greek_words_carried": [
+     43,
+     44
+    ],
+    "greek_words_dropped": [
+     27,
+     28
+    ],
+    "words_added": [
+     33,
+     36
+    ]
+   },
+   "id": "merivale",
+   "kind": "version"
+  },
+  {
+   "translator": "John Addington Symonds",
+   "year": 1883,
+   "greek_stanzas_compared": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "greek_words_in_scope": 71,
+   "greek_words_carried": 53,
+   "carried_close": 45,
+   "carried_loose": 8,
+   "greek_words_dropped": 18,
+   "version_words": 120,
+   "words_added": 42,
+   "greek_words_moved_to_another_stanza": 0,
+   "range_over_passes": {
+    "greek_words_carried": [
+     52,
+     53
+    ],
+    "greek_words_dropped": [
+     18,
+     19
+    ],
+    "words_added": [
+     42,
+     45
+    ]
+   },
+   "id": "symonds",
+   "kind": "version (made for Wharton's book, per Wharton's preface)"
+  },
+  {
+   "translator": "Henry Thornton Wharton",
+   "year": 1885,
+   "greek_stanzas_compared": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "greek_words_in_scope": 71,
+   "greek_words_carried": 62,
+   "carried_close": 58,
+   "carried_loose": 4,
+   "greek_words_dropped": 9,
+   "version_words": 96,
+   "words_added": 8,
+   "greek_words_moved_to_another_stanza": 0,
+   "range_over_passes": {
+    "greek_words_carried": [
+     62,
+     62
+    ],
+    "greek_words_dropped": [
+     9,
+     9
+    ],
+    "words_added": [
+     8,
+     12
+    ]
+   },
+   "id": "wharton",
+   "kind": "literal prose translation"
+  }
+ ],
+ "two_pass": {
+  "disagreements": 56
+ }
+}

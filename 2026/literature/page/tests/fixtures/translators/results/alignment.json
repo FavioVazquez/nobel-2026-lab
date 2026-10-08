@@ -1,0 +1,2539 @@
+{
+ "status": "fixture",
+ "note": "FIXTURE: a trimmed copy of the experiment's output (2026-10-08), kept so the page can be built and tested without it. Not a result; the page labels it 'placeholder'.",
+ "scope": "Greek lines 1-16 (four stanzas) as printed by Wharton",
+ "rules": "README.md, section 'How we aligned'",
+ "passes": {
+  "pass1": "data/alignment_pass1.json",
+  "pass2": "data/alignment_pass2.json",
+  "resolution_log": "data/resolution_log.json",
+  "disagreements_between_passes": 56
+ },
+ "greek_tokens": [
+  {
+   "id": "greek:1:1",
+   "line": 1,
+   "stanza": 1,
+   "word": "Φαίνεταί",
+   "parts": [
+    {
+     "line": 1,
+     "start": 0,
+     "surface": "Φαίνεταί"
+    }
+   ],
+   "gloss": {
+    "lemma": "φαίνω",
+    "lsj_key": "fai/nw",
+    "gloss": "appear",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng24.xml",
+    "lsj_line": 2926,
+    "lsj_id": "n110114"
+   }
+  },
+  {
+   "id": "greek:1:2",
+   "line": 1,
+   "stanza": 1,
+   "word": "μοι",
+   "parts": [
+    {
+     "line": 1,
+     "start": 9,
+     "surface": "μοι"
+    }
+   ],
+   "gloss": {
+    "lemma": "ἐγώ",
+    "lsj_key": "e)gw/",
+    "gloss": "me",
+    "form_note": "dative of ἐγώ, 'I'",
+    "lsj_file": "grc.lsj.perseus-eng5.xml",
+    "lsj_line": 25627,
+    "lsj_id": "n30657"
+   }
+  },
+  {
+   "id": "greek:1:3",
+   "line": 1,
+   "stanza": 1,
+   "word": "κήνος",
+   "parts": [
+    {
+     "line": 1,
+     "start": 13,
+     "surface": "κήνος"
+    }
+   ],
+   "gloss": {
+    "lemma": "κῆνος",
+    "lsj_key": "kh=nos",
+    "gloss": "the person there, that person",
+    "form_note": "Aeolic for ἐκεῖνος, 'that one'",
+    "lsj_file": "grc.lsj.perseus-eng11.xml",
+    "lsj_line": 210239,
+    "lsj_id": "n57131"
+   }
+  },
+  {
+   "id": "greek:1:4",
+   "line": 1,
+   "stanza": 1,
+   "word": "ἴσος",
+   "parts": [
+    {
+     "line": 1,
+     "start": 19,
+     "surface": "ἴσος"
+    }
+   ],
+   "gloss": {
+    "lemma": "ἴσος",
+    "lsj_key": "i)/sos",
+    "gloss": "equal",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng10.xml",
+    "lsj_line": 52311,
+    "lsj_id": "n51148"
+   }
+  },
+  {
+   "id": "greek:1:5",
+   "line": 1,
+   "stanza": 1,
+   "word": "θέοισιν",
+   "parts": [
+    {
+     "line": 1,
+     "start": 24,
+     "surface": "θέοισιν"
+    }
+   ],
+   "gloss": {
+    "lemma": "θεός",
+    "lsj_key": "qeo/s",
+    "gloss": "God, the Deity",
+    "form_note": "Aeolic dative plural",
+    "lsj_file": "grc.lsj.perseus-eng9.xml",
+    "lsj_line": 22886,
+    "lsj_id": "n48291"
+   }
+  },
+  {
+   "id": "greek:2:1",
+   "line": 2,
+   "stanza": 1,
+   "word": "ἔμμεν",
+   "parts": [
+    {
+     "line": 2,
+     "start": 0,
+     "surface": "ἔμμεν"
+    }
+   ],
+   "gloss": {
+    "lemma": "εἰμί",
+    "lsj_key": "ei)mi/1",
+    "gloss": "exist",
+    "form_note": "Aeolic infinitive of εἰμί",
+    "lsj_file": "grc.lsj.perseus-eng5.xml",
+    "lsj_line": 46614,
+    "lsj_id": "n31130"
+   }
+  },
+  {
+   "id": "greek:2:2",
+   "line": 2,
+   "stanza": 1,
+   "word": "ὤνηρ",
+   "parts": [
+    {
+     "line": 2,
+     "start": 6,
+     "surface": "ὤνηρ"
+    }
+   ],
+   "gloss": {
+    "lemma": "ἀνήρ",
+    "lsj_key": "a)nh/r",
+    "gloss": "man",
+    "form_note": "crasis of ὁ ἀνήρ, 'the man'",
+    "lsj_file": "grc.lsj.perseus-eng1.xml",
+    "lsj_line": 316949,
+    "lsj_id": "n8665"
+   }
+  },
+  {
+   "id": "greek:2:3",
+   "line": 2,
+   "stanza": 1,
+   "word": "ὄστις",
+   "parts": [
+    {
+     "line": 2,
+     "start": 12,
+     "surface": "ὄστις"
+    }
+   ],
+   "gloss": {
+    "lemma": "ὅστις",
+    "lsj_key": "o(/stis",
+    "gloss": "any one who, anything which, whosoever",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng16.xml",
+    "lsj_line": 151242,
+    "lsj_id": "n75598"
+   }
+  },
+  {
+   "id": "greek:2:4",
+   "line": 2,
+   "stanza": 1,
+   "word": "ἐναντίος",
+   "parts": [
+    {
+     "line": 2,
+     "start": 18,
+     "surface": "ἐναντίος"
+    }
+   ],
+   "gloss": {
+    "lemma": "ἐναντίος",
+    "lsj_key": "e)nanti/os",
+    "gloss": "fronting, face to face",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng5.xml",
+    "lsj_line": 193961,
+    "lsj_id": "n34855"
+   }
+  },
+  {
+   "id": "greek:2:5",
+   "line": 2,
+   "stanza": 1,
+   "word": "τοι",
+   "parts": [
+    {
+     "line": 2,
+     "start": 27,
+     "surface": "τοι"
+    }
+   ],
+   "gloss": {
+    "lemma": "σύ",
+    "lsj_key": "su/",
+    "gloss": "thou",
+    "form_note": "Aeolic dative of σύ, 'you'",
+    "lsj_file": "grc.lsj.perseus-eng21.xml",
+    "lsj_line": 161618,
+    "lsj_id": "n97456"
+   }
+  },
+  {
+   "id": "greek:3:1",
+   "line": 3,
+   "stanza": 1,
+   "word": "ἰζάνει",
+   "parts": [
+    {
+     "line": 3,
+     "start": 0,
+     "surface": "ἰζάνει"
+    }
+   ],
+   "gloss": {
+    "lemma": "ἱζάνω",
+    "lsj_key": "i(za/nw",
+    "gloss": "sit",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng10.xml",
+    "lsj_line": 19050,
+    "lsj_id": "n50153"
+   }
+  },
+  {
+   "id": "greek:3:2",
+   "line": 3,
+   "stanza": 1,
+   "word": "καὶ",
+   "parts": [
+    {
+     "line": 3,
+     "start": 8,
+     "surface": "καὶ"
+    }
+   ],
+   "gloss": {
+    "lemma": "καί",
+    "lsj_key": "kai/1",
+    "gloss": "and",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng11.xml",
+    "lsj_line": 20340,
+    "lsj_id": "n51951"
+   }
+  },
+  {
+   "id": "greek:3:3",
+   "line": 3,
+   "stanza": 1,
+   "word": "πλασίον",
+   "parts": [
+    {
+     "line": 3,
+     "start": 12,
+     "surface": "πλασίον"
+    }
+   ],
+   "gloss": {
+    "lemma": "πλησίος",
+    "lsj_key": "plhsi/os",
+    "gloss": "near, close to",
+    "form_note": "Aeolic πλάσιον for πλησίον, adverb",
+    "lsj_file": "grc.lsj.perseus-eng17.xml",
+    "lsj_line": 288308,
+    "lsj_id": "n83854"
+   }
+  },
+  {
+   "id": "greek:3:4",
+   "line": 3,
+   "stanza": 1,
+   "word": "ἆδυ",
+   "parts": [
+    {
+     "line": 3,
+     "start": 20,
+     "surface": "ἆδυ"
+    }
+   ],
+   "gloss": {
+    "lemma": "ἡδύς",
+    "lsj_key": "h(du/s",
+    "gloss": "sweetly",
+    "form_note": "Aeolic ἆδυ for ἡδύ, neuter used as adverb",
+    "lsj_file": "grc.lsj.perseus-eng8.xml",
+    "lsj_line": 9106,
+    "lsj_id": "n46712"
+   }
+  },
+  {
+   "id": "greek:3:5",
+   "line": 3,
+   "stanza": 1,
+   "word": "φωνεύσας",
+   "parts": [
+    {
+     "line": 3,
+     "start": 24,
+     "surface": "φωνεύ"
+    },
+    {
+     "line": 4,
+     "start": 0,
+     "surface": "σας"
+    }
+   ],
+   "gloss": {
+    "lemma": "φωνέω",
+    "lsj_key": "fwne/w",
+    "gloss": "speak, give utterance",
+    "form_note": "Aeolic participle, feminine",
+    "lsj_file": "grc.lsj.perseus-eng24.xml",
+    "lsj_line": 126362,
+    "lsj_id": "n112832"
+   }
+  },
+  {
+   "id": "greek:4:1",
+   "line": 4,
+   "stanza": 1,
+   "word": "ὑπακούει",
+   "parts": [
+    {
+     "line": 4,
+     "start": 4,
+     "surface": "ὑπακούει"
+    }
+   ],
+   "gloss": {
+    "lemma": "ὑπακούω",
+    "lsj_key": "u(pakou/w",
+    "gloss": "listen to, heed",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng23.xml",
+    "lsj_line": 24562,
+    "lsj_id": "n106833"
+   }
+  },
+  {
+   "id": "greek:5:1",
+   "line": 5,
+   "stanza": 2,
+   "word": "καὶ",
+   "parts": [
+    {
+     "line": 5,
+     "start": 0,
+     "surface": "καὶ"
+    }
+   ],
+   "gloss": {
+    "lemma": "καί",
+    "lsj_key": "kai/1",
+    "gloss": "and",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng11.xml",
+    "lsj_line": 20340,
+    "lsj_id": "n51951"
+   }
+  },
+  {
+   "id": "greek:5:2",
+   "line": 5,
+   "stanza": 2,
+   "word": "γελαίσας",
+   "parts": [
+    {
+     "line": 5,
+     "start": 4,
+     "surface": "γελαίσας"
+    }
+   ],
+   "gloss": {
+    "lemma": "γελάω",
+    "lsj_key": "gela/w",
+    "gloss": "laugh",
+    "form_note": "Aeolic participle, feminine",
+    "lsj_file": "grc.lsj.perseus-eng3.xml",
+    "lsj_line": 14379,
+    "lsj_id": "n21783"
+   }
+  },
+  {
+   "id": "greek:5:3",
+   "line": 5,
+   "stanza": 2,
+   "word": "ἰμερόεν",
+   "parts": [
+    {
+     "line": 5,
+     "start": 13,
+     "surface": "ἰμερόεν"
+    }
+   ],
+   "gloss": {
+    "lemma": "ἱμερόεις",
+    "lsj_key": "i(mero/eis",
+    "gloss": "exciting desire, lovely, charming",
+    "form_note": "neuter used as adverb",
+    "lsj_file": "grc.lsj.perseus-eng10.xml",
+    "lsj_line": 32496,
+    "lsj_id": "n50473"
+   }
+  },
+  {
+   "id": "greek:5:4",
+   "line": 5,
+   "stanza": 2,
+   "word": "τό",
+   "parts": [
+    {
+     "line": 5,
+     "start": 22,
+     "surface": "τό"
+    }
+   ],
+   "gloss": {
+    "lemma": "ὁ",
+    "lsj_key": "o(1",
+    "gloss": "definite or prepositive Article",
+    "form_note": "article used as a pronoun, 'that'",
+    "lsj_file": "grc.lsj.perseus-eng16.xml",
+    "lsj_line": 371,
+    "lsj_id": "n71882"
+   }
+  },
+  {
+   "id": "greek:5:5",
+   "line": 5,
+   "stanza": 2,
+   "word": "μοι",
+   "parts": [
+    {
+     "line": 5,
+     "start": 25,
+     "surface": "μοι"
+    }
+   ],
+   "gloss": {
+    "lemma": "ἐγώ",
+    "lsj_key": "e)gw/",
+    "gloss": "me",
+    "form_note": "dative of ἐγώ",
+    "lsj_file": "grc.lsj.perseus-eng5.xml",
+    "lsj_line": 25627,
+    "lsj_id": "n30657"
+   }
+  },
+  {
+   "id": "greek:5:6",
+   "line": 5,
+   "stanza": 2,
+   "word": "μάν",
+   "parts": [
+    {
+     "line": 5,
+     "start": 29,
+     "surface": "μάν"
+    }
+   ],
+   "gloss": {
+    "lemma": "μάν",
+    "lsj_key": "ma/n",
+    "gloss": "verily, truly",
+    "form_note": "Aeolic/Doric for μήν",
+    "lsj_file": "grc.lsj.perseus-eng13.xml",
+    "lsj_line": 18608,
+    "lsj_id": "n64894"
+   }
+  },
+  {
+   "id": "greek:6:1",
+   "line": 6,
+   "stanza": 2,
+   "word": "καρδίαν",
+   "parts": [
+    {
+     "line": 6,
+     "start": 0,
+     "surface": "καρδίαν"
+    }
+   ],
+   "gloss": {
+    "lemma": "καρδία",
+    "lsj_key": "kardi/a",
+    "gloss": "heart",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng11.xml",
+    "lsj_line": 63834,
+    "lsj_id": "n53290"
+   }
+  },
+  {
+   "id": "greek:6:2",
+   "line": 6,
+   "stanza": 2,
+   "word": "ἐν",
+   "parts": [
+    {
+     "line": 6,
+     "start": 8,
+     "surface": "ἐν"
+    }
+   ],
+   "gloss": {
+    "lemma": "ἐν",
+    "lsj_key": "e)n",
+    "gloss": "in",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng5.xml",
+    "lsj_line": 187458,
+    "lsj_id": "n34700"
+   }
+  },
+  {
+   "id": "greek:6:3",
+   "line": 6,
+   "stanza": 2,
+   "word": "στήθεσιν",
+   "parts": [
+    {
+     "line": 6,
+     "start": 11,
+     "surface": "στήθεσιν"
+    }
+   ],
+   "gloss": {
+    "lemma": "στῆθος",
+    "lsj_key": "sth=qos",
+    "gloss": "breast",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng21.xml",
+    "lsj_line": 130676,
+    "lsj_id": "n96698"
+   }
+  },
+  {
+   "id": "greek:6:4",
+   "line": 6,
+   "stanza": 2,
+   "word": "ἐπτόασεν",
+   "parts": [
+    {
+     "line": 6,
+     "start": 20,
+     "surface": "ἐπτόασεν"
+    }
+   ],
+   "gloss": {
+    "lemma": "πτοέω",
+    "lsj_key": "ptoe/w",
+    "gloss": "flutter, excite",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng17.xml",
+    "lsj_line": 568739,
+    "lsj_id": "n91209"
+   }
+  },
+  {
+   "id": "greek:7:1",
+   "line": 7,
+   "stanza": 2,
+   "word": "ὡς",
+   "parts": [
+    {
+     "line": 7,
+     "start": 0,
+     "surface": "ὡς"
+    }
+   ],
+   "gloss": {
+    "lemma": "ὡς",
+    "lsj_key": "w(s",
+    "gloss": "when",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng27.xml",
+    "lsj_line": 17490,
+    "lsj_id": "n116401"
+   }
+  },
+  {
+   "id": "greek:7:2",
+   "line": 7,
+   "stanza": 2,
+   "word": "γὰρ",
+   "parts": [
+    {
+     "line": 7,
+     "start": 3,
+     "surface": "γὰρ"
+    }
+   ],
+   "gloss": {
+    "lemma": "γάρ",
+    "lsj_key": "ga/r",
+    "gloss": "for",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng3.xml",
+    "lsj_line": 7625,
+    "lsj_id": "n21618"
+   }
+  },
+  {
+   "id": "greek:7:3",
+   "line": 7,
+   "stanza": 2,
+   "word": "εὔιδον",
+   "parts": [
+    {
+     "line": 7,
+     "start": 7,
+     "surface": "εὔιδον"
+    }
+   ],
+   "gloss": {
+    "lemma": "εἴδω",
+    "lsj_key": "ei)/dw1",
+    "gloss": "see",
+    "form_note": "Aeolic form of εἶδον (aorist of 'see')",
+    "lsj_file": "grc.lsj.perseus-eng5.xml",
+    "lsj_line": 36865,
+    "lsj_id": "n30876"
+   }
+  },
+  {
+   "id": "greek:7:4",
+   "line": 7,
+   "stanza": 2,
+   "word": "βροχέως",
+   "parts": [
+    {
+     "line": 7,
+     "start": 14,
+     "surface": "βροχέως"
+    }
+   ],
+   "gloss": {
+    "lemma": "βρόχυς",
+    "lsj_key": "bro/xus",
+    "gloss": "for a moment",
+    "form_note": "Aeolic for βραχύς; adverb",
+    "lsj_file": "grc.lsj.perseus-eng2.xml",
+    "lsj_line": 72131,
+    "lsj_id": "n21082"
+   }
+  },
+  {
+   "id": "greek:7:5",
+   "line": 7,
+   "stanza": 2,
+   "word": "σε",
+   "parts": [
+    {
+     "line": 7,
+     "start": 22,
+     "surface": "σε"
+    }
+   ],
+   "gloss": {
+    "lemma": "σύ",
+    "lsj_key": "su/",
+    "gloss": "thou",
+    "form_note": "accusative of σύ",
+    "lsj_file": "grc.lsj.perseus-eng21.xml",
+    "lsj_line": 161618,
+    "lsj_id": "n97456"
+   }
+  },
+  {
+   "id": "greek:7:6",
+   "line": 7,
+   "stanza": 2,
+   "word": "φώνας",
+   "parts": [
+    {
+     "line": 7,
+     "start": 26,
+     "surface": "φώνας"
+    }
+   ],
+   "gloss": {
+    "lemma": "φωνή",
+    "lsj_key": "fwnh/",
+    "gloss": "speech, voice, utterance",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng24.xml",
+    "lsj_line": 126776,
+    "lsj_id": "n112833"
+   }
+  },
+  {
+   "id": "greek:8:1",
+   "line": 8,
+   "stanza": 2,
+   "word": "οὐδὲν",
+   "parts": [
+    {
+     "line": 8,
+     "start": 0,
+     "surface": "οὐδὲν"
+    }
+   ],
+   "gloss": {
+    "lemma": "οὐδείς",
+    "lsj_key": "ou)dei/s",
+    "gloss": "nothing",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng16.xml",
+    "lsj_line": 161893,
+    "lsj_id": "n75765"
+   }
+  },
+  {
+   "id": "greek:8:2",
+   "line": 8,
+   "stanza": 2,
+   "word": "ἔτ'",
+   "parts": [
+    {
+     "line": 8,
+     "start": 6,
+     "surface": "ἔτ'"
+    }
+   ],
+   "gloss": {
+    "lemma": "ἔτι",
+    "lsj_key": "e)/ti",
+    "gloss": "yet, still",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng5.xml",
+    "lsj_line": 522500,
+    "lsj_id": "n43266"
+   }
+  },
+  {
+   "id": "greek:8:3",
+   "line": 8,
+   "stanza": 2,
+   "word": "εἴκει",
+   "parts": [
+    {
+     "line": 8,
+     "start": 10,
+     "surface": "εἴκει"
+    }
+   ],
+   "gloss": {
+    "lemma": "εἴκω",
+    "lsj_key": "ei)/kw2",
+    "gloss": "it is allowable or possible",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng5.xml",
+    "lsj_line": 42901,
+    "lsj_id": "n31036"
+   }
+  },
+  {
+   "id": "greek:9:1",
+   "line": 9,
+   "stanza": 3,
+   "word": "ἀλλὰ",
+   "parts": [
+    {
+     "line": 9,
+     "start": 0,
+     "surface": "ἀλλὰ"
+    }
+   ],
+   "gloss": {
+    "lemma": "ἀλλά",
+    "lsj_key": "a)lla/",
+    "gloss": "but",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng1.xml",
+    "lsj_line": 162150,
+    "lsj_id": "n4357"
+   }
+  },
+  {
+   "id": "greek:9:2",
+   "line": 9,
+   "stanza": 3,
+   "word": "κὰμ",
+   "parts": [
+    {
+     "line": 9,
+     "start": 5,
+     "surface": "κὰμ"
+    }
+   ],
+   "gloss": {
+    "lemma": "κατά",
+    "lsj_key": "kata/1",
+    "gloss": "downwards",
+    "form_note": "κάτ before μ (κὰμ), split from its verb (κατέαγε)",
+    "lsj_file": "grc.lsj.perseus-eng11.xml",
+    "lsj_line": 74380,
+    "lsj_id": "n53647"
+   }
+  },
+  {
+   "id": "greek:9:3",
+   "line": 9,
+   "stanza": 3,
+   "word": "μὲν",
+   "parts": [
+    {
+     "line": 9,
+     "start": 9,
+     "surface": "μὲν"
+    }
+   ],
+   "gloss": {
+    "lemma": "μέν",
+    "lsj_key": "me/n",
+    "gloss": "indeed, of a truth",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng13.xml",
+    "lsj_line": 69462,
+    "lsj_id": "n66260"
+   }
+  },
+  {
+   "id": "greek:9:4",
+   "line": 9,
+   "stanza": 3,
+   "word": "γλῶσσα",
+   "parts": [
+    {
+     "line": 9,
+     "start": 13,
+     "surface": "γλῶσσα"
+    }
+   ],
+   "gloss": {
+    "lemma": "γλῶσσα",
+    "lsj_key": "glw=ssa",
+    "gloss": "tongue",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng3.xml",
+    "lsj_line": 39976,
+    "lsj_id": "n22425"
+   }
+  },
+  {
+   "id": "greek:9:5",
+   "line": 9,
+   "stanza": 3,
+   "word": "ἔαγε",
+   "parts": [
+    {
+     "line": 9,
+     "start": 20,
+     "surface": "ἔαγε"
+    }
+   ],
+   "gloss": {
+    "lemma": "ἄγνυμι",
+    "lsj_key": "a)/gnumi",
+    "gloss": "break, shiver",
+    "form_note": "with κὰμ: κατέαγε, 'is broken'",
+    "lsj_file": "grc.lsj.perseus-eng1.xml",
+    "lsj_line": 35382,
+    "lsj_id": "n735"
+   }
+  },
+  {
+   "id": "greek:9:6",
+   "line": 9,
+   "stanza": 3,
+   "word": "λέπτον",
+   "parts": [
+    {
+     "line": 9,
+     "start": 26,
+     "surface": "λέπτον"
+    }
+   ],
+   "gloss": {
+    "lemma": "λεπτός",
+    "lsj_key": "lepto/s",
+    "gloss": "thin, fine, delicate",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng12.xml",
+    "lsj_line": 39215,
+    "lsj_id": "n62528"
+   }
+  },
+  {
+   "id": "greek:9:7",
+   "line": 9,
+   "stanza": 3,
+   "word": "δ'",
+   "parts": [
+    {
+     "line": 9,
+     "start": 33,
+     "surface": "δ'"
+    }
+   ],
+   "gloss": {
+    "lemma": "δέ",
+    "lsj_key": "de/1",
+    "gloss": "but",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng4.xml",
+    "lsj_line": 16381,
+    "lsj_id": "n23596"
+   }
+  },
+  {
+   "id": "greek:10:1",
+   "line": 10,
+   "stanza": 3,
+   "word": "αὔτικα",
+   "parts": [
+    {
+     "line": 10,
+     "start": 0,
+     "surface": "αὔτικα"
+    }
+   ],
+   "gloss": {
+    "lemma": "αὐτίκα",
+    "lsj_key": "au)ti/ka^",
+    "gloss": "forthwith, at once, in a moment",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng1.xml",
+    "lsj_line": 638475,
+    "lsj_id": "n17595"
+   }
+  },
+  {
+   "id": "greek:10:2",
+   "line": 10,
+   "stanza": 3,
+   "word": "χρῷ",
+   "parts": [
+    {
+     "line": 10,
+     "start": 7,
+     "surface": "χρῷ"
+    }
+   ],
+   "gloss": {
+    "lemma": "χρώς",
+    "lsj_key": "xrw/s",
+    "gloss": "skin",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng25.xml",
+    "lsj_line": 93829,
+    "lsj_id": "n115067"
+   }
+  },
+  {
+   "id": "greek:10:3",
+   "line": 10,
+   "stanza": 3,
+   "word": "πῦρ",
+   "parts": [
+    {
+     "line": 10,
+     "start": 11,
+     "surface": "πῦρ"
+    }
+   ],
+   "gloss": {
+    "lemma": "πῦρ",
+    "lsj_key": "pu=r",
+    "gloss": "fire",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng17.xml",
+    "lsj_line": 582478,
+    "lsj_id": "n91547"
+   }
+  },
+  {
+   "id": "greek:10:4",
+   "line": 10,
+   "stanza": 3,
+   "word": "ὐπαδεδρόμακεν",
+   "parts": [
+    {
+     "line": 10,
+     "start": 15,
+     "surface": "ὐπαδεδρόμακεν"
+    }
+   ],
+   "gloss": {
+    "lemma": "ὑποτρέχω",
+    "lsj_key": "u(potre/xw",
+    "gloss": "run in under",
+    "form_note": "Aeolic perfect",
+    "lsj_file": "grc.lsj.perseus-eng23.xml",
+    "lsj_line": 119699,
+    "lsj_id": "n109397"
+   }
+  },
+  {
+   "id": "greek:11:1",
+   "line": 11,
+   "stanza": 3,
+   "word": "ὀππάτεσσι",
+   "parts": [
+    {
+     "line": 11,
+     "start": 0,
+     "surface": "ὀππάτεσσι"
+    }
+   ],
+   "gloss": {
+    "lemma": "ὀππάτεσσι",
+    "lsj_key": "o)ppa/tessi",
+    "gloss": "eyes",
+    "form_note": "Aeolic dative plural of ὄμμα",
+    "lsj_file": "grc.lsj.perseus-eng16.xml",
+    "lsj_line": 106678,
+    "lsj_id": "n74634"
+   }
+  },
+  {
+   "id": "greek:11:2",
+   "line": 11,
+   "stanza": 3,
+   "word": "δ'",
+   "parts": [
+    {
+     "line": 11,
+     "start": 10,
+     "surface": "δ'"
+    }
+   ],
+   "gloss": {
+    "lemma": "δέ",
+    "lsj_key": "de/1",
+    "gloss": "but",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng4.xml",
+    "lsj_line": 16381,
+    "lsj_id": "n23596"
+   }
+  },
+  {
+   "id": "greek:11:3",
+   "line": 11,
+   "stanza": 3,
+   "word": "οὐδὲν",
+   "parts": [
+    {
+     "line": 11,
+     "start": 13,
+     "surface": "οὐδὲν"
+    }
+   ],
+   "gloss": {
+    "lemma": "οὐδείς",
+    "lsj_key": "ou)dei/s",
+    "gloss": "nothing",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng16.xml",
+    "lsj_line": 161893,
+    "lsj_id": "n75765"
+   }
+  },
+  {
+   "id": "greek:11:4",
+   "line": 11,
+   "stanza": 3,
+   "word": "ὄρημ'",
+   "parts": [
+    {
+     "line": 11,
+     "start": 19,
+     "surface": "ὄρημ'"
+    }
+   ],
+   "gloss": {
+    "lemma": "ὄρημι",
+    "lsj_key": "o)/rhmi",
+    "gloss": "see",
+    "form_note": "Aeolic for ὁράω",
+    "lsj_file": "grc.lsj.perseus-eng16.xml",
+    "lsj_line": 119676,
+    "lsj_id": "n74896"
+   }
+  },
+  {
+   "id": "greek:11:5",
+   "line": 11,
+   "stanza": 3,
+   "word": "ἐπιρρόμβεισι",
+   "parts": [
+    {
+     "line": 11,
+     "start": 26,
+     "surface": "ἐπιρρόμ"
+    },
+    {
+     "line": 12,
+     "start": 0,
+     "surface": "βεισι"
+    }
+   ],
+   "gloss": {
+    "lemma": "ἐπιρρομβέω",
+    "lsj_key": "e)pirrombe/w",
+    "gloss": "make a buzzing noise",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng5.xml",
+    "lsj_line": 414969,
+    "lsj_id": "n40755"
+   }
+  },
+  {
+   "id": "greek:12:1",
+   "line": 12,
+   "stanza": 3,
+   "word": "δ'",
+   "parts": [
+    {
+     "line": 12,
+     "start": 6,
+     "surface": "δ'"
+    }
+   ],
+   "gloss": {
+    "lemma": "δέ",
+    "lsj_key": "de/1",
+    "gloss": "but",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng4.xml",
+    "lsj_line": 16381,
+    "lsj_id": "n23596"
+   }
+  },
+  {
+   "id": "greek:12:2",
+   "line": 12,
+   "stanza": 3,
+   "word": "ἄκουαι",
+   "parts": [
+    {
+     "line": 12,
+     "start": 9,
+     "surface": "ἄκουαι"
+    }
+   ],
+   "gloss": {
+    "lemma": "ἀκοή",
+    "lsj_key": "a)koh/",
+    "gloss": "ear",
+    "form_note": "Aeolic ἄκουα for ἀκοή",
+    "lsj_file": "grc.lsj.perseus-eng1.xml",
+    "lsj_line": 125913,
+    "lsj_id": "n3261"
+   }
+  },
+  {
+   "id": "greek:13:1",
+   "line": 13,
+   "stanza": 4,
+   "word": "ἀ",
+   "parts": [
+    {
+     "line": 13,
+     "start": 0,
+     "surface": "ἀ"
+    }
+   ],
+   "gloss": {
+    "lemma": "ὁ",
+    "lsj_key": "o(1",
+    "gloss": "definite or prepositive Article",
+    "form_note": "Aeolic ἀ (ἁ) for ἡ, the article",
+    "lsj_file": "grc.lsj.perseus-eng16.xml",
+    "lsj_line": 371,
+    "lsj_id": "n71882"
+   }
+  },
+  {
+   "id": "greek:13:2",
+   "line": 13,
+   "stanza": 4,
+   "word": "δέ",
+   "parts": [
+    {
+     "line": 13,
+     "start": 2,
+     "surface": "δέ"
+    }
+   ],
+   "gloss": {
+    "lemma": "δέ",
+    "lsj_key": "de/1",
+    "gloss": "but",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng4.xml",
+    "lsj_line": 16381,
+    "lsj_id": "n23596"
+   }
+  },
+  {
+   "id": "greek:13:3",
+   "line": 13,
+   "stanza": 4,
+   "word": "μίδρως",
+   "parts": [
+    {
+     "line": 13,
+     "start": 5,
+     "surface": "μίδρως"
+    }
+   ],
+   "gloss": {
+    "lemma": "ἱδρώς",
+    "lsj_key": "i(drw/s",
+    "gloss": "sweat",
+    "form_note": "as printed by Wharton, μίδρως = μ' ἴδρως, 'sweat ... me'",
+    "lsj_file": "grc.lsj.perseus-eng10.xml",
+    "lsj_line": 12402,
+    "lsj_id": "n49938"
+   }
+  },
+  {
+   "id": "greek:13:4",
+   "line": 13,
+   "stanza": 4,
+   "word": "κακχέεται",
+   "parts": [
+    {
+     "line": 13,
+     "start": 12,
+     "surface": "κακχέεται"
+    }
+   ],
+   "gloss": {
+    "lemma": "καταχέω",
+    "lsj_key": "kataxe/w",
+    "gloss": "pour down upon, pour over",
+    "form_note": "Aeolic κακχέεται for καταχεῖται",
+    "lsj_file": "grc.lsj.perseus-eng11.xml",
+    "lsj_line": 153142,
+    "lsj_id": "n55595"
+   }
+  },
+  {
+   "id": "greek:13:5",
+   "line": 13,
+   "stanza": 4,
+   "word": "τρόμος",
+   "parts": [
+    {
+     "line": 13,
+     "start": 23,
+     "surface": "τρόμος"
+    }
+   ],
+   "gloss": {
+    "lemma": "τρόμος",
+    "lsj_key": "tro/mos1",
+    "gloss": "trembling, quaking, quivering",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng22.xml",
+    "lsj_line": 150173,
+    "lsj_id": "n105495"
+   }
+  },
+  {
+   "id": "greek:13:6",
+   "line": 13,
+   "stanza": 4,
+   "word": "δέ",
+   "parts": [
+    {
+     "line": 13,
+     "start": 30,
+     "surface": "δέ"
+    }
+   ],
+   "gloss": {
+    "lemma": "δέ",
+    "lsj_key": "de/1",
+    "gloss": "but",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng4.xml",
+    "lsj_line": 16381,
+    "lsj_id": "n23596"
+   }
+  },
+  {
+   "id": "greek:14:1",
+   "line": 14,
+   "stanza": 4,
+   "word": "παῖσαν",
+   "parts": [
+    {
+     "line": 14,
+     "start": 0,
+     "surface": "παῖσαν"
+    }
+   ],
+   "gloss": {
+    "lemma": "πᾶς",
+    "lsj_key": "pa=s1",
+    "gloss": "all",
+    "form_note": "Aeolic παῖσαν for πᾶσαν",
+    "lsj_file": "grc.lsj.perseus-eng17.xml",
+    "lsj_line": 128532,
+    "lsj_id": "n79904"
+   }
+  },
+  {
+   "id": "greek:14:2",
+   "line": 14,
+   "stanza": 4,
+   "word": "ἄγρει",
+   "parts": [
+    {
+     "line": 14,
+     "start": 7,
+     "surface": "ἄγρει"
+    }
+   ],
+   "gloss": {
+    "lemma": "ἀγρέω",
+    "lsj_key": "a)gre/w",
+    "gloss": "take, seize",
+    "form_note": "Aeolic",
+    "lsj_file": "grc.lsj.perseus-eng1.xml",
+    "lsj_line": 40617,
+    "lsj_id": "n839"
+   }
+  },
+  {
+   "id": "greek:14:3",
+   "line": 14,
+   "stanza": 4,
+   "word": "χλωροτέρα",
+   "parts": [
+    {
+     "line": 14,
+     "start": 14,
+     "surface": "χλωροτέρα"
+    }
+   ],
+   "gloss": {
+    "lemma": "χλωρός",
+    "lsj_key": "xlwro/s",
+    "gloss": "pale, pallid",
+    "form_note": "comparative",
+    "lsj_file": "grc.lsj.perseus-eng25.xml",
+    "lsj_line": 56809,
+    "lsj_id": "n114230"
+   }
+  },
+  {
+   "id": "greek:14:4",
+   "line": 14,
+   "stanza": 4,
+   "word": "δὲ",
+   "parts": [
+    {
+     "line": 14,
+     "start": 24,
+     "surface": "δὲ"
+    }
+   ],
+   "gloss": {
+    "lemma": "δέ",
+    "lsj_key": "de/1",
+    "gloss": "but",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng4.xml",
+    "lsj_line": 16381,
+    "lsj_id": "n23596"
+   }
+  },
+  {
+   "id": "greek:14:5",
+   "line": 14,
+   "stanza": 4,
+   "word": "ποίας",
+   "parts": [
+    {
+     "line": 14,
+     "start": 27,
+     "surface": "ποίας"
+    }
+   ],
+   "gloss": {
+    "lemma": "ποία",
+    "lsj_key": "poi/a",
+    "gloss": "grass",
+    "form_note": "Ionic/Aeolic for πόα",
+    "lsj_file": "grc.lsj.perseus-eng17.xml",
+    "lsj_line": 304380,
+    "lsj_id": "n84228"
+   }
+  },
+  {
+   "id": "greek:15:1",
+   "line": 15,
+   "stanza": 4,
+   "word": "ἔμμι",
+   "parts": [
+    {
+     "line": 15,
+     "start": 0,
+     "surface": "ἔμμι"
+    }
+   ],
+   "gloss": {
+    "lemma": "εἰμί",
+    "lsj_key": "ei)mi/1",
+    "gloss": "exist",
+    "form_note": "Aeolic first person ἔμμι for εἰμί",
+    "lsj_file": "grc.lsj.perseus-eng5.xml",
+    "lsj_line": 46614,
+    "lsj_id": "n31130"
+   }
+  },
+  {
+   "id": "greek:15:2",
+   "line": 15,
+   "stanza": 4,
+   "word": "τεθνάκην",
+   "parts": [
+    {
+     "line": 15,
+     "start": 6,
+     "surface": "τεθνάκην"
+    }
+   ],
+   "gloss": {
+    "lemma": "θνῄσκω",
+    "lsj_key": "qnh/|skw",
+    "gloss": "to be dead",
+    "form_note": "Aeolic perfect infinitive",
+    "lsj_file": "grc.lsj.perseus-eng9.xml",
+    "lsj_line": 47156,
+    "lsj_id": "n48905"
+   }
+  },
+  {
+   "id": "greek:15:3",
+   "line": 15,
+   "stanza": 4,
+   "word": "δ'",
+   "parts": [
+    {
+     "line": 15,
+     "start": 15,
+     "surface": "δ'"
+    }
+   ],
+   "gloss": {
+    "lemma": "δέ",
+    "lsj_key": "de/1",
+    "gloss": "but",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng4.xml",
+    "lsj_line": 16381,
+    "lsj_id": "n23596"
+   }
+  },
+  {
+   "id": "greek:15:4",
+   "line": 15,
+   "stanza": 4,
+   "word": "ὀλίγω",
+   "parts": [
+    {
+     "line": 15,
+     "start": 18,
+     "surface": "ὀλίγω"
+    }
+   ],
+   "gloss": {
+    "lemma": "ὀλίγος",
+    "lsj_key": "o)li/gos",
+    "gloss": "little, small",
+    "form_note": "Aeolic genitive",
+    "lsj_file": "grc.lsj.perseus-eng16.xml",
+    "lsj_line": 46398,
+    "lsj_id": "n73064"
+   }
+  },
+  {
+   "id": "greek:15:5",
+   "line": 15,
+   "stanza": 4,
+   "word": "'πιδεύης",
+   "parts": [
+    {
+     "line": 15,
+     "start": 24,
+     "surface": "'πιδεύης"
+    }
+   ],
+   "gloss": {
+    "lemma": "ἐπιδευής",
+    "lsj_key": "e)pideuh/s",
+    "gloss": "in need or want of, lacking",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng5.xml",
+    "lsj_line": 361797,
+    "lsj_id": "n39172"
+   }
+  },
+  {
+   "id": "greek:16:1",
+   "line": 16,
+   "stanza": 4,
+   "word": "φαίνομαι",
+   "parts": [
+    {
+     "line": 16,
+     "start": 0,
+     "surface": "φαίνομαι"
+    }
+   ],
+   "gloss": {
+    "lemma": "φαίνω",
+    "lsj_key": "fai/nw",
+    "gloss": "appear",
+    "form_note": null,
+    "lsj_file": "grc.lsj.perseus-eng24.xml",
+    "lsj_line": 2926,
+    "lsj_id": "n110114"
+   }
+  },
+  {
+   "id": "greek:16:2",
+   "line": 16,
+   "stanza": 4,
+   "word": "ἄλλα",
+   "parts": [
+    {
+     "line": 16,
+     "start": 10,
+     "surface": "ἄλλα"
+    }
+   ],
+   "bracketed": true,
+   "gloss": {
+    "lemma": "ἄλλος",
+    "lsj_key": "a)/llos1",
+    "gloss": "another",
+    "form_note": "in square brackets in Wharton's text: an editor's supplement",
+    "lsj_file": "grc.lsj.perseus-eng1.xml",
+    "lsj_line": 167408,
+    "lsj_id": "n4490"
+   }
+  },
+  {
+   "id": "greek:17:1",
+   "line": 17,
+   "stanza": 5,
+   "word": "ἀλλὰ",
+   "parts": [
+    {
+     "line": 17,
+     "start": 0,
+     "surface": "ἀλλὰ"
+    }
+   ]
+  },
+  {
+   "id": "greek:17:2",
+   "line": 17,
+   "stanza": 5,
+   "word": "πᾶν",
+   "parts": [
+    {
+     "line": 17,
+     "start": 5,
+     "surface": "πᾶν"
+    }
+   ]
+  },
+  {
+   "id": "greek:17:3",
+   "line": 17,
+   "stanza": 5,
+   "word": "τόλματον",
+   "parts": [
+    {
+     "line": 17,
+     "start": 9,
+     "surface": "τόλματον"
+    }
+   ]
+  },
+  {
+   "id": "greek:17:4",
+   "line": 17,
+   "stanza": 5,
+   "word": "ἐπεὶ",
+   "parts": [
+    {
+     "line": 17,
+     "start": 20,
+     "surface": "ἐπεὶ"
+    }
+   ],
+   "bracketed": true
+  },
+  {
+   "id": "greek:17:5",
+   "line": 17,
+   "stanza": 5,
+   "word": "καὶ",
+   "parts": [
+    {
+     "line": 17,
+     "start": 25,
+     "surface": "καὶ"
+    }
+   ]
+  },
+  {
+   "id": "greek:17:6",
+   "line": 17,
+   "stanza": 5,
+   "word": "πένητα",
+   "parts": [
+    {
+     "line": 17,
+     "start": 29,
+     "surface": "πένητα"
+    }
+   ],
+   "bracketed": true
+  }
+ ],
+ "links": {
+  "catullus": {
+   "greek:1:1": {
+    "to": [
+     "catullus:1:6"
+    ],
+    "strength": "close"
+   },
+   "greek:1:2": {
+    "to": [
+     "catullus:1:2"
+    ],
+    "strength": "close"
+   },
+   "greek:1:3": {
+    "to": [
+     "catullus:1:1"
+    ],
+    "strength": "close"
+   },
+   "greek:1:4": {
+    "to": [
+     "catullus:1:3"
+    ],
+    "strength": "close"
+   },
+   "greek:1:5": {
+    "to": [
+     "catullus:1:5"
+    ],
+    "strength": "close",
+    "note": "singular 'a god' for the plural 'gods'"
+   },
+   "greek:2:1": {
+    "to": [
+     "catullus:1:4"
+    ],
+    "strength": "close"
+   },
+   "greek:2:3": {
+    "to": [
+     "catullus:3:1"
+    ],
+    "strength": "close"
+   },
+   "greek:2:4": {
+    "to": [
+     "catullus:3:3"
+    ],
+    "strength": "close"
+   },
+   "greek:2:5": {
+    "to": [
+     "catullus:3:5"
+    ],
+    "strength": "close"
+   },
+   "greek:3:1": {
+    "to": [
+     "catullus:3:2"
+    ],
+    "strength": "close"
+   },
+   "greek:3:4": {
+    "to": [
+     "catullus:5:1"
+    ],
+    "strength": "close",
+    "note": "moved: 'sweetly' now goes with laughing"
+   },
+   "greek:4:1": {
+    "to": [
+     "catullus:4:3"
+    ],
+    "strength": "close"
+   },
+   "greek:5:2": {
+    "to": [
+     "catullus:5:2"
+    ],
+    "strength": "close"
+   },
+   "greek:5:4": {
+    "to": [
+     "catullus:5:4"
+    ],
+    "strength": "close"
+   },
+   "greek:5:5": {
+    "to": [
+     "catullus:6:3"
+    ],
+    "strength": "close"
+   },
+   "greek:6:1": {
+    "to": [
+     "catullus:6:2"
+    ],
+    "strength": "loose"
+   },
+   "greek:7:1": {
+    "to": [
+     "catullus:6:5"
+    ],
+    "strength": "close"
+   },
+   "greek:7:2": {
+    "to": [
+     "catullus:6:4"
+    ],
+    "strength": "close"
+   },
+   "greek:7:3": {
+    "to": [
+     "catullus:7:2"
+    ],
+    "strength": "close"
+   },
+   "greek:7:5": {
+    "to": [
+     "catullus:6:6"
+    ],
+    "strength": "close"
+   },
+   "greek:8:1": {
+    "to": [
+     "catullus:7:3"
+    ],
+    "strength": "close"
+   },
+   "greek:8:2": {
+    "to": [
+     "catullus:7:5"
+    ],
+    "strength": "loose"
+   },
+   "greek:8:3": {
+    "to": [
+     "catullus:7:4"
+    ],
+    "strength": "loose"
+   },
+   "greek:9:1": {
+    "to": [
+     "catullus:9:2"
+    ],
+    "strength": "close"
+   },
+   "greek:9:4": {
+    "to": [
+     "catullus:9:1"
+    ],
+    "strength": "close"
+   },
+   "greek:9:5": {
+    "to": [
+     "catullus:9:3"
+    ],
+    "strength": "loose"
+   },
+   "greek:9:6": {
+    "to": [
+     "catullus:9:4"
+    ],
+    "strength": "close"
+   },
+   "greek:10:2": {
+    "to": [
+     "catullus:9:6"
+    ],
+    "strength": "loose"
+   },
+   "greek:10:3": {
+    "to": [
+     "catullus:10:1"
+    ],
+    "strength": "close"
+   },
+   "greek:10:4": {
+    "to": [
+     "catullus:9:5",
+     "catullus:10:2"
+    ],
+    "strength": "loose"
+   },
+   "greek:11:1": {
+    "to": [
+     "catullus:12:1"
+    ],
+    "strength": "close"
+   },
+   "greek:11:5": {
+    "to": [
+     "catullus:10:3",
+     "catullus:11:1"
+    ],
+    "strength": "loose"
+   },
+   "greek:12:2": {
+    "to": [
+     "catullus:11:2"
+    ],
+    "strength": "close"
+   },
+   "greek:3:2": {
+    "to": [
+     "catullus:4:2"
+    ],
+    "strength": "loose"
+   }
+  },
+  "philips": {
+   "greek:1:3": {
+    "to": [
+     "philips:1:7"
+    ],
+    "strength": "close"
+   },
+   "greek:1:4": {
+    "to": [
+     "philips:1:2"
+    ],
+    "strength": "loose"
+   },
+   "greek:1:5": {
+    "to": [
+     "philips:1:3",
+     "philips:1:5"
+    ],
+    "strength": "close"
+   },
+   "greek:2:1": {
+    "to": [
+     "philips:1:6"
+    ],
+    "strength": "close"
+   },
+   "greek:2:2": {
+    "to": [
+     "philips:2:1",
+     "philips:2:2"
+    ],
+    "strength": "loose"
+   },
+   "greek:2:3": {
+    "to": [
+     "philips:2:3"
+    ],
+    "strength": "close"
+   },
+   "greek:2:5": {
+    "to": [
+     "philips:2:7"
+    ],
+    "strength": "close"
+   },
+   "greek:3:1": {
+    "to": [
+     "philips:2:5"
+    ],
+    "strength": "close"
+   },
+   "greek:3:2": {
+    "to": [
+     "philips:3:1"
+    ],
+    "strength": "close"
+   },
+   "greek:3:3": {
+    "to": [
+     "philips:2:6"
+    ],
+    "strength": "close"
+   },
+   "greek:3:4": {
+    "to": [
+     "philips:4:1"
+    ],
+    "strength": "loose"
+   },
+   "greek:3:5": {
+    "to": [
+     "philips:3:5",
+     "philips:4:2"
+    ],
+    "strength": "close"
+   },
+   "greek:4:1": {
+    "to": [
+     "philips:3:2"
+    ],
+    "strength": "close"
+   },
+   "greek:5:1": {
+    "to": [
+     "philips:4:3"
+    ],
+    "strength": "close"
+   },
+   "greek:5:2": {
+    "to": [
+     "philips:4:5"
+    ],
+    "strength": "loose"
+   },
+   "greek:5:3": {
+    "to": [
+     "philips:4:4"
+    ],
+    "strength": "loose"
+   },
+   "greek:5:4": {
+    "to": [
+     "philips:5:2"
+    ],
+    "strength": "close"
+   },
+   "greek:5:5": {
+    "to": [
+     "philips:5:4"
+    ],
+    "strength": "close"
+   },
+   "greek:6:1": {
+    "to": [
+     "philips:5:5"
+    ],
+    "strength": "loose"
+   },
+   "greek:6:2": {
+    "to": [
+     "philips:6:5"
+    ],
+    "strength": "close"
+   },
+   "greek:6:3": {
+    "to": [
+     "philips:6:7"
+    ],
+    "strength": "close"
+   },
+   "greek:6:4": {
+    "to": [
+     "philips:6:2",
+     "philips:6:4"
+    ],
+    "strength": "loose"
+   },
+   "greek:7:1": {
+    "to": [
+     "philips:7:2"
+    ],
+    "strength": "close"
+   },
+   "greek:7:2": {
+    "to": [
+     "philips:7:1"
+    ],
+    "strength": "close"
+   },
+   "greek:7:3": {
+    "to": [
+     "philips:7:3",
+     "philips:7:4"
+    ],
+    "strength": "close"
+   },
+   "greek:7:6": {
+    "to": [
+     "philips:8:6"
+    ],
+    "strength": "close"
+   },
+   "greek:8:1": {
+    "to": [
+     "philips:8:8"
+    ],
+    "strength": "loose"
+   },
+   "greek:9:6": {
+    "to": [
+     "philips:9:5"
+    ],
+    "strength": "close"
+   },
+   "greek:10:1": {
+    "to": [
+     "philips:10:2"
+    ],
+    "strength": "loose"
+   },
+   "greek:10:2": {
+    "to": [
+     "philips:10:7"
+    ],
+    "strength": "close"
+   },
+   "greek:10:3": {
+    "to": [
+     "philips:9:4",
+     "philips:9:6"
+    ],
+    "strength": "close"
+   },
+   "greek:10:4": {
+    "to": [
+     "philips:10:1",
+     "philips:10:3"
+    ],
+    "strength": "loose"
+   },
+   "greek:11:1": {
+    "to": [
+     "philips:11:4"
+    ],
+    "strength": "close"
+   },
+   "greek:11:5": {
+    "to": [
+     "philips:12:5",
+     "philips:12:6"
+    ],
+    "strength": "loose"
+   },
+   "greek:12:2": {
+    "to": [
+     "philips:12:2"
+    ],
+    "strength": "close"
+   },
+   "greek:13:3": {
+    "to": [
+     "philips:13:2",
+     "philips:13:3"
+    ],
+    "strength": "loose"
+   },
+   "greek:13:5": {
+    "to": [
+     "philips:14:5",
+     "philips:14:6"
+    ],
+    "strength": "loose"
+   },
+   "greek:15:2": {
+    "to": [
+     "philips:16:5",
+     "philips:16:6"
+    ],
+    "strength": "loose"
+   },
+   "greek:8:3": {
+    "to": [
+     "philips:8:7",
+     "philips:8:8"
+    ],
+    "strength": "loose"
+   },
+   "greek:15:3": {
+    "to": [
+     "philips:16:4"
+    ],
+    "strength": "close"
+   }
+  },
+  "wharton": {
+   "greek:1:1": {
+    "to": [
+     "wharton:1:3"
+    ],
+    "strength": "close"
+   },
+   "greek:1:2": {
+    "to": [
+     "wharton:1:4",
+     "wharton:1:5"
+    ],
+    "strength": "close"
+   },
+   "greek:1:3": {
+    "to": [
+     "wharton:1:1"
+    ],
+    "strength": "close"
+   },
+   "greek:1:4": {
+    "to": [
+     "wharton:1:6"
+    ],
+    "strength": "close"
+   },
+   "greek:1:5": {
+    "to": [
+     "wharton:1:7",
+     "wharton:1:8"
+    ],
+    "strength": "close"
+   },
+   "greek:2:2": {
+    "to": [
+     "wharton:1:2"
+    ],
+    "strength": "close"
+   },
+   "greek:2:3": {
+    "to": [
+     "wharton:1:9"
+    ],
+    "strength": "close"
+   },
+   "greek:2:4": {
+    "to": [
+     "wharton:1:11",
+     "wharton:1:13"
+    ],
+    "strength": "close"
+   },
+   "greek:2:5": {
+    "to": [
+     "wharton:1:12"
+    ],
+    "strength": "close"
+   },
+   "greek:3:1": {
+    "to": [
+     "wharton:1:10"
+    ],
+    "strength": "close"
+   },
+   "greek:3:2": {
+    "to": [
+     "wharton:1:14"
+    ],
+    "strength": "close"
+   },
+   "greek:3:3": {
+    "to": [
+     "wharton:1:16",
+     "wharton:1:17",
+     "wharton:1:18"
+    ],
+    "strength": "close"
+   },
+   "greek:3:4": {
+    "to": [
+     "wharton:1:20"
+    ],
+    "strength": "close"
+   },
+   "greek:3:5": {
+    "to": [
+     "wharton:1:19",
+     "wharton:1:21"
+    ],
+    "strength": "close"
+   },
+   "greek:4:1": {
+    "to": [
+     "wharton:1:15"
+    ],
+    "strength": "close"
+   },
+   "greek:5:1": {
+    "to": [
+     "wharton:2:1"
+    ],
+    "strength": "close"
+   },
+   "greek:5:2": {
+    "to": [
+     "wharton:2:3"
+    ],
+    "strength": "close"
+   },
+   "greek:5:3": {
+    "to": [
+     "wharton:2:2"
+    ],
+    "strength": "close"
+   },
+   "greek:5:4": {
+    "to": [
+     "wharton:2:4"
+    ],
+    "strength": "close"
+   },
+   "greek:5:5": {
+    "to": [
+     "wharton:2:7"
+    ],
+    "strength": "close"
+   },
+   "greek:5:6": {
+    "to": [
+     "wharton:2:5"
+    ],
+    "strength": "close"
+   },
+   "greek:6:1": {
+    "to": [
+     "wharton:2:8"
+    ],
+    "strength": "close"
+   },
+   "greek:6:2": {
+    "to": [
+     "wharton:2:10"
+    ],
+    "strength": "close"
+   },
+   "greek:6:3": {
+    "to": [
+     "wharton:2:12"
+    ],
+    "strength": "close"
+   },
+   "greek:6:4": {
+    "to": [
+     "wharton:2:6",
+     "wharton:2:9"
+    ],
+    "strength": "close"
+   },
+   "greek:7:1": {
+    "to": [
+     "wharton:2:14"
+    ],
+    "strength": "close"
+   },
+   "greek:7:2": {
+    "to": [
+     "wharton:2:13"
+    ],
+    "strength": "close"
+   },
+   "greek:7:3": {
+    "to": [
+     "wharton:2:15",
+     "wharton:2:16"
+    ],
+    "strength": "close"
+   },
+   "greek:7:4": {
+    "to": [
+     "wharton:2:18",
+     "wharton:2:19",
+     "wharton:2:20"
+    ],
+    "strength": "close"
+   },
+   "greek:7:5": {
+    "to": [
+     "wharton:2:17"
+    ],
+    "strength": "close"
+   },
+   "greek:7:6": {
+    "to": [
+     "wharton:2:24"
+    ],
+    "strength": "close"
+   },
+   "greek:8:1": {
+    "to": [
+     "wharton:2:23"
+    ],
+    "strength": "close"
+   },
+   "greek:8:2": {
+    "to": [
+     "wharton:2:25"
+    ],
+    "strength": "loose"
+   },
+   "greek:8:3": {
+    "to": [
+     "wharton:2:21",
+     "wharton:2:22"
+    ],
+    "strength": "loose"
+   },
+   "greek:9:2": {
+    "to": [
+     "wharton:3:5"
+    ],
+    "strength": "close",
+    "note": "κὰμ ... ἔαγε = 'broken down': Wharton keeps the prefix"
+   },
+   "greek:9:4": {
+    "to": [
+     "wharton:3:2"
+    ],
+    "strength": "close"
+   },
+   "greek:9:5": {
+    "to": [
+     "wharton:3:3",
+     "wharton:3:4"
+    ],
+    "strength": "close"
+   },
+   "greek:9:6": {
+    "to": [
+     "wharton:3:9"
+    ],
+    "strength": "close"
+   },
+   "greek:9:7": {
+    "to": [
+     "wharton:3:6"
+    ],
+    "strength": "close"
+   },
+   "greek:10:1": {
+    "to": [
+     "wharton:3:7"
+    ],
+    "strength": "close"
+   },
+   "greek:10:2": {
+    "to": [
+     "wharton:3:15"
+    ],
+    "strength": "close"
+   },
+   "greek:10:3": {
+    "to": [
+     "wharton:3:8",
+     "wharton:3:10"
+    ],
+    "strength": "close"
+   },
+   "greek:10:4": {
+    "to": [
+     "wharton:3:11",
+     "wharton:3:12",
+     "wharton:3:13"
+    ],
+    "strength": "close"
+   },
+   "greek:11:1": {
+    "to": [
+     "wharton:3:16",
+     "wharton:3:18"
+    ],
+    "strength": "close"
+   },
+   "greek:11:3": {
+    "to": [
+     "wharton:3:21"
+    ],
+    "strength": "close"
+   },
+   "greek:11:4": {
+    "to": [
+     "wharton:3:19",
+     "wharton:3:20",
+     "wharton:3:22"
+    ],
+    "strength": "close"
+   },
+   "greek:11:5": {
+    "to": [
+     "wharton:3:25"
+    ],
+    "strength": "loose"
+   },
+   "greek:12:2": {
+    "to": [
+     "wharton:3:24"
+    ],
+    "strength": "close"
+   },
+   "greek:13:3": {
+    "to": [
+     "wharton:4:1"
+    ],
+    "strength": "close"
+   },
+   "greek:13:4": {
+    "to": [
+     "wharton:4:2",
+     "wharton:4:3"
+    ],
+    "strength": "close"
+   },
+   "greek:13:5": {
+    "to": [
+     "wharton:4:5",
+     "wharton:4:6"
+    ],
+    "strength": "close"
+   },
+   "greek:13:6": {
+    "to": [
+     "wharton:4:4"
+    ],
+    "strength": "close"
+   },
+   "greek:14:1": {
+    "to": [
+     "wharton:4:8",
+     "wharton:4:9",
+     "wharton:4:10"
+    ],
+    "strength": "close"
+   },
+   "greek:14:2": {
+    "to": [
+     "wharton:4:7"
+    ],
+    "strength": "close"
+   },
+   "greek:14:3": {
+    "to": [
+     "wharton:4:13"
+    ],
+    "strength": "close"
+   },
+   "greek:14:5": {
+    "to": [
+     "wharton:4:14",
+     "wharton:4:15"
+    ],
+    "strength": "close"
+   },
+   "greek:15:1": {
+    "to": [
+     "wharton:4:11",
+     "wharton:4:12"
+    ],
+    "strength": "close"
+   },
+   "greek:15:2": {
+    "to": [
+     "wharton:4:24",
+     "wharton:4:25"
+    ],
+    "strength": "close"
+   },
+   "greek:15:3": {
+    "to": [
+     "wharton:4:16"
+    ],
+    "strength": "close"
+   },
+   "greek:15:4": {
+    "to": [
+     "wharton:4:21"
+    ],
+    "strength": "close"
+   },
+   "greek:15:5": {
+    "to": [
+     "wharton:4:22",
+     "wharton:4:23"
+    ],
+    "strength": "loose"
+   },
+   "greek:16:1": {
+    "to": [
+     "wharton:4:17"
+    ],
+    "strength": "close"
+   }
+  }
+ },
+ "gloss_source": {
+  "lexicon": "LSJ, A Greek-English Lexicon (9th ed., 1940), Perseus digital edition",
+  "licence": "CC BY-SA 4.0",
+  "credit": "Text provided under a CC BY-SA license by Perseus Digital Library, http://www.perseus.tufts.edu, with funding from The National Endowment for the Humanities. Data accessed from https://github.com/PerseusDL/lexica/ [2026-10-08]."
+ }
+}

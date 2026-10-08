@@ -9,6 +9,7 @@ One folder per Nobel Prize. A folder is added when its prize has been announced 
 | Medicine | Light-gated ion channels and optogenetics (announced 5 October) | [medicine](medicine/README.md) | done |
 | Physics | Neutrino astronomy: Francis Halzen, for the IceCube Neutrino Observatory (announced 6 October) | [physics](physics/README.md) | done |
 | Chemistry | Mirror-image molecules: Henri B. Kagan and Kenso Soai, for non-linear effects and autocatalysis in asymmetric synthesis (announced 7 October) | [chemistry](chemistry/README.md) | done |
+| Literature | Anne Carson, "for her bold and inventive oeuvre that, in playful dialogue with the classical tradition, has created new forms for contemporary literature" (announced 8 October) | [literature](literature/README.md) | facts, claims ledger, survival ledger, forms shelf, fragments, translators and [page](literature/page/README.md) done; independent review done, findings fixed; video done |
 | Economics | to be announced on 12 October | none yet | coming |
 
 ## What every prize folder holds

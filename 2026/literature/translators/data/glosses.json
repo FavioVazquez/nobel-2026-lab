@@ -1,0 +1,275 @@
+{
+ "about": "Our choice of gloss for each LSJ headword: each 'gloss' is copied exactly from the LSJ entry named in 'from' (Perseus LSJ, CC BY-SA 4.0; see lsj_entries.json for the credit). Where the headword is a dialect form that LSJ only cross-refers ('Aeol. for ...'), the gloss comes from the entry LSJ points to, named in 'from'. 'sense' is a hint for the reader, not a quotation. 'lsj_cites_this_poem' = LSJ itself cites this line of the poem (Bergk's numbering, the same as Wharton's) in that entry; the tests check it.",
+ "glosses": {
+  "fai/nw": {
+   "from": "fai/nw",
+   "gloss": "appear"
+  },
+  "e)gw/": {
+   "from": "e)gw/",
+   "gloss": "me"
+  },
+  "kh=nos": {
+   "from": "e)kei=nos",
+   "gloss": "the person there, that person",
+   "lsj_cites_this_poem": "Sapph. 2.1"
+  },
+  "i)/sos": {
+   "from": "i)/sos",
+   "gloss": "equal"
+  },
+  "qeo/s": {
+   "from": "qeo/s",
+   "gloss": "God, the Deity"
+  },
+  "ei)mi/1": {
+   "from": "ei)mi/1",
+   "gloss": "exist",
+   "lsj_cites_this_poem": "Sapph. 2.15"
+  },
+  "a)nh/r": {
+   "from": "a)nh/r",
+   "gloss": "man"
+  },
+  "o(/stis": {
+   "from": "o(/stis",
+   "gloss": "any one who, anything which, whosoever"
+  },
+  "e)nanti/os": {
+   "from": "e)nanti/os",
+   "gloss": "fronting, face to face",
+   "lsj_cites_this_poem": "Sapph. 2.2"
+  },
+  "su/": {
+   "from": "su/",
+   "gloss": "thou"
+  },
+  "i(za/nw": {
+   "from": "i(za/nw",
+   "gloss": "sit",
+   "lsj_cites_this_poem": "Sapph. 2.3"
+  },
+  "kai/1": {
+   "from": "kai/1",
+   "gloss": "and"
+  },
+  "plhsi/os": {
+   "from": "plhsi/os",
+   "gloss": "near, close to"
+  },
+  "h(du/s": {
+   "from": "h(du/s",
+   "gloss": "sweetly"
+  },
+  "fwne/w": {
+   "from": "fwne/w",
+   "gloss": "speak, give utterance"
+  },
+  "u(pakou/w": {
+   "from": "u(pakou/w",
+   "gloss": "listen to, heed",
+   "lsj_cites_this_poem": "Sapph. 2.4"
+  },
+  "gela/w": {
+   "from": "gela/w",
+   "gloss": "laugh"
+  },
+  "i(mero/eis": {
+   "from": "i(mero/eis",
+   "gloss": "exciting desire, lovely, charming"
+  },
+  "o(1": {
+   "from": "o(1",
+   "gloss": "definite or prepositive Article"
+  },
+  "ma/n": {
+   "from": "mh/n1",
+   "gloss": "verily, truly"
+  },
+  "kardi/a": {
+   "from": "kardi/a",
+   "gloss": "heart"
+  },
+  "e)n": {
+   "from": "e)n",
+   "gloss": "in"
+  },
+  "sth=qos": {
+   "from": "sth=qos",
+   "gloss": "breast",
+   "lsj_cites_this_poem": "Sapph. 2.6"
+  },
+  "ptoe/w": {
+   "from": "ptoe/w",
+   "gloss": "flutter, excite",
+   "lsj_cites_this_poem": "Sapph. 2.6"
+  },
+  "w(s": {
+   "from": "w(s",
+   "gloss": "when"
+  },
+  "ga/r": {
+   "from": "ga/r",
+   "gloss": "for"
+  },
+  "ei)/dw1": {
+   "from": "ei)/dw1",
+   "gloss": "see"
+  },
+  "bro/xus": {
+   "from": "braxu/s",
+   "gloss": "for a moment",
+   "lsj_cites_this_poem": "Sapph. 2.7"
+  },
+  "fwnh/": {
+   "from": "fwnh/",
+   "gloss": "speech, voice, utterance"
+  },
+  "ou)dei/s": {
+   "from": "ou)dei/s",
+   "gloss": "nothing"
+  },
+  "e)/ti": {
+   "from": "e)/ti",
+   "gloss": "yet, still"
+  },
+  "ei)/kw2": {
+   "from": "ei)/kw2",
+   "gloss": "it is allowable or possible",
+   "sense": "impersonal; LSJ cites this very line (Sapph. 2.8) under this sense",
+   "lsj_cites_this_poem": "Sapph. 2.8"
+  },
+  "a)lla/": {
+   "from": "a)lla/",
+   "gloss": "but"
+  },
+  "kata/1": {
+   "from": "kata/1",
+   "gloss": "downwards"
+  },
+  "me/n": {
+   "from": "me/n",
+   "gloss": "indeed, of a truth"
+  },
+  "glw=ssa": {
+   "from": "glw=ssa",
+   "gloss": "tongue"
+  },
+  "a)/gnumi": {
+   "from": "a)/gnumi",
+   "gloss": "break, shiver"
+  },
+  "lepto/s": {
+   "from": "lepto/s",
+   "gloss": "thin, fine, delicate"
+  },
+  "de/1": {
+   "from": "de/1",
+   "gloss": "but"
+  },
+  "au)ti/ka^": {
+   "from": "au)ti/ka^",
+   "gloss": "forthwith, at once, in a moment"
+  },
+  "xrw/s": {
+   "from": "xrw/s",
+   "gloss": "skin",
+   "lsj_cites_this_poem": "Sapph. 2.10"
+  },
+  "pu=r": {
+   "from": "pu=r",
+   "gloss": "fire"
+  },
+  "u(potre/xw": {
+   "from": "u(potre/xw",
+   "gloss": "run in under",
+   "lsj_cites_this_poem": "Sapph. 2.10"
+  },
+  "o)ppa/tessi": {
+   "from": "o)/mma",
+   "gloss": "eyes",
+   "lsj_cites_this_poem": "Sapph. 2.11"
+  },
+  "o)/rhmi": {
+   "from": "o(ra/w",
+   "gloss": "see",
+   "lsj_cites_this_poem": "Sapph. 2.11"
+  },
+  "e)pirrombe/w": {
+   "from": "e)pirrombe/w",
+   "gloss": "make a buzzing noise",
+   "lsj_cites_this_poem": "Sapph. 2.11"
+  },
+  "a)koh/": {
+   "from": "a)koh/",
+   "gloss": "ear",
+   "sense": "LSJ cites this very line (Sapph. 2.12) under the sense 'ear'",
+   "lsj_cites_this_poem": "Sapph. 2.12"
+  },
+  "i(drw/s": {
+   "from": "i(drw/s",
+   "gloss": "sweat",
+   "lsj_cites_this_poem": "Sapph. 2.13"
+  },
+  "kataxe/w": {
+   "from": "kataxe/w",
+   "gloss": "pour down upon, pour over",
+   "lsj_cites_this_poem": "Sapph. 2.13"
+  },
+  "tro/mos1": {
+   "from": "tro/mos1",
+   "gloss": "trembling, quaking, quivering",
+   "lsj_cites_this_poem": "Sapph. 2.13"
+  },
+  "pa=s1": {
+   "from": "pa=s1",
+   "gloss": "all"
+  },
+  "a)gre/w": {
+   "from": "a)gre/w",
+   "gloss": "take, seize",
+   "lsj_cites_this_poem": "Sapph. 2.14"
+  },
+  "xlwro/s": {
+   "from": "xlwro/s",
+   "gloss": "pale, pallid",
+   "lsj_cites_this_poem": "Sapph. 2.14"
+  },
+  "poi/a": {
+   "from": "po/a",
+   "gloss": "grass"
+  },
+  "qnh/|skw": {
+   "from": "qnh/|skw",
+   "gloss": "to be dead",
+   "lsj_cites_this_poem": "Sapph. 2.15"
+  },
+  "o)li/gos": {
+   "from": "o)li/gos",
+   "gloss": "little, small"
+  },
+  "e)pideuh/s": {
+   "from": "e)pideuh/s",
+   "gloss": "in need or want of, lacking",
+   "lsj_cites_this_poem": "Sapph. 2.15",
+   "sense": "LSJ marks the reading 'πιδεύης here as a conjecture ('cj. in Sapph. 2.15')"
+  },
+  "a)/llos1": {
+   "from": "a)/llos1",
+   "gloss": "another"
+  },
+  "gluku/pikros": {
+   "from": "gluku/pikros",
+   "gloss": "sweetly bitter"
+  },
+  "gluku/s": {
+   "from": "gluku/s",
+   "gloss": "sweet to the taste or smell"
+  },
+  "pikro/s": {
+   "from": "pikro/s",
+   "gloss": "bitter",
+   "sense": "LSJ's first sense is 'pointed, sharp, keen'"
+  }
+ }
+}

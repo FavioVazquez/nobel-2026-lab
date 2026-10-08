@@ -1,0 +1,1512 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>What survives: Sappho, translators and new forms (Nobel Literature 2026)</title>
+<meta name="description" content="Guess first, then see: how much of the classical tradition survives, how a Sappho poem is lost, how translators across 2,000 years carried one Greek stanza, and the new forms of Anne Carson's books. For the 2026 Nobel Prize in Literature. Educational demos made to show an open-source tool. Not research.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nobel 2026 Lab">
+<meta property="og:title" content="What survives: Sappho, translators and new forms">
+<meta property="og:description" content="Lost plays, a torn papyrus, one Greek stanza in the hands of translators from Catullus on, and 22 chapbooks in any order. Four guesses for the 2026 Nobel Prize in Literature (Anne Carson). Educational demos made to show an open-source tool. Not research.">
+<meta property="og:url" content="https://faviovazquez.github.io/nobel-2026-lab/2026/literature/page/">
+<meta property="og:image" content="https://faviovazquez.github.io/nobel-2026-lab/2026/literature/page/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A grid of ten thousand pencil dots on warm paper, a few hundred inked in red: Sappho's surviving lines, beside the title What survives">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+@font-face { font-family: "Lit Page Body"; src: url("fonts/body.woff2") format("woff2"); font-weight: 100 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Lit Page Body"; src: url("fonts/body-bold.woff2") format("woff2"); font-weight: 501 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Lit Page Body"; src: url("fonts/italic.woff2") format("woff2"); font-weight: 100 900; font-style: italic; font-display: swap; }
+@font-face { font-family: "Lit Page Greek"; src: url("fonts/greek.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Lit Page Hand"; src: url("fonts/hand.woff2") format("woff2"); font-weight: 400 700; font-style: normal; font-display: swap; }
+
+:root {
+  --paper: #f3ece0; --paper-deep: #ebe1cf; --ink: #2b2118; --ink-soft: #4a3c2e; --muted: #6b5d4c; --pencil: #b9ad9a;
+  --accent: #a8432a; --accent-soft: rgba(168, 67, 42, .14); --blue: #3f6e8c; --blue-soft: rgba(63, 110, 140, .14);
+  --papyrus: #e2cd9f; --papyrus-fibre: rgba(120, 88, 40, .16); --hole: #f3ece0; --hole-edge: rgba(80, 55, 25, .38);
+  --rule: rgba(43, 33, 24, .14); --card: rgba(255, 252, 245, .55);
+  --pre-bg: #f6dccf; --pre-fg: #6f2412; --pre-line: #d79a80;
+  --ok: #2f6a3f; --bad: #a8432a; --focus: #3f6e8c;
+  --body: "Lit Page Body", "Lit Page Greek", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --greek: "Lit Page Greek", "GFS Didot", "Gentium Book Plus", "Palatino Linotype", Georgia, serif;
+  --hand: "Lit Page Hand", "Bradley Hand", "Segoe Print", "Noteworthy", cursive;
+  --glow: transparent;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #1b1510; --paper-deep: #241c14; --ink: #eee2c8; --ink-soft: #d8c8a8; --muted: #b6a385; --pencil: #6c5f4c;
+    --accent: #e48a66; --accent-soft: rgba(228, 138, 102, .16); --blue: #8dbad8; --blue-soft: rgba(141, 186, 216, .16);
+    --papyrus: #4a3920; --papyrus-fibre: rgba(255, 220, 160, .08); --hole: #1b1510; --hole-edge: rgba(0, 0, 0, .55);
+    --rule: rgba(238, 226, 200, .12); --card: rgba(40, 31, 22, .5);
+    --pre-bg: #3d1d12; --pre-fg: #ffc9b2; --pre-line: #7c3b22;
+    --ok: #93d3a0; --bad: #ff9f80; --focus: #8dbad8;
+    --glow: rgba(255, 186, 102, .17);
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #1b1510; --paper-deep: #241c14; --ink: #eee2c8; --ink-soft: #d8c8a8; --muted: #b6a385; --pencil: #6c5f4c;
+  --accent: #e48a66; --accent-soft: rgba(228, 138, 102, .16); --blue: #8dbad8; --blue-soft: rgba(141, 186, 216, .16);
+  --papyrus: #4a3920; --papyrus-fibre: rgba(255, 220, 160, .08); --hole: #1b1510; --hole-edge: rgba(0, 0, 0, .55);
+  --rule: rgba(238, 226, 200, .12); --card: rgba(40, 31, 22, .5);
+  --pre-bg: #3d1d12; --pre-fg: #ffc9b2; --pre-line: #7c3b22;
+  --ok: #93d3a0; --bad: #ff9f80; --focus: #8dbad8;
+  --glow: rgba(255, 186, 102, .17);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; background: var(--paper); }
+body { margin: 0; color: var(--ink); background-color: var(--paper); font: 400 17.5px/1.62 var(--body);
+  font-kerning: normal; font-variant-numeric: oldstyle-nums proportional-nums; overflow-x: hidden; position: relative; }
+/* the sheet: a faint grain of laid paper, foxing at the edges; at night a lamp above the page */
+body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: -1;
+  background:
+    radial-gradient(120% 70% at 50% -8%, var(--glow), transparent 62%),
+    radial-gradient(140% 120% at 50% 40%, transparent 55%, rgba(110, 70, 25, .10) 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .12 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E"),
+    repeating-linear-gradient(90deg, transparent 0 31px, var(--rule) 31px 32px);
+  background-size: auto, auto, 220px 220px, 32px 100%; opacity: 1; }
+:root:not([data-theme="light"]) body::before { }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .18em; }
+a:hover { text-decoration-thickness: 2px; }
+em, i, cite { font-style: italic; }
+.gk, [lang="grc"] { font-family: var(--greek); font-variant-numeric: lining-nums; }
+:focus-visible { outline: 2.5px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+p { margin: .6rem 0; }
+h1, h2, h3 { font-weight: 560; line-height: 1.12; letter-spacing: -.005em; }
+h2 { font-size: clamp(1.7rem, 1.2rem + 2.4vw, 2.35rem); margin: .2rem 0 .1rem; }
+h3 { font-size: 1.22rem; margin: 2rem 0 .3rem; }
+.hand { font-family: var(--hand); font-weight: 500; }
+.small { font-size: .9rem; }
+.muted { color: var(--muted); }
+.num { font-variant-numeric: lining-nums tabular-nums; }
+.skip { position: absolute; left: -999px; } .skip:focus { left: 1rem; top: 1rem; background: var(--paper); padding: .4rem .7rem; z-index: 9; }
+
+/* layout: a centred text column, figures may run wider; never wider than the screen */
+.leaf { display: grid; grid-template-columns: 1fr min(44rem, calc(100% - 32px)) 1fr; margin: 0 0 1rem; }
+.leaf > *, .reveal > * { grid-column: 2; min-width: 0; }
+.leaf > .wide, .reveal > .wide { grid-column: 1 / -1; width: min(60rem, calc(100% - 32px)); justify-self: center; }
+.reveal { grid-column: 1 / -1 !important; display: grid; grid-template-columns: 1fr min(44rem, calc(100% - 32px)) 1fr; }
+.reveal[hidden] { display: none; }
+.gloss { font-family: var(--hand); color: var(--accent); font-size: 1.12rem; line-height: 1.3; margin: .4rem 0 .8rem;
+  padding-left: .8rem; border-left: 2px solid var(--accent-soft); }
+@media (min-width: 1180px) {
+  .leaf > .gloss, .reveal > .gloss { grid-column: 3; grid-row: span 3; align-self: start; max-width: 15rem; margin: .3rem 0 0 1.6rem;
+    border-left: 0; padding-left: 0; transform: rotate(-1.2deg); }
+}
+
+/* header */
+header.leaf { padding-top: 2.4rem; }
+.kicker { font-family: var(--hand); font-size: 1.25rem; color: var(--accent); margin: 0 0 .2rem; }
+h1 { font-size: clamp(2.9rem, 1.6rem + 6.5vw, 5.4rem); margin: 0; font-weight: 600; letter-spacing: -.02em; line-height: .98; }
+.flourish { display: block; width: min(22rem, 80%); height: 34px; margin: .2rem 0 .3rem; overflow: visible; }
+.sub { font-size: 1.12rem; color: var(--ink-soft); max-width: 36rem; margin: .4rem 0 .9rem; }
+.label { display: inline-block; justify-self: start; font-size: .92rem; font-weight: 600; color: var(--ink); border: 1.5px solid var(--ink);
+  border-radius: 3px 9px 4px 10px / 9px 3px 10px 4px; padding: .28rem .7rem; transform: rotate(-.5deg); margin: .3rem 0 .2rem; background: var(--card); }
+.prelim { background: var(--pre-bg); color: var(--pre-fg); border: 1.5px solid var(--pre-line); border-radius: 6px 12px 7px 11px; padding: .55rem .85rem; margin: .9rem 0 0; font-size: .95rem; }
+.prelim[hidden] { display: none; }
+.prelim b { font-weight: 700; }
+.toc { list-style: none; padding: 0; margin: 1.3rem 0 .4rem; counter-reset: none; }
+.toc li { display: flex; align-items: baseline; gap: .5rem; margin: .18rem 0; }
+.toc a { color: var(--ink); text-decoration: none; }
+.toc a:hover { color: var(--accent); }
+.toc .fol { font-family: var(--hand); color: var(--accent); width: 1.6rem; flex: none; font-size: 1.15rem; }
+.toc .dots { flex: 1; border-bottom: 1.5px dotted var(--pencil); transform: translateY(-.3em); min-width: 1rem; }
+.toc .g { font-family: var(--hand); color: var(--muted); font-size: 1.02rem; white-space: nowrap; }
+.lamp { position: absolute; top: .8rem; right: 1rem; font: 500 1.05rem var(--hand); color: var(--ink); background: transparent;
+  border: 1.5px solid var(--pencil); border-radius: 999px; padding: .15rem .7rem .2rem; cursor: pointer; z-index: 2; }
+.lamp:hover { border-color: var(--ink); }
+
+/* opener */
+.epigraph { margin: 2.2rem 0 .6rem; position: relative; padding: 0 0 0 1.1rem; }
+.epigraph .lead { font-size: .98rem; color: var(--muted); margin: 0 0 .3rem; }
+.epigraph blockquote { margin: 0; font-size: clamp(1.32rem, 1.05rem + 1.2vw, 1.7rem); line-height: 1.35; font-style: italic; color: var(--ink); }
+.epigraph::before { content: ""; position: absolute; left: 0; top: .3rem; bottom: .3rem; border-left: 2.5px solid var(--accent); opacity: .7; border-radius: 2px; }
+.epigraph .by { margin: .5rem 0 0; font-size: .95rem; color: var(--muted); }
+.who { margin: 1.2rem 0 .3rem; }
+.who p { margin: .25rem 0; }
+.how { color: var(--ink-soft); font-size: .98rem; }
+
+/* section heads */
+.folio { font-family: var(--hand); color: var(--accent); font-size: 1.6rem; margin: 3.2rem 0 0; line-height: 1; }
+.hrule { display: block; width: 100%; height: 22px; overflow: visible; margin: .1rem 0 .3rem; }
+.lede { font-size: 1.1rem; color: var(--ink-soft); }
+.lede::first-letter { font-size: 3.1em; float: left; line-height: .82; padding: .06em .08em 0 0; color: var(--accent); font-weight: 600; }
+
+/* guess first */
+.guess { margin: 1.1rem 0 .4rem; padding: 1rem 1.1rem 1.05rem; border: 1.5px solid var(--ink); background: var(--card);
+  border-radius: 14px 5px 16px 6px / 6px 15px 5px 14px; position: relative; }
+.guess::before { content: "guess first"; position: absolute; top: -.95rem; left: .9rem; font: 600 1.15rem var(--hand); color: var(--accent);
+  background: var(--paper); padding: 0 .4rem; transform: rotate(-2deg); }
+fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+legend { padding: 0; font-weight: 560; font-size: 1.08rem; margin-bottom: .55rem; line-height: 1.4; }
+.choices { display: flex; flex-wrap: wrap; gap: .45rem .7rem; }
+.choice { position: relative; display: inline-flex; align-items: center; gap: .45rem; padding: .38rem .9rem .42rem; cursor: pointer; line-height: 1.25;
+  border-radius: 999px; transition: color .2s; }
+.choice input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.choice .ring { position: absolute; inset: -4px -6px; width: calc(100% + 12px); height: calc(100% + 8px); overflow: visible; pointer-events: none; }
+.choice .ring path { fill: none; stroke: var(--pencil); stroke-width: 1.4; stroke-linecap: round; }
+.choice .ring path.on { stroke: var(--accent); stroke-width: 2.2; stroke-dasharray: 1 1; stroke-dashoffset: 1; transition: stroke-dashoffset .5s ease-out; }
+.choice:has(input:checked) .ring path.on { stroke-dashoffset: 0; }
+.choice:has(input:checked) { color: var(--accent); font-weight: 600; }
+.choice:has(input:focus-visible) { outline: 2.5px solid var(--focus); outline-offset: 4px; }
+.choice:has(input:disabled) { cursor: default; }
+.go { font: 600 1rem var(--body); color: var(--paper); background: var(--ink); border: 0; padding: .5rem 1.1rem .55rem; margin-top: .8rem; cursor: pointer;
+  border-radius: 4px 12px 5px 11px / 11px 4px 12px 5px; }
+.go:disabled { opacity: .35; cursor: not-allowed; }
+.reveal > .go, .leaf > .go, .reveal > .seg, .reveal > .ctlrow { justify-self: start; }
+.go:not(:disabled):hover { background: var(--accent); }
+.verdict { font-size: 1.12rem; margin: 1.1rem 0 .4rem; display: flex; gap: .55rem; align-items: flex-start; }
+.verdict svg { flex: none; width: 34px; height: 30px; overflow: visible; margin-top: -.1rem; }
+.verdict .ok { color: var(--ok); } .verdict .bad { color: var(--bad); }
+.big { font-size: clamp(1.9rem, 1.4rem + 2.5vw, 2.8rem); font-weight: 600; line-height: 1.05; font-variant-numeric: lining-nums; }
+
+/* controls */
+.seg { display: inline-flex; flex-wrap: wrap; border: 1.5px solid var(--ink); border-radius: 8px 14px 9px 13px; overflow: hidden; margin: .5rem 0; justify-self: start; }
+.seg button { font: 500 .95rem var(--body); color: var(--ink); background: transparent; border: 0; padding: .38rem .8rem; cursor: pointer; }
+.seg button + button { border-left: 1.5px solid var(--ink); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.ctlrow { display: flex; flex-wrap: wrap; gap: .4rem 1rem; align-items: center; margin: .4rem 0; }
+.ctlrow .lab { font-family: var(--hand); color: var(--muted); font-size: 1.05rem; }
+input[type=range] { accent-color: var(--accent); width: 100%; height: 2rem; margin: 0; }
+.slider { margin: .6rem 0 .2rem; }
+.slider .ends { display: flex; justify-content: space-between; gap: 1rem; font-family: var(--hand); font-size: 1.08rem; color: var(--muted); line-height: 1.2; }
+.slider .ends span:last-child { text-align: right; color: var(--accent); }
+.carson-quote { margin: 1.1rem 0 1rem; padding: .2rem 0 .2rem 1rem; border-left: 2.5px solid var(--accent); }
+.carson-quote blockquote { margin: 0; font-style: italic; font-size: 1.12rem; line-height: 1.4; color: var(--ink); }
+.carson-quote .qctx { margin: 0 0 .25rem; font-size: .93rem; color: var(--ink-soft); }
+.carson-quote figcaption { margin-top: .3rem; font-size: .88rem; color: var(--ink-soft); }
+.caveat { font-size: .93rem; color: var(--ink-soft); margin: .9rem 0; padding: .45rem 0 .45rem .9rem; border-left: 2.5px solid var(--pencil); }
+.caveat b { font-weight: 650; }
+.src { font-size: .84rem; color: var(--muted); margin: .25rem 0 .6rem; }
+.src a { color: var(--muted); }
+.tag { display: inline-block; font: 600 .74rem/1.5 var(--body); padding: 0 .45rem; border-radius: 999px; vertical-align: .12em; margin-left: .3rem;
+  border: 1px solid var(--pre-line); color: var(--pre-fg); background: var(--pre-bg); white-space: nowrap; font-style: normal; }
+.rough { font-family: var(--hand); color: var(--blue); font-size: 1.02rem; white-space: nowrap; }
+
+/* ink: strokes that draw themselves as they come into view */
+svg.ink, .ink svg { overflow: visible; }
+.st { fill: none; stroke: var(--ink); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.st.pencil { stroke: var(--pencil); stroke-width: 1.15; }
+.st.acc { stroke: var(--accent); }
+.st.blue { stroke: var(--blue); }
+.bleed { fill: none; stroke: var(--ink); stroke-width: 4; opacity: .08; stroke-linecap: round; }
+.draw { stroke-dasharray: 1 1; stroke-dashoffset: 1; transition: stroke-dashoffset var(--d, .9s) cubic-bezier(.5, .05, .3, 1) var(--w, 0s); }
+.drawn .draw, .draw.drawn { stroke-dashoffset: 0; }
+.fadein { opacity: 0; transition: opacity .6s ease var(--w, 0s); }
+.drawn .fadein { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .draw, .fadein, .choice .ring path.on, .qline, .chap { transition: none !important; }
+}
+svg text { fill: var(--muted); font-family: var(--body); font-size: 12.5px; }
+svg .t-ink { fill: var(--ink); }
+svg .t-acc { fill: var(--accent); }
+svg .t-hand { font-family: var(--hand); font-size: 15px; }
+svg .t-num { font-variant-numeric: lining-nums tabular-nums; }
+
+/* 1. shelves */
+.shelf { margin: .9rem 0 .3rem; }
+.shelf .who-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: .1rem .6rem; margin: 0 0 .1rem; }
+.shelf .who-row b { font-weight: 620; font-size: 1.05rem; }
+.shelf .who-row .cnt { font-variant-numeric: lining-nums; }
+.shelf .who-row .cnt .s { color: var(--accent); font-weight: 650; }
+.shelf svg { display: block; width: 100%; height: auto; }
+.shelf .note { font-family: var(--hand); color: var(--muted); font-size: 1.02rem; line-height: 1.25; margin: .1rem 0 0; }
+.legend { display: flex; flex-wrap: wrap; gap: .3rem 1.1rem; list-style: none; padding: 0; margin: .4rem 0; font-size: .92rem; }
+.legend li { display: inline-flex; align-items: center; gap: .4rem; }
+.legend svg { width: 18px; height: 18px; overflow: visible; }
+.grid-wrap { margin: .6rem 0; position: relative; }
+.grid-wrap canvas { display: block; width: 100%; height: auto; }
+.grid-cap { display: flex; flex-wrap: wrap; gap: .2rem 1.2rem; font-size: .94rem; margin: .3rem 0; }
+.grid-cap .k { font-variant-numeric: lining-nums; font-weight: 650; }
+
+/* 2. papyrus */
+.papyrus-wrap { margin: .8rem 0 .4rem; position: relative; }
+.papyrus { position: relative; padding: 1.5rem 1.2rem 1.6rem 1.4rem; color: var(--ink); --r: 0;
+  background:
+    repeating-linear-gradient(0deg, var(--papyrus-fibre) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(90deg, transparent 0 9px, rgba(120, 88, 40, .06) 9px 11px),
+    linear-gradient(180deg, rgba(255, 255, 255, .07), rgba(0, 0, 0, .05)), var(--papyrus);
+  filter: drop-shadow(0 6px 10px rgba(60, 35, 10, .16)); }
+.papyrus .gline { font-family: var(--greek); font-size: clamp(1.02rem, .9rem + .6vw, 1.32rem); line-height: 1.75; white-space: pre-wrap; display: flex; gap: .8rem; }
+.papyrus .ln { font: 500 .78rem/2.3 var(--body); color: var(--muted); width: 1.4rem; text-align: right; flex: none; font-variant-numeric: lining-nums; opacity: .8; }
+.papyrus .tx { min-width: 0; }
+.rest { position: relative; border-radius: 3px 6px 2px 7px; }
+.rest::before { content: ""; position: absolute; inset: .12em -.06em; background: var(--hole); border-radius: 5px 9px 4px 8px / 8px 4px 9px 5px;
+  box-shadow: inset 0 1px 3px var(--hole-edge); opacity: calc(1 - var(--r) * .55); }
+.rest .t { position: relative; color: var(--accent); opacity: var(--r); }
+.lost { position: relative; color: var(--muted); }
+.lost::before { content: ""; position: absolute; inset: .12em -.06em; background: var(--hole); border-radius: 6px 3px 8px 4px; box-shadow: inset 0 1px 3px var(--hole-edge); }
+.lost .t { position: relative; }
+.br { color: var(--pencil); transition: color .3s; }
+.papyrus[data-full="1"] .br { color: var(--accent); }
+.ptrans { margin: .9rem 0 .2rem; font-size: 1rem; line-height: 1.6; color: var(--ink-soft); --r: 0; }
+.ptrans .rest::before { display: none; }
+.ptrans .rest { background: var(--hole); box-shadow: inset 0 1px 3px var(--hole-edge); -webkit-box-decoration-break: clone; box-decoration-break: clone; padding: 0 .15em; }
+details.src summary { cursor: pointer; color: var(--muted); font-family: var(--hand); font-size: 1rem; list-style: none; }
+details.src summary::before { content: "+ "; }
+details.src[open] summary::before { content: "\2212  "; }
+details.src p { margin: .2rem 0 .4rem; }
+.pstats { display: flex; flex-wrap: wrap; gap: .3rem 1.4rem; margin: .5rem 0; font-size: .95rem; }
+.pstats b { font-variant-numeric: lining-nums; }
+.pstats .r b { color: var(--accent); }
+.quote { margin: .8rem 0; padding: .4rem 0 .2rem; }
+.qline { font-family: var(--greek); font-size: clamp(1rem, .92rem + .45vw, 1.24rem); line-height: 1.72; display: flex; gap: .8rem; white-space: pre-wrap;
+  clip-path: inset(0 100% 0 0); transition: clip-path .7s cubic-bezier(.4, .1, .3, 1) var(--w, 0s); }
+.drawn .qline { clip-path: inset(0 -2% 0 0); }
+.qline .ln { font: 500 .76rem/2.3 var(--body); color: var(--muted); width: 1.4rem; text-align: right; flex: none; font-variant-numeric: lining-nums; }
+.qline.indent .tx { padding-left: 2.2rem; }
+.qline.last .tx { position: relative; }
+.stopmark { display: flex; align-items: center; gap: .6rem; margin: .1rem 0 0 2.2rem; }
+.stopmark svg { width: 30px; height: 26px; flex: none; overflow: visible; }
+.stopmark .hand { color: var(--accent); font-size: 1.2rem; line-height: 1.2; }
+.blank { height: 1.72em; margin-left: 2.2rem; border-bottom: 1.5px dashed var(--pencil); opacity: .7; max-width: 26rem; }
+.qbr { color: var(--muted); }
+.hist svg { display: block; width: 100%; height: auto; }
+.hist .bar { cursor: pointer; }
+.hist .bar:focus-visible { outline: none; }
+.hist .bar:focus-visible rect.hit, .hist .bar:hover rect.hit { fill: var(--accent-soft); }
+.binlist { min-height: 2.6em; font-size: .95rem; }
+.frn { font-variant-numeric: lining-nums; white-space: nowrap; }
+
+@media (max-width: 520px) {
+  .papyrus { padding: 1.1rem .6rem 1.2rem .5rem; }
+  .papyrus .gline { font-size: 13.4px; gap: .4rem; line-height: 1.85; }
+  .papyrus .ln { width: 1.05rem; font-size: .66rem; }
+  .qline { font-size: 15px; gap: .5rem; }
+  .qline.indent .tx, .stopmark, .blank { padding-left: 1.2rem; margin-left: 0; }
+}
+/* 3. threads */
+.threads { position: relative; margin: .9rem 0 .4rem; padding-bottom: .4rem; }
+.threads > svg.over { position: absolute; left: 0; top: 0; pointer-events: none; overflow: visible; z-index: 0; }
+.greek-block { position: relative; z-index: 1; padding: .6rem 0 .9rem; text-align: center; }
+.greek-block .gl { font-family: var(--greek); font-size: clamp(1.18rem, 1rem + 1vw, 1.6rem); line-height: 1.75; }
+.gw { font: inherit; color: var(--ink); background: transparent; border: 0; padding: 0 .08em; margin: 0; cursor: pointer; border-radius: 4px;
+  text-decoration: underline dotted var(--pencil); text-underline-offset: .28em; text-decoration-thickness: 1.5px; }
+.gw:hover { color: var(--accent); }
+.gw[aria-pressed="true"] { color: var(--accent); text-decoration: underline solid var(--accent); text-decoration-thickness: 2px; }
+.gw.nolink { cursor: default; text-decoration: none; color: var(--muted); }
+.ver { position: relative; z-index: 1; display: grid; grid-template-columns: 4.2rem minmax(0, 1fr); gap: .2rem .9rem; padding: .85rem 0; border-top: 1px solid var(--rule); }
+.ver .yr { font-family: var(--hand); color: var(--accent); font-size: 1.45rem; line-height: 1.1; text-align: right; font-variant-numeric: lining-nums; }
+@media (max-width: 520px) { .ver { grid-template-columns: 2.6rem minmax(0, 1fr); gap: .1rem .55rem; } .ver .yr { font-size: 1.15rem; } }
+.ver .who { margin: 0; font-size: .9rem; color: var(--muted); }
+.ver .who b { color: var(--ink); font-weight: 620; }
+.ver .vt { margin: .1rem 0 .2rem; line-height: 1.7; font-size: 1.04rem; }
+.ver[lang="la"] .vt { font-style: italic; }
+.ver .chips { font-size: .85rem; color: var(--muted); }
+.ver .dropped { font-family: var(--hand); color: var(--muted); font-size: 1.02rem; }
+.tk { border-radius: 3px; transition: background-color .25s, color .25s; }
+.tk.lit { background: var(--accent-soft); color: var(--accent); box-shadow: 0 1.5px 0 var(--accent); }
+.tk.linked { cursor: pointer; }
+.gloss-line { position: relative; z-index: 1; text-align: center; min-height: 1.6em; margin: -.4rem 0 .5rem; font-size: .95rem; color: var(--ink-soft); }
+.gloss-line .src { display: inline; margin: 0; }
+.lacuna { color: var(--muted); letter-spacing: .3em; }
+.show-add .tk.add { color: var(--blue); text-decoration: underline wavy var(--blue); text-decoration-thickness: 1px; text-underline-offset: .25em; }
+.glu { margin: 1.6rem 0 .5rem; padding: 1.1rem 1.1rem 1rem; border: 1.5px solid var(--ink); border-radius: 6px 16px 5px 15px / 15px 5px 16px 6px; background: var(--card); }
+.glu h3 { margin: 0 0 .3rem; font-size: 1.08rem; }
+.glu .word { font-family: var(--greek); font-size: clamp(2.1rem, 1.5rem + 3vw, 3.2rem); text-align: center; margin: .3rem 0 0; line-height: 1.15; }
+.glu .word .a { color: var(--ink); } .glu .word .b { color: var(--accent); }
+.glu svg { display: block; width: 100%; max-width: 30rem; margin: 0 auto; height: auto; overflow: visible; }
+.glu .committee { font-size: 1rem; margin: .7rem 0 .2rem; }
+.glu .committee q { font-style: italic; }
+
+/* 4. forms shelf, Float, prize */
+.formshelf svg, .prizeshelf svg { display: block; width: 100%; height: auto; }
+.chips-legend { display: flex; flex-wrap: wrap; gap: .4rem; margin: .5rem 0; }
+.chips-legend button { font: 500 .9rem var(--body); color: var(--ink); background: var(--card); border: 1.5px solid var(--pencil); border-radius: 999px;
+  padding: .18rem .65rem .2rem .35rem; cursor: pointer; display: inline-flex; align-items: center; gap: .35rem; }
+.chips-legend button[aria-pressed="true"] { border-color: var(--ink); background: var(--ink); color: var(--paper); }
+.chips-legend svg { width: 16px; height: 16px; flex: none; }
+.spine { transition: opacity .3s; }
+.dim .spine:not(.hit) { opacity: .18; }
+.chaps { position: relative; margin: .8rem 0; height: var(--h, 120px); }
+.chap { position: absolute; width: var(--cw); height: var(--ch); border: 1.5px solid var(--ink); background: var(--card); border-radius: 2px 4px 3px 2px;
+  display: flex; align-items: flex-end; justify-content: center; font: 500 .95rem/1.4 var(--hand); color: var(--ink); padding-bottom: .1rem;
+  transition: transform .9s cubic-bezier(.5, 0, .2, 1); box-shadow: 1.5px 1.5px 0 var(--pencil); }
+.chap::before { content: ""; position: absolute; left: 22%; right: 22%; top: 22%; height: 0; border-top: 1.5px solid var(--pencil); box-shadow: 0 5px 0 -0.5px var(--pencil), 0 10px 0 -0.5px var(--pencil); }
+.bignum { font-size: clamp(1.15rem, .75rem + 2.4vw, 2.1rem); font-weight: 600; letter-spacing: .01em; font-variant-numeric: lining-nums; overflow-wrap: anywhere; line-height: 1.2; margin: .4rem 0; }
+.order { font-size: .9rem; color: var(--muted); font-variant-numeric: lining-nums; }
+
+/* footer */
+footer.leaf { margin-top: 4rem; padding: 1.4rem 0 3rem; border-top: 1px solid var(--rule); font-size: .93rem; color: var(--ink-soft); }
+footer h2 { font-size: 1.35rem; margin: 1rem 0 .3rem; }
+footer ul { padding-left: 1.1rem; margin: .3rem 0; }
+footer li { margin: .25rem 0; overflow-wrap: anywhere; }
+.made { font-family: var(--body); margin-top: 1.4rem; }
+.made a { font-weight: 600; }
+
+/* share image: index.html#og, 1200 x 630 */
+#og { display: none; }
+html.og body > :not(#og):not(script) { display: none !important; }
+html.og body { overflow: hidden; }
+html.og #og { display: grid; grid-template-columns: 560px 1fr; gap: 36px; width: 1200px; height: 630px; padding: 58px 56px 48px 72px; align-items: center; overflow: hidden; }
+html.og #og .kicker { font-size: 30px; margin-bottom: 10px; }
+html.og #og h1 { font-size: 104px; }
+html.og #og .flourish { width: 420px; }
+html.og #og p.ogsub { font-size: 26px; line-height: 1.35; margin: 18px 0 22px; color: var(--ink-soft); }
+html.og #og .label { font-size: 19px; }
+html.og #og canvas { width: 500px; height: 500px; }
+html.og #og .ogcap { font: 500 22px var(--hand); color: var(--accent); margin: 6px 0 0; text-align: center; }
+</style>
+</head>
+<body>
+<a class="skip" href="#s0">Skip to the page</a>
+<button class="lamp" id="lamp" type="button" aria-pressed="false" title="Read by lamplight (dark) or daylight">light the lamp</button>
+
+<header class="leaf" id="top">
+  <p class="kicker">Nobel Prize in Literature 2026 &middot; a notebook in four guesses</p>
+  <h1>What survives</h1>
+  <svg class="flourish ink" viewBox="0 0 360 34" aria-hidden="true" id="flourish"></svg>
+  <p class="sub">The classical tradition in the citation: lost plays, a torn papyrus, one Greek stanza carried by translators across two thousand years, and books in new forms.</p>
+  <p class="label" id="label"></p>
+  <div class="prelim" id="prelim" role="status" hidden></div>
+  <ol class="toc" aria-label="Contents">
+    <li><span class="fol">I</span><a href="#s1">How much survives</a><span class="dots"></span><span class="g">plays and lines</span></li>
+    <li><span class="fol">II</span><a href="#s2">Where the words went</a><span class="dots"></span><span class="g">a papyrus</span></li>
+    <li><span class="fol">III</span><a href="#s3">One poem, many translators</a><span class="dots"></span><span class="g">threads</span></li>
+    <li><span class="fol">IV</span><a href="#s4">New forms</a><span class="dots"></span><span class="g">a shelf</span></li>
+  </ol>
+</header>
+
+<main id="main">
+<section class="leaf" id="s0" aria-label="The prize">
+  <div class="epigraph">
+    <p class="lead">The 2026 Nobel Prize in Literature was awarded to Anne Carson</p>
+    <blockquote id="citation"></blockquote>
+    <p class="by" id="citation-by"></p>
+  </div>
+  <div class="who" id="who"></div>
+  <p class="gloss" aria-hidden="true">a classicist who writes poems: so the old books come first</p>
+  <p class="how">Each part below asks you to guess first, then shows the answer with its source beside it. Every ancient Greek or Latin line
+    and every old English version on this page is public domain, with the edition it comes from. Her own words appear only in
+    a few short quotations, each attributed and set beside what it comments on. There is no picture of her: the drawings are
+    of shelves, papyrus and ink.</p>
+  <p class="how">Prefer to watch? A 2:29 film tells the same story in ink:
+    <a href="../video/exports/nobel-2026-literature.mp4">watch the video</a>.</p>
+</section>
+
+<!-- I -->
+<section class="leaf" id="s1" aria-labelledby="h1-1">
+  <p class="folio" aria-hidden="true">I.</p>
+  <h2 id="h1-1">How much survives</h2>
+  <svg class="hrule ink" viewBox="0 0 700 22" preserveAspectRatio="none" aria-hidden="true" data-rule="1"></svg>
+  <p class="lede">The classical tradition the citation names is mostly lost. Of the Greek poets and playwrights she translates,
+    what we can read came through a few copies of copies, and most of each author's work did not make it.</p>
+  <div class="guess" id="g1"></div>
+  <div class="reveal" id="r1" hidden tabindex="-1"></div>
+</section>
+
+<!-- II -->
+<section class="leaf" id="s2" aria-labelledby="h2-2">
+  <p class="folio" aria-hidden="true">II.</p>
+  <h2 id="h2-2">Where the words went</h2>
+  <svg class="hrule ink" viewBox="0 0 700 22" preserveAspectRatio="none" aria-hidden="true" data-rule="2"></svg>
+  <p class="lede">Sappho's poems reached us broken in three ways: on torn papyrus dug up in Egypt, inside other writers'
+    quotations that stop where their point was made, and as a word or two quoted by ancient grammarians.</p>
+  <div class="guess" id="g2"></div>
+  <div class="reveal" id="r2" hidden tabindex="-1"></div>
+</section>
+
+<!-- III -->
+<section class="leaf" id="s3" aria-labelledby="h3-3">
+  <p class="folio" aria-hidden="true">III.</p>
+  <h2 id="h3-3">One poem, 2,000 years of translators</h2>
+  <svg class="hrule ink" viewBox="0 0 700 22" preserveAspectRatio="none" aria-hidden="true" data-rule="3"></svg>
+  <p class="lede" id="lede3">A translation is a set of choices: which words to keep, which to drop, what to add. Here is the
+    first stanza of one poem by Sappho beside versions made over two thousand years.</p>
+  <div class="guess" id="g3"></div>
+  <div class="reveal" id="r3" hidden tabindex="-1"></div>
+</section>
+
+<!-- IV -->
+<section class="leaf" id="s4" aria-labelledby="h4-4">
+  <p class="folio" aria-hidden="true">IV.</p>
+  <h2 id="h4-4">New forms</h2>
+  <svg class="hrule ink" viewBox="0 0 700 22" preserveAspectRatio="none" aria-hidden="true" data-rule="4"></svg>
+  <p class="lede">The citation ends on &ldquo;new forms for contemporary literature&rdquo;. Her books, as the Nobel Committee lists
+    them, mix forms that are usually kept apart: essay and verse, novel and poem, translation and stage, the book as an object.</p>
+  <div id="forms"></div>
+  <div class="guess" id="g4"></div>
+  <div class="reveal" id="r4" hidden tabindex="-1"></div>
+  <h3 id="h4-prize">The prize itself, 1901 to 2026</h3>
+  <div class="guess" id="g5"></div>
+  <div class="reveal" id="r5" hidden tabindex="-1"></div>
+</section>
+</main>
+
+<footer class="leaf" id="foot">
+  <h2>Sources</h2>
+  <ul id="sources"></ul>
+  <h2>Licences</h2>
+  <ul id="licences"></ul>
+  <p id="more"></p>
+  <p class="made">Made with <a href="https://github.com/FavioVazquez/showtime">showtime</a>, an open-source tool for making
+    videos and pages like this one on one computer. Part of <a href="https://faviovazquez.github.io/nobel-2026-lab/">nobel-2026-lab</a>.
+    Code under the MIT licence.</p>
+</footer>
+
+<div id="og" aria-hidden="true">
+  <div>
+    <p class="kicker">Nobel Prize in Literature 2026</p>
+    <h1>What survives</h1>
+    <svg class="flourish ink drawn" viewBox="0 0 360 34" id="og-flourish"></svg>
+    <p class="ogsub">Lost plays, a torn papyrus, one Greek stanza across two thousand years of translators, and books in new forms. Guess first, then see.</p>
+    <p class="label" id="og-label"></p>
+  </div>
+  <div><canvas id="og-grid" width="1000" height="1000"></canvas><p class="ogcap" id="og-cap"></p></div>
+</div>
+
+<script src="data.js"></script>
+<script>
+(function () {
+  "use strict";
+  var D = window.NOBEL_LIT_DATA || {};
+  var RM = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var SVGNS = "http://www.w3.org/2000/svg";
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  // ---------- small helpers -------------------------------------------------------------------------------------------
+  function el(tag, attrs, kids) {
+    var e = document.createElement(tag);
+    for (var k in attrs || {}) {
+      if (attrs[k] == null || attrs[k] === false) continue;
+      if (k === "text") e.textContent = attrs[k];
+      else if (k === "html") e.innerHTML = attrs[k];
+      else if (k === "cls") e.className = attrs[k];
+      else e.setAttribute(k, attrs[k] === true ? "" : attrs[k]);
+    }
+    (kids || []).forEach(function (c) { if (c != null) e.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
+    return e;
+  }
+  function sv(tag, attrs, kids) {
+    var e = document.createElementNS(SVGNS, tag);
+    for (var k in attrs || {}) { if (attrs[k] != null) { if (k === "text") e.textContent = attrs[k]; else e.setAttribute(k, attrs[k]); } }
+    (kids || []).forEach(function (c) { if (c) e.appendChild(c); });
+    return e;
+  }
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function fmt(n) { return typeof n === "number" ? n.toLocaleString("en-US") : String(n); }
+  function rangeText(s, opts) {
+    if (!s || s.lo == null) return "?";
+    if (s.open) return "more than " + fmt(s.lo);   // an open-ended estimate: the number is a lower bound
+    var t = s.lo === s.hi ? fmt(s.lo) : fmt(s.lo) + "–" + fmt(s.hi);
+    return (s.approx && !(opts && opts.bare) ? "about " : "") + t;
+  }
+  function srcLink(s, prefix) {
+    if (!s || !(s.source || s.url)) return "";
+    var name = esc(s.source || "source");
+    return (prefix || "") + (s.url ? '<a href="' + esc(s.url) + '">' + name + "</a>" : name);
+  }
+  function rng(seed) {
+    var a = seed >>> 0;
+    return function () { a = (a + 0x6D2B79F5) | 0; var t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  }
+  function hashStr(s) { var h = 2166136261; s = String(s); for (var i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; }
+  function prelimTag(st) { return st && st !== "final" ? ' <span class="tag">' + (st === "fixture" ? "placeholder" : st) + "</span>" : ""; }
+  function plural(n, one, many) { return fmt(n) + " " + (n === 1 ? one : (many || one + "s")); }
+
+  // ---------- ink: wobbly hand strokes ---------------------------------------------------------------------------------
+  // a polyline -> a smooth path through slightly jittered points (Catmull-Rom as cubic Beziers)
+  function handPath(pts, amp, seed, closed) {
+    var r = rng(seed || 1), p = pts.map(function (q, i) { return [q[0] + (r() - .5) * amp, q[1] + (r() - .5) * amp]; });
+    if (closed) p.push(p[0], p[1]);
+    var d = "M" + p[0][0].toFixed(1) + " " + p[0][1].toFixed(1);
+    for (var i = 0; i < p.length - 1; i++) {
+      var p0 = p[i - 1] || p[i], p1 = p[i], p2 = p[i + 1], p3 = p[i + 2] || p2;
+      d += " C" + (p1[0] + (p2[0] - p0[0]) / 6).toFixed(1) + " " + (p1[1] + (p2[1] - p0[1]) / 6).toFixed(1) + " " +
+        (p2[0] - (p3[0] - p1[0]) / 6).toFixed(1) + " " + (p2[1] - (p3[1] - p1[1]) / 6).toFixed(1) + " " + p2[0].toFixed(1) + " " + p2[1].toFixed(1);
+    }
+    return d;
+  }
+  // a straight-edged hand line through jittered points (for boxes, bars and spines: no rounded corners)
+  function jag(pts, amp, seed) {
+    var r = rng(seed || 3);
+    return pts.map(function (q, i) { return (i ? "L" : "M") + (q[0] + (r() - .5) * amp).toFixed(1) + " " + (q[1] + (r() - .5) * amp).toFixed(1); }).join(" ");
+  }
+  function line(x0, y0, x1, y1, n, amp, seed) {
+    var pts = []; n = n || 6;
+    for (var i = 0; i <= n; i++) pts.push([x0 + (x1 - x0) * i / n, y0 + (y1 - y0) * i / n]);
+    return handPath(pts, amp == null ? 1.2 : amp, seed);
+  }
+  // a hand-drawn loop: starts a little past where it ends, like a pen circling a word
+  function loop(cx, cy, rx, ry, seed, turns) {
+    var r = rng(seed || 7), pts = [], n = 18, t0 = r() * 6.28, tt = turns || 1.12;
+    for (var i = 0; i <= n; i++) {
+      var t = t0 + i / n * 6.283 * tt, k = 1 + (r() - .5) * .07 + i / n * .05;
+      pts.push([cx + Math.cos(t) * rx * k, cy + Math.sin(t) * ry * k]);
+    }
+    return handPath(pts, 0, 0);
+  }
+  function stroke(d, cls, delay, dur, extra) {
+    var a = { d: d, "class": "st draw " + (cls || ""), pathLength: 1 };
+    var style = "";
+    if (delay) style += "--w:" + delay.toFixed(2) + "s;";
+    if (dur) style += "--d:" + dur.toFixed(2) + "s;";
+    if (style) a.style = style;
+    for (var k in extra || {}) a[k] = extra[k];
+    return sv("path", a);
+  }
+
+  // draw-on when a figure scrolls into view (reduced motion: drawn at once)
+  var io = null;
+  function watch(node) {
+    if (RM || !("IntersectionObserver" in window)) { node.classList.add("drawn"); return; }
+    if (!io) io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("drawn"); io.unobserve(e.target); } });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+    node.classList.remove("drawn");
+    io.observe(node);
+  }
+  window.__inkAll = function () { $$(".ink, .inkfig").forEach(function (n) { n.classList.add("drawn"); }); };
+
+  // ---------- theme: follow the system, or the reader's lamp --------------------------------------------------------------
+  (function () {
+    var btn = $("#lamp"), root = document.documentElement;
+    function sys() { return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; }
+    function cur() { return root.getAttribute("data-theme") || sys(); }
+    function label() { var d = cur() === "dark"; btn.textContent = d ? "put out the lamp" : "light the lamp"; btn.setAttribute("aria-pressed", d ? "true" : "false"); }
+    try { var saved = localStorage.getItem("lit-theme"); if (saved === "light" || saved === "dark") root.setAttribute("data-theme", saved); } catch (e) {}
+    btn.addEventListener("click", function () {
+      var next = cur() === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("lit-theme", next); } catch (e) {}
+      label(); redrawCanvases();
+    });
+    label();
+  })();
+  var canvasDrawers = [];
+  function redrawCanvases() { canvasDrawers.forEach(function (f) { f(true); }); }
+  function css(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+
+  // ---------- header ----------------------------------------------------------------------------------------------------------
+  $("#label").textContent = D.tag || "Educational demos made to show an open-source tool. Not research.";
+  $("#og-label").textContent = $("#label").textContent;
+  function flourish(svg, seed) {
+    var d = handPath([[4, 20], [60, 12], [120, 22], [190, 11], [250, 21], [300, 14], [330, 18], [344, 10], [336, 6], [326, 16], [352, 26]], 2, seed);
+    svg.appendChild(sv("path", { d: d, "class": "bleed" }));
+    svg.appendChild(stroke(d, "acc", .15, 1.4));
+  }
+  flourish($("#flourish"), 11); flourish($("#og-flourish"), 11); watch($("#flourish"));
+  $$("svg[data-rule]").forEach(function (svg, i) {
+    var d = line(2, 12, 698, 11, 12, 2.2, 40 + i);
+    svg.appendChild(stroke(d, "pencil", 0, 1.2));
+    svg.appendChild(stroke(line(560, 16, 690, 15, 4, 1.4, 70 + i), "acc", .6, .5));
+    watch(svg);
+  });
+  (function prelim() {
+    var box = $("#prelim"), inp = D.inputs || {};
+    if (!D.preliminary) { box.hidden = true; return; }
+    var parts = Object.keys(inp).filter(function (k) { return inp[k] !== "final"; }).map(function (k) { return "<code>" + esc(k) + "</code> " + esc(inp[k]); });
+    box.innerHTML = (D.placeholder
+      ? "<b>Placeholder data.</b> Some parts are built from rough stand-ins, not results, so their numbers are not real yet: "
+      : "<b>Preliminary.</b> Some results are not final yet, so numbers on this page may still change: ") + parts.join(", ") + ".";
+    box.hidden = false;
+  })();
+
+  // ---------- 0. opener ---------------------------------------------------------------------------------------------------------
+  (function () {
+    var o = D.opener || {};
+    $("#citation").textContent = "“" + (o.citation || "") + "”";
+    $("#citation-by").innerHTML = "&mdash; " + (o.citation_url ? '<a href="' + esc(o.citation_url) + '">' + esc(o.citation_by) + "</a>" : esc(o.citation_by || ""));
+    var who = $("#who");
+    (o.who || []).forEach(function (w) { who.appendChild(el("p", { html: esc(w.text) + ' <a class="small" href="' + esc(w.url) + '">source</a>' })); });
+  })();
+
+  // ---------- guess-first machinery -------------------------------------------------------------------------------------------
+  // spec: {id, q (html), choices: [{v, html}], answer: v, onReveal(choice, right) -> returns verdict html}
+  function guess(box, out, spec) {
+    box.innerHTML = "";
+    var fs = el("fieldset"), lg = el("legend", { html: spec.q });
+    fs.appendChild(lg);
+    var wrap = el("div", { cls: "choices", role: "radiogroup" });
+    spec.choices.forEach(function (c, i) {
+      var id = spec.id + "-c" + i;
+      var inp = el("input", { type: "radio", name: spec.id, value: c.v, id: id });
+      var ring = sv("svg", { "class": "ring", "aria-hidden": "true" });
+      var lab = el("label", { cls: "choice", "for": id }, [inp, el("span", { html: c.html }), ring]);
+      wrap.appendChild(lab);
+    });
+    fs.appendChild(wrap);
+    box.appendChild(fs);
+    var ringIt = function () {
+      $$(".choice", wrap).forEach(function (lab) {
+        var r = $(".ring", lab), w = lab.offsetWidth + 12, h = lab.offsetHeight + 8, id = $("input", lab).id;
+        if (!lab.offsetWidth || r.getAttribute("data-w") === String(w)) return;
+        r.setAttribute("data-w", w); r.setAttribute("viewBox", "0 0 " + w + " " + h);
+        while (r.firstChild) r.removeChild(r.firstChild);
+        r.appendChild(sv("path", { d: loop(w / 2, h / 2, w / 2 - 3, h / 2 - 3.5, hashStr(id), 1.0) }));
+        r.appendChild(sv("path", { d: loop(w / 2, h / 2, w / 2 - 1.5, h / 2 - 2, hashStr(id) + 3, 1.14), "class": "on", pathLength: 1 }));
+      });
+    };
+    requestAnimationFrame(ringIt);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(ringIt);
+    window.addEventListener("resize", ringIt);
+    var go = el("button", { cls: "go", type: "button", id: spec.id + "-go", disabled: true, text: spec.button || "Reveal" });
+    box.appendChild(go);
+    if (spec.unavailable) {
+      $$("input", box).forEach(function (i) { i.disabled = true; });
+      box.appendChild(el("p", { cls: "src", id: spec.id + "-hint", text: spec.unavailable }));
+      return;
+    }
+    wrap.addEventListener("change", function () { go.disabled = false; });
+    go.addEventListener("click", function () {
+      var picked = $("input:checked", box);
+      if (!picked) return;
+      var right = String(picked.value) === String(spec.answer);
+      $$("input", box).forEach(function (i) { i.disabled = true; });
+      go.disabled = true; go.textContent = "Revealed";
+      out.hidden = false;
+      var head = el("div", { cls: "verdict", id: spec.id + "-verdict" });
+      var mark = sv("svg", { viewBox: "0 0 34 30", "aria-hidden": "true", "class": "ink" });
+      mark.appendChild(stroke(right ? handPath([[4, 16], [12, 25], [31, 3]], 1.2, 5) : handPath([[6, 6], [27, 25]], 1, 6), right ? "acc" : "pencil", 0, .45, { style: "stroke-width:3" }));
+      if (!right) mark.appendChild(stroke(handPath([[27, 5], [7, 26]], 1, 8), "pencil", .35, .4, { style: "stroke-width:3" }));
+      var pickedText = $("label[for=" + picked.id + "] span", box).textContent;
+      head.appendChild(mark);
+      head.appendChild(el("div", { html: '<span class="' + (right ? "ok" : "bad") + '">You picked ' + esc(pickedText) + ". " +
+        (right ? "That's it." : "Not quite.") + "</span> " + spec.verdict(picked.value, right) }));
+      out.insertBefore(head, out.firstChild);
+      if (spec.onReveal) spec.onReveal();
+      watch(mark);
+      requestAnimationFrame(function () { try { out.focus({ preventScroll: true }); } catch (e) {} });
+    });
+  }
+  function caveat(html) { return el("p", { cls: "caveat", html: html }); }
+  // A short quotation of the laureate, from ../quotes.json via data.js (verified wording, attributed, at most D.quote_cap words).
+  function carsonQuote(where) {
+    var q = (D.quotes || []).filter(function (x) { return x.where === where; })[0];
+    if (!q) return null;
+    return el("figure", { cls: "carson-quote", "data-quote": q.id }, [
+      q.context ? el("p", { cls: "qctx", text: q.context }) : null,
+      el("blockquote", { text: "“" + q.text + "”" }),
+      el("figcaption", { html: "Anne Carson, <i>" + esc(q.work) + "</i> (" + esc(q.year) + ") &middot; <a href=\"" + esc(q.url) + "\">where the wording was checked</a>" })]);
+  }
+  function addQuote(parent, where) { var f = carsonQuote(where); if (f) parent.appendChild(f); }
+
+  // sources of a number: [{name, url, anchor}] -> linked names
+  function srcList(list, max) {
+    return (list || []).slice(0, max || 4).map(function (s) {
+      var n = esc(s.name || s.url || "source") + (s.anchor ? ", " + esc(s.anchor) : "");
+      return s.url ? '<a href="' + esc(s.url) + '">' + n + "</a>" : n;
+    }).join("; ");
+  }
+  function numSrc(spec, label) { return spec && spec.sources && spec.sources.length ? (label ? label + ": " : "") + srcList(spec.sources) : ""; }
+  function unavailable(box, out, id, q, what) {
+    guess(box, out, { id: id, q: q, choices: [{ v: 0, html: "&hellip;" }], answer: 0, unavailable: what + " is not in this copy yet." });
+  }
+
+  // ---------- I. survival ledger -------------------------------------------------------------------------------------------------
+  var L = D.ledger;
+  var ledgerMode = "ancient";
+  function rowTotal(row, mode) {
+    var s = mode === "modern" ? (row.modern || row.ancient) : (row.ancient || row.modern);
+    if (s && s.lo != null) return s.open && row.shelf && row.shelf.total ? Object.assign({}, s, { hi: row.shelf.total[1] }) : s;   // open-ended: the shelf's range is only for drawing
+    if (row.shelf && row.shelf.total) return { lo: row.shelf.total[0], hi: row.shelf.total[1], sources: [] };
+    return null;
+  }
+  function rowKind(row, tot) {
+    var s = row.survive || {};
+    if (row.shelf && row.shelf.total && row.shelf.total[1] <= 2) return "single";
+    if (tot && tot.hi > 300) return "bar";
+    if ((s.lo == null) && !tot) return "text";
+    return "shelf";
+  }
+  function drawShelf(holder, row, mode) {
+    holder.innerHTML = "";
+    var tot = rowTotal(row, mode), s = row.survive || {}, kind = rowKind(row, tot);
+    var sh = row.shelf || {};
+    var sLo = sh.survive ? sh.survive[0] : (s.lo || 0), sHi = sh.survive ? sh.survive[1] : (s.hi != null ? s.hi : sLo);
+    var frag = !!sh.fragments || (sLo === 0 && /fragment/i.test((s.note || "") + (s.unit || "")));
+    if (kind === "text") return;
+    var W = Math.max(280, holder.clientWidth || 600);
+    var svg;
+    if (kind === "bar") {   // a long poem measured in lines: a pencil rule for what was written, ink for what survives
+      var H = 34, hi = tot.hi, x = function (v) { return 2 + (W - 4) * v / hi; };
+      svg = sv("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "class": "ink", width: W, height: H });
+      svg.appendChild(sv("title", { text: row.author + ": lines written and lines that survive" }));
+      svg.appendChild(sv("desc", { text: "About " + rangeText(s, { bare: true }) + " lines readable of " + rangeText(tot) + " lines." }));
+      svg.appendChild(sv("rect", { x: x(tot.lo), y: 9, width: x(tot.hi) - x(tot.lo), height: 14, fill: "url(#hatch-pencil)", opacity: .9 }));
+      svg.appendChild(stroke(jag([[2, 9], [x(tot.lo), 9], [x(tot.lo), 23], [2, 23], [2, 9]], .6, 3), "pencil", 0, .9));
+      svg.appendChild(stroke(jag([[x(tot.lo), 9], [x(tot.hi), 9], [x(tot.hi), 23], [x(tot.lo), 23]], .6, 4), "pencil", .4, .8, { style: "stroke-dasharray:4 3;opacity:.8" }));
+      svg.appendChild(sv("rect", { x: 2, y: 9, width: x(s.lo || 0) - 2, height: 14, fill: "var(--accent)", "class": "fadein", style: "--w:.9s" }));
+      var defs = sv("defs"), pat = sv("pattern", { id: "hatch-pencil", width: 5, height: 5, patternUnits: "userSpaceOnUse", patternTransform: "rotate(45)" });
+      pat.appendChild(sv("path", { d: "M0 0 V5", stroke: "var(--pencil)", "stroke-width": 1.2 }));
+      defs.appendChild(pat); svg.insertBefore(defs, svg.firstChild);
+    } else {
+      var n = kind === "single" ? sh.total[1] : Math.max(tot ? tot.hi : sHi, sHi, 1), tLo = kind === "single" ? n : (tot ? tot.lo : sHi);
+      var cell = W < 420 ? 13 : 15, cols = Math.max(10, Math.floor(W / cell)), rows = Math.ceil(n / cols), H2 = rows * cell + 4;
+      svg = sv("svg", { viewBox: "0 0 " + (cols * cell) + " " + H2, role: "img", "class": "ink", width: cols * cell, height: H2 });
+      svg.appendChild(sv("title", { text: (row.author || "") + ": what survives" }));
+      svg.appendChild(sv("desc", { text: (sh.label || "") + " (" + (mode === "modern" ? "modern estimate" : "ancient testimony") + ": " + (tot ? rangeText(tot) : "?") + " " + (row.unit || "") + ")" }));
+      var seed = hashStr(row.id + mode), r = rng(seed), torn = /break|unfinish|stops mid|mid-sentence/i.test((s.note || "") + (sh.label || ""));
+      for (var i = 0; i < n; i++) {
+        var cx = (i % cols) * cell + cell / 2, cy = Math.floor(i / cols) * cell + cell / 2 + 2, rad = cell * .34;
+        var k = i < sLo ? "s" : i < sHi ? "maybe" : i < tLo ? "lost" : "range";
+        if (torn && i === n - 1) k = "torn";
+        var dl = Math.min(1.6, i * 0.012) + (k === "s" ? .3 : 0), d = loop(cx, cy, rad, rad, seed + i, 1.05);
+        if (k === "s" || k === "maybe" || k === "torn") {
+          if (k === "s") svg.appendChild(sv("circle", { cx: cx, cy: cy, r: rad * .92, fill: "var(--accent)", "class": "fadein", style: "--w:" + (dl + .25).toFixed(2) + "s" }));
+          if (k === "maybe") svg.appendChild(sv("path", { d: line(cx - rad * .7, cy + rad * .7, cx + rad * .7, cy - rad * .7, 2, .4, i), "class": "st acc draw", pathLength: 1, style: "--w:" + dl.toFixed(2) + "s" }));
+          if (k === "torn") svg.appendChild(sv("path", { d: "M" + (cx - rad) + " " + cy + " A" + rad + " " + rad + " 0 0 1 " + (cx + rad) + " " + cy + " Z", fill: "var(--accent)", "class": "fadein", style: "--w:" + dl.toFixed(2) + "s" }));
+          svg.appendChild(stroke(d, k === "maybe" ? "acc" : "", dl, .5));
+        } else {
+          svg.appendChild(stroke(d, "pencil", dl * .6, .4, k === "range" ? { style: "--w:" + (dl * .6).toFixed(2) + "s;opacity:.5;stroke-dasharray:.1 .06" } : null));
+          if (frag && r() < .55) svg.appendChild(sv("path", { d: line(cx - rad * .45, cy + (r() - .5) * 3, cx + rad * (r() * .5 - .05), cy + (r() - .5) * 3, 2, .6, i), "class": "st acc draw", pathLength: 1, style: "stroke-width:2.2;--w:" + (dl + .4).toFixed(2) + "s" }));
+        }
+      }
+    }
+    holder.appendChild(svg);
+    watch(svg);
+  }
+  function ledgerRows(box) {
+    box.innerHTML = "";
+    L.rows.forEach(function (row) {
+      var tot = rowTotal(row, ledgerMode), s = row.survive || {}, sh = row.shelf || {}, kind = rowKind(row, tot);
+      var wrap = el("div", { cls: "shelf", "data-id": row.id, "data-kind": kind });
+      var frag = !!sh.fragments || (s.lo === 0);
+      var cnt;
+      if (kind === "single") cnt = '<span class="s">' + esc(sh.label || "") + "</span>";
+      else if (kind === "text") cnt = '<span class="s">' + esc(s.unit || "fragments") + "</span>";
+      else cnt = '<span class="s">' + (frag ? "fragments only" : (s.approx ? "about " : "") + rangeText(s, { bare: true }) + " " + esc(s.unit || "")) + "</span>" +
+        (tot ? " of " + rangeText(tot) + " " + esc(tot.unit || row.unit || "") : "");
+      wrap.appendChild(el("div", { cls: "who-row", html: "<b>" + esc(row.author) + '</b><span class="cnt">' + cnt + "</span>" }));
+      var fig = el("div", { cls: "fig" });
+      wrap.appendChild(fig);
+      if (s.note) wrap.appendChild(el("p", { cls: "note", text: s.note }));
+      var src = [];
+      var cur = ledgerMode === "modern" ? (row.modern || row.ancient) : (row.ancient || row.modern);
+      if (cur && cur.text) src.push((cur === row.modern ? "Modern estimate" : "Ancient testimony") + ": " + esc(cur.text) + (cur.sources.length ? " (" + srcList(cur.sources, 3) + ")" : ""));
+      else if (ledgerMode === "ancient" && !row.ancient) src.push("No ancient count.");
+      (row.notes || []).forEach(function (n) { src.push(esc(n)); });
+      if (s.sources && s.sources.length) src.push("What survives: " + srcList(s.sources, 3));
+      var det = el("details", { cls: "src" });
+      det.appendChild(el("summary", { text: "where these numbers come from" }));
+      det.appendChild(el("p", { html: src.join(" &middot; ") }));
+      wrap.appendChild(det);
+      box.appendChild(wrap);
+      drawShelf(fig, row, ledgerMode);
+    });
+  }
+  function sapphoGrid(canvas, opts) {
+    var S = L && L.sappho || {}, G = S.grid || {};
+    var N = G.total || 10000, cols = 100, nInk = G.inked || (S.lines_surv ? S.lines_surv.lo : 0);
+    var order = [], r = rng(650), i;
+    for (i = 0; i < N; i++) order.push(i);
+    for (i = N - 1; i > 0; i--) { var j = Math.floor(r() * (i + 1)), t = order[i]; order[i] = order[j]; order[j] = t; }
+    var start = null;
+    function paint(prog) {
+      var W = opts && opts.size || Math.min(canvas.parentNode.clientWidth || 600, 560), dpr = Math.min(2, window.devicePixelRatio || 1);
+      var cell = W / cols, H = Math.ceil(N / cols) * cell;
+      canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+      if (!(opts && opts.size)) { canvas.style.width = W + "px"; canvas.style.height = H + "px"; }
+      var g = canvas.getContext("2d"); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, W, H);
+      var shown = Math.floor(N * Math.min(1, prog * 1.6)), inkProg = Math.max(0, (prog - .45) / .55), rd = Math.max(.7, cell * .23);
+      g.fillStyle = css("--pencil"); g.globalAlpha = .6;
+      for (i = 0; i < shown; i++) { g.beginPath(); g.arc((i % cols + .5) * cell, (Math.floor(i / cols) + .5) * cell, rd, 0, 6.283); g.fill(); }
+      g.globalAlpha = 1; g.fillStyle = css("--accent");
+      var nShow = Math.floor(nInk * inkProg);
+      for (i = 0; i < nShow; i++) { var k = order[i]; g.beginPath(); g.arc((k % cols + .5) * cell, (Math.floor(k / cols) + .5) * cell, rd * 1.75, 0, 6.283); g.fill(); }
+      if (prog >= 1 && G.book1) {   // Book I: the first 1,320 dots, ringed in ink
+        var full = Math.floor(G.book1 / cols), rest = G.book1 % cols;
+        g.strokeStyle = css("--ink"); g.lineWidth = 1.3; g.beginPath();
+        g.moveTo(1, 1); g.lineTo(W - 1, 1); g.lineTo(W - 1, full * cell); g.lineTo(rest * cell, full * cell); g.lineTo(rest * cell, (full + 1) * cell); g.lineTo(1, (full + 1) * cell); g.closePath(); g.stroke();
+      }
+      if (prog >= 1 && G.alt_total && G.alt_total < N) {   // the other estimate: 9,000
+        var gy = Math.floor(G.alt_total / cols) * cell;
+        g.strokeStyle = css("--blue"); g.lineWidth = 1.8; g.setLineDash([5, 4]); g.beginPath(); g.moveTo(0, gy); g.lineTo(W, gy); g.stroke(); g.setLineDash([]);
+      }
+    }
+    function frame(ts) { if (start == null) start = ts; var p = Math.min(1, (ts - start) / 2600); paint(p); if (p < 1) requestAnimationFrame(frame); }
+    canvasDrawers.push(function () { paint(1); });
+    canvas.__finish = function () { start = -1e9; paint(1); };
+    if (RM || (opts && opts.size) || !("IntersectionObserver" in window)) { paint(1); return; }
+    paint(0);
+    var o = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { o.disconnect(); requestAnimationFrame(frame); } }, { threshold: .2 });
+    o.observe(canvas);
+  }
+  (function section1() {
+    var box = $("#g1"), out = $("#r1");
+    var soph = L && L.rows.filter(function (r) { return r.id === "sophocles"; })[0];
+    if (!soph) { unavailable(box, out, "s1", "How many of Sophocles' plays survive complete?", "The survival ledger"); return; }
+    var tot = soph.modern || soph.ancient, T = tot.hi, s = soph.survive.lo;
+    var vals = [s, Math.round(T / 4), Math.round(T / 2), T];
+    guess(box, out, {
+      id: "s1", q: "Scholars estimate that Sophocles wrote " + rangeText(tot) + " plays. How many survive complete?",
+      choices: vals.map(function (v) { return { v: v, html: v === T ? "nearly all" : (v === s ? "" : "about ") + fmt(v) }; }), answer: s,
+      verdict: function () {
+        return "<b>" + rangeText(soph.survive, { bare: true }) + "</b> of Sophocles' plays survive complete, of " + rangeText(soph.modern) + " (modern estimate; the ancient count says " +
+          rangeText(soph.ancient) + ")." + (soph.survive.note ? " Besides them: " + esc(soph.survive.note) + "." : "") + prelimTag(L.status);
+      },
+      onReveal: function () { buildLedger(out); }
+    });
+  })();
+  function buildLedger(out) {
+    out.appendChild(el("p", { html: "One circle for each play or book, seen end-on like a scroll on a shelf. <b>Inked red</b>: it survives. <b>Pencil</b>: it is lost. Ancient counts and modern estimates disagree, so pick which one to draw:" }));
+    var seg = el("div", { cls: "seg", role: "group", "aria-label": "Which count of what was written" });
+    var bA = el("button", { type: "button", "aria-pressed": "true", id: "mode-ancient", text: "ancient testimony" });
+    var bM = el("button", { type: "button", "aria-pressed": "false", id: "mode-modern", text: "modern estimates" });
+    seg.appendChild(bA); seg.appendChild(bM);
+    out.appendChild(seg);
+    var leg = el("ul", { cls: "legend" });
+    [["survives", '<circle cx="9" cy="9" r="6" fill="var(--accent)"/><circle cx="9" cy="9" r="6.5" class="st" />'],
+     ["lost", '<circle cx="9" cy="9" r="6.5" class="st pencil"/>'],
+     ["uncertain (the sources give a range)", '<circle cx="9" cy="9" r="6.5" class="st acc"/><path d="M5 13 L13 5" class="st acc"/>'],
+     ["fragments only", '<circle cx="9" cy="9" r="6.5" class="st pencil"/><path d="M5 9 L11 8" class="st acc" style="stroke-width:2.2"/>']].forEach(function (x) {
+      leg.appendChild(el("li", { html: '<svg viewBox="0 0 18 18" aria-hidden="true">' + x[1] + "</svg>" + x[0] }));
+    });
+    out.appendChild(leg);
+    var rowsBox = el("div", { id: "shelves", cls: "wide" });
+    out.appendChild(rowsBox);
+    ledgerRows(rowsBox);
+    function setMode(m) { ledgerMode = m; bA.setAttribute("aria-pressed", m === "ancient"); bM.setAttribute("aria-pressed", m === "modern"); ledgerRows(rowsBox); }
+    bA.addEventListener("click", function () { setMode("ancient"); });
+    bM.addEventListener("click", function () { setMode("modern"); });
+    out.appendChild(caveat("<b>Ranges, not one number.</b> " + (L.rules || []).map(esc).join(" ")));
+    // Sappho
+    var S = L.sappho || {}, G = S.grid || {};
+    out.appendChild(el("h3", { text: "Sappho: an estimated " + rangeText(S.lines_est, { bare: true }) + " lines" }));
+    out.appendChild(el("p", { html: "Ancient editors arranged Sappho's poems in " + rangeText(S.books) + " books. Here is one dot for each of " + fmt(G.total) +
+      " lines (the higher estimate). <b>Inked</b>: the about " + rangeText(S.lines_surv, { bare: true }) + " lines that survive, whole or in part." + prelimTag(L.status) }));
+    var gw = el("div", { cls: "grid-wrap" });
+    var cv = el("canvas", { id: "sappho-grid", role: "img", "aria-label": "A 100 by 100 grid of pencil dots, one per line of an estimated " + fmt(G.total) + " lines of Sappho; " + fmt(G.inked) + " are inked red: about the number of lines that survive. An ink outline marks the first " + fmt(G.book1) + " dots: Book I. A dashed blue line after dot " + fmt(G.alt_total) + " marks the lower estimate." });
+    gw.appendChild(cv); out.appendChild(gw);
+    out.appendChild(el("div", { cls: "grid-cap", html: '<span><span class="k" style="color:var(--accent)">&#9679; about ' + fmt(G.inked) + "</span> lines survive (estimate)</span>" +
+      (G.book1 ? '<span><span class="k">&#9645; ' + fmt(G.book1) + "</span> verses in Book I alone, from the number on the roll's own end-title</span>" : "") +
+      (G.alt_total ? '<span><span class="k" style="color:var(--blue)">- - ' + fmt(G.alt_total) + "</span> the lower estimate: Grenfell and Hunt, 1914</span>" : "") }));
+    out.appendChild(el("p", { cls: "src", html: [numSrc(S.lines_est, "Estimates"), numSrc(S.lines_surv, "Surviving lines"), numSrc(S.book1, "Book I")].filter(Boolean).join(" &middot; ") }));
+    out.appendChild(caveat("<b>Estimate.</b> Nobody knows how many lines Sappho wrote; " + esc(S.lines_est && S.lines_est.text || "") + ". What survives: " + esc(S.lines_surv && S.lines_surv.note || "") + " Where an inked dot sits means nothing: only the count does."));
+    sapphoGrid(cv);
+  }
+
+  // ---------- II. fragments --------------------------------------------------------------------------------------------------------
+  var F = D.fragments, numbering = "wharton";
+  function frn(w, v, vq) {
+    var s = el("span", { cls: "frn", "data-w": w == null ? "" : w, "data-v": v == null ? "" : v, "data-q": vq ? "1" : "" });
+    setFrn(s); return s;
+  }
+  function setFrn(s) {
+    var w = s.getAttribute("data-w"), v = s.getAttribute("data-v"), q = s.getAttribute("data-q") ? "?" : "";
+    if (numbering === "voigt") s.textContent = v ? "fr. " + v + q + " Voigt" : (w ? "Wharton " + w + " (no Voigt number)" : "");
+    else s.textContent = w ? "fr. " + w + " Wharton" : (v ? "fr. " + v + " Voigt (not in Wharton)" : "");
+  }
+  function segsHtml(segs) {
+    return segs.map(function (s) {
+      if (s.k === "rest") return '<span class="rest"><span class="t">' + esc(s.t) + "</span></span>";
+      if (s.k === "lost") return '<span class="lost"><span class="t">' + esc(s.t) + "</span></span>";
+      if (s.k === "br") return '<span class="br">' + esc(s.t) + "</span>";
+      return esc(s.t);
+    }).join("");
+  }
+  (function section2() {
+    var box = $("#g2"), out = $("#r2");
+    if (!F || !F.lengths) { unavailable(box, out, "s2", "How long is a typical surviving fragment of Sappho?", "The fragments experiment"); return; }
+    var Lg = F.lengths, med = Lg.median, ans = med < 10 ? "few" : med <= 30 ? "some" : "many";
+    guess(box, out, {
+      id: "s2", q: "Most of Sappho survives as fragments. How long is a typical one?",
+      choices: [{ v: "few", html: "fewer than ten words" }, { v: "some", html: "ten to thirty words" }, { v: "many", html: "more than thirty words" }],
+      answer: ans,
+      verdict: function () {
+        return "The typical (median) fragment has <b>" + fmt(med) + " Greek words</b>: half of the " + fmt(Lg.n) + " fragments Wharton prints as Greek verse have " + fmt(med) + " or fewer, " +
+          (Math.abs(Lg.le5 / Lg.n - 1 / 3) < 0.05 ? "about a third (" + fmt(Lg.le5) + ")" : fmt(Lg.le5)) + " have five or fewer, and only " + fmt(Lg.over30) + " run past thirty." + prelimTag(F.status);
+      },
+      onReveal: function () { buildFragments(out); }
+    });
+  })();
+  function buildFragments(out) {
+    var seg = el("div", { cls: "ctlrow" });
+    seg.appendChild(el("span", { cls: "lab", text: "number the fragments as" }));
+    var s = el("div", { cls: "seg", role: "group", "aria-label": "Fragment numbering" });
+    var bW = el("button", { type: "button", id: "num-w", "aria-pressed": "true", text: "Wharton 1908" });
+    var bV = el("button", { type: "button", id: "num-v", "aria-pressed": "false", text: "Voigt 1971" });
+    s.appendChild(bW); s.appendChild(bV); seg.appendChild(s);
+    function setNum(m) { numbering = m; bW.setAttribute("aria-pressed", m === "wharton"); bV.setAttribute("aria-pressed", m === "voigt"); $$(".frn").forEach(setFrn); if (window.__binRefresh) window.__binRefresh(); }
+    bW.addEventListener("click", function () { setNum("wharton"); }); bV.addEventListener("click", function () { setNum("voigt"); });
+    out.appendChild(seg);
+    out.appendChild(el("p", { cls: "src", html: "Editions number Sappho differently: Wharton (1908) follows Bergk's 19th-century order, most modern books use Voigt's (1971). Every fragment number on this page follows this switch; a ? marks a Voigt number that is only probable." +
+      (F.concordance ? ' Voigt numbers: <a href="' + esc(F.concordance) + '">Digital Sappho</a>, checked against the fragments experiment.' : "") }));
+    // (a) papyrus
+    var P = F.papyrus;
+    if (P && P.lines && P.lines.length) {
+      out.appendChild(el("h3", { text: "1. A torn papyrus" }));
+      out.appendChild(el("p", { html: "<b>" + esc(P.id) + "</b>, found at Oxyrhynchus in Egypt and printed by " + esc(P.edition) + ". Square brackets mark where the papyrus is gone: a hole, a torn edge, a lost letter." }));
+      addQuote(out, "fragments");
+      out.appendChild(el("p", { html: "In this edition, what sits inside the square brackets is the editors' restoration: their best guess, not something read on the page. Angle brackets &#10216; &#10217; mark letters the scribe left out and the editors put back." }));
+      var pw = el("div", { cls: "papyrus-wrap" });
+      var pap = el("div", { cls: "papyrus", id: "papyrus", lang: "grc" });
+      P.lines.forEach(function (ln) { pap.appendChild(el("div", { cls: "gline", html: '<span class="ln">' + esc(ln.n == null ? "" : ln.n) + '</span><span class="tx">' + segsHtml(ln.segs) + "</span>" })); });
+      pw.appendChild(pap);
+      (function () {   // torn edges: a jagged clip path, seeded so it is the same on every visit
+        var r = rng(1231), pts = [], i;
+        for (i = 0; i <= 24; i++) pts.push((i / 24 * 100).toFixed(1) + "% " + (r() * 1.6).toFixed(2) + "%");
+        for (i = 0; i <= 30; i++) pts.push((100 - r() * 2.4).toFixed(1) + "% " + (i / 30 * 100).toFixed(1) + "%");
+        for (i = 24; i >= 0; i--) pts.push((i / 24 * 100).toFixed(1) + "% " + (100 - r() * 1.8).toFixed(2) + "%");
+        for (i = 30; i >= 0; i--) pts.push((r() * 2).toFixed(1) + "% " + (i / 30 * 100).toFixed(1) + "%");
+        pap.style.clipPath = "polygon(" + pts.join(",") + ")";
+      })();
+      out.appendChild(pw);
+      var sl = el("div", { cls: "slider" });
+      var range = el("input", { type: "range", min: 0, max: 100, value: 0, step: 1, id: "pap-slider", "aria-label": "From only what the papyrus holds to the text with the editors' restorations", "aria-valuetext": "only what the papyrus holds" });
+      sl.appendChild(range);
+      sl.appendChild(el("div", { cls: "ends", html: "<span>only what the papyrus holds</span><span>with the editors' restorations</span>" }));
+      out.appendChild(sl);
+      var lt = P.letters || {};
+      out.appendChild(el("div", { cls: "pstats", id: "pap-stats", html: "<span>letters read on the papyrus: <b>" + fmt(lt.read) + '</b></span><span class="r">letters restored by the editors: <b>' + fmt(lt.rest) + "</b>" +
+        (lt.added ? " + <b>" + fmt(lt.added) + "</b> put back" : "") + "</span>" +
+        "<span>restored share: <b>" + Math.round(100 * (lt.rest + (lt.added || 0)) / (lt.read + lt.rest + (lt.added || 0))) + '%</b> <span class="rough">our count</span></span>' + prelimTag(F.status) }));
+      var tr = null;
+      if (P.translation && P.translation.length) {
+        out.appendChild(el("p", { cls: "src", html: "Their English (" + esc(P.translator || "1914") + (P.translation_page ? ", p. " + P.translation_page : "") + "), with its own square brackets round a sentence they built from a restoration:" }));
+        tr = el("div", { cls: "ptrans", id: "pap-trans" });
+        tr.innerHTML = P.translation.map(function (l) { return segsHtml(l.segs); }).join("<br>");
+        out.appendChild(tr);
+      }
+      var upd = function () {
+        var v = range.value / 100;
+        pap.style.setProperty("--r", v); if (tr) tr.style.setProperty("--r", v);
+        pap.setAttribute("data-full", v > .5 ? "1" : "0");
+        range.setAttribute("aria-valuetext", v < .05 ? "only what the papyrus holds" : v > .95 ? "with the editors' restorations" : Math.round(v * 100) + "% of the way to the restorations");
+      };
+      range.addEventListener("input", upd); upd();
+      out.appendChild(el("p", { cls: "src", html: 'Greek and English: <a href="' + esc(P.url) + '">' + esc(P.edition) + "</a>" + (P.lines[0].page ? ", Greek p. " + P.lines[0].page : "") + ". " + esc(P.transcription || "") + "." }));
+      out.appendChild(caveat("<b>Restorations are guesses.</b> The letters in the pale hand are the 1914 editors' proposals, not Sappho's words as read on the papyrus. Modern editions read some places differently."));
+    }
+    // (b) the quotation that stops
+    var Q = F.quote;
+    if (Q && Q.lines && Q.lines.length) {
+      out.appendChild(el("h3", { text: "2. A quotation that stops" }));
+      var qi = el("p");
+      qi.appendChild(document.createTextNode("This poem ("));
+      qi.appendChild(frn(Q.wharton, Q.voigt));
+      qi.appendChild(document.createTextNode(") survives because a Greek critic quoted it to show how a poet can gather many feelings into one moment: " + (Q.by || "") + ". The quotation stops in the middle of a stanza, and the rest of the poem is lost."));
+      out.appendChild(qi);
+      var qbox = el("div", { cls: "quote inkfig", lang: "grc", id: "quote" });
+      var stop = Q.stop || Q.lines.length, lastOf = {};
+      (Q.stanzas || []).forEach(function (st) { if (st.length === 4) lastOf[st[3]] = 1; });
+      Q.lines.forEach(function (l, i) {
+        var n = Number(l.n || i + 1);
+        var txt = esc(l.text).replace(/\[([^\]]*)\]/g, '<span class="qbr">[$1]</span>');
+        qbox.appendChild(el("div", { cls: "qline" + (lastOf[n] ? " indent" : "") + (n === stop ? " last" : ""), style: "--w:" + (i * .09).toFixed(2) + "s" + (lastOf[n] ? ";margin-bottom:.45em" : ""),
+          html: '<span class="ln">' + (n % 4 === 1 || n === stop ? esc(n) : "") + '</span><span class="tx">' + txt + "</span>" }));
+      });
+      var sm = el("div", { cls: "stopmark" });
+      var blot = sv("svg", { viewBox: "0 0 30 26", "aria-hidden": "true", "class": "ink" });
+      blot.appendChild(sv("path", { d: "M8 13c0-5 6-8 10-6s6 7 2 10-12 3-12-4z", fill: "var(--ink)", "class": "fadein", style: "--w:" + (Q.lines.length * .09 + .4).toFixed(2) + "s" }));
+      blot.appendChild(stroke(handPath([[2, 22], [8, 15], [12, 13]], .5, 3), "", Q.lines.length * .09 + .2, .3));
+      sm.appendChild(blot);
+      sm.appendChild(el("span", { cls: "hand", text: "the quotation ends here" }));
+      qbox.appendChild(sm);
+      for (var b = 0; b < 3; b++) qbox.appendChild(el("div", { cls: "blank", "aria-hidden": "true" }));
+      out.appendChild(qbox);
+      watch(qbox);
+      if (Q.stop_note) out.appendChild(el("p", { text: Q.stop_note }));
+      out.appendChild(el("p", { cls: "src", html: 'Greek: <a href="' + esc(Q.url) + '">Wharton, Sappho (1908)</a>, ' + esc(Q.title || "") + ". Words in grey brackets are ones Wharton prints in brackets. " + esc(Q.uncertain_note || "") +
+        (Q.evidence && Q.evidence[0] ? ' Where the quotation ends: <a href="' + esc(Q.evidence[0].url) + '">' + esc(Q.evidence[0].name) + "</a>, p. " + esc(Q.evidence[0].page) + "." : "") }));
+    }
+    // (c) lengths
+    var Lg = F.lengths;
+    if (Lg) {
+      out.appendChild(el("h3", { text: "3. A word or two" }));
+      out.appendChild(el("p", { html: "Most fragments are a few words that an ancient grammarian, metrician or critic quoted to show a form, a dialect or a metre. Here is every fragment Wharton prints as Greek verse, by its length in Greek words. Tap a bar to see which fragments it holds." }));
+      var hb = el("div", { cls: "hist", id: "hist" });
+      out.appendChild(hb);
+      var list = el("p", { cls: "binlist", id: "binlist", "aria-live": "polite" });
+      out.appendChild(list);
+      drawHist(hb, list);
+      if (F.quoters && F.quoters.top.length) out.appendChild(el("p", { html: "Who quoted them most, " + esc(F.quoters.label || "") + ": " + F.quoters.top.slice(0, 4).map(function (a) { return esc(a[0]) + " (" + esc(a[1]) + ", " + a[2] + ")"; }).join(", ") + "." }));
+      out.appendChild(el("p", { cls: "src", html: "Counted by the fragments experiment from " + srcList((F.sources || []).filter(function (x) { return /Wharton/.test(x.name); }), 1) + prelimTag(F.status) + ". " + esc(Lg.rule || "") +
+        (Lg.inline ? " " + fmt(Lg.inline) + " more numbers are only a word or a mention in Wharton's English; counting each as one word, the median would be " + (Lg.sensitivity ? fmt(Lg.sensitivity.median_words) : "lower") + "." : "") +
+        " Wharton's edition is from 1908; papyri found later add fragments he never saw." }));
+    }
+  }
+  function drawHist(holder, list) {
+    var Lg = F.lengths, W = 640, H = 250, padL = 34, padB = 46, padT = 16;
+    var max = Math.max.apply(null, Lg.counts), nb = Lg.counts.length, bw = (W - padL - 8) / nb;
+    var lab = function (b) { return b[0] === b[1] ? String(b[0]) : b[1] > 999 ? (b[0] - 1) + "+" : b[0] + "–" + b[1]; };
+    var svg = sv("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "class": "ink" });
+    svg.appendChild(sv("title", { text: "Sappho's fragments in Wharton's edition by length in Greek words" }));
+    svg.appendChild(sv("desc", { text: Lg.counts.map(function (c, i) { return lab(Lg.bins[i]) + " words: " + c; }).join("; ") + ". Median " + Lg.median + " words." }));
+    var y = function (v) { return H - padB - (H - padB - padT) * v / max; };
+    svg.appendChild(stroke(line(padL, H - padB, W - 6, H - padB, 10, 1.2, 3), "", 0, .8));
+    var bars = [];
+    Lg.counts.forEach(function (c, i) {
+      var x = padL + i * bw + 5, w = bw - 10, top = y(c), b = Lg.bins[i], short = b[1] <= Lg.median;
+      var g = sv("g", { "class": "bar", tabindex: 0, role: "button", "aria-label": lab(b) + " words: " + c + " fragments" });
+      g.appendChild(sv("rect", { x: x - 4, y: padT - 6, width: w + 8, height: H - padB - padT + 6, fill: "transparent", "class": "hit" }));
+      if (c) {
+        g.appendChild(stroke(jag([[x, H - padB], [x + .4, (top + H - padB) / 2], [x + .5, top], [x + w / 2, top + .5], [x + w - .5, top + .3], [x + w - .3, (top + H - padB) / 2], [x + w, H - padB]], .9, i + 9), short ? "acc" : "", .1 + i * .07, .6));
+        for (var hy = H - padB - 5; hy > top + 3; hy -= 5.5) g.appendChild(sv("path", { d: line(x + 2, hy + 2, x + w - 2, hy - 2, 1, .5, hy * 7 + i), "class": "st draw " + (short ? "acc" : "pencil"), pathLength: 1, style: "stroke-width:1;--w:" + (.3 + i * .07 + (H - padB - hy) * .004).toFixed(2) + "s;--d:.25s" }));
+      }
+      g.appendChild(sv("text", { x: x + w / 2, y: top - 6, "text-anchor": "middle", "class": "t-ink t-num", text: c }));
+      g.appendChild(sv("text", { x: x + w / 2, y: H - padB + 17, "text-anchor": "middle", "class": "t-num", text: lab(b) }));
+      g.addEventListener("click", function () { pick(i); });
+      g.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(i); } });
+      svg.appendChild(g); bars.push(g);
+    });
+    svg.appendChild(sv("text", { x: (W + padL) / 2, y: H - 6, "text-anchor": "middle", text: "Greek words in the fragment" }));
+    var cum = 0, mi = 0;
+    for (var k = 0; k < nb; k++) { cum += Lg.counts[k]; if (cum >= Lg.n / 2) { mi = k; break; } }
+    var mb = Lg.bins[mi], frac = mb[1] > 999 || mb[1] === mb[0] ? 1 : (Lg.median - mb[0] + 1) / (mb[1] - mb[0] + 1);   // the line sits between the median value and the next one, inside its bar
+    var mx = padL + (mi + frac) * bw - (frac === 1 ? 2 : 0);
+    svg.appendChild(stroke(line(mx, padT + 4, mx, H - padB + 3, 6, 1.2, 77), "blue", 1.2, .6));
+    svg.appendChild(sv("text", { x: mx + 6, y: padT + 14, "class": "t-hand fadein", style: "fill:var(--blue);--w:1.6s;font-size:17px", text: "half have " + fmt(Lg.median) + " words or fewer" }));
+    holder.appendChild(svg);
+    watch(svg);
+    var cur = -1;
+    function pick(i) {
+      cur = i; bars.forEach(function (g, j) { g.setAttribute("aria-pressed", j === i ? "true" : "false"); });
+      var b = Lg.bins[i], items = Lg.items.filter(function (it) { return it.n >= b[0] && it.n <= b[1]; });
+      list.innerHTML = "";
+      list.appendChild(el("b", { text: plural(items.length, "fragment") + " of " + (b[1] > 999 ? "more than " + (b[0] - 1) : lab(b)) + " words: " }));
+      items.slice(0, 50).forEach(function (it, j) { if (j) list.appendChild(document.createTextNode(", ")); list.appendChild(frn(it.w, it.v, it.vq)); });
+      if (items.length > 50) list.appendChild(document.createTextNode(" and " + (items.length - 50) + " more"));
+    }
+    window.__binRefresh = function () { if (cur >= 0) pick(cur); };
+    list.textContent = "Tap or click a bar.";
+  }
+
+  // ---------- III. translators -------------------------------------------------------------------------------------------------------
+  var T = D.translators;
+  function yearText(y, lab) { return typeof y === "number" ? (y < 0 ? "1st c. BC" : String(y)) : esc(y || lab || ""); }
+  function linksOf(v, gid) { return v.links && v.links[gid]; }
+  (function section3() {
+    var box = $("#g3"), out = $("#r3");
+    if (!T || !T.versions || !T.versions.length) { unavailable(box, out, "s3", "How many of these versions keep “seems to me”?", "The translators experiment"); return; }
+    var N = T.versions.length, seem = "greek:1:1", me = "greek:1:2";
+    var keep = T.versions.filter(function (v) { return linksOf(v, seem) && linksOf(v, me); });
+    var k = keep.length, ans = k === N ? "all" : k === 0 ? "none" : "some";
+    var w = function (id) { var t = null; T.greek.lines.forEach(function (l) { l.segs.forEach(function (s) { if (s.id === id) t = s.t; }); }); return t; };
+    $("#lede3").innerHTML = "A translation is a set of choices: which words to keep, which to drop, what to add. Here are the first four stanzas of one poem by Sappho (" +
+      "<span class=\"frn\" data-w=\"2\" data-v=\"31\">fr. 2 Wharton</span>) beside " + plural(N, "version") + " from Catullus to " + yearText(T.versions[N - 1].year) + ", all of them public domain.";
+    guess(box, out, {
+      id: "s3", q: 'The Greek opens <span class="gk" lang="grc">' + esc(w(seem)) + " " + esc(w(me)) + "</span>: “seems to me” in Wharton's literal prose. How many of these " + N + " versions keep both words, “seems” and “to me”?",
+      choices: [{ v: "all", html: "all " + N }, { v: "some", html: "some of them" }, { v: "none", html: "none" }], answer: ans,
+      verdict: function () { return "<b>" + k + " of " + N + "</b> keep both" + (k ? ": " + keep.map(function (v) { return esc(v.short) + " (" + yearText(v.year) + ")"; }).join(", ") : "") + ". The others open on the man, the gods or a blessing. <span class=\"rough\">our rough count</span>" + prelimTag(T.status); },
+      onReveal: function () { buildThreads(out); }
+    });
+  })();
+  function buildThreads(out) {
+    out.appendChild(el("p", { html: "Tap or hover a Greek word to light its threads through every version (dashed: a loose match). A version the thread skips dropped the word, or moved it to another stanza. Words with no thread at all are the translator's own additions." }));
+    var stanzas = [];
+    T.greek.lines.forEach(function (l) {   // only stanzas inside the alignment's scope (a Greek word of it is linked somewhere)
+      var linked = l.segs.some(function (s) { return s.id && T.versions.some(function (v) { return v.links && v.links[s.id]; }); });
+      if (linked && stanzas.indexOf(l.stanza) < 0) stanzas.push(l.stanza);
+    });
+    var ctl = el("div", { cls: "ctlrow" });
+    ctl.appendChild(el("span", { cls: "lab", text: "stanza" }));
+    var segSt = el("div", { cls: "seg", role: "group", "aria-label": "Which stanza" });
+    stanzas.forEach(function (st, i) { segSt.appendChild(el("button", { type: "button", "data-st": st, id: "stanza-" + st, "aria-pressed": i === 0 ? "true" : "false", text: String(st) })); });
+    ctl.appendChild(segSt);
+    var addBtn = el("button", { type: "button", cls: "go", id: "show-add", "aria-pressed": "false", text: "show the additions", style: "margin-top:0" });
+    ctl.appendChild(addBtn);
+    out.appendChild(ctl);
+    var th = el("div", { cls: "threads wide", id: "threads" });
+    out.appendChild(th);
+    var glossP = el("p", { cls: "gloss-line", id: "gloss-line", "aria-live": "polite" });
+    var linkedG = {};
+    T.versions.forEach(function (v) { Object.keys(v.links || {}).forEach(function (g) { linkedG[g] = 1; }); });
+    var stanzaOfTok = {};
+    T.versions.forEach(function (v) { v.lines.forEach(function (l) { l.segs.forEach(function (s) { if (s.id) stanzaOfTok[s.id] = l.stanza; }); }); });
+    var sel = null, curSt = stanzas[0], over, gbtn, vEls;
+    function render(st) {
+      curSt = st; th.innerHTML = ""; gbtn = {}; vEls = [];
+      over = sv("svg", { "class": "over", "aria-hidden": "true" }); th.appendChild(over);
+      var gb = el("div", { cls: "greek-block", lang: "grc" });
+      T.greek.lines.filter(function (l) { return l.stanza === st; }).forEach(function (l) {
+        var d = el("div", { cls: "gl" });
+        l.segs.forEach(function (s) {
+          if (!s.id) { d.appendChild(document.createTextNode(s.t)); return; }
+          var has = linkedG[s.id], g = T.gloss[s.id];
+          var b = el("button", { type: "button", cls: "gw" + (has ? "" : " nolink"), "data-id": s.id, "aria-pressed": "false", text: s.t,
+            title: g ? g.lemma + ": “" + g.gloss + "” (LSJ)" : "", "aria-label": s.t + (g ? ", " + g.gloss : "") + (has ? "" : ", no counterpart in these versions") });
+          gbtn[s.id] = gbtn[s.id] || b;
+          d.appendChild(b);
+        });
+        gb.appendChild(d);
+      });
+      th.appendChild(gb);
+      th.appendChild(glossP);
+      T.versions.forEach(function (v) {
+        var row = el("div", { cls: "ver", lang: v.lang || "en", "data-v": v.id });
+        row.appendChild(el("div", { cls: "yr", text: yearText(v.year), title: v.date_label || "" }));
+        var body = el("div");
+        body.appendChild(el("p", { cls: "who", html: "<b>" + esc(v.who) + "</b>" + (v.kind ? " &middot; " + esc(v.kind) : "") }));
+        var vt = el("p", { cls: "vt" });
+        var ls = v.lines.filter(function (l) { return l.stanza === st; });
+        if (!ls.length) vt.appendChild(el("span", { cls: "dropped", text: "(nothing for this stanza)" }));
+        ls.forEach(function (l, li) {
+          if (li) vt.appendChild(el("br"));
+          if (l.lacuna) { vt.appendChild(el("span", { cls: "lacuna", text: l.segs[0].t, title: "a line lost in the manuscripts" })); return; }
+          l.segs.forEach(function (s) {
+            if (!s.id) { vt.appendChild(document.createTextNode(s.t)); return; }
+            var gl = (s.g || []).map(function (x) { return x[0]; });
+            vt.appendChild(el("span", { cls: "tk" + (gl.length ? " linked" : " add"), "data-id": s.id, "data-g": gl.join(" "), text: s.t }));
+          });
+        });
+        body.appendChild(vt);
+        var c = v.counts || {};
+        body.appendChild(el("p", { cls: "chips", html: "carries " + fmt(c.carried) + " of " + fmt(c.scope) + " Greek words (" + fmt(c.close) + " close, " + fmt(c.loose) + " loose) &middot; drops " + fmt(c.dropped) + " &middot; adds " + fmt(c.added) + " of its " + fmt(c.words) + " words <span class=\"rough\">our rough count</span>" +
+          (v.source ? ' &middot; <a href="' + esc(v.source) + '">source</a>' + (v.pages ? " (Wharton p. " + v.pages.join("–") + ")" : "") : "") +
+          (v.extra_source ? ' &middot; <a href="' + esc(v.extra_source) + '">lines 13–16</a>' : "") }));
+        var drop = el("p", { cls: "dropped", hidden: true });
+        body.appendChild(drop);
+        row.appendChild(body);
+        th.appendChild(row);
+        vEls.push({ v: v, row: row, vt: vt, drop: drop });
+      });
+      Object.keys(gbtn).forEach(function (id) {
+        var b = gbtn[id]; if (b.classList.contains("nolink")) return;
+        b.addEventListener("click", function () { draw(id, true); });
+        b.addEventListener("mouseenter", function () { if (sel !== id) draw(id, true); });
+        b.addEventListener("focus", function () { if (sel !== id) draw(id, true); });
+      });
+      $$(".tk.linked", th).forEach(function (t) {
+        var go = function () { var g = t.getAttribute("data-g").split(" ")[0]; if (gbtn[g] && sel !== g) draw(g, true); };
+        t.addEventListener("mouseenter", go); t.addEventListener("click", go);
+      });
+      var first = Object.keys(gbtn).filter(function (id) { return linkedG[id]; })[0];
+      sel = null;
+      setTimeout(function () { draw(first, true); }, 60);
+    }
+    function center(elm, side) {
+      var a = elm.getBoundingClientRect(), b = th.getBoundingClientRect();
+      return [a.left - b.left + a.width / 2, side === "top" ? a.top - b.top + 2 : a.bottom - b.top - 2];
+    }
+    function draw(id, animate) {
+      sel = id;
+      Object.keys(gbtn).forEach(function (k) { gbtn[k].setAttribute("aria-pressed", String(k === id)); });
+      while (over.firstChild) over.removeChild(over.firstChild);
+      var bb = th.getBoundingClientRect();
+      over.setAttribute("width", bb.width); over.setAttribute("height", bb.height); over.setAttribute("viewBox", "0 0 " + bb.width + " " + bb.height);
+      $$(".tk.lit", th).forEach(function (t) { t.classList.remove("lit"); });
+      if (!id || !gbtn[id]) return;
+      var g = T.gloss[id];
+      glossP.innerHTML = g ? '<span class="gk" lang="grc">' + esc(gbtn[id].textContent) + "</span> &middot; from <span class=\"gk\" lang=\"grc\">" + esc(g.lemma) + "</span>, “" + esc(g.gloss) + "”" + (g.note ? " (" + esc(g.note) + ")" : "") + ' <span class="src">LSJ</span>' : "";
+      var prev = center(gbtn[id], "bottom"), seg = 0, skipped = 0;
+      vEls.forEach(function (ve) {
+        var lk = linksOf(ve.v, id);
+        var hits = $$(".tk", ve.vt).filter(function (t) { return (" " + t.getAttribute("data-g") + " ").indexOf(" " + id + " ") >= 0; });
+        hits.forEach(function (t) { t.classList.add("lit"); });
+        if (!hits.length) {
+          var moved = lk && (lk.to || []).map(function (t) { return stanzaOfTok[t]; }).filter(function (s) { return s && s !== curSt; });
+          ve.drop.hidden = false;
+          ve.drop.innerHTML = moved && moved.length ? "— moved to stanza " + moved[0] : '— not carried: <span class="gk" lang="grc">' + esc(gbtn[id].textContent) + "</span>";
+          skipped++;
+          return;
+        }
+        ve.drop.hidden = true;
+        var loose = lk && lk.strength === "loose";
+        var to = center(hits[0], "top"), dy = Math.max(18, (to[1] - prev[1]) * .45);
+        var d = "M" + prev[0].toFixed(1) + " " + prev[1].toFixed(1) + " C" + prev[0].toFixed(1) + " " + (prev[1] + dy).toFixed(1) + " " + to[0].toFixed(1) + " " + (to[1] - dy).toFixed(1) + " " + to[0].toFixed(1) + " " + to[1].toFixed(1);
+        over.appendChild(sv("path", { d: d, "class": "bleed", style: "stroke:var(--accent)" }));
+        over.appendChild(sv("path", { d: d, "class": "st acc" + (loose ? " loose" : " draw" + (animate && !RM ? "" : " drawn")), pathLength: loose ? null : 1,
+          style: "stroke-width:1.7;--w:" + (seg * .16).toFixed(2) + "s;--d:.5s" + (skipped ? ";opacity:.45" : "") + (loose ? ";stroke-dasharray:5 4" : "") }));
+        seg++; skipped = 0;
+        hits.slice(1).forEach(function (h) {
+          var t2 = center(h, "top"), o = center(hits[0], "top");
+          var d2 = "M" + o[0].toFixed(1) + " " + (o[1] - 1).toFixed(1) + " Q" + ((o[0] + t2[0]) / 2).toFixed(1) + " " + (Math.min(o[1], t2[1]) - 14).toFixed(1) + " " + t2[0].toFixed(1) + " " + t2[1].toFixed(1);
+          over.appendChild(sv("path", { d: d2, "class": "st acc", style: "stroke-width:1.2;opacity:.7" }));
+        });
+        prev = center(hits[0], "bottom");
+      });
+      if (animate && !RM) requestAnimationFrame(function () { requestAnimationFrame(function () { $$("path.draw", over).forEach(function (p) { p.classList.add("drawn"); }); }); });
+    }
+    $$("button", segSt).forEach(function (b) {
+      b.addEventListener("click", function () {
+        $$("button", segSt).forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+        render(+b.getAttribute("data-st"));
+      });
+    });
+    addBtn.addEventListener("click", function () {
+      var on = !th.classList.contains("show-add");
+      th.classList.toggle("show-add", on); addBtn.setAttribute("aria-pressed", String(on));
+      addBtn.textContent = on ? "hide the additions" : "show the additions";
+    });
+    window.__threads = { select: function (id) { draw(id, false); }, selected: function () { return sel; }, stanza: function () { return curSt; },
+      lit: function () { return $$(".tk.lit", th).map(function (t) { return [t.closest(".ver").getAttribute("data-v"), t.textContent]; }); },
+      paths: function () { return $$("path.st", over).length; } };
+    var redraw = function () { if (sel != null) draw(sel, false); };
+    if ("ResizeObserver" in window) new ResizeObserver(redraw).observe(th); else window.addEventListener("resize", redraw);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(redraw);
+    render(curSt);
+    out.appendChild(caveat("<b>Our alignment, not a score.</b> " + esc(T.scope || "") + ". The links are a hand alignment made in two passes (" + fmt(T.disagreements || 0) + " disagreements, resolved and logged); the counts are " +
+      "<span class=\"rough\">our rough count</span> of them, not a measure of quality or faithfulness. The Greek is Wharton's 19th-century text after Bergk; modern editions differ in places. We call every one a version: Wharton himself calls Catullus's poem an imitation, and Smollett's is a love song in a novel that Wharton prints among the renderings."));
+    out.appendChild(el("p", { cls: "src", html: 'Greek and the versions: <a href="' + esc(T.greek.source) + '">Wharton, Sappho (1908)</a>' + (T.greek.pages ? ", pp. " + T.greek.pages.join("–") : "") + ". Word glosses: " + esc(T.gloss_source.lexicon || "LSJ") + " (" + esc(T.gloss_source.licence || "") + ")." + prelimTag(T.status) }));
+    buildGlu(out);
+  }
+  function buildGlu(out) {
+    var G = T.glukupikron; if (!G) return;
+    var box = el("div", { cls: "glu", id: "glu" });
+    box.appendChild(el("h3", { text: "One word, two tastes" }));
+    var parts = G.parts || [];
+    box.appendChild(el("p", { cls: "word", lang: "grc", html: '<span class="a">' + esc(parts[0].greek) + '</span><span class="b">' + esc(parts[1].greek) + "</span>" }));
+    var svg = sv("svg", { viewBox: "0 0 480 124", role: "img", "class": "ink" });
+    svg.appendChild(sv("title", { text: "Sweet then bitter in the Greek; bitter then sweet in the English" }));
+    svg.appendChild(sv("desc", { text: G.greek + " joins " + parts[0].greek + " (" + parts[0].gloss + ") and " + parts[1].greek + " (" + parts[1].gloss + "). Wharton and Symonds write bitter-sweet: the halves swap places." }));
+    svg.appendChild(sv("text", { x: 130, y: 24, "text-anchor": "middle", "class": "t-ink t-hand", style: "font-size:25px", text: parts[0].gloss }));
+    svg.appendChild(sv("text", { x: 350, y: 24, "text-anchor": "middle", "class": "t-acc t-hand", style: "font-size:25px", text: parts[1].gloss }));
+    svg.appendChild(stroke(handPath([[130, 34], [180, 62], [300, 84], [345, 98]], 1.5, 4), "", .2, .9));
+    svg.appendChild(stroke(handPath([[350, 34], [300, 62], [180, 84], [130, 98]], 1.5, 5), "acc", .5, .9));
+    svg.appendChild(sv("text", { x: 130, y: 120, "text-anchor": "middle", "class": "t-acc", style: "font-size:21px;font-style:italic", text: "bitter-" }));
+    svg.appendChild(sv("text", { x: 350, y: 120, "text-anchor": "middle", "class": "t-ink", style: "font-size:21px;font-style:italic", text: "sweet" }));
+    box.appendChild(svg);
+    watch(svg);
+    var p = el("p");
+    p.appendChild(document.createTextNode("Sappho's word "));
+    p.appendChild(el("span", { cls: "gk", lang: "grc", text: G.greek }));
+    p.appendChild(document.createTextNode(" ("));
+    p.appendChild(frn(G.wharton, G.voigt));
+    p.appendChild(document.createTextNode(") puts sweet first: " + parts[0].lemma + " “" + parts[0].gloss + "”, then " + parts[1].lemma + " “" + parts[1].gloss + "”; the lexicon gives the whole word as “" + (G.compound_gloss || "") + "”. The English versions turn it round: "));
+    G.renderings.forEach(function (r, i) { if (i) p.appendChild(document.createTextNode(", and ")); p.appendChild(el("i", { text: "“" + r.line + "”" })); p.appendChild(document.createTextNode(" (" + r.who + ", " + r.year + ")")); });
+    p.appendChild(document.createTextNode("."));
+    box.appendChild(p);
+    var c = D.committee || {};
+    box.appendChild(el("p", { cls: "committee", html: "Of her first book, <i>Eros the Bittersweet</i> (1986), the Nobel Committee writes that <q>" + esc(c.compound) + "</q> (the Committee does not name the word). &mdash; " + (c.url ? '<a href="' + esc(c.url) + '">' + esc(c.by) + "</a>" : esc(c.by || "")) }));
+    addQuote(box, "bittersweet");
+    box.appendChild(el("p", { cls: "src", html: 'Greek and English: <a href="' + esc(G.source) + '">Wharton, Sappho (1908)</a>' + (G.pages ? ", p. " + G.pages.join(", ") : "") + ". Glosses: LSJ (Perseus, CC BY-SA 4.0)." }));
+    out.appendChild(box);
+  }
+
+  // ---------- IV. forms, Float, prize ---------------------------------------------------------------------------------------------------
+  var FM = D.forms, PZ = D.prize;
+  var FORM_STYLE = [["solid", "var(--accent)"], ["solid", "var(--blue)"], ["hatch", "var(--accent)"], ["hatch", "var(--blue)"], ["solid", "var(--ink)"],
+    ["dots", "var(--accent)"], ["dots", "var(--blue)"], ["cross", "var(--ink)"], ["hatch", "var(--ink)"], ["dots", "var(--ink)"], ["cross", "var(--accent)"], ["solid", "var(--pencil)"]];
+  function patternDefs(svg, prefix) {
+    var defs = sv("defs");
+    FORM_STYLE.forEach(function (st, i) {
+      var p = sv("pattern", { id: prefix + i, width: 6, height: 6, patternUnits: "userSpaceOnUse" });
+      if (st[0] === "solid") p.appendChild(sv("rect", { width: 6, height: 6, fill: st[1] }));
+      if (st[0] === "hatch") p.appendChild(sv("path", { d: "M-1 7 L7 -1 M-1 1 L1 -1 M5 7 L7 5", stroke: st[1], "stroke-width": 1.6 }));
+      if (st[0] === "dots") p.appendChild(sv("circle", { cx: 3, cy: 3, r: 1.4, fill: st[1] }));
+      if (st[0] === "cross") p.appendChild(sv("path", { d: "M0 3 H6 M3 0 V6", stroke: st[1], "stroke-width": 1.2 }));
+      defs.appendChild(p);
+    });
+    svg.appendChild(defs);
+  }
+  function swatch(i) {
+    var s = sv("svg", { viewBox: "0 0 16 16", "aria-hidden": "true" });
+    patternDefs(s, "sw" + i + "-");
+    s.appendChild(sv("rect", { x: 1.5, y: 1.5, width: 13, height: 13, rx: 2, fill: "url(#sw" + i + "-" + (i % FORM_STYLE.length) + ")", stroke: "var(--ink)", "stroke-width": 1.2 }));
+    return s;
+  }
+  (function section4forms() {
+    var holder = $("#forms");
+    if (!FM || !FM.works || !FM.works.length) { holder.appendChild(el("p", { cls: "src", text: "The forms shelf is not in this copy yet." })); return; }
+    var sm = FM.summary || {};
+    holder.appendChild(el("p", { html: "Each spine is one entry of the Committee's bibliography, which it calls <i>a selection</i>: " + fmt(FM.works.length) + " entries, shelved by year. Each band is a form that the entry's own line or the Committee's essay names" +
+      (sm.entries_with_two_or_more_form_tags ? "; " + fmt(sm.entries_with_two_or_more_form_tags) + " entries name two forms or more (the classical-dialogue tag is not counted)" : "") + ". Tap a form to find its books; hover a spine for the words each band rests on." + prelimTag(FM.status) }));
+    var leg = el("div", { cls: "chips-legend", role: "group", "aria-label": "Filter the shelf by form" });
+    var active = null, idx = {};
+    FM.forms.forEach(function (f, i) { idx[f.id] = i; });
+    var shelf = el("div", { cls: "formshelf wide", id: "formshelf" });
+    var outp = el("p", { cls: "src", "aria-live": "polite" });
+    FM.forms.forEach(function (f, i) {
+      var b = el("button", { type: "button", "aria-pressed": "false", "data-f": f.id });
+      b.appendChild(swatch(i)); b.appendChild(document.createTextNode(f.label + " (" + f.n + ")"));
+      b.addEventListener("click", function () {
+        active = active === f.id ? null : f.id;
+        $$("button", leg).forEach(function (x) { x.setAttribute("aria-pressed", String(x.getAttribute("data-f") === active)); });
+        apply();
+        outp.textContent = active ? f.n + " entries tagged “" + f.label + "”" : "";
+      });
+      leg.appendChild(b);
+    });
+    function apply() {
+      var svg = $("svg", shelf); if (!svg) return;
+      svg.classList.toggle("dim", !!active);
+      $$(".spine", svg).forEach(function (s) { s.classList.toggle("hit", !!active && (" " + s.getAttribute("data-f") + " ").indexOf(" " + active + " ") >= 0); });
+    }
+    holder.appendChild(leg);
+    holder.appendChild(shelf);
+    holder.appendChild(outp);
+    var lastW = 0;
+    function draw() {
+      var W = Math.max(300, shelf.clientWidth || 640);
+      if (Math.abs(W - lastW) < 2 && shelf.firstChild) return; lastW = W;
+      shelf.innerHTML = "";
+      var sw = W < 520 ? 22 : 27, gap = W < 520 ? 3 : 4, per = Math.max(6, Math.floor((W - 10) / (sw + gap))), H0 = W < 520 ? 170 : 210;
+      var rows = Math.ceil(FM.works.length / per); per = Math.ceil(FM.works.length / rows);
+      var H = rows * (H0 + 24);
+      var svg = sv("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "class": "ink", width: W, height: H });
+      svg.appendChild(sv("title", { text: "Her books, as the Committee's bibliography lists them, banded by form" }));
+      svg.appendChild(sv("desc", { text: FM.works.map(function (w) { return w.year + " " + w.title + (w.forms.length ? ": " + w.forms.join(", ") : ""); }).join("; ") }));
+      patternDefs(svg, "fp");
+      FM.works.forEach(function (w, k) {
+        var row = Math.floor(k / per), col = k % per, x = 6 + col * (sw + gap), base = row * (H0 + 24) + H0;
+        var r = rng(hashStr(w.title)), h = H0 - 16 - Math.round(r() * 36), top = base - h, eng = /English/.test(w.section || "");
+        var g = sv("g", { "class": "spine", "data-f": w.forms.join(" ") });
+        g.appendChild(sv("title", { text: w.year + ": " + w.title + (w.section && !eng ? " (" + w.section + ")" : "") + (w.evidence.length ? "\n" + w.evidence.join("\n") : "\nno form named") }));
+        g.appendChild(sv("rect", { x: x, y: top, width: sw, height: h, fill: "var(--card)", "class": "fadein", style: "--w:" + (k * .03).toFixed(2) + "s" }));
+        var bh = Math.min(15, (h * .45) / Math.max(1, w.forms.length) - 2);
+        w.forms.forEach(function (f, j) {
+          g.appendChild(sv("rect", { x: x + 2.5, y: base - 4 - (j + 1) * (bh + 2), width: sw - 5, height: bh, fill: "url(#fp" + ((idx[f] || 0) % FORM_STYLE.length) + ")", "class": "fadein", style: "--w:" + (.4 + k * .03).toFixed(2) + "s" }));
+        });
+        g.appendChild(stroke(jag([[x, base], [x + .3, (top + base) / 2], [x + .3, top + 1], [x + sw - .4, top], [x + sw - .2, (top + base) / 2], [x + sw, base]], .8, k + 3), eng ? "" : "pencil", k * .03, .6));
+        var title = w.title.split(":")[0], maxc = Math.floor((h - (w.forms.length * 17) - 14) / 6.4);
+        if (title.length > maxc) title = title.slice(0, Math.max(3, maxc - 1)) + "…";
+        g.appendChild(sv("text", { x: x + sw / 2 + 4, y: top + 8, transform: "rotate(90 " + (x + sw / 2 + 4) + " " + (top + 8) + ")", "class": eng ? "t-ink" : "", style: "font-size:" + (sw < 25 ? 10.5 : 11.5) + "px;font-style:italic", text: title }));
+        g.appendChild(sv("text", { x: x + sw / 2, y: base + 14, "text-anchor": "middle", "class": "t-num", style: "font-size:" + (sw < 25 ? 9 : 10) + "px", text: "’" + String(w.year).slice(2) }));
+        svg.appendChild(g);
+      });
+      for (var rr = 0; rr < rows; rr++) svg.appendChild(stroke(line(0, rr * (H0 + 24) + H0 + .5, W, rr * (H0 + 24) + H0 + .5, 10, 1, rr + 50), "", 0, .9, { style: "stroke-width:2.2" }));
+      shelf.appendChild(svg);
+      watch(svg);
+      apply();
+    }
+    draw();
+    if ("ResizeObserver" in window) new ResizeObserver(function () { draw(); }).observe(shelf);
+    holder.appendChild(el("p", { cls: "src", html: 'Titles, years and the words behind each band: <a href="' + esc(FM.source) + '">the Nobel Committee&rsquo;s bio-bibliography</a>. ' + esc(FM.selection_note || "") + " " + esc(FM.tag_rule || "") + " Spines in pencil are the " + FM.works.filter(function (w) { return !/English/.test(w.section || ""); }).length + " entries the Committee lists under “" + esc((FM.works.filter(function (w) { return !/English/.test(w.section || ""); })[0] || {}).section || "Other") + "”. No covers are shown." }));
+    addQuote(holder, "forms");
+  })();
+  (function section4float() {
+    var box = $("#g4"), out = $("#r4");
+    if (!FM) { unavailable(box, out, "s4", "In how many orders can 22 chapbooks be read?", "The forms results"); return; }
+    var fl = FM.float;
+    guess(box, out, {
+      id: "s4", q: "The Committee describes <i>Float</i> (2016) as " + fl.n + " chapbooks &ldquo;" + esc(D.committee.float) + "&rdquo;. In how many different orders could you read them?",
+      choices: [{ v: "n", html: String(fl.n) }, { v: "k", html: "about 10,000" }, { v: "b", html: "about a billion" }, { v: "bb", html: "over a billion billion" }], answer: "bb",
+      verdict: function () { return fl.n + " &times; " + (fl.n - 1) + " &times; " + (fl.n - 2) + " &times; &hellip; &times; 1, written " + fl.n + "!, which is"; },
+      onReveal: function () {
+        out.appendChild(el("p", { cls: "bignum", id: "orderings", text: fl.orderings.replace(/\B(?=(\d{3})+(?!\d))/g, ",") }));
+        var m = /^([\d.]+)e\+(\d+)$/.exec(fl.sci);
+        out.appendChild(el("p", { html: "about " + (m ? m[1] + " &times; 10<sup>" + m[2] + "</sup>" : esc(fl.sci)) + " orders. Read one order a second and you would need about " + fl.trillion_years + " trillion years" +
+          (fl.times_universe ? ", some " + fmt(fl.times_universe) + " times the age of the universe" : "") + '. <span class="rough">our arithmetic</span>' }));
+        var ch = el("div", { cls: "chaps", id: "chaps", "aria-hidden": "true" });
+        out.appendChild(ch);
+        var ord = el("p", { cls: "order", id: "order" });
+        out.appendChild(ord);
+        var shuffleBtn = el("button", { type: "button", cls: "go", id: "shuffle", text: "shuffle the chapbooks" });
+        out.appendChild(shuffleBtn);
+        var n = fl.n, perm = [], r = rng(22), i, cards = [];
+        for (i = 0; i < n; i++) { perm.push(i); var c = el("div", { cls: "chap", text: String(i + 1) }); ch.appendChild(c); cards.push(c); }
+        function layout() {
+          var W = ch.clientWidth || 600, cols = W < 560 ? 11 : 22, gap = 6, cw = Math.floor((W - gap * (cols - 1)) / cols), chh = Math.round(cw * 1.35);
+          ch.style.setProperty("--cw", cw + "px"); ch.style.setProperty("--ch", chh + "px"); ch.style.setProperty("--h", (Math.ceil(n / cols) * (chh + gap)) + "px");
+          perm.forEach(function (card, slot) { cards[card].style.transform = "translate(" + ((slot % cols) * (cw + gap)) + "px," + (Math.floor(slot / cols) * (chh + gap)) + "px) rotate(" + ((((card * 37) % 7) - 3) * .6) + "deg)"; });
+          ord.textContent = "this order: " + perm.map(function (x) { return x + 1; }).join(", ");
+        }
+        function shuffle() { for (var j = n - 1; j > 0; j--) { var k = Math.floor(r() * (j + 1)), t = perm[j]; perm[j] = perm[k]; perm[k] = t; } layout(); }
+        layout();
+        shuffleBtn.addEventListener("click", shuffle);
+        if ("ResizeObserver" in window) new ResizeObserver(layout).observe(ch);
+        if (!RM) setTimeout(shuffle, 500);
+        out.appendChild(el("p", { cls: "src", html: 'The number of chapbooks and &ldquo;' + esc(D.committee.float) + '&rdquo;: <a href="' + esc(D.committee.url) + '">Nobel Committee, bio-bibliography</a>. ' + esc(fl.caveat || "") +
+          (fl.universe_source ? " Age of the universe: " + esc(fl.universe_source) + "." : "") }));
+      }
+    });
+  })();
+  (function section4prize() {
+    var box = $("#g5"), out = $("#r5");
+    if (!PZ) { unavailable(box, out, "s5", "How many Literature laureates were women?", "The prize history"); return; }
+    var w = PZ.women, opts = [w - 10, w, w + 20, w + 40].filter(function (x) { return x > 0; });
+    guess(box, out, {
+      id: "s5", q: "Since 1901 the Literature prize has gone to " + fmt(PZ.total) + " writers. How many of them were women?",
+      choices: opts.map(function (x) { return { v: x, html: fmt(x) }; }), answer: w,
+      verdict: function () { return "<b>" + fmt(w) + " of " + fmt(PZ.total) + "</b>; " + (PZ.last ? esc(PZ.last[1]) + " (" + PZ.last[0] + ") is the " + ordinal(PZ.woman_number || w) + " woman." : "") + prelimTag(PZ.status); },
+      onReveal: function () { buildPrize(out); }
+    });
+  })();
+  function ordinal(n) { var s = ["th", "st", "nd", "rd"], v = n % 100; return n + (s[(v - 20) % 10] || s[v] || s[0]); }
+  function buildPrize(out) {
+    var holder = el("div", { cls: "prizeshelf", id: "prizeshelf" });
+    out.appendChild(el("p", { html: "One spine per laureate, shelved by decade. <b style=\"color:var(--accent)\">Inked red</b>: a woman, named on hover. <b>Pencil</b>: a man." }));
+    out.appendChild(holder);
+    var lastW = 0;
+    function draw() {
+      var W = Math.max(300, holder.clientWidth || 640);
+      if (Math.abs(W - lastW) < 2 && holder.firstChild) return; lastW = W;
+      holder.innerHTML = "";
+      var maxN = Math.max.apply(null, PZ.decades.map(function (d) { return d.n; }));
+      var lw = 54, gap = W < 520 ? 3 : 5, sw = Math.max(9, Math.min(22, Math.floor((W - lw - 64) / maxN) - gap)), rh = W < 520 ? 34 : 44, H = PZ.decades.length * rh + 8;
+      var endX = lw + maxN * (sw + gap) + 6;
+      var svg = sv("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "class": "ink", width: W, height: H });
+      svg.appendChild(sv("title", { text: "Literature laureates by decade, women in red" }));
+      svg.appendChild(sv("desc", { text: PZ.decades.map(function (d) { return d.decade + "s: " + d.n + " laureates, " + d.women + " women"; }).join("; ") }));
+      PZ.decades.forEach(function (d, i) {
+        var y = i * rh + rh - 6, slots = new Array(d.n), span = Math.max(1, (d.last || d.decade + 9) - (d.first || d.decade));
+        d.women_names.forEach(function (p) {   // place each woman by her year inside the decade
+          var j = Math.min(d.n - 1, Math.round(((p[0] || d.decade) - (d.first || d.decade)) / span * (d.n - 1)));
+          while (slots[j] && j < d.n - 1) j++;
+          while (slots[j] && j > 0) j--;
+          slots[j] = p;
+        });
+        svg.appendChild(sv("text", { x: 0, y: y - 4, "class": "t-num t-hand", style: "font-size:16px", text: d.decade + "s" }));
+        svg.appendChild(stroke(line(lw - 4, y + .5, endX, y + .5, 6, .8, i), "pencil", i * .05, .6));
+        for (var j = 0; j < d.n; j++) {
+          var p = slots[j], x = lw + j * (sw + gap), h = rh - 12 - ((d.decade / 10 + j * 7) % 5), isW = !!p;
+          var last = p && PZ.last && p[0] === PZ.last[0] && p[1] === PZ.last[1];
+          var g = sv("g", { "class": "spine" + (isW ? " woman" : "") });
+          g.appendChild(sv("title", { text: isW ? p[1] + " (" + p[0] + ")" : "a man, " + d.decade + "s" }));
+          if (isW) g.appendChild(sv("rect", { x: x + .5, y: y - h + .5, width: sw - 1, height: h - 1, fill: "var(--accent)", "class": "fadein", style: "--w:" + (.3 + i * .05 + j * .02).toFixed(2) + "s" }));
+          g.appendChild(stroke(jag([[x, y], [x, y - h], [x + sw, y - h], [x + sw, y]], .6, d.decade + j), isW ? "" : "pencil", i * .05 + j * .02, .4));
+          if (last) {
+            g.appendChild(stroke(loop(x + sw / 2, y - h / 2, sw * 1.2, h * .75, 2026, 1.15), "blue", 1.4, .7, { style: "stroke-width:1.8" }));
+            g.appendChild(sv("text", { x: x + sw + 10, y: y - h / 2 + 4, "class": "t-hand fadein", style: "fill:var(--blue);--w:1.9s;font-size:15px", text: String(p[0]) }));
+          }
+          svg.appendChild(g);
+        }
+        svg.appendChild(sv("text", { x: endX + 8, y: y - 4, "class": "t-num", style: "font-size:12px", text: d.women + " of " + d.n }));
+      });
+      holder.appendChild(svg);
+      watch(svg);
+    }
+    draw();
+    if ("ResizeObserver" in window) new ResizeObserver(function () { draw(); }).observe(holder);
+    var mid = (PZ.women_list || []).filter(function (p) { return p[0] >= 1950 && p[0] <= 1989; });
+    var lastD = PZ.decades[PZ.decades.length - 1];
+    var facts = [];
+    facts.push("From 1950 to 1989 the prize went to " + (mid.length === 1 ? "one woman, " + esc(mid[0][1]) + " (" + mid[0][0] + ")" : fmt(mid.length) + " women") + ".");
+    if (lastD) facts.push("In the " + lastD.decade + "s so far: " + lastD.women + " women of " + lastD.n + " laureates.");
+    if (PZ.years_no_award && PZ.years_no_award.length) facts.push("No prize in " + PZ.years_no_award.join(", ") + "; " + fmt(PZ.prizes) + " prizes in all, " + fmt(PZ.shared_years.length) + " of them shared (" + PZ.shared_years.join(", ") + ").");
+    out.appendChild(el("p", { html: facts.join(" ") }));
+    if (PZ.canada && PZ.canada.line) out.appendChild(el("p", { html: esc(PZ.canada.line) + " " + PZ.canada.press.map(function (x) { return '<a class="small" href="' + esc(x.url) + '">' + x.year + " press release</a>"; }).join(", ") }));
+    out.appendChild(el("p", { cls: "src", html: 'Counted from the <a href="' + esc(PZ.source || D.api_url) + '">Nobel Prize API</a> (CC0, fetched ' + esc(PZ.fetched || "") + "); " + esc(PZ.gender_field || "gender as the API records it") + '. Cross-check: <a href="' + esc(D.women_url) + '">Nobel Prize-awarded women</a>.' + prelimTag(PZ.status) }));
+    out.appendChild(caveat("<b>Description, not explanation.</b> These are counts from the prize's own records; they say nothing about why the numbers changed." + (PZ.canada && PZ.canada.caveat ? " " + esc(PZ.canada.caveat) : "")));
+  }
+
+  // ---------- footer: sources and licences --------------------------------------------------------------------------------------------------
+  (function footer() {
+    var ul = $("#sources"), seen = {};
+    function add(name, url, note) {
+      if (!name && !url) return;
+      var key = (url || name); if (seen[key]) return; seen[key] = 1;
+      ul.appendChild(el("li", { html: (url ? '<a href="' + esc(url) + '">' + esc(name || url) + "</a>" : esc(name)) + (note ? " &mdash; " + esc(note) : "") }));
+    }
+    add("Nobel Prize in Literature 2026, press release", "https://www.nobelprize.org/prizes/literature/2026/press-release/", "the citation");
+    add("Nobel Committee for Literature, bio-bibliography (Anders Olsson)", D.committee && D.committee.url, "her books, their forms, Float, the compound adjective");
+    add("Facts: Anne Carson", "https://www.nobelprize.org/prizes/literature/2026/carson/facts/", "born 1950, Toronto");
+    if (D.prize) add("Nobel Prize API v2.1 (CC0)", D.prize.source, "laureates since 1901");
+    add("Nobel Prize-awarded women", D.women_url, "cross-check of the count of women");
+    if (D.fragments) (D.fragments.sources || []).forEach(function (s) { add(s.name, s.url, s.licence); });
+    if (D.translators) {
+      if (D.translators.book) add(D.translators.book.title + ", " + D.translators.book.edition, D.translators.book.url, D.translators.book.gutenberg);
+      D.translators.versions.forEach(function (v) { if (v.extra_source) add(v.extra_edition, v.extra_source, "Catullus 51, lines 13–16"); });
+      add(D.translators.gloss_source.lexicon, "https://github.com/PerseusDL/lexica/", "word glosses, " + (D.translators.gloss_source.licence || ""));
+    }
+    if (D.ledger) {
+      var all = [];
+      D.ledger.rows.concat([D.ledger.sappho]).forEach(function (r) { ["survive", "ancient", "modern", "lines_est", "lines_surv", "book1"].forEach(function (k) { if (r && r[k]) all = all.concat(r[k].sources || []); }); });
+      all.forEach(function (s) { add(s.name, s.url); });
+    }
+    var lic = $("#licences");
+    lic.appendChild(el("li", { html: "Greek, Latin and English texts: public domain (Wharton 1908 and the translators he prints; Grenfell and Hunt 1914; Rhys Roberts 1899; Merrill's Catullus 1893)." }));
+    if (D.translators && D.translators.gloss_source && D.translators.gloss_source.credit) lic.appendChild(el("li", { html: "Word glosses from LSJ: " + esc(D.translators.gloss_source.credit) + " The glosses stay CC BY-SA 4.0." }));
+    if (D.fragments && D.fragments.concordance) lic.appendChild(el("li", { html: 'Voigt fragment numbers (numbers only): <a href="' + esc(D.fragments.concordance) + '">The Digital Sappho</a>, CC BY-SA 4.0.' }));
+    lic.appendChild(el("li", { html: "Nobel Prize API data: CC0. The Committee's words are quoted with attribution; no Nobel logo, medal or portrait is used." }));
+    lic.appendChild(el("li", { html: 'Fonts, self-hosted subsets under the SIL Open Font License 1.1: Literata, GFS Didot, Caveat (<a href="fonts/OFL.txt">licence and credits</a>).' }));
+    lic.appendChild(el("li", { html: "Code and drawings: MIT licence, like the rest of the repository." }));
+    $("#more").innerHTML = 'The experiments behind each part, with their data, figures and tests: <a href="' + esc(D.github) + 'survival-ledger/">survival ledger</a>, <a href="' + esc(D.github) + 'fragments/">fragments</a>, <a href="' + esc(D.github) + 'translators/">translators</a>, <a href="' + esc(D.github) + 'forms/">forms</a>. The film: <a href="../video/exports/nobel-2026-literature.mp4">the video (2:29)</a>, with its <a href="' + esc(D.github) + 'video/">claims, captions and credits</a>. ' +
+      "Educational demos made to show an open-source tool. Not research.";
+  })();
+
+  // ---------- share image mode -------------------------------------------------------------------------------------------------------------
+  if (location.hash === "#og") {
+    document.documentElement.classList.add("og");
+    var S0 = (D.ledger || {}).sappho || {}, G0 = S0.grid || {};
+    $("#og-cap").textContent = G0.inked ? "about " + fmt(G0.inked) + " of an estimated " + rangeText(S0.lines_est, { bare: true }) + " lines of Sappho survive" : "";
+    if (D.ledger) sapphoGrid($("#og-grid"), { size: 500 });
+  }
+})();
+</script>
+</body>
+</html>

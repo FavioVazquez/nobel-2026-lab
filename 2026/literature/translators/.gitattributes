@@ -1,0 +1,2 @@
+data/sources/* -text
+data/sources/**/* -text

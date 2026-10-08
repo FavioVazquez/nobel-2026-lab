@@ -1,0 +1,996 @@
+{
+ "about": "Every (version, Greek word) where the two passes disagreed, the decision and the rule it rests on. Rules: README 'How we aligned'.",
+ "decisions_compared": "6 versions x 71 Greek words = 426 (Catullus lines 13-16 have no aligned Greek words in either pass)",
+ "disagreements": 56,
+ "agreement_share": 0.869,
+ "decisions": {
+  "pass1": 36,
+  "pass2": 17,
+  "new": 3
+ },
+ "log": [
+  {
+   "version": "catullus",
+   "greek": "greek:3:2",
+   "greek_word": "καὶ",
+   "pass1": null,
+   "pass2": {
+    "words": "et",
+    "strength": "close"
+   },
+   "decision": "new",
+   "reason": "R6: 'et' joins two verbs as καί does, but a different pair (spectat et audit vs sits and listens): same job, shifted -> loose",
+   "final": {
+    "words": "et",
+    "strength": "loose"
+   }
+  },
+  {
+   "version": "catullus",
+   "greek": "greek:3:4",
+   "greek_word": "ἆδυ",
+   "pass1": {
+    "words": "Dulce",
+    "strength": "close"
+   },
+   "pass2": null,
+   "decision": "pass1",
+   "reason": "R4b: when a version word matches one Greek word's sense and another's slot, it goes with the sense: dulce = ἆδυ 'sweetly', moved to the laughing",
+   "final": {
+    "words": "Dulce",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "catullus",
+   "greek": "greek:5:3",
+   "greek_word": "ἰμερόεν",
+   "pass1": null,
+   "pass2": {
+    "words": "Dulce",
+    "strength": "loose"
+   },
+   "decision": "pass1",
+   "reason": "R4b: when a version word matches one Greek word's sense and another's slot, it goes with the sense: 'Dulce' goes with ἆδυ, so ἰμερόεν has no counterpart",
+   "final": null
+  },
+  {
+   "version": "catullus",
+   "greek": "greek:6:1",
+   "greek_word": "καρδίαν",
+   "pass1": {
+    "words": "sensus",
+    "strength": "loose"
+   },
+   "pass2": null,
+   "decision": "pass1",
+   "reason": "LSJ καρδία includes the heart as seat of feelings and mind; 'sensus' keeps part of that -> loose link kept",
+   "final": {
+    "words": "sensus",
+    "strength": "loose"
+   }
+  },
+  {
+   "version": "catullus",
+   "greek": "greek:6:4",
+   "greek_word": "ἐπτόασεν",
+   "pass1": {
+    "words": "Eripit",
+    "strength": "loose"
+   },
+   "pass2": null,
+   "decision": "pass2",
+   "reason": "R5: no link without a shared part of the Greek word's own meaning: eripit 'snatches away' shares no part of πτοέω 'terrify, flutter'",
+   "final": null
+  },
+  {
+   "version": "catullus",
+   "greek": "greek:8:3",
+   "greek_word": "εἴκει",
+   "pass1": {
+    "words": "est",
+    "strength": "loose"
+   },
+   "pass2": null,
+   "decision": "pass1",
+   "reason": "LSJ cites this line under εἴκω 'it is allowable or possible'; 'est (super)' keeps the existential sense -> loose",
+   "final": {
+    "words": "est",
+    "strength": "loose"
+   }
+  },
+  {
+   "version": "catullus",
+   "greek": "greek:11:5",
+   "greek_word": "ἐπιρρόμβεισι",
+   "pass1": {
+    "words": "Tintinant",
+    "strength": "loose"
+   },
+   "pass2": {
+    "words": "sonitu Tintinant",
+    "strength": "loose"
+   },
+   "decision": "pass2",
+   "reason": "'sonitu' (with sound) shares the noise in 'make a buzzing noise' -> included, as in Symonds",
+   "final": {
+    "words": "sonitu Tintinant",
+    "strength": "loose"
+   }
+  },
+  {
+   "version": "catullus",
+   "greek": "greek:12:2",
+   "greek_word": "ἄκουαι",
+   "pass1": {
+    "words": "aures",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "aures",
+    "strength": "loose"
+   },
+   "decision": "pass1",
+   "reason": "LSJ cites this very line under ἀκοή 'ear' -> close",
+   "final": {
+    "words": "aures",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:2:4",
+   "greek_word": "ἐναντίος",
+   "pass1": null,
+   "pass2": {
+    "words": "look on",
+    "strength": "loose"
+   },
+   "decision": "pass2",
+   "reason": "R4 loose: 'look on thee' stands in the slot of 'sits facing you' and keeps the facing; no other Greek word claims it",
+   "final": {
+    "words": "look on",
+    "strength": "loose"
+   }
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:3:5",
+   "greek_word": "φωνεύσας",
+   "pass1": {
+    "words": "thy tongue's melody",
+    "strength": "loose"
+   },
+   "pass2": {
+    "words": "tongue's melody",
+    "strength": "loose"
+   },
+   "decision": "pass1",
+   "reason": "R3b: a word that spells out a person or thing the Greek leaves implied goes with the Greek word that implies it ('thy' = the you who speaks)",
+   "final": {
+    "words": "thy tongue's melody",
+    "strength": "loose"
+   }
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:5:2",
+   "greek_word": "γελαίσας",
+   "pass1": {
+    "words": "Thou smilest",
+    "strength": "loose"
+   },
+   "pass2": {
+    "words": "Thou smilest smile",
+    "strength": "loose"
+   },
+   "decision": "pass2",
+   "reason": "the repeated noun 'smile' restates the laughing verb; both passes agree it is not an addition of new content",
+   "final": {
+    "words": "Thou smilest smile",
+    "strength": "loose"
+   }
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:5:3",
+   "greek_word": "ἰμερόεν",
+   "pass1": {
+    "words": "charm",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "sweet charm",
+    "strength": "close"
+   },
+   "decision": "pass2",
+   "reason": "'sweet' sits in the slot of the adverb 'lovely', 'charm' carries its sense (LSJ 'charming')",
+   "final": {
+    "words": "sweet charm",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:5:4",
+   "greek_word": "τό",
+   "pass1": {
+    "words": "whose",
+    "strength": "loose"
+   },
+   "pass2": {
+    "words": "whose",
+    "strength": "close"
+   },
+   "decision": "pass1",
+   "reason": "τό 'that' -> relative 'whose': function shifted -> loose",
+   "final": {
+    "words": "whose",
+    "strength": "loose"
+   }
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:6:4",
+   "greek_word": "ἐπτόασεν",
+   "pass1": {
+    "words": "Has struck with alarm",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "Has struck alarm",
+    "strength": "loose"
+   },
+   "decision": "pass1",
+   "reason": "R3: 'with' marks the means; LSJ πτοέω 'terrify, scare' = 'struck with alarm' -> close",
+   "final": {
+    "words": "Has struck with alarm",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:7:6",
+   "greek_word": "φώνας",
+   "pass1": {
+    "words": "Speechless",
+    "strength": "loose"
+   },
+   "pass2": {
+    "words": "Speechless",
+    "strength": "close"
+   },
+   "decision": "pass2",
+   "reason": "'Speechless' keeps voice/speech plus the negation -> close for φώνας (οὐδέν stays loose, both passes)",
+   "final": {
+    "words": "Speechless",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:11:3",
+   "greek_word": "οὐδὲν",
+   "pass1": {
+    "words": "fail",
+    "strength": "loose"
+   },
+   "pass2": null,
+   "decision": "pass1",
+   "reason": "'fail' carries the negation of 'I see nothing' (moved to the last line) -> loose",
+   "final": {
+    "words": "fail",
+    "strength": "loose"
+   }
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:13:3",
+   "greek_word": "μίδρως",
+   "pass1": {
+    "words": "cold drops",
+    "strength": "loose"
+   },
+   "pass2": {
+    "words": "drops",
+    "strength": "loose"
+   },
+   "decision": "pass2",
+   "reason": "R3c: an added epithet (cold, immortal, wild) stays unlinked: 'cold'",
+   "final": {
+    "words": "drops",
+    "strength": "loose"
+   }
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:14:1",
+   "greek_word": "παῖσαν",
+   "pass1": {
+    "words": "every limb",
+    "strength": "loose"
+   },
+   "pass2": {
+    "words": "every",
+    "strength": "close"
+   },
+   "decision": "new",
+   "reason": "R3b: a word that spells out a person or thing the Greek leaves implied goes with the Greek word that implies it ('limb' spells out the implied 'me'); 'every' = 'all' -> close",
+   "final": {
+    "words": "every limb",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:15:2",
+   "greek_word": "τεθνάκην",
+   "pass1": null,
+   "pass2": {
+    "words": "fail",
+    "strength": "loose"
+   },
+   "decision": "pass1",
+   "reason": "R5: no link without a shared part of the Greek word's own meaning: 'fail' shares no part of 'be dead'",
+   "final": null
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:15:3",
+   "greek_word": "δ'",
+   "pass1": {
+    "words": "and",
+    "strength": "loose"
+   },
+   "pass2": {
+    "words": "and",
+    "strength": "close"
+   },
+   "decision": "pass2",
+   "reason": "R6: 'and' opens the last clause as δέ does -> close (as for Philips)",
+   "final": {
+    "words": "and",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "philips",
+   "greek": "greek:2:4",
+   "greek_word": "ἐναντίος",
+   "pass1": null,
+   "pass2": {
+    "words": "by",
+    "strength": "loose"
+   },
+   "decision": "pass1",
+   "reason": "R4b: when a version word matches one Greek word's sense and another's slot, it goes with the sense: 'by' = near, the sense of πλησίον; ἐναντίος has no counterpart",
+   "final": null
+  },
+  {
+   "version": "philips",
+   "greek": "greek:3:3",
+   "greek_word": "πλασίον",
+   "pass1": {
+    "words": "by",
+    "strength": "close"
+   },
+   "pass2": null,
+   "decision": "pass1",
+   "reason": "R4b: when a version word matches one Greek word's sense and another's slot, it goes with the sense",
+   "final": {
+    "words": "by",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "philips",
+   "greek": "greek:3:5",
+   "greek_word": "φωνεύσας",
+   "pass1": {
+    "words": "thee speak",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "speak",
+    "strength": "close"
+   },
+   "decision": "pass1",
+   "reason": "R3b: a word that spells out a person or thing the Greek leaves implied goes with the Greek word that implies it ('thee' = the you who speaks)",
+   "final": {
+    "words": "thee speak",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "philips",
+   "greek": "greek:5:5",
+   "greek_word": "μοι",
+   "pass1": {
+    "words": "my",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "my my",
+    "strength": "close"
+   },
+   "decision": "pass1",
+   "reason": "R3: one Greek pronoun, one English pronoun: μοι -> the 'my' of 'my soul'; the 'my' of 'my breast' is added",
+   "final": {
+    "words": "my",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "philips",
+   "greek": "greek:7:1",
+   "greek_word": "ὡς",
+   "pass1": {
+    "words": "while",
+    "strength": "loose"
+   },
+   "pass2": {
+    "words": "while",
+    "strength": "close"
+   },
+   "decision": "pass2",
+   "reason": "'while' and 'when' are both temporal conjunctions -> close",
+   "final": {
+    "words": "while",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "philips",
+   "greek": "greek:7:3",
+   "greek_word": "εὔιδον",
+   "pass1": {
+    "words": "I gazed",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "I gazed",
+    "strength": "loose"
+   },
+   "decision": "pass1",
+   "reason": "'gaze' keeps 'see' (LSJ εἴδω 'see, perceive, behold') -> close",
+   "final": {
+    "words": "I gazed",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "philips",
+   "greek": "greek:8:1",
+   "greek_word": "οὐδὲν",
+   "pass1": {
+    "words": "lost",
+    "strength": "loose"
+   },
+   "pass2": null,
+   "decision": "pass1",
+   "reason": "R2b: one version word may serve two Greek words when it fuses them (negation + verb): 'was lost' fuses 'nothing' and 'comes'",
+   "final": {
+    "words": "lost",
+    "strength": "loose"
+   }
+  },
+  {
+   "version": "philips",
+   "greek": "greek:8:3",
+   "greek_word": "εἴκει",
+   "pass1": null,
+   "pass2": {
+    "words": "was lost",
+    "strength": "loose"
+   },
+   "decision": "new",
+   "reason": "R2b: one version word may serve two Greek words when it fuses them (negation + verb)",
+   "final": {
+    "words": "was lost",
+    "strength": "loose"
+   }
+  },
+  {
+   "version": "philips",
+   "greek": "greek:10:2",
+   "greek_word": "χρῷ",
+   "pass1": {
+    "words": "frame",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "frame",
+    "strength": "loose"
+   },
+   "decision": "pass1",
+   "reason": "LSJ χρώς includes 'one's body, frame' -> close",
+   "final": {
+    "words": "frame",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "philips",
+   "greek": "greek:12:2",
+   "greek_word": "ἄκουαι",
+   "pass1": {
+    "words": "ears",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "ears",
+    "strength": "loose"
+   },
+   "decision": "pass1",
+   "reason": "LSJ cites this very line under ἀκοή 'ear' -> close",
+   "final": {
+    "words": "ears",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "philips",
+   "greek": "greek:13:5",
+   "greek_word": "τρόμος",
+   "pass1": {
+    "words": "horror",
+    "strength": "loose"
+   },
+   "pass2": {
+    "words": "horror thrilled",
+    "strength": "loose"
+   },
+   "decision": "pass2",
+   "reason": "'thrilled' (shivered) shares the trembling -> included, loose",
+   "final": {
+    "words": "horror thrilled",
+    "strength": "loose"
+   }
+  },
+  {
+   "version": "philips",
+   "greek": "greek:15:3",
+   "greek_word": "δ'",
+   "pass1": null,
+   "pass2": {
+    "words": "and",
+    "strength": "close"
+   },
+   "decision": "pass2",
+   "reason": "R6: 'and' opens the death clause as δέ does -> close",
+   "final": {
+    "words": "and",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "smollett",
+   "greek": "greek:6:3",
+   "greek_word": "στήθεσιν",
+   "pass1": {
+    "words": "bosom",
+    "strength": "close"
+   },
+   "pass2": null,
+   "decision": "pass1",
+   "reason": "'bosom' = breast (LSJ στῆθος 'breast'); a word-level match, wherever it sits",
+   "final": {
+    "words": "bosom",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "smollett",
+   "greek": "greek:7:1",
+   "greek_word": "ὡς",
+   "pass1": {
+    "words": "while",
+    "strength": "loose"
+   },
+   "pass2": {
+    "words": "while",
+    "strength": "close"
+   },
+   "decision": "pass2",
+   "reason": "'while' and 'when' are both temporal conjunctions -> close",
+   "final": {
+    "words": "while",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "smollett",
+   "greek": "greek:7:3",
+   "greek_word": "εὔιδον",
+   "pass1": {
+    "words": "I gaze",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "I gaze",
+    "strength": "loose"
+   },
+   "decision": "pass1",
+   "reason": "'gaze' keeps 'see' -> close",
+   "final": {
+    "words": "I gaze",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "smollett",
+   "greek": "greek:9:6",
+   "greek_word": "λέπτον",
+   "pass1": {
+    "words": "soft",
+    "strength": "loose"
+   },
+   "pass2": null,
+   "decision": "pass1",
+   "reason": "'soft' is the adjective on the flame in the slot of λεπτόν and shares 'delicate' (LSJ 'thin, fine, delicate') -> loose",
+   "final": {
+    "words": "soft",
+    "strength": "loose"
+   }
+  },
+  {
+   "version": "smollett",
+   "greek": "greek:10:2",
+   "greek_word": "χρῷ",
+   "pass1": {
+    "words": "frame",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "frame",
+    "strength": "loose"
+   },
+   "decision": "pass1",
+   "reason": "LSJ χρώς includes 'one's body, frame' -> close",
+   "final": {
+    "words": "frame",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "symonds",
+   "greek": "greek:3:3",
+   "greek_word": "πλασίον",
+   "pass1": {
+    "words": "Close beside thee",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "Close beside",
+    "strength": "close"
+   },
+   "decision": "pass1",
+   "reason": "R3b: a word that spells out a person or thing the Greek leaves implied goes with the Greek word that implies it ('thee' after 'beside')",
+   "final": {
+    "words": "Close beside thee",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "symonds",
+   "greek": "greek:3:5",
+   "greek_word": "φωνεύσας",
+   "pass1": {
+    "words": "thee speaking",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "speaking",
+    "strength": "close"
+   },
+   "decision": "pass1",
+   "reason": "R3b: a word that spells out a person or thing the Greek leaves implied goes with the Greek word that implies it",
+   "final": {
+    "words": "thee speaking",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "symonds",
+   "greek": "greek:5:2",
+   "greek_word": "γελαίσας",
+   "pass1": {
+    "words": "Laughing",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "Laughing laughter",
+    "strength": "close"
+   },
+   "decision": "pass2",
+   "reason": "the cognate noun 'laughter' restates the laughing verb",
+   "final": {
+    "words": "Laughing laughter",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "symonds",
+   "greek": "greek:8:1",
+   "greek_word": "οὐδὲν",
+   "pass1": {
+    "words": "hushed",
+    "strength": "loose"
+   },
+   "pass2": null,
+   "decision": "pass1",
+   "reason": "R2b: one version word may serve two Greek words when it fuses them (negation + verb): 'hushed' carries the negation",
+   "final": {
+    "words": "hushed",
+    "strength": "loose"
+   }
+  },
+  {
+   "version": "symonds",
+   "greek": "greek:8:3",
+   "greek_word": "εἴκει",
+   "pass1": null,
+   "pass2": {
+    "words": "is hushed",
+    "strength": "loose"
+   },
+   "decision": "pass2",
+   "reason": "R2b: one version word may serve two Greek words when it fuses them (negation + verb): 'is hushed' fuses 'nothing' and 'comes'",
+   "final": {
+    "words": "is hushed",
+    "strength": "loose"
+   }
+  },
+  {
+   "version": "symonds",
+   "greek": "greek:9:1",
+   "greek_word": "ἀλλὰ",
+   "pass1": null,
+   "pass2": {
+    "words": "Yea",
+    "strength": "loose"
+   },
+   "decision": "pass1",
+   "reason": "R6: 'Yea' intensifies; it does not oppose as ἀλλά 'but' does",
+   "final": null
+  },
+  {
+   "version": "symonds",
+   "greek": "greek:10:2",
+   "greek_word": "χρῷ",
+   "pass1": {
+    "words": "the flesh",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "the flesh",
+    "strength": "loose"
+   },
+   "decision": "pass1",
+   "reason": "LSJ χρώς 'flesh' -> close",
+   "final": {
+    "words": "the flesh",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "symonds",
+   "greek": "greek:11:5",
+   "greek_word": "ἐπιρρόμβεισι",
+   "pass1": {
+    "words": "noise sounds",
+    "strength": "loose"
+   },
+   "pass2": {
+    "words": "noise roaring sounds",
+    "strength": "loose"
+   },
+   "decision": "pass2",
+   "reason": "'roaring' shares the noise -> included",
+   "final": {
+    "words": "noise roaring sounds",
+    "strength": "loose"
+   }
+  },
+  {
+   "version": "symonds",
+   "greek": "greek:12:2",
+   "greek_word": "ἄκουαι",
+   "pass1": {
+    "words": "ear",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "ear",
+    "strength": "loose"
+   },
+   "decision": "pass1",
+   "reason": "LSJ cites this very line under ἀκοή 'ear' -> close",
+   "final": {
+    "words": "ear",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "symonds",
+   "greek": "greek:14:1",
+   "greek_word": "παῖσαν",
+   "pass1": {
+    "words": "All limbs",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "All",
+    "strength": "close"
+   },
+   "decision": "pass1",
+   "reason": "R3b: a word that spells out a person or thing the Greek leaves implied goes with the Greek word that implies it ('limbs' spells out the implied 'me')",
+   "final": {
+    "words": "All limbs",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "wharton",
+   "greek": "greek:2:4",
+   "greek_word": "ἐναντίος",
+   "pass1": {
+    "words": "in presence",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "in presence",
+    "strength": "loose"
+   },
+   "decision": "pass1",
+   "reason": "LSJ ἐναντίος includes 'before'; 'in thy presence' = before you -> close",
+   "final": {
+    "words": "in presence",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "wharton",
+   "greek": "greek:3:3",
+   "greek_word": "πλασίον",
+   "pass1": {
+    "words": "close",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "close to him",
+    "strength": "close"
+   },
+   "decision": "pass2",
+   "reason": "R3b: a word that spells out a person or thing the Greek leaves implied goes with the Greek word that implies it ('to him')",
+   "final": {
+    "words": "close to him",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "wharton",
+   "greek": "greek:3:5",
+   "greek_word": "φωνεύσας",
+   "pass1": {
+    "words": "thy speech",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "speech",
+    "strength": "close"
+   },
+   "decision": "pass1",
+   "reason": "R3b: a word that spells out a person or thing the Greek leaves implied goes with the Greek word that implies it ('thy')",
+   "final": {
+    "words": "thy speech",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "wharton",
+   "greek": "greek:8:3",
+   "greek_word": "εἴκει",
+   "pass1": {
+    "words": "I have",
+    "strength": "loose"
+   },
+   "pass2": null,
+   "decision": "pass1",
+   "reason": "LSJ cites this line under εἴκω 'it is allowable or possible'; 'I have ... left' keeps 'there is (no voice) any more' -> loose",
+   "final": {
+    "words": "I have",
+    "strength": "loose"
+   }
+  },
+  {
+   "version": "wharton",
+   "greek": "greek:11:4",
+   "greek_word": "ὄρημ'",
+   "pass1": {
+    "words": "I have sight",
+    "strength": "loose"
+   },
+   "pass2": {
+    "words": "I have sight",
+    "strength": "close"
+   },
+   "decision": "pass2",
+   "reason": "'have sight' = see, with a change of part of speech -> close",
+   "final": {
+    "words": "I have sight",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "wharton",
+   "greek": "greek:12:2",
+   "greek_word": "ἄκουαι",
+   "pass1": {
+    "words": "ears",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "ears",
+    "strength": "loose"
+   },
+   "decision": "pass1",
+   "reason": "LSJ cites this very line under ἀκοή 'ear' -> close",
+   "final": {
+    "words": "ears",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "wharton",
+   "greek": "greek:14:1",
+   "greek_word": "παῖσαν",
+   "pass1": {
+    "words": "body all my",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "all",
+    "strength": "close"
+   },
+   "decision": "pass1",
+   "reason": "R3b: a word that spells out a person or thing the Greek leaves implied goes with the Greek word that implies it ('my body')",
+   "final": {
+    "words": "all my body",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "wharton",
+   "greek": "greek:15:2",
+   "greek_word": "τεθνάκην",
+   "pass1": {
+    "words": "one dead",
+    "strength": "close"
+   },
+   "pass2": {
+    "words": "dead",
+    "strength": "close"
+   },
+   "decision": "pass1",
+   "reason": "R3b: a word that spells out a person or thing the Greek leaves implied goes with the Greek word that implies it ('one')",
+   "final": {
+    "words": "one dead",
+    "strength": "close"
+   }
+  },
+  {
+   "version": "wharton",
+   "greek": "greek:16:2",
+   "greek_word": "ἄλλα",
+   "pass1": null,
+   "pass2": {
+    "words": "in madness",
+    "strength": "loose"
+   },
+   "decision": "pass1",
+   "reason": "R5: no link without a shared part of the Greek word's own meaning: 'in my madness' shares nothing with ἄλλος 'another'; open doubt: Wharton may be translating a different reading of this bracketed word",
+   "final": null
+  }
+ ]
+}

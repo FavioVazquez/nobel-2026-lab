@@ -1,0 +1,6557 @@
+{
+ "status": "final (before independent review)",
+ "label": "Educational demos made to show an open-source tool. Not research.",
+ "sources": {
+  "papyrus": {
+   "cite": "B. P. Grenfell and A. S. Hunt, The Oxyrhynchus Papyri, Part X (1914)",
+   "url": "https://archive.org/details/oxyrhynchuspapyr10gren",
+   "licence": "public domain"
+  },
+  "wharton": {
+   "cite": "H. T. Wharton, Sappho: Memoir, Text, Selected Renderings and a Literal Translation, 5th ed. (London: John Lane, 1908), Project Gutenberg eBook #57390",
+   "url": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html",
+   "licence": "public domain",
+   "local_copy": "sources/pg57390-images.html",
+   "sha256": "bf616822d86ef89b75aa0ee68698568a81a9f3620edf642af73daaa4545cb247"
+  },
+  "roberts": {
+   "cite": "W. Rhys Roberts, Longinus On the Sublime: the Greek text edited after the Paris manuscript (Cambridge University Press, 1899)",
+   "url": "https://archive.org/details/longinusonsubli00waygoog",
+   "licence": "public domain"
+  },
+  "concordance": {
+   "file": "sources/concordance_wharton_voigt.csv",
+   "numbers_from": "https://digitalsappho.org/fragments/",
+   "counts": {
+    "hand": 36,
+    "auto": 71,
+    "gap": 45,
+    "probable": 18
+   }
+  }
+ },
+ "papyrus": {
+  "title": "P.Oxy. 1231 fr. 1 col. i 13-34 = Sappho fr. 16 Voigt (= Wharton 13, in part)",
+  "printed_by": "B. P. Grenfell and A. S. Hunt, The Oxyrhynchus Papyri, Part X (London, 1914), pp. 23, 25",
+  "source_url": "https://archive.org/details/oxyrhynchuspapyr10gren",
+  "transcription": "typed by hand from the page images, second pass character by character (2026-10-08)",
+  "lines": [
+   {
+    "line": 13,
+    "text": "[Ο]ἰ μὲν ἰππήων στρότον οἰ δὲ πέσδων",
+    "spans": [
+     {
+      "text": "[Ο]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "ἰ μὲν ἰππήων στρότον οἰ δὲ πέσδων",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 13,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 14,
+    "text": "οἰ δὲ νάων φαῖσ’ ἐπ[ὶ] γᾶν μέλαι[ν]αν",
+    "spans": [
+     {
+      "text": "οἰ δὲ νάων φαῖσ’ ἐπ",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "[ὶ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": " γᾶν μέλαι",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "[ν]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "αν",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 14,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 15,
+    "text": "[ἔ]μμεναι κάλλιστον, ἔγω δὲ κῆν’ ὄτ-",
+    "spans": [
+     {
+      "text": "[ἔ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "μμεναι κάλλιστον, ἔγω δὲ κῆν’ ὄτ-",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 15,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 16,
+    "text": "τω τις ἔραται.",
+    "spans": [
+     {
+      "text": "τω τις ἔραται.",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 16,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 17,
+    "text": "[πά]γχυ δ’ εὔμαρες σύνετον πόησαι",
+    "spans": [
+     {
+      "text": "[πά]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "γχυ δ’ εὔμαρες σύνετον πόησαι",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 17,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 18,
+    "text": "[π]άντι τ[ο]ῦτ’· ἀ γὰρ πόλυ περσκόπει[σ]α",
+    "spans": [
+     {
+      "text": "[π]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "άντι τ",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "[ο]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "ῦτ’· ἀ γὰρ πόλυ περσκόπει",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "[σ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "α",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 18,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 19,
+    "text": "[κάλ]λος [ἀνθ]ρώπων Ἐλένα [τὸ]ν ἄνδρα",
+    "spans": [
+     {
+      "text": "[κάλ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "λος ",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "[ἀνθ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "ρώπων Ἐλένα ",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "[τὸ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "ν ἄνδρα",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 19,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 20,
+    "text": "[κρίννεν ἄρ]ιστον,",
+    "spans": [
+     {
+      "text": "[κρίννεν ἄρ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "ιστον,",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 20,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 21,
+    "text": "[ὂς τὸ πᾶν] σέβας Τροΐα[ς ὄ]λεσσ[εν,",
+    "spans": [
+     {
+      "text": "[ὂς τὸ πᾶν]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": " σέβας Τροΐα",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "[ς ὄ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "λεσσ",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "[εν,",
+      "kind": "restored",
+      "mark": "[ (open to line end)"
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 21,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 22,
+    "text": "[οὐδὲ π]αῖδος οὐδὲ φ[ί]λων το[κ]ήων",
+    "spans": [
+     {
+      "text": "[οὐδὲ π]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "αῖδος οὐδὲ φ",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "[ί]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "λων το",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "[κ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "ήων",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 22,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 23,
+    "text": "[οὐδὲν] ἐμνάσθη, ἀ[λλὰ] παράγαγ’ αὔταν",
+    "spans": [
+     {
+      "text": "[οὐδὲν]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": " ἐμνάσθη, ἀ",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "[λλὰ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": " παράγαγ’ αὔταν",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 23,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 24,
+    "text": "[Κύπρις ἔραι]σαν.",
+    "spans": [
+     {
+      "text": "[Κύπρις ἔραι]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "σαν.",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 24,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 25,
+    "text": "[. . . . εὔκ]αμπτον γὰρ [",
+    "spans": [
+     {
+      "text": "[. . . . ",
+      "kind": "lost",
+      "mark": "[]"
+     },
+     {
+      "text": "εὔκ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "αμπτον γὰρ ",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "[",
+      "kind": "lost",
+      "mark": "[ (open to line end)"
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 25,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 26,
+    "text": "[. . . .] . . . κούφως τ[. . . . . . ν]οήσῃ.",
+    "spans": [
+     {
+      "text": "[. . . .]",
+      "kind": "lost",
+      "mark": "[]"
+     },
+     {
+      "text": " ",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": ". . . ",
+      "kind": "lost",
+      "mark": "dots (traces, unread)"
+     },
+     {
+      "text": "κούφως τ",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "[. . . . . . ",
+      "kind": "lost",
+      "mark": "[]"
+     },
+     {
+      "text": "ν]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "οήσῃ.",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 26,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 27,
+    "text": "[τῆ]λε νῦν Ἀνακτορί[ας ὀ]νεμνά-",
+    "spans": [
+     {
+      "text": "[τῆ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "λε νῦν Ἀνακτορί",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "[ας ὀ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "νεμνά-",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 27,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 28,
+    "text": "[σθ]η⟨ν⟩ ἀπεοίσας,",
+    "spans": [
+     {
+      "text": "[σθ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "η",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "⟨ν⟩",
+      "kind": "restored",
+      "mark": "⟨⟩"
+     },
+     {
+      "text": " ἀπεοίσας,",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 28,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 29,
+    "text": "[τᾶ]ς ⟨κ⟩ε βολλοίμαν ἔρατόν τε βᾶμα",
+    "spans": [
+     {
+      "text": "[τᾶ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "ς ",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "⟨κ⟩",
+      "kind": "restored",
+      "mark": "⟨⟩"
+     },
+     {
+      "text": "ε βολλοίμαν ἔρατόν τε βᾶμα",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 29,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 30,
+    "text": "κἀμάρυ⟨γ⟩μα λάμπρον ἴδην προσώπω",
+    "spans": [
+     {
+      "text": "κἀμάρυ",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "⟨γ⟩",
+      "kind": "restored",
+      "mark": "⟨⟩"
+     },
+     {
+      "text": "μα λάμπρον ἴδην προσώπω",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 23,
+     "line": 30,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0047.jp2"
+    }
+   },
+   {
+    "line": 31,
+    "text": "ἢ τὰ Λύδων ἄρματα κἀν ὄπλοισι⟨ν⟩",
+    "spans": [
+     {
+      "text": "ἢ τὰ Λύδων ἄρματα κἀν ὄπλοισι",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "⟨ν⟩",
+      "kind": "restored",
+      "mark": "⟨⟩"
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 25,
+     "line": 31,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0049.jp2"
+    }
+   },
+   {
+    "line": 32,
+    "text": "[ἰππομ]άχεντας.",
+    "spans": [
+     {
+      "text": "[ἰππομ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "άχεντας.",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 25,
+     "line": 32,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0049.jp2"
+    }
+   },
+   {
+    "line": 33,
+    "text": "[εὖ μὲν ἴδ]μεν οὐ δύνατον γένεσθαι",
+    "spans": [
+     {
+      "text": "[εὖ μὲν ἴδ]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "μεν οὐ δύνατον γένεσθαι",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 25,
+     "line": 33,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0049.jp2"
+    }
+   },
+   {
+    "line": 34,
+    "text": "[τοῦτ’] ἀν’ ἀνθρώπ[οις, π]εδέχην δ’ ἄρασθαι",
+    "spans": [
+     {
+      "text": "[τοῦτ’]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": " ἀν’ ἀνθρώπ",
+      "kind": "read",
+      "mark": null
+     },
+     {
+      "text": "[οις, π]",
+      "kind": "restored",
+      "mark": "[]"
+     },
+     {
+      "text": "εδέχην δ’ ἄρασθαι",
+      "kind": "read",
+      "mark": null
+     }
+    ],
+    "anchor": {
+     "edition": "Grenfell & Hunt, The Oxyrhynchus Papyri X (1914), no. 1231 fr. 1 col. i",
+     "page": 25,
+     "line": 34,
+     "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0049.jp2"
+    }
+   }
+  ],
+  "letters": {
+   "read": 384,
+   "restored": 95,
+   "added": 4,
+   "lost_dots": 17
+  },
+  "english_1914": {
+   "text": "‘Some say that the fairest thing on the black earth is a host of horsemen, others of foot, others of ships; but I say that is fairest which is the object of one’s desire. And it is quite easy to make this plain to all; for Helen observing well the beauty of men judged the best to be that one who destroyed the whole glory of Troy, nor bethought herself at all of child or parents dear, but through love Cypris led her astray. [Verily the wills of mortals are easily bent when they are moved by vain thoughts.] And I now have called to mind Anactoria, far away, whose gracious step and radiant glance I would rather see than the chariots of the Lydians and the charge of accoutred knights. We know well that this cannot come to pass among men . . .’",
+   "translator": "B. P. Grenfell and A. S. Hunt (1914), literal prose",
+   "anchor": {
+    "page": 40,
+    "note": "13-34",
+    "scan": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0064.jp2"
+   },
+   "bracketed": "[Verily the wills of mortals are easily bent when they are moved by vain thoughts.]",
+   "bracket_meaning": "G&H's own brackets: their rendering of a conjectured restoration of lines 25-6"
+  }
+ },
+ "sappho31": {
+  "title": "Sappho 31 Voigt = Wharton 2 (Bergk 2), 'That man seems to me peer of gods'",
+  "greek_lines": [
+   {
+    "n": 1,
+    "text": "Φαίνεταί μοι κήνος ἴσος θέοισιν",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 1
+    }
+   },
+   {
+    "n": 2,
+    "text": "ἔμμεν ὤνηρ, ὄστις ἐναντίος τοι",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 2
+    }
+   },
+   {
+    "n": 3,
+    "text": "ἰζάνει, καὶ πλασίον ἆδυ φωνεύ-",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 3
+    }
+   },
+   {
+    "n": 4,
+    "text": "σας ὑπακούει",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 4
+    }
+   },
+   {
+    "n": 5,
+    "text": "καὶ γελαίσας ἰμερόεν, τό μοι μάν",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 5
+    }
+   },
+   {
+    "n": 6,
+    "text": "καρδίαν ἐν στήθεσιν ἐπτόασεν·",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 6
+    }
+   },
+   {
+    "n": 7,
+    "text": "ὡς γὰρ εὔιδον βροχέως σε, φώνας",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 7
+    }
+   },
+   {
+    "n": 8,
+    "text": "οὐδὲν ἔτ' εἴκει·",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 8
+    }
+   },
+   {
+    "n": 9,
+    "text": "ἀλλὰ κὰμ μὲν γλῶσσα ἔαγε, λέπτον δ'",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 9
+    }
+   },
+   {
+    "n": 10,
+    "text": "αὔτικα χρῷ πῦρ ὐπαδεδρόμακεν,",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 10
+    }
+   },
+   {
+    "n": 11,
+    "text": "ὀππάτεσσι δ' οὐδὲν ὄρημ', ἐπιρρόμ-",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 11
+    }
+   },
+   {
+    "n": 12,
+    "text": "βεισι δ' ἄκουαι.",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 12
+    }
+   },
+   {
+    "n": 13,
+    "text": "ἀ δέ μίδρως κακχέεται, τρόμος δέ",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 13
+    }
+   },
+   {
+    "n": 14,
+    "text": "παῖσαν ἄγρει, χλωροτέρα δὲ ποίας",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 14
+    }
+   },
+   {
+    "n": 15,
+    "text": "ἔμμι, τεθνάκην δ' ὀλίγω 'πιδεύης",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 15
+    }
+   },
+   {
+    "n": 16,
+    "text": "φαίνομαι [ἄλλα].",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 16
+    }
+   },
+   {
+    "n": 17,
+    "text": "ἀλλὰ πᾶν τόλματον, [ἐπεὶ καὶ πένητα].",
+    "anchor": {
+     "source": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2",
+     "fragment": 2,
+     "line": 17
+    }
+   }
+  ],
+  "stanzas": [
+   [
+    1,
+    2,
+    3,
+    4
+   ],
+   [
+    5,
+    6,
+    7,
+    8
+   ],
+   [
+    9,
+    10,
+    11,
+    12
+   ],
+   [
+    13,
+    14,
+    15,
+    16
+   ],
+   [
+    17
+   ]
+  ],
+  "english_literal": {
+   "text": "That man seems to me peer of gods, who sits in thy presence, and hears close to him thy sweet speech and lovely laughter; that indeed makes my heart flutter in my bosom. For when I see thee but a little, I have no utterance left, my tongue is broken down, and straightway a subtle fire has run under my skin, with my eyes I have no sight, my ears ring, sweat pours down, and a trembling seizes all my body; I am paler than grass, and seem in my madness little better than one dead. But I must dare all, since one so poor ...",
+   "translator": "H. T. Wharton (literal prose, 1885-1908)",
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2"
+  },
+  "quoted_in": "[Longinus], On the Sublime, chapter 10, sections 1-2",
+  "cut_point": {
+   "after_line": 17,
+   "after_text": "ἀλλὰ πᾶν τόλματον, [ἐπεὶ καὶ πένητα].",
+   "stanza": 5,
+   "line_in_stanza": 1,
+   "what_happens": "The quotation in On the Sublime runs through four full Sapphic stanzas and the first line of a fifth, then the critic's own words resume ('Are you not amazed ...', section 3). Nothing more of the poem survives.",
+   "uncertain_words": {
+    "wharton_brackets": [
+     "[ἄλλα]",
+     "[ἐπεὶ καὶ πένητα]"
+    ],
+    "note": "Wharton prints these words in square brackets. Rhys Roberts (1899, Appendix A, pp. 172-173) reports that Bergk bracketed 'ἐπεὶ καὶ πένητα' because the words may be Longinus' own, not Sappho's; Crusius (1897) ends the ode at 'φαίνομαι ἄλλα'."
+   },
+   "evidence": [
+    {
+     "cite": "W. Rhys Roberts, Longinus On the Sublime: the Greek text edited after the Paris manuscript (Cambridge University Press, 1899)",
+     "url": "https://archive.org/details/longinusonsubli00waygoog",
+     "page": 70,
+     "scan_leaf": 90,
+     "what": "Greek text: lines 1-16 printed as four stanzas, then line 17 'ἀλλὰ πᾶν τολματόν, ἐπεὶ καὶ πένητα' set apart, then section 3 'οὐ θαυμάζεις ...' (Longinus' words)"
+    },
+    {
+     "cite": "W. Rhys Roberts, Longinus On the Sublime: the Greek text edited after the Paris manuscript (Cambridge University Press, 1899)",
+     "url": "https://archive.org/details/longinusonsubli00waygoog",
+     "page": 71,
+     "scan_leaf": 91,
+     "what": "English (verse by A. S. Way): four stanzas, then section 3 'Are you not amazed ...'"
+    },
+    {
+     "cite": "W. Rhys Roberts, Longinus On the Sublime: the Greek text edited after the Paris manuscript (Cambridge University Press, 1899)",
+     "url": "https://archive.org/details/longinusonsubli00waygoog",
+     "page": "172-173",
+     "what": "Appendix A, textual note on p. 70: Bergk's brackets and Crusius' ending"
+    }
+   ]
+  }
+ },
+ "wharton_fragments": [
+  {
+   "wharton_no": 1,
+   "printed_as": "1",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "1",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Ποικιλόθρον', ἀθάνατ' Ἀφρόδιτα, / παῖ Δίος, δολόπλοκε, λίσσομαί σε / μή μ' ἄσαισι μήτ' ὀνίαισι δάμνα, / πότνια, θῦμον· / ἀλλὰ τυῖδ' ἔλθ', αἴποτα κἀτέρωτα / τᾶς ἔμας αὔδως ἀΐοισα πήλυι / ἒκλυες, πάτρος δὲ δόμον λίποισα / χρύσιον ἦλθες / ἄρμ' ὐποζεύξαισα· κάλοι δέ σ' ἆγον / ὤκεες στροῦθοι περὶ γᾶς μελαίνας / πύκνα δινεῦντες πτέρ' ἀπ' ὠράνω αἴθε- / ρας διὰ μέσσω. / αἶψα δ' ἐξίκοντο· τὺ δ', ὦ μάκαιρα, / μειδιάσαισ' ἀθανάτῳ προσώπῳ, / ἤρε', ὄττι δηὖτε πέπονθα κὤττι / δηὖτε κάλημι, / κὤττι μοι μάλιστα θέλω γένεσθαι / μαινόλᾳ θύμῳ· τίνα δηὖτε Πείθω / μαῖς ἄγην ἐς σὰν φιλότατα, τίς σ', ὦ / Ψάπφ', ἀδικήει; / καὶ γὰρ αἰ φεύγει, ταχέως διώξει, / αἰ δὲ δῶρα μὴ δέκετ' ἀλλὰ δώσει, / αἰ δὲ μὴ φίλει, ταχέως φιλήσει / κωὐκ ἐθέλοισα. / ἔλθε μοι καὶ νῦν, χαλεπᾶν δὲ λῦσον / ἐκ μεριμνᾶν, ὄσσα δὲ μοι τελέσσαι / θῦμος ἰμέρρει, τέλεσον· σὺ δ' αὔτα / σύμμαχος ἔσσο.",
+   "greek_lines": [
+    "Ποικιλόθρον', ἀθάνατ' Ἀφρόδιτα,",
+    "παῖ Δίος, δολόπλοκε, λίσσομαί σε",
+    "μή μ' ἄσαισι μήτ' ὀνίαισι δάμνα,",
+    "πότνια, θῦμον·",
+    "ἀλλὰ τυῖδ' ἔλθ', αἴποτα κἀτέρωτα",
+    "τᾶς ἔμας αὔδως ἀΐοισα πήλυι",
+    "ἒκλυες, πάτρος δὲ δόμον λίποισα",
+    "χρύσιον ἦλθες",
+    "ἄρμ' ὐποζεύξαισα· κάλοι δέ σ' ἆγον",
+    "ὤκεες στροῦθοι περὶ γᾶς μελαίνας",
+    "πύκνα δινεῦντες πτέρ' ἀπ' ὠράνω αἴθε-",
+    "ρας διὰ μέσσω.",
+    "αἶψα δ' ἐξίκοντο· τὺ δ', ὦ μάκαιρα,",
+    "μειδιάσαισ' ἀθανάτῳ προσώπῳ,",
+    "ἤρε', ὄττι δηὖτε πέπονθα κὤττι",
+    "δηὖτε κάλημι,",
+    "κὤττι μοι μάλιστα θέλω γένεσθαι",
+    "μαινόλᾳ θύμῳ· τίνα δηὖτε Πείθω",
+    "μαῖς ἄγην ἐς σὰν φιλότατα, τίς σ', ὦ",
+    "Ψάπφ', ἀδικήει;",
+    "καὶ γὰρ αἰ φεύγει, ταχέως διώξει,",
+    "αἰ δὲ δῶρα μὴ δέκετ' ἀλλὰ δώσει,",
+    "αἰ δὲ μὴ φίλει, ταχέως φιλήσει",
+    "κωὐκ ἐθέλοισα.",
+    "ἔλθε μοι καὶ νῦν, χαλεπᾶν δὲ λῦσον",
+    "ἐκ μεριμνᾶν, ὄσσα δὲ μοι τελέσσαι",
+    "θῦμος ἰμέρρει, τέλεσον· σὺ δ' αὔτα",
+    "σύμμαχος ἔσσο."
+   ],
+   "english_literal": "Immortal Aphrodite of the broidered throne, daughter of Zeus, weaver of wiles, I pray thee break not my spirit with anguish and distress, O Queen. But come hither, if ever before thou didst hear my voice afar, and listen, and leaving thy father's golden house camest with chariot yoked, and fair fleet sparrows drew thee, flapping fast their wings around the dark earth, from heaven through mid sky. Quickly arrived they; and thou, blessed one, smiling with immortal countenance, didst ask What now is befallen me, and Why now I call, and What I in my mad heart most desire to see. 'What Beauty now wouldst thou draw to love thee? Who wrongs thee, Sappho? For even if she flies she shall soon follow, and if she rejects gifts shall yet give, and if she loves not shall soon love, however loth.' Come, I pray thee, now too, and release me from cruel cares; and all that my heart desires to accomplish, accomplish thou, and be thyself my ally.",
+   "source_author": "Dionysius of Halicarnassus",
+   "source_authors": [
+    "Dionysius of Halicarnassus"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "Dionysius of Halicarnassus, writing at Rome about 25 B.C., quotes this",
+   "quote_reason": "language",
+   "words": 131,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag1"
+  },
+  {
+   "wharton_no": 2,
+   "printed_as": "2",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "31",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Φαίνεταί μοι κήνος ἴσος θέοισιν / ἔμμεν ὤνηρ, ὄστις ἐναντίος τοι / ἰζάνει, καὶ πλασίον ἆδυ φωνεύ- / σας ὑπακούει / καὶ γελαίσας ἰμερόεν, τό μοι μάν / καρδίαν ἐν στήθεσιν ἐπτόασεν· / ὡς γὰρ εὔιδον βροχέως σε, φώνας / οὐδὲν ἔτ' εἴκει· / ἀλλὰ κὰμ μὲν γλῶσσα ἔαγε, λέπτον δ' / αὔτικα χρῷ πῦρ ὐπαδεδρόμακεν, / ὀππάτεσσι δ' οὐδὲν ὄρημ', ἐπιρρόμ- / βεισι δ' ἄκουαι. / ἀ δέ μίδρως κακχέεται, τρόμος δέ / παῖσαν ἄγρει, χλωροτέρα δὲ ποίας / ἔμμι, τεθνάκην δ' ὀλίγω 'πιδεύης / φαίνομαι [ἄλλα]. / ἀλλὰ πᾶν τόλματον, [ἐπεὶ καὶ πένητα].",
+   "greek_lines": [
+    "Φαίνεταί μοι κήνος ἴσος θέοισιν",
+    "ἔμμεν ὤνηρ, ὄστις ἐναντίος τοι",
+    "ἰζάνει, καὶ πλασίον ἆδυ φωνεύ-",
+    "σας ὑπακούει",
+    "καὶ γελαίσας ἰμερόεν, τό μοι μάν",
+    "καρδίαν ἐν στήθεσιν ἐπτόασεν·",
+    "ὡς γὰρ εὔιδον βροχέως σε, φώνας",
+    "οὐδὲν ἔτ' εἴκει·",
+    "ἀλλὰ κὰμ μὲν γλῶσσα ἔαγε, λέπτον δ'",
+    "αὔτικα χρῷ πῦρ ὐπαδεδρόμακεν,",
+    "ὀππάτεσσι δ' οὐδὲν ὄρημ', ἐπιρρόμ-",
+    "βεισι δ' ἄκουαι.",
+    "ἀ δέ μίδρως κακχέεται, τρόμος δέ",
+    "παῖσαν ἄγρει, χλωροτέρα δὲ ποίας",
+    "ἔμμι, τεθνάκην δ' ὀλίγω 'πιδεύης",
+    "φαίνομαι [ἄλλα].",
+    "ἀλλὰ πᾶν τόλματον, [ἐπεὶ καὶ πένητα]."
+   ],
+   "english_literal": "That man seems to me peer of gods, who sits in thy presence, and hears close to him thy sweet speech and lovely laughter; that indeed makes my heart flutter in my bosom. For when I see thee but a little, I have no utterance left, my tongue is broken down, and straightway a subtle fire has run under my skin, with my eyes I have no sight, my ears ring, sweat pours down, and a trembling seizes all my body; I am paler than grass, and seem in my madness little better than one dead. But I must dare all, since one so poor ...",
+   "source_author": "Longinus",
+   "source_authors": [
+    "Longinus"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "Longinus, about 250 A.D., uses this",
+   "quote_reason": "style",
+   "words": 77,
+   "words_in_brackets": 4,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag2"
+  },
+  {
+   "wharton_no": 3,
+   "printed_as": "3",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "34",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ἄστερες μὲν ἀμφὶ κάλαν σελάνναν / αἶψ ἀπυκρύπτοισι φάεννον εἶδος, / ὄπποτα πλήθοισα μάλιστα λάμπῃ / γᾶν [ἐπὶ πᾶσαν] / ἀργυρία",
+   "greek_lines": [
+    "Ἄστερες μὲν ἀμφὶ κάλαν σελάνναν",
+    "αἶψ ἀπυκρύπτοισι φάεννον εἶδος,",
+    "ὄπποτα πλήθοισα μάλιστα λάμπῃ",
+    "γᾶν [ἐπὶ πᾶσαν]",
+    "ἀργυρία"
+   ],
+   "english_literal": "The stars about the fair moon in their turn hide their bright face when she at about her full lights up all earth with silver.",
+   "source_author": "Eustathius",
+   "source_authors": [
+    "Eustathius"
+   ],
+   "source_kind": "scholiast or commentator",
+   "source_evidence": "Quoted by Eustathius of Thessalonica",
+   "quote_reason": "subject or unstated",
+   "words": 17,
+   "words_in_brackets": 2,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag3"
+  },
+  {
+   "wharton_no": 4,
+   "printed_as": "4",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "2",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ἀμφὶ δὲ ψῦχρον κελάδει δι' ὔσδων / μαλίνων, αἰθυσσομένων δὲ φύλλων / κῶμα καταρρεῖ",
+   "greek_lines": [
+    "Ἀμφὶ δὲ ψῦχρον κελάδει δι' ὔσδων",
+    "μαλίνων, αἰθυσσομένων δὲ φύλλων",
+    "κῶμα καταρρεῖ"
+   ],
+   "english_literal": "And round about the [breeze] murmurs cool through apple-boughs, and slumber streams from quivering leaves.",
+   "source_author": "Hermogenes",
+   "source_authors": [
+    "Hermogenes"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "Cited by Hermogenes",
+   "quote_reason": "style",
+   "words": 12,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag4"
+  },
+  {
+   "wharton_no": 5,
+   "printed_as": "5",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "2",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Ἔλθε Κύπρι / χρυσίαισιν ἐν κυλίκεσσιν ἄβρως / συμμεμιγμένον θαλίαισι νέκταρ / οἰνοχοεῦσα.",
+   "greek_lines": [
+    "Ἔλθε Κύπρι",
+    "χρυσίαισιν ἐν κυλίκεσσιν ἄβρως",
+    "συμμεμιγμένον θαλίαισι νέκταρ",
+    "οἰνοχοεῦσα."
+   ],
+   "english_literal": "Come, goddess of Cyprus, and in golden cups serve nectar delicately mixed with delights.",
+   "source_author": "Athenaeus",
+   "source_authors": [
+    "Athenaeus"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "quotes these verses",
+   "quote_reason": "metre",
+   "words": 10,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag5"
+  },
+  {
+   "wharton_no": 6,
+   "printed_as": "6",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "35",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ἤ σε Κύπρος καὶ Πάφος ἤ Πάνορμος.",
+   "greek_lines": [
+    "Ἤ σε Κύπρος καὶ Πάφος ἤ Πάνορμος."
+   ],
+   "english_literal": "Or Cyprus and Paphos, or Panormus [holds] thee.",
+   "source_author": "Strabo",
+   "source_authors": [
+    "Strabo"
+   ],
+   "source_kind": "other",
+   "source_evidence": "From Strabo",
+   "quote_reason": "subject or unstated",
+   "words": 7,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag6"
+  },
+  {
+   "wharton_no": 7,
+   "printed_as": "7, 8",
+   "shares_entry_with": 8,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "40",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Σοὶ δ' ἔγω λεύκας ἐπὶ βῶμον αἶγος / κἀπιλείψω τοι",
+   "greek_lines": [
+    "Σοὶ δ' ἔγω λεύκας ἐπὶ βῶμον αἶγος",
+    "κἀπιλείψω τοι"
+   ],
+   "english_literal": "But for thee will I [lead] to the altar [the offspring] of a white goat ... and add a libation for thee.",
+   "source_author": "Apollonius Dyscolus",
+   "source_authors": [
+    "Apollonius Dyscolus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Adduced by Apollonius of Alexandria",
+   "quote_reason": "language",
+   "words": 9,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag7"
+  },
+  {
+   "wharton_no": 8,
+   "printed_as": "7, 8",
+   "shares_entry_with": 7,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "40",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Σοὶ δ' ἔγω λεύκας ἐπὶ βῶμον αἶγος / κἀπιλείψω τοι",
+   "greek_lines": [
+    "Σοὶ δ' ἔγω λεύκας ἐπὶ βῶμον αἶγος",
+    "κἀπιλείψω τοι"
+   ],
+   "english_literal": "But for thee will I [lead] to the altar [the offspring] of a white goat ... and add a libation for thee.",
+   "source_author": "Apollonius Dyscolus",
+   "source_authors": [
+    "Apollonius Dyscolus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Adduced by Apollonius of Alexandria",
+   "quote_reason": "language",
+   "words": 9,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag7"
+  },
+  {
+   "wharton_no": 9,
+   "printed_as": "9",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "33",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Αἴθ' ἔγω, χρυσοστέφαν' Ἀφρόδιτα, / τόνδε τὸν πάλον λαχόην.",
+   "greek_lines": [
+    "Αἴθ' ἔγω, χρυσοστέφαν' Ἀφρόδιτα,",
+    "τόνδε τὸν πάλον λαχόην."
+   ],
+   "english_literal": "This lot may I win, golden-crowned Aphrodite.",
+   "source_author": "Apollonius Dyscolus",
+   "source_authors": [
+    "Apollonius Dyscolus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From Apollonius",
+   "quote_reason": "language",
+   "words": 8,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag9"
+  },
+  {
+   "wharton_no": 10,
+   "printed_as": "10",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "32",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Αἴ με τιμίαν ἐπόησαν ἔργα / τὰ σφὰ δοῖσαι.",
+   "greek_lines": [
+    "Αἴ με τιμίαν ἐπόησαν ἔργα",
+    "τὰ σφὰ δοῖσαι."
+   ],
+   "english_literal": "Who gave me their gifts and made me honoured.",
+   "source_author": "Apollonius Dyscolus",
+   "source_authors": [
+    "Apollonius Dyscolus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From Apollonius",
+   "quote_reason": "language",
+   "words": 8,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag10"
+  },
+  {
+   "wharton_no": 11,
+   "printed_as": "11",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "160",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Τάδε νῦν ἐταίραις / ταῖς ἔμαισι τέρπνα κάλως ἀείσω.",
+   "greek_lines": [
+    "Τάδε νῦν ἐταίραις",
+    "ταῖς ἔμαισι τέρπνα κάλως ἀείσω."
+   ],
+   "english_literal": "This will I now sing deftly to please my girl-friends.",
+   "source_author": "Athenaeus",
+   "source_authors": [
+    "Athenaeus"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "Quoted by Athenaeus",
+   "quote_reason": "subject or unstated",
+   "words": 8,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag11"
+  },
+  {
+   "wharton_no": 12,
+   "printed_as": "12",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Ὄττινας γὰρ / εὖ θέω, κῆνοί με μάλιστα σίννον- / ται.",
+   "greek_lines": [
+    "Ὄττινας γὰρ",
+    "εὖ θέω, κῆνοί με μάλιστα σίννον-",
+    "ται."
+   ],
+   "english_literal": "For they whom I benefit injure me most.",
+   "source_author": "Etymologicum Magnum",
+   "source_authors": [
+    "Etymologicum Magnum"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From the Etymologicum Magnum",
+   "quote_reason": "subject or unstated",
+   "words": 8,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag12"
+  },
+  {
+   "wharton_no": 13,
+   "printed_as": "13",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "16",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Ἔγω δὲ κήν' ὄτ- / τω τις ἔραται.",
+   "greek_lines": [
+    "Ἔγω δὲ κήν' ὄτ-",
+    "τω τις ἔραται."
+   ],
+   "english_literal": "But that which one desires I ...",
+   "source_author": "Apollonius Dyscolus",
+   "source_authors": [
+    "Apollonius Dyscolus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From Apollonius",
+   "quote_reason": "language",
+   "words": 6,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag13"
+  },
+  {
+   "wharton_no": 14,
+   "printed_as": "14",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "41",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Ταῖς κάλαις υμμιν [τὸ] νόημα τῶμον / οἰ διάμειπτον.",
+   "greek_lines": [
+    "Ταῖς κάλαις υμμιν [τὸ] νόημα τῶμον",
+    "οἰ διάμειπτον."
+   ],
+   "english_literal": "To you, fair maids, my mind changes not.",
+   "source_author": "Apollonius Dyscolus",
+   "source_authors": [
+    "Apollonius Dyscolus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From Apollonius",
+   "quote_reason": "language",
+   "words": 8,
+   "words_in_brackets": 1,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag14"
+  },
+  {
+   "wharton_no": 15,
+   "printed_as": "15",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "26",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Ἔγων δ' ἰμαύτᾳ / τοῦτο σύνοιδα.",
+   "greek_lines": [
+    "Ἔγων δ' ἰμαύτᾳ",
+    "τοῦτο σύνοιδα."
+   ],
+   "english_literal": "And this I feel in myself.",
+   "source_author": "Apollonius Dyscolus",
+   "source_authors": [
+    "Apollonius Dyscolus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From Apollonius",
+   "quote_reason": "language",
+   "words": 5,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag15"
+  },
+  {
+   "wharton_no": 16,
+   "printed_as": "16",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "42",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ταῖσι [δὲ] ψῦχρος μὲν ἔγεντο θῦμος, / παρ δ' ἴεισι τὰ πτέρα.",
+   "greek_lines": [
+    "Ταῖσι [δὲ] ψῦχρος μὲν ἔγεντο θῦμος,",
+    "παρ δ' ἴεισι τὰ πτέρα."
+   ],
+   "english_literal": "But their heart turned cold and they dropt their wings.",
+   "source_author": "Scholiast on Pindar",
+   "source_authors": [
+    "Scholiast on Pindar"
+   ],
+   "source_kind": "scholiast or commentator",
+   "source_evidence": "the Scholiast quotes this fragment",
+   "quote_reason": "subject or unstated",
+   "words": 11,
+   "words_in_brackets": 1,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag16"
+  },
+  {
+   "wharton_no": 17,
+   "printed_as": "17",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "37",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "κατ' ἔμον στάλαγμον· / Τον δ' ἐπιπλάζοντες ἄμοι φέροιεν / καὶ μελεδώναις.",
+   "greek_lines": [
+    "κατ' ἔμον στάλαγμον·",
+    "Τον δ' ἐπιπλάζοντες ἄμοι φέροιεν",
+    "καὶ μελεδώναις."
+   ],
+   "english_literal": "According to my weeping: it and all care let buffeting winds bear away.",
+   "source_author": "Etymologicum Magnum",
+   "source_authors": [
+    "Etymologicum Magnum"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From the Etymologicum Magnum",
+   "quote_reason": "subject or unstated",
+   "words": 10,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag17"
+  },
+  {
+   "wharton_no": 18,
+   "printed_as": "18",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "123",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Ἀρτίως μ' ἀ χρυσοπέδιλλος Αὔως.",
+   "greek_lines": [
+    "Ἀρτίως μ' ἀ χρυσοπέδιλλος Αὔως."
+   ],
+   "english_literal": "Me just now the golden-sandalled Dawn ...",
+   "source_author": "Ammonius",
+   "source_authors": [
+    "Ammonius"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Quoted by Ammonius of Alexandria",
+   "quote_reason": "language",
+   "words": 5,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag18"
+  },
+  {
+   "wharton_no": 19,
+   "printed_as": "19",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "39",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Πόδας δέ / ποίκιλος μάσλης ἐκάλυπτε, Λύδι- / ον κάλον ἔργον.",
+   "greek_lines": [
+    "Πόδας δέ",
+    "ποίκιλος μάσλης ἐκάλυπτε, Λύδι-",
+    "ον κάλον ἔργον."
+   ],
+   "english_literal": "A broidered strap of fair Lydian work covered her feet.",
+   "source_author": "Scholiast on Aristophanes",
+   "source_authors": [
+    "Scholiast on Aristophanes",
+    "Pollux"
+   ],
+   "source_kind": "scholiast or commentator",
+   "source_evidence": "Quoted by the Scholiast on Aristophanes' Peace",
+   "quote_reason": "subject or unstated",
+   "words": 8,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag19"
+  },
+  {
+   "wharton_no": 20,
+   "printed_as": "20",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "152",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Παντοδάπαις μεμιγμέ- / να χροΐαισιν.",
+   "greek_lines": [
+    "Παντοδάπαις μεμιγμέ-",
+    "να χροΐαισιν."
+   ],
+   "english_literal": "Shot with a thousand hues.",
+   "source_author": "Scholiast on Apollonius Rhodius",
+   "source_authors": [
+    "Scholiast on Apollonius Rhodius"
+   ],
+   "source_kind": "scholiast or commentator",
+   "source_evidence": "Quoted by the Scholiast on Apollonius of Rhodes",
+   "quote_reason": "subject or unstated",
+   "words": 3,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag20"
+  },
+  {
+   "wharton_no": 21,
+   "printed_as": "21",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "129a",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Ἔμεθεν δ' ἔχεισθα λάθαν",
+   "greek_lines": [
+    "Ἔμεθεν δ' ἔχεισθα λάθαν"
+   ],
+   "english_literal": "Me thou forgettest.",
+   "source_author": "Apollonius Dyscolus",
+   "source_authors": [
+    "Apollonius Dyscolus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From Apollonius, as is also the following",
+   "quote_reason": "language",
+   "words": 4,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag21"
+  },
+  {
+   "wharton_no": 22,
+   "printed_as": "22",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "129b",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Ἤ τιν' ἄλλον / [μᾶλλον] ἀνθρώπων ἔμεθεν φίλησθα.",
+   "greek_lines": [
+    "Ἤ τιν' ἄλλον",
+    "[μᾶλλον] ἀνθρώπων ἔμεθεν φίλησθα."
+   ],
+   "english_literal": "Or lovest another more than me.",
+   "source_author": "Apollonius Dyscolus",
+   "source_authors": [
+    "Apollonius Dyscolus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From Apollonius, as is also the following",
+   "quote_reason": "language",
+   "words": 7,
+   "words_in_brackets": 1,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag22"
+  },
+  {
+   "wharton_no": 23,
+   "printed_as": "23",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Ου τι μοι υμμες.",
+   "greek_lines": [
+    "Ου τι μοι υμμες."
+   ],
+   "english_literal": "Ye are nought to me.",
+   "source_author": "Apollonius Dyscolus",
+   "source_authors": [
+    "Apollonius Dyscolus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Quoted by Apollonius, as is also the following fragment",
+   "quote_reason": "language",
+   "words": 4,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag23"
+  },
+  {
+   "wharton_no": 24,
+   "printed_as": "24",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "45",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Ας θέλετ' ὔμμες.",
+   "greek_lines": [
+    "Ας θέλετ' ὔμμες."
+   ],
+   "english_literal": "While ye will.",
+   "source_author": "Apollonius Dyscolus",
+   "source_authors": [
+    "Apollonius Dyscolus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Quoted by Apollonius, as is also the following fragment",
+   "quote_reason": "language",
+   "words": 3,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag24"
+  },
+  {
+   "wharton_no": 25,
+   "printed_as": "25",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": "36",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Καὶ ποθήω καὶ μαόμαι",
+   "greek_lines": [
+    "Καὶ ποθήω καὶ μαόμαι"
+   ],
+   "english_literal": "I yearn and seek ...",
+   "source_author": "Etymologicum Magnum",
+   "source_authors": [
+    "Etymologicum Magnum"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From the Etymologicum Magnum",
+   "quote_reason": "subject or unstated",
+   "words": 4,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag25"
+  },
+  {
+   "wharton_no": 26,
+   "printed_as": "II",
+   "shares_entry_with": null,
+   "section": "I. IN SAPPHIC METRE",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Κεῖνον, ὦ χρυσόθρονε Μοῦσ', ἔνισπες / ὕμνον, ἐκ τᾶς καλλιγύναικος ἐσθλᾶς / Τήιος χώρας ὃν ἄειδε τερπνῶς / πρέσβυς ἀγαυός.",
+   "greek_lines": [
+    "Κεῖνον, ὦ χρυσόθρονε Μοῦσ', ἔνισπες",
+    "ὕμνον, ἐκ τᾶς καλλιγύναικος ἐσθλᾶς",
+    "Τήιος χώρας ὃν ἄειδε τερπνῶς",
+    "πρέσβυς ἀγαυός."
+   ],
+   "english_literal": "O Muse of the golden throne, raise that strain which the reverend elder of Teos, from the goodly land of fair women, used to sing so sweetly.",
+   "source_author": "Athenaeus",
+   "source_authors": [
+    "Athenaeus"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "Athenaeus says",
+   "quote_reason": "metre",
+   "words": 17,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag26"
+  },
+  {
+   "wharton_no": 27,
+   "printed_as": "III",
+   "shares_entry_with": null,
+   "section": "II. IN DACTYLIC METRE",
+   "voigt_no": "158",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Σκιδναμένας ἐν στήθεσιν ὄργας / μαψυλάκαν γλῶσσαν πεφύλαχθαι.",
+   "greek_lines": [
+    "Σκιδναμένας ἐν στήθεσιν ὄργας",
+    "μαψυλάκαν γλῶσσαν πεφύλαχθαι."
+   ],
+   "english_literal": "When anger spreads through the breast, guard thy tongue from barking idly.",
+   "source_author": "Plutarch",
+   "source_authors": [
+    "Plutarch"
+   ],
+   "source_kind": "philosopher",
+   "source_evidence": "Quoted by Plutarch",
+   "quote_reason": "metre",
+   "words": 7,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag27"
+  },
+  {
+   "wharton_no": 28,
+   "printed_as": "IV",
+   "shares_entry_with": null,
+   "section": "III. IN ALCAIC METRE",
+   "voigt_no": "137",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Αἰ δ' ἦχες ἔσλων ἴμερον η κάλων, / καὶ μή τι ϝείπην γλῶσσ' ἐκύκα κάκον, / αἴδως κέ σ' οὐ κίχανεν ὄππατ', / ἀλλ' ἔλεγες περὶ τῶ δικαίως.",
+   "greek_lines": [
+    "Αἰ δ' ἦχες ἔσλων ἴμερον η κάλων,",
+    "καὶ μή τι ϝείπην γλῶσσ' ἐκύκα κάκον,",
+    "αἴδως κέ σ' οὐ κίχανεν ὄππατ',",
+    "ἀλλ' ἔλεγες περὶ τῶ δικαίως."
+   ],
+   "english_literal": "Hadst thou felt desire for things good or noble, and had not thy tongue framed some evil speech, shame had not filled thine eyes, but thou hadst spoken honestly about it.",
+   "source_author": "Aristotle",
+   "source_authors": [
+    "Aristotle"
+   ],
+   "source_kind": "philosopher",
+   "source_evidence": "Aristotle, in his Rhetoric, i. 9",
+   "quote_reason": "metre",
+   "words": 25,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag28"
+  },
+  {
+   "wharton_no": 29,
+   "printed_as": "V",
+   "shares_entry_with": null,
+   "section": "IV. IN MIXED GLYCONIC AND ALCAIC METRE",
+   "voigt_no": "138",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Στᾶθι κἄντα φίλος ... / καὶ τὰν ἐπ' ὄσσοις ἀμπέτασον χάριν.",
+   "greek_lines": [
+    "Στᾶθι κἄντα φίλος ...",
+    "καὶ τὰν ἐπ' ὄσσοις ἀμπέτασον χάριν."
+   ],
+   "english_literal": "Stand face to face, friend ... and unveil the grace in thine eyes.",
+   "source_author": "Athenaeus",
+   "source_authors": [
+    "Athenaeus"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "Athenaeus, speaking of the charm of lovers' eyes",
+   "quote_reason": "metre",
+   "words": 9,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag29"
+  },
+  {
+   "wharton_no": 30,
+   "printed_as": "30",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "143",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Χρύσεοι δ' ἐρέβινθοι ἐπ' ἀϊόνων ἐφύοντο.",
+   "greek_lines": [
+    "Χρύσεοι δ' ἐρέβινθοι ἐπ' ἀϊόνων ἐφύοντο."
+   ],
+   "english_literal": "And golden pulse grew on the shores.",
+   "source_author": "Athenaeus",
+   "source_authors": [
+    "Athenaeus"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "Quoted by Athenaeus",
+   "quote_reason": "subject or unstated",
+   "words": 6,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag30"
+  },
+  {
+   "wharton_no": 31,
+   "printed_as": "31",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "142",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Λάτω καὶ Νιόβα μάλα μὲν φίλαι ἦσαν ἔταιπαι.",
+   "greek_lines": [
+    "Λάτω καὶ Νιόβα μάλα μὲν φίλαι ἦσαν ἔταιπαι."
+   ],
+   "english_literal": "Leto and Niobe were friends full dear.",
+   "source_author": "Athenaeus",
+   "source_authors": [
+    "Athenaeus"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "Quoted by Athenaeus",
+   "quote_reason": "subject or unstated",
+   "words": 8,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag31"
+  },
+  {
+   "wharton_no": 32,
+   "printed_as": "32",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "147",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Μνάσεσθαί τινά φαμι καὶ ὔστερον ἄμμεων.",
+   "greek_lines": [
+    "Μνάσεσθαί τινά φαμι καὶ ὔστερον ἄμμεων."
+   ],
+   "english_literal": "Men I think will remember us even hereafter.",
+   "source_author": "Dio Chrysostom",
+   "source_authors": [
+    "Dio Chrysostom"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "Dio Chrysostom",
+   "quote_reason": "language",
+   "words": 6,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag32"
+  },
+  {
+   "wharton_no": 33,
+   "printed_as": "33",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "49",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ηράμαν μὲν εγω σέθεν, Ἄτθι, πάλαι πότα.",
+   "greek_lines": [
+    "Ηράμαν μὲν εγω σέθεν, Ἄτθι, πάλαι πότα."
+   ],
+   "english_literal": "I loved thee once, Atthis, long ago.",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "Quoted by Hephaestion",
+   "quote_reason": "metre",
+   "words": 7,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag33"
+  },
+  {
+   "wharton_no": 34,
+   "printed_as": "34",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "49",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Σμίκρα μοι πάϊς ἔμμεν ἐφαίνεο κἄχαρις.",
+   "greek_lines": [
+    "Σμίκρα μοι πάϊς ἔμμεν ἐφαίνεο κἄχαρις."
+   ],
+   "english_literal": "A slight and ill-favoured child didst thou seem to me.",
+   "source_author": "Plutarch",
+   "source_authors": [
+    "Plutarch"
+   ],
+   "source_kind": "philosopher",
+   "source_evidence": "Quoted by Plutarch",
+   "quote_reason": "subject or unstated",
+   "words": 6,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag34"
+  },
+  {
+   "wharton_no": 35,
+   "printed_as": "35",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Αλλα, μη μεγαλύνεο δακτυλίω πέρι.",
+   "greek_lines": [
+    "Αλλα, μη μεγαλύνεο δακτυλίω πέρι."
+   ],
+   "english_literal": "Foolish woman, pride not thyself on a ring.",
+   "source_author": "Herodian",
+   "source_authors": [
+    "Herodian"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Preserved by Herodian",
+   "quote_reason": "subject or unstated",
+   "words": 5,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag35"
+  },
+  {
+   "wharton_no": 36,
+   "printed_as": "36",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "51",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Οὐκ οἶδ' οττι θέω· δύο μοι τα νοήματα.",
+   "greek_lines": [
+    "Οὐκ οἶδ' οττι θέω· δύο μοι τα νοήματα."
+   ],
+   "english_literal": "I know not what to do; my mind is divided.",
+   "source_author": "Chrysippus",
+   "source_authors": [
+    "Chrysippus"
+   ],
+   "source_kind": "philosopher",
+   "source_evidence": "Quoted by the Stoic philosopher Chrysippus",
+   "quote_reason": "subject or unstated",
+   "words": 8,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag36"
+  },
+  {
+   "wharton_no": 37,
+   "printed_as": "37",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "52",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ψαύην δ' οὐ δοκίμοιμ' ὀράνω δύσι πάχεσιν.",
+   "greek_lines": [
+    "Ψαύην δ' οὐ δοκίμοιμ' ὀράνω δύσι πάχεσιν."
+   ],
+   "english_literal": "I do not think to touch the sky with my two arms.",
+   "source_author": "Herodian",
+   "source_authors": [
+    "Herodian"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Quoted by Herodian",
+   "quote_reason": "subject or unstated",
+   "words": 7,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag37"
+  },
+  {
+   "wharton_no": 38,
+   "printed_as": "38",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Ὠς δὲ παῖς πεδα μάτερα πεπτερύγωμαι.",
+   "greek_lines": [
+    "Ὠς δὲ παῖς πεδα μάτερα πεπτερύγωμαι."
+   ],
+   "english_literal": "And I flutter like a child after her mother.",
+   "source_author": "Etymologicum Magnum",
+   "source_authors": [
+    "Etymologicum Magnum"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Quoted in the Etymologicum Magnum",
+   "quote_reason": "language",
+   "words": 6,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag38"
+  },
+  {
+   "wharton_no": 39,
+   "printed_as": "39",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "136",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ἦρος ἄγγελος ἰμερόφωνος ἀήδων.",
+   "greek_lines": [
+    "Ἦρος ἄγγελος ἰμερόφωνος ἀήδων."
+   ],
+   "english_literal": "Spring's messenger, the sweet-voiced nightingale.",
+   "source_author": "Scholiast on Sophocles",
+   "source_authors": [
+    "Scholiast on Sophocles"
+   ],
+   "source_kind": "scholiast or commentator",
+   "source_evidence": "Quoted by the Scholiast on Sophocles",
+   "quote_reason": "subject or unstated",
+   "words": 4,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag39"
+  },
+  {
+   "wharton_no": 40,
+   "printed_as": "40",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "130",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ἔρος δαὖτέ μ' ὀ λυσιμελης δόνει, / γλυκύπικρον ἀμάχανον ὄρπετον.",
+   "greek_lines": [
+    "Ἔρος δαὖτέ μ' ὀ λυσιμελης δόνει,",
+    "γλυκύπικρον ἀμάχανον ὄρπετον."
+   ],
+   "english_literal": "Now Love masters my limbs and shakes me, fatal creature, bitter-sweet.",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "Quoted by Hephaestion",
+   "quote_reason": "subject or unstated",
+   "words": 9,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag40"
+  },
+  {
+   "wharton_no": 41,
+   "printed_as": "41",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "131",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ἄτθι, σοὶ δ' ἔμεθεν μεν ἀπήχθετο / φροντίσδην, ἐπὶ δ' Ἀνδρομέδαν πότῃ.",
+   "greek_lines": [
+    "Ἄτθι, σοὶ δ' ἔμεθεν μεν ἀπήχθετο",
+    "φροντίσδην, ἐπὶ δ' Ἀνδρομέδαν πότῃ."
+   ],
+   "english_literal": "But to thee, Atthis, the thought of me is hateful; thou flittest to Andromeda.",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "Quoted by Hephaestion together with fr. 40",
+   "quote_reason": "subject or unstated",
+   "words": 11,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag41"
+  },
+  {
+   "wharton_no": 42,
+   "printed_as": "42",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "47",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Ἔρος δαὖτ' ἐτίναξεν ἔμοι φρένας, / ἄνεμος κατ' ὄρος δρύσιν ἐμπέσων",
+   "greek_lines": [
+    "Ἔρος δαὖτ' ἐτίναξεν ἔμοι φρένας,",
+    "ἄνεμος κατ' ὄρος δρύσιν ἐμπέσων"
+   ],
+   "english_literal": "Now Eros shakes my soul, a wind on the mountain falling on the oaks.",
+   "source_author": "Maximus Tyrius",
+   "source_authors": [
+    "Maximus Tyrius"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "Quoted by Maximus Tyrius",
+   "quote_reason": "subject or unstated",
+   "words": 10,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag42"
+  },
+  {
+   "wharton_no": 43,
+   "printed_as": "43",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "149",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ὄτα πάννυχος ἄσφι κατάγρει",
+   "greek_lines": [
+    "Ὄτα πάννυχος ἄσφι κατάγρει"
+   ],
+   "english_literal": "When all night long [sleep] holds their [eyes].",
+   "source_author": "Apollonius Dyscolus",
+   "source_authors": [
+    "Apollonius Dyscolus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Quoted by Apollonius",
+   "quote_reason": "language",
+   "words": 4,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag43"
+  },
+  {
+   "wharton_no": 44,
+   "printed_as": "44",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "101",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Χειρόμακτρα δε καγγόνων / πορφυρᾶ ... / καὶ ταῦτα μὲν ἀτιμάσεις, / επεμψ' ἀπὺ Φωκάας / δῶρα τίμια καγγόνων.",
+   "greek_lines": [
+    "Χειρόμακτρα δε καγγόνων",
+    "πορφυρᾶ ...",
+    "καὶ ταῦτα μὲν ἀτιμάσεις,",
+    "επεμψ' ἀπὺ Φωκάας",
+    "δῶρα τίμια καγγόνων."
+   ],
+   "english_literal": "And purple napkins for thy lap ... (even these wilt thou despise) I sent from Phocaea, precious gifts for thy lap.",
+   "source_author": "Athenaeus",
+   "source_authors": [
+    "Athenaeus"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "Quoted by Athenaeus",
+   "quote_reason": "subject or unstated",
+   "words": 14,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag44"
+  },
+  {
+   "wharton_no": 45,
+   "printed_as": "45",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "118",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ἄγε δὴ χέλυ δῖά μοι / φωνάεσσα γένοιο.",
+   "greek_lines": [
+    "Ἄγε δὴ χέλυ δῖά μοι",
+    "φωνάεσσα γένοιο."
+   ],
+   "english_literal": "Come now, divine shell, become vocal for me.",
+   "source_author": "Hermogenes",
+   "source_authors": [
+    "Hermogenes",
+    "Eustathius"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "Quoted by Hermogenes and Eustathius",
+   "quote_reason": "subject or unstated",
+   "words": 7,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag45"
+  },
+  {
+   "wharton_no": 46,
+   "printed_as": "46",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Κἀπάλαις ὑποθύμιδας / πλέκταις ἀμπ' ἀπάλᾳ δέρα.",
+   "greek_lines": [
+    "Κἀπάλαις ὑποθύμιδας",
+    "πλέκταις ἀμπ' ἀπάλᾳ δέρα."
+   ],
+   "english_literal": "And tender woven garlands round tender neck",
+   "source_author": "Athenaeus",
+   "source_authors": [
+    "Athenaeus"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "From Athenaeus",
+   "quote_reason": "subject or unstated",
+   "words": 6,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag46"
+  },
+  {
+   "wharton_no": 47,
+   "printed_as": "47",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "178",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Γέλλως παιδοφιλωτέρα.",
+   "greek_lines": [
+    "Γέλλως παιδοφιλωτέρα."
+   ],
+   "english_literal": "Fonder of maids than Gello.",
+   "source_author": "Zenobius",
+   "source_authors": [
+    "Zenobius"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "Quoted as a proverb by Zenobius",
+   "quote_reason": "language",
+   "words": 2,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag47"
+  },
+  {
+   "wharton_no": 48,
+   "printed_as": "48",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "144",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Μάλα δὴ κεκορημένας / Γόργως.",
+   "greek_lines": [
+    "Μάλα δὴ κεκορημένας",
+    "Γόργως."
+   ],
+   "english_literal": "Of Gorgo full weary.",
+   "source_author": "Choeroboscus",
+   "source_authors": [
+    "Choeroboscus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Quoted by Choeroboscus",
+   "quote_reason": "language",
+   "words": 4,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag48"
+  },
+  {
+   "wharton_no": 49,
+   "printed_as": "49",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Βρενθείω βασιληΐω.",
+   "greek_lines": [
+    "Βρενθείω βασιληΐω."
+   ],
+   "english_literal": "Of a proud (or perfumed, or flowery) palace.",
+   "source_author": "Athenaeus",
+   "source_authors": [
+    "Athenaeus"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "Athenaeus says Sappho here mentions",
+   "quote_reason": "subject or unstated",
+   "words": 2,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag49"
+  },
+  {
+   "wharton_no": 50,
+   "printed_as": "50",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "46",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ἔγω δ' ἐπὶ μαλθάκαν / τύλαν σπολέω μέλεα.",
+   "greek_lines": [
+    "Ἔγω δ' ἐπὶ μαλθάκαν",
+    "τύλαν σπολέω μέλεα."
+   ],
+   "english_literal": "But I upon a soft cushion dispose my limbs.",
+   "source_author": "Herodian",
+   "source_authors": [
+    "Herodian"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From Herodian",
+   "quote_reason": "subject or unstated",
+   "words": 7,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag50"
+  },
+  {
+   "wharton_no": 51,
+   "printed_as": "51",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "141",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Κῆ δ' ἀμβροσίας μὲν κράτηρ ἐκέκρατο, / Ἐρμᾶς δ' ἔλεν ὄλπιν θέοις οἰνοχόησαι. / κῆνοι δ' ἄρα παντες καρχησιά τ' ἦχον / κἄλειβον, ἀράσαντο δὲ πάμπαν ἔσλα / τῷ γάμβρῳ.",
+   "greek_lines": [
+    "Κῆ δ' ἀμβροσίας μὲν κράτηρ ἐκέκρατο,",
+    "Ἐρμᾶς δ' ἔλεν ὄλπιν θέοις οἰνοχόησαι.",
+    "κῆνοι δ' ἄρα παντες καρχησιά τ' ἦχον",
+    "κἄλειβον, ἀράσαντο δὲ πάμπαν ἔσλα",
+    "τῷ γάμβρῳ."
+   ],
+   "english_literal": "And there the bowl of ambrosia was mixed, and Hermes took the ladle to pour out for the gods; and then they all held goblets, and made libation, and wished the bridegroom all good luck.",
+   "source_author": "Athenaeus",
+   "source_authors": [
+    "Athenaeus"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "quoted by Athenaeus",
+   "quote_reason": "metre",
+   "words": 26,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag51"
+  },
+  {
+   "wharton_no": 52,
+   "printed_as": "52",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "154",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Δέδυκε μὲν ἀ σελάννα / καὶ Πληΐαδες, μέσαι δέ / νύκτες, πάρα δ' ἔρχετ' ὤρα, / ἔγω δὲ μόνα κατεύδω",
+   "greek_lines": [
+    "Δέδυκε μὲν ἀ σελάννα",
+    "καὶ Πληΐαδες, μέσαι δέ",
+    "νύκτες, πάρα δ' ἔρχετ' ὤρα,",
+    "ἔγω δὲ μόνα κατεύδω"
+   ],
+   "english_literal": "The moon has set, and the Pleiades; it is midnight, the time is going by, and I sleep alone.",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "Quoted by Hephaestion",
+   "quote_reason": "metre",
+   "words": 17,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag52"
+  },
+  {
+   "wharton_no": 53,
+   "printed_as": "53",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "154",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Πλήρης μὲν ἐφαίνετ' ἀ σελάννα, / αἰ δ' ὡς περὶ βῶμον ἐστάθησαν.",
+   "greek_lines": [
+    "Πλήρης μὲν ἐφαίνετ' ἀ σελάννα,",
+    "αἰ δ' ὡς περὶ βῶμον ἐστάθησαν."
+   ],
+   "english_literal": "The moon rose full, and the women stood as though around an altar.",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "Quoted by Hephaestion",
+   "quote_reason": "metre",
+   "words": 11,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag53"
+  },
+  {
+   "wharton_no": 54,
+   "printed_as": "54",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Κρῆσσαί νύ ποτ' ὦδ' ἐμμελέως πόδεσσιν / ὠρχεῦντ' ἀπάλοις ἀμφ' ἐρόεντα βῶμον / πόας τέρεν ἄνθος μάλακον μάτεισαι.",
+   "greek_lines": [
+    "Κρῆσσαί νύ ποτ' ὦδ' ἐμμελέως πόδεσσιν",
+    "ὠρχεῦντ' ἀπάλοις ἀμφ' ἐρόεντα βῶμον",
+    "πόας τέρεν ἄνθος μάλακον μάτεισαι."
+   ],
+   "english_literal": "Thus at times with tender feet the Cretan women dance in measure round the fair altar, trampling the fine soft bloom of the grass.",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "Quoted by Hephaestion",
+   "quote_reason": "metre",
+   "words": 16,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag54"
+  },
+  {
+   "wharton_no": 55,
+   "printed_as": "55",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Ἄβρα δηὖτε παχήᾳ σπόλᾳ ἀλλόμαν.",
+   "greek_lines": [
+    "Ἄβρα δηὖτε παχήᾳ σπόλᾳ ἀλλόμαν."
+   ],
+   "english_literal": "Then delicately in thick robe I sprang.",
+   "source_author": "Herodian",
+   "source_authors": [
+    "Herodian"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From Herodian",
+   "quote_reason": "language",
+   "words": 5,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag55"
+  },
+  {
+   "wharton_no": 56,
+   "printed_as": "56",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "166",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Φαῖσι δή ποτα Λήδαν ὐακινθίνων / [ὐπ' ἀνθέων] πεπυκαδμένον / εὔρην ὤϊον.",
+   "greek_lines": [
+    "Φαῖσι δή ποτα Λήδαν ὐακινθίνων",
+    "[ὐπ' ἀνθέων] πεπυκαδμένον",
+    "εὔρην ὤϊον."
+   ],
+   "english_literal": "Leda they say once found an egg hidden under hyacinth-blossoms.",
+   "source_author": "Etymologicum Magnum",
+   "source_authors": [
+    "Etymologicum Magnum",
+    "Athenaeus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From the Etymologicum Magnum, Athenaeus, and others",
+   "quote_reason": "subject or unstated",
+   "words": 10,
+   "words_in_brackets": 2,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag56"
+  },
+  {
+   "wharton_no": 57,
+   "printed_as": "57A",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "151",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ὀφθάλμοις δὲ μέλαις νύκτος ἄωρος.",
+   "greek_lines": [
+    "Ὀφθάλμοις δὲ μέλαις νύκτος ἄωρος."
+   ],
+   "english_literal": "And dark-eyed Sleep, child of Night.",
+   "source_author": "Etymologicum Magnum",
+   "source_authors": [
+    "Etymologicum Magnum"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From the Etymologicum Magnum",
+   "quote_reason": "subject or unstated",
+   "words": 5,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag57"
+  },
+  {
+   "wharton_no": 58,
+   "printed_as": "58",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "133",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ἔχει μὲν Ἀνδρομέδα κάλαν ἀμοίβαν.",
+   "greek_lines": [
+    "Ἔχει μὲν Ἀνδρομέδα κάλαν ἀμοίβαν."
+   ],
+   "english_literal": "Andromeda has a fair requital.",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "Quoted by Hephaestion together with the following",
+   "quote_reason": "subject or unstated",
+   "words": 5,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag58"
+  },
+  {
+   "wharton_no": 59,
+   "printed_as": "59",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "133",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ψάπφοι, τί τὰν πολύολβον Ἀφρόδιταν;",
+   "greek_lines": [
+    "Ψάπφοι, τί τὰν πολύολβον Ἀφρόδιταν;"
+   ],
+   "english_literal": "Sappho, why [celebrate] blissful Aphrodite?",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "Quoted by Hephaestion together with the following",
+   "quote_reason": "subject or unstated",
+   "words": 5,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag59"
+  },
+  {
+   "wharton_no": 60,
+   "printed_as": "60",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "128",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Δεῦτέ νυν, ἄβραι Χάριτες, καλλίκομοι τε Μοῖσαι.",
+   "greek_lines": [
+    "Δεῦτέ νυν, ἄβραι Χάριτες, καλλίκομοι τε Μοῖσαι."
+   ],
+   "english_literal": "Come now, delicate Graces and fair-haired Muses.",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion",
+    "Attilius Fortunatianus",
+    "Servius"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "Quoted by Hephaestion, Attilius Fortunatianus",
+   "quote_reason": "subject or unstated",
+   "words": 7,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag60"
+  },
+  {
+   "wharton_no": 61,
+   "printed_as": "61",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "153",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Πάρθενον ἀδύφωνον",
+   "greek_lines": [
+    "Πάρθενον ἀδύφωνον"
+   ],
+   "english_literal": "A sweet-voiced maiden.",
+   "source_author": "Attilius Fortunatianus",
+   "source_authors": [
+    "Attilius Fortunatianus"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "From Attilius Fortunatianus",
+   "quote_reason": "subject or unstated",
+   "words": 2,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag61"
+  },
+  {
+   "wharton_no": 62,
+   "printed_as": "62",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "140",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Κατθνάσκει, Κυθέρη', ἄβρος Ἄδωνις, τί κε θεῖμεν· / Καττύπτεσθε κόραι καὶ κατερείκεσθε χίτωνας.",
+   "greek_lines": [
+    "Κατθνάσκει, Κυθέρη', ἄβρος Ἄδωνις, τί κε θεῖμεν·",
+    "Καττύπτεσθε κόραι καὶ κατερείκεσθε χίτωνας."
+   ],
+   "english_literal": "Delicate Adonis is dying, Cytherea; what shall we do? Beat your breasts, maidens, and rend your tunics.",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "Quoted by Hephaestion",
+   "quote_reason": "language",
+   "words": 12,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag62"
+  },
+  {
+   "wharton_no": 63,
+   "printed_as": "63",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "168",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Ὦ τὸν Ἄδωνιν.",
+   "greek_lines": [
+    "Ὦ τὸν Ἄδωνιν."
+   ],
+   "english_literal": "Ah for Adonis!",
+   "source_author": "Marius Plotius",
+   "source_authors": [
+    "Marius Plotius"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "From Marius Plotius",
+   "quote_reason": "subject or unstated",
+   "words": 3,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag63"
+  },
+  {
+   "wharton_no": 64,
+   "printed_as": "64",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "54",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ἐλθοντ' εξ ὀράνω πορφυρίαν [ἔχοντα] περθέμενον / χλάμυν.",
+   "greek_lines": [
+    "Ἐλθοντ' εξ ὀράνω πορφυρίαν [ἔχοντα] περθέμενον",
+    "χλάμυν."
+   ],
+   "english_literal": "Coming from heaven wearing a purple mantle.",
+   "source_author": "Pollux",
+   "source_authors": [
+    "Pollux"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Quoted by Pollux",
+   "quote_reason": "metre",
+   "words": 7,
+   "words_in_brackets": 1,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag64"
+  },
+  {
+   "wharton_no": 65,
+   "printed_as": "65",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "53",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Βροδοπάχεες ἄγναι Χάριτες, δεῦτε Δίος κόραι.",
+   "greek_lines": [
+    "Βροδοπάχεες ἄγναι Χάριτες, δεῦτε Δίος κόραι."
+   ],
+   "english_literal": "Come, rosy-armed pure Graces, daughters of Zeus.",
+   "source_author": null,
+   "source_authors": [],
+   "source_kind": null,
+   "source_evidence": null,
+   "quote_reason": null,
+   "words": 6,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag65"
+  },
+  {
+   "wharton_no": 66,
+   "printed_as": "66",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Ὀ δ' Ἄρευς φαῖσί κεν Ἄφαιστον ἄγην βίᾳ.",
+   "greek_lines": [
+    "Ὀ δ' Ἄρευς φαῖσί κεν Ἄφαιστον ἄγην βίᾳ."
+   ],
+   "english_literal": "But Ares says he would drag Hephaestus by force.",
+   "source_author": "Priscian",
+   "source_authors": [
+    "Priscian"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From Priscian",
+   "quote_reason": "subject or unstated",
+   "words": 8,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag66"
+  },
+  {
+   "wharton_no": 67,
+   "printed_as": "67",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "44",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Πόλλα δ' ἀνάριθμα / ποτήρια καλαίφις.",
+   "greek_lines": [
+    "Πόλλα δ' ἀνάριθμα",
+    "ποτήρια καλαίφις."
+   ],
+   "english_literal": "Many thousand cups thou drainest.",
+   "source_author": "Athenaeus",
+   "source_authors": [
+    "Athenaeus"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "Quoted by Athenaeus",
+   "quote_reason": "subject or unstated",
+   "words": 5,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag67"
+  },
+  {
+   "wharton_no": 68,
+   "printed_as": "68",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "55",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Κατθάνοισα δὲ κείσεαι πότα, κωὐ μναμοσύνα σέθεν / ἔσσετ' οὔτε τότ' οὔτ' ὔστερον· οὐ γὰρ πεδέχεις βρόδων / τών ἐκ Πιερίας, ἀλλ' ἀφάνης κἠν Ἀΐδα δόμοις / φοιτάσεις πεδ' ἀμαύρων νεκύων ἐκπεποταμένα.",
+   "greek_lines": [
+    "Κατθάνοισα δὲ κείσεαι πότα, κωὐ μναμοσύνα σέθεν",
+    "ἔσσετ' οὔτε τότ' οὔτ' ὔστερον· οὐ γὰρ πεδέχεις βρόδων",
+    "τών ἐκ Πιερίας, ἀλλ' ἀφάνης κἠν Ἀΐδα δόμοις",
+    "φοιτάσεις πεδ' ἀμαύρων νεκύων ἐκπεποταμένα."
+   ],
+   "english_literal": "But thou shalt ever lie dead, nor shall there be any remembrance of thee then or thereafter, for thou hast not of the roses of Pieria; but thou shalt wander obscure even in the house of Hades, flitting among the shadowy dead.",
+   "source_author": "Stobaeus",
+   "source_authors": [
+    "Stobaeus",
+    "Plutarch"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "From Stobaeus",
+   "quote_reason": "subject or unstated",
+   "words": 29,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag68"
+  },
+  {
+   "wharton_no": 69,
+   "printed_as": "69",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "56",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Οὐδ' ἴαν δοκίμοιμι προσίδοισαν φάος ἀλίω / ἔσσεσθαι σοφίαν πάρθενον εἰς οὐδένα πω χρόνον / τοιαύταν.",
+   "greek_lines": [
+    "Οὐδ' ἴαν δοκίμοιμι προσίδοισαν φάος ἀλίω",
+    "ἔσσεσθαι σοφίαν πάρθενον εἰς οὐδένα πω χρόνον",
+    "τοιαύταν."
+   ],
+   "english_literal": "No one maiden I think shall at any time see the sunlight that shall be as wise as thou.",
+   "source_author": "Chrysippus",
+   "source_authors": [
+    "Chrysippus"
+   ],
+   "source_kind": "philosopher",
+   "source_evidence": "Quoted by Chrysippus",
+   "quote_reason": "subject or unstated",
+   "words": 14,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag69"
+  },
+  {
+   "wharton_no": 70,
+   "printed_as": "70",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "57",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Τίς δ' ἀγροιῶτίς τοι θέλγει νόον, / οὐκ ἐπισταμένα τὰ βράκε' ἔλκην ἐπὶ τῶν σφύρων;",
+   "greek_lines": [
+    "Τίς δ' ἀγροιῶτίς τοι θέλγει νόον,",
+    "οὐκ ἐπισταμένα τὰ βράκε' ἔλκην ἐπὶ τῶν σφύρων;"
+   ],
+   "english_literal": "What country girl bewitches thy heart, who knows not how to draw her dress about her ankles?",
+   "source_author": "Athenaeus",
+   "source_authors": [
+    "Athenaeus"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "Athenaeus, speaking of the care",
+   "quote_reason": "subject or unstated",
+   "words": 14,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag70"
+  },
+  {
+   "wharton_no": 71,
+   "printed_as": "71",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Ἤρων ἐξεδίδαξ' εκ Γυάρων τὰν τανυσίδρομον.",
+   "greek_lines": [
+    "Ἤρων ἐξεδίδαξ' εκ Γυάρων τὰν τανυσίδρομον."
+   ],
+   "english_literal": "I taught Hero of Gyara, the swift runner.",
+   "source_author": "Choeroboscus",
+   "source_authors": [
+    "Choeroboscus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Quoted by Choeroboscus",
+   "quote_reason": "language",
+   "words": 6,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag71"
+  },
+  {
+   "wharton_no": 72,
+   "printed_as": "72",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "120",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ἀλλά τις οὐκ ἔμμι παλιγκότων / οργαν, ἀλλ' ἀβάκην τὰν φρέν' ἔχω",
+   "greek_lines": [
+    "Ἀλλά τις οὐκ ἔμμι παλιγκότων",
+    "οργαν, ἀλλ' ἀβάκην τὰν φρέν' ἔχω"
+   ],
+   "english_literal": "I am not of a malignant nature, but have a quiet temper.",
+   "source_author": "Etymologicum Magnum",
+   "source_authors": [
+    "Etymologicum Magnum"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Quoted in the Etymologicum Magnum",
+   "quote_reason": "language",
+   "words": 11,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag72"
+  },
+  {
+   "wharton_no": 73,
+   "printed_as": "73",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Αὐτὰρ ὀραῖαι στεφανηπλόκευν.",
+   "greek_lines": [
+    "Αὐτὰρ ὀραῖαι στεφανηπλόκευν."
+   ],
+   "english_literal": "But charming [maidens] plaited garlands.",
+   "source_author": "Scholiast on Aristophanes",
+   "source_authors": [
+    "Scholiast on Aristophanes"
+   ],
+   "source_kind": "scholiast or commentator",
+   "source_evidence": "Quoted by the Scholiast on Aristophanes",
+   "quote_reason": "subject or unstated",
+   "words": 3,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag73"
+  },
+  {
+   "wharton_no": 74,
+   "printed_as": "74",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "159",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Σύ τε κἄμος θεράπων Ἔρος.",
+   "greek_lines": [
+    "Σύ τε κἄμος θεράπων Ἔρος."
+   ],
+   "english_literal": "Thou and my servant Love.",
+   "source_author": "Maximus Tyrius",
+   "source_authors": [
+    "Maximus Tyrius"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "Quoted by Maximus Tyrius",
+   "quote_reason": "subject or unstated",
+   "words": 5,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag74"
+  },
+  {
+   "wharton_no": 75,
+   "printed_as": "75",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "121",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Ἀλλ' ἔων φίλος ἄμμιν [ἄλλο] / λέχος ἄρνυσο νεώτερον· / οὐ γὰρ τλάσομ' ἔγω ξυνοίκην / νέῳ γ' ἔσσα γεραιτέρα.",
+   "greek_lines": [
+    "Ἀλλ' ἔων φίλος ἄμμιν [ἄλλο]",
+    "λέχος ἄρνυσο νεώτερον·",
+    "οὐ γὰρ τλάσομ' ἔγω ξυνοίκην",
+    "νέῳ γ' ἔσσα γεραιτέρα."
+   ],
+   "english_literal": "But if thou lovest us, choose another and a younger bed-fellow; for I will not brook to live with thee, old woman with young man.",
+   "source_author": "Stobaeus",
+   "source_authors": [
+    "Stobaeus",
+    "Apostolius"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "From Stobaeus' Anthology, and Apostolius",
+   "quote_reason": "subject or unstated",
+   "words": 17,
+   "words_in_brackets": 1,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag75"
+  },
+  {
+   "wharton_no": 76,
+   "printed_as": "76",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "82a",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Εὐμορφοτέρα Μνασιδίκα τᾶς ἀπάλας Γυρίννως.",
+   "greek_lines": [
+    "Εὐμορφοτέρα Μνασιδίκα τᾶς ἀπάλας Γυρίννως."
+   ],
+   "english_literal": "Mnasidica is more shapely than the tender Gyrinno.",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "Quoted by Hephaestion",
+   "quote_reason": "metre",
+   "words": 5,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag76"
+  },
+  {
+   "wharton_no": 77,
+   "printed_as": "77",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "91",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Ἀσαροτέρας ὄυδαμ' ἐπ', ὦ ῎ραννα, σέθεν τύχοισα.",
+   "greek_lines": [
+    "Ἀσαροτέρας ὄυδαμ' ἐπ', ὦ ῎ραννα, σέθεν τύχοισα."
+   ],
+   "english_literal": "Scornfuler than thee, Eranna, have I nowhere found.",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "Quoted by Hephaestion with the foregoing",
+   "quote_reason": "subject or unstated",
+   "words": 7,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag77"
+  },
+  {
+   "wharton_no": 78,
+   "printed_as": "78",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "81",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Σὺ δὲ στεφάνοις, ὦ Δίκα, περθέσθ' ἐράταις φόβαισιν, / ὄρπακας ἀνήτοιο συνέρραισ' ἀπαλάισι χέρσιν· / εὐάνθεσιν ἔκ γὰρ πέλεται καὶ χάριτος μακαιρᾶν / μᾶλλον προτέρην· ἀστεφανώτοισι δ' ἀπυστρέφονται.",
+   "greek_lines": [
+    "Σὺ δὲ στεφάνοις, ὦ Δίκα, περθέσθ' ἐράταις φόβαισιν,",
+    "ὄρπακας ἀνήτοιο συνέρραισ' ἀπαλάισι χέρσιν·",
+    "εὐάνθεσιν ἔκ γὰρ πέλεται καὶ χάριτος μακαιρᾶν",
+    "μᾶλλον προτέρην· ἀστεφανώτοισι δ' ἀπυστρέφονται."
+   ],
+   "english_literal": "Do thou, Dica, set garlands round thy lovely hair, twining shoots of dill together with soft hands: for those who have fair flowers may best stand first, even in the favour of Goddesses; who turn their face away from those who lack garlands.",
+   "source_author": "Athenaeus",
+   "source_authors": [
+    "Athenaeus"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "Athenaeus, quoting this fragment",
+   "quote_reason": "style",
+   "words": 25,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag78"
+  },
+  {
+   "wharton_no": 79,
+   "printed_as": "79",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Ἐγὼ δὲ φίλημ' ἀβροσύναν, καὶ μοι τὸ λάμπρον / ἔρος / ἀελίω καὶ τὸ κάλον λέλογχεν.",
+   "greek_lines": [
+    "Ἐγὼ δὲ φίλημ' ἀβροσύναν, καὶ μοι τὸ λάμπρον",
+    "ἔρος",
+    "ἀελίω καὶ τὸ κάλον λέλογχεν."
+   ],
+   "english_literal": "I love delicacy, and for me Love has the sun's splendour and beauty.",
+   "source_author": "Athenaeus",
+   "source_authors": [
+    "Athenaeus"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "Athenaeus, quoting Clearchus",
+   "quote_reason": "subject or unstated",
+   "words": 14,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag79"
+  },
+  {
+   "wharton_no": 80,
+   "printed_as": "80",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "46",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Κὰμ μέν τε τύλαν κασπολέω.",
+   "greek_lines": [
+    "Κὰμ μέν τε τύλαν κασπολέω."
+   ],
+   "english_literal": "And down I set the cushion.",
+   "source_author": "Herodian",
+   "source_authors": [
+    "Herodian"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Quoted by Herodian",
+   "quote_reason": "subject or unstated",
+   "words": 5,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag80"
+  },
+  {
+   "wharton_no": 81,
+   "printed_as": "VI",
+   "shares_entry_with": null,
+   "section": "V. IN CHORIAMBIC METRE",
+   "voigt_no": "148",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ὠ πλοῦτος ἄνευ σεῦ γ' ἀρέτα 'στ' οὐκ ἀσίνης πάροικος / [ἤ δ' ἐξ ἀμφοτέρον κρᾶσις εὐδαιμονίας ἔχει τὸ ἄκρον].",
+   "greek_lines": [
+    "Ὠ πλοῦτος ἄνευ σεῦ γ' ἀρέτα 'στ' οὐκ ἀσίνης πάροικος",
+    "[ἤ δ' ἐξ ἀμφοτέρον κρᾶσις εὐδαιμονίας ἔχει τὸ ἄκρον]."
+   ],
+   "english_literal": "Wealth without thee, Worth, is no safe neighbour [but the mixture of both is the height of happiness].",
+   "source_author": "Scholiast on Pindar",
+   "source_authors": [
+    "Scholiast on Pindar"
+   ],
+   "source_kind": "scholiast or commentator",
+   "source_evidence": "From the Scholiast on Pindar",
+   "quote_reason": "subject or unstated",
+   "words": 19,
+   "words_in_brackets": 9,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag81"
+  },
+  {
+   "wharton_no": 82,
+   "printed_as": "82",
+   "shares_entry_with": null,
+   "section": "VI. IN VARIOUS METRES",
+   "voigt_no": "124",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Αὔτα δὲ σὺ Καλλιόπα.",
+   "greek_lines": [
+    "Αὔτα δὲ σὺ Καλλιόπα."
+   ],
+   "english_literal": "And thou thyself, Calliope.",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "Quoted by Hephaestion",
+   "quote_reason": "metre",
+   "words": 4,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag82"
+  },
+  {
+   "wharton_no": 83,
+   "printed_as": "83",
+   "shares_entry_with": null,
+   "section": "VI. IN VARIOUS METRES",
+   "voigt_no": "126",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Δαύοις ἀπάλας ἐτάρας / ἐν στήθεσιν",
+   "greek_lines": [
+    "Δαύοις ἀπάλας ἐτάρας",
+    "ἐν στήθεσιν"
+   ],
+   "english_literal": "Sleep thou in the bosom of thy tender girlfriend.",
+   "source_author": "Etymologicum Magnum",
+   "source_authors": [
+    "Etymologicum Magnum"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From the Etymologicum Magnum",
+   "quote_reason": "subject or unstated",
+   "words": 5,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag83"
+  },
+  {
+   "wharton_no": 84,
+   "printed_as": "84",
+   "shares_entry_with": null,
+   "section": "VI. IN VARIOUS METRES",
+   "voigt_no": "127",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Δεῦρο δηὖτε Μοῖσαι, χρύσιον λίποισαι.",
+   "greek_lines": [
+    "Δεῦρο δηὖτε Μοῖσαι, χρύσιον λίποισαι."
+   ],
+   "english_literal": "Hither now, Muses, leaving golden ...",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "Quoted by Hephaestion",
+   "quote_reason": "metre",
+   "words": 5,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag84"
+  },
+  {
+   "wharton_no": 85,
+   "printed_as": "85",
+   "shares_entry_with": null,
+   "section": "VI. IN VARIOUS METRES",
+   "voigt_no": "132",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ἔστι μοι κάλα πάϊς, χρυσίοισιν ἀνθέμοισιν / ἐμφέρην ἔχοισα μόρφαν, Κλῆϊσ' ἀγαπάτα, / ἀντί τᾶς ἔγω οὐδὲ Λυδίαν παῖσαν οὐδ' ἔρανναν.",
+   "greek_lines": [
+    "Ἔστι μοι κάλα πάϊς, χρυσίοισιν ἀνθέμοισιν",
+    "ἐμφέρην ἔχοισα μόρφαν, Κλῆϊσ' ἀγαπάτα,",
+    "ἀντί τᾶς ἔγω οὐδὲ Λυδίαν παῖσαν οὐδ' ἔρανναν."
+   ],
+   "english_literal": "I have a fair daughter with a form like a golden flower, Cleïs the beloved, above whom I [prize] nor all Lydia nor lovely [Lesbos]....",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "Quoted and elaborately scanned by Hephaestion",
+   "quote_reason": "metre",
+   "words": 19,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag85"
+  },
+  {
+   "wharton_no": 86,
+   "printed_as": "VII",
+   "shares_entry_with": null,
+   "section": "VI. IN VARIOUS METRES",
+   "voigt_no": "155",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Πόλλα μοι τὰν / Πωλυανάκτιδα παῖδα χαῖρην.",
+   "greek_lines": [
+    "Πόλλα μοι τὰν",
+    "Πωλυανάκτιδα παῖδα χαῖρην."
+   ],
+   "english_literal": "All joy to thee, daughter of Polyanax.",
+   "source_author": "Maximus Tyrius",
+   "source_authors": [
+    "Maximus Tyrius"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "From Maximus Tyrius",
+   "quote_reason": "subject or unstated",
+   "words": 6,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag86"
+  },
+  {
+   "wharton_no": 87,
+   "printed_as": "87",
+   "shares_entry_with": null,
+   "section": "VII. IN THE IONIC A MINORE METRE",
+   "voigt_no": "134",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ζὰ δ' ἐλεξάμαν ὄναρ Κυπρογενήᾳ.",
+   "greek_lines": [
+    "Ζὰ δ' ἐλεξάμαν ὄναρ Κυπρογενήᾳ."
+   ],
+   "english_literal": "In a dream I spake with the daughter of Cyprus.",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "From Hephaestion",
+   "quote_reason": "subject or unstated",
+   "words": 5,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag87"
+  },
+  {
+   "wharton_no": 88,
+   "printed_as": "88",
+   "shares_entry_with": null,
+   "section": "VII. IN THE IONIC A MINORE METRE",
+   "voigt_no": "135",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Τί με Πανδίονις ὦ ῎ραννα χελίδων;",
+   "greek_lines": [
+    "Τί με Πανδίονις ὦ ῎ραννα χελίδων;"
+   ],
+   "english_literal": "Why, lovely swallow, daughter of Pandīon, [weary] me?",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "From Hephaestion",
+   "quote_reason": "metre",
+   "words": 6,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag88"
+  },
+  {
+   "wharton_no": 89,
+   "printed_as": "89",
+   "shares_entry_with": null,
+   "section": "VII. IN THE IONIC A MINORE METRE",
+   "voigt_no": "100",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "... Ἀμφὶ δ' ἄβροις λασίοις εὖ ϝε πύκασσεν.",
+   "greek_lines": [
+    "... Ἀμφὶ δ' ἄβροις λασίοις εὖ ϝε πύκασσεν."
+   ],
+   "english_literal": "She wrapped herself well in delicate hairy ...",
+   "source_author": "Pollux",
+   "source_authors": [
+    "Pollux"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From Pollux",
+   "quote_reason": "subject or unstated",
+   "words": 7,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag89"
+  },
+  {
+   "wharton_no": 90,
+   "printed_as": "VIII",
+   "shares_entry_with": null,
+   "section": "VII. IN THE IONIC A MINORE METRE",
+   "voigt_no": "102",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Γλύκεια μᾶτερ, οὔτοι δύναμαι κρέκην τὸν ἴστον, / πόθῳ δάμεισα παῖδος βραδίναν δι' Αφρόδιταν.",
+   "greek_lines": [
+    "Γλύκεια μᾶτερ, οὔτοι δύναμαι κρέκην τὸν ἴστον,",
+    "πόθῳ δάμεισα παῖδος βραδίναν δι' Αφρόδιταν."
+   ],
+   "english_literal": "Sweet Mother, I cannot weave my web, broken as I am by longing for a boy, at soft Aphrodite's will.",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "From Hephaestion",
+   "quote_reason": "metre",
+   "words": 13,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag90"
+  },
+  {
+   "wharton_no": 91,
+   "printed_as": "91",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "111",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ἴψοι δὴ τὸ μέλαθρον / ᾿Υμήναον / ἀὲρρετε τέκτοντες ἄνδρες· / ᾿Υμήναον / γάμβρος ἔρχεται ἶσος Ἄρευϊ, / [᾿Υμήναον] / ἄνδρος μεγάλω πόλυ μείζων· / [᾿Υμήναον]",
+   "greek_lines": [
+    "Ἴψοι δὴ τὸ μέλαθρον",
+    "᾿Υμήναον",
+    "ἀὲρρετε τέκτοντες ἄνδρες·",
+    "᾿Υμήναον",
+    "γάμβρος ἔρχεται ἶσος Ἄρευϊ,",
+    "[᾿Υμήναον]",
+    "ἄνδρος μεγάλω πόλυ μείζων·",
+    "[᾿Υμήναον]"
+   ],
+   "english_literal": "Raise high the roof-beam, carpenters. (Hymenaeus!) Like Ares comes the bridegroom, (Hymenaeus!) taller far than a tall man. (Hymenaeus!)",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "Quoted by Hephaestion",
+   "quote_reason": "metre",
+   "words": 19,
+   "words_in_brackets": 2,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag91"
+  },
+  {
+   "wharton_no": 92,
+   "printed_as": "92",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "106",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Πέρροχος, ὠς ὄτ' ἄοιδος ὀ Λέσβιος ἀλλοδάποισιν.",
+   "greek_lines": [
+    "Πέρροχος, ὠς ὄτ' ἄοιδος ὀ Λέσβιος ἀλλοδάποισιν."
+   ],
+   "english_literal": "Towering, as the Lesbian singer towers among men of other lands.",
+   "source_author": "Demetrius",
+   "source_authors": [
+    "Demetrius"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "Quoted by Demetrius",
+   "quote_reason": "subject or unstated",
+   "words": 7,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag92"
+  },
+  {
+   "wharton_no": 93,
+   "printed_as": "93",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "105a",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Οἶον τὸ γλυκύμαλον ἐρεύθεται ἄκρῳ ἐπ' ὔσδῳ / ἄκρον ἐπ' ἀκροτατῳ· λελάθοντο δὲ μαλοδρόπηες, / οὐ μὰν ἐκλελάθοντ', ἀλλ' οὐκ ἐδύναντ' ἐπίκεσθαι.",
+   "greek_lines": [
+    "Οἶον τὸ γλυκύμαλον ἐρεύθεται ἄκρῳ ἐπ' ὔσδῳ",
+    "ἄκρον ἐπ' ἀκροτατῳ· λελάθοντο δὲ μαλοδρόπηες,",
+    "οὐ μὰν ἐκλελάθοντ', ἀλλ' οὐκ ἐδύναντ' ἐπίκεσθαι."
+   ],
+   "english_literal": "As the sweet-apple blushes on the end of the bough, the very end of the bough, which the gatherers overlooked, nay overlooked not but could not reach.",
+   "source_author": "Scholiast on Hermogenes",
+   "source_authors": [
+    "Scholiast on Hermogenes"
+   ],
+   "source_kind": "scholiast or commentator",
+   "source_evidence": "Quoted by the Scholiast on Hermogenes",
+   "quote_reason": "language",
+   "words": 20,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag93"
+  },
+  {
+   "wharton_no": 94,
+   "printed_as": "94",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "105b",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Οἴαν τὰν ὐάκινθον ἐν οὔρεσι ποίμενες ἄνδρες / πόσσι καταστείβοισι, χάμαι δ' ἐπιπορφύρει ἄνθος.",
+   "greek_lines": [
+    "Οἴαν τὰν ὐάκινθον ἐν οὔρεσι ποίμενες ἄνδρες",
+    "πόσσι καταστείβοισι, χάμαι δ' ἐπιπορφύρει ἄνθος."
+   ],
+   "english_literal": "As on the hills the shepherds trample the hyacinth under foot, and the flower darkens on the ground.",
+   "source_author": "Demetrius",
+   "source_authors": [
+    "Demetrius"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "Quoted by Demetrius",
+   "quote_reason": "style",
+   "words": 13,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag94"
+  },
+  {
+   "wharton_no": 95,
+   "printed_as": "95",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "104a",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ϝέσπερε, πάντα φέρων, ὄσα φαίνολις ἐσκέδασ' αὔως, / φέρεις οἶν, φέρες αἶγα, φέρεις ἄπυ ματέρι παῖδα.",
+   "greek_lines": [
+    "Ϝέσπερε, πάντα φέρων, ὄσα φαίνολις ἐσκέδασ' αὔως,",
+    "φέρεις οἶν, φέρες αἶγα, φέρεις ἄπυ ματέρι παῖδα."
+   ],
+   "english_literal": "Evening, thou that bringest all that bright morning scattered; thou bringest the sheep, the goat, the child back to her mother.",
+   "source_author": "Etymologicum Magnum",
+   "source_authors": [
+    "Etymologicum Magnum",
+    "Demetrius"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From the Etymologicum Magnum",
+   "quote_reason": "language",
+   "words": 15,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag95"
+  },
+  {
+   "wharton_no": 96,
+   "printed_as": "96",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Ἀϊπάρθενος ἔσσομαι.",
+   "greek_lines": [
+    "Ἀϊπάρθενος ἔσσομαι."
+   ],
+   "english_literal": "I shall be ever maiden.",
+   "source_author": "Cramer's Paris manuscripts",
+   "source_authors": [
+    "Cramer's Paris manuscripts"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From a Parisian MS. edited by Cramer",
+   "quote_reason": "language",
+   "words": 2,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag96"
+  },
+  {
+   "wharton_no": 97,
+   "printed_as": "97",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "109",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Δώσομεν, ησι πάτηρ.",
+   "greek_lines": [
+    "Δώσομεν, ησι πάτηρ."
+   ],
+   "english_literal": "We will give, says the father ...",
+   "source_author": "Cramer's Paris manuscripts",
+   "source_authors": [
+    "Cramer's Paris manuscripts"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From a Parisian MS. edited by Cramer",
+   "quote_reason": "subject or unstated",
+   "words": 3,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag97"
+  },
+  {
+   "wharton_no": 98,
+   "printed_as": "98",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "110",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Θυρώρῳ πόδες ἐπτορόγυιοι, / τὰ δὲ σάμβαλα πεμπεβόηα, / πίσυγγοι δὲ δέκ' ἐξεπόνασαν.",
+   "greek_lines": [
+    "Θυρώρῳ πόδες ἐπτορόγυιοι,",
+    "τὰ δὲ σάμβαλα πεμπεβόηα,",
+    "πίσυγγοι δὲ δέκ' ἐξεπόνασαν."
+   ],
+   "english_literal": "To the doorkeeper feet seven fathoms long, and sandals of five bulls' hides, the work of ten cobblers.",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "From Hephaestion",
+   "quote_reason": "metre",
+   "words": 11,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag98"
+  },
+  {
+   "wharton_no": 99,
+   "printed_as": "99",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "112",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ὄλβιε γάμβρε, σοὶ μὲν δὴ γάμος, ὠς ἄραο, / ἐκτετέλεστ', ἔχης δὲ πάρθενον, ἂν ἄραο.",
+   "greek_lines": [
+    "Ὄλβιε γάμβρε, σοὶ μὲν δὴ γάμος, ὠς ἄραο,",
+    "ἐκτετέλεστ', ἔχης δὲ πάρθενον, ἂν ἄραο."
+   ],
+   "english_literal": "Happy bridegroom, now is thy wedding come to thy desire, and thou hast the maiden of thy desire.",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "Quoted by Hephaestion",
+   "quote_reason": "metre",
+   "words": 14,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag99"
+  },
+  {
+   "wharton_no": 100,
+   "printed_as": "100",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "112",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Μελλίχιος δ' ἐπ' ἰμέρτῳ κέχυται προσώπῳ.",
+   "greek_lines": [
+    "Μελλίχιος δ' ἐπ' ἰμέρτῳ κέχυται προσώπῳ."
+   ],
+   "english_literal": "And a soft [paleness] is spread over the lovely face.",
+   "source_author": "Choricius",
+   "source_authors": [
+    "Choricius"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "an epithalamium by Choricius",
+   "quote_reason": "metre",
+   "words": 6,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag100"
+  },
+  {
+   "wharton_no": 101,
+   "printed_as": "101",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "50",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ὀ μὲν γὰρ κάλος, ὄσσον ἴδην, πέλεται [ἄγαθος], / ὀ δὲ κἄγαθος αὔτικα καὶ κάλος ἔσσεται.",
+   "greek_lines": [
+    "Ὀ μὲν γὰρ κάλος, ὄσσον ἴδην, πέλεται [ἄγαθος],",
+    "ὀ δὲ κἄγαθος αὔτικα καὶ κάλος ἔσσεται."
+   ],
+   "english_literal": "He who is fair to look upon is [good], and he who is good will soon be fair also.",
+   "source_author": "Galen",
+   "source_authors": [
+    "Galen"
+   ],
+   "source_kind": "other",
+   "source_evidence": "Galen, the physician",
+   "quote_reason": "style",
+   "words": 15,
+   "words_in_brackets": 1,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag101"
+  },
+  {
+   "wharton_no": 102,
+   "printed_as": "102",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "107",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ἦρ' ἔτι παρθενίας ἐπιβάλλομαι;",
+   "greek_lines": [
+    "Ἦρ' ἔτι παρθενίας ἐπιβάλλομαι;"
+   ],
+   "english_literal": "Do I still long for maidenhood?",
+   "source_author": "Apollonius Dyscolus",
+   "source_authors": [
+    "Apollonius Dyscolus",
+    "Scholiast on Dionysius Thrax"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Quoted by Apollonius, and by the Scholiast on Dionysius of Thrace",
+   "quote_reason": "metre",
+   "words": 4,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag102"
+  },
+  {
+   "wharton_no": 103,
+   "printed_as": "103",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "117",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Χαίροισα νύμφα, χαιρέτω δ' ὀ γάμβρος.",
+   "greek_lines": [
+    "Χαίροισα νύμφα, χαιρέτω δ' ὀ γάμβρος."
+   ],
+   "english_literal": "The bride [comes] rejoicing; let the bridegroom rejoice.",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "From Hephaestion",
+   "quote_reason": "metre",
+   "words": 6,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag103"
+  },
+  {
+   "wharton_no": 104,
+   "printed_as": "104",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "115",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Τίῳ σ', ὦ φίλε γάμβρε, κάλως ἐϊκάσδω; / ὄρπακι βραδίνῳ σε κάλιστ' ἐϊκάσδω.",
+   "greek_lines": [
+    "Τίῳ σ', ὦ φίλε γάμβρε, κάλως ἐϊκάσδω;",
+    "ὄρπακι βραδίνῳ σε κάλιστ' ἐϊκάσδω."
+   ],
+   "english_literal": "Whereunto may I well liken thee, dear bridegroom? To a soft shoot may I best liken thee.",
+   "source_author": "Hephaestion",
+   "source_authors": [
+    "Hephaestion"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "From Hephaestion",
+   "quote_reason": "metre",
+   "words": 12,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag104"
+  },
+  {
+   "wharton_no": 105,
+   "printed_as": "105",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "116",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "... Χαῖρε, νύμφα, / χαῖρε, τίμιε γάμβρε, πόλλα.",
+   "greek_lines": [
+    "... Χαῖρε, νύμφα,",
+    "χαῖρε, τίμιε γάμβρε, πόλλα."
+   ],
+   "english_literal": "Hail, bride! noble bridegroom, all hail!",
+   "source_author": "Servius",
+   "source_authors": [
+    "Servius"
+   ],
+   "source_kind": "scholiast or commentator",
+   "source_evidence": "Quoted by Servius",
+   "quote_reason": "subject or unstated",
+   "words": 6,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag105"
+  },
+  {
+   "wharton_no": 106,
+   "printed_as": "106",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "113",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Οὐ γαρ ἦν ἀτέρα πάϊς, ὦ γάμβρε, τοιαύτα.",
+   "greek_lines": [
+    "Οὐ γαρ ἦν ἀτέρα πάϊς, ὦ γάμβρε, τοιαύτα."
+   ],
+   "english_literal": "For there was no other girl, O bridegroom, like her.",
+   "source_author": "Dionysius of Halicarnassus",
+   "source_authors": [
+    "Dionysius of Halicarnassus"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "From Dionysius of Halicarnassus",
+   "quote_reason": "subject or unstated",
+   "words": 8,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag106"
+  },
+  {
+   "wharton_no": 107,
+   "printed_as": "107, 108",
+   "shares_entry_with": 108,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Ἐσπετ' ᾿Υμήναον. / Ὦ τὸν Ἀδώνιον.",
+   "greek_lines": [
+    "Ἐσπετ' ᾿Υμήναον.",
+    "Ὦ τὸν Ἀδώνιον."
+   ],
+   "english_literal": "Sing Hymenaeus! Ah for Adonis!",
+   "source_author": "Marius Plotius",
+   "source_authors": [
+    "Marius Plotius"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "From Plotius",
+   "quote_reason": "metre",
+   "words": 5,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag107"
+  },
+  {
+   "wharton_no": 108,
+   "printed_as": "107, 108",
+   "shares_entry_with": 107,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Ἐσπετ' ᾿Υμήναον. / Ὦ τὸν Ἀδώνιον.",
+   "greek_lines": [
+    "Ἐσπετ' ᾿Υμήναον.",
+    "Ὦ τὸν Ἀδώνιον."
+   ],
+   "english_literal": "Sing Hymenaeus! Ah for Adonis!",
+   "source_author": "Marius Plotius",
+   "source_authors": [
+    "Marius Plotius"
+   ],
+   "source_kind": "metrician",
+   "source_evidence": "From Plotius",
+   "quote_reason": "metre",
+   "words": 5,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag107"
+  },
+  {
+   "wharton_no": 109,
+   "printed_as": "109",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "114",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Παρθενία, παρθενία, ποῖ με λίποισ' ἀποίχῃ; / Οὐκέτι ἥξω πρὸς σε, οὐκέτι ἥξω.",
+   "greek_lines": [
+    "Παρθενία, παρθενία, ποῖ με λίποισ' ἀποίχῃ;",
+    "Οὐκέτι ἥξω πρὸς σε, οὐκέτι ἥξω."
+   ],
+   "english_literal": "A. Maidenhood, maidenhood, whither art thou gone away from me? B. Never again will I come to thee, never again.",
+   "source_author": "Demetrius",
+   "source_authors": [
+    "Demetrius"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "From Demetrius",
+   "quote_reason": "style",
+   "words": 12,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag109"
+  },
+  {
+   "wharton_no": 110,
+   "printed_as": "110",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Ἄλλαν μὴ καμεστέραν φρένα.",
+   "greek_lines": [
+    "Ἄλλαν μὴ καμεστέραν φρένα."
+   ],
+   "english_literal": "Fool, faint not thou in thy strong heart.",
+   "source_author": "Herodian",
+   "source_authors": [
+    "Herodian"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From a very corrupt passage in Herodian",
+   "quote_reason": "subject or unstated",
+   "words": 4,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag110"
+  },
+  {
+   "wharton_no": 111,
+   "printed_as": "111",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "165",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Φαίνεταί ϝοι κῆνος.",
+   "greek_lines": [
+    "Φαίνεταί ϝοι κῆνος."
+   ],
+   "english_literal": "To himself he seems ...",
+   "source_author": "Apollonius Dyscolus",
+   "source_authors": [
+    "Apollonius Dyscolus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "From Apollonius",
+   "quote_reason": "language",
+   "words": 3,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag111"
+  },
+  {
+   "wharton_no": 112,
+   "printed_as": "112",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "167",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Ὠΐω πόλυ λευκότερον.",
+   "greek_lines": [
+    "Ὠΐω πόλυ λευκότερον."
+   ],
+   "english_literal": "Much whiter than an egg.",
+   "source_author": "Athenaeus",
+   "source_authors": [
+    "Athenaeus"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "From Athenaeus",
+   "quote_reason": "subject or unstated",
+   "words": 3,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag112"
+  },
+  {
+   "wharton_no": 113,
+   "printed_as": "113",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "146",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Μήτ' ἔμοι μέλι μήτε μέλισσα",
+   "greek_lines": [
+    "Μήτ' ἔμοι μέλι μήτε μέλισσα"
+   ],
+   "english_literal": "Neither honey nor bee for me.",
+   "source_author": "proverb (many late authors)",
+   "source_authors": [
+    "proverb (many late authors)"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "A proverb quoted by many late authors",
+   "quote_reason": "metre",
+   "words": 5,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag113"
+  },
+  {
+   "wharton_no": 114,
+   "printed_as": "114",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "145",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Μὴ κίνη χέραδας.",
+   "greek_lines": [
+    "Μὴ κίνη χέραδας."
+   ],
+   "english_literal": "Stir not the shingle.",
+   "source_author": "Scholiast on Apollonius Rhodius",
+   "source_authors": [
+    "Scholiast on Apollonius Rhodius"
+   ],
+   "source_kind": "scholiast or commentator",
+   "source_evidence": "Quoted by the Scholiast on Apollonius Rhodius",
+   "quote_reason": "subject or unstated",
+   "words": 3,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag114"
+  },
+  {
+   "wharton_no": 115,
+   "printed_as": "115",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "38",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Ὄπταις ἄμμε.",
+   "greek_lines": [
+    "Ὄπταις ἄμμε."
+   ],
+   "english_literal": "Thou burnest us.",
+   "source_author": "Apollonius Dyscolus",
+   "source_authors": [
+    "Apollonius Dyscolus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Quoted by Apollonius",
+   "quote_reason": "language",
+   "words": 2,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag115"
+  },
+  {
+   "wharton_no": 116,
+   "printed_as": "116",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "119",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Ἠμιτύβιον σταλάσσον.",
+   "greek_lines": [
+    "Ἠμιτύβιον σταλάσσον."
+   ],
+   "english_literal": "A napkin dripping.",
+   "source_author": "Scholiast on Aristophanes",
+   "source_authors": [
+    "Scholiast on Aristophanes"
+   ],
+   "source_kind": "scholiast or commentator",
+   "source_evidence": "From the Scholiast on Aristophanes' Plutus",
+   "quote_reason": "language",
+   "words": 2,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag116"
+  },
+  {
+   "wharton_no": 117,
+   "printed_as": "IX",
+   "shares_entry_with": null,
+   "section": "VIII. EPITHALAMIA, BRIDAL SONGS",
+   "voigt_no": "164",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Τὸν ϝὸν παῖδα κάλει.",
+   "greek_lines": [
+    "Τὸν ϝὸν παῖδα κάλει."
+   ],
+   "english_literal": "She called him her son.",
+   "source_author": "Apollonius Dyscolus",
+   "source_authors": [
+    "Apollonius Dyscolus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Quoted by Apollonius",
+   "quote_reason": "language",
+   "words": 4,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag117"
+  },
+  {
+   "wharton_no": 118,
+   "printed_as": "118",
+   "shares_entry_with": null,
+   "section": "IX. EPIGRAMS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Παῖδες, ἄφωνος ἐοῖσα τόδ' ἐννεπω, αἴ τις ἔρηται, / φωνὰν ἀκαμάταν κατθεμένα πρὸ ποδῶν· / Αἰθοπίᾳ με κόρᾳ Λατοῦς ἀνέθηκεν Ἀρίστα / Ἑρμοκλειδαία τῶ Σαοναϊάδα, / σὰ πρόπολος, δέσποινα γυναικῶν· ᾇ σὺ χαρεῖσα / πρόφρων ἁμετέραν εὐκλέϊσον γενεάν.",
+   "greek_lines": [
+    "Παῖδες, ἄφωνος ἐοῖσα τόδ' ἐννεπω, αἴ τις ἔρηται,",
+    "φωνὰν ἀκαμάταν κατθεμένα πρὸ ποδῶν·",
+    "Αἰθοπίᾳ με κόρᾳ Λατοῦς ἀνέθηκεν Ἀρίστα",
+    "Ἑρμοκλειδαία τῶ Σαοναϊάδα,",
+    "σὰ πρόπολος, δέσποινα γυναικῶν· ᾇ σὺ χαρεῖσα",
+    "πρόφρων ἁμετέραν εὐκλέϊσον γενεάν."
+   ],
+   "english_literal": "Maidens, dumb as I am, I speak thus, if any ask, and set before your feet a tireless voice: To Leto's daughter Aethopia was I dedicated by Arista daughter of Hermocleides son of Saonaïades, thy servant, O queen of women; whom bless thou, and deign to glorify our house.",
+   "source_author": "Greek Anthology",
+   "source_authors": [
+    "Greek Anthology"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "All three are preserved only in the",
+   "quote_reason": "subject or unstated",
+   "words": 33,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag118"
+  },
+  {
+   "wharton_no": 119,
+   "printed_as": "119",
+   "shares_entry_with": null,
+   "section": "IX. EPIGRAMS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Τιμάδος ἅδε κόνις, τὰν δὴ πρὸ γάμοιο θανοῦσαν / δέξατο Φερσεφόνας κυάνεος θάλαμος, / ἇς καὶ ἀποφθιμένας πᾶσαι νεοθᾶγι σιδάρῳ / ἄλικες ἱμερτὰν κρατὸς ἔθεντο κόμαν.",
+   "greek_lines": [
+    "Τιμάδος ἅδε κόνις, τὰν δὴ πρὸ γάμοιο θανοῦσαν",
+    "δέξατο Φερσεφόνας κυάνεος θάλαμος,",
+    "ἇς καὶ ἀποφθιμένας πᾶσαι νεοθᾶγι σιδάρῳ",
+    "ἄλικες ἱμερτὰν κρατὸς ἔθεντο κόμαν."
+   ],
+   "english_literal": "This is the dust of Timas, whom Persephone's dark chamber received, dead before her wedding; when she perished, all her fellows dressed with sharpened steel the lovely tresses of their heads.",
+   "source_author": "Greek Anthology",
+   "source_authors": [
+    "Greek Anthology"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "All three are preserved only in the",
+   "quote_reason": "subject or unstated",
+   "words": 23,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag119"
+  },
+  {
+   "wharton_no": 120,
+   "printed_as": "X",
+   "shares_entry_with": null,
+   "section": "IX. EPIGRAMS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Τῷ γριπεῖ Πελάγωνι πατὴρ ἐπέθηκε Μενίσκος / κύρτον καὶ κώπαν, μνάμα κακοζοΐας.",
+   "greek_lines": [
+    "Τῷ γριπεῖ Πελάγωνι πατὴρ ἐπέθηκε Μενίσκος",
+    "κύρτον καὶ κώπαν, μνάμα κακοζοΐας."
+   ],
+   "english_literal": "Over the fisherman Pelagon his father Meniscus set weel and oar, memorial of a luckless life.",
+   "source_author": "Greek Anthology",
+   "source_authors": [
+    "Greek Anthology"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "All three are preserved only in the",
+   "quote_reason": "subject or unstated",
+   "words": 11,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag120"
+  },
+  {
+   "wharton_no": 121,
+   "printed_as": "121",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "122",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "ἄνθε' αμέργουσαν παῖδ' ἄγαν ἁπαλάν,",
+   "greek_lines": [
+    "ἄνθε' αμέργουσαν παῖδ' ἄγαν ἁπαλάν,"
+   ],
+   "english_literal": "'A maiden full tender plucking flowers.'",
+   "source_author": "Athenaeus",
+   "source_authors": [
+    "Athenaeus"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "Athenaeus says",
+   "quote_reason": "subject or unstated",
+   "words": 5,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag121"
+  },
+  {
+   "wharton_no": 122,
+   "printed_as": "122, 123",
+   "shares_entry_with": 123,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "156",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Πόλυ πάκτιδος ἀδυμελεστέρα, χρύσω χρυσοτέρα.",
+   "greek_lines": [
+    "Πόλυ πάκτιδος ἀδυμελεστέρα, χρύσω χρυσοτέρα."
+   ],
+   "english_literal": "Far sweeter of tone than harp, more golden than gold.",
+   "source_author": "Demetrius",
+   "source_authors": [
+    "Demetrius"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "Quoted by Demetrius",
+   "quote_reason": "style",
+   "words": 5,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag122"
+  },
+  {
+   "wharton_no": 123,
+   "printed_as": "122, 123",
+   "shares_entry_with": 122,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "156",
+   "voigt_status": "auto",
+   "greek_layout": "verse",
+   "greek": "Πόλυ πάκτιδος ἀδυμελεστέρα, χρύσω χρυσοτέρα.",
+   "greek_lines": [
+    "Πόλυ πάκτιδος ἀδυμελεστέρα, χρύσω χρυσοτέρα."
+   ],
+   "english_literal": "Far sweeter of tone than harp, more golden than gold.",
+   "source_author": "Demetrius",
+   "source_authors": [
+    "Demetrius"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "Quoted by Demetrius",
+   "quote_reason": "style",
+   "words": 5,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag122"
+  },
+  {
+   "wharton_no": 124,
+   "printed_as": "124",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "none",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Demetrius",
+   "source_authors": [
+    "Demetrius"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "Demetrius says",
+   "quote_reason": "style",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag124"
+  },
+  {
+   "wharton_no": 125,
+   "printed_as": "125",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "172",
+   "voigt_status": "probable",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Maximus Tyrius",
+   "source_authors": [
+    "Maximus Tyrius"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "Maximus Tyrius says",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag125"
+  },
+  {
+   "wharton_no": 126,
+   "printed_as": "126",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "163",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Τὸ μέλημα τοὐμόν.",
+   "greek_lines": [
+    "Τὸ μέλημα τοὐμόν."
+   ],
+   "english_literal": "My darling.",
+   "source_author": "Julian",
+   "source_authors": [
+    "Julian"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "Quoted by Julian",
+   "quote_reason": "language",
+   "words": 3,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag126"
+  },
+  {
+   "wharton_no": 127,
+   "printed_as": "127",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Aristides",
+   "source_authors": [
+    "Aristides"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "Aristides says",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag127"
+  },
+  {
+   "wharton_no": 128,
+   "printed_as": "128",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "191",
+   "voigt_status": "probable",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Pollux",
+   "source_authors": [
+    "Pollux"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Pollux writes",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag128"
+  },
+  {
+   "wharton_no": 129,
+   "printed_as": "129",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "185",
+   "voigt_status": "hand",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Philostratus",
+   "source_authors": [
+    "Philostratus"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "Philostratus says",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag129"
+  },
+  {
+   "wharton_no": 130,
+   "printed_as": "130",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Libanius",
+   "source_authors": [
+    "Libanius"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "Libanius the rhetorician",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag130"
+  },
+  {
+   "wharton_no": 131,
+   "printed_as": "131",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "170",
+   "voigt_status": "probable",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Strabo",
+   "source_authors": [
+    "Strabo"
+   ],
+   "source_kind": "other",
+   "source_evidence": "Strabo says",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag131"
+  },
+  {
+   "wharton_no": 132,
+   "printed_as": "132",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "none",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Scholiast on Apollonius Rhodius",
+   "source_authors": [
+    "Scholiast on Apollonius Rhodius"
+   ],
+   "source_kind": "scholiast or commentator",
+   "source_evidence": "The Scholiast on Apollonius Rhodius says",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag132"
+  },
+  {
+   "wharton_no": 133,
+   "printed_as": "133",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "104b",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "Ἀστέρων πάντων ὁ κάλιστος ...",
+   "greek_lines": [
+    "Ἀστέρων πάντων ὁ κάλιστος ..."
+   ],
+   "english_literal": "Of all stars the fairest.",
+   "source_author": "Himerius",
+   "source_authors": [
+    "Himerius"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "Himerius says",
+   "quote_reason": "subject or unstated",
+   "words": 4,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag133"
+  },
+  {
+   "wharton_no": 134,
+   "printed_as": "134",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "none",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Scholiast on Apollonius Rhodius",
+   "source_authors": [
+    "Scholiast on Apollonius Rhodius"
+   ],
+   "source_kind": "scholiast or commentator",
+   "source_evidence": "The Scholiast on Apollonius Rhodius says",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag134"
+  },
+  {
+   "wharton_no": 135,
+   "printed_as": "135",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Scholiast on Hesiod",
+   "source_authors": [
+    "Scholiast on Hesiod"
+   ],
+   "source_kind": "scholiast or commentator",
+   "source_evidence": "The Scholiast on Hesiod",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag135"
+  },
+  {
+   "wharton_no": 136,
+   "printed_as": "136",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Maximus Tyrius",
+   "source_authors": [
+    "Maximus Tyrius"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "Maximus Tyrius says",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag136"
+  },
+  {
+   "wharton_no": 137,
+   "printed_as": "137",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Τὸ θνάσκειν κακόν· οὕτω κεκρίκασι θεοί· / ἔθνασκον γὰρ ἄν εἴπερ κάλον ἦν τόδε.",
+   "greek_lines": [
+    "Τὸ θνάσκειν κακόν· οὕτω κεκρίκασι θεοί·",
+    "ἔθνασκον γὰρ ἄν εἴπερ κάλον ἦν τόδε."
+   ],
+   "english_literal": "Death is evil; the Gods have so judged: had it been good, they would die.",
+   "source_author": "Aristotle",
+   "source_authors": [
+    "Aristotle"
+   ],
+   "source_kind": "philosopher",
+   "source_evidence": "Aristotle, in his Rhetoric, ii. 23",
+   "quote_reason": "metre",
+   "words": 13,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag137"
+  },
+  {
+   "wharton_no": 138,
+   "printed_as": "138",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "none",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Athenaeus",
+   "source_authors": [
+    "Athenaeus"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "Athenaeus says",
+   "quote_reason": "style",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag138"
+  },
+  {
+   "wharton_no": 139,
+   "printed_as": "139",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "none",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Athenaeus",
+   "source_authors": [
+    "Athenaeus"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "Athenaeus says",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag139"
+  },
+  {
+   "wharton_no": 140,
+   "printed_as": "140",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "none",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Palaephatus",
+   "source_authors": [
+    "Palaephatus"
+   ],
+   "source_kind": "other",
+   "source_evidence": "says",
+   "quote_reason": "style",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag140"
+  },
+  {
+   "wharton_no": 141,
+   "printed_as": "141",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "none",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": null,
+   "source_authors": [],
+   "source_kind": null,
+   "source_evidence": null,
+   "quote_reason": null,
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag141"
+  },
+  {
+   "wharton_no": 142,
+   "printed_as": "142",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Διὸς παῖς ὁ χρυσός, κείνον οὐ σης οὐδε κὶς δάπτει",
+   "greek_lines": [
+    "Διὸς παῖς ὁ χρυσός, κείνον οὐ σης οὐδε κὶς δάπτει"
+   ],
+   "english_literal": "Gold is son of Zeus, no moth nor worm devours it.'",
+   "source_author": "Pausanias",
+   "source_authors": [
+    "Pausanias"
+   ],
+   "source_kind": "other",
+   "source_evidence": "Pausanias says",
+   "quote_reason": "subject or unstated",
+   "words": 10,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag142"
+  },
+  {
+   "wharton_no": 143,
+   "printed_as": "143",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "none",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Aulus Gellius",
+   "source_authors": [
+    "Aulus Gellius"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "Aulus Gellius",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag143"
+  },
+  {
+   "wharton_no": 144,
+   "printed_as": "144",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "none",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Servius",
+   "source_authors": [
+    "Servius"
+   ],
+   "source_kind": "scholiast or commentator",
+   "source_evidence": "Servius, commenting on Vergil, Aeneid",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag144"
+  },
+  {
+   "wharton_no": 145,
+   "printed_as": "145",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "none",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Servius",
+   "source_authors": [
+    "Servius"
+   ],
+   "source_kind": "scholiast or commentator",
+   "source_evidence": "Servius, commenting on Vergil, Eclog.",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag145"
+  },
+  {
+   "wharton_no": 146,
+   "printed_as": "146",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "none",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Philostratus",
+   "source_authors": [
+    "Philostratus"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "Philostratus says",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag146"
+  },
+  {
+   "wharton_no": 147,
+   "printed_as": "147",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "none",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Himerius",
+   "source_authors": [
+    "Himerius"
+   ],
+   "source_kind": "critic or rhetorician",
+   "source_evidence": "Himerius says",
+   "quote_reason": "style",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag147"
+  },
+  {
+   "wharton_no": 148,
+   "printed_as": "148",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Eustathius",
+   "source_authors": [
+    "Eustathius"
+   ],
+   "source_kind": "scholiast or commentator",
+   "source_evidence": "Eustathius says",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag148"
+  },
+  {
+   "wharton_no": 149,
+   "printed_as": "149",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "171",
+   "voigt_status": "probable",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Lexicon Seguerianum",
+   "source_authors": [
+    "Lexicon Seguerianum"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "The Lexicon Seguerianum defines",
+   "quote_reason": "language",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag149"
+  },
+  {
+   "wharton_no": 150,
+   "printed_as": "150",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "173",
+   "voigt_status": "probable",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Etymologicum Magnum",
+   "source_authors": [
+    "Etymologicum Magnum"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "The Etymologicum Magnum defines",
+   "quote_reason": "language",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag150"
+  },
+  {
+   "wharton_no": 151,
+   "printed_as": "151",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "174",
+   "voigt_status": "probable",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Etymologicum Magnum",
+   "source_authors": [
+    "Etymologicum Magnum"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "The Etymologicum Magnum says",
+   "quote_reason": "language",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag151"
+  },
+  {
+   "wharton_no": 152,
+   "printed_as": "152",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Apollonius Dyscolus",
+   "source_authors": [
+    "Apollonius Dyscolus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Apollonius says",
+   "quote_reason": "language",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag152"
+  },
+  {
+   "wharton_no": 153,
+   "printed_as": "153",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "157",
+   "voigt_status": "hand",
+   "greek_layout": "verse",
+   "greek": "πότνια αὔως",
+   "greek_lines": [
+    "πότνια αὔως"
+   ],
+   "english_literal": "Queen Dawn.'",
+   "source_author": "Etymologicum Magnum",
+   "source_authors": [
+    "Etymologicum Magnum"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "The Etymologicum Magnum says",
+   "quote_reason": "language",
+   "words": 2,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag153"
+  },
+  {
+   "wharton_no": 154,
+   "printed_as": "154",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "176",
+   "voigt_status": "probable",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Athenaeus",
+   "source_authors": [
+    "Athenaeus"
+   ],
+   "source_kind": "anthology or miscellany",
+   "source_evidence": "Athenaeus says",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag154"
+  },
+  {
+   "wharton_no": 155,
+   "printed_as": "155",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "177",
+   "voigt_status": "probable",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Pollux",
+   "source_authors": [
+    "Pollux"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Pollux says",
+   "quote_reason": "language",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag155"
+  },
+  {
+   "wharton_no": 156,
+   "printed_as": "156",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "179",
+   "voigt_status": "probable",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Phrynichus",
+   "source_authors": [
+    "Phrynichus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "the grammarian, about 180 A.D., says",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag156"
+  },
+  {
+   "wharton_no": 157,
+   "printed_as": "157",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "180",
+   "voigt_status": "probable",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Hesychius",
+   "source_authors": [
+    "Hesychius"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Hesychius, about 370 A.D., says",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag157"
+  },
+  {
+   "wharton_no": 158,
+   "printed_as": "158",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "181",
+   "voigt_status": "probable",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Cramer's Paris manuscripts",
+   "source_authors": [
+    "Cramer's Paris manuscripts"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "A Parisian MS. edited by Cramer says",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag158"
+  },
+  {
+   "wharton_no": 159,
+   "printed_as": "159",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "182",
+   "voigt_status": "probable",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Scholiast on Homer",
+   "source_authors": [
+    "Scholiast on Homer"
+   ],
+   "source_kind": "scholiast or commentator",
+   "source_evidence": "A Scholiast on Homer quotes",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag159"
+  },
+  {
+   "wharton_no": 160,
+   "printed_as": "160",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "183",
+   "voigt_status": "probable",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Eustathius",
+   "source_authors": [
+    "Eustathius"
+   ],
+   "source_kind": "scholiast or commentator",
+   "source_evidence": "Eustathius, commenting on the Iliad",
+   "quote_reason": "metre",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag160"
+  },
+  {
+   "wharton_no": 161,
+   "printed_as": "161",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "184",
+   "voigt_status": "probable",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Choeroboscus",
+   "source_authors": [
+    "Choeroboscus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Choeroboscus says",
+   "quote_reason": "language",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag161"
+  },
+  {
+   "wharton_no": 162,
+   "printed_as": "162",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "186",
+   "voigt_status": "probable",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Joannes Alexandrinus",
+   "source_authors": [
+    "Joannes Alexandrinus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Joannes Alexandrinus",
+   "quote_reason": "language",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag162"
+  },
+  {
+   "wharton_no": 163,
+   "printed_as": "163",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Antiatticista",
+   "source_authors": [
+    "Antiatticista"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "in Antiatticista, says",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag163"
+  },
+  {
+   "wharton_no": 164,
+   "printed_as": "164",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "187",
+   "voigt_status": "probable",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Cramer's Paris manuscripts",
+   "source_authors": [
+    "Cramer's Paris manuscripts"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "A treatise on grammar edited by Cramer says",
+   "quote_reason": "language",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag164"
+  },
+  {
+   "wharton_no": 165,
+   "printed_as": "165",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "189",
+   "voigt_status": "probable",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Phrynichus",
+   "source_authors": [
+    "Phrynichus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Phrynichus says",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag165"
+  },
+  {
+   "wharton_no": 166,
+   "printed_as": "166",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": "190",
+   "voigt_status": "probable",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Scholiast on Homer",
+   "source_authors": [
+    "Scholiast on Homer"
+   ],
+   "source_kind": "scholiast or commentator",
+   "source_evidence": "A Scholiast on Homer, Iliad, iii. 219, says",
+   "quote_reason": "language",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag166"
+  },
+  {
+   "wharton_no": 167,
+   "printed_as": "167",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "verse",
+   "greek": "Ζκύθικον ξύλον, / τῷ βάπτοισί τε τἤρια / ποΐεισι δὲ μάλινα / ξανθίσδοισί τε τὰς τρίχας.",
+   "greek_lines": [
+    "Ζκύθικον ξύλον,",
+    "τῷ βάπτοισί τε τἤρια",
+    "ποΐεισι δὲ μάλινα",
+    "ξανθίσδοισί τε τὰς τρίχας."
+   ],
+   "english_literal": "Scythian wood, in which they dip fleeces and make them quince-coloured, and dye their hair yellow.",
+   "source_author": "Photius",
+   "source_authors": [
+    "Photius",
+    "Scholiast on Theocritus"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Photius, in his Lexicon",
+   "quote_reason": "metre",
+   "words": 13,
+   "words_in_brackets": 0,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag167"
+  },
+  {
+   "wharton_no": 168,
+   "printed_as": "168",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Etymologicum Magnum",
+   "source_authors": [
+    "Etymologicum Magnum"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "The Etymologicum Magnum says",
+   "quote_reason": "language",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag168"
+  },
+  {
+   "wharton_no": 169,
+   "printed_as": "169",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Orion",
+   "source_authors": [
+    "Orion"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Orion of Thebes, the grammarian",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag169"
+  },
+  {
+   "wharton_no": 170,
+   "printed_as": "170",
+   "shares_entry_with": null,
+   "section": "X. MISCELLANEOUS",
+   "voigt_no": null,
+   "voigt_status": "gap",
+   "greek_layout": "inline",
+   "greek": null,
+   "greek_lines": [],
+   "english_literal": null,
+   "source_author": "Pollux",
+   "source_authors": [
+    "Pollux"
+   ],
+   "source_kind": "grammarian or lexicon",
+   "source_evidence": "Pollux says",
+   "quote_reason": "subject or unstated",
+   "words": null,
+   "words_in_brackets": null,
+   "anchor": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html#frag170"
+  }
+ ],
+ "stats": {
+  "unit": "a fragment entry Wharton prints as Greek verse (two numbers printed together count once)",
+  "n_numbers": 170,
+  "n_entries_verse": 126,
+  "n_entries_inline_or_none": 41,
+  "median_words": 7.0,
+  "mean_words": 10.24,
+  "share_le_5": 0.3571,
+  "count_le_5": 45,
+  "share_le_10": 0.6984,
+  "count_le_10": 88,
+  "count_gt_30": 3,
+  "shortest": [
+   {
+    "wharton_no": 47,
+    "words": 2
+   },
+   {
+    "wharton_no": 49,
+    "words": 2
+   },
+   {
+    "wharton_no": 61,
+    "words": 2
+   },
+   {
+    "wharton_no": 96,
+    "words": 2
+   },
+   {
+    "wharton_no": 115,
+    "words": 2
+   }
+  ],
+  "longest": [
+   {
+    "wharton_no": 1,
+    "words": 131
+   },
+   {
+    "wharton_no": 2,
+    "words": 77
+   },
+   {
+    "wharton_no": 118,
+    "words": 33
+   },
+   {
+    "wharton_no": 68,
+    "words": 29
+   },
+   {
+    "wharton_no": 51,
+    "words": 26
+   }
+  ],
+  "histogram": {
+   "2": 7,
+   "3": 9,
+   "4": 11,
+   "5": 18,
+   "6": 13,
+   "7": 12,
+   "8": 10,
+   "9": 3,
+   "10": 5,
+   "11": 6,
+   "12": 4,
+   "13": 4,
+   "14": 5,
+   "15": 2,
+   "16": 1,
+   "17": 4,
+   "19": 3,
+   "20": 1,
+   "23": 1,
+   "25": 2,
+   "26": 1,
+   "29": 1,
+   "33": 1,
+   "77": 1,
+   "131": 1
+  },
+  "sensitivity_with_inline": {
+   "assumption": "each inline-only number counted as a 1-word fragment",
+   "n": 155,
+   "median_words": 6,
+   "share_le_5": 0.4774
+  },
+  "counting_rule": "Greek words in Wharton's printed Greek: runs of Greek letters (with their accents), an elided word with its apostrophe counts once, a word split over two lines with a hyphen counts once, words in Wharton's square brackets count (also given separately), metrical signs, dots and Latin letters do not count."
+ },
+ "quoters_network": {
+  "label": "as printed by Wharton, 1908",
+  "nodes_authors": [
+   {
+    "author": "Hephaestion",
+    "kind": "metrician",
+    "fragments": [
+     33,
+     40,
+     41,
+     52,
+     53,
+     54,
+     58,
+     59,
+     60,
+     62,
+     76,
+     77,
+     82,
+     84,
+     85,
+     87,
+     88,
+     90,
+     91,
+     98,
+     99,
+     103,
+     104
+    ],
+    "n_fragments": 23,
+    "n_first_named": 23
+   },
+   {
+    "author": "Athenaeus",
+    "kind": "anthology or miscellany",
+    "fragments": [
+     5,
+     11,
+     26,
+     29,
+     30,
+     31,
+     44,
+     46,
+     49,
+     51,
+     56,
+     67,
+     70,
+     78,
+     79,
+     112,
+     121,
+     138,
+     139,
+     154
+    ],
+    "n_fragments": 20,
+    "n_first_named": 19
+   },
+   {
+    "author": "Apollonius Dyscolus",
+    "kind": "grammarian or lexicon",
+    "fragments": [
+     7,
+     8,
+     9,
+     10,
+     13,
+     14,
+     15,
+     21,
+     22,
+     23,
+     24,
+     43,
+     102,
+     111,
+     115,
+     117,
+     152
+    ],
+    "n_fragments": 17,
+    "n_first_named": 17
+   },
+   {
+    "author": "Etymologicum Magnum",
+    "kind": "grammarian or lexicon",
+    "fragments": [
+     12,
+     17,
+     25,
+     38,
+     56,
+     57,
+     72,
+     83,
+     95,
+     150,
+     151,
+     153,
+     168
+    ],
+    "n_fragments": 13,
+    "n_first_named": 13
+   },
+   {
+    "author": "Demetrius",
+    "kind": "critic or rhetorician",
+    "fragments": [
+     92,
+     94,
+     95,
+     109,
+     122,
+     123,
+     124
+    ],
+    "n_fragments": 7,
+    "n_first_named": 6
+   },
+   {
+    "author": "Herodian",
+    "kind": "grammarian or lexicon",
+    "fragments": [
+     35,
+     37,
+     50,
+     55,
+     80,
+     110
+    ],
+    "n_fragments": 6,
+    "n_first_named": 6
+   },
+   {
+    "author": "Pollux",
+    "kind": "grammarian or lexicon",
+    "fragments": [
+     19,
+     64,
+     89,
+     128,
+     155,
+     170
+    ],
+    "n_fragments": 6,
+    "n_first_named": 5
+   },
+   {
+    "author": "Maximus Tyrius",
+    "kind": "critic or rhetorician",
+    "fragments": [
+     42,
+     74,
+     86,
+     125,
+     136
+    ],
+    "n_fragments": 5,
+    "n_first_named": 5
+   },
+   {
+    "author": "Cramer's Paris manuscripts",
+    "kind": "grammarian or lexicon",
+    "fragments": [
+     96,
+     97,
+     158,
+     164
+    ],
+    "n_fragments": 4,
+    "n_first_named": 4
+   },
+   {
+    "author": "Eustathius",
+    "kind": "scholiast or commentator",
+    "fragments": [
+     3,
+     45,
+     148,
+     160
+    ],
+    "n_fragments": 4,
+    "n_first_named": 3
+   },
+   {
+    "author": "Scholiast on Apollonius Rhodius",
+    "kind": "scholiast or commentator",
+    "fragments": [
+     20,
+     114,
+     132,
+     134
+    ],
+    "n_fragments": 4,
+    "n_first_named": 4
+   },
+   {
+    "author": "Servius",
+    "kind": "scholiast or commentator",
+    "fragments": [
+     60,
+     105,
+     144,
+     145
+    ],
+    "n_fragments": 4,
+    "n_first_named": 3
+   },
+   {
+    "author": "Choeroboscus",
+    "kind": "grammarian or lexicon",
+    "fragments": [
+     48,
+     71,
+     161
+    ],
+    "n_fragments": 3,
+    "n_first_named": 3
+   },
+   {
+    "author": "Greek Anthology",
+    "kind": "anthology or miscellany",
+    "fragments": [
+     118,
+     119,
+     120
+    ],
+    "n_fragments": 3,
+    "n_first_named": 3
+   },
+   {
+    "author": "Marius Plotius",
+    "kind": "metrician",
+    "fragments": [
+     63,
+     107,
+     108
+    ],
+    "n_fragments": 3,
+    "n_first_named": 3
+   },
+   {
+    "author": "Plutarch",
+    "kind": "philosopher",
+    "fragments": [
+     27,
+     34,
+     68
+    ],
+    "n_fragments": 3,
+    "n_first_named": 2
+   },
+   {
+    "author": "Scholiast on Aristophanes",
+    "kind": "scholiast or commentator",
+    "fragments": [
+     19,
+     73,
+     116
+    ],
+    "n_fragments": 3,
+    "n_first_named": 3
+   },
+   {
+    "author": "Aristotle",
+    "kind": "philosopher",
+    "fragments": [
+     28,
+     137
+    ],
+    "n_fragments": 2,
+    "n_first_named": 2
+   },
+   {
+    "author": "Attilius Fortunatianus",
+    "kind": "metrician",
+    "fragments": [
+     60,
+     61
+    ],
+    "n_fragments": 2,
+    "n_first_named": 1
+   },
+   {
+    "author": "Chrysippus",
+    "kind": "philosopher",
+    "fragments": [
+     36,
+     69
+    ],
+    "n_fragments": 2,
+    "n_first_named": 2
+   },
+   {
+    "author": "Dionysius of Halicarnassus",
+    "kind": "critic or rhetorician",
+    "fragments": [
+     1,
+     106
+    ],
+    "n_fragments": 2,
+    "n_first_named": 2
+   },
+   {
+    "author": "Hermogenes",
+    "kind": "critic or rhetorician",
+    "fragments": [
+     4,
+     45
+    ],
+    "n_fragments": 2,
+    "n_first_named": 2
+   },
+   {
+    "author": "Himerius",
+    "kind": "critic or rhetorician",
+    "fragments": [
+     133,
+     147
+    ],
+    "n_fragments": 2,
+    "n_first_named": 2
+   },
+   {
+    "author": "Philostratus",
+    "kind": "critic or rhetorician",
+    "fragments": [
+     129,
+     146
+    ],
+    "n_fragments": 2,
+    "n_first_named": 2
+   },
+   {
+    "author": "Phrynichus",
+    "kind": "grammarian or lexicon",
+    "fragments": [
+     156,
+     165
+    ],
+    "n_fragments": 2,
+    "n_first_named": 2
+   },
+   {
+    "author": "Scholiast on Homer",
+    "kind": "scholiast or commentator",
+    "fragments": [
+     159,
+     166
+    ],
+    "n_fragments": 2,
+    "n_first_named": 2
+   },
+   {
+    "author": "Scholiast on Pindar",
+    "kind": "scholiast or commentator",
+    "fragments": [
+     16,
+     81
+    ],
+    "n_fragments": 2,
+    "n_first_named": 2
+   },
+   {
+    "author": "Stobaeus",
+    "kind": "anthology or miscellany",
+    "fragments": [
+     68,
+     75
+    ],
+    "n_fragments": 2,
+    "n_first_named": 2
+   },
+   {
+    "author": "Strabo",
+    "kind": "other",
+    "fragments": [
+     6,
+     131
+    ],
+    "n_fragments": 2,
+    "n_first_named": 2
+   },
+   {
+    "author": "Ammonius",
+    "kind": "grammarian or lexicon",
+    "fragments": [
+     18
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "Antiatticista",
+    "kind": "grammarian or lexicon",
+    "fragments": [
+     163
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "Apostolius",
+    "kind": "anthology or miscellany",
+    "fragments": [
+     75
+    ],
+    "n_fragments": 1,
+    "n_first_named": 0
+   },
+   {
+    "author": "Aristides",
+    "kind": "critic or rhetorician",
+    "fragments": [
+     127
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "Aulus Gellius",
+    "kind": "anthology or miscellany",
+    "fragments": [
+     143
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "Choricius",
+    "kind": "critic or rhetorician",
+    "fragments": [
+     100
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "Dio Chrysostom",
+    "kind": "critic or rhetorician",
+    "fragments": [
+     32
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "Galen",
+    "kind": "other",
+    "fragments": [
+     101
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "Hesychius",
+    "kind": "grammarian or lexicon",
+    "fragments": [
+     157
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "Joannes Alexandrinus",
+    "kind": "grammarian or lexicon",
+    "fragments": [
+     162
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "Julian",
+    "kind": "critic or rhetorician",
+    "fragments": [
+     126
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "Lexicon Seguerianum",
+    "kind": "grammarian or lexicon",
+    "fragments": [
+     149
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "Libanius",
+    "kind": "critic or rhetorician",
+    "fragments": [
+     130
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "Longinus",
+    "kind": "critic or rhetorician",
+    "fragments": [
+     2
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "Orion",
+    "kind": "grammarian or lexicon",
+    "fragments": [
+     169
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "Palaephatus",
+    "kind": "other",
+    "fragments": [
+     140
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "Pausanias",
+    "kind": "other",
+    "fragments": [
+     142
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "Photius",
+    "kind": "grammarian or lexicon",
+    "fragments": [
+     167
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "Priscian",
+    "kind": "grammarian or lexicon",
+    "fragments": [
+     66
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "Scholiast on Dionysius Thrax",
+    "kind": "scholiast or commentator",
+    "fragments": [
+     102
+    ],
+    "n_fragments": 1,
+    "n_first_named": 0
+   },
+   {
+    "author": "Scholiast on Hermogenes",
+    "kind": "scholiast or commentator",
+    "fragments": [
+     93
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "Scholiast on Hesiod",
+    "kind": "scholiast or commentator",
+    "fragments": [
+     135
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "Scholiast on Sophocles",
+    "kind": "scholiast or commentator",
+    "fragments": [
+     39
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "Scholiast on Theocritus",
+    "kind": "scholiast or commentator",
+    "fragments": [
+     167
+    ],
+    "n_fragments": 1,
+    "n_first_named": 0
+   },
+   {
+    "author": "Zenobius",
+    "kind": "anthology or miscellany",
+    "fragments": [
+     47
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   },
+   {
+    "author": "proverb (many late authors)",
+    "kind": "anthology or miscellany",
+    "fragments": [
+     113
+    ],
+    "n_fragments": 1,
+    "n_first_named": 1
+   }
+  ],
+  "edges": [
+   {
+    "author": "Dionysius of Halicarnassus",
+    "wharton_no": 1
+   },
+   {
+    "author": "Longinus",
+    "wharton_no": 2
+   },
+   {
+    "author": "Eustathius",
+    "wharton_no": 3
+   },
+   {
+    "author": "Hermogenes",
+    "wharton_no": 4
+   },
+   {
+    "author": "Athenaeus",
+    "wharton_no": 5
+   },
+   {
+    "author": "Strabo",
+    "wharton_no": 6
+   },
+   {
+    "author": "Apollonius Dyscolus",
+    "wharton_no": 7
+   },
+   {
+    "author": "Apollonius Dyscolus",
+    "wharton_no": 8
+   },
+   {
+    "author": "Apollonius Dyscolus",
+    "wharton_no": 9
+   },
+   {
+    "author": "Apollonius Dyscolus",
+    "wharton_no": 10
+   },
+   {
+    "author": "Athenaeus",
+    "wharton_no": 11
+   },
+   {
+    "author": "Etymologicum Magnum",
+    "wharton_no": 12
+   },
+   {
+    "author": "Apollonius Dyscolus",
+    "wharton_no": 13
+   },
+   {
+    "author": "Apollonius Dyscolus",
+    "wharton_no": 14
+   },
+   {
+    "author": "Apollonius Dyscolus",
+    "wharton_no": 15
+   },
+   {
+    "author": "Scholiast on Pindar",
+    "wharton_no": 16
+   },
+   {
+    "author": "Etymologicum Magnum",
+    "wharton_no": 17
+   },
+   {
+    "author": "Ammonius",
+    "wharton_no": 18
+   },
+   {
+    "author": "Scholiast on Aristophanes",
+    "wharton_no": 19
+   },
+   {
+    "author": "Pollux",
+    "wharton_no": 19
+   },
+   {
+    "author": "Scholiast on Apollonius Rhodius",
+    "wharton_no": 20
+   },
+   {
+    "author": "Apollonius Dyscolus",
+    "wharton_no": 21
+   },
+   {
+    "author": "Apollonius Dyscolus",
+    "wharton_no": 22
+   },
+   {
+    "author": "Apollonius Dyscolus",
+    "wharton_no": 23
+   },
+   {
+    "author": "Apollonius Dyscolus",
+    "wharton_no": 24
+   },
+   {
+    "author": "Etymologicum Magnum",
+    "wharton_no": 25
+   },
+   {
+    "author": "Athenaeus",
+    "wharton_no": 26
+   },
+   {
+    "author": "Plutarch",
+    "wharton_no": 27
+   },
+   {
+    "author": "Aristotle",
+    "wharton_no": 28
+   },
+   {
+    "author": "Athenaeus",
+    "wharton_no": 29
+   },
+   {
+    "author": "Athenaeus",
+    "wharton_no": 30
+   },
+   {
+    "author": "Athenaeus",
+    "wharton_no": 31
+   },
+   {
+    "author": "Dio Chrysostom",
+    "wharton_no": 32
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 33
+   },
+   {
+    "author": "Plutarch",
+    "wharton_no": 34
+   },
+   {
+    "author": "Herodian",
+    "wharton_no": 35
+   },
+   {
+    "author": "Chrysippus",
+    "wharton_no": 36
+   },
+   {
+    "author": "Herodian",
+    "wharton_no": 37
+   },
+   {
+    "author": "Etymologicum Magnum",
+    "wharton_no": 38
+   },
+   {
+    "author": "Scholiast on Sophocles",
+    "wharton_no": 39
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 40
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 41
+   },
+   {
+    "author": "Maximus Tyrius",
+    "wharton_no": 42
+   },
+   {
+    "author": "Apollonius Dyscolus",
+    "wharton_no": 43
+   },
+   {
+    "author": "Athenaeus",
+    "wharton_no": 44
+   },
+   {
+    "author": "Hermogenes",
+    "wharton_no": 45
+   },
+   {
+    "author": "Eustathius",
+    "wharton_no": 45
+   },
+   {
+    "author": "Athenaeus",
+    "wharton_no": 46
+   },
+   {
+    "author": "Zenobius",
+    "wharton_no": 47
+   },
+   {
+    "author": "Choeroboscus",
+    "wharton_no": 48
+   },
+   {
+    "author": "Athenaeus",
+    "wharton_no": 49
+   },
+   {
+    "author": "Herodian",
+    "wharton_no": 50
+   },
+   {
+    "author": "Athenaeus",
+    "wharton_no": 51
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 52
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 53
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 54
+   },
+   {
+    "author": "Herodian",
+    "wharton_no": 55
+   },
+   {
+    "author": "Etymologicum Magnum",
+    "wharton_no": 56
+   },
+   {
+    "author": "Athenaeus",
+    "wharton_no": 56
+   },
+   {
+    "author": "Etymologicum Magnum",
+    "wharton_no": 57
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 58
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 59
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 60
+   },
+   {
+    "author": "Attilius Fortunatianus",
+    "wharton_no": 60
+   },
+   {
+    "author": "Servius",
+    "wharton_no": 60
+   },
+   {
+    "author": "Attilius Fortunatianus",
+    "wharton_no": 61
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 62
+   },
+   {
+    "author": "Marius Plotius",
+    "wharton_no": 63
+   },
+   {
+    "author": "Pollux",
+    "wharton_no": 64
+   },
+   {
+    "author": "Priscian",
+    "wharton_no": 66
+   },
+   {
+    "author": "Athenaeus",
+    "wharton_no": 67
+   },
+   {
+    "author": "Stobaeus",
+    "wharton_no": 68
+   },
+   {
+    "author": "Plutarch",
+    "wharton_no": 68
+   },
+   {
+    "author": "Chrysippus",
+    "wharton_no": 69
+   },
+   {
+    "author": "Athenaeus",
+    "wharton_no": 70
+   },
+   {
+    "author": "Choeroboscus",
+    "wharton_no": 71
+   },
+   {
+    "author": "Etymologicum Magnum",
+    "wharton_no": 72
+   },
+   {
+    "author": "Scholiast on Aristophanes",
+    "wharton_no": 73
+   },
+   {
+    "author": "Maximus Tyrius",
+    "wharton_no": 74
+   },
+   {
+    "author": "Stobaeus",
+    "wharton_no": 75
+   },
+   {
+    "author": "Apostolius",
+    "wharton_no": 75
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 76
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 77
+   },
+   {
+    "author": "Athenaeus",
+    "wharton_no": 78
+   },
+   {
+    "author": "Athenaeus",
+    "wharton_no": 79
+   },
+   {
+    "author": "Herodian",
+    "wharton_no": 80
+   },
+   {
+    "author": "Scholiast on Pindar",
+    "wharton_no": 81
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 82
+   },
+   {
+    "author": "Etymologicum Magnum",
+    "wharton_no": 83
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 84
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 85
+   },
+   {
+    "author": "Maximus Tyrius",
+    "wharton_no": 86
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 87
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 88
+   },
+   {
+    "author": "Pollux",
+    "wharton_no": 89
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 90
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 91
+   },
+   {
+    "author": "Demetrius",
+    "wharton_no": 92
+   },
+   {
+    "author": "Scholiast on Hermogenes",
+    "wharton_no": 93
+   },
+   {
+    "author": "Demetrius",
+    "wharton_no": 94
+   },
+   {
+    "author": "Etymologicum Magnum",
+    "wharton_no": 95
+   },
+   {
+    "author": "Demetrius",
+    "wharton_no": 95
+   },
+   {
+    "author": "Cramer's Paris manuscripts",
+    "wharton_no": 96
+   },
+   {
+    "author": "Cramer's Paris manuscripts",
+    "wharton_no": 97
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 98
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 99
+   },
+   {
+    "author": "Choricius",
+    "wharton_no": 100
+   },
+   {
+    "author": "Galen",
+    "wharton_no": 101
+   },
+   {
+    "author": "Apollonius Dyscolus",
+    "wharton_no": 102
+   },
+   {
+    "author": "Scholiast on Dionysius Thrax",
+    "wharton_no": 102
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 103
+   },
+   {
+    "author": "Hephaestion",
+    "wharton_no": 104
+   },
+   {
+    "author": "Servius",
+    "wharton_no": 105
+   },
+   {
+    "author": "Dionysius of Halicarnassus",
+    "wharton_no": 106
+   },
+   {
+    "author": "Marius Plotius",
+    "wharton_no": 107
+   },
+   {
+    "author": "Marius Plotius",
+    "wharton_no": 108
+   },
+   {
+    "author": "Demetrius",
+    "wharton_no": 109
+   },
+   {
+    "author": "Herodian",
+    "wharton_no": 110
+   },
+   {
+    "author": "Apollonius Dyscolus",
+    "wharton_no": 111
+   },
+   {
+    "author": "Athenaeus",
+    "wharton_no": 112
+   },
+   {
+    "author": "proverb (many late authors)",
+    "wharton_no": 113
+   },
+   {
+    "author": "Scholiast on Apollonius Rhodius",
+    "wharton_no": 114
+   },
+   {
+    "author": "Apollonius Dyscolus",
+    "wharton_no": 115
+   },
+   {
+    "author": "Scholiast on Aristophanes",
+    "wharton_no": 116
+   },
+   {
+    "author": "Apollonius Dyscolus",
+    "wharton_no": 117
+   },
+   {
+    "author": "Greek Anthology",
+    "wharton_no": 118
+   },
+   {
+    "author": "Greek Anthology",
+    "wharton_no": 119
+   },
+   {
+    "author": "Greek Anthology",
+    "wharton_no": 120
+   },
+   {
+    "author": "Athenaeus",
+    "wharton_no": 121
+   },
+   {
+    "author": "Demetrius",
+    "wharton_no": 122
+   },
+   {
+    "author": "Demetrius",
+    "wharton_no": 123
+   },
+   {
+    "author": "Demetrius",
+    "wharton_no": 124
+   },
+   {
+    "author": "Maximus Tyrius",
+    "wharton_no": 125
+   },
+   {
+    "author": "Julian",
+    "wharton_no": 126
+   },
+   {
+    "author": "Aristides",
+    "wharton_no": 127
+   },
+   {
+    "author": "Pollux",
+    "wharton_no": 128
+   },
+   {
+    "author": "Philostratus",
+    "wharton_no": 129
+   },
+   {
+    "author": "Libanius",
+    "wharton_no": 130
+   },
+   {
+    "author": "Strabo",
+    "wharton_no": 131
+   },
+   {
+    "author": "Scholiast on Apollonius Rhodius",
+    "wharton_no": 132
+   },
+   {
+    "author": "Himerius",
+    "wharton_no": 133
+   },
+   {
+    "author": "Scholiast on Apollonius Rhodius",
+    "wharton_no": 134
+   },
+   {
+    "author": "Scholiast on Hesiod",
+    "wharton_no": 135
+   },
+   {
+    "author": "Maximus Tyrius",
+    "wharton_no": 136
+   },
+   {
+    "author": "Aristotle",
+    "wharton_no": 137
+   },
+   {
+    "author": "Athenaeus",
+    "wharton_no": 138
+   },
+   {
+    "author": "Athenaeus",
+    "wharton_no": 139
+   },
+   {
+    "author": "Palaephatus",
+    "wharton_no": 140
+   },
+   {
+    "author": "Pausanias",
+    "wharton_no": 142
+   },
+   {
+    "author": "Aulus Gellius",
+    "wharton_no": 143
+   },
+   {
+    "author": "Servius",
+    "wharton_no": 144
+   },
+   {
+    "author": "Servius",
+    "wharton_no": 145
+   },
+   {
+    "author": "Philostratus",
+    "wharton_no": 146
+   },
+   {
+    "author": "Himerius",
+    "wharton_no": 147
+   },
+   {
+    "author": "Eustathius",
+    "wharton_no": 148
+   },
+   {
+    "author": "Lexicon Seguerianum",
+    "wharton_no": 149
+   },
+   {
+    "author": "Etymologicum Magnum",
+    "wharton_no": 150
+   },
+   {
+    "author": "Etymologicum Magnum",
+    "wharton_no": 151
+   },
+   {
+    "author": "Apollonius Dyscolus",
+    "wharton_no": 152
+   },
+   {
+    "author": "Etymologicum Magnum",
+    "wharton_no": 153
+   },
+   {
+    "author": "Athenaeus",
+    "wharton_no": 154
+   },
+   {
+    "author": "Pollux",
+    "wharton_no": 155
+   },
+   {
+    "author": "Phrynichus",
+    "wharton_no": 156
+   },
+   {
+    "author": "Hesychius",
+    "wharton_no": 157
+   },
+   {
+    "author": "Cramer's Paris manuscripts",
+    "wharton_no": 158
+   },
+   {
+    "author": "Scholiast on Homer",
+    "wharton_no": 159
+   },
+   {
+    "author": "Eustathius",
+    "wharton_no": 160
+   },
+   {
+    "author": "Choeroboscus",
+    "wharton_no": 161
+   },
+   {
+    "author": "Joannes Alexandrinus",
+    "wharton_no": 162
+   },
+   {
+    "author": "Antiatticista",
+    "wharton_no": 163
+   },
+   {
+    "author": "Cramer's Paris manuscripts",
+    "wharton_no": 164
+   },
+   {
+    "author": "Phrynichus",
+    "wharton_no": 165
+   },
+   {
+    "author": "Scholiast on Homer",
+    "wharton_no": 166
+   },
+   {
+    "author": "Photius",
+    "wharton_no": 167
+   },
+   {
+    "author": "Scholiast on Theocritus",
+    "wharton_no": 167
+   },
+   {
+    "author": "Etymologicum Magnum",
+    "wharton_no": 168
+   },
+   {
+    "author": "Orion",
+    "wharton_no": 169
+   },
+   {
+    "author": "Pollux",
+    "wharton_no": 170
+   }
+  ],
+  "by_kind": {
+   "critic or rhetorician": 25,
+   "scholiast or commentator": 20,
+   "anthology or miscellany": 27,
+   "other": 5,
+   "grammarian or lexicon": 58,
+   "philosopher": 6,
+   "metrician": 27
+  },
+  "by_reason": {
+   "language": 41,
+   "style": 12,
+   "subject or unstated": 85,
+   "metre": 30
+  },
+  "no_author_named": [
+   65,
+   141
+  ],
+  "caveat": "Wharton's notes reflect 1908 knowledge. Some attributions are disputed, and modern editions add many papyrus fragments Wharton never saw. 'kind' and 'reason' are our rough classification of his notes."
+ }
+}

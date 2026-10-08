@@ -2,13 +2,13 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
-    <img alt="Nobel 2026 Lab. Hands-on demos of this year's Nobel Prizes, one card per prize. Medicine: a nerve cell lit by a pulse of blue light from the tip of an optical fibre. Physics: strings of light sensors in dark ice, a particle track with a cone of blue light behind it, and the sensors near the track lit up. Chemistry: a left hand drawn solid orange and its mirror image, a right hand drawn hatched teal, on either side of a dashed mirror line, with three small orange molecules above the left hand and only one teal one above the right: one hand wins. A smaller dashed slot holds the prize still to come: Economics on 12 October. Toy models, not research, not for lab or clinical use. Videos made with showtime, an open-source video studio for coding agents." src="assets/hero-light.svg" width="100%">
+    <img alt="Nobel 2026 Lab. Hands-on demos of this year's Nobel Prizes, one card per prize. Medicine: a nerve cell lit by a pulse of blue light from the tip of an optical fibre. Physics: strings of light sensors in dark ice, a particle track with a cone of blue light behind it, and the sensors near the track lit up. Chemistry: a left hand drawn solid orange and its mirror image, a right hand drawn hatched teal, on either side of a dashed mirror line, with three small orange molecules above the left hand and only one teal one above the right: one hand wins. Literature: a torn scrap of papyrus with a few lines of Greek capitals, broken off at its ragged edges and around two holes, with red square brackets where letters are lost. A smaller dashed slot holds the prize still to come: Economics on 12 October. Toy models, not research, not for lab or clinical use. Videos made with showtime, an open-source video studio for coding agents." src="assets/hero-light.svg" width="100%">
   </picture>
 </p>
 
 > **Educational demos made to show an open-source tool. Not research, and not for any lab or clinical use.**
 
-<p align="center"><b>Live:</b> <a href="https://faviovazquez.github.io/nobel-2026-lab/">the lab's site</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/medicine/video/interactive/">the Medicine video that asks</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/physics/video/interactive/">the Physics video that asks</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/physics/glashow/">a real 6 PeV event in 3D</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/chemistry/page/">the Chemistry page</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/chemistry/video/exports/nobel-2026-chemistry.mp4">the Chemistry video</a></p>
+<p align="center"><b>Live:</b> <a href="https://faviovazquez.github.io/nobel-2026-lab/">the lab's site</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/medicine/video/interactive/">the Medicine video that asks</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/physics/video/interactive/">the Physics video that asks</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/physics/glashow/">a real 6 PeV event in 3D</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/chemistry/page/">the Chemistry page</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/chemistry/video/exports/nobel-2026-chemistry.mp4">the Chemistry video</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/literature/page/">the Literature page</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/literature/video/exports/nobel-2026-literature.mp4">the Literature video</a></p>
 
 <p align="center">
   <a href="#what-is-this"><b>What is this</b></a> ·
@@ -17,6 +17,7 @@
   <a href="#medicine-the-stations"><b>Medicine</b></a> ·
   <a href="#physics-the-stations"><b>Physics</b></a> ·
   <a href="#chemistry-the-stations"><b>Chemistry</b></a> ·
+  <a href="#literature-the-stations"><b>Literature</b></a> ·
   <a href="#what-is-real-and-what-is-a-toy"><b>Real or toy?</b></a> ·
   <a href="#rerun-it-yourself"><b>Rerun it</b></a> ·
   <a href="#glossary"><b>Glossary</b></a>
@@ -45,6 +46,7 @@ Every video in this lab, including the versions that stop and ask, was made with
 | Medicine | Light-gated ion channels and optogenetics: Karl Deisseroth, Peter Hegemann, Georg Nagel (announced 5 October) | [2026/medicine](2026/medicine/README.md) | done: facts, claims ledger (27 claims), toy models, page and video |
 | Physics | Neutrino astronomy: Francis Halzen, for the IceCube Neutrino Observatory (announced 6 October) | [2026/physics](2026/physics/README.md) | done: facts, claims ledger (41 claims), toy models, a replay of a real event, page and video |
 | Chemistry | Mirror-image molecules: Henri B. Kagan and Kenso Soai, for non-linear effects and autocatalysis in asymmetric synthesis (announced 7 October) | [2026/chemistry](2026/chemistry/README.md) | done: facts, claims ledger (39 claims), toy models, page and video |
+| Literature | Anne Carson, "for her bold and inventive oeuvre that, in playful dialogue with the classical tradition, has created new forms for contemporary literature" (announced 8 October) | [2026/literature](2026/literature/README.md) | done: facts, claims ledger (72 claims), the survival ledger, fragments, translators, the forms shelf, page and video; independent review done, findings fixed |
 | Economics | to be announced on 12 October | none yet | coming |
 
 The Nobel announcements run from 5 to 12 October 2026 ([nobelprize.org](https://www.nobelprize.org/prizes/medicine/2026/press-release/)). A folder is added only when its prize has been announced and its facts are sourced. The year index is in [2026/README.md](2026/README.md).
@@ -218,6 +220,55 @@ The 2026 Nobel Prize in Chemistry went to Henri B. Kagan and Kenso Soai, "for th
 
 </details>
 
+## Literature: the stations
+
+The 2026 Nobel Prize in Literature went to the Canadian author Anne Carson, "for her bold and inventive oeuvre that, in playful dialogue with the classical tradition, has created new forms for contemporary literature". The classical tradition she answers reaches us mostly lost, or in pieces. Six stops: what survives, how it survives, how translators carried it, and the new forms of her books. Every ancient text shown (Greek, Latin and the old English versions) is public domain, with its source; there is no likeness of her and no cover art. The details are in [2026/literature](2026/literature/README.md).
+
+<table>
+  <tr>
+    <td width="96" valign="top"><img src="assets/icons/station-ledger.svg" alt="Icon: a bookshelf of pencil outlines with two spines inked solid" width="72"></td>
+    <td valign="top"><b>1. The survival ledger</b> <i>(ready)</i><br>
+    How much survives of the ancient authors the Nobel Committee names. Of Sophocles' plays, more than 120 by modern estimate, seven survive complete; Sappho wrote an estimated 9,000 to 10,000 lines, and about 650 survive. Ancient testimony and modern estimates side by side, as ranges, each with its sources. Code and results: <a href="2026/literature/survival-ledger/README.md">survival-ledger</a>.</td>
+  </tr>
+  <tr>
+    <td width="96" valign="top"><img src="assets/icons/station-fragments.svg" alt="Icon: a torn scrap of papyrus with lines of writing and a pair of square brackets" width="72"></td>
+    <td valign="top"><b>2. Where the words went</b> <i>(ready)</i><br>
+    Three ways a Sappho poem is lost: a torn papyrus, where 95 of 483 printed letters are the 1914 editors' restorations; a quotation that stops after the first line of a fifth stanza; and fragments of a few words (in Wharton's 1908 edition the median has 7 Greek words, and about a third have 5 or fewer). Code and results: <a href="2026/literature/fragments/README.md">fragments</a>.</td>
+  </tr>
+  <tr>
+    <td width="96" valign="top"><img src="assets/icons/station-translators.svg" alt="Icon: one line of writing at the top with threads running down to four lines below" width="72"></td>
+    <td valign="top"><b>3. One poem, 2,000 years of translators</b> <i>(ready)</i><br>
+    Sappho 31 and six public-domain versions, from Catullus' Latin to Wharton's English prose of 1885, word by word: three keep her opening "seems to me", two open "Blest as the immortal gods is he". Our rough count, not a quality score. Code and results: <a href="2026/literature/translators/README.md">translators</a>.</td>
+  </tr>
+  <tr>
+    <td width="96" valign="top"><img src="assets/icons/station-forms.svg" alt="Icon: three small booklets fanned out, one marked in red" width="72"></td>
+    <td valign="top"><b>4. The forms shelf</b> <i>(ready)</i><br>
+    The 49 entries of the Committee's bibliography ("a selection") by the forms they name; <i>Float</i>'s 22 chapbooks and their 22! orders; and the prize's own history from the Nobel API: 123 laureates, 19 women, and the second Canadian after Alice Munro. Code and results: <a href="2026/literature/forms/README.md">forms</a>.</td>
+  </tr>
+  <tr>
+    <td width="96" valign="top"><img src="assets/icons/station-page.svg" alt="Icon: a web page with a slider" width="72"></td>
+    <td valign="top"><b>5. The interactive page</b> <i>(ready)</i><br>
+    Guess first, then see: lost plays on ink shelves, the torn papyrus with a slider for the restorations, the threads of one Greek stanza through six versions, and the forms shelf. <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/literature/page/">Try it online</a>, or open <a href="2026/literature/page/index.html"><code>2026/literature/page/index.html</code></a> after cloning.</td>
+  </tr>
+  <tr>
+    <td width="96" valign="top"><img src="assets/icons/station-video.svg" alt="Icon: a video frame with a play button" width="72"></td>
+    <td valign="top"><b>6. The video</b> <i>(ready)</i><br>
+    A 2:29 explainer drawn in ink that tells the story, from the citation to a torn papyrus, one Sappho poem through its translators and her new forms; it asks no questions. Every fact in it comes from the <a href="2026/literature/CLAIMS.md">claims ledger</a>. <a href="2026/literature/video/exports/nobel-2026-literature.mp4">Watch the MP4</a>. Files and how it was made: <a href="2026/literature/video/README.md">video</a>.</td>
+  </tr>
+</table>
+
+<details open>
+<summary><b>Station 1 in pictures: what survives of Sappho</b></summary>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="2026/literature/survival-ledger/results/sappho_grid_dark.png">
+    <img alt="A 100 by 100 grid of faint dots, a modern estimate of all the lines Sappho wrote, labelled ESTIMATE, with about 650 dots inked at random positions: the lines that survive. A red outline marks Book I, 1,320 verses, the number written on the papyrus roll's end-title. A blue dashed line marks the older estimate of about 9,000 verses. The dot positions mean nothing." src="2026/literature/survival-ledger/results/sappho_grid_light.png" width="480">
+  </picture>
+</p>
+
+</details>
+
 ## What is real, and what is a toy
 
 <table>
@@ -228,7 +279,7 @@ The 2026 Nobel Prize in Chemistry went to Henri B. Kagan and Kenso Soai, "for th
   </tr>
   <tr>
     <td valign="top"><b>Every prize</b></td>
-    <td valign="top">The prize, the people, the dates and the papers. Every sentence is sourced in the prize's FACTS.md and checked in its CLAIMS.md: <a href="2026/medicine/CLAIMS.md">Medicine</a>, <a href="2026/physics/CLAIMS.md">Physics</a>, <a href="2026/chemistry/CLAIMS.md">Chemistry</a>.</td>
+    <td valign="top">The prize, the people, the dates and the papers. Every sentence is sourced in the prize's FACTS.md and checked in its CLAIMS.md: <a href="2026/medicine/CLAIMS.md">Medicine</a>, <a href="2026/physics/CLAIMS.md">Physics</a>, <a href="2026/chemistry/CLAIMS.md">Chemistry</a>, <a href="2026/literature/CLAIMS.md">Literature</a>.</td>
     <td valign="top">Every model we built. The outputs are for learning. They are not checked against experiments, and they must not be used to plan an experiment, a device or a treatment. Each model's README lists every simplification.</td>
   </tr>
   <tr>
@@ -245,6 +296,11 @@ The 2026 Nobel Prize in Chemistry went to Henri B. Kagan and Kenso Soai, "for th
     <td valign="top"><b>Chemistry</b></td>
     <td valign="top">The published numbers we quote, such as the Nobel Committee's 75:25 worked example and Soai's 2003 runs (about 0.00005%, then 57%, 99% and more than 99.5%), each with its source in the ledger. Textbook level only: no lab procedures, amounts or conditions anywhere.</td>
     <td valign="top">Kagan's curve, Soai's amplifier and the mirror race: published mathematical models with numbers we chose. They show the shape of the ideas. They are not the laureates' results, and they do not explain how life chose its hand.</td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Literature</b></td>
+    <td valign="top">The Committee's words about her books, the Nobel API's counts, and the ancient texts: Greek, Latin and English as public-domain editions printed them (Wharton 1908, Grenfell and Hunt 1914, and the translators Wharton prints), byte for byte, each with its page. Ancient testimony and modern estimates of what survives, each with its sources.</td>
+    <td valign="top">Not a toy model but our own counts and drawings: the ink shelves and the 10,000-dot grid (estimates), the letters and words counted in old editions, and a hand alignment of six versions of one poem, our rough count, not a quality score. Nothing here is literary criticism, and none of it ranks a translator.</td>
   </tr>
 </table>
 
@@ -272,7 +328,8 @@ Everything runs on an ordinary laptop processor, with no GPU and no accounts. Af
 
 - **Physics**, the 6 PeV replay: rebuilt from IceCube's data release, see [glashow](2026/physics/glashow/README.md).
 - **Chemistry**, Kagan's curve, Soai's amplifier and the mirror race: each runs in seconds, from its own folder; the steps are in [2026/chemistry](2026/chemistry/README.md#rerun-and-check).
-- The pages need nothing: open `2026/medicine/page/index.html`, `2026/physics/page/index.html` or `2026/chemistry/page/index.html` in a browser.
+- **Literature**, the survival ledger, the fragments, the translators and the forms shelf: each runs in seconds, from its own folder; the steps are in [2026/literature](2026/literature/README.md#rerun-and-check).
+- The pages need nothing: open `2026/medicine/page/index.html`, `2026/physics/page/index.html`, `2026/chemistry/page/index.html` or `2026/literature/page/index.html` in a browser.
 - Check every link, picture and source in this repository, offline: `python3 tools/check_links.py`
 - Rebuild the pictures: `python3 tools/make_diagrams.py`
 
@@ -301,6 +358,9 @@ Everything runs on an ordinary laptop processor, with no GPU and no accounts. Af
 | Non-linear effect | When the product's ee is not in proportion to the catalyst's ee: the curve bends away from the straight line. Kagan found it in 1986. |
 | Homochiral | Of one hand only. Life is homochiral: the amino acids in our proteins are all one mirror form. |
 | Toy model | A deliberately simple model that shows an idea. It is good for learning and not for decisions. |
+| Fragment | A piece of an ancient text that survives without the rest: a scrap of papyrus, or a few lines quoted by a later writer. |
+| Papyrus | A writing sheet made from the papyrus plant. Many lost Greek texts were found on papyrus scraps in Egypt, at Oxyrhynchus. |
+| Restoration | Letters an editor fills into a hole in a papyrus, printed inside square brackets: a guess, not the ancient author's words. |
 
 ## Licence and credit
 
@@ -311,5 +371,11 @@ Data used by the Physics demos:
 - The 6 PeV event: IceCube Collaboration, data release for the Glashow resonance event, DOI [10.21234/gr2021](https://doi.org/10.21234/gr2021).
 - The positions of IceCube's 5,160 sensors: derived from IceCube's ppc geometry, Zenodo [10.5281/zenodo.10410725](https://doi.org/10.5281/zenodo.10410725), CC-BY-4.0.
 - Neutrino cross sections and the Earth model: the nuFATE tables (Vincent, Argüelles, Kheirandish, [arXiv:1706.09895](https://arxiv.org/abs/1706.09895)), MIT licence.
+
+Data used by the Literature demos:
+
+- The Nobel Prize API v2.1, CC0; the Nobel Committee's texts are quoted with attribution.
+- Public-domain editions: H. T. Wharton, *Sappho* (1908, [Project Gutenberg #57390](https://www.gutenberg.org/ebooks/57390)); Grenfell and Hunt, *The Oxyrhynchus Papyri* X (1914, [archive.org](https://archive.org/details/oxyrhynchuspapyr10gren)); Rhys Roberts, *Longinus On the Sublime* (1899).
+- Word glosses from LSJ, Perseus Digital Library, CC BY-SA 4.0 ([PerseusDL/lexica](https://github.com/PerseusDL/lexica)); fragment numbers (numbers only) from [The Digital Sappho](https://digitalsappho.org/), CC BY-SA 4.0. The Suda On Line is cited, not copied.
 
 Every video here was made with [showtime](https://github.com/FavioVazquez/showtime), an open-source video studio for coding agents.

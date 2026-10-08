@@ -1,0 +1,270 @@
+{
+ "checked": "2026-10-08",
+ "results": {
+  "SUDA_SAPPHO": {
+   "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/sigma/107",
+   "fetched_as": "https://www.cs.uky.edu/~raphael/sol/sol-entries/sigma/107",
+   "status": "found (key words)"
+  },
+  "SUDA_STES": {
+   "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/sigma/1095",
+   "fetched_as": "https://www.cs.uky.edu/~raphael/sol/sol-entries/sigma/1095",
+   "status": "found (key words)"
+  },
+  "SUDA_SIM": {
+   "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/sigma/439",
+   "fetched_as": "https://www.cs.uky.edu/~raphael/sol/sol-entries/sigma/439",
+   "status": "found (key words)"
+  },
+  "SUDA_AESCH": {
+   "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/alphaiota/357",
+   "fetched_as": "https://www.cs.uky.edu/~raphael/sol/sol-entries/alphaiota/357",
+   "status": "found (key words)"
+  },
+  "SUDA_SOPH": {
+   "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/sigma/815",
+   "fetched_as": "https://www.cs.uky.edu/~raphael/sol/sol-entries/sigma/815",
+   "status": "found (key words)"
+  },
+  "SUDA_EUR": {
+   "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/epsilon/3695",
+   "fetched_as": "https://www.cs.uky.edu/~raphael/sol/sol-entries/epsilon/3695",
+   "status": "found (key words)"
+  },
+  "GH1914": {
+   "url": "https://archive.org/details/oxyrhynchuspapyr10gren",
+   "fetched_as": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_djvu.txt",
+   "status": "found"
+  },
+  "GH1914_TOTAL": {
+   "url": "https://archive.org/details/oxyrhynchuspapyr10gren",
+   "fetched_as": "https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_djvu.txt",
+   "status": "found"
+  },
+  "WP_SAPPHO": {
+   "url": "https://en.wikipedia.org/wiki/Sappho",
+   "fetched_as": "https://en.wikipedia.org/w/index.php?title=Sappho&action=raw",
+   "status": "found"
+  },
+  "WP_SAPPHO_BOOKS": {
+   "url": "https://en.wikipedia.org/wiki/Sappho",
+   "fetched_as": "https://en.wikipedia.org/w/index.php?title=Sappho&action=raw",
+   "status": "found"
+  },
+  "WP_SAPPHO_ODE": {
+   "url": "https://en.wikipedia.org/wiki/Sappho",
+   "fetched_as": "https://en.wikipedia.org/w/index.php?title=Sappho&action=raw",
+   "status": "found"
+  },
+  "GREEN2015": {
+   "url": "https://www.lrb.co.uk/the-paper/v37/n22/peter-green/what-we-know",
+   "fetched_as": "https://www.lrb.co.uk/the-paper/v37/n22/peter-green/what-we-know",
+   "status": "found"
+  },
+  "GREEN2015_BOOK1": {
+   "url": "https://www.lrb.co.uk/the-paper/v37/n22/peter-green/what-we-know",
+   "fetched_as": "https://www.lrb.co.uk/the-paper/v37/n22/peter-green/what-we-know",
+   "status": "found"
+  },
+  "MIZZOU": {
+   "url": "https://library.missouri.edu/specialcollections/exhibits/show/lh2arts/sappho",
+   "fetched_as": "https://library.missouri.edu/specialcollections/exhibits/show/lh2arts/sappho",
+   "status": "found"
+  },
+  "ILLINOIS": {
+   "url": "https://exhibits.library.illinois.edu/s/rbml/page/sappho-lyrics",
+   "fetched_as": "https://exhibits.library.illinois.edu/s/rbml/page/sappho-lyrics",
+   "status": "found"
+  },
+  "MAHONEY2009": {
+   "url": "https://web.archive.org/web/2024id_/https://bmcr.brynmawr.edu/?p=26633",
+   "fetched_as": "https://web.archive.org/web/2024id_/https://bmcr.brynmawr.edu/?p=26633",
+   "status": "found"
+  },
+  "MAHONEY2009_180": {
+   "url": "https://web.archive.org/web/2024id_/https://bmcr.brynmawr.edu/?p=26633",
+   "fetched_as": "https://web.archive.org/web/2024id_/https://bmcr.brynmawr.edu/?p=26633",
+   "status": "found"
+  },
+  "FINGLASS2022": {
+   "url": "https://cyberleninka.ru/article/n/of-centaurs-and-satyrs-stesichorus-geryoneis-and-satyrdrama",
+   "fetched_as": "https://cyberleninka.ru/article/n/of-centaurs-and-satyrs-stesichorus-geryoneis-and-satyrdrama",
+   "status": "found"
+  },
+  "WEST1971": {
+   "url": "https://www.cambridge.org/core/journals/classical-quarterly/article/stesichorus/9FECE1F4E45300B708861156CBB11FED",
+   "fetched_as": "https://www.cambridge.org/core/journals/classical-quarterly/article/stesichorus/9FECE1F4E45300B708861156CBB11FED",
+   "status": "found"
+  },
+  "WP_GERYONEIS": {
+   "url": "https://en.wikipedia.org/wiki/Geryoneis",
+   "fetched_as": "https://en.wikipedia.org/w/index.php?title=Geryoneis&action=raw",
+   "status": "found"
+  },
+  "WP_STES": {
+   "url": "https://en.wikipedia.org/wiki/Stesichorus",
+   "fetched_as": "https://en.wikipedia.org/w/index.php?title=Stesichorus&action=raw",
+   "status": "found"
+  },
+  "WP_AESCH": {
+   "url": "https://en.wikipedia.org/wiki/Aeschylus",
+   "fetched_as": "https://en.wikipedia.org/w/index.php?title=Aeschylus&action=raw",
+   "status": "found"
+  },
+  "WHE_AESCH": {
+   "url": "https://www.worldhistory.org/Aeschylus/",
+   "fetched_as": "https://www.worldhistory.org/Aeschylus/",
+   "status": "found (key words)"
+  },
+  "IRELAND1986": {
+   "url": "https://www.cambridge.org/core/journals/new-surveys-in-the-classics/article/abs/ii-aeschylus-the-man-his-plays-and-times/651F06E9F4788A651C1C3CAAE855F56D",
+   "fetched_as": "https://www.cambridge.org/core/journals/new-surveys-in-the-classics/article/abs/ii-aeschylus-the-man-his-plays-and-times/651F06E9F4788A651C1C3CAAE855F56D",
+   "status": "found"
+  },
+  "DURHAM_AESCH": {
+   "url": "https://livingpoets.awh.durham.ac.uk/w/index.php/Aeschylus:_A_Guide_to_Selected_Sources",
+   "fetched_as": "https://livingpoets.awh.durham.ac.uk/w/index.php/Aeschylus:_A_Guide_to_Selected_Sources",
+   "status": "found"
+  },
+  "WP_SOPH": {
+   "url": "https://en.wikipedia.org/wiki/Sophocles",
+   "fetched_as": "https://en.wikipedia.org/w/index.php?title=Sophocles&action=raw",
+   "status": "found"
+  },
+  "WP_SOPH_7": {
+   "url": "https://en.wikipedia.org/wiki/Sophocles",
+   "fetched_as": "https://en.wikipedia.org/w/index.php?title=Sophocles&action=raw",
+   "status": "found"
+  },
+  "SMITH_SOPH": {
+   "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0104:entry=sophocles-bio-1",
+   "fetched_as": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0104:entry=sophocles-bio-1",
+   "status": "found"
+  },
+  "DURHAM_SOPH": {
+   "url": "https://livingpoets.awh.durham.ac.uk/w/index.php/Sophocles:_A_Guide_to_Selected_Sources",
+   "fetched_as": "https://livingpoets.awh.durham.ac.uk/w/index.php/Sophocles:_A_Guide_to_Selected_Sources",
+   "status": "found"
+  },
+  "WP_ICHN": {
+   "url": "https://en.wikipedia.org/wiki/Ichneutae",
+   "fetched_as": "https://en.wikipedia.org/w/index.php?title=Ichneutae&action=raw",
+   "status": "found"
+  },
+  "WP_EUR": {
+   "url": "https://en.wikipedia.org/wiki/Euripides",
+   "fetched_as": "https://en.wikipedia.org/w/index.php?title=Euripides&action=raw",
+   "status": "found"
+  },
+  "WP_EUR_19": {
+   "url": "https://en.wikipedia.org/wiki/Euripides",
+   "fetched_as": "https://en.wikipedia.org/w/index.php?title=Euripides&action=raw",
+   "status": "found"
+  },
+  "SMITH_EUR": {
+   "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0104:entry=euripides-bio-2",
+   "fetched_as": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0104:entry=euripides-bio-2",
+   "status": "found"
+  },
+  "SMITH_EUR_18": {
+   "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0104:entry=euripides-bio-2",
+   "fetched_as": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0104:entry=euripides-bio-2",
+   "status": "found"
+  },
+  "FURMAN_EUR": {
+   "url": "https://folio.furman.edu/dramaturg/Euripides/Rhesus",
+   "fetched_as": "https://folio.furman.edu/dramaturg/Euripides/Rhesus",
+   "status": "found"
+  },
+  "COLLARD1981": {
+   "url": "https://www.cambridge.org/core/journals/new-surveys-in-the-classics/article/i-the-extant-work/72E0DE7E22AD826146C172DD5D9AA398",
+   "fetched_as": "https://www.cambridge.org/core/journals/new-surveys-in-the-classics/article/i-the-extant-work/72E0DE7E22AD826146C172DD5D9AA398",
+   "status": "found"
+  },
+  "WP_POC": {
+   "url": "https://en.wikipedia.org/wiki/Poetry_of_Catullus",
+   "fetched_as": "https://en.wikipedia.org/w/index.php?title=Poetry_of_Catullus&action=raw",
+   "status": "found"
+  },
+  "WP_POC_DATE": {
+   "url": "https://en.wikipedia.org/wiki/Poetry_of_Catullus",
+   "fetched_as": "https://en.wikipedia.org/w/index.php?title=Poetry_of_Catullus&action=raw",
+   "status": "found"
+  },
+  "WP_POC_18": {
+   "url": "https://en.wikipedia.org/wiki/Poetry_of_Catullus",
+   "fetched_as": "https://en.wikipedia.org/w/index.php?title=Poetry_of_Catullus&action=raw",
+   "status": "found"
+  },
+  "LOEB1921": {
+   "url": "https://archive.org/details/catullustibullus00catu",
+   "fetched_as": "https://archive.org/download/catullustibullus00catu/catullustibullus00catu_djvu.txt",
+   "status": "found"
+  },
+  "LOEB1921_T": {
+   "url": "https://archive.org/details/catullustibullus00catu",
+   "fetched_as": "https://archive.org/download/catullustibullus00catu/catullustibullus00catu_djvu.txt",
+   "status": "found"
+  },
+  "KISS2015": {
+   "url": "https://www.cambridge.org/core/journals/classical-quarterly/article/isaac-vossius-catullus-and-the-codex-thuaneus/83969A9B6D530363CE53DE9002938DC0",
+   "fetched_as": "https://www.cambridge.org/core/journals/classical-quarterly/article/isaac-vossius-catullus-and-the-codex-thuaneus/83969A9B6D530363CE53DE9002938DC0",
+   "status": "found"
+  },
+  "NSC2021": {
+   "url": "https://www.cambridge.org/core/journals/new-surveys-in-the-classics/article/i-catullus-and-his-cultural-milieu/FD152820160CD10EA9BCCDB4F8A7A507",
+   "fetched_as": "https://www.cambridge.org/core/journals/new-surveys-in-the-classics/article/i-catullus-and-his-cultural-milieu/FD152820160CD10EA9BCCDB4F8A7A507",
+   "status": "found"
+  },
+  "WP_CAT": {
+   "url": "https://en.wikipedia.org/wiki/Catullus",
+   "fetched_as": "https://en.wikipedia.org/w/index.php?title=Catullus&action=raw",
+   "status": "found"
+  },
+  "POETS_CAT": {
+   "url": "https://poets.org/poet/gaius-valerius-catullus",
+   "fetched_as": "https://poets.org/poet/gaius-valerius-catullus",
+   "status": "found"
+  },
+  "WP_SIM": {
+   "url": "https://en.wikipedia.org/wiki/Simonides_of_Ceos",
+   "fetched_as": "https://en.wikipedia.org/w/index.php?title=Simonides_of_Ceos&action=raw",
+   "status": "found"
+  },
+  "WP_SIM_FR": {
+   "url": "https://en.wikipedia.org/wiki/Simonides_of_Ceos",
+   "fetched_as": "https://en.wikipedia.org/w/index.php?title=Simonides_of_Ceos&action=raw",
+   "status": "found"
+  },
+  "AGNI_SIM": {
+   "url": "https://agnionline.bu.edu/about/our-people/authors/simonides",
+   "fetched_as": "https://agnionline.bu.edu/about/our-people/authors/simonides",
+   "status": "found"
+  },
+  "WP_THUC": {
+   "url": "https://en.wikipedia.org/wiki/Thucydides",
+   "fetched_as": "https://en.wikipedia.org/w/index.php?title=Thucydides&action=raw",
+   "status": "found"
+  },
+  "WP_HPW": {
+   "url": "https://en.wikipedia.org/wiki/History_of_the_Peloponnesian_War",
+   "fetched_as": "https://en.wikipedia.org/w/index.php?title=History_of_the_Peloponnesian_War&action=raw",
+   "status": "found"
+  },
+  "EB1911_THUC": {
+   "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Thucydides",
+   "fetched_as": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Thucydides",
+   "status": "found"
+  },
+  "DIOD13": {
+   "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/13C*.html",
+   "fetched_as": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/13C*.html",
+   "status": "found"
+  },
+  "MARCELLINUS": {
+   "url": "https://topostext.org/work/763",
+   "fetched_as": "https://topostext.org/work/763",
+   "status": "found"
+  }
+ }
+}

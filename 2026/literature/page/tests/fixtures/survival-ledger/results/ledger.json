@@ -1,0 +1,703 @@
+{
+ "status": "fixture",
+ "label": "Educational demos made to show an open-source tool. Not research.",
+ "what": "How much survives of the ancient authors the Nobel Committee names in its 2026 bio-bibliography. Ancient testimony and modern estimates kept apart, as ranges, each with its sources.",
+ "reading_rules": [
+  "Ancient counts are testimony (the Suda is a 10th-century Byzantine encyclopedia), not measurements.",
+  "Ranges mean the sources disagree; we never pick one number inside a range.",
+  "No single 'percentage lost'. The Sappho grid is labelled 'estimate' and names both totals.",
+  "'Survives complete' differs by author: Thucydides is unfinished; Sappho's one complete poem is short."
+ ],
+ "rows": [
+  {
+   "id": "sophocles",
+   "author": "Sophocles",
+   "language": "Greek",
+   "named_by_committee": {
+    "phrase": "tragedies such as Sophocles’s Electra (2001) and Antigone (2015)",
+    "where": "essay",
+    "source": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/"
+   },
+   "dates": {
+    "text": "c. 497/496 – 406/405 BC",
+    "source": [
+     {
+      "key": "WP_SOPH",
+      "name": "Wikipedia, 'Sophocles' (citing Lloyd-Jones 2003, p. 3)",
+      "url": "https://en.wikipedia.org/wiki/Sophocles",
+      "anchor": "lead",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "unit": "plays",
+   "ancient_count": {
+    "range": [
+     113,
+     130
+    ],
+    "unit": "plays",
+    "text": "123, or more by some counts (Suda); 130 ascribed, 17 of them spurious, so 113 (Aristophanes of Byzantium, as reported in the ancient tradition)",
+    "source": [
+     {
+      "key": "SUDA_SOPH",
+      "name": "Suda σ 815 (Sophocles), Suda On Line",
+      "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/sigma/815",
+      "anchor": "Adler σ 815",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "modern_estimate": {
+    "range": [
+     120,
+     130
+    ],
+    "unit": "plays",
+    "text": "more than 120; no exact number is possible",
+    "source": [
+     {
+      "key": "WP_SOPH",
+      "name": "Wikipedia, 'Sophocles' (citing Lloyd-Jones 2003, p. 3)",
+      "url": "https://en.wikipedia.org/wiki/Sophocles",
+      "anchor": "lead",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "survives": {
+    "value": 7,
+    "unit": "complete plays",
+    "notes": "plus about half of the satyr play Ichneutae, from a papyrus (more than 400 lines in whole or part)",
+    "source": [
+     {
+      "key": "WP_SOPH_7",
+      "name": "Wikipedia, 'Sophocles'",
+      "url": "https://en.wikipedia.org/wiki/Sophocles",
+      "anchor": "lead",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "shelf": {
+    "total": [
+     120,
+     130
+    ],
+    "survive": [
+     7,
+     7
+    ],
+    "label": "7 complete plays of more than 120"
+   }
+  },
+  {
+   "id": "euripides",
+   "author": "Euripides",
+   "language": "Greek",
+   "named_by_committee": {
+    "phrase": "Euripides’s Bakkhai (2015)",
+    "where": "essay",
+    "source": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/"
+   },
+   "dates": {
+    "text": "c. 480 – c. 406 BC",
+    "source": [
+     {
+      "key": "WP_EUR",
+      "name": "Wikipedia, 'Euripides'",
+      "url": "https://en.wikipedia.org/wiki/Euripides",
+      "anchor": "lead",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "unit": "plays",
+   "ancient_count": {
+    "range": [
+     75,
+     95
+    ],
+    "unit": "plays",
+    "text": "75 or 92, and 77 surviving in the Suda's day (Suda); 75 (Varro, in Aulus Gellius); 95 (some ancient scholars)",
+    "source": [
+     {
+      "key": "SUDA_EUR",
+      "name": "Suda ε 3695 (Euripides), Suda On Line",
+      "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/epsilon/3695",
+      "anchor": "Adler ε 3695",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "modern_estimate": {
+    "range": [
+     88,
+     95
+    ],
+    "unit": "plays",
+    "text": "about 90: 'approximately 92'; 22 productions of 4 plays give about 88",
+    "source": [
+     {
+      "key": "FURMAN_EUR",
+      "name": "Furman University, Dramaturgy pages, 'Euripides: Rhesus'",
+      "url": "https://folio.furman.edu/dramaturg/Euripides/Rhesus",
+      "anchor": "introduction",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "survives": {
+    "range": [
+     18,
+     19
+    ],
+    "unit": "complete plays",
+    "notes": "19 attributed to him, 18 if the Rhesus (authorship disputed) is left out; includes the satyr play Cyclops",
+    "source": [
+     {
+      "key": "WP_EUR_19",
+      "name": "Wikipedia, 'Euripides'",
+      "url": "https://en.wikipedia.org/wiki/Euripides",
+      "anchor": "lead",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "shelf": {
+    "total": [
+     88,
+     95
+    ],
+    "survive": [
+     18,
+     19
+    ],
+    "label": "18 or 19 plays of about 90"
+   }
+  },
+  {
+   "id": "aeschylus",
+   "author": "Aeschylus",
+   "language": "Greek",
+   "named_by_committee": {
+    "phrase": "Agamemnon by Aiskhylos",
+    "where": "bibliography (An Oresteia, 2009)",
+    "source": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/"
+   },
+   "dates": {
+    "text": "c. 525/524 – c. 456/455 BC",
+    "source": [
+     {
+      "key": "WP_AESCH",
+      "name": "Wikipedia, 'Aeschylus'",
+      "url": "https://en.wikipedia.org/wiki/Aeschylus",
+      "anchor": "section 'Works'",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "unit": "plays",
+   "ancient_count": {
+    "range": [
+     73,
+     90
+    ],
+    "unit": "plays",
+    "text": "90 tragedies (Suda); 70 tragedies and 5 satyr plays (ancient Life) and 73 dramas (ancient catalogue), as summarised by Ireland 1986",
+    "source": [
+     {
+      "key": "SUDA_AESCH",
+      "name": "Suda αι 357 (Aeschylus), Suda On Line",
+      "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/alphaiota/357",
+      "anchor": "Adler αι 357",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "modern_estimate": {
+    "range": [
+     70,
+     90
+    ],
+    "unit": "plays",
+    "text": "an estimated 70 to 90",
+    "source": [
+     {
+      "key": "WP_AESCH",
+      "name": "Wikipedia, 'Aeschylus'",
+      "url": "https://en.wikipedia.org/wiki/Aeschylus",
+      "anchor": "section 'Works'",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "survives": {
+    "range": [
+     6,
+     7
+    ],
+    "unit": "complete plays",
+    "notes": "7 survive complete; one of them, Prometheus Bound, is of disputed authorship, so 6 or 7",
+    "source": [
+     {
+      "key": "WP_AESCH",
+      "name": "Wikipedia, 'Aeschylus'",
+      "url": "https://en.wikipedia.org/wiki/Aeschylus",
+      "anchor": "section 'Works'",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "shelf": {
+    "total": [
+     70,
+     90
+    ],
+    "survive": [
+     6,
+     7
+    ],
+    "label": "7 plays (one disputed) of 70 to 90"
+   }
+  },
+  {
+   "id": "stesichoros",
+   "author": "Stesichoros",
+   "language": "Greek",
+   "named_by_committee": {
+    "phrase": "poem fragments by the sixth century BC Greek poet Stesichoros",
+    "where": "essay",
+    "source": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/"
+   },
+   "dates": {
+    "text": "c. 630 – c. 555 BC (Suda: born in the 37th Olympiad, died in the 56th)",
+    "source": [
+     {
+      "key": "SUDA_STES",
+      "name": "Suda σ 1095 (Stesichoros), Suda On Line",
+      "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/sigma/1095",
+      "anchor": "Adler σ 1095",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "unit": "books",
+   "ancient_count": {
+    "value": 26,
+    "unit": "books",
+    "text": "26 books (Suda)",
+    "source": [
+     {
+      "key": "SUDA_STES",
+      "name": "Suda σ 1095 (Stesichoros), Suda On Line",
+      "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/sigma/1095",
+      "anchor": "Adler σ 1095",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "modern_estimate": null,
+   "survives": {
+    "value": 0,
+    "unit": "complete poems",
+    "notes": "only fragments, from quotations and papyri",
+    "source": [
+     {
+      "key": "MAHONEY2009_180",
+      "name": "A. Mahoney, BMCR 2009.06.20 (archived copy)",
+      "url": "https://web.archive.org/web/2024id_/https://bmcr.brynmawr.edu/?p=26633",
+      "anchor": "same review",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "modern_estimate_note": "No modern estimate of his whole output in lines was found; we give none.",
+   "shelf": {
+    "total": [
+     26,
+     26
+    ],
+    "survive": [
+     0,
+     0
+    ],
+    "fragments": true,
+    "label": "26 books, fragments only"
+   }
+  },
+  {
+   "id": "geryoneis",
+   "author": "Stesichoros: the Geryon poem (Geryoneis)",
+   "language": "Greek",
+   "named_by_committee": {
+    "phrase": "concerning the winged red monster Geryon",
+    "where": "essay",
+    "source": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/"
+   },
+   "dates": {
+    "text": "6th century BC",
+    "source": [
+     {
+      "key": "BIO",
+      "name": "Nobel Committee for Literature, bio-bibliography 2026 (Anders Olsson)",
+      "url": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/",
+      "anchor": "essay and bibliography",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "unit": "lines",
+   "ancient_count": {
+    "value": 1300,
+    "unit": "lines (at least)",
+    "text": "a line number, 1300, written in the margin of the papyrus (P.Oxy. 2617 fr. 7 = S27): the poem had at least 1,300 lines",
+    "source": [
+     {
+      "key": "MAHONEY2009",
+      "name": "A. Mahoney, review of M. Lazzeri, Studi sulla Gerioneide di Stesicoro, BMCR 2009.06.20 (archived copy)",
+      "url": "https://web.archive.org/web/2024id_/https://bmcr.brynmawr.edu/?p=26633",
+      "anchor": "original https://bmcr.brynmawr.edu/?p=26633",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "modern_estimate": {
+    "range": [
+     1300,
+     2000
+    ],
+    "unit": "lines",
+    "text": "at least 1,300; about 1,500 (Pavese); 'perhaps closer to two thousand' (West 1971)",
+    "source": [
+     {
+      "key": "WEST1971",
+      "name": "M. L. West, 'Stesichorus', Classical Quarterly 21 (1971) 302-314 (free first-page extract)",
+      "url": "https://www.cambridge.org/core/journals/classical-quarterly/article/stesichorus/9FECE1F4E45300B708861156CBB11FED",
+      "anchor": "first page",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "survives": {
+    "value": 180,
+    "unit": "readable lines (about)",
+    "notes": "about 180 lines in any sort of readable form; one source only, so shown as 'about'",
+    "source": [
+     {
+      "key": "MAHONEY2009_180",
+      "name": "A. Mahoney, BMCR 2009.06.20 (archived copy)",
+      "url": "https://web.archive.org/web/2024id_/https://bmcr.brynmawr.edu/?p=26633",
+      "anchor": "same review",
+      "accessed": "2026-10-08"
+     }
+    ]
+   }
+  },
+  {
+   "id": "sappho",
+   "author": "Sappho",
+   "language": "Greek",
+   "named_by_committee": {
+    "phrase": "her interpretation of Sappho’s poem fragments",
+    "where": "essay",
+    "source": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/"
+   },
+   "dates": {
+    "text": "c. 630 – c. 570 BC (Suda: born in the 42nd Olympiad, 612–609 BC)",
+    "source": [
+     {
+      "key": "SUDA_SAPPHO",
+      "name": "Suda σ 107 (Sappho), Suda On Line, tr. E. Vandiver",
+      "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/sigma/107",
+      "anchor": "Adler σ 107",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "unit": "lines",
+   "ancient_count": {
+    "range": [
+     8,
+     9
+    ],
+    "unit": "books",
+    "text": "nine books (Suda); the Alexandrian edition had at least eight books, the exact number uncertain",
+    "source": [
+     {
+      "key": "SUDA_SAPPHO",
+      "name": "Suda σ 107 (Sappho), Suda On Line, tr. E. Vandiver",
+      "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/sigma/107",
+      "anchor": "Adler σ 107",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "modern_estimate": {
+    "range": [
+     9000,
+     10000
+    ],
+    "unit": "lines",
+    "text": "'something like 9,000 verses' (Grenfell & Hunt 1914); about 10,000 lines (Green 2015; Wikipedia after Rayor & Lardinois 2014; Missouri exhibit)",
+    "source": [
+     {
+      "key": "GH1914_TOTAL",
+      "name": "B. P. Grenfell and A. S. Hunt, The Oxyrhynchus Papyri X (1914), no. 1231, introduction",
+      "url": "https://archive.org/details/oxyrhynchuspapyr10gren",
+      "anchor": "p. 20",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "survives": {
+    "value": 650,
+    "unit": "lines (about)",
+    "notes": "about 650 lines; only one poem, fragment 1 (the Ode to Aphrodite), is certainly complete. Green (2015) puts the surviving share at 'perhaps 5 per cent'.",
+    "source": [
+     {
+      "key": "WP_SAPPHO",
+      "name": "Wikipedia, 'Sappho' (citing Rayor & Lardinois 2014, p. 7)",
+      "url": "https://en.wikipedia.org/wiki/Sappho",
+      "anchor": "section 'Works'",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "ancient_book1": {
+    "value": 1320,
+    "unit": "verses",
+    "text": "Book I held 1,320 verses (330 stanzas): the number written on the roll's own end-title, P.Oxy. 1231 fr. 56",
+    "source": [
+     {
+      "key": "GH1914",
+      "name": "B. P. Grenfell and A. S. Hunt, The Oxyrhynchus Papyri X (1914), no. 1231, introduction",
+      "url": "https://archive.org/details/oxyrhynchuspapyr10gren",
+      "anchor": "p. 20 (and Fr. 56, the end-title, p. 39)",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "shelf": {
+    "total": [
+     8,
+     9
+    ],
+    "survive": [
+     0,
+     0
+    ],
+    "fragments": true,
+    "label": "8 or 9 books, fragments and one complete poem"
+   },
+   "grid": {
+    "total": 10000,
+    "inked": 650,
+    "book1": 1320,
+    "alt_total": 9000,
+    "label": "estimate"
+   }
+  },
+  {
+   "id": "simonides",
+   "author": "Simonides of Keos",
+   "language": "Greek",
+   "named_by_committee": {
+    "phrase": "the sixth century BC Greek poet Simonides of Keos",
+    "where": "essay",
+    "source": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/"
+   },
+   "dates": {
+    "text": "c. 556 – 468 BC (Suda: born in the 56th Olympiad)",
+    "source": [
+     {
+      "key": "WP_SIM",
+      "name": "Wikipedia, 'Simonides of Ceos'",
+      "url": "https://en.wikipedia.org/wiki/Simonides_of_Ceos",
+      "anchor": "lead",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "unit": "poems",
+   "ancient_count": null,
+   "modern_estimate": null,
+   "survives": {
+    "value": null,
+    "unit": "fragments",
+    "notes": "only a small part: fragments from papyri and quotations, and some short pieces whole; a papyrus published in 1992 (P.Oxy. 3965, the 'New Simonides', an elegy on the battle of Plataea) 'quadrupled' what we have (AGNI)",
+    "source": [
+     {
+      "key": "WP_SIM_FR",
+      "name": "Wikipedia, 'Simonides of Ceos'",
+      "url": "https://en.wikipedia.org/wiki/Simonides_of_Ceos",
+      "anchor": "section on the poetry",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "ancient_count_note": "The Suda lists his kinds of poem (laments, odes, epigrams, paeans, tragedies) but gives no count.",
+   "ancient_count_note_source": [
+    {
+     "key": "SUDA_SIM",
+     "name": "Suda σ 439 (Simonides), Suda On Line, tr. R. Dyer",
+     "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/sigma/439",
+     "anchor": "Adler σ 439",
+     "quote": null,
+     "paraphrase": "The Suda lists the kinds of poem he wrote (laments, praise poems, epigrams, paeans, tragedies and more) but gives no count.",
+     "accessed": "2026-10-08"
+    }
+   ],
+   "modern_estimate_note": "No count of his output was found; we give none."
+  },
+  {
+   "id": "catullus",
+   "author": "Catullus",
+   "language": "Latin",
+   "named_by_committee": {
+    "phrase": "the Roman poet Catullus, with his famous elegy 101",
+    "where": "essay",
+    "source": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/"
+   },
+   "dates": {
+    "text": "c. 84 – c. 54 BC",
+    "source": [
+     {
+      "key": "WP_CAT",
+      "name": "Wikipedia, 'Catullus'",
+      "url": "https://en.wikipedia.org/wiki/Catullus",
+      "anchor": "infobox and §Sources and organization",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "unit": "poems",
+   "ancient_count": null,
+   "modern_estimate": {
+    "range": [
+     113,
+     116
+    ],
+    "unit": "poems",
+    "text": "116 numbered poems; 18, 19 and 20 are left out of most modern editions, so about 113 ('necessarily approximate'). A few lines quoted by ancient writers are not in the manuscripts, so some poems are lost.",
+    "source": [
+     {
+      "key": "WP_CAT",
+      "name": "Wikipedia, 'Catullus'",
+      "url": "https://en.wikipedia.org/wiki/Catullus",
+      "anchor": "infobox and §Sources and organization",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "survives": {
+    "range": [
+     113,
+     116
+    ],
+    "unit": "poems",
+    "notes": "Nearly all of them reached us through one manuscript, V, known at Verona around 1300 (c. 1290–1310) and lost before 1400; all complete copies date from the 14th century or later. Poem 62 also survives in a 9th-century anthology (the Codex Thuaneus).",
+    "source": [
+     {
+      "key": "WP_POC",
+      "name": "Wikipedia, 'Poetry of Catullus'",
+      "url": "https://en.wikipedia.org/wiki/Poetry_of_Catullus",
+      "anchor": "section on manuscripts",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "ancient_count_note": "No ancient count of his poems was found.",
+   "ancient_count_note_source": [],
+   "shelf": {
+    "total": [
+     1,
+     1
+    ],
+    "survive": [
+     1,
+     1
+    ],
+    "label": "one book of about 113 poems, through one lost manuscript"
+   }
+  },
+  {
+   "id": "thucydides",
+   "author": "Thucydides",
+   "language": "Greek",
+   "named_by_committee": {
+    "phrase": "she aligns the historian Thucydides with Virginia Woolf",
+    "where": "essay",
+    "source": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/"
+   },
+   "dates": {
+    "text": "c. 460 – c. 400 BC",
+    "source": [
+     {
+      "key": "WP_THUC",
+      "name": "Wikipedia, 'Thucydides'",
+      "url": "https://en.wikipedia.org/wiki/Thucydides",
+      "anchor": "section on the History",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "unit": "books",
+   "ancient_count": {
+    "value": 8,
+    "unit": "books",
+    "text": "8 books by the usual division; some ancient readers divided it into 9 (Diodorus) or 13 (Marcellinus)",
+    "source": [
+     {
+      "key": "DIOD13",
+      "name": "Diodorus Siculus 13.42, Loeb translation (C. H. Oldfather), LacusCurtius",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/13C*.html",
+      "anchor": "13.42.5",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "modern_estimate": {
+    "value": 8,
+    "unit": "books",
+    "text": "8 books (a later division, not his own)",
+    "source": [
+     {
+      "key": "WP_THUC",
+      "name": "Wikipedia, 'Thucydides'",
+      "url": "https://en.wikipedia.org/wiki/Thucydides",
+      "anchor": "section on the History",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "survives": {
+    "value": 8,
+    "unit": "books",
+    "notes": "all of it, but unfinished: it breaks off mid-sentence in 411 BC, and the war went on to 404 BC",
+    "source": [
+     {
+      "key": "WP_HPW",
+      "name": "Wikipedia, 'History of the Peloponnesian War'",
+      "url": "https://en.wikipedia.org/wiki/History_of_the_Peloponnesian_War",
+      "anchor": "lead",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "shelf": {
+    "total": [
+     8,
+     8
+    ],
+    "survive": [
+     8,
+     8
+    ],
+    "label": "all 8 books, but it stops mid-sentence in 411 BC"
+   }
+  }
+ ],
+ "sources_checked": "results/source_check.json (python -m ledger.check_sources)",
+ "note": "FIXTURE: a trimmed copy of the experiment's output (2026-10-08), kept so the page can be built and tested without it. Not a result; the page labels it 'placeholder'."
+}

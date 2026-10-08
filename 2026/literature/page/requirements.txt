@@ -1,0 +1,7 @@
+# The page itself needs nothing: open index.html. build_data.py uses only the Python standard library.
+# For the tests and screenshots (plus Node 18+ with playwright-core and a Chromium build, see README.md):
+pytest==8.4.0
+Pillow==8.4.0   # optional: shrinks the screenshots
+# make_fonts.py only (to re-subset the fonts):
+fonttools==4.66.0
+brotli==1.1.0

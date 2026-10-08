@@ -1,0 +1,24 @@
+{{titulus2
+|Scriptor= Gaius Valerius Catullus
+|OperaeTitulus= [[Carmina (Catullus)|Carmina]]
+|OperaeWikiPagina= Carmina (Catullus)
+|Annus= I sec. a.Ch.
+|SubTitulus= 
+|Genera=Carmina
+|Editio=''Catullus'', Cambridge, Massachusetts, Harvard University Press, 1893
+|Recensor=Elmer Truesdell Merrill
+|Fons= [http://books.google.com/books?id=MscAAAAAYAAJ Google Books]
+}}
+<div class=text>
+
+[[/Carmen I|1]] | [[/Carmen II|2]] | [[/Carmen III|3]] | [[/Carmen IV|4]] | [[/Carmen V|5]] | [[/Carmen VI|6]] | [[/Carmen VII|7]] | [[/Carmen VIII|8]] | [[/Carmen IX|9]] | [[/Carmen X|10]] | [[/Carmen XI|11]] | [[/Carmen XII|12]] | [[/Carmen XIII|13]] | [[/Carmen XIV|14]] | [[/Carmen XIVb|14b]] | [[/Carmen XV|15]] | [[/Carmen XVI|16]] | [[/Carmen XVII|17]] | [[/Carmen XXI|21]] | [[/Carmen XXII|22]] | [[/Carmen XXIII|23]] | [[/Carmen XXIV|24]] | [[/Carmen XXV|25]] | [[/Carmen XXVI|26]] | [[/Carmen XXVII|27]] | [[/Carmen XXVIII|28]] | [[/Carmen XXIX|29]] | [[/Carmen XXX|30]] | [[/Carmen XXXI|31]] | [[/Carmen XXXII|32]] | [[/Carmen XXXIII|33]] | [[/Carmen XXXIV|34]] | [[/Carmen XXXV|35]] | [[/Carmen XXXVI|36]] | [[/Carmen XXXVII|37]] | [[/Carmen XXXVIII|38]] | [[/Carmen XXXIX|39]] | [[/Carmen XL|40]] | [[/Carmen XLI|41]] | [[/Carmen XLII|42]] | [[/Carmen XLIII|43]] | [[/Carmen XLIV|44]] | [[/Carmen XLV|45]] | [[/Carmen XLVI|46]] | [[/Carmen XLVII|47]] | [[/Carmen XLVIII|48]] | [[/Carmen XLIX|49]] | [[/Carmen L|50]] | [[/Carmen LI|51]] | [[/Carmen LII|52]] | [[/Carmen LIII|53]] | [[/Carmen LIV|54]] | [[/Carmen LV|55]] | [[/Carmen LVI|56]] | [[/Carmen LVII|57]] | [[/Carmen LVIII|58]] | [[/Carmen LVIIIb|58b]] | [[/Carmen LIX|59]] | [[/Carmen LX|60]] | [[/Carmen LXI|61]] | [[/Carmen LXII|62]] | [[/Carmen LXIII|63]] | [[/Carmen LXIV|64]] | [[/Carmen LXV|65]] | [[/Carmen LXVI|66]] | [[/Carmen LXVII|67]] | [[/Carmen LXVIII|68]] | [[/Carmen LXIX|69]] | [[/Carmen LXX|70]] | [[/Carmen LXXI|71]] | [[/Carmen LXXII|72]] | [[/Carmen LXXIII|73]] | [[/Carmen LXXIV|74]] | [[/Carmen LXXV|75]] | [[/Carmen LXXVI|76]] | [[/Carmen LXXVII|77]] | [[/Carmen LXXVIII|78]] | [[/Carmen LXXVIIIb|78b]] | [[/Carmen LXXIX|79]] | [[/Carmen LXXX|80]] | [[/Carmen LXXXI|81]] | [[/Carmen LXXXII|82]] | [[/Carmen LXXXIII|83]] | [[/Carmen LXXXIV|84]] | [[/Carmen LXXXV|85]] | [[/Carmen LXXXVI|86]] | [[/Carmen LXXXVII|87]] | [[/Carmen LXXXVIII|88]] | [[/Carmen LXXXIX|89]] | [[/Carmen XC|90]] | [[/Carmen XCI|91]] | [[/Carmen XCII|92]] | [[/Carmen XCIII|93]] | [[/Carmen XCIV|94]] | [[/Carmen XCV|95]] | [[/Carmen XCVb|95b]] | [[/Carmen XCVI|96]] | [[/Carmen XCVII|97]] | [[/Carmen XCVIII|98]] | [[/Carmen XCIX|99]] | [[/Carmen C|100]] | [[/Carmen CI|101]] | [[/Carmen CII|102]] | [[/Carmen CIII|103]] | [[/Carmen CIV|104]] | [[/Carmen CV|105]] | [[/Carmen CVI|106]] | [[/Carmen CVII|107]] | [[/Carmen CVIII|108]] | [[/Carmen CIX|109]] | [[/Carmen CX|110]] | [[/Carmen CXI|111]] | [[/Carmen CXII|112]] | [[/Carmen CXIII|113]] | [[/Carmen CXIV|114]] | [[/Carmen CXV|115]] | [[/Carmen CXVI|116]] | 
+
+</div>
+===Fons===
+Fons multorum horum carminum: http://rudy.negenborn.net/catullus/
+{{finis}}
+
+
+[[es:Poemas (Catulo)]]
+[[fr:Poésies de Catulle]]
+[[it:Le poesie di Catullo]]

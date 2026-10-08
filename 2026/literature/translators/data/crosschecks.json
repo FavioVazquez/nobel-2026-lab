@@ -1,0 +1,55 @@
+{
+ "about": "Independent public-domain witnesses we checked each displayed version against (we display Wharton's printing; these confirm the text, the date and that it is a version of this ode). Files are verbatim extracts in data/sources/crosscheck/; 'anchor' is the line in that extract. Differences are listed exactly; none changes a word we align except where noted.",
+ "philips": {
+  "witness": "The Spectator No. 229, 'Thursday, Nov. 22, 1711', by Addison, in Henry Morley's edition (Routledge, 1891), Project Gutenberg #11010",
+  "url": "https://www.gutenberg.org/cache/epub/11010/pg11010-images.html",
+  "file": "data/sources/crosscheck/extract_spectator229_from_pg11010_html_L4806-4945.html",
+  "anchor": {"date_line": 3, "poem_first_line": 106, "full_file_lines": [4806, 4945]},
+  "date_line_txt": "No. 229.               Thursday, Nov. 22, 1711.             Addison.",
+  "is_a_version": "Addison presents three 'Copies' of the ode: Catullus's, Boileau's, and the English one 'by a Gentleman whose Translation of the Hymn to Venus has been so deservedly admired'; he calls it the 'English Translation'. The 1711 text does not name Philips; the name is in Morley's footnote ('The other translation by Ambrose Philips'). Addison calls Boileau's, not this one, 'rather an Imitation than a Translation'.",
+  "differences_vs_wharton": ["line 1: Wharton 'the immortal', Spectator \"th'immortal\"", "line 14: Wharton 'gentle horror', Spectator 'gentle Horrors'", "line 16: Wharton 'sank', Spectator 'sunk'", "spelling: Wharton gazed/chilled/thrilled/died, Spectator gaz'd/chil'd/thrill'd/dy'd", "capitals: the Spectator capitalises nouns; stanza numerals I-IV dropped by Wharton"],
+  "affects_alignment": "No: 'horror' vs 'Horrors' and 'sank' vs 'sunk' are the same word slots."
+ },
+ "smollett": {
+  "witness": "Tobias Smollett, The Adventures of Roderick Random (1748), chapter XL, Project Gutenberg #4085 (edition not stated)",
+  "url": "https://www.gutenberg.org/cache/epub/4085/pg4085.txt",
+  "file": "data/sources/smollett_pg4085_ch40.txt",
+  "anchor": {"poem_first_line": 44, "full_file_lines": [8957, 9022]},
+  "is_a_version": "In the novel the narrator copies out his 'Ode' for Narcissa 'together with another on the same subject': this poem. It does not name Sappho. It is Wharton (1908) who prints it among the renderings of this ode; its rhyme 'flame / vital frame' and 'For while I gaze my bosom glows' echo Philips 1711. We label it a version only in Wharton's sense.",
+  "differences_vs_wharton": ["line 1: Wharton 'shafts', PG 'shaft'", "line 2: Wharton 'Love', PG 'Love!'", "line 3: Wharton 'thy', PG 'thou' (probably a PG slip)", "lines 4 and 16: Wharton '.', PG '!'", "line 8: Wharton 'whelm my soul.', PG \"'whelm my soul!\"", "line 13: Wharton 'Condemned', PG \"Condemn'd\""],
+  "affects_alignment": "No."
+ },
+ "merivale": {
+  "witness": "Collections from the Greek Anthology ... by the Rev. Robert Bland and others. A new edition ... by J. H. Merivale (London: Longman ... John Murray, 1833), p. 15, archive.org scans 'collectionsfrom00blan' (Library of Congress) and 'collectionsfromg00blan' (University of California)",
+  "url": "https://archive.org/details/collectionsfrom00blan",
+  "file": "data/sources/crosscheck/extract_merivale1833_UC_djvu_L3080-3135.txt",
+  "anchor": {"heading_line": 24, "also": "data/sources/crosscheck/extract_merivale1833_LoC_djvu_L2744-2900.txt"},
+  "is_a_version": "Headed 'II. (2.) ODE. Εἰς Ἐρωμέναν' and signed 'M.'. Reading 'M.' as J. H. Merivale is an inference (the Advertisement decodes 'B.', 'H.' and 'C. M.' but not 'M.'), matching Wharton's attribution.",
+  "differences_vs_wharton": ["line 1: Wharton 'the immortal gods', 1833 \"th' immortal Gods\"", "line 4: '.' vs '!'", "line 10: Wharton 'quivering', 1833 \"quiv'ring\"", "line 11: Wharton 'eyeballs', 1833 'eye-balls'", "line 16: '.' vs '!'"],
+  "affects_alignment": "No (OCR text; checked by eye)."
+ },
+ "symonds": {
+  "witness": "Wharton's own preface to the first edition (May 1885): 'The translations by Mr. John Addington Symonds, dated 1883, were all made especially for this work in the early part of that year, and have not been elsewhere published.'",
+  "url": "https://www.gutenberg.org/ebooks/57390",
+  "file": null,
+  "is_a_version": "Wharton prints it as a rendering of this ode, credited 'J. Addington Symonds, 1883.'",
+  "differences_vs_wharton": [],
+  "affects_alignment": "No second witness checked: Wharton is the first printing."
+ },
+ "catullus": {
+  "witness": "Robinson Ellis, Catulli Veronensis Liber (Oxford, 1867), pp. 70-71 (archive.org 'catulliveronens01elligoog', OCR); E. T. Merrill, Catullus (1893) on Latin Wikisource (revision 279690); L. C. Smithers and R. F. Burton (1894), Project Gutenberg #20732 (Mueller's 1885 Latin text)",
+  "url": "https://la.wikisource.org/w/index.php?title=Carmina_(Catullus,_ed._Merrill)/Carmen_LI&oldid=279690",
+  "file": "data/sources/crosscheck/lawikisource_catullus51_merrill.wiki",
+  "anchor": {"ellis_extract": "data/sources/crosscheck/extract_ellis1867_catullus51_L5420-5530.txt", "smithers_extract": "data/sources/crosscheck/extract_burton_smithers_pg20732_catullus51_L3105-3130.txt"},
+  "is_a_version": "Wharton: 'The famous imitation of this ode by Catullus'; Addison (Spectator 229): a 'Translation by Catullus'. Line 8 is lost in the manuscripts: Ellis prints no line 8 and lists editors' fillers ('Quod loquar amens', 'uocis in ore' ...); Merrill prints dots; Wharton prints asterisks.",
+  "differences_vs_wharton": ["u for v in Ellis and Merrill", "line 7: Merrill 'adspexi', Wharton 'aspexi'", "line 11: Smithers/Mueller 'aures geminae, teguntur', Wharton 'aures, gemina teguntur'", "line 12: 'nocte.' vs Wharton 'nocte—'"],
+  "affects_alignment": "No. Lines 13-16 (his closing stanza on idleness, which Wharton does not quote) are taken from Merrill."
+ },
+ "wharton": {
+  "witness": "Only the 5th edition (1908) was read. The literal prose dates from the 1st edition (1885); we did not check that the 1885 wording of this paragraph is identical.",
+  "url": "https://www.gutenberg.org/ebooks/57390",
+  "file": null,
+  "differences_vs_wharton": [],
+  "affects_alignment": "Unknown for the 1885 wording; the alignment uses the 1908 printing."
+ }
+}

@@ -1,0 +1,5 @@
+body: Literata[opsz,wght].ttf {'opsz': 12, 'wght': 400}
+body-bold: Literata[opsz,wght].ttf {'opsz': 12, 'wght': 600}
+italic: Literata-Italic[opsz,wght].ttf {'opsz': 12, 'wght': 400}
+greek: GFSDidot-Regular.ttf 
+hand: Caveat[wght].ttf {'wght': 520}

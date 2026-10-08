@@ -1,0 +1,327 @@
+{
+ "status": "final",
+ "source": "Nobel Prize API v2.1, CC0 (https://www.nobelprize.org/about/terms-of-use-for-api-nobelprize-org-and-data-nobelprize-org/)",
+ "urls": [
+  "https://api.nobelprize.org/2.1/laureates?nobelPrizeCategory=lit&limit=300",
+  "https://api.nobelprize.org/2.1/nobelPrizes?nobelPrizeCategory=lit&limit=200"
+ ],
+ "fetched": "2026-10-08",
+ "totals": {
+  "award_years_1901_2026": 126,
+  "years_awarded": 119,
+  "years_with_no_award": [
+   "1914",
+   "1918",
+   "1935",
+   "1940",
+   "1941",
+   "1942",
+   "1943"
+  ],
+  "shared_years": [
+   "1904",
+   "1917",
+   "1966",
+   "1974"
+  ],
+  "laureates": 123,
+  "laureates_meta_count": 123,
+  "women": 19,
+  "men": 104,
+  "gender_field": "API field 'gender', as recorded by the Nobel Prize API"
+ },
+ "carson": {
+  "id": "1067",
+  "name": "Anne Carson",
+  "year": "2026",
+  "motivation": "for her bold and inventive oeuvre that, in playful dialogue with the classical tradition, has created new forms for contemporary literature",
+  "woman_number": 19,
+  "cross_check": "nobelprize.org list of women laureates: https://www.nobelprize.org/prizes/lists/nobel-prize-awarded-women/"
+ },
+ "by_decade": [
+  {
+   "decade": "1900s",
+   "first_year": 1901,
+   "last_year": 1909,
+   "award_years": 9,
+   "years_with_no_award": 0,
+   "laureates": 10,
+   "women": 1,
+   "women_names": [
+    "Selma Lagerlöf (1909)"
+   ]
+  },
+  {
+   "decade": "1910s",
+   "first_year": 1910,
+   "last_year": 1919,
+   "award_years": 10,
+   "years_with_no_award": 2,
+   "laureates": 9,
+   "women": 0,
+   "women_names": []
+  },
+  {
+   "decade": "1920s",
+   "first_year": 1920,
+   "last_year": 1929,
+   "award_years": 10,
+   "years_with_no_award": 0,
+   "laureates": 10,
+   "women": 2,
+   "women_names": [
+    "Grazia Deledda (1926)",
+    "Sigrid Undset (1928)"
+   ]
+  },
+  {
+   "decade": "1930s",
+   "first_year": 1930,
+   "last_year": 1939,
+   "award_years": 10,
+   "years_with_no_award": 1,
+   "laureates": 9,
+   "women": 1,
+   "women_names": [
+    "Pearl Buck (1938)"
+   ]
+  },
+  {
+   "decade": "1940s",
+   "first_year": 1940,
+   "last_year": 1949,
+   "award_years": 10,
+   "years_with_no_award": 4,
+   "laureates": 6,
+   "women": 1,
+   "women_names": [
+    "Gabriela Mistral (1945)"
+   ]
+  },
+  {
+   "decade": "1950s",
+   "first_year": 1950,
+   "last_year": 1959,
+   "award_years": 10,
+   "years_with_no_award": 0,
+   "laureates": 10,
+   "women": 0,
+   "women_names": []
+  },
+  {
+   "decade": "1960s",
+   "first_year": 1960,
+   "last_year": 1969,
+   "award_years": 10,
+   "years_with_no_award": 0,
+   "laureates": 11,
+   "women": 1,
+   "women_names": [
+    "Nelly Sachs (1966)"
+   ]
+  },
+  {
+   "decade": "1970s",
+   "first_year": 1970,
+   "last_year": 1979,
+   "award_years": 10,
+   "years_with_no_award": 0,
+   "laureates": 11,
+   "women": 0,
+   "women_names": []
+  },
+  {
+   "decade": "1980s",
+   "first_year": 1980,
+   "last_year": 1989,
+   "award_years": 10,
+   "years_with_no_award": 0,
+   "laureates": 10,
+   "women": 0,
+   "women_names": []
+  },
+  {
+   "decade": "1990s",
+   "first_year": 1990,
+   "last_year": 1999,
+   "award_years": 10,
+   "years_with_no_award": 0,
+   "laureates": 10,
+   "women": 3,
+   "women_names": [
+    "Nadine Gordimer (1991)",
+    "Toni Morrison (1993)",
+    "Wisława Szymborska (1996)"
+   ]
+  },
+  {
+   "decade": "2000s",
+   "first_year": 2000,
+   "last_year": 2009,
+   "award_years": 10,
+   "years_with_no_award": 0,
+   "laureates": 10,
+   "women": 3,
+   "women_names": [
+    "Elfriede Jelinek (2004)",
+    "Doris Lessing (2007)",
+    "Herta Müller (2009)"
+   ]
+  },
+  {
+   "decade": "2010s",
+   "first_year": 2010,
+   "last_year": 2019,
+   "award_years": 10,
+   "years_with_no_award": 0,
+   "laureates": 10,
+   "women": 3,
+   "women_names": [
+    "Alice Munro (2013)",
+    "Svetlana Alexievich (2015)",
+    "Olga Tokarczuk (2018)"
+   ]
+  },
+  {
+   "decade": "2020s",
+   "first_year": 2020,
+   "last_year": 2026,
+   "award_years": 7,
+   "years_with_no_award": 0,
+   "laureates": 7,
+   "women": 4,
+   "women_names": [
+    "Louise Glück (2020)",
+    "Annie Ernaux (2022)",
+    "Han Kang (2024)",
+    "Anne Carson (2026)"
+   ]
+  }
+ ],
+ "women": [
+  {
+   "year": "1909",
+   "name": "Selma Lagerlöf"
+  },
+  {
+   "year": "1926",
+   "name": "Grazia Deledda"
+  },
+  {
+   "year": "1928",
+   "name": "Sigrid Undset"
+  },
+  {
+   "year": "1938",
+   "name": "Pearl Buck"
+  },
+  {
+   "year": "1945",
+   "name": "Gabriela Mistral"
+  },
+  {
+   "year": "1966",
+   "name": "Nelly Sachs"
+  },
+  {
+   "year": "1991",
+   "name": "Nadine Gordimer"
+  },
+  {
+   "year": "1993",
+   "name": "Toni Morrison"
+  },
+  {
+   "year": "1996",
+   "name": "Wisława Szymborska"
+  },
+  {
+   "year": "2004",
+   "name": "Elfriede Jelinek"
+  },
+  {
+   "year": "2007",
+   "name": "Doris Lessing"
+  },
+  {
+   "year": "2009",
+   "name": "Herta Müller"
+  },
+  {
+   "year": "2013",
+   "name": "Alice Munro"
+  },
+  {
+   "year": "2015",
+   "name": "Svetlana Alexievich"
+  },
+  {
+   "year": "2018",
+   "name": "Olga Tokarczuk"
+  },
+  {
+   "year": "2020",
+   "name": "Louise Glück"
+  },
+  {
+   "year": "2022",
+   "name": "Annie Ernaux"
+  },
+  {
+   "year": "2024",
+   "name": "Han Kang"
+  },
+  {
+   "year": "2026",
+   "name": "Anne Carson"
+  }
+ ],
+ "canada": {
+  "field_birth_country": {
+   "field": "birth.place.country.en / birth.place.countryNow.en (place of birth, not citizenship)",
+   "laureates": [
+    {
+     "year": "1976",
+     "name": "Saul Bellow",
+     "birth.place.country.en": "Canada",
+     "birth.place.countryNow.en": "Canada"
+    },
+    {
+     "year": "2013",
+     "name": "Alice Munro",
+     "birth.place.country.en": "Canada",
+     "birth.place.countryNow.en": "Canada"
+    },
+    {
+     "year": "2026",
+     "name": "Anne Carson",
+     "birth.place.country.en": "Canada",
+     "birth.place.countryNow.en": "Canada"
+    }
+   ],
+   "count": 3
+  },
+  "field_press_release_wording": {
+   "field": "the Swedish Academy's press release: 'awarded to the Canadian author ...'",
+   "laureates": [
+    {
+     "year": "2013",
+     "name": "Alice Munro",
+     "wording": "awarded to the Canadian author Alice Munro",
+     "url": "https://www.nobelprize.org/prizes/literature/2013/press-release/"
+    },
+    {
+     "year": "2026",
+     "name": "Anne Carson",
+     "wording": "awarded to the Canadian author Anne Carson",
+     "url": "https://www.nobelprize.org/prizes/literature/2026/press-release/"
+    }
+   ],
+   "count": 2,
+   "checked": "2026-10-08 (both pages fetched; the phrase is on each)"
+  },
+  "saul_bellow": "Born in Lachine, Quebec, Canada (API birth country: Canada), grew up in Chicago; the 1976 press release places him in 'American narrative art' (https://www.nobelprize.org/prizes/literature/1976/press-release/). So he counts under birth country but not under 'Canadian author'.",
+  "safe_line": "Anne Carson is the second Canadian Literature laureate, after Alice Munro (2013).",
+  "caveat": "The API records place of birth, not citizenship or writing language. A Canadian born abroad would not appear in the birth-country field."
+ }
+}

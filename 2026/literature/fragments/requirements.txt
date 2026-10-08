@@ -1,0 +1,4 @@
+# Python 3.11. Matplotlib (PSF-style/BSD-compatible licence) for the figures, pytest (MIT) for the tests.
+# Everything else is the standard library.
+matplotlib==3.9.2
+pytest==8.3.3

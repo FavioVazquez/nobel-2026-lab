@@ -1,0 +1,846 @@
+{
+ "count": 56,
+ "diffs": [
+  {
+   "version": "catullus",
+   "greek": "greek:3:2",
+   "pass1": null,
+   "pass2": [
+    [
+     "catullus:4:2"
+    ],
+    "close"
+   ]
+  },
+  {
+   "version": "catullus",
+   "greek": "greek:3:4",
+   "pass1": [
+    [
+     "catullus:5:1"
+    ],
+    "close"
+   ],
+   "pass2": null
+  },
+  {
+   "version": "catullus",
+   "greek": "greek:5:3",
+   "pass1": null,
+   "pass2": [
+    [
+     "catullus:5:1"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "catullus",
+   "greek": "greek:6:1",
+   "pass1": [
+    [
+     "catullus:6:2"
+    ],
+    "loose"
+   ],
+   "pass2": null
+  },
+  {
+   "version": "catullus",
+   "greek": "greek:6:4",
+   "pass1": [
+    [
+     "catullus:6:1"
+    ],
+    "loose"
+   ],
+   "pass2": null
+  },
+  {
+   "version": "catullus",
+   "greek": "greek:8:3",
+   "pass1": [
+    [
+     "catullus:7:4"
+    ],
+    "loose"
+   ],
+   "pass2": null
+  },
+  {
+   "version": "catullus",
+   "greek": "greek:11:5",
+   "pass1": [
+    [
+     "catullus:11:1"
+    ],
+    "loose"
+   ],
+   "pass2": [
+    [
+     "catullus:10:3",
+     "catullus:11:1"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "catullus",
+   "greek": "greek:12:2",
+   "pass1": [
+    [
+     "catullus:11:2"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "catullus:11:2"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:2:4",
+   "pass1": null,
+   "pass2": [
+    [
+     "merivale:2:6",
+     "merivale:2:7"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:3:5",
+   "pass1": [
+    [
+     "merivale:3:3",
+     "merivale:3:4",
+     "merivale:3:6"
+    ],
+    "loose"
+   ],
+   "pass2": [
+    [
+     "merivale:3:4",
+     "merivale:3:6"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:5:2",
+   "pass1": [
+    [
+     "merivale:5:1",
+     "merivale:5:2"
+    ],
+    "loose"
+   ],
+   "pass2": [
+    [
+     "merivale:5:1",
+     "merivale:5:2",
+     "merivale:5:5"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:5:3",
+   "pass1": [
+    [
+     "merivale:5:7"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "merivale:5:4",
+     "merivale:5:7"
+    ],
+    "close"
+   ]
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:5:4",
+   "pass1": [
+    [
+     "merivale:5:6"
+    ],
+    "loose"
+   ],
+   "pass2": [
+    [
+     "merivale:5:6"
+    ],
+    "close"
+   ]
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:6:4",
+   "pass1": [
+    [
+     "merivale:6:1",
+     "merivale:6:2",
+     "merivale:6:5",
+     "merivale:6:7"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "merivale:6:1",
+     "merivale:6:2",
+     "merivale:6:7"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:7:6",
+   "pass1": [
+    [
+     "merivale:9:1"
+    ],
+    "loose"
+   ],
+   "pass2": [
+    [
+     "merivale:9:1"
+    ],
+    "close"
+   ]
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:11:3",
+   "pass1": [
+    [
+     "merivale:15:6"
+    ],
+    "loose"
+   ],
+   "pass2": null
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:13:3",
+   "pass1": [
+    [
+     "merivale:13:2",
+     "merivale:13:3"
+    ],
+    "loose"
+   ],
+   "pass2": [
+    [
+     "merivale:13:3"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:14:1",
+   "pass1": [
+    [
+     "merivale:14:2",
+     "merivale:14:3"
+    ],
+    "loose"
+   ],
+   "pass2": [
+    [
+     "merivale:14:2"
+    ],
+    "close"
+   ]
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:15:2",
+   "pass1": null,
+   "pass2": [
+    [
+     "merivale:15:6"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "merivale",
+   "greek": "greek:15:3",
+   "pass1": [
+    [
+     "merivale:15:3"
+    ],
+    "loose"
+   ],
+   "pass2": [
+    [
+     "merivale:15:3"
+    ],
+    "close"
+   ]
+  },
+  {
+   "version": "philips",
+   "greek": "greek:2:4",
+   "pass1": null,
+   "pass2": [
+    [
+     "philips:2:6"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "philips",
+   "greek": "greek:3:3",
+   "pass1": [
+    [
+     "philips:2:6"
+    ],
+    "close"
+   ],
+   "pass2": null
+  },
+  {
+   "version": "philips",
+   "greek": "greek:3:5",
+   "pass1": [
+    [
+     "philips:3:5",
+     "philips:4:2"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "philips:4:2"
+    ],
+    "close"
+   ]
+  },
+  {
+   "version": "philips",
+   "greek": "greek:5:5",
+   "pass1": [
+    [
+     "philips:5:4"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "philips:5:4",
+     "philips:6:6"
+    ],
+    "close"
+   ]
+  },
+  {
+   "version": "philips",
+   "greek": "greek:7:1",
+   "pass1": [
+    [
+     "philips:7:2"
+    ],
+    "loose"
+   ],
+   "pass2": [
+    [
+     "philips:7:2"
+    ],
+    "close"
+   ]
+  },
+  {
+   "version": "philips",
+   "greek": "greek:7:3",
+   "pass1": [
+    [
+     "philips:7:3",
+     "philips:7:4"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "philips:7:3",
+     "philips:7:4"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "philips",
+   "greek": "greek:8:1",
+   "pass1": [
+    [
+     "philips:8:8"
+    ],
+    "loose"
+   ],
+   "pass2": null
+  },
+  {
+   "version": "philips",
+   "greek": "greek:8:3",
+   "pass1": null,
+   "pass2": [
+    [
+     "philips:8:7",
+     "philips:8:8"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "philips",
+   "greek": "greek:10:2",
+   "pass1": [
+    [
+     "philips:10:7"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "philips:10:7"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "philips",
+   "greek": "greek:12:2",
+   "pass1": [
+    [
+     "philips:12:2"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "philips:12:2"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "philips",
+   "greek": "greek:13:5",
+   "pass1": [
+    [
+     "philips:14:5"
+    ],
+    "loose"
+   ],
+   "pass2": [
+    [
+     "philips:14:5",
+     "philips:14:6"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "philips",
+   "greek": "greek:15:3",
+   "pass1": null,
+   "pass2": [
+    [
+     "philips:16:4"
+    ],
+    "close"
+   ]
+  },
+  {
+   "version": "smollett",
+   "greek": "greek:6:3",
+   "pass1": [
+    [
+     "smollett:5:6"
+    ],
+    "close"
+   ],
+   "pass2": null
+  },
+  {
+   "version": "smollett",
+   "greek": "greek:7:1",
+   "pass1": [
+    [
+     "smollett:5:2"
+    ],
+    "loose"
+   ],
+   "pass2": [
+    [
+     "smollett:5:2"
+    ],
+    "close"
+   ]
+  },
+  {
+   "version": "smollett",
+   "greek": "greek:7:3",
+   "pass1": [
+    [
+     "smollett:5:3",
+     "smollett:5:4"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "smollett:5:3",
+     "smollett:5:4"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "smollett",
+   "greek": "greek:9:6",
+   "pass1": [
+    [
+     "smollett:3:4"
+    ],
+    "loose"
+   ],
+   "pass2": null
+  },
+  {
+   "version": "smollett",
+   "greek": "greek:10:2",
+   "pass1": [
+    [
+     "smollett:4:7"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "smollett:4:7"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "symonds",
+   "greek": "greek:3:3",
+   "pass1": [
+    [
+     "symonds:3:1",
+     "symonds:3:2",
+     "symonds:3:3"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "symonds:3:1",
+     "symonds:3:2"
+    ],
+    "close"
+   ]
+  },
+  {
+   "version": "symonds",
+   "greek": "greek:3:5",
+   "pass1": [
+    [
+     "symonds:3:9",
+     "symonds:4:2"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "symonds:4:2"
+    ],
+    "close"
+   ]
+  },
+  {
+   "version": "symonds",
+   "greek": "greek:5:2",
+   "pass1": [
+    [
+     "symonds:5:1"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "symonds:5:1",
+     "symonds:5:4"
+    ],
+    "close"
+   ]
+  },
+  {
+   "version": "symonds",
+   "greek": "greek:8:1",
+   "pass1": [
+    [
+     "symonds:8:5"
+    ],
+    "loose"
+   ],
+   "pass2": null
+  },
+  {
+   "version": "symonds",
+   "greek": "greek:8:3",
+   "pass1": null,
+   "pass2": [
+    [
+     "symonds:8:2",
+     "symonds:8:5"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "symonds",
+   "greek": "greek:9:1",
+   "pass1": null,
+   "pass2": [
+    [
+     "symonds:9:1"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "symonds",
+   "greek": "greek:10:2",
+   "pass1": [
+    [
+     "symonds:10:2",
+     "symonds:10:3"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "symonds:10:2",
+     "symonds:10:3"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "symonds",
+   "greek": "greek:11:5",
+   "pass1": [
+    [
+     "symonds:11:7",
+     "symonds:12:5"
+    ],
+    "loose"
+   ],
+   "pass2": [
+    [
+     "symonds:11:7",
+     "symonds:11:9",
+     "symonds:12:5"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "symonds",
+   "greek": "greek:12:2",
+   "pass1": [
+    [
+     "symonds:12:4"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "symonds:12:4"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "symonds",
+   "greek": "greek:14:1",
+   "pass1": [
+    [
+     "symonds:14:1",
+     "symonds:14:3"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "symonds:14:1"
+    ],
+    "close"
+   ]
+  },
+  {
+   "version": "wharton",
+   "greek": "greek:2:4",
+   "pass1": [
+    [
+     "wharton:1:11",
+     "wharton:1:13"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "wharton:1:11",
+     "wharton:1:13"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "wharton",
+   "greek": "greek:3:3",
+   "pass1": [
+    [
+     "wharton:1:16"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "wharton:1:16",
+     "wharton:1:17",
+     "wharton:1:18"
+    ],
+    "close"
+   ]
+  },
+  {
+   "version": "wharton",
+   "greek": "greek:3:5",
+   "pass1": [
+    [
+     "wharton:1:19",
+     "wharton:1:21"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "wharton:1:21"
+    ],
+    "close"
+   ]
+  },
+  {
+   "version": "wharton",
+   "greek": "greek:8:3",
+   "pass1": [
+    [
+     "wharton:2:21",
+     "wharton:2:22"
+    ],
+    "loose"
+   ],
+   "pass2": null
+  },
+  {
+   "version": "wharton",
+   "greek": "greek:11:4",
+   "pass1": [
+    [
+     "wharton:3:19",
+     "wharton:3:20",
+     "wharton:3:22"
+    ],
+    "loose"
+   ],
+   "pass2": [
+    [
+     "wharton:3:19",
+     "wharton:3:20",
+     "wharton:3:22"
+    ],
+    "close"
+   ]
+  },
+  {
+   "version": "wharton",
+   "greek": "greek:12:2",
+   "pass1": [
+    [
+     "wharton:3:24"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "wharton:3:24"
+    ],
+    "loose"
+   ]
+  },
+  {
+   "version": "wharton",
+   "greek": "greek:14:1",
+   "pass1": [
+    [
+     "wharton:4:10",
+     "wharton:4:8",
+     "wharton:4:9"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "wharton:4:8"
+    ],
+    "close"
+   ]
+  },
+  {
+   "version": "wharton",
+   "greek": "greek:15:2",
+   "pass1": [
+    [
+     "wharton:4:24",
+     "wharton:4:25"
+    ],
+    "close"
+   ],
+   "pass2": [
+    [
+     "wharton:4:25"
+    ],
+    "close"
+   ]
+  },
+  {
+   "version": "wharton",
+   "greek": "greek:16:2",
+   "pass1": null,
+   "pass2": [
+    [
+     "wharton:4:18",
+     "wharton:4:20"
+    ],
+    "loose"
+   ]
+  }
+ ]
+}

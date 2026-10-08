@@ -1,0 +1,5384 @@
+{
+ "status": "fixture",
+ "note": "FIXTURE: a trimmed copy of the experiment's output (2026-10-08), kept so the page can be built and tested without it. Not a result; the page labels it 'placeholder'.",
+ "wharton_book": {
+  "title": "Sappho: Memoir, Text, Selected Renderings and a Literal Translation, by Henry Thornton Wharton",
+  "edition": "5th edition, London: John Lane, 1908 (1st edition David Stott, 1885); Greek text after Bergk (Poetae Lyrici Graeci, 4th ed., Leipzig 1882), as Wharton's preface says",
+  "gutenberg": "Project Gutenberg eBook #57390 (released 25 June 2018)",
+  "url": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html",
+  "sha256_full_file": "bf616822d86ef89b75aa0ee68698568a81a9f3620edf642af73daaa4545cb247"
+ },
+ "greek": {
+  "id": "greek",
+  "label": "Sappho, the Greek text as printed by Wharton (his fr. 2; Voigt 31)",
+  "numbering": {
+   "wharton_bergk": "2",
+   "voigt": "31"
+  },
+  "date": "c. 600 BC (poem); this text: Bergk 1882 as printed by Wharton 1908",
+  "language": "grc",
+  "source": {
+   "url": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html",
+   "excerpt_file": "data/sources/wharton_pg57390_fr2.html",
+   "lines_in_full_file": [
+    2291,
+    2519
+   ],
+   "sha256_full_file": "bf616822d86ef89b75aa0ee68698568a81a9f3620edf642af73daaa4545cb247",
+   "pages": [
+    64,
+    65
+   ]
+  },
+  "lines": [
+   {
+    "n": 1,
+    "text": "Φαίνεταί μοι κήνος ἴσος θέοισιν",
+    "stanza": 1,
+    "anchor": {
+     "excerpt_line": 4,
+     "page": 64
+    }
+   },
+   {
+    "n": 2,
+    "text": "ἔμμεν ὤνηρ, ὄστις ἐναντίος τοι",
+    "stanza": 1,
+    "anchor": {
+     "excerpt_line": 7,
+     "page": 64
+    }
+   },
+   {
+    "n": 3,
+    "text": "ἰζάνει, καὶ πλασίον ἆδυ φωνεύ-",
+    "stanza": 1,
+    "anchor": {
+     "excerpt_line": 10,
+     "page": 64
+    }
+   },
+   {
+    "n": 4,
+    "text": "σας ὑπακούει",
+    "stanza": 1,
+    "anchor": {
+     "excerpt_line": 13,
+     "page": 64
+    }
+   },
+   {
+    "n": 5,
+    "text": "καὶ γελαίσας ἰμερόεν, τό μοι μάν",
+    "stanza": 2,
+    "anchor": {
+     "excerpt_line": 15,
+     "page": 64
+    }
+   },
+   {
+    "n": 6,
+    "text": "καρδίαν ἐν στήθεσιν ἐπτόασεν·",
+    "stanza": 2,
+    "anchor": {
+     "excerpt_line": 19,
+     "page": 64
+    }
+   },
+   {
+    "n": 7,
+    "text": "ὡς γὰρ εὔιδον βροχέως σε, φώνας",
+    "stanza": 2,
+    "anchor": {
+     "excerpt_line": 22,
+     "page": 64
+    }
+   },
+   {
+    "n": 8,
+    "text": "οὐδὲν ἔτ' εἴκει·",
+    "stanza": 2,
+    "anchor": {
+     "excerpt_line": 26,
+     "page": 64
+    }
+   },
+   {
+    "n": 9,
+    "text": "ἀλλὰ κὰμ μὲν γλῶσσα ἔαγε, λέπτον δ'",
+    "stanza": 3,
+    "anchor": {
+     "excerpt_line": 28,
+     "page": 65
+    }
+   },
+   {
+    "n": 10,
+    "text": "αὔτικα χρῷ πῦρ ὐπαδεδρόμακεν,",
+    "stanza": 3,
+    "anchor": {
+     "excerpt_line": 31,
+     "page": 65
+    }
+   },
+   {
+    "n": 11,
+    "text": "ὀππάτεσσι δ' οὐδὲν ὄρημ', ἐπιρρόμ-",
+    "stanza": 3,
+    "anchor": {
+     "excerpt_line": 33,
+     "page": 65
+    }
+   },
+   {
+    "n": 12,
+    "text": "βεισι δ' ἄκουαι.",
+    "stanza": 3,
+    "anchor": {
+     "excerpt_line": 36,
+     "page": 65
+    }
+   },
+   {
+    "n": 13,
+    "text": "ἀ δέ μίδρως κακχέεται, τρόμος δέ",
+    "stanza": 4,
+    "anchor": {
+     "excerpt_line": 38,
+     "page": 65
+    }
+   },
+   {
+    "n": 14,
+    "text": "παῖσαν ἄγρει, χλωροτέρα δὲ ποίας",
+    "stanza": 4,
+    "anchor": {
+     "excerpt_line": 41,
+     "page": 65
+    }
+   },
+   {
+    "n": 15,
+    "text": "ἔμμι, τεθνάκην δ' ὀλίγω 'πιδεύης",
+    "stanza": 4,
+    "anchor": {
+     "excerpt_line": 44,
+     "page": 65
+    }
+   },
+   {
+    "n": 16,
+    "text": "φαίνομαι [ἄλλα].",
+    "stanza": 4,
+    "anchor": {
+     "excerpt_line": 47,
+     "page": 65
+    }
+   },
+   {
+    "n": 17,
+    "text": "ἀλλὰ πᾶν τόλματον, [ἐπεὶ καὶ πένητα].",
+    "stanza": 5,
+    "anchor": {
+     "excerpt_line": 49,
+     "page": 65
+    }
+   }
+  ],
+  "tokens": [
+   {
+    "id": "greek:1:1",
+    "line": 1,
+    "stanza": 1,
+    "word": "Φαίνεταί",
+    "parts": [
+     {
+      "line": 1,
+      "start": 0,
+      "surface": "Φαίνεταί"
+     }
+    ]
+   },
+   {
+    "id": "greek:1:2",
+    "line": 1,
+    "stanza": 1,
+    "word": "μοι",
+    "parts": [
+     {
+      "line": 1,
+      "start": 9,
+      "surface": "μοι"
+     }
+    ]
+   },
+   {
+    "id": "greek:1:3",
+    "line": 1,
+    "stanza": 1,
+    "word": "κήνος",
+    "parts": [
+     {
+      "line": 1,
+      "start": 13,
+      "surface": "κήνος"
+     }
+    ]
+   },
+   {
+    "id": "greek:1:4",
+    "line": 1,
+    "stanza": 1,
+    "word": "ἴσος",
+    "parts": [
+     {
+      "line": 1,
+      "start": 19,
+      "surface": "ἴσος"
+     }
+    ]
+   },
+   {
+    "id": "greek:1:5",
+    "line": 1,
+    "stanza": 1,
+    "word": "θέοισιν",
+    "parts": [
+     {
+      "line": 1,
+      "start": 24,
+      "surface": "θέοισιν"
+     }
+    ]
+   },
+   {
+    "id": "greek:2:1",
+    "line": 2,
+    "stanza": 1,
+    "word": "ἔμμεν",
+    "parts": [
+     {
+      "line": 2,
+      "start": 0,
+      "surface": "ἔμμεν"
+     }
+    ]
+   },
+   {
+    "id": "greek:2:2",
+    "line": 2,
+    "stanza": 1,
+    "word": "ὤνηρ",
+    "parts": [
+     {
+      "line": 2,
+      "start": 6,
+      "surface": "ὤνηρ"
+     }
+    ]
+   },
+   {
+    "id": "greek:2:3",
+    "line": 2,
+    "stanza": 1,
+    "word": "ὄστις",
+    "parts": [
+     {
+      "line": 2,
+      "start": 12,
+      "surface": "ὄστις"
+     }
+    ]
+   },
+   {
+    "id": "greek:2:4",
+    "line": 2,
+    "stanza": 1,
+    "word": "ἐναντίος",
+    "parts": [
+     {
+      "line": 2,
+      "start": 18,
+      "surface": "ἐναντίος"
+     }
+    ]
+   },
+   {
+    "id": "greek:2:5",
+    "line": 2,
+    "stanza": 1,
+    "word": "τοι",
+    "parts": [
+     {
+      "line": 2,
+      "start": 27,
+      "surface": "τοι"
+     }
+    ]
+   },
+   {
+    "id": "greek:3:1",
+    "line": 3,
+    "stanza": 1,
+    "word": "ἰζάνει",
+    "parts": [
+     {
+      "line": 3,
+      "start": 0,
+      "surface": "ἰζάνει"
+     }
+    ]
+   },
+   {
+    "id": "greek:3:2",
+    "line": 3,
+    "stanza": 1,
+    "word": "καὶ",
+    "parts": [
+     {
+      "line": 3,
+      "start": 8,
+      "surface": "καὶ"
+     }
+    ]
+   },
+   {
+    "id": "greek:3:3",
+    "line": 3,
+    "stanza": 1,
+    "word": "πλασίον",
+    "parts": [
+     {
+      "line": 3,
+      "start": 12,
+      "surface": "πλασίον"
+     }
+    ]
+   },
+   {
+    "id": "greek:3:4",
+    "line": 3,
+    "stanza": 1,
+    "word": "ἆδυ",
+    "parts": [
+     {
+      "line": 3,
+      "start": 20,
+      "surface": "ἆδυ"
+     }
+    ]
+   },
+   {
+    "id": "greek:3:5",
+    "line": 3,
+    "stanza": 1,
+    "word": "φωνεύσας",
+    "parts": [
+     {
+      "line": 3,
+      "start": 24,
+      "surface": "φωνεύ"
+     },
+     {
+      "line": 4,
+      "start": 0,
+      "surface": "σας"
+     }
+    ]
+   },
+   {
+    "id": "greek:4:1",
+    "line": 4,
+    "stanza": 1,
+    "word": "ὑπακούει",
+    "parts": [
+     {
+      "line": 4,
+      "start": 4,
+      "surface": "ὑπακούει"
+     }
+    ]
+   },
+   {
+    "id": "greek:5:1",
+    "line": 5,
+    "stanza": 2,
+    "word": "καὶ",
+    "parts": [
+     {
+      "line": 5,
+      "start": 0,
+      "surface": "καὶ"
+     }
+    ]
+   },
+   {
+    "id": "greek:5:2",
+    "line": 5,
+    "stanza": 2,
+    "word": "γελαίσας",
+    "parts": [
+     {
+      "line": 5,
+      "start": 4,
+      "surface": "γελαίσας"
+     }
+    ]
+   },
+   {
+    "id": "greek:5:3",
+    "line": 5,
+    "stanza": 2,
+    "word": "ἰμερόεν",
+    "parts": [
+     {
+      "line": 5,
+      "start": 13,
+      "surface": "ἰμερόεν"
+     }
+    ]
+   },
+   {
+    "id": "greek:5:4",
+    "line": 5,
+    "stanza": 2,
+    "word": "τό",
+    "parts": [
+     {
+      "line": 5,
+      "start": 22,
+      "surface": "τό"
+     }
+    ]
+   },
+   {
+    "id": "greek:5:5",
+    "line": 5,
+    "stanza": 2,
+    "word": "μοι",
+    "parts": [
+     {
+      "line": 5,
+      "start": 25,
+      "surface": "μοι"
+     }
+    ]
+   },
+   {
+    "id": "greek:5:6",
+    "line": 5,
+    "stanza": 2,
+    "word": "μάν",
+    "parts": [
+     {
+      "line": 5,
+      "start": 29,
+      "surface": "μάν"
+     }
+    ]
+   },
+   {
+    "id": "greek:6:1",
+    "line": 6,
+    "stanza": 2,
+    "word": "καρδίαν",
+    "parts": [
+     {
+      "line": 6,
+      "start": 0,
+      "surface": "καρδίαν"
+     }
+    ]
+   },
+   {
+    "id": "greek:6:2",
+    "line": 6,
+    "stanza": 2,
+    "word": "ἐν",
+    "parts": [
+     {
+      "line": 6,
+      "start": 8,
+      "surface": "ἐν"
+     }
+    ]
+   },
+   {
+    "id": "greek:6:3",
+    "line": 6,
+    "stanza": 2,
+    "word": "στήθεσιν",
+    "parts": [
+     {
+      "line": 6,
+      "start": 11,
+      "surface": "στήθεσιν"
+     }
+    ]
+   },
+   {
+    "id": "greek:6:4",
+    "line": 6,
+    "stanza": 2,
+    "word": "ἐπτόασεν",
+    "parts": [
+     {
+      "line": 6,
+      "start": 20,
+      "surface": "ἐπτόασεν"
+     }
+    ]
+   },
+   {
+    "id": "greek:7:1",
+    "line": 7,
+    "stanza": 2,
+    "word": "ὡς",
+    "parts": [
+     {
+      "line": 7,
+      "start": 0,
+      "surface": "ὡς"
+     }
+    ]
+   },
+   {
+    "id": "greek:7:2",
+    "line": 7,
+    "stanza": 2,
+    "word": "γὰρ",
+    "parts": [
+     {
+      "line": 7,
+      "start": 3,
+      "surface": "γὰρ"
+     }
+    ]
+   },
+   {
+    "id": "greek:7:3",
+    "line": 7,
+    "stanza": 2,
+    "word": "εὔιδον",
+    "parts": [
+     {
+      "line": 7,
+      "start": 7,
+      "surface": "εὔιδον"
+     }
+    ]
+   },
+   {
+    "id": "greek:7:4",
+    "line": 7,
+    "stanza": 2,
+    "word": "βροχέως",
+    "parts": [
+     {
+      "line": 7,
+      "start": 14,
+      "surface": "βροχέως"
+     }
+    ]
+   },
+   {
+    "id": "greek:7:5",
+    "line": 7,
+    "stanza": 2,
+    "word": "σε",
+    "parts": [
+     {
+      "line": 7,
+      "start": 22,
+      "surface": "σε"
+     }
+    ]
+   },
+   {
+    "id": "greek:7:6",
+    "line": 7,
+    "stanza": 2,
+    "word": "φώνας",
+    "parts": [
+     {
+      "line": 7,
+      "start": 26,
+      "surface": "φώνας"
+     }
+    ]
+   },
+   {
+    "id": "greek:8:1",
+    "line": 8,
+    "stanza": 2,
+    "word": "οὐδὲν",
+    "parts": [
+     {
+      "line": 8,
+      "start": 0,
+      "surface": "οὐδὲν"
+     }
+    ]
+   },
+   {
+    "id": "greek:8:2",
+    "line": 8,
+    "stanza": 2,
+    "word": "ἔτ'",
+    "parts": [
+     {
+      "line": 8,
+      "start": 6,
+      "surface": "ἔτ'"
+     }
+    ]
+   },
+   {
+    "id": "greek:8:3",
+    "line": 8,
+    "stanza": 2,
+    "word": "εἴκει",
+    "parts": [
+     {
+      "line": 8,
+      "start": 10,
+      "surface": "εἴκει"
+     }
+    ]
+   },
+   {
+    "id": "greek:9:1",
+    "line": 9,
+    "stanza": 3,
+    "word": "ἀλλὰ",
+    "parts": [
+     {
+      "line": 9,
+      "start": 0,
+      "surface": "ἀλλὰ"
+     }
+    ]
+   },
+   {
+    "id": "greek:9:2",
+    "line": 9,
+    "stanza": 3,
+    "word": "κὰμ",
+    "parts": [
+     {
+      "line": 9,
+      "start": 5,
+      "surface": "κὰμ"
+     }
+    ]
+   },
+   {
+    "id": "greek:9:3",
+    "line": 9,
+    "stanza": 3,
+    "word": "μὲν",
+    "parts": [
+     {
+      "line": 9,
+      "start": 9,
+      "surface": "μὲν"
+     }
+    ]
+   },
+   {
+    "id": "greek:9:4",
+    "line": 9,
+    "stanza": 3,
+    "word": "γλῶσσα",
+    "parts": [
+     {
+      "line": 9,
+      "start": 13,
+      "surface": "γλῶσσα"
+     }
+    ]
+   },
+   {
+    "id": "greek:9:5",
+    "line": 9,
+    "stanza": 3,
+    "word": "ἔαγε",
+    "parts": [
+     {
+      "line": 9,
+      "start": 20,
+      "surface": "ἔαγε"
+     }
+    ]
+   },
+   {
+    "id": "greek:9:6",
+    "line": 9,
+    "stanza": 3,
+    "word": "λέπτον",
+    "parts": [
+     {
+      "line": 9,
+      "start": 26,
+      "surface": "λέπτον"
+     }
+    ]
+   },
+   {
+    "id": "greek:9:7",
+    "line": 9,
+    "stanza": 3,
+    "word": "δ'",
+    "parts": [
+     {
+      "line": 9,
+      "start": 33,
+      "surface": "δ'"
+     }
+    ]
+   },
+   {
+    "id": "greek:10:1",
+    "line": 10,
+    "stanza": 3,
+    "word": "αὔτικα",
+    "parts": [
+     {
+      "line": 10,
+      "start": 0,
+      "surface": "αὔτικα"
+     }
+    ]
+   },
+   {
+    "id": "greek:10:2",
+    "line": 10,
+    "stanza": 3,
+    "word": "χρῷ",
+    "parts": [
+     {
+      "line": 10,
+      "start": 7,
+      "surface": "χρῷ"
+     }
+    ]
+   },
+   {
+    "id": "greek:10:3",
+    "line": 10,
+    "stanza": 3,
+    "word": "πῦρ",
+    "parts": [
+     {
+      "line": 10,
+      "start": 11,
+      "surface": "πῦρ"
+     }
+    ]
+   },
+   {
+    "id": "greek:10:4",
+    "line": 10,
+    "stanza": 3,
+    "word": "ὐπαδεδρόμακεν",
+    "parts": [
+     {
+      "line": 10,
+      "start": 15,
+      "surface": "ὐπαδεδρόμακεν"
+     }
+    ]
+   },
+   {
+    "id": "greek:11:1",
+    "line": 11,
+    "stanza": 3,
+    "word": "ὀππάτεσσι",
+    "parts": [
+     {
+      "line": 11,
+      "start": 0,
+      "surface": "ὀππάτεσσι"
+     }
+    ]
+   },
+   {
+    "id": "greek:11:2",
+    "line": 11,
+    "stanza": 3,
+    "word": "δ'",
+    "parts": [
+     {
+      "line": 11,
+      "start": 10,
+      "surface": "δ'"
+     }
+    ]
+   },
+   {
+    "id": "greek:11:3",
+    "line": 11,
+    "stanza": 3,
+    "word": "οὐδὲν",
+    "parts": [
+     {
+      "line": 11,
+      "start": 13,
+      "surface": "οὐδὲν"
+     }
+    ]
+   },
+   {
+    "id": "greek:11:4",
+    "line": 11,
+    "stanza": 3,
+    "word": "ὄρημ'",
+    "parts": [
+     {
+      "line": 11,
+      "start": 19,
+      "surface": "ὄρημ'"
+     }
+    ]
+   },
+   {
+    "id": "greek:11:5",
+    "line": 11,
+    "stanza": 3,
+    "word": "ἐπιρρόμβεισι",
+    "parts": [
+     {
+      "line": 11,
+      "start": 26,
+      "surface": "ἐπιρρόμ"
+     },
+     {
+      "line": 12,
+      "start": 0,
+      "surface": "βεισι"
+     }
+    ]
+   },
+   {
+    "id": "greek:12:1",
+    "line": 12,
+    "stanza": 3,
+    "word": "δ'",
+    "parts": [
+     {
+      "line": 12,
+      "start": 6,
+      "surface": "δ'"
+     }
+    ]
+   },
+   {
+    "id": "greek:12:2",
+    "line": 12,
+    "stanza": 3,
+    "word": "ἄκουαι",
+    "parts": [
+     {
+      "line": 12,
+      "start": 9,
+      "surface": "ἄκουαι"
+     }
+    ]
+   },
+   {
+    "id": "greek:13:1",
+    "line": 13,
+    "stanza": 4,
+    "word": "ἀ",
+    "parts": [
+     {
+      "line": 13,
+      "start": 0,
+      "surface": "ἀ"
+     }
+    ]
+   },
+   {
+    "id": "greek:13:2",
+    "line": 13,
+    "stanza": 4,
+    "word": "δέ",
+    "parts": [
+     {
+      "line": 13,
+      "start": 2,
+      "surface": "δέ"
+     }
+    ]
+   },
+   {
+    "id": "greek:13:3",
+    "line": 13,
+    "stanza": 4,
+    "word": "μίδρως",
+    "parts": [
+     {
+      "line": 13,
+      "start": 5,
+      "surface": "μίδρως"
+     }
+    ]
+   },
+   {
+    "id": "greek:13:4",
+    "line": 13,
+    "stanza": 4,
+    "word": "κακχέεται",
+    "parts": [
+     {
+      "line": 13,
+      "start": 12,
+      "surface": "κακχέεται"
+     }
+    ]
+   },
+   {
+    "id": "greek:13:5",
+    "line": 13,
+    "stanza": 4,
+    "word": "τρόμος",
+    "parts": [
+     {
+      "line": 13,
+      "start": 23,
+      "surface": "τρόμος"
+     }
+    ]
+   },
+   {
+    "id": "greek:13:6",
+    "line": 13,
+    "stanza": 4,
+    "word": "δέ",
+    "parts": [
+     {
+      "line": 13,
+      "start": 30,
+      "surface": "δέ"
+     }
+    ]
+   },
+   {
+    "id": "greek:14:1",
+    "line": 14,
+    "stanza": 4,
+    "word": "παῖσαν",
+    "parts": [
+     {
+      "line": 14,
+      "start": 0,
+      "surface": "παῖσαν"
+     }
+    ]
+   },
+   {
+    "id": "greek:14:2",
+    "line": 14,
+    "stanza": 4,
+    "word": "ἄγρει",
+    "parts": [
+     {
+      "line": 14,
+      "start": 7,
+      "surface": "ἄγρει"
+     }
+    ]
+   },
+   {
+    "id": "greek:14:3",
+    "line": 14,
+    "stanza": 4,
+    "word": "χλωροτέρα",
+    "parts": [
+     {
+      "line": 14,
+      "start": 14,
+      "surface": "χλωροτέρα"
+     }
+    ]
+   },
+   {
+    "id": "greek:14:4",
+    "line": 14,
+    "stanza": 4,
+    "word": "δὲ",
+    "parts": [
+     {
+      "line": 14,
+      "start": 24,
+      "surface": "δὲ"
+     }
+    ]
+   },
+   {
+    "id": "greek:14:5",
+    "line": 14,
+    "stanza": 4,
+    "word": "ποίας",
+    "parts": [
+     {
+      "line": 14,
+      "start": 27,
+      "surface": "ποίας"
+     }
+    ]
+   },
+   {
+    "id": "greek:15:1",
+    "line": 15,
+    "stanza": 4,
+    "word": "ἔμμι",
+    "parts": [
+     {
+      "line": 15,
+      "start": 0,
+      "surface": "ἔμμι"
+     }
+    ]
+   },
+   {
+    "id": "greek:15:2",
+    "line": 15,
+    "stanza": 4,
+    "word": "τεθνάκην",
+    "parts": [
+     {
+      "line": 15,
+      "start": 6,
+      "surface": "τεθνάκην"
+     }
+    ]
+   },
+   {
+    "id": "greek:15:3",
+    "line": 15,
+    "stanza": 4,
+    "word": "δ'",
+    "parts": [
+     {
+      "line": 15,
+      "start": 15,
+      "surface": "δ'"
+     }
+    ]
+   },
+   {
+    "id": "greek:15:4",
+    "line": 15,
+    "stanza": 4,
+    "word": "ὀλίγω",
+    "parts": [
+     {
+      "line": 15,
+      "start": 18,
+      "surface": "ὀλίγω"
+     }
+    ]
+   },
+   {
+    "id": "greek:15:5",
+    "line": 15,
+    "stanza": 4,
+    "word": "'πιδεύης",
+    "parts": [
+     {
+      "line": 15,
+      "start": 24,
+      "surface": "'πιδεύης"
+     }
+    ]
+   },
+   {
+    "id": "greek:16:1",
+    "line": 16,
+    "stanza": 4,
+    "word": "φαίνομαι",
+    "parts": [
+     {
+      "line": 16,
+      "start": 0,
+      "surface": "φαίνομαι"
+     }
+    ]
+   },
+   {
+    "id": "greek:16:2",
+    "line": 16,
+    "stanza": 4,
+    "word": "ἄλλα",
+    "parts": [
+     {
+      "line": 16,
+      "start": 10,
+      "surface": "ἄλλα"
+     }
+    ],
+    "bracketed": true
+   },
+   {
+    "id": "greek:17:1",
+    "line": 17,
+    "stanza": 5,
+    "word": "ἀλλὰ",
+    "parts": [
+     {
+      "line": 17,
+      "start": 0,
+      "surface": "ἀλλὰ"
+     }
+    ]
+   },
+   {
+    "id": "greek:17:2",
+    "line": 17,
+    "stanza": 5,
+    "word": "πᾶν",
+    "parts": [
+     {
+      "line": 17,
+      "start": 5,
+      "surface": "πᾶν"
+     }
+    ]
+   },
+   {
+    "id": "greek:17:3",
+    "line": 17,
+    "stanza": 5,
+    "word": "τόλματον",
+    "parts": [
+     {
+      "line": 17,
+      "start": 9,
+      "surface": "τόλματον"
+     }
+    ]
+   },
+   {
+    "id": "greek:17:4",
+    "line": 17,
+    "stanza": 5,
+    "word": "ἐπεὶ",
+    "parts": [
+     {
+      "line": 17,
+      "start": 20,
+      "surface": "ἐπεὶ"
+     }
+    ],
+    "bracketed": true
+   },
+   {
+    "id": "greek:17:5",
+    "line": 17,
+    "stanza": 5,
+    "word": "καὶ",
+    "parts": [
+     {
+      "line": 17,
+      "start": 25,
+      "surface": "καὶ"
+     }
+    ]
+   },
+   {
+    "id": "greek:17:6",
+    "line": 17,
+    "stanza": 5,
+    "word": "πένητα",
+    "parts": [
+     {
+      "line": 17,
+      "start": 29,
+      "surface": "πένητα"
+     }
+    ],
+    "bracketed": true
+   }
+  ]
+ },
+ "versions": [
+  {
+   "id": "catullus",
+   "translator": "Catullus",
+   "full_name": "Gaius Valerius Catullus",
+   "poem": "Catullus 51 (Ad Lesbiam): lines 1-12 as quoted by Wharton (line 8 is lost in the manuscripts); lines 13-16, his own closing stanza, from Merrill's edition (1893) via Latin Wikisource",
+   "year": -55,
+   "date_label": "1st c. BC (Catullus lived c. 84 - c. 54 BC)",
+   "language": "lat",
+   "kind": "Latin version",
+   "wharton_calls_it": "The famous imitation of this ode by Catullus, li., Ad Lesbiam—",
+   "source": {
+    "url": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html",
+    "excerpt_file": "data/sources/wharton_pg57390_fr2.html",
+    "lines_in_full_file": [
+     2291,
+     2519
+    ],
+    "sha256_full_file": "bf616822d86ef89b75aa0ee68698568a81a9f3620edf642af73daaa4545cb247",
+    "pages": [
+     65,
+     66
+    ]
+   },
+   "source_lines_13_16": {
+    "url": "https://la.wikisource.org/w/index.php?title=Carmina_(Catullus,_ed._Merrill)/Carmen_LI&oldid=279690",
+    "file": "data/sources/crosscheck/lawikisource_catullus51_merrill.wiki",
+    "edition": "E. T. Merrill, Catullus (1893), as transcribed on Latin Wikisource"
+   },
+   "lines": [
+    {
+     "n": 1,
+     "text": "Ille mi par esse deo videtur,",
+     "stanza": 1,
+     "anchor": {
+      "excerpt_line": 61,
+      "page": 65
+     },
+     "source": "wharton"
+    },
+    {
+     "n": 2,
+     "text": "Ille, si fas est, superare divos,",
+     "stanza": 1,
+     "anchor": {
+      "excerpt_line": 62,
+      "page": 65
+     },
+     "source": "wharton"
+    },
+    {
+     "n": 3,
+     "text": "Qui sedens adversus identidem te",
+     "stanza": 1,
+     "anchor": {
+      "excerpt_line": 63,
+      "page": 65
+     },
+     "source": "wharton"
+    },
+    {
+     "n": 4,
+     "text": "Spectat et audit",
+     "stanza": 1,
+     "anchor": {
+      "excerpt_line": 64,
+      "page": 65
+     },
+     "source": "wharton"
+    },
+    {
+     "n": 5,
+     "text": "Dulce ridentem, misero quod omnis",
+     "stanza": 2,
+     "anchor": {
+      "excerpt_line": 65,
+      "page": 66
+     },
+     "source": "wharton"
+    },
+    {
+     "n": 6,
+     "text": "Eripit sensus mihi: nam simul te,",
+     "stanza": 2,
+     "anchor": {
+      "excerpt_line": 66,
+      "page": 66
+     },
+     "source": "wharton"
+    },
+    {
+     "n": 7,
+     "text": "Lesbia, aspexi, nihil est super mi",
+     "stanza": 2,
+     "anchor": {
+      "excerpt_line": 67,
+      "page": 66
+     },
+     "source": "wharton"
+    },
+    {
+     "n": 8,
+     "text": null,
+     "lacuna": true,
+     "source_text": "* * * * *",
+     "anchor": {
+      "excerpt_line": 68,
+      "page": 66
+     },
+     "stanza": 2,
+     "source": "wharton"
+    },
+    {
+     "n": 9,
+     "text": "Lingua sed torpet, tenuis sub artus",
+     "stanza": 3,
+     "anchor": {
+      "excerpt_line": 70,
+      "page": 66
+     },
+     "source": "wharton"
+    },
+    {
+     "n": 10,
+     "text": "Flamma demanat, sonitu suopte",
+     "stanza": 3,
+     "anchor": {
+      "excerpt_line": 71,
+      "page": 66
+     },
+     "source": "wharton"
+    },
+    {
+     "n": 11,
+     "text": "Tintinant aures, gemina teguntur",
+     "stanza": 3,
+     "anchor": {
+      "excerpt_line": 72,
+      "page": 66
+     },
+     "source": "wharton"
+    },
+    {
+     "n": 12,
+     "text": "Lumina nocte—",
+     "stanza": 3,
+     "anchor": {
+      "excerpt_line": 73,
+      "page": 66
+     },
+     "source": "wharton"
+    },
+    {
+     "n": 13,
+     "text": "Otium, Catulle, tibi molestum est:",
+     "stanza": 4,
+     "source": "merrill",
+     "anchor": {
+      "file": "data/sources/crosscheck/lawikisource_catullus51_merrill.wiki",
+      "line_in_file": 31,
+      "url": "https://la.wikisource.org/w/index.php?title=Carmina_(Catullus,_ed._Merrill)/Carmen_LI&oldid=279690"
+     }
+    },
+    {
+     "n": 14,
+     "text": "Otio exsultas nimiumque gestis.",
+     "stanza": 4,
+     "source": "merrill",
+     "anchor": {
+      "file": "data/sources/crosscheck/lawikisource_catullus51_merrill.wiki",
+      "line_in_file": 32,
+      "url": "https://la.wikisource.org/w/index.php?title=Carmina_(Catullus,_ed._Merrill)/Carmen_LI&oldid=279690"
+     }
+    },
+    {
+     "n": 15,
+     "text": "Otium et reges prius et beatas",
+     "stanza": 4,
+     "source": "merrill",
+     "anchor": {
+      "file": "data/sources/crosscheck/lawikisource_catullus51_merrill.wiki",
+      "line_in_file": 33,
+      "url": "https://la.wikisource.org/w/index.php?title=Carmina_(Catullus,_ed._Merrill)/Carmen_LI&oldid=279690"
+     }
+    },
+    {
+     "n": 16,
+     "text": "Perdidit urbes.",
+     "stanza": 4,
+     "source": "merrill",
+     "anchor": {
+      "file": "data/sources/crosscheck/lawikisource_catullus51_merrill.wiki",
+      "line_in_file": 34,
+      "url": "https://la.wikisource.org/w/index.php?title=Carmina_(Catullus,_ed._Merrill)/Carmen_LI&oldid=279690"
+     }
+    }
+   ],
+   "tokens": [
+    {
+     "id": "catullus:1:1",
+     "line": 1,
+     "stanza": 1,
+     "word": "Ille",
+     "parts": [
+      {
+       "line": 1,
+       "start": 0,
+       "surface": "Ille"
+      }
+     ]
+    },
+    {
+     "id": "catullus:1:2",
+     "line": 1,
+     "stanza": 1,
+     "word": "mi",
+     "parts": [
+      {
+       "line": 1,
+       "start": 5,
+       "surface": "mi"
+      }
+     ]
+    },
+    {
+     "id": "catullus:1:3",
+     "line": 1,
+     "stanza": 1,
+     "word": "par",
+     "parts": [
+      {
+       "line": 1,
+       "start": 8,
+       "surface": "par"
+      }
+     ]
+    },
+    {
+     "id": "catullus:1:4",
+     "line": 1,
+     "stanza": 1,
+     "word": "esse",
+     "parts": [
+      {
+       "line": 1,
+       "start": 12,
+       "surface": "esse"
+      }
+     ]
+    },
+    {
+     "id": "catullus:1:5",
+     "line": 1,
+     "stanza": 1,
+     "word": "deo",
+     "parts": [
+      {
+       "line": 1,
+       "start": 17,
+       "surface": "deo"
+      }
+     ]
+    },
+    {
+     "id": "catullus:1:6",
+     "line": 1,
+     "stanza": 1,
+     "word": "videtur",
+     "parts": [
+      {
+       "line": 1,
+       "start": 21,
+       "surface": "videtur"
+      }
+     ]
+    },
+    {
+     "id": "catullus:2:1",
+     "line": 2,
+     "stanza": 1,
+     "word": "Ille",
+     "parts": [
+      {
+       "line": 2,
+       "start": 0,
+       "surface": "Ille"
+      }
+     ]
+    },
+    {
+     "id": "catullus:2:2",
+     "line": 2,
+     "stanza": 1,
+     "word": "si",
+     "parts": [
+      {
+       "line": 2,
+       "start": 6,
+       "surface": "si"
+      }
+     ]
+    },
+    {
+     "id": "catullus:2:3",
+     "line": 2,
+     "stanza": 1,
+     "word": "fas",
+     "parts": [
+      {
+       "line": 2,
+       "start": 9,
+       "surface": "fas"
+      }
+     ]
+    },
+    {
+     "id": "catullus:2:4",
+     "line": 2,
+     "stanza": 1,
+     "word": "est",
+     "parts": [
+      {
+       "line": 2,
+       "start": 13,
+       "surface": "est"
+      }
+     ]
+    },
+    {
+     "id": "catullus:2:5",
+     "line": 2,
+     "stanza": 1,
+     "word": "superare",
+     "parts": [
+      {
+       "line": 2,
+       "start": 18,
+       "surface": "superare"
+      }
+     ]
+    },
+    {
+     "id": "catullus:2:6",
+     "line": 2,
+     "stanza": 1,
+     "word": "divos",
+     "parts": [
+      {
+       "line": 2,
+       "start": 27,
+       "surface": "divos"
+      }
+     ]
+    },
+    {
+     "id": "catullus:3:1",
+     "line": 3,
+     "stanza": 1,
+     "word": "Qui",
+     "parts": [
+      {
+       "line": 3,
+       "start": 0,
+       "surface": "Qui"
+      }
+     ]
+    },
+    {
+     "id": "catullus:3:2",
+     "line": 3,
+     "stanza": 1,
+     "word": "sedens",
+     "parts": [
+      {
+       "line": 3,
+       "start": 4,
+       "surface": "sedens"
+      }
+     ]
+    },
+    {
+     "id": "catullus:3:3",
+     "line": 3,
+     "stanza": 1,
+     "word": "adversus",
+     "parts": [
+      {
+       "line": 3,
+       "start": 11,
+       "surface": "adversus"
+      }
+     ]
+    },
+    {
+     "id": "catullus:3:4",
+     "line": 3,
+     "stanza": 1,
+     "word": "identidem",
+     "parts": [
+      {
+       "line": 3,
+       "start": 20,
+       "surface": "identidem"
+      }
+     ]
+    },
+    {
+     "id": "catullus:3:5",
+     "line": 3,
+     "stanza": 1,
+     "word": "te",
+     "parts": [
+      {
+       "line": 3,
+       "start": 30,
+       "surface": "te"
+      }
+     ]
+    },
+    {
+     "id": "catullus:4:1",
+     "line": 4,
+     "stanza": 1,
+     "word": "Spectat",
+     "parts": [
+      {
+       "line": 4,
+       "start": 0,
+       "surface": "Spectat"
+      }
+     ]
+    },
+    {
+     "id": "catullus:4:2",
+     "line": 4,
+     "stanza": 1,
+     "word": "et",
+     "parts": [
+      {
+       "line": 4,
+       "start": 8,
+       "surface": "et"
+      }
+     ]
+    },
+    {
+     "id": "catullus:4:3",
+     "line": 4,
+     "stanza": 1,
+     "word": "audit",
+     "parts": [
+      {
+       "line": 4,
+       "start": 11,
+       "surface": "audit"
+      }
+     ]
+    },
+    {
+     "id": "catullus:5:1",
+     "line": 5,
+     "stanza": 2,
+     "word": "Dulce",
+     "parts": [
+      {
+       "line": 5,
+       "start": 0,
+       "surface": "Dulce"
+      }
+     ]
+    },
+    {
+     "id": "catullus:5:2",
+     "line": 5,
+     "stanza": 2,
+     "word": "ridentem",
+     "parts": [
+      {
+       "line": 5,
+       "start": 6,
+       "surface": "ridentem"
+      }
+     ]
+    },
+    {
+     "id": "catullus:5:3",
+     "line": 5,
+     "stanza": 2,
+     "word": "misero",
+     "parts": [
+      {
+       "line": 5,
+       "start": 16,
+       "surface": "misero"
+      }
+     ]
+    },
+    {
+     "id": "catullus:5:4",
+     "line": 5,
+     "stanza": 2,
+     "word": "quod",
+     "parts": [
+      {
+       "line": 5,
+       "start": 23,
+       "surface": "quod"
+      }
+     ]
+    },
+    {
+     "id": "catullus:5:5",
+     "line": 5,
+     "stanza": 2,
+     "word": "omnis",
+     "parts": [
+      {
+       "line": 5,
+       "start": 28,
+       "surface": "omnis"
+      }
+     ]
+    },
+    {
+     "id": "catullus:6:1",
+     "line": 6,
+     "stanza": 2,
+     "word": "Eripit",
+     "parts": [
+      {
+       "line": 6,
+       "start": 0,
+       "surface": "Eripit"
+      }
+     ]
+    },
+    {
+     "id": "catullus:6:2",
+     "line": 6,
+     "stanza": 2,
+     "word": "sensus",
+     "parts": [
+      {
+       "line": 6,
+       "start": 7,
+       "surface": "sensus"
+      }
+     ]
+    },
+    {
+     "id": "catullus:6:3",
+     "line": 6,
+     "stanza": 2,
+     "word": "mihi",
+     "parts": [
+      {
+       "line": 6,
+       "start": 14,
+       "surface": "mihi"
+      }
+     ]
+    },
+    {
+     "id": "catullus:6:4",
+     "line": 6,
+     "stanza": 2,
+     "word": "nam",
+     "parts": [
+      {
+       "line": 6,
+       "start": 20,
+       "surface": "nam"
+      }
+     ]
+    },
+    {
+     "id": "catullus:6:5",
+     "line": 6,
+     "stanza": 2,
+     "word": "simul",
+     "parts": [
+      {
+       "line": 6,
+       "start": 24,
+       "surface": "simul"
+      }
+     ]
+    },
+    {
+     "id": "catullus:6:6",
+     "line": 6,
+     "stanza": 2,
+     "word": "te",
+     "parts": [
+      {
+       "line": 6,
+       "start": 30,
+       "surface": "te"
+      }
+     ]
+    },
+    {
+     "id": "catullus:7:1",
+     "line": 7,
+     "stanza": 2,
+     "word": "Lesbia",
+     "parts": [
+      {
+       "line": 7,
+       "start": 0,
+       "surface": "Lesbia"
+      }
+     ]
+    },
+    {
+     "id": "catullus:7:2",
+     "line": 7,
+     "stanza": 2,
+     "word": "aspexi",
+     "parts": [
+      {
+       "line": 7,
+       "start": 8,
+       "surface": "aspexi"
+      }
+     ]
+    },
+    {
+     "id": "catullus:7:3",
+     "line": 7,
+     "stanza": 2,
+     "word": "nihil",
+     "parts": [
+      {
+       "line": 7,
+       "start": 16,
+       "surface": "nihil"
+      }
+     ]
+    },
+    {
+     "id": "catullus:7:4",
+     "line": 7,
+     "stanza": 2,
+     "word": "est",
+     "parts": [
+      {
+       "line": 7,
+       "start": 22,
+       "surface": "est"
+      }
+     ]
+    },
+    {
+     "id": "catullus:7:5",
+     "line": 7,
+     "stanza": 2,
+     "word": "super",
+     "parts": [
+      {
+       "line": 7,
+       "start": 26,
+       "surface": "super"
+      }
+     ]
+    },
+    {
+     "id": "catullus:7:6",
+     "line": 7,
+     "stanza": 2,
+     "word": "mi",
+     "parts": [
+      {
+       "line": 7,
+       "start": 32,
+       "surface": "mi"
+      }
+     ]
+    },
+    {
+     "id": "catullus:9:1",
+     "line": 9,
+     "stanza": 3,
+     "word": "Lingua",
+     "parts": [
+      {
+       "line": 9,
+       "start": 0,
+       "surface": "Lingua"
+      }
+     ]
+    },
+    {
+     "id": "catullus:9:2",
+     "line": 9,
+     "stanza": 3,
+     "word": "sed",
+     "parts": [
+      {
+       "line": 9,
+       "start": 7,
+       "surface": "sed"
+      }
+     ]
+    },
+    {
+     "id": "catullus:9:3",
+     "line": 9,
+     "stanza": 3,
+     "word": "torpet",
+     "parts": [
+      {
+       "line": 9,
+       "start": 11,
+       "surface": "torpet"
+      }
+     ]
+    },
+    {
+     "id": "catullus:9:4",
+     "line": 9,
+     "stanza": 3,
+     "word": "tenuis",
+     "parts": [
+      {
+       "line": 9,
+       "start": 19,
+       "surface": "tenuis"
+      }
+     ]
+    },
+    {
+     "id": "catullus:9:5",
+     "line": 9,
+     "stanza": 3,
+     "word": "sub",
+     "parts": [
+      {
+       "line": 9,
+       "start": 26,
+       "surface": "sub"
+      }
+     ]
+    },
+    {
+     "id": "catullus:9:6",
+     "line": 9,
+     "stanza": 3,
+     "word": "artus",
+     "parts": [
+      {
+       "line": 9,
+       "start": 30,
+       "surface": "artus"
+      }
+     ]
+    },
+    {
+     "id": "catullus:10:1",
+     "line": 10,
+     "stanza": 3,
+     "word": "Flamma",
+     "parts": [
+      {
+       "line": 10,
+       "start": 0,
+       "surface": "Flamma"
+      }
+     ]
+    },
+    {
+     "id": "catullus:10:2",
+     "line": 10,
+     "stanza": 3,
+     "word": "demanat",
+     "parts": [
+      {
+       "line": 10,
+       "start": 7,
+       "surface": "demanat"
+      }
+     ]
+    },
+    {
+     "id": "catullus:10:3",
+     "line": 10,
+     "stanza": 3,
+     "word": "sonitu",
+     "parts": [
+      {
+       "line": 10,
+       "start": 16,
+       "surface": "sonitu"
+      }
+     ]
+    },
+    {
+     "id": "catullus:10:4",
+     "line": 10,
+     "stanza": 3,
+     "word": "suopte",
+     "parts": [
+      {
+       "line": 10,
+       "start": 23,
+       "surface": "suopte"
+      }
+     ]
+    },
+    {
+     "id": "catullus:11:1",
+     "line": 11,
+     "stanza": 3,
+     "word": "Tintinant",
+     "parts": [
+      {
+       "line": 11,
+       "start": 0,
+       "surface": "Tintinant"
+      }
+     ]
+    },
+    {
+     "id": "catullus:11:2",
+     "line": 11,
+     "stanza": 3,
+     "word": "aures",
+     "parts": [
+      {
+       "line": 11,
+       "start": 10,
+       "surface": "aures"
+      }
+     ]
+    },
+    {
+     "id": "catullus:11:3",
+     "line": 11,
+     "stanza": 3,
+     "word": "gemina",
+     "parts": [
+      {
+       "line": 11,
+       "start": 17,
+       "surface": "gemina"
+      }
+     ]
+    },
+    {
+     "id": "catullus:11:4",
+     "line": 11,
+     "stanza": 3,
+     "word": "teguntur",
+     "parts": [
+      {
+       "line": 11,
+       "start": 24,
+       "surface": "teguntur"
+      }
+     ]
+    },
+    {
+     "id": "catullus:12:1",
+     "line": 12,
+     "stanza": 3,
+     "word": "Lumina",
+     "parts": [
+      {
+       "line": 12,
+       "start": 0,
+       "surface": "Lumina"
+      }
+     ]
+    },
+    {
+     "id": "catullus:12:2",
+     "line": 12,
+     "stanza": 3,
+     "word": "nocte",
+     "parts": [
+      {
+       "line": 12,
+       "start": 7,
+       "surface": "nocte"
+      }
+     ]
+    },
+    {
+     "id": "catullus:13:1",
+     "line": 13,
+     "stanza": 4,
+     "word": "Otium",
+     "parts": [
+      {
+       "line": 13,
+       "start": 0,
+       "surface": "Otium"
+      }
+     ]
+    },
+    {
+     "id": "catullus:13:2",
+     "line": 13,
+     "stanza": 4,
+     "word": "Catulle",
+     "parts": [
+      {
+       "line": 13,
+       "start": 7,
+       "surface": "Catulle"
+      }
+     ]
+    },
+    {
+     "id": "catullus:13:3",
+     "line": 13,
+     "stanza": 4,
+     "word": "tibi",
+     "parts": [
+      {
+       "line": 13,
+       "start": 16,
+       "surface": "tibi"
+      }
+     ]
+    },
+    {
+     "id": "catullus:13:4",
+     "line": 13,
+     "stanza": 4,
+     "word": "molestum",
+     "parts": [
+      {
+       "line": 13,
+       "start": 21,
+       "surface": "molestum"
+      }
+     ]
+    },
+    {
+     "id": "catullus:13:5",
+     "line": 13,
+     "stanza": 4,
+     "word": "est",
+     "parts": [
+      {
+       "line": 13,
+       "start": 30,
+       "surface": "est"
+      }
+     ]
+    },
+    {
+     "id": "catullus:14:1",
+     "line": 14,
+     "stanza": 4,
+     "word": "Otio",
+     "parts": [
+      {
+       "line": 14,
+       "start": 0,
+       "surface": "Otio"
+      }
+     ]
+    },
+    {
+     "id": "catullus:14:2",
+     "line": 14,
+     "stanza": 4,
+     "word": "exsultas",
+     "parts": [
+      {
+       "line": 14,
+       "start": 5,
+       "surface": "exsultas"
+      }
+     ]
+    },
+    {
+     "id": "catullus:14:3",
+     "line": 14,
+     "stanza": 4,
+     "word": "nimiumque",
+     "parts": [
+      {
+       "line": 14,
+       "start": 14,
+       "surface": "nimiumque"
+      }
+     ]
+    },
+    {
+     "id": "catullus:14:4",
+     "line": 14,
+     "stanza": 4,
+     "word": "gestis",
+     "parts": [
+      {
+       "line": 14,
+       "start": 24,
+       "surface": "gestis"
+      }
+     ]
+    },
+    {
+     "id": "catullus:15:1",
+     "line": 15,
+     "stanza": 4,
+     "word": "Otium",
+     "parts": [
+      {
+       "line": 15,
+       "start": 0,
+       "surface": "Otium"
+      }
+     ]
+    },
+    {
+     "id": "catullus:15:2",
+     "line": 15,
+     "stanza": 4,
+     "word": "et",
+     "parts": [
+      {
+       "line": 15,
+       "start": 6,
+       "surface": "et"
+      }
+     ]
+    },
+    {
+     "id": "catullus:15:3",
+     "line": 15,
+     "stanza": 4,
+     "word": "reges",
+     "parts": [
+      {
+       "line": 15,
+       "start": 9,
+       "surface": "reges"
+      }
+     ]
+    },
+    {
+     "id": "catullus:15:4",
+     "line": 15,
+     "stanza": 4,
+     "word": "prius",
+     "parts": [
+      {
+       "line": 15,
+       "start": 15,
+       "surface": "prius"
+      }
+     ]
+    },
+    {
+     "id": "catullus:15:5",
+     "line": 15,
+     "stanza": 4,
+     "word": "et",
+     "parts": [
+      {
+       "line": 15,
+       "start": 21,
+       "surface": "et"
+      }
+     ]
+    },
+    {
+     "id": "catullus:15:6",
+     "line": 15,
+     "stanza": 4,
+     "word": "beatas",
+     "parts": [
+      {
+       "line": 15,
+       "start": 24,
+       "surface": "beatas"
+      }
+     ]
+    },
+    {
+     "id": "catullus:16:1",
+     "line": 16,
+     "stanza": 4,
+     "word": "Perdidit",
+     "parts": [
+      {
+       "line": 16,
+       "start": 0,
+       "surface": "Perdidit"
+      }
+     ]
+    },
+    {
+     "id": "catullus:16:2",
+     "line": 16,
+     "stanza": 4,
+     "word": "urbes",
+     "parts": [
+      {
+       "line": 16,
+       "start": 9,
+       "surface": "urbes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "philips",
+   "translator": "Ambrose Philips",
+   "year": 1711,
+   "date_label": "1711",
+   "language": "eng",
+   "kind": "version (Addison, 1711, printed it as the \"English Translation\")",
+   "wharton_credit": "Ambrose Philips, 1711.",
+   "source": {
+    "url": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html",
+    "excerpt_file": "data/sources/wharton_pg57390_fr2.html",
+    "lines_in_full_file": [
+     2291,
+     2519
+    ],
+    "sha256_full_file": "bf616822d86ef89b75aa0ee68698568a81a9f3620edf642af73daaa4545cb247",
+    "pages": [
+     67
+    ]
+   },
+   "lines": [
+    {
+     "n": 1,
+     "text": "Blest as the immortal gods is he,",
+     "stanza": 1,
+     "anchor": {
+      "excerpt_line": 109,
+      "page": 67
+     }
+    },
+    {
+     "n": 2,
+     "text": "The youth who fondly sits by thee,",
+     "stanza": 1,
+     "anchor": {
+      "excerpt_line": 110,
+      "page": 67
+     }
+    },
+    {
+     "n": 3,
+     "text": "And hears and sees thee all the while",
+     "stanza": 1,
+     "anchor": {
+      "excerpt_line": 111,
+      "page": 67
+     }
+    },
+    {
+     "n": 4,
+     "text": "Softly speak and sweetly smile.",
+     "stanza": 1,
+     "anchor": {
+      "excerpt_line": 112,
+      "page": 67
+     }
+    },
+    {
+     "n": 5,
+     "text": "'Twas this deprived my soul of rest,",
+     "stanza": 2,
+     "anchor": {
+      "excerpt_line": 113,
+      "page": 67
+     }
+    },
+    {
+     "n": 6,
+     "text": "And raised such tumults in my breast;",
+     "stanza": 2,
+     "anchor": {
+      "excerpt_line": 114,
+      "page": 67
+     }
+    },
+    {
+     "n": 7,
+     "text": "For while I gazed, in transport tost,",
+     "stanza": 2,
+     "anchor": {
+      "excerpt_line": 115,
+      "page": 67
+     }
+    },
+    {
+     "n": 8,
+     "text": "My breath was gone, my voice was lost:",
+     "stanza": 2,
+     "anchor": {
+      "excerpt_line": 116,
+      "page": 67
+     }
+    },
+    {
+     "n": 9,
+     "text": "My bosom glowed; the subtle flame",
+     "stanza": 3,
+     "anchor": {
+      "excerpt_line": 117,
+      "page": 67
+     }
+    },
+    {
+     "n": 10,
+     "text": "Ran quick through all my vital frame;",
+     "stanza": 3,
+     "anchor": {
+      "excerpt_line": 118,
+      "page": 67
+     }
+    },
+    {
+     "n": 11,
+     "text": "O'er my dim eyes a darkness hung;",
+     "stanza": 3,
+     "anchor": {
+      "excerpt_line": 119,
+      "page": 67
+     }
+    },
+    {
+     "n": 12,
+     "text": "My ears with hollow murmurs rung.",
+     "stanza": 3,
+     "anchor": {
+      "excerpt_line": 120,
+      "page": 67
+     }
+    },
+    {
+     "n": 13,
+     "text": "In dewy damps my limbs were chilled;",
+     "stanza": 4,
+     "anchor": {
+      "excerpt_line": 121,
+      "page": 67
+     }
+    },
+    {
+     "n": 14,
+     "text": "My blood with gentle horror thrilled;",
+     "stanza": 4,
+     "anchor": {
+      "excerpt_line": 122,
+      "page": 67
+     }
+    },
+    {
+     "n": 15,
+     "text": "My feeble pulse forgot to play;",
+     "stanza": 4,
+     "anchor": {
+      "excerpt_line": 123,
+      "page": 67
+     }
+    },
+    {
+     "n": 16,
+     "text": "I fainted, sank, and died away.",
+     "stanza": 4,
+     "anchor": {
+      "excerpt_line": 124,
+      "page": 67
+     }
+    }
+   ],
+   "tokens": [
+    {
+     "id": "philips:1:1",
+     "line": 1,
+     "stanza": 1,
+     "word": "Blest",
+     "parts": [
+      {
+       "line": 1,
+       "start": 0,
+       "surface": "Blest"
+      }
+     ]
+    },
+    {
+     "id": "philips:1:2",
+     "line": 1,
+     "stanza": 1,
+     "word": "as",
+     "parts": [
+      {
+       "line": 1,
+       "start": 6,
+       "surface": "as"
+      }
+     ]
+    },
+    {
+     "id": "philips:1:3",
+     "line": 1,
+     "stanza": 1,
+     "word": "the",
+     "parts": [
+      {
+       "line": 1,
+       "start": 9,
+       "surface": "the"
+      }
+     ]
+    },
+    {
+     "id": "philips:1:4",
+     "line": 1,
+     "stanza": 1,
+     "word": "immortal",
+     "parts": [
+      {
+       "line": 1,
+       "start": 13,
+       "surface": "immortal"
+      }
+     ]
+    },
+    {
+     "id": "philips:1:5",
+     "line": 1,
+     "stanza": 1,
+     "word": "gods",
+     "parts": [
+      {
+       "line": 1,
+       "start": 22,
+       "surface": "gods"
+      }
+     ]
+    },
+    {
+     "id": "philips:1:6",
+     "line": 1,
+     "stanza": 1,
+     "word": "is",
+     "parts": [
+      {
+       "line": 1,
+       "start": 27,
+       "surface": "is"
+      }
+     ]
+    },
+    {
+     "id": "philips:1:7",
+     "line": 1,
+     "stanza": 1,
+     "word": "he",
+     "parts": [
+      {
+       "line": 1,
+       "start": 30,
+       "surface": "he"
+      }
+     ]
+    },
+    {
+     "id": "philips:2:1",
+     "line": 2,
+     "stanza": 1,
+     "word": "The",
+     "parts": [
+      {
+       "line": 2,
+       "start": 0,
+       "surface": "The"
+      }
+     ]
+    },
+    {
+     "id": "philips:2:2",
+     "line": 2,
+     "stanza": 1,
+     "word": "youth",
+     "parts": [
+      {
+       "line": 2,
+       "start": 4,
+       "surface": "youth"
+      }
+     ]
+    },
+    {
+     "id": "philips:2:3",
+     "line": 2,
+     "stanza": 1,
+     "word": "who",
+     "parts": [
+      {
+       "line": 2,
+       "start": 10,
+       "surface": "who"
+      }
+     ]
+    },
+    {
+     "id": "philips:2:4",
+     "line": 2,
+     "stanza": 1,
+     "word": "fondly",
+     "parts": [
+      {
+       "line": 2,
+       "start": 14,
+       "surface": "fondly"
+      }
+     ]
+    },
+    {
+     "id": "philips:2:5",
+     "line": 2,
+     "stanza": 1,
+     "word": "sits",
+     "parts": [
+      {
+       "line": 2,
+       "start": 21,
+       "surface": "sits"
+      }
+     ]
+    },
+    {
+     "id": "philips:2:6",
+     "line": 2,
+     "stanza": 1,
+     "word": "by",
+     "parts": [
+      {
+       "line": 2,
+       "start": 26,
+       "surface": "by"
+      }
+     ]
+    },
+    {
+     "id": "philips:2:7",
+     "line": 2,
+     "stanza": 1,
+     "word": "thee",
+     "parts": [
+      {
+       "line": 2,
+       "start": 29,
+       "surface": "thee"
+      }
+     ]
+    },
+    {
+     "id": "philips:3:1",
+     "line": 3,
+     "stanza": 1,
+     "word": "And",
+     "parts": [
+      {
+       "line": 3,
+       "start": 0,
+       "surface": "And"
+      }
+     ]
+    },
+    {
+     "id": "philips:3:2",
+     "line": 3,
+     "stanza": 1,
+     "word": "hears",
+     "parts": [
+      {
+       "line": 3,
+       "start": 4,
+       "surface": "hears"
+      }
+     ]
+    },
+    {
+     "id": "philips:3:3",
+     "line": 3,
+     "stanza": 1,
+     "word": "and",
+     "parts": [
+      {
+       "line": 3,
+       "start": 10,
+       "surface": "and"
+      }
+     ]
+    },
+    {
+     "id": "philips:3:4",
+     "line": 3,
+     "stanza": 1,
+     "word": "sees",
+     "parts": [
+      {
+       "line": 3,
+       "start": 14,
+       "surface": "sees"
+      }
+     ]
+    },
+    {
+     "id": "philips:3:5",
+     "line": 3,
+     "stanza": 1,
+     "word": "thee",
+     "parts": [
+      {
+       "line": 3,
+       "start": 19,
+       "surface": "thee"
+      }
+     ]
+    },
+    {
+     "id": "philips:3:6",
+     "line": 3,
+     "stanza": 1,
+     "word": "all",
+     "parts": [
+      {
+       "line": 3,
+       "start": 24,
+       "surface": "all"
+      }
+     ]
+    },
+    {
+     "id": "philips:3:7",
+     "line": 3,
+     "stanza": 1,
+     "word": "the",
+     "parts": [
+      {
+       "line": 3,
+       "start": 28,
+       "surface": "the"
+      }
+     ]
+    },
+    {
+     "id": "philips:3:8",
+     "line": 3,
+     "stanza": 1,
+     "word": "while",
+     "parts": [
+      {
+       "line": 3,
+       "start": 32,
+       "surface": "while"
+      }
+     ]
+    },
+    {
+     "id": "philips:4:1",
+     "line": 4,
+     "stanza": 1,
+     "word": "Softly",
+     "parts": [
+      {
+       "line": 4,
+       "start": 0,
+       "surface": "Softly"
+      }
+     ]
+    },
+    {
+     "id": "philips:4:2",
+     "line": 4,
+     "stanza": 1,
+     "word": "speak",
+     "parts": [
+      {
+       "line": 4,
+       "start": 7,
+       "surface": "speak"
+      }
+     ]
+    },
+    {
+     "id": "philips:4:3",
+     "line": 4,
+     "stanza": 1,
+     "word": "and",
+     "parts": [
+      {
+       "line": 4,
+       "start": 13,
+       "surface": "and"
+      }
+     ]
+    },
+    {
+     "id": "philips:4:4",
+     "line": 4,
+     "stanza": 1,
+     "word": "sweetly",
+     "parts": [
+      {
+       "line": 4,
+       "start": 17,
+       "surface": "sweetly"
+      }
+     ]
+    },
+    {
+     "id": "philips:4:5",
+     "line": 4,
+     "stanza": 1,
+     "word": "smile",
+     "parts": [
+      {
+       "line": 4,
+       "start": 25,
+       "surface": "smile"
+      }
+     ]
+    },
+    {
+     "id": "philips:5:1",
+     "line": 5,
+     "stanza": 2,
+     "word": "'Twas",
+     "parts": [
+      {
+       "line": 5,
+       "start": 0,
+       "surface": "'Twas"
+      }
+     ]
+    },
+    {
+     "id": "philips:5:2",
+     "line": 5,
+     "stanza": 2,
+     "word": "this",
+     "parts": [
+      {
+       "line": 5,
+       "start": 6,
+       "surface": "this"
+      }
+     ]
+    },
+    {
+     "id": "philips:5:3",
+     "line": 5,
+     "stanza": 2,
+     "word": "deprived",
+     "parts": [
+      {
+       "line": 5,
+       "start": 11,
+       "surface": "deprived"
+      }
+     ]
+    },
+    {
+     "id": "philips:5:4",
+     "line": 5,
+     "stanza": 2,
+     "word": "my",
+     "parts": [
+      {
+       "line": 5,
+       "start": 20,
+       "surface": "my"
+      }
+     ]
+    },
+    {
+     "id": "philips:5:5",
+     "line": 5,
+     "stanza": 2,
+     "word": "soul",
+     "parts": [
+      {
+       "line": 5,
+       "start": 23,
+       "surface": "soul"
+      }
+     ]
+    },
+    {
+     "id": "philips:5:6",
+     "line": 5,
+     "stanza": 2,
+     "word": "of",
+     "parts": [
+      {
+       "line": 5,
+       "start": 28,
+       "surface": "of"
+      }
+     ]
+    },
+    {
+     "id": "philips:5:7",
+     "line": 5,
+     "stanza": 2,
+     "word": "rest",
+     "parts": [
+      {
+       "line": 5,
+       "start": 31,
+       "surface": "rest"
+      }
+     ]
+    },
+    {
+     "id": "philips:6:1",
+     "line": 6,
+     "stanza": 2,
+     "word": "And",
+     "parts": [
+      {
+       "line": 6,
+       "start": 0,
+       "surface": "And"
+      }
+     ]
+    },
+    {
+     "id": "philips:6:2",
+     "line": 6,
+     "stanza": 2,
+     "word": "raised",
+     "parts": [
+      {
+       "line": 6,
+       "start": 4,
+       "surface": "raised"
+      }
+     ]
+    },
+    {
+     "id": "philips:6:3",
+     "line": 6,
+     "stanza": 2,
+     "word": "such",
+     "parts": [
+      {
+       "line": 6,
+       "start": 11,
+       "surface": "such"
+      }
+     ]
+    },
+    {
+     "id": "philips:6:4",
+     "line": 6,
+     "stanza": 2,
+     "word": "tumults",
+     "parts": [
+      {
+       "line": 6,
+       "start": 16,
+       "surface": "tumults"
+      }
+     ]
+    },
+    {
+     "id": "philips:6:5",
+     "line": 6,
+     "stanza": 2,
+     "word": "in",
+     "parts": [
+      {
+       "line": 6,
+       "start": 24,
+       "surface": "in"
+      }
+     ]
+    },
+    {
+     "id": "philips:6:6",
+     "line": 6,
+     "stanza": 2,
+     "word": "my",
+     "parts": [
+      {
+       "line": 6,
+       "start": 27,
+       "surface": "my"
+      }
+     ]
+    },
+    {
+     "id": "philips:6:7",
+     "line": 6,
+     "stanza": 2,
+     "word": "breast",
+     "parts": [
+      {
+       "line": 6,
+       "start": 30,
+       "surface": "breast"
+      }
+     ]
+    },
+    {
+     "id": "philips:7:1",
+     "line": 7,
+     "stanza": 2,
+     "word": "For",
+     "parts": [
+      {
+       "line": 7,
+       "start": 0,
+       "surface": "For"
+      }
+     ]
+    },
+    {
+     "id": "philips:7:2",
+     "line": 7,
+     "stanza": 2,
+     "word": "while",
+     "parts": [
+      {
+       "line": 7,
+       "start": 4,
+       "surface": "while"
+      }
+     ]
+    },
+    {
+     "id": "philips:7:3",
+     "line": 7,
+     "stanza": 2,
+     "word": "I",
+     "parts": [
+      {
+       "line": 7,
+       "start": 10,
+       "surface": "I"
+      }
+     ]
+    },
+    {
+     "id": "philips:7:4",
+     "line": 7,
+     "stanza": 2,
+     "word": "gazed",
+     "parts": [
+      {
+       "line": 7,
+       "start": 12,
+       "surface": "gazed"
+      }
+     ]
+    },
+    {
+     "id": "philips:7:5",
+     "line": 7,
+     "stanza": 2,
+     "word": "in",
+     "parts": [
+      {
+       "line": 7,
+       "start": 19,
+       "surface": "in"
+      }
+     ]
+    },
+    {
+     "id": "philips:7:6",
+     "line": 7,
+     "stanza": 2,
+     "word": "transport",
+     "parts": [
+      {
+       "line": 7,
+       "start": 22,
+       "surface": "transport"
+      }
+     ]
+    },
+    {
+     "id": "philips:7:7",
+     "line": 7,
+     "stanza": 2,
+     "word": "tost",
+     "parts": [
+      {
+       "line": 7,
+       "start": 32,
+       "surface": "tost"
+      }
+     ]
+    },
+    {
+     "id": "philips:8:1",
+     "line": 8,
+     "stanza": 2,
+     "word": "My",
+     "parts": [
+      {
+       "line": 8,
+       "start": 0,
+       "surface": "My"
+      }
+     ]
+    },
+    {
+     "id": "philips:8:2",
+     "line": 8,
+     "stanza": 2,
+     "word": "breath",
+     "parts": [
+      {
+       "line": 8,
+       "start": 3,
+       "surface": "breath"
+      }
+     ]
+    },
+    {
+     "id": "philips:8:3",
+     "line": 8,
+     "stanza": 2,
+     "word": "was",
+     "parts": [
+      {
+       "line": 8,
+       "start": 10,
+       "surface": "was"
+      }
+     ]
+    },
+    {
+     "id": "philips:8:4",
+     "line": 8,
+     "stanza": 2,
+     "word": "gone",
+     "parts": [
+      {
+       "line": 8,
+       "start": 14,
+       "surface": "gone"
+      }
+     ]
+    },
+    {
+     "id": "philips:8:5",
+     "line": 8,
+     "stanza": 2,
+     "word": "my",
+     "parts": [
+      {
+       "line": 8,
+       "start": 20,
+       "surface": "my"
+      }
+     ]
+    },
+    {
+     "id": "philips:8:6",
+     "line": 8,
+     "stanza": 2,
+     "word": "voice",
+     "parts": [
+      {
+       "line": 8,
+       "start": 23,
+       "surface": "voice"
+      }
+     ]
+    },
+    {
+     "id": "philips:8:7",
+     "line": 8,
+     "stanza": 2,
+     "word": "was",
+     "parts": [
+      {
+       "line": 8,
+       "start": 29,
+       "surface": "was"
+      }
+     ]
+    },
+    {
+     "id": "philips:8:8",
+     "line": 8,
+     "stanza": 2,
+     "word": "lost",
+     "parts": [
+      {
+       "line": 8,
+       "start": 33,
+       "surface": "lost"
+      }
+     ]
+    },
+    {
+     "id": "philips:9:1",
+     "line": 9,
+     "stanza": 3,
+     "word": "My",
+     "parts": [
+      {
+       "line": 9,
+       "start": 0,
+       "surface": "My"
+      }
+     ]
+    },
+    {
+     "id": "philips:9:2",
+     "line": 9,
+     "stanza": 3,
+     "word": "bosom",
+     "parts": [
+      {
+       "line": 9,
+       "start": 3,
+       "surface": "bosom"
+      }
+     ]
+    },
+    {
+     "id": "philips:9:3",
+     "line": 9,
+     "stanza": 3,
+     "word": "glowed",
+     "parts": [
+      {
+       "line": 9,
+       "start": 9,
+       "surface": "glowed"
+      }
+     ]
+    },
+    {
+     "id": "philips:9:4",
+     "line": 9,
+     "stanza": 3,
+     "word": "the",
+     "parts": [
+      {
+       "line": 9,
+       "start": 17,
+       "surface": "the"
+      }
+     ]
+    },
+    {
+     "id": "philips:9:5",
+     "line": 9,
+     "stanza": 3,
+     "word": "subtle",
+     "parts": [
+      {
+       "line": 9,
+       "start": 21,
+       "surface": "subtle"
+      }
+     ]
+    },
+    {
+     "id": "philips:9:6",
+     "line": 9,
+     "stanza": 3,
+     "word": "flame",
+     "parts": [
+      {
+       "line": 9,
+       "start": 28,
+       "surface": "flame"
+      }
+     ]
+    },
+    {
+     "id": "philips:10:1",
+     "line": 10,
+     "stanza": 3,
+     "word": "Ran",
+     "parts": [
+      {
+       "line": 10,
+       "start": 0,
+       "surface": "Ran"
+      }
+     ]
+    },
+    {
+     "id": "philips:10:2",
+     "line": 10,
+     "stanza": 3,
+     "word": "quick",
+     "parts": [
+      {
+       "line": 10,
+       "start": 4,
+       "surface": "quick"
+      }
+     ]
+    },
+    {
+     "id": "philips:10:3",
+     "line": 10,
+     "stanza": 3,
+     "word": "through",
+     "parts": [
+      {
+       "line": 10,
+       "start": 10,
+       "surface": "through"
+      }
+     ]
+    },
+    {
+     "id": "philips:10:4",
+     "line": 10,
+     "stanza": 3,
+     "word": "all",
+     "parts": [
+      {
+       "line": 10,
+       "start": 18,
+       "surface": "all"
+      }
+     ]
+    },
+    {
+     "id": "philips:10:5",
+     "line": 10,
+     "stanza": 3,
+     "word": "my",
+     "parts": [
+      {
+       "line": 10,
+       "start": 22,
+       "surface": "my"
+      }
+     ]
+    },
+    {
+     "id": "philips:10:6",
+     "line": 10,
+     "stanza": 3,
+     "word": "vital",
+     "parts": [
+      {
+       "line": 10,
+       "start": 25,
+       "surface": "vital"
+      }
+     ]
+    },
+    {
+     "id": "philips:10:7",
+     "line": 10,
+     "stanza": 3,
+     "word": "frame",
+     "parts": [
+      {
+       "line": 10,
+       "start": 31,
+       "surface": "frame"
+      }
+     ]
+    },
+    {
+     "id": "philips:11:1",
+     "line": 11,
+     "stanza": 3,
+     "word": "O'er",
+     "parts": [
+      {
+       "line": 11,
+       "start": 0,
+       "surface": "O'er"
+      }
+     ]
+    },
+    {
+     "id": "philips:11:2",
+     "line": 11,
+     "stanza": 3,
+     "word": "my",
+     "parts": [
+      {
+       "line": 11,
+       "start": 5,
+       "surface": "my"
+      }
+     ]
+    },
+    {
+     "id": "philips:11:3",
+     "line": 11,
+     "stanza": 3,
+     "word": "dim",
+     "parts": [
+      {
+       "line": 11,
+       "start": 8,
+       "surface": "dim"
+      }
+     ]
+    },
+    {
+     "id": "philips:11:4",
+     "line": 11,
+     "stanza": 3,
+     "word": "eyes",
+     "parts": [
+      {
+       "line": 11,
+       "start": 12,
+       "surface": "eyes"
+      }
+     ]
+    },
+    {
+     "id": "philips:11:5",
+     "line": 11,
+     "stanza": 3,
+     "word": "a",
+     "parts": [
+      {
+       "line": 11,
+       "start": 17,
+       "surface": "a"
+      }
+     ]
+    },
+    {
+     "id": "philips:11:6",
+     "line": 11,
+     "stanza": 3,
+     "word": "darkness",
+     "parts": [
+      {
+       "line": 11,
+       "start": 19,
+       "surface": "darkness"
+      }
+     ]
+    },
+    {
+     "id": "philips:11:7",
+     "line": 11,
+     "stanza": 3,
+     "word": "hung",
+     "parts": [
+      {
+       "line": 11,
+       "start": 28,
+       "surface": "hung"
+      }
+     ]
+    },
+    {
+     "id": "philips:12:1",
+     "line": 12,
+     "stanza": 3,
+     "word": "My",
+     "parts": [
+      {
+       "line": 12,
+       "start": 0,
+       "surface": "My"
+      }
+     ]
+    },
+    {
+     "id": "philips:12:2",
+     "line": 12,
+     "stanza": 3,
+     "word": "ears",
+     "parts": [
+      {
+       "line": 12,
+       "start": 3,
+       "surface": "ears"
+      }
+     ]
+    },
+    {
+     "id": "philips:12:3",
+     "line": 12,
+     "stanza": 3,
+     "word": "with",
+     "parts": [
+      {
+       "line": 12,
+       "start": 8,
+       "surface": "with"
+      }
+     ]
+    },
+    {
+     "id": "philips:12:4",
+     "line": 12,
+     "stanza": 3,
+     "word": "hollow",
+     "parts": [
+      {
+       "line": 12,
+       "start": 13,
+       "surface": "hollow"
+      }
+     ]
+    },
+    {
+     "id": "philips:12:5",
+     "line": 12,
+     "stanza": 3,
+     "word": "murmurs",
+     "parts": [
+      {
+       "line": 12,
+       "start": 20,
+       "surface": "murmurs"
+      }
+     ]
+    },
+    {
+     "id": "philips:12:6",
+     "line": 12,
+     "stanza": 3,
+     "word": "rung",
+     "parts": [
+      {
+       "line": 12,
+       "start": 28,
+       "surface": "rung"
+      }
+     ]
+    },
+    {
+     "id": "philips:13:1",
+     "line": 13,
+     "stanza": 4,
+     "word": "In",
+     "parts": [
+      {
+       "line": 13,
+       "start": 0,
+       "surface": "In"
+      }
+     ]
+    },
+    {
+     "id": "philips:13:2",
+     "line": 13,
+     "stanza": 4,
+     "word": "dewy",
+     "parts": [
+      {
+       "line": 13,
+       "start": 3,
+       "surface": "dewy"
+      }
+     ]
+    },
+    {
+     "id": "philips:13:3",
+     "line": 13,
+     "stanza": 4,
+     "word": "damps",
+     "parts": [
+      {
+       "line": 13,
+       "start": 8,
+       "surface": "damps"
+      }
+     ]
+    },
+    {
+     "id": "philips:13:4",
+     "line": 13,
+     "stanza": 4,
+     "word": "my",
+     "parts": [
+      {
+       "line": 13,
+       "start": 14,
+       "surface": "my"
+      }
+     ]
+    },
+    {
+     "id": "philips:13:5",
+     "line": 13,
+     "stanza": 4,
+     "word": "limbs",
+     "parts": [
+      {
+       "line": 13,
+       "start": 17,
+       "surface": "limbs"
+      }
+     ]
+    },
+    {
+     "id": "philips:13:6",
+     "line": 13,
+     "stanza": 4,
+     "word": "were",
+     "parts": [
+      {
+       "line": 13,
+       "start": 23,
+       "surface": "were"
+      }
+     ]
+    },
+    {
+     "id": "philips:13:7",
+     "line": 13,
+     "stanza": 4,
+     "word": "chilled",
+     "parts": [
+      {
+       "line": 13,
+       "start": 28,
+       "surface": "chilled"
+      }
+     ]
+    },
+    {
+     "id": "philips:14:1",
+     "line": 14,
+     "stanza": 4,
+     "word": "My",
+     "parts": [
+      {
+       "line": 14,
+       "start": 0,
+       "surface": "My"
+      }
+     ]
+    },
+    {
+     "id": "philips:14:2",
+     "line": 14,
+     "stanza": 4,
+     "word": "blood",
+     "parts": [
+      {
+       "line": 14,
+       "start": 3,
+       "surface": "blood"
+      }
+     ]
+    },
+    {
+     "id": "philips:14:3",
+     "line": 14,
+     "stanza": 4,
+     "word": "with",
+     "parts": [
+      {
+       "line": 14,
+       "start": 9,
+       "surface": "with"
+      }
+     ]
+    },
+    {
+     "id": "philips:14:4",
+     "line": 14,
+     "stanza": 4,
+     "word": "gentle",
+     "parts": [
+      {
+       "line": 14,
+       "start": 14,
+       "surface": "gentle"
+      }
+     ]
+    },
+    {
+     "id": "philips:14:5",
+     "line": 14,
+     "stanza": 4,
+     "word": "horror",
+     "parts": [
+      {
+       "line": 14,
+       "start": 21,
+       "surface": "horror"
+      }
+     ]
+    },
+    {
+     "id": "philips:14:6",
+     "line": 14,
+     "stanza": 4,
+     "word": "thrilled",
+     "parts": [
+      {
+       "line": 14,
+       "start": 28,
+       "surface": "thrilled"
+      }
+     ]
+    },
+    {
+     "id": "philips:15:1",
+     "line": 15,
+     "stanza": 4,
+     "word": "My",
+     "parts": [
+      {
+       "line": 15,
+       "start": 0,
+       "surface": "My"
+      }
+     ]
+    },
+    {
+     "id": "philips:15:2",
+     "line": 15,
+     "stanza": 4,
+     "word": "feeble",
+     "parts": [
+      {
+       "line": 15,
+       "start": 3,
+       "surface": "feeble"
+      }
+     ]
+    },
+    {
+     "id": "philips:15:3",
+     "line": 15,
+     "stanza": 4,
+     "word": "pulse",
+     "parts": [
+      {
+       "line": 15,
+       "start": 10,
+       "surface": "pulse"
+      }
+     ]
+    },
+    {
+     "id": "philips:15:4",
+     "line": 15,
+     "stanza": 4,
+     "word": "forgot",
+     "parts": [
+      {
+       "line": 15,
+       "start": 16,
+       "surface": "forgot"
+      }
+     ]
+    },
+    {
+     "id": "philips:15:5",
+     "line": 15,
+     "stanza": 4,
+     "word": "to",
+     "parts": [
+      {
+       "line": 15,
+       "start": 23,
+       "surface": "to"
+      }
+     ]
+    },
+    {
+     "id": "philips:15:6",
+     "line": 15,
+     "stanza": 4,
+     "word": "play",
+     "parts": [
+      {
+       "line": 15,
+       "start": 26,
+       "surface": "play"
+      }
+     ]
+    },
+    {
+     "id": "philips:16:1",
+     "line": 16,
+     "stanza": 4,
+     "word": "I",
+     "parts": [
+      {
+       "line": 16,
+       "start": 0,
+       "surface": "I"
+      }
+     ]
+    },
+    {
+     "id": "philips:16:2",
+     "line": 16,
+     "stanza": 4,
+     "word": "fainted",
+     "parts": [
+      {
+       "line": 16,
+       "start": 2,
+       "surface": "fainted"
+      }
+     ]
+    },
+    {
+     "id": "philips:16:3",
+     "line": 16,
+     "stanza": 4,
+     "word": "sank",
+     "parts": [
+      {
+       "line": 16,
+       "start": 11,
+       "surface": "sank"
+      }
+     ]
+    },
+    {
+     "id": "philips:16:4",
+     "line": 16,
+     "stanza": 4,
+     "word": "and",
+     "parts": [
+      {
+       "line": 16,
+       "start": 17,
+       "surface": "and"
+      }
+     ]
+    },
+    {
+     "id": "philips:16:5",
+     "line": 16,
+     "stanza": 4,
+     "word": "died",
+     "parts": [
+      {
+       "line": 16,
+       "start": 21,
+       "surface": "died"
+      }
+     ]
+    },
+    {
+     "id": "philips:16:6",
+     "line": 16,
+     "stanza": 4,
+     "word": "away",
+     "parts": [
+      {
+       "line": 16,
+       "start": 26,
+       "surface": "away"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "wharton",
+   "translator": "Henry Thornton Wharton",
+   "year": 1885,
+   "date_label": "1885 (text as printed in the 5th edition, 1908)",
+   "language": "eng",
+   "kind": "literal prose translation",
+   "wharton_credit": null,
+   "source": {
+    "url": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html",
+    "excerpt_file": "data/sources/wharton_pg57390_fr2.html",
+    "lines_in_full_file": [
+     2291,
+     2519
+    ],
+    "sha256_full_file": "bf616822d86ef89b75aa0ee68698568a81a9f3620edf642af73daaa4545cb247",
+    "pages": [
+     65
+    ]
+   },
+   "full_text": "That man seems to me peer of gods, who sits in thy presence, and hears close to him thy sweet speech and lovely laughter; that indeed makes my heart flutter in my bosom. For when I see thee but a little, I have no utterance left, my tongue is broken down, and straightway a subtle fire has run under my skin, with my eyes I have no sight, my ears ring, sweat pours down, and a trembling seizes all my body; I am paler than grass, and seem in my madness little better than one dead. But I must dare all, since one so poor",
+   "lines": [
+    {
+     "n": 1,
+     "text": "That man seems to me peer of gods, who sits in thy presence, and hears close to him thy sweet speech",
+     "stanza": 1,
+     "anchor": {
+      "excerpt_line": 53,
+      "page": 65
+     }
+    },
+    {
+     "n": 2,
+     "text": "and lovely laughter; that indeed makes my heart flutter in my bosom. For when I see thee but a little, I have no utterance left,",
+     "stanza": 2,
+     "anchor": {
+      "excerpt_line": 53,
+      "page": 65
+     }
+    },
+    {
+     "n": 3,
+     "text": "my tongue is broken down, and straightway a subtle fire has run under my skin, with my eyes I have no sight, my ears ring,",
+     "stanza": 3,
+     "anchor": {
+      "excerpt_line": 53,
+      "page": 65
+     }
+    },
+    {
+     "n": 4,
+     "text": "sweat pours down, and a trembling seizes all my body; I am paler than grass, and seem in my madness little better than one dead.",
+     "stanza": 4,
+     "anchor": {
+      "excerpt_line": 53,
+      "page": 65
+     }
+    },
+    {
+     "n": 5,
+     "text": "But I must dare all, since one so poor",
+     "stanza": 5,
+     "anchor": {
+      "excerpt_line": 53,
+      "page": 65
+     }
+    }
+   ],
+   "tokens": [
+    {
+     "id": "wharton:1:1",
+     "line": 1,
+     "stanza": 1,
+     "word": "That",
+     "parts": [
+      {
+       "line": 1,
+       "start": 0,
+       "surface": "That"
+      }
+     ]
+    },
+    {
+     "id": "wharton:1:2",
+     "line": 1,
+     "stanza": 1,
+     "word": "man",
+     "parts": [
+      {
+       "line": 1,
+       "start": 5,
+       "surface": "man"
+      }
+     ]
+    },
+    {
+     "id": "wharton:1:3",
+     "line": 1,
+     "stanza": 1,
+     "word": "seems",
+     "parts": [
+      {
+       "line": 1,
+       "start": 9,
+       "surface": "seems"
+      }
+     ]
+    },
+    {
+     "id": "wharton:1:4",
+     "line": 1,
+     "stanza": 1,
+     "word": "to",
+     "parts": [
+      {
+       "line": 1,
+       "start": 15,
+       "surface": "to"
+      }
+     ]
+    },
+    {
+     "id": "wharton:1:5",
+     "line": 1,
+     "stanza": 1,
+     "word": "me",
+     "parts": [
+      {
+       "line": 1,
+       "start": 18,
+       "surface": "me"
+      }
+     ]
+    },
+    {
+     "id": "wharton:1:6",
+     "line": 1,
+     "stanza": 1,
+     "word": "peer",
+     "parts": [
+      {
+       "line": 1,
+       "start": 21,
+       "surface": "peer"
+      }
+     ]
+    },
+    {
+     "id": "wharton:1:7",
+     "line": 1,
+     "stanza": 1,
+     "word": "of",
+     "parts": [
+      {
+       "line": 1,
+       "start": 26,
+       "surface": "of"
+      }
+     ]
+    },
+    {
+     "id": "wharton:1:8",
+     "line": 1,
+     "stanza": 1,
+     "word": "gods",
+     "parts": [
+      {
+       "line": 1,
+       "start": 29,
+       "surface": "gods"
+      }
+     ]
+    },
+    {
+     "id": "wharton:1:9",
+     "line": 1,
+     "stanza": 1,
+     "word": "who",
+     "parts": [
+      {
+       "line": 1,
+       "start": 35,
+       "surface": "who"
+      }
+     ]
+    },
+    {
+     "id": "wharton:1:10",
+     "line": 1,
+     "stanza": 1,
+     "word": "sits",
+     "parts": [
+      {
+       "line": 1,
+       "start": 39,
+       "surface": "sits"
+      }
+     ]
+    },
+    {
+     "id": "wharton:1:11",
+     "line": 1,
+     "stanza": 1,
+     "word": "in",
+     "parts": [
+      {
+       "line": 1,
+       "start": 44,
+       "surface": "in"
+      }
+     ]
+    },
+    {
+     "id": "wharton:1:12",
+     "line": 1,
+     "stanza": 1,
+     "word": "thy",
+     "parts": [
+      {
+       "line": 1,
+       "start": 47,
+       "surface": "thy"
+      }
+     ]
+    },
+    {
+     "id": "wharton:1:13",
+     "line": 1,
+     "stanza": 1,
+     "word": "presence",
+     "parts": [
+      {
+       "line": 1,
+       "start": 51,
+       "surface": "presence"
+      }
+     ]
+    },
+    {
+     "id": "wharton:1:14",
+     "line": 1,
+     "stanza": 1,
+     "word": "and",
+     "parts": [
+      {
+       "line": 1,
+       "start": 61,
+       "surface": "and"
+      }
+     ]
+    },
+    {
+     "id": "wharton:1:15",
+     "line": 1,
+     "stanza": 1,
+     "word": "hears",
+     "parts": [
+      {
+       "line": 1,
+       "start": 65,
+       "surface": "hears"
+      }
+     ]
+    },
+    {
+     "id": "wharton:1:16",
+     "line": 1,
+     "stanza": 1,
+     "word": "close",
+     "parts": [
+      {
+       "line": 1,
+       "start": 71,
+       "surface": "close"
+      }
+     ]
+    },
+    {
+     "id": "wharton:1:17",
+     "line": 1,
+     "stanza": 1,
+     "word": "to",
+     "parts": [
+      {
+       "line": 1,
+       "start": 77,
+       "surface": "to"
+      }
+     ]
+    },
+    {
+     "id": "wharton:1:18",
+     "line": 1,
+     "stanza": 1,
+     "word": "him",
+     "parts": [
+      {
+       "line": 1,
+       "start": 80,
+       "surface": "him"
+      }
+     ]
+    },
+    {
+     "id": "wharton:1:19",
+     "line": 1,
+     "stanza": 1,
+     "word": "thy",
+     "parts": [
+      {
+       "line": 1,
+       "start": 84,
+       "surface": "thy"
+      }
+     ]
+    },
+    {
+     "id": "wharton:1:20",
+     "line": 1,
+     "stanza": 1,
+     "word": "sweet",
+     "parts": [
+      {
+       "line": 1,
+       "start": 88,
+       "surface": "sweet"
+      }
+     ]
+    },
+    {
+     "id": "wharton:1:21",
+     "line": 1,
+     "stanza": 1,
+     "word": "speech",
+     "parts": [
+      {
+       "line": 1,
+       "start": 94,
+       "surface": "speech"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:1",
+     "line": 2,
+     "stanza": 2,
+     "word": "and",
+     "parts": [
+      {
+       "line": 2,
+       "start": 0,
+       "surface": "and"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:2",
+     "line": 2,
+     "stanza": 2,
+     "word": "lovely",
+     "parts": [
+      {
+       "line": 2,
+       "start": 4,
+       "surface": "lovely"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:3",
+     "line": 2,
+     "stanza": 2,
+     "word": "laughter",
+     "parts": [
+      {
+       "line": 2,
+       "start": 11,
+       "surface": "laughter"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:4",
+     "line": 2,
+     "stanza": 2,
+     "word": "that",
+     "parts": [
+      {
+       "line": 2,
+       "start": 21,
+       "surface": "that"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:5",
+     "line": 2,
+     "stanza": 2,
+     "word": "indeed",
+     "parts": [
+      {
+       "line": 2,
+       "start": 26,
+       "surface": "indeed"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:6",
+     "line": 2,
+     "stanza": 2,
+     "word": "makes",
+     "parts": [
+      {
+       "line": 2,
+       "start": 33,
+       "surface": "makes"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:7",
+     "line": 2,
+     "stanza": 2,
+     "word": "my",
+     "parts": [
+      {
+       "line": 2,
+       "start": 39,
+       "surface": "my"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:8",
+     "line": 2,
+     "stanza": 2,
+     "word": "heart",
+     "parts": [
+      {
+       "line": 2,
+       "start": 42,
+       "surface": "heart"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:9",
+     "line": 2,
+     "stanza": 2,
+     "word": "flutter",
+     "parts": [
+      {
+       "line": 2,
+       "start": 48,
+       "surface": "flutter"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:10",
+     "line": 2,
+     "stanza": 2,
+     "word": "in",
+     "parts": [
+      {
+       "line": 2,
+       "start": 56,
+       "surface": "in"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:11",
+     "line": 2,
+     "stanza": 2,
+     "word": "my",
+     "parts": [
+      {
+       "line": 2,
+       "start": 59,
+       "surface": "my"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:12",
+     "line": 2,
+     "stanza": 2,
+     "word": "bosom",
+     "parts": [
+      {
+       "line": 2,
+       "start": 62,
+       "surface": "bosom"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:13",
+     "line": 2,
+     "stanza": 2,
+     "word": "For",
+     "parts": [
+      {
+       "line": 2,
+       "start": 69,
+       "surface": "For"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:14",
+     "line": 2,
+     "stanza": 2,
+     "word": "when",
+     "parts": [
+      {
+       "line": 2,
+       "start": 73,
+       "surface": "when"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:15",
+     "line": 2,
+     "stanza": 2,
+     "word": "I",
+     "parts": [
+      {
+       "line": 2,
+       "start": 78,
+       "surface": "I"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:16",
+     "line": 2,
+     "stanza": 2,
+     "word": "see",
+     "parts": [
+      {
+       "line": 2,
+       "start": 80,
+       "surface": "see"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:17",
+     "line": 2,
+     "stanza": 2,
+     "word": "thee",
+     "parts": [
+      {
+       "line": 2,
+       "start": 84,
+       "surface": "thee"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:18",
+     "line": 2,
+     "stanza": 2,
+     "word": "but",
+     "parts": [
+      {
+       "line": 2,
+       "start": 89,
+       "surface": "but"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:19",
+     "line": 2,
+     "stanza": 2,
+     "word": "a",
+     "parts": [
+      {
+       "line": 2,
+       "start": 93,
+       "surface": "a"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:20",
+     "line": 2,
+     "stanza": 2,
+     "word": "little",
+     "parts": [
+      {
+       "line": 2,
+       "start": 95,
+       "surface": "little"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:21",
+     "line": 2,
+     "stanza": 2,
+     "word": "I",
+     "parts": [
+      {
+       "line": 2,
+       "start": 103,
+       "surface": "I"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:22",
+     "line": 2,
+     "stanza": 2,
+     "word": "have",
+     "parts": [
+      {
+       "line": 2,
+       "start": 105,
+       "surface": "have"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:23",
+     "line": 2,
+     "stanza": 2,
+     "word": "no",
+     "parts": [
+      {
+       "line": 2,
+       "start": 110,
+       "surface": "no"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:24",
+     "line": 2,
+     "stanza": 2,
+     "word": "utterance",
+     "parts": [
+      {
+       "line": 2,
+       "start": 113,
+       "surface": "utterance"
+      }
+     ]
+    },
+    {
+     "id": "wharton:2:25",
+     "line": 2,
+     "stanza": 2,
+     "word": "left",
+     "parts": [
+      {
+       "line": 2,
+       "start": 123,
+       "surface": "left"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:1",
+     "line": 3,
+     "stanza": 3,
+     "word": "my",
+     "parts": [
+      {
+       "line": 3,
+       "start": 0,
+       "surface": "my"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:2",
+     "line": 3,
+     "stanza": 3,
+     "word": "tongue",
+     "parts": [
+      {
+       "line": 3,
+       "start": 3,
+       "surface": "tongue"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:3",
+     "line": 3,
+     "stanza": 3,
+     "word": "is",
+     "parts": [
+      {
+       "line": 3,
+       "start": 10,
+       "surface": "is"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:4",
+     "line": 3,
+     "stanza": 3,
+     "word": "broken",
+     "parts": [
+      {
+       "line": 3,
+       "start": 13,
+       "surface": "broken"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:5",
+     "line": 3,
+     "stanza": 3,
+     "word": "down",
+     "parts": [
+      {
+       "line": 3,
+       "start": 20,
+       "surface": "down"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:6",
+     "line": 3,
+     "stanza": 3,
+     "word": "and",
+     "parts": [
+      {
+       "line": 3,
+       "start": 26,
+       "surface": "and"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:7",
+     "line": 3,
+     "stanza": 3,
+     "word": "straightway",
+     "parts": [
+      {
+       "line": 3,
+       "start": 30,
+       "surface": "straightway"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:8",
+     "line": 3,
+     "stanza": 3,
+     "word": "a",
+     "parts": [
+      {
+       "line": 3,
+       "start": 42,
+       "surface": "a"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:9",
+     "line": 3,
+     "stanza": 3,
+     "word": "subtle",
+     "parts": [
+      {
+       "line": 3,
+       "start": 44,
+       "surface": "subtle"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:10",
+     "line": 3,
+     "stanza": 3,
+     "word": "fire",
+     "parts": [
+      {
+       "line": 3,
+       "start": 51,
+       "surface": "fire"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:11",
+     "line": 3,
+     "stanza": 3,
+     "word": "has",
+     "parts": [
+      {
+       "line": 3,
+       "start": 56,
+       "surface": "has"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:12",
+     "line": 3,
+     "stanza": 3,
+     "word": "run",
+     "parts": [
+      {
+       "line": 3,
+       "start": 60,
+       "surface": "run"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:13",
+     "line": 3,
+     "stanza": 3,
+     "word": "under",
+     "parts": [
+      {
+       "line": 3,
+       "start": 64,
+       "surface": "under"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:14",
+     "line": 3,
+     "stanza": 3,
+     "word": "my",
+     "parts": [
+      {
+       "line": 3,
+       "start": 70,
+       "surface": "my"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:15",
+     "line": 3,
+     "stanza": 3,
+     "word": "skin",
+     "parts": [
+      {
+       "line": 3,
+       "start": 73,
+       "surface": "skin"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:16",
+     "line": 3,
+     "stanza": 3,
+     "word": "with",
+     "parts": [
+      {
+       "line": 3,
+       "start": 79,
+       "surface": "with"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:17",
+     "line": 3,
+     "stanza": 3,
+     "word": "my",
+     "parts": [
+      {
+       "line": 3,
+       "start": 84,
+       "surface": "my"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:18",
+     "line": 3,
+     "stanza": 3,
+     "word": "eyes",
+     "parts": [
+      {
+       "line": 3,
+       "start": 87,
+       "surface": "eyes"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:19",
+     "line": 3,
+     "stanza": 3,
+     "word": "I",
+     "parts": [
+      {
+       "line": 3,
+       "start": 92,
+       "surface": "I"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:20",
+     "line": 3,
+     "stanza": 3,
+     "word": "have",
+     "parts": [
+      {
+       "line": 3,
+       "start": 94,
+       "surface": "have"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:21",
+     "line": 3,
+     "stanza": 3,
+     "word": "no",
+     "parts": [
+      {
+       "line": 3,
+       "start": 99,
+       "surface": "no"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:22",
+     "line": 3,
+     "stanza": 3,
+     "word": "sight",
+     "parts": [
+      {
+       "line": 3,
+       "start": 102,
+       "surface": "sight"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:23",
+     "line": 3,
+     "stanza": 3,
+     "word": "my",
+     "parts": [
+      {
+       "line": 3,
+       "start": 109,
+       "surface": "my"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:24",
+     "line": 3,
+     "stanza": 3,
+     "word": "ears",
+     "parts": [
+      {
+       "line": 3,
+       "start": 112,
+       "surface": "ears"
+      }
+     ]
+    },
+    {
+     "id": "wharton:3:25",
+     "line": 3,
+     "stanza": 3,
+     "word": "ring",
+     "parts": [
+      {
+       "line": 3,
+       "start": 117,
+       "surface": "ring"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:1",
+     "line": 4,
+     "stanza": 4,
+     "word": "sweat",
+     "parts": [
+      {
+       "line": 4,
+       "start": 0,
+       "surface": "sweat"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:2",
+     "line": 4,
+     "stanza": 4,
+     "word": "pours",
+     "parts": [
+      {
+       "line": 4,
+       "start": 6,
+       "surface": "pours"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:3",
+     "line": 4,
+     "stanza": 4,
+     "word": "down",
+     "parts": [
+      {
+       "line": 4,
+       "start": 12,
+       "surface": "down"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:4",
+     "line": 4,
+     "stanza": 4,
+     "word": "and",
+     "parts": [
+      {
+       "line": 4,
+       "start": 18,
+       "surface": "and"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:5",
+     "line": 4,
+     "stanza": 4,
+     "word": "a",
+     "parts": [
+      {
+       "line": 4,
+       "start": 22,
+       "surface": "a"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:6",
+     "line": 4,
+     "stanza": 4,
+     "word": "trembling",
+     "parts": [
+      {
+       "line": 4,
+       "start": 24,
+       "surface": "trembling"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:7",
+     "line": 4,
+     "stanza": 4,
+     "word": "seizes",
+     "parts": [
+      {
+       "line": 4,
+       "start": 34,
+       "surface": "seizes"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:8",
+     "line": 4,
+     "stanza": 4,
+     "word": "all",
+     "parts": [
+      {
+       "line": 4,
+       "start": 41,
+       "surface": "all"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:9",
+     "line": 4,
+     "stanza": 4,
+     "word": "my",
+     "parts": [
+      {
+       "line": 4,
+       "start": 45,
+       "surface": "my"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:10",
+     "line": 4,
+     "stanza": 4,
+     "word": "body",
+     "parts": [
+      {
+       "line": 4,
+       "start": 48,
+       "surface": "body"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:11",
+     "line": 4,
+     "stanza": 4,
+     "word": "I",
+     "parts": [
+      {
+       "line": 4,
+       "start": 54,
+       "surface": "I"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:12",
+     "line": 4,
+     "stanza": 4,
+     "word": "am",
+     "parts": [
+      {
+       "line": 4,
+       "start": 56,
+       "surface": "am"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:13",
+     "line": 4,
+     "stanza": 4,
+     "word": "paler",
+     "parts": [
+      {
+       "line": 4,
+       "start": 59,
+       "surface": "paler"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:14",
+     "line": 4,
+     "stanza": 4,
+     "word": "than",
+     "parts": [
+      {
+       "line": 4,
+       "start": 65,
+       "surface": "than"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:15",
+     "line": 4,
+     "stanza": 4,
+     "word": "grass",
+     "parts": [
+      {
+       "line": 4,
+       "start": 70,
+       "surface": "grass"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:16",
+     "line": 4,
+     "stanza": 4,
+     "word": "and",
+     "parts": [
+      {
+       "line": 4,
+       "start": 77,
+       "surface": "and"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:17",
+     "line": 4,
+     "stanza": 4,
+     "word": "seem",
+     "parts": [
+      {
+       "line": 4,
+       "start": 81,
+       "surface": "seem"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:18",
+     "line": 4,
+     "stanza": 4,
+     "word": "in",
+     "parts": [
+      {
+       "line": 4,
+       "start": 86,
+       "surface": "in"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:19",
+     "line": 4,
+     "stanza": 4,
+     "word": "my",
+     "parts": [
+      {
+       "line": 4,
+       "start": 89,
+       "surface": "my"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:20",
+     "line": 4,
+     "stanza": 4,
+     "word": "madness",
+     "parts": [
+      {
+       "line": 4,
+       "start": 92,
+       "surface": "madness"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:21",
+     "line": 4,
+     "stanza": 4,
+     "word": "little",
+     "parts": [
+      {
+       "line": 4,
+       "start": 100,
+       "surface": "little"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:22",
+     "line": 4,
+     "stanza": 4,
+     "word": "better",
+     "parts": [
+      {
+       "line": 4,
+       "start": 107,
+       "surface": "better"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:23",
+     "line": 4,
+     "stanza": 4,
+     "word": "than",
+     "parts": [
+      {
+       "line": 4,
+       "start": 114,
+       "surface": "than"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:24",
+     "line": 4,
+     "stanza": 4,
+     "word": "one",
+     "parts": [
+      {
+       "line": 4,
+       "start": 119,
+       "surface": "one"
+      }
+     ]
+    },
+    {
+     "id": "wharton:4:25",
+     "line": 4,
+     "stanza": 4,
+     "word": "dead",
+     "parts": [
+      {
+       "line": 4,
+       "start": 123,
+       "surface": "dead"
+      }
+     ]
+    },
+    {
+     "id": "wharton:5:1",
+     "line": 5,
+     "stanza": 5,
+     "word": "But",
+     "parts": [
+      {
+       "line": 5,
+       "start": 0,
+       "surface": "But"
+      }
+     ]
+    },
+    {
+     "id": "wharton:5:2",
+     "line": 5,
+     "stanza": 5,
+     "word": "I",
+     "parts": [
+      {
+       "line": 5,
+       "start": 4,
+       "surface": "I"
+      }
+     ]
+    },
+    {
+     "id": "wharton:5:3",
+     "line": 5,
+     "stanza": 5,
+     "word": "must",
+     "parts": [
+      {
+       "line": 5,
+       "start": 6,
+       "surface": "must"
+      }
+     ]
+    },
+    {
+     "id": "wharton:5:4",
+     "line": 5,
+     "stanza": 5,
+     "word": "dare",
+     "parts": [
+      {
+       "line": 5,
+       "start": 11,
+       "surface": "dare"
+      }
+     ]
+    },
+    {
+     "id": "wharton:5:5",
+     "line": 5,
+     "stanza": 5,
+     "word": "all",
+     "parts": [
+      {
+       "line": 5,
+       "start": 16,
+       "surface": "all"
+      }
+     ]
+    },
+    {
+     "id": "wharton:5:6",
+     "line": 5,
+     "stanza": 5,
+     "word": "since",
+     "parts": [
+      {
+       "line": 5,
+       "start": 21,
+       "surface": "since"
+      }
+     ]
+    },
+    {
+     "id": "wharton:5:7",
+     "line": 5,
+     "stanza": 5,
+     "word": "one",
+     "parts": [
+      {
+       "line": 5,
+       "start": 27,
+       "surface": "one"
+      }
+     ]
+    },
+    {
+     "id": "wharton:5:8",
+     "line": 5,
+     "stanza": 5,
+     "word": "so",
+     "parts": [
+      {
+       "line": 5,
+       "start": 31,
+       "surface": "so"
+      }
+     ]
+    },
+    {
+     "id": "wharton:5:9",
+     "line": 5,
+     "stanza": 5,
+     "word": "poor",
+     "parts": [
+      {
+       "line": 5,
+       "start": 34,
+       "surface": "poor"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "fr40": {
+  "numbering": {
+   "wharton_bergk": "40",
+   "voigt": "130"
+  },
+  "greek_lines": [
+   {
+    "n": 1,
+    "text": "Ἔρος δαὖτέ μ' ὀ λυσιμελης δόνει,",
+    "anchor": {
+     "excerpt_line": 4,
+     "page": 96
+    }
+   },
+   {
+    "n": 2,
+    "text": "γλυκύπικρον ἀμάχανον ὄρπετον.",
+    "anchor": {
+     "excerpt_line": 8,
+     "page": 96
+    }
+   }
+  ],
+  "wharton_prose": {
+   "text": "Now Love masters my limbs and shakes me, fatal creature, bitter-sweet.",
+   "anchor": {
+    "excerpt_line": 11,
+    "page": 96
+   }
+  },
+  "symonds": {
+   "lines": [
+    {
+     "n": 1,
+     "text": "Lo, Love once more, the limb-dissolving King,",
+     "anchor": {
+      "excerpt_line": 13,
+      "page": 96
+     }
+    },
+    {
+     "n": 2,
+     "text": "The bitter-sweet impracticable thing,",
+     "anchor": {
+      "excerpt_line": 14,
+      "page": 96
+     }
+    },
+    {
+     "n": 3,
+     "text": "Wild-beast-like rends me with fierce quivering.",
+     "anchor": {
+      "excerpt_line": 15,
+      "page": 96
+     }
+    }
+   ],
+   "credit": "J. Addington Symonds, 1883."
+  },
+  "source": {
+   "url": "https://www.gutenberg.org/cache/epub/57390/pg57390-images.html",
+   "excerpt_file": "data/sources/wharton_pg57390_fr40.html",
+   "lines_in_full_file": [
+    3315,
+    3352
+   ],
+   "sha256_full_file": "bf616822d86ef89b75aa0ee68698568a81a9f3620edf642af73daaa4545cb247",
+   "pages": [
+    96
+   ]
+  }
+ }
+}

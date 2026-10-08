@@ -1,0 +1,47 @@
+{{TextQuality|75%}}{{titulus2
+|Scriptor= Gaius Valerius Catullus
+|OperaeTitulus= Carmina 
+|OperaeWikiPagina= Carmina (Catullus, ed. Merrill)
+|Annus=
+|SubTitulus= Carmen LI
+}}
+<div class=text>
+{{Liber
+|Ante= Carmen L
+|AnteNomen= Carmina (Catullus, ed. Merrill)/Carmen L
+|Post= Carmen LII
+|PostNomen= Carmina (Catullus, ed. Merrill)/Carmen LII
+}}
+<poem>
+Ille mi par esse deo uidetur，
+Ille, si fas est, superare diuos,
+Qui sedens aduersus identidem te
+          Spectat et audit
+
+Dulce ridentem, misero quod omnis
+Eripit sensus mihi: nam simul te,
+Lesbia, adspexi, nihil est super mi
+          •      •      •      •
+
+Lingua sed torpet, tenuis sub artus
+Flamma demanat, sonitu suopte
+Tintinant aures, gemina teguntur
+          Lumina nocte.
+
+Otium, Catulle, tibi molestum est:
+Otio exsultas nimiumque gestis.
+Otium et reges prius et beatas
+          Perdidit urbes.
+</poem>
+{{Liber
+|Ante= Carmen L
+|AnteNomen= Carmina (Catullus, ed. Merrill)/Carmen L
+|Post= Carmen LII
+|PostNomen= Carmina (Catullus, ed. Merrill)/Carmen LII
+}}
+</div>{{finis}}
+
+[[Categoria:Sapphici]]
+
+[[en:Catullus 51]]
+[[ru:Тот богоравный был избран судьбою (Катулл/Фет)]]

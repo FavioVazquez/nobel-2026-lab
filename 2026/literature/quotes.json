@@ -1,0 +1,73 @@
+{
+ "about": "Short quotations of Anne Carson's own words, used as commentary on this folder's page (and its README). Educational demos made to show an open-source tool. Not research. Rule: a few only, one per work, each at most 15 words and a contiguous span (no ellipsis), never a whole poem or stanza; the exact wording was checked on the pages listed in 'sources', which reproduce it; attributed 'Anne Carson, <work> (<year>)'. The Committee-quoted line from Eros the Bittersweet is governed by CLAIMS.md L09 and is not in this list. Rows are listed in CLAIMS.md, section 'Quotations' (L61, a quotation from Autobiography of Red, was withdrawn: it did not comment on anything next to it). Only the quoted span itself is stored here: the surrounding words on each source page are not copied.",
+ "checked": "2026-10-08",
+ "quotes": [
+  {
+   "id": "eros",
+   "text": "It was Sappho who first called eros 'bittersweet.'",
+   "work": "Eros the Bittersweet",
+   "year": 1986,
+   "where": "bittersweet",
+   "context": "The opening line of her first book, next to Sappho's word for Eros.",
+   "note": "short quotation for commentary",
+   "sources": [
+    {
+     "url": "https://dalkeyarchive.store/products/eros-the-bittersweet",
+     "kind": "publisher page (Dalkey Archive); the page's blurb opens with the book's first sentence"
+    },
+    {
+     "url": "https://www.tupeloquarterly.com/prose/negroni-and-eros-the-bittersweet-a-fugue-in-forty-tasting-notes-by-gregory-emilio/",
+     "kind": "essay (Emma Bolden, Tupelo Quarterly, 14 July 2020): the line is the essay's epigraph, credited to the book; independent of the blurb"
+    },
+    {
+     "url": "https://silverfysh.wordpress.com/2011/08/24/glukupikron/",
+     "kind": "reading notes (Sasha Martinez, Marginalia, 24 August 2011): the book's opening lines, copied from the book itself; independent of the blurb"
+    },
+    {
+     "url": "https://newsouthbooks.com.au/books/eros-the-bittersweet",
+     "kind": "distributor page (NewSouth Books): a copy of the publisher's blurb, not an independent witness"
+    }
+   ]
+  },
+  {
+   "id": "brackets",
+   "text": "brackets imply a free space of imaginal adventure",
+   "work": "If Not, Winter: Fragments of Sappho",
+   "year": 2002,
+   "where": "fragments",
+   "context": "From the introduction to her translation of Sappho's fragments, on the brackets that mark what a torn papyrus has lost.",
+   "note": "short quotation for commentary",
+   "sources": [
+    {
+     "url": "https://www.lrb.co.uk/the-paper/v26/n01/emily-wilson/tongue-breaks",
+     "kind": "review (Emily Wilson, London Review of Books, 8 January 2004)"
+    },
+    {
+     "url": "https://www.theguardian.com/books/booksblog/2016/nov/03/fragmented-stories-can-be-fulfilling-reading-anne-carson",
+     "kind": "article (Chris Power, The Guardian, 3 November 2016)"
+    }
+   ],
+   "placement_note": "Her comment is about the brackets that stand for the holes in a torn papyrus, not about the editors' restorations inside brackets; keep it beside the lost-papyrus explanation."
+  },
+  {
+   "id": "nox",
+   "text": "I made an epitaph for him in the form of a book.",
+   "work": "Nox",
+   "year": 2010,
+   "where": "forms",
+   "context": "The Committee calls Nox an epitaph in the form of a box. Her own words on its form, about the person it remembers:",
+   "note": "short quotation for commentary",
+   "sources": [
+    {
+     "url": "https://bulletin.hds.harvard.edu/nox-or-the-muteness-of-things",
+     "kind": "review (Charles M. Stang, Harvard Divinity Bulletin, 2012)"
+    },
+    {
+     "url": "https://annarborobserver.com/a-new-way-to-read/",
+     "kind": "review (Ann Arbor Observer); found by the research pass, not re-fetched in the second check"
+    }
+   ],
+   "layout_note": "A contiguous span of a 16-word sentence (the opening clause is left out); nothing more about the person it remembers is said."
+  }
+ ]
+}

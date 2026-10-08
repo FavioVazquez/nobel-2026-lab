@@ -1,0 +1,174 @@
+# Wharton (= Bergk) -> Voigt concordance, built by sapphofrag.concordance (see its docstring).
+# Numbers only, from The Digital Sappho (https://digitalsappho.org/, CC BY-SA 4.0), checked by hand.
+# status: auto | hand | probable | gap. An empty voigt_no is a gap.
+wharton_no,voigt_no,status,note,source
+1,1,hand,Ode to Aphrodite; also Wikipedia 'Sappho 1',https://digitalsappho.org/fragments/
+2,31,hand,also Wikipedia 'Sappho 31',https://digitalsappho.org/fragments/
+3,34,auto,"shares 13 of 17 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+4,2,auto,"shares 7 of 9 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+5,2,hand,Wharton 5 = the last stanza of Voigt 2 (Voigt 2.13-16),https://digitalsappho.org/fragments/
+6,35,auto,"shares 3 of 4 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+7,40,auto,"shares 8 of 8 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+8,40,auto,"shares 8 of 8 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+9,33,auto,"shares 7 of 8 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+10,32,auto,"shares 5 of 5 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+11,160,auto,"shares 7 of 8 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+12,,gap,not found on Digital Sappho fr. 26 page; left open,
+13,16,hand,"Wharton 13 = Voigt 16.3-4, the papyrus poem in part (a)",https://digitalsappho.org/fragments/
+14,41,hand,"same words, different spelling",https://digitalsappho.org/fragments/
+15,26,hand,Digital Sappho fr. 26: 'ἔγω δ' ἐμ' αὔτᾳ τοῦτο σύνοιδα',https://digitalsappho.org/fragments/
+16,42,auto,"shares 8 of 8 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+17,37,hand,same words,https://digitalsappho.org/fragments/
+18,123,hand,same words,https://digitalsappho.org/fragments/
+19,39,auto,"shares 7 of 7 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+20,152,hand,"same words, different spelling",https://digitalsappho.org/fragments/
+21,129a,hand,Digital Sappho prints 129 (a),https://digitalsappho.org/fragments/
+22,129b,hand,Digital Sappho prints 129 (b),https://digitalsappho.org/fragments/
+23,,gap,two words only; no safe match,
+24,45,hand,same words,https://digitalsappho.org/fragments/
+25,36,auto,"shares 3 of 3 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+26,,gap,Wharton (after Athenaeus) says the verses are not Sappho's,
+27,158,auto,"shares 6 of 6 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+28,137,auto,"shares 14 of 16 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+29,138,auto,"shares 7 of 8 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+30,143,auto,"shares 3 of 4 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+31,142,auto,"shares 7 of 8 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+32,147,hand,same words,https://digitalsappho.org/fragments/
+33,49,auto,"shares 7 of 7 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+34,49,auto,"shares 6 of 6 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+35,,gap,no match found,
+36,51,auto,"shares 6 of 7 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+37,52,auto,"shares 4 of 5 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+38,,gap,no match found,
+39,136,auto,"shares 4 of 4 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+40,130,auto,"shares 6 of 7 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+41,131,auto,"shares 9 of 9 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+42,47,hand,same words,https://digitalsappho.org/fragments/
+43,149,auto,"shares 4 of 4 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+44,101,hand,"same words, corrupt in both",https://digitalsappho.org/fragments/
+45,118,auto,"shares 5 of 6 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+46,,gap,no match found,
+47,178,hand,Digital Sappho: '178 Campbell ( = Voigt ...)',https://digitalsappho.org/fragments/
+48,144,hand,same words,https://digitalsappho.org/fragments/
+49,,gap,no match found,
+50,46,auto,"shares 5 of 6 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+51,141,auto,"shares 15 of 19 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+52,154,hand,Voigt 154 line 1,https://digitalsappho.org/fragments/
+53,154,hand,Voigt 154 line 2,https://digitalsappho.org/fragments/
+54,,gap,no match found,
+55,,gap,no match found,
+56,166,auto,"shares 6 of 8 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+57,151,auto,"shares 4 of 4 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+58,133,auto,"shares 5 of 5 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+59,133,auto,"shares 4 of 4 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+60,128,auto,"shares 6 of 6 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+61,153,hand,same words,https://digitalsappho.org/fragments/
+62,140,auto,"shares 10 of 10 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+63,168,hand,same words,https://digitalsappho.org/fragments/
+64,54,auto,"shares 5 of 6 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+65,53,auto,"shares 6 of 6 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+66,,gap,no match found,
+67,44,auto,"shares 3 of 4 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+68,55,hand,"same words, different spelling",https://digitalsappho.org/fragments/
+69,56,auto,"shares 11 of 13 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+70,57,auto,"shares 11 of 12 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+71,,gap,no match found,
+72,120,auto,"shares 11 of 11 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+73,,gap,no match found,
+74,159,auto,"shares 3 of 3 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+75,121,hand,same words,https://digitalsappho.org/fragments/
+76,82a,auto,"shares 5 of 5 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+77,91,hand,same words; 'Εἴρανα' for Wharton's 'ὦ ῎ραννα',https://digitalsappho.org/fragments/
+78,81,hand,same words,https://digitalsappho.org/fragments/
+79,,gap,no match found,
+80,46,auto,"shares 3 of 4 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+81,148,auto,"shares 10 of 12 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+82,124,hand,same words,https://digitalsappho.org/fragments/
+83,126,auto,"shares 3 of 4 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+84,127,auto,"shares 5 of 5 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+85,132,auto,"shares 17 of 19 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+86,155,auto,"shares 6 of 6 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+87,134,auto,"shares 3 of 3 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+88,135,hand,same words; 'Εἴρανα' for 'ὦ ῎ραννα',https://digitalsappho.org/fragments/
+89,100,auto,"shares 3 of 4 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+90,102,auto,"shares 11 of 12 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+91,111,auto,"shares 12 of 14 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+92,106,auto,"shares 4 of 4 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+93,105a,auto,"shares 15 of 15 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+94,105b,auto,"shares 9 of 11 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+95,104a,auto,"shares 13 of 14 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+96,,gap,no match found,
+97,109,auto,"shares 3 of 3 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+98,110,auto,"shares 6 of 8 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+99,112,auto,"shares 9 of 9 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+100,112,auto,"shares 3 of 4 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+101,50,auto,"shares 11 of 11 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+102,107,auto,"shares 3 of 3 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+103,117,auto,"shares 3 of 4 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+104,115,auto,"shares 7 of 8 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+105,116,auto,"shares 5 of 5 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+106,113,auto,"shares 4 of 5 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+107,,gap,no match found,
+108,,gap,no match found,
+109,114,auto,"shares 7 of 7 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+110,,gap,no match found,
+111,165,hand,same words,https://digitalsappho.org/fragments/
+112,167,auto,"shares 3 of 3 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+113,146,hand,same words,https://digitalsappho.org/fragments/
+114,145,hand,same words,https://digitalsappho.org/fragments/
+115,38,hand,same words,https://digitalsappho.org/fragments/
+116,119,hand,"same words, different spelling",https://digitalsappho.org/fragments/
+117,164,auto,"shares 3 of 3 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+118,,gap,epigram (Greek Anthology); not on Digital Sappho,
+119,,gap,epigram (Greek Anthology); not on Digital Sappho,
+120,,gap,epigram (Greek Anthology); not on Digital Sappho,
+121,122,auto,"shares 4 of 5 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+122,156,auto,"shares 5 of 5 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+123,156,auto,"shares 5 of 5 words (3+ letters, marks removed)",https://digitalsappho.org/fragments/
+124,,gap,no Greek verse to match,
+125,172,probable,"ἀλγεσίδωρον, 4th word after 169A",https://digitalsappho.org/fragments/
+126,163,hand,same words,https://digitalsappho.org/fragments/
+127,,gap,no Greek verse to match,
+128,191,probable,σέλιννοις,https://digitalsappho.org/fragments/
+129,185,hand,"μελίφωνοι, '185 Campbell' anchor",https://digitalsappho.org/fragments/
+130,,gap,no Greek verse to match,
+131,170,probable,Αἴγα,https://digitalsappho.org/fragments/
+132,,gap,no Greek verse to match,
+133,104b,hand,same words,https://digitalsappho.org/fragments/
+134,,gap,no Greek verse to match,
+135,,gap,no Greek verse to match,
+136,,gap,no Greek verse to match,
+137,,gap,prose paraphrase in Aristotle; no match,
+138,,gap,no Greek verse to match,
+139,,gap,no Greek verse to match,
+140,,gap,no Greek verse to match,
+141,,gap,no Greek verse to match,
+142,,gap,no match found,
+143,,gap,no Greek verse to match,
+144,,gap,no Greek verse to match,
+145,,gap,no Greek verse to match,
+146,,gap,no Greek verse to match,
+147,,gap,no Greek verse to match,
+148,,gap,no Greek verse to match,
+149,171,probable,ἄκακος,https://digitalsappho.org/fragments/
+150,173,probable,ἀμαμάξυδος,https://digitalsappho.org/fragments/
+151,174,probable,ἀμάρα,https://digitalsappho.org/fragments/
+152,,gap,no Greek verse to match,
+153,157,hand,same words,https://digitalsappho.org/fragments/
+154,176,probable,βάρωμος,https://digitalsappho.org/fragments/
+155,177,probable,βεῦδος,https://digitalsappho.org/fragments/
+156,179,probable,γρύτα,https://digitalsappho.org/fragments/
+157,180,probable,Ἔκτωρ (Voigt),https://digitalsappho.org/fragments/
+158,181,probable,ζάβατον,https://digitalsappho.org/fragments/
+159,182,probable,ἰοίην; Wharton prints ἀγαγοίην,https://digitalsappho.org/fragments/
+160,183,probable,κατώρη / κατάρης,https://digitalsappho.org/fragments/
+161,184,probable,κίνδυν,https://digitalsappho.org/fragments/
+162,186,probable,Μήδεϊα,https://digitalsappho.org/fragments/
+163,,gap,no Greek verse to match,
+164,187,probable,Μοισάων,https://digitalsappho.org/fragments/
+165,189,probable,νίτρον,https://digitalsappho.org/fragments/
+166,190,probable,πολυίδριδι,https://digitalsappho.org/fragments/
+167,,gap,no match found,
+168,,gap,no Greek verse to match,
+169,,gap,no Greek verse to match,
+170,,gap,no Greek verse to match,

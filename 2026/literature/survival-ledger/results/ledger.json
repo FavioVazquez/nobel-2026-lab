@@ -1,0 +1,1079 @@
+{
+ "status": "final",
+ "label": "Educational demos made to show an open-source tool. Not research.",
+ "what": "How much survives of the ancient authors the Nobel Committee names in its 2026 bio-bibliography. Ancient testimony and modern estimates kept apart, as ranges, each with its sources.",
+ "reading_rules": [
+  "Ancient counts are testimony (the Suda is a 10th-century Byzantine encyclopedia), not measurements.",
+  "Ranges mean the sources disagree; we never pick one number inside a range.",
+  "No single 'percentage lost'. The Sappho grid is labelled 'estimate' and names both totals.",
+  "'Survives complete' differs by author: Thucydides is unfinished; Sappho's one complete poem is short."
+ ],
+ "rows": [
+  {
+   "id": "sophocles",
+   "author": "Sophocles",
+   "language": "Greek",
+   "named_by_committee": {
+    "phrase": "tragedies such as Sophocles’s Electra (2001) and Antigone (2015)",
+    "where": "essay",
+    "source": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/"
+   },
+   "dates": {
+    "text": "c. 497/496 – 406/405 BC",
+    "source": [
+     {
+      "key": "WP_SOPH",
+      "name": "Wikipedia, 'Sophocles' (citing Lloyd-Jones 2003, p. 3)",
+      "url": "https://en.wikipedia.org/wiki/Sophocles",
+      "anchor": "lead",
+      "quote": "Sophocles wrote more than 120 plays",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "unit": "plays",
+   "ancient_count": {
+    "range": [
+     113,
+     130
+    ],
+    "unit": "plays",
+    "text": "123, or more by some counts (Suda); 130 ascribed, 17 of them spurious, so 113 (Aristophanes of Byzantium, as reported in the ancient tradition)",
+    "source": [
+     {
+      "key": "SUDA_SOPH",
+      "name": "Suda σ 815 (Sophocles), Suda On Line, tr. W. B. Tyrrell",
+      "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/sigma/815",
+      "anchor": "Adler σ 815",
+      "quote": null,
+      "paraphrase": "The Suda gives 123 plays and adds that some put the number higher.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "SMITH_SOPH",
+      "name": "W. Smith (ed.), Dictionary of Greek and Roman Biography and Mythology (1867), 'Sophocles', via Perseus",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0104:entry=sophocles-bio-1",
+      "anchor": "§4 The Works of Sophocles",
+      "quote": "The number of plays ascribed to Sophocles was 130, of which, however, according to Aristophanes of Byzantium, seventeen were spurious.",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "modern_estimate": {
+    "value": 120,
+    "open_ended": true,
+    "unit": "plays",
+    "text": "more than 120; no exact number is possible",
+    "source": [
+     {
+      "key": "WP_SOPH",
+      "name": "Wikipedia, 'Sophocles' (citing Lloyd-Jones 2003, p. 3)",
+      "url": "https://en.wikipedia.org/wiki/Sophocles",
+      "anchor": "lead",
+      "quote": "Sophocles wrote more than 120 plays",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "DURHAM_SOPH",
+      "name": "S. Burges Watson, 'Sophocles: A Guide to Selected Sources', Living Poets, Durham University",
+      "url": "https://livingpoets.awh.durham.ac.uk/w/index.php/Sophocles:_A_Guide_to_Selected_Sources",
+      "anchor": "guide",
+      "quote": "He wrote over a hundred and twenty plays",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "survives": {
+    "value": 7,
+    "unit": "complete plays",
+    "notes": "plus about half of the satyr play Ichneutae, from a papyrus (more than 400 lines in whole or part)",
+    "source": [
+     {
+      "key": "WP_SOPH_7",
+      "name": "Wikipedia, 'Sophocles'",
+      "url": "https://en.wikipedia.org/wiki/Sophocles",
+      "anchor": "lead",
+      "quote": "but only seven have survived in a complete form",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "DURHAM_SOPH",
+      "name": "S. Burges Watson, 'Sophocles: A Guide to Selected Sources', Living Poets, Durham University",
+      "url": "https://livingpoets.awh.durham.ac.uk/w/index.php/Sophocles:_A_Guide_to_Selected_Sources",
+      "anchor": "guide",
+      "quote": "He wrote over a hundred and twenty plays",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "WP_ICHN",
+      "name": "Wikipedia, 'Ichneutae'",
+      "url": "https://en.wikipedia.org/wiki/Ichneutae",
+      "anchor": "lead",
+      "quote": "more than four hundred lines surviving in their entirety or in part",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "shelf": {
+    "total": [
+     120,
+     130
+    ],
+    "survive": [
+     7,
+     7
+    ],
+    "label": "7 complete plays of more than 120"
+   }
+  },
+  {
+   "id": "euripides",
+   "author": "Euripides",
+   "language": "Greek",
+   "named_by_committee": {
+    "phrase": "Euripides’s Bakkhai (2015)",
+    "where": "essay",
+    "source": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/"
+   },
+   "dates": {
+    "text": "c. 480 – c. 406 BC",
+    "source": [
+     {
+      "key": "WP_EUR",
+      "name": "Wikipedia, 'Euripides'",
+      "url": "https://en.wikipedia.org/wiki/Euripides",
+      "anchor": "lead",
+      "quote": "Some ancient scholars attributed ninety-five plays to him, but the Suda says it was ninety-two at most.",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "unit": "plays",
+   "ancient_count": {
+    "range": [
+     75,
+     95
+    ],
+    "unit": "plays",
+    "text": "75 or 92, and 77 surviving in the Suda's day (Suda); 75 (Varro, in Aulus Gellius); 95 (some ancient scholars)",
+    "source": [
+     {
+      "key": "SUDA_EUR",
+      "name": "Suda ε 3695 (Euripides), Suda On Line",
+      "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/epsilon/3695",
+      "anchor": "Adler ε 3695",
+      "quote": null,
+      "paraphrase": "The Suda reports two counts, 75 plays and 92, and says 77 survived.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "SMITH_EUR",
+      "name": "W. Smith (ed.), Dictionary of Greek and Roman Biography and Mythology (1867), 'Euripides', via Perseus",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0104:entry=euripides-bio-2",
+      "anchor": "on the number of plays (Varro in Aulus Gellius 17.4)",
+      "quote": "he wrote 75 tragedies and gained the prize only five times",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "WP_EUR",
+      "name": "Wikipedia, 'Euripides'",
+      "url": "https://en.wikipedia.org/wiki/Euripides",
+      "anchor": "lead",
+      "quote": "Some ancient scholars attributed ninety-five plays to him, but the Suda says it was ninety-two at most.",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "modern_estimate": {
+    "range": [
+     88,
+     95
+    ],
+    "unit": "plays",
+    "text": "about 90: 'approximately 92'; 22 productions of 4 plays give about 88",
+    "source": [
+     {
+      "key": "FURMAN_EUR",
+      "name": "Furman University, Dramaturgy pages, 'Euripides: Rhesus'",
+      "url": "https://folio.furman.edu/dramaturg/Euripides/Rhesus",
+      "anchor": "introduction",
+      "quote": "he produced approximately 92 plays over a career spanning from his debut in 455 BC until his death, with 18 or 19 surviving intact today.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "COLLARD1981",
+      "name": "C. Collard, Euripides (New Surveys in the Classics 14, CUP 1981), ch. I",
+      "url": "https://www.cambridge.org/core/journals/new-surveys-in-the-classics/article/i-the-extant-work/72E0DE7E22AD826146C172DD5D9AA398",
+      "anchor": "ch. I",
+      "quote": "Twenty-two performances give a total of 66 tragedies",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "WP_EUR",
+      "name": "Wikipedia, 'Euripides'",
+      "url": "https://en.wikipedia.org/wiki/Euripides",
+      "anchor": "lead",
+      "quote": "Some ancient scholars attributed ninety-five plays to him, but the Suda says it was ninety-two at most.",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "survives": {
+    "range": [
+     18,
+     19
+    ],
+    "unit": "complete plays",
+    "notes": "19 attributed to him, 18 if the Rhesus (authorship disputed) is left out; includes the satyr play Cyclops",
+    "source": [
+     {
+      "key": "WP_EUR_19",
+      "name": "Wikipedia, 'Euripides'",
+      "url": "https://en.wikipedia.org/wiki/Euripides",
+      "anchor": "lead",
+      "quote": "Nineteen plays attributed to Euripides have survived more or less complete",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "SMITH_EUR_18",
+      "name": "W. Smith (ed.), Dictionary of Greek and Roman Biography and Mythology (1867), 'Euripides', via Perseus",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0104:entry=euripides-bio-2",
+      "anchor": "on the extant plays",
+      "quote": "18 are extant, if we omit the Rhesus",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "FURMAN_EUR",
+      "name": "Furman University, Dramaturgy pages, 'Euripides: Rhesus'",
+      "url": "https://folio.furman.edu/dramaturg/Euripides/Rhesus",
+      "anchor": "introduction",
+      "quote": "he produced approximately 92 plays over a career spanning from his debut in 455 BC until his death, with 18 or 19 surviving intact today.",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "shelf": {
+    "total": [
+     88,
+     95
+    ],
+    "survive": [
+     18,
+     19
+    ],
+    "label": "18 or 19 plays of about 90"
+   }
+  },
+  {
+   "id": "aeschylus",
+   "author": "Aeschylus",
+   "language": "Greek",
+   "named_by_committee": {
+    "phrase": "Agamemnon by Aiskhylos",
+    "where": "bibliography (An Oresteia, 2009)",
+    "source": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/"
+   },
+   "dates": {
+    "text": "c. 525/524 – c. 456/455 BC",
+    "source": [
+     {
+      "key": "WP_AESCH",
+      "name": "Wikipedia, 'Aeschylus'",
+      "url": "https://en.wikipedia.org/wiki/Aeschylus",
+      "anchor": "section 'Works'",
+      "quote": "Aeschylus wrote an estimated 70 to 90 plays, of which only seven have survived in complete form.",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "unit": "plays",
+   "ancient_count": {
+    "range": [
+     73,
+     90
+    ],
+    "unit": "plays",
+    "text": "90 tragedies (Suda); 70 tragedies and 5 satyr plays (ancient Life) and 73 dramas (ancient catalogue), as summarised by Ireland 1986",
+    "source": [
+     {
+      "key": "SUDA_AESCH",
+      "name": "Suda αι 357 (Aeschylus), Suda On Line",
+      "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/alphaiota/357",
+      "anchor": "Adler αι 357",
+      "quote": null,
+      "paraphrase": "The Suda credits him with elegies and 90 tragedies.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "IRELAND1986",
+      "name": "S. Ireland, Aeschylus (New Surveys in the Classics 18, CUP 1986), ch. II abstract",
+      "url": "https://www.cambridge.org/core/journals/new-surveys-in-the-classics/article/abs/ii-aeschylus-the-man-his-plays-and-times/651F06E9F4788A651C1C3CAAE855F56D",
+      "anchor": "abstract",
+      "quote": "70 tragedies, 5 satyr plays (Life), 73 dramas (Catalogue of Plays), 90 (Suda)",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "modern_estimate": {
+    "range": [
+     70,
+     90
+    ],
+    "unit": "plays",
+    "text": "an estimated 70 to 90",
+    "source": [
+     {
+      "key": "WP_AESCH",
+      "name": "Wikipedia, 'Aeschylus'",
+      "url": "https://en.wikipedia.org/wiki/Aeschylus",
+      "anchor": "section 'Works'",
+      "quote": "Aeschylus wrote an estimated 70 to 90 plays, of which only seven have survived in complete form.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "WHE_AESCH",
+      "name": "M. Cartwright, 'Aeschylus', World History Encyclopedia (2015)",
+      "url": "https://www.worldhistory.org/Aeschylus/",
+      "anchor": "section 'Aeschylus' Works'",
+      "quote": null,
+      "paraphrase": "It puts his output at 70 to 90 plays and says six or seven survive complete.",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "survives": {
+    "range": [
+     6,
+     7
+    ],
+    "unit": "complete plays",
+    "notes": "7 survive complete; one of them, Prometheus Bound, is of disputed authorship, so 6 or 7",
+    "source": [
+     {
+      "key": "WP_AESCH",
+      "name": "Wikipedia, 'Aeschylus'",
+      "url": "https://en.wikipedia.org/wiki/Aeschylus",
+      "anchor": "section 'Works'",
+      "quote": "Aeschylus wrote an estimated 70 to 90 plays, of which only seven have survived in complete form.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "WHE_AESCH",
+      "name": "M. Cartwright, 'Aeschylus', World History Encyclopedia (2015)",
+      "url": "https://www.worldhistory.org/Aeschylus/",
+      "anchor": "section 'Aeschylus' Works'",
+      "quote": null,
+      "paraphrase": "It puts his output at 70 to 90 plays and says six or seven survive complete.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "DURHAM_AESCH",
+      "name": "S. Burges Watson, 'Aeschylus: A Guide to Selected Sources', Living Poets, Durham University",
+      "url": "https://livingpoets.awh.durham.ac.uk/w/index.php/Aeschylus:_A_Guide_to_Selected_Sources",
+      "anchor": "guide",
+      "quote": "whose attribution to Aeschylus is no longer accepted (see Griffith 1977)",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "shelf": {
+    "total": [
+     70,
+     90
+    ],
+    "survive": [
+     6,
+     7
+    ],
+    "label": "7 plays (one disputed) of 70 to 90"
+   }
+  },
+  {
+   "id": "stesichoros",
+   "author": "Stesichoros",
+   "language": "Greek",
+   "named_by_committee": {
+    "phrase": "poem fragments by the sixth century BC Greek poet Stesichoros",
+    "where": "essay",
+    "source": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/"
+   },
+   "dates": {
+    "text": "c. 630 – c. 555 BC (Suda: born in the 37th Olympiad, died in the 56th)",
+    "source": [
+     {
+      "key": "SUDA_STES",
+      "name": "Suda σ 1095 (Stesichoros), Suda On Line",
+      "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/sigma/1095",
+      "anchor": "Adler σ 1095",
+      "quote": null,
+      "paraphrase": "The Suda says his poems, in Doric Greek, filled 26 books.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "WP_STES",
+      "name": "Wikipedia, 'Stesichorus' (citing Pavese 1972 via Segal)",
+      "url": "https://en.wikipedia.org/wiki/Stesichorus",
+      "anchor": "section 'Poetry'",
+      "quote": "a poem such as the Geryoneis included some 1500 lines",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "unit": "books",
+   "ancient_count": {
+    "value": 26,
+    "unit": "books",
+    "text": "26 books (Suda)",
+    "source": [
+     {
+      "key": "SUDA_STES",
+      "name": "Suda σ 1095 (Stesichoros), Suda On Line",
+      "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/sigma/1095",
+      "anchor": "Adler σ 1095",
+      "quote": null,
+      "paraphrase": "The Suda says his poems, in Doric Greek, filled 26 books.",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "modern_estimate": null,
+   "survives": {
+    "value": 0,
+    "unit": "complete poems",
+    "notes": "only fragments, from quotations and papyri",
+    "source": [
+     {
+      "key": "MAHONEY2009_180",
+      "name": "A. Mahoney, BMCR 2009.06.20 (archived copy)",
+      "url": "https://web.archive.org/web/2024id_/https://bmcr.brynmawr.edu/?p=26633",
+      "anchor": "same review",
+      "quote": "only about 180 remain in any sort of readable form.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "WP_STES",
+      "name": "Wikipedia, 'Stesichorus' (citing Pavese 1972 via Segal)",
+      "url": "https://en.wikipedia.org/wiki/Stesichorus",
+      "anchor": "section 'Poetry'",
+      "quote": "a poem such as the Geryoneis included some 1500 lines",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "modern_estimate_note": "No modern estimate of his whole output in lines was found; we give none.",
+   "shelf": {
+    "total": [
+     26,
+     26
+    ],
+    "survive": [
+     0,
+     0
+    ],
+    "fragments": true,
+    "label": "26 books, fragments only"
+   }
+  },
+  {
+   "id": "geryoneis",
+   "author": "Stesichoros: the Geryon poem (Geryoneis)",
+   "language": "Greek",
+   "named_by_committee": {
+    "phrase": "concerning the winged red monster Geryon",
+    "where": "essay",
+    "source": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/"
+   },
+   "dates": {
+    "text": "6th century BC",
+    "source": [
+     {
+      "key": "BIO",
+      "name": "Nobel Committee for Literature, bio-bibliography 2026 (Anders Olsson)",
+      "url": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/",
+      "anchor": "essay and bibliography",
+      "quote": "",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "unit": "lines",
+   "ancient_count": {
+    "value": 1300,
+    "unit": "lines (at least)",
+    "text": "a line number, 1300, written in the margin of the papyrus (P.Oxy. 2617 fr. 7 = S27): the poem had at least 1,300 lines",
+    "source": [
+     {
+      "key": "MAHONEY2009",
+      "name": "A. Mahoney, review of M. Lazzeri, Studi sulla Gerioneide di Stesicoro, BMCR 2009.06.20 (archived copy)",
+      "url": "https://web.archive.org/web/2024id_/https://bmcr.brynmawr.edu/?p=26633",
+      "anchor": "original https://bmcr.brynmawr.edu/?p=26633",
+      "quote": "One of the papyrus fragments (S27, P. Oxy. 2617 frag. 7) includes a marginal line number, 1300",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "FINGLASS2022",
+      "name": "P. J. Finglass, 'Of centaurs and satyrs: Stesichorus' Geryoneis and satyr-drama', Acta Linguistica Petropolitana 18.1 (2022)",
+      "url": "https://cyberleninka.ru/article/n/of-centaurs-and-satyrs-stesichorus-geryoneis-and-satyrdrama",
+      "anchor": "p. 1 and n. 3 (citing Davies & Finglass 2014 on fr. 25)",
+      "quote": "was at least 1,300 lines long",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "modern_estimate": {
+    "range": [
+     1300,
+     2000
+    ],
+    "unit": "lines",
+    "text": "at least 1,300; about 1,500 (Pavese); 'perhaps closer to two thousand' (West 1971)",
+    "source": [
+     {
+      "key": "WEST1971",
+      "name": "M. L. West, 'Stesichorus', Classical Quarterly 21 (1971) 302-314 (free first-page extract)",
+      "url": "https://www.cambridge.org/core/journals/classical-quarterly/article/stesichorus/9FECE1F4E45300B708861156CBB11FED",
+      "anchor": "first page",
+      "quote": "contained at least 1,300 verses, the total being perhaps closer to two thousand.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "WP_GERYONEIS",
+      "name": "Wikipedia, 'Geryoneis' (citing West 1993, p. xvi)",
+      "url": "https://en.wikipedia.org/wiki/Geryoneis",
+      "anchor": "lead",
+      "quote": "The length of the complete poem is estimated to 1300 lines.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "WP_STES",
+      "name": "Wikipedia, 'Stesichorus' (citing Pavese 1972 via Segal)",
+      "url": "https://en.wikipedia.org/wiki/Stesichorus",
+      "anchor": "section 'Poetry'",
+      "quote": "a poem such as the Geryoneis included some 1500 lines",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "survives": {
+    "value": 180,
+    "unit": "readable lines (about)",
+    "notes": "about 180 lines in any sort of readable form; one source only, so shown as 'about'",
+    "source": [
+     {
+      "key": "MAHONEY2009_180",
+      "name": "A. Mahoney, BMCR 2009.06.20 (archived copy)",
+      "url": "https://web.archive.org/web/2024id_/https://bmcr.brynmawr.edu/?p=26633",
+      "anchor": "same review",
+      "quote": "only about 180 remain in any sort of readable form.",
+      "accessed": "2026-10-08"
+     }
+    ]
+   }
+  },
+  {
+   "id": "sappho",
+   "author": "Sappho",
+   "language": "Greek",
+   "named_by_committee": {
+    "phrase": "her interpretation of Sappho’s poem fragments",
+    "where": "essay",
+    "source": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/"
+   },
+   "dates": {
+    "text": "c. 630 – c. 570 BC (Suda: born in the 42nd Olympiad, 612–609 BC)",
+    "source": [
+     {
+      "key": "SUDA_SAPPHO",
+      "name": "Suda σ 107 (Sappho), Suda On Line, tr. E. Vandiver",
+      "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/sigma/107",
+      "anchor": "Adler σ 107",
+      "quote": null,
+      "paraphrase": "The Suda credits Sappho with nine books of lyric poetry.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "WP_SAPPHO",
+      "name": "Wikipedia, 'Sappho' (citing Rayor & Lardinois 2014, p. 7)",
+      "url": "https://en.wikipedia.org/wiki/Sappho",
+      "anchor": "section 'Works'",
+      "quote": "Sappho probably wrote around 10,000 lines of poetry; today, only about 650 survive.",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "unit": "lines",
+   "ancient_count": {
+    "range": [
+     8,
+     9
+    ],
+    "unit": "books",
+    "text": "nine books (Suda); the Alexandrian edition had at least eight books, the exact number uncertain",
+    "source": [
+     {
+      "key": "SUDA_SAPPHO",
+      "name": "Suda σ 107 (Sappho), Suda On Line, tr. E. Vandiver",
+      "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/sigma/107",
+      "anchor": "Adler σ 107",
+      "quote": null,
+      "paraphrase": "The Suda credits Sappho with nine books of lyric poetry.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "WP_SAPPHO_BOOKS",
+      "name": "Wikipedia, 'Sappho' (citing Yatromanolakis 1999, p. 181)",
+      "url": "https://en.wikipedia.org/wiki/Sappho",
+      "anchor": "section 'Ancient editions'",
+      "quote": "was divided into at least eight books, though the exact number is uncertain.",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "modern_estimate": {
+    "range": [
+     9000,
+     10000
+    ],
+    "unit": "lines",
+    "text": "'something like 9,000 verses' (Grenfell & Hunt 1914); about 10,000 lines (Green 2015; Wikipedia after Rayor & Lardinois 2014; Missouri exhibit)",
+    "source": [
+     {
+      "key": "GH1914_TOTAL",
+      "name": "B. P. Grenfell and A. S. Hunt, The Oxyrhynchus Papyri X (1914), no. 1231, introduction",
+      "url": "https://archive.org/details/oxyrhynchuspapyr10gren",
+      "anchor": "p. 20",
+      "quote": "Sappho’s entire works may well have extended to something like 9,000 verses.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "GREEN2015",
+      "name": "Peter Green, 'What we know', London Review of Books 37.22 (2015)",
+      "url": "https://www.lrb.co.uk/the-paper/v37/n22/peter-green/what-we-know",
+      "anchor": "review of Sappho editions",
+      "quote": "if we estimate an overall total of some 10,000 lines we are unlikely to be far off.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "WP_SAPPHO",
+      "name": "Wikipedia, 'Sappho' (citing Rayor & Lardinois 2014, p. 7)",
+      "url": "https://en.wikipedia.org/wiki/Sappho",
+      "anchor": "section 'Works'",
+      "quote": "Sappho probably wrote around 10,000 lines of poetry; today, only about 650 survive.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "MIZZOU",
+      "name": "University of Missouri Libraries, Special Collections exhibit 'Sappho'",
+      "url": "https://library.missouri.edu/specialcollections/exhibits/show/lh2arts/sappho",
+      "anchor": "exhibit page",
+      "quote": "out of an estimated 10,000 lines of poetry attributed to her, only 650 lines have survived.",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "survives": {
+    "value": 650,
+    "unit": "lines (about)",
+    "notes": "about 650 lines; only one poem, fragment 1 (the Ode to Aphrodite), is certainly complete. Green (2015) puts the surviving share at 'perhaps 5 per cent'.",
+    "source": [
+     {
+      "key": "WP_SAPPHO",
+      "name": "Wikipedia, 'Sappho' (citing Rayor & Lardinois 2014, p. 7)",
+      "url": "https://en.wikipedia.org/wiki/Sappho",
+      "anchor": "section 'Works'",
+      "quote": "Sappho probably wrote around 10,000 lines of poetry; today, only about 650 survive.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "MIZZOU",
+      "name": "University of Missouri Libraries, Special Collections exhibit 'Sappho'",
+      "url": "https://library.missouri.edu/specialcollections/exhibits/show/lh2arts/sappho",
+      "anchor": "exhibit page",
+      "quote": "out of an estimated 10,000 lines of poetry attributed to her, only 650 lines have survived.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "ILLINOIS",
+      "name": "University of Illinois Rare Book & Manuscript Library exhibit 'Sappho's lyrics'",
+      "url": "https://exhibits.library.illinois.edu/s/rbml/page/sappho-lyrics",
+      "anchor": "exhibit page",
+      "quote": "some 650 lines and precisely one complete poem survives.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "WP_SAPPHO_ODE",
+      "name": "Wikipedia, 'Sappho'",
+      "url": "https://en.wikipedia.org/wiki/Sappho",
+      "anchor": "lead",
+      "quote": "only the Ode to Aphrodite is certainly complete.",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "ancient_book1": {
+    "value": 1320,
+    "unit": "verses",
+    "text": "Book I held 1,320 verses (330 stanzas): the number written on the roll's own end-title, P.Oxy. 1231 fr. 56",
+    "source": [
+     {
+      "key": "GH1914",
+      "name": "B. P. Grenfell and A. S. Hunt, The Oxyrhynchus Papyri X (1914), no. 1231, introduction",
+      "url": "https://archive.org/details/oxyrhynchuspapyr10gren",
+      "anchor": "p. 20 (and Fr. 56, the end-title, p. 39)",
+      "quote": "The number of verses comprised in it, we now learn, was 1320, i.e. 330 stanzas.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "GREEN2015_BOOK1",
+      "name": "Peter Green, 'What we know', London Review of Books 37.22 (2015)",
+      "url": "https://www.lrb.co.uk/the-paper/v37/n22/peter-green/what-we-know",
+      "anchor": "review of Sappho editions",
+      "quote": "the first book alone, consisting entirely of poems written in the Sapphic stanza, totalled 1320 lines",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "shelf": {
+    "total": [
+     8,
+     9
+    ],
+    "survive": [
+     0,
+     0
+    ],
+    "fragments": true,
+    "label": "8 or 9 books, fragments and one complete poem"
+   },
+   "grid": {
+    "total": 10000,
+    "inked": 650,
+    "book1": 1320,
+    "alt_total": 9000,
+    "label": "estimate"
+   }
+  },
+  {
+   "id": "simonides",
+   "author": "Simonides of Keos",
+   "language": "Greek",
+   "named_by_committee": {
+    "phrase": "the sixth century BC Greek poet Simonides of Keos",
+    "where": "essay",
+    "source": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/"
+   },
+   "dates": {
+    "text": "c. 556 – 468 BC (Suda: born in the 56th Olympiad)",
+    "source": [
+     {
+      "key": "WP_SIM",
+      "name": "Wikipedia, 'Simonides of Ceos'",
+      "url": "https://en.wikipedia.org/wiki/Simonides_of_Ceos",
+      "anchor": "lead",
+      "quote": "c. 556 – 468 BC",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "SUDA_SIM",
+      "name": "Suda σ 439 (Simonides), Suda On Line, tr. R. Dyer",
+      "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/sigma/439",
+      "anchor": "Adler σ 439",
+      "quote": null,
+      "paraphrase": "The Suda lists the kinds of poem he wrote (laments, praise poems, epigrams, paeans, tragedies and more) but gives no count.",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "unit": "poems",
+   "ancient_count": null,
+   "modern_estimate": null,
+   "survives": {
+    "value": null,
+    "unit": "fragments",
+    "notes": "only a small part: fragments from papyri and quotations, and some short pieces whole; a papyrus published in 1992 (P.Oxy. 3965, the 'New Simonides', an elegy on the battle of Plataea) 'quadrupled' what we have (AGNI)",
+    "source": [
+     {
+      "key": "WP_SIM_FR",
+      "name": "Wikipedia, 'Simonides of Ceos'",
+      "url": "https://en.wikipedia.org/wiki/Simonides_of_Ceos",
+      "anchor": "section on the poetry",
+      "quote": "Today only glimpses of his poetry remain, either in the form of papyrus fragments or quotations by ancient literary figures",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "AGNI_SIM",
+      "name": "AGNI (Boston University), author page 'Simonides'",
+      "url": "https://agnionline.bu.edu/about/our-people/authors/simonides",
+      "anchor": "author note",
+      "quote": "only a small portion of the considerable output attributed to Simonides remains.",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "ancient_count_note": "The Suda lists his kinds of poem (laments, odes, epigrams, paeans, tragedies) but gives no count.",
+   "ancient_count_note_source": [
+    {
+     "key": "SUDA_SIM",
+     "name": "Suda σ 439 (Simonides), Suda On Line, tr. R. Dyer",
+     "url": "https://www.cs.uky.edu/~raphael/sol/sol-entries/sigma/439",
+     "anchor": "Adler σ 439",
+     "quote": null,
+     "paraphrase": "The Suda lists the kinds of poem he wrote (laments, praise poems, epigrams, paeans, tragedies and more) but gives no count.",
+     "accessed": "2026-10-08"
+    }
+   ],
+   "modern_estimate_note": "No count of his output was found; we give none."
+  },
+  {
+   "id": "catullus",
+   "author": "Catullus",
+   "language": "Latin",
+   "named_by_committee": {
+    "phrase": "the Roman poet Catullus, with his famous elegy 101",
+    "where": "essay",
+    "source": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/"
+   },
+   "dates": {
+    "text": "c. 84 – c. 54 BC",
+    "source": [
+     {
+      "key": "WP_CAT",
+      "name": "Wikipedia, 'Catullus'",
+      "url": "https://en.wikipedia.org/wiki/Catullus",
+      "anchor": "infobox and §Sources and organization",
+      "quote": "Catullus's poems have been preserved in an anthology of 116 carmina",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "POETS_CAT",
+      "name": "Academy of American Poets, 'Gaius Valerius Catullus'",
+      "url": "https://poets.org/poet/gaius-valerius-catullus",
+      "anchor": "biography",
+      "quote": "born in Verona in 84 BC",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "unit": "poems",
+   "ancient_count": null,
+   "modern_estimate": {
+    "range": [
+     113,
+     116
+    ],
+    "unit": "poems",
+    "text": "116 numbered poems; 18, 19 and 20 are left out of most modern editions, so about 113 ('necessarily approximate'). A few lines quoted by ancient writers are not in the manuscripts, so some poems are lost.",
+    "source": [
+     {
+      "key": "WP_CAT",
+      "name": "Wikipedia, 'Catullus'",
+      "url": "https://en.wikipedia.org/wiki/Catullus",
+      "anchor": "infobox and §Sources and organization",
+      "quote": "Catullus's poems have been preserved in an anthology of 116 carmina",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "WP_POC_18",
+      "name": "Wikipedia, 'Poetry of Catullus'",
+      "url": "https://en.wikipedia.org/wiki/Poetry_of_Catullus",
+      "anchor": "section on the numbering",
+      "quote": "Three of the poems, however—18, 19 and 20—are excluded from most modern editions",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "NSC2021",
+      "name": "New Surveys in the Classics 51, Catullus (CUP 2021), ch. I, n. 11",
+      "url": "https://www.cambridge.org/core/journals/new-surveys-in-the-classics/article/i-catullus-and-his-cultural-milieu/FD152820160CD10EA9BCCDB4F8A7A507",
+      "anchor": "n. 11",
+      "quote": "The figure of 113 is necessarily approximate",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "survives": {
+    "range": [
+     113,
+     116
+    ],
+    "unit": "poems",
+    "notes": "Nearly all of them reached us through one manuscript, V, known at Verona around 1300 (c. 1290–1310) and lost before 1400; all complete copies date from the 14th century or later. Poem 62 also survives in a 9th-century anthology (the Codex Thuaneus).",
+    "source": [
+     {
+      "key": "WP_POC",
+      "name": "Wikipedia, 'Poetry of Catullus'",
+      "url": "https://en.wikipedia.org/wiki/Poetry_of_Catullus",
+      "anchor": "section on manuscripts",
+      "quote": "V was the sole source of nearly all of the poet's surviving work.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "WP_POC_DATE",
+      "name": "Wikipedia, 'Poetry of Catullus'",
+      "url": "https://en.wikipedia.org/wiki/Poetry_of_Catullus",
+      "anchor": "section on manuscripts",
+      "quote": "clearly available to various Paduan and Veronese humanists in the period 1290–1310",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "LOEB1921",
+      "name": "F. W. Cornish, Catullus, Loeb Classical Library (1913/1921), Introduction, archive.org text",
+      "url": "https://archive.org/details/catullustibullus00catu",
+      "anchor": "Introduction, pp. vi-vii",
+      "quote": "designated V (Veronensis), which is known to have been at Verona early in the fourteenth century, and which disappeared before the end of the century.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "LOEB1921_T",
+      "name": "F. W. Cornish, Catullus, Loeb Classical Library (1913/1921), Introduction",
+      "url": "https://archive.org/details/catullustibullus00catu",
+      "anchor": "Introduction, p. vii",
+      "quote": "with the exception of Cod. Thuaneus of the ninth century, containing only Carm. lxii.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "KISS2015",
+      "name": "D. Kiss, 'Isaac Vossius, Catullus and the Codex Thuaneus', Classical Quarterly 65 (2015), abstract",
+      "url": "https://www.cambridge.org/core/journals/classical-quarterly/article/isaac-vossius-catullus-and-the-codex-thuaneus/83969A9B6D530363CE53DE9002938DC0",
+      "anchor": "abstract",
+      "quote": "the earliest complete manuscripts of Catullus to survive today were written in the fourteenth century",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "ancient_count_note": "No ancient count of his poems was found.",
+   "ancient_count_note_source": [],
+   "shelf": {
+    "total": [
+     1,
+     1
+    ],
+    "survive": [
+     1,
+     1
+    ],
+    "label": "one book of about 113 poems, through one lost manuscript"
+   }
+  },
+  {
+   "id": "thucydides",
+   "author": "Thucydides",
+   "language": "Greek",
+   "named_by_committee": {
+    "phrase": "she aligns the historian Thucydides with Virginia Woolf",
+    "where": "essay",
+    "source": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/"
+   },
+   "dates": {
+    "text": "c. 460 – c. 400 BC",
+    "source": [
+     {
+      "key": "WP_THUC",
+      "name": "Wikipedia, 'Thucydides'",
+      "url": "https://en.wikipedia.org/wiki/Thucydides",
+      "anchor": "section on the History",
+      "quote": "After his death, Thucydides's History was subdivided into eight books",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "EB1911_THUC",
+      "name": "Encyclopaedia Britannica (1911), 'Thucydides', Wikisource",
+      "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Thucydides",
+      "anchor": "on the History",
+      "quote": "breaks off abruptly—in the middle of a sentence, indeed—in the year 411.",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "unit": "books",
+   "ancient_count": {
+    "value": 8,
+    "unit": "books",
+    "text": "8 books by the usual division; some ancient readers divided it into 9 (Diodorus) or 13 (Marcellinus)",
+    "source": [
+     {
+      "key": "DIOD13",
+      "name": "Diodorus Siculus 13.42, Loeb translation (C. H. Oldfather), LacusCurtius",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/13C*.html",
+      "anchor": "13.42.5",
+      "quote": "having included a period of twenty-two years in eight Books, although some divide it into nine",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "MARCELLINUS",
+      "name": "Marcellinus, Life of Thucydides §58, tr. T. Burns, ToposText",
+      "url": "https://topostext.org/work/763",
+      "anchor": "§58",
+      "quote": "some men cut his work up into thirteen histories, others otherwise.",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "modern_estimate": {
+    "value": 8,
+    "unit": "books",
+    "text": "8 books (a later division, not his own)",
+    "source": [
+     {
+      "key": "WP_THUC",
+      "name": "Wikipedia, 'Thucydides'",
+      "url": "https://en.wikipedia.org/wiki/Thucydides",
+      "anchor": "section on the History",
+      "quote": "After his death, Thucydides's History was subdivided into eight books",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "survives": {
+    "value": 8,
+    "unit": "books",
+    "notes": "all of it, but unfinished: it breaks off mid-sentence in 411 BC, and the war went on to 404 BC",
+    "source": [
+     {
+      "key": "WP_HPW",
+      "name": "Wikipedia, 'History of the Peloponnesian War'",
+      "url": "https://en.wikipedia.org/wiki/History_of_the_Peloponnesian_War",
+      "anchor": "lead",
+      "quote": "The account, apparently unfinished, does not cover the full war, ending mid-sentence in 411 BC.",
+      "accessed": "2026-10-08"
+     },
+     {
+      "key": "EB1911_THUC",
+      "name": "Encyclopaedia Britannica (1911), 'Thucydides', Wikisource",
+      "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Thucydides",
+      "anchor": "on the History",
+      "quote": "breaks off abruptly—in the middle of a sentence, indeed—in the year 411.",
+      "accessed": "2026-10-08"
+     }
+    ]
+   },
+   "shelf": {
+    "total": [
+     8,
+     8
+    ],
+    "survive": [
+     8,
+     8
+    ],
+    "label": "all 8 books, but it stops mid-sentence in 411 BC"
+   }
+  }
+ ],
+ "unverified": [
+  "Which Greek letter-numeral the Geryoneis papyrus uses for 1,300 (sources say only 'a marginal line number, 1300').",
+  "The anonymous ancient Life of Euripides' counts (92 plays, 78 preserved): seen only in a search snippet.",
+  "Rayor & Lardinois 2014, p. 7 (the book Wikipedia cites for 10,000 / 650): not opened; Wikipedia's citation only.",
+  "An ancient count of Catullus' poems: none found (absence not proven).",
+  "The exact day of the Paris manuscript G of Catullus (Loeb 1921 says 29 October 1375; other memory says 19 October): we say 1375.",
+  "Who edited P.Oxy. 3965 (the New Simonides): not on any opened page; we give only the number and the year (1992, Oxyrhynchus Papyri vol. LIX).",
+  "Encyclopaedia Britannica and Oxford Classical Dictionary figures: both sites refused automated access (HTTP 403).",
+  "Smith (1867) elsewhere reports 27, not 17, spurious plays for Sophocles; we use the main entry's 17 and the Suda's 123."
+ ],
+ "resolved_open_items": {
+  "play counts, Suda vs modern": "Kept apart: ancient testimony (Suda and others) and modern estimates as two ranges per tragedian.",
+  "Geryoneis length and its source": "At least 1,300 lines, from a marginal line number in P.Oxy. 2617 fr. 7 (S27); estimates up to about 2,000.",
+  "Catullus manuscript history wording": "Nearly all of Catullus reached us through one manuscript (V), known at Verona around 1300 (c. 1290–1310) and lost before 1400; poem 62 also in the 9th-century Codex Thuaneus.",
+  "Sappho ~10,000 vs ~650; Book I 1,320": "Estimate 9,000-10,000 lines in all; about 650 survive; Book I 1,320 verses from the roll's end-title (P.Oxy. 1231 fr. 56; Grenfell & Hunt 1914, p. 20)."
+ },
+ "sources_checked": "results/source_check.json (python -m ledger.check_sources)"
+}

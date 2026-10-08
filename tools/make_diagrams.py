@@ -302,6 +302,74 @@ def _card_chemistry(T: dict, X: dict) -> str:
     return s
 
 
+# Literature: the colours of the Literature page (2026/literature/page), ink on paper and a papyrus sheet.
+LIT = {
+    "light": dict(paper="#F3ECE0", papyrus="#E2CD9F", fibre="#785828", fibre_op=".16", hole="#F3ECE0",
+                  hole_edge="#50371A", hole_op=".38", ink="#2B2118", accent="#A8432A", shadow="#3C230A", kicker="#3F6E8C"),
+    "dark": dict(paper="#1B1510", papyrus="#4A3920", fibre="#FFDCA0", fibre_op=".08", hole="#1B1510",
+                 hole_edge="#000000", hole_op=".55", ink="#EEE2C8", accent="#E48A66", shadow="#000000", kicker="#8DBAD8"),
+}
+GREEK_FONT = 'Georgia, "Times New Roman", "DejaVu Serif", serif'
+
+
+def lit_theme(T: dict) -> dict:
+    return LIT["dark" if T is THEMES["dark"] else "light"]
+
+
+def lit_defs(L: dict) -> str:
+    """The papyrus fibres: close horizontal strands, unevenly spaced, over a few faint vertical ones."""
+    f, op = L["fibre"], L["fibre_op"]
+    return (f'<defs><pattern id="pfibre" width="47" height="11" patternUnits="userSpaceOnUse">'
+            f'<g stroke="{f}" stroke-opacity="{op}"><line x1="0" y1="1.5" x2="47" y2="1.5" stroke-width="1"/>'
+            f'<line x1="0" y1="5" x2="47" y2="5" stroke-width="1.6"/><line x1="0" y1="8.5" x2="47" y2="8.5" stroke-width=".8"/></g>'
+            f'<g stroke="{f}" stroke-opacity=".05" stroke-width="2"><line x1="9" y1="0" x2="9" y2="11"/>'
+            f'<line x1="31" y1="0" x2="31" y2="11"/></g>'
+            f'</pattern></defs>')
+
+
+def _greek(x: float, y: float, s: str, L: dict, size: float = 24) -> tuple[str, float]:
+    """A run of Greek capitals; square brackets in the editors' red. Widths are fixed, so any serif lays out alike."""
+    w = sum(.32 if ch in "[]" else .7 for ch in s) * size
+    tspans = "".join(f'<tspan fill="{L["accent"]}">{ch}</tspan>' if ch in "[]" else esc(ch) for ch in s)
+    return (f'<text x="{x:g}" y="{y:g}" font-size="{size:g}" font-family=\'{GREEK_FONT}\' fill="{L["ink"]}" '
+            f'textLength="{w:.1f}" lengthAdjust="spacingAndGlyphs">{tspans}</text>'), w
+
+
+def _card_literature(T: dict, X: dict) -> str:
+    """A torn scrap of papyrus with a few lines of Greek capitals, holes in it, and square brackets where letters are lost.
+
+    The letters are decorative, not a line of any poem: the card shows what a papyrus fragment looks like."""
+    L = lit_theme(T)
+    torn = ("38,50 60,44 74,49 92,42 118,46 140,40 158,45 176,41 198,47 214,42 236,46 252,40 "
+            "258,58 250,74 262,92 254,110 248,124 260,140 252,160 264,178 250,196 256,214 246,232 258,250 250,268 "
+            "236,276 214,270 196,282 172,274 150,280 128,272 104,282 84,274 62,280 44,272 "
+            "36,256 44,238 32,220 40,200 30,182 42,162 34,144 44,126 32,106 40,88 30,70")
+    holes = ("M134 112 L150 108 L168 113 L178 110 L182 124 L176 140 L160 144 L146 140 L132 142 L128 126 Z",
+             "M150 190 L168 186 L182 192 L204 188 L214 200 L208 216 L190 222 L172 218 L154 222 L146 206 Z")
+    s = '<g clip-path="url(#cardclip)">'
+    s += f'<rect width="{CARD_W}" height="{WIN_H}" fill="{L["paper"]}"/>'
+    s += '<g transform="rotate(-3 147 160)">'
+    s += f'<polygon points="{torn}" fill="{L["shadow"]}" fill-opacity=".18" transform="translate(4 7)"/>'
+    s += f'<polygon points="{torn}" fill="{L["papyrus"]}"/><polygon points="{torn}" fill="url(#pfibre)"/>'
+    for d in holes:
+        s += (f'<path d="{d}" fill="{L["hole"]}"/>'
+              f'<path d="{d}" fill="none" stroke="{L["hole_edge"]}" stroke-opacity="{L["hole_op"]}" stroke-width="2" '
+              f'stroke-linejoin="round"/>')
+    s += f'<polygon points="{torn}" fill="none" stroke="{L["hole_edge"]}" stroke-opacity="{L["hole_op"]}" stroke-width="2" stroke-linejoin="round"/>'
+    # five lines: torn off at both edges, and broken around the two holes
+    x0 = 52
+    for y, parts in ((92, (("]ΤΑΝΑΙΣΤΑ[", x0),)),
+                     (134, (("]ΚΑΡ[", x0), ("]ΝΟΣ", 184))),
+                     (174, (("]ΜΕΛΙΧΡΟΝ[", x0),)),
+                     (214, (("]ΑΛΛΑ[", x0), ("]Ε[", 216))),
+                     (254, (("]ΤΟΙ[", x0 + 24),))):
+        for run, x in parts:
+            s += _greek(x, y, run, L)[0]
+    s += '</g></g>'
+    s += _hero_caption(T, "LITERATURE", L["kicker"], ("What survives:", "a torn papyrus"))
+    return s
+
+
 def _card_next(T: dict, X: dict) -> str:
     """A dashed slot: the prize still to be announced joins here."""
     cx = NEXT_W / 2
@@ -318,12 +386,22 @@ def _card_next(T: dict, X: dict) -> str:
 
 def _hero_words(T: dict) -> str:
     """The text block, in its own coordinates: 600 wide, from y = 100 to 470."""
+    return _hero_head(T) + _hero_foot(T)
+
+
+def _hero_head(T: dict) -> str:
+    """Kicker, name and one line: y = 100 to 285 of the text block."""
     s = text(4, 124, "EDUCATIONAL DEMOS", 24, T["blue"], 700, extra='letter-spacing="5"', fit=334)
     s += text(0, 220, "Nobel 2026 Lab", 84, T["text"], 800, extra='letter-spacing="-2"', fit=599)
     s += text(4, 276, "Hands-on demos of this year’s Nobel Prizes.", 31, T["text"], 500, fit=596)
+    return s
+
+
+def _hero_foot(T: dict) -> str:
+    """The toy-models pill and the showtime credit: y = 314 to 470 of the text block, 563 wide."""
     pill = "Toy models · not research · not for lab or clinical use"
-    s += (f'<rect x="4" y="314" width="559" height="54" rx="27" fill="{T["pill"]}" stroke="{T["border"]}" stroke-width="2"/>'
-          + text(4 + 26, 349, pill, 22, T["pill_text"], 600, fit=507))
+    s = (f'<rect x="4" y="314" width="559" height="54" rx="27" fill="{T["pill"]}" stroke="{T["border"]}" stroke-width="2"/>'
+         + text(4 + 26, 349, pill, 22, T["pill_text"], 600, fit=507))
     # credit for the tool that makes every video here
     s += (f'<rect x="4" y="408" width="40" height="30" rx="8" fill="none" stroke="{T["muted"]}" stroke-width="3"/>'
           f'<polygon points="19,415 19,431 32,423" fill="{T["coral"]}"/>')
@@ -335,21 +413,30 @@ def _hero_words(T: dict) -> str:
 
 def hero(name: str, T: dict, og: bool = False) -> str:
     X = HERO_EXTRA["dark" if T is THEMES["dark"] else "light"]
+    prizes = (_card_medicine, _card_physics, _card_chemistry, _card_literature)
+    row_w = len(prizes) * (CARD_W + CARD_GAP) + NEXT_W   # the row of cards, then the slot for the prize to come
     if og:   # the 1200 x 630 share image: full bleed, everything clear of the outer 40 px
+        # Five cards do not fit beside the text at a readable size, so the share image has two rows:
+        # the name on the left and the pill and credit on the right, then the cards across the full width.
         W, H, rx = 1200, 630, 0
-        ws, cs = .66, .62
-        words = (48, 315 - 285 * ws, ws)
-        cards = (1200 - 48 - cs * (3 * CARD_W + NEXT_W + 3 * CARD_GAP), (630 - cs * CARD_H) / 2, cs)
+        ws, gap = .64, 50                      # gap: room for the Medicine card's fibre above its card
+        cs = (1200 - 2 * 48) / row_w
+        top = (630 - (185 * ws + gap + CARD_H * cs)) / 2
+        words = ((_hero_head, 48, top - 100 * ws, ws),
+                 (_hero_foot, 1200 - 48 - 567 * ws, top + 185 * ws - 470 * ws, ws))
+        cards = (48, top + 185 * ws + gap, cs)
     else:
-        W, H, rx = 736 + 3 * (CARD_W + CARD_GAP) + NEXT_W + 64, 560, 30
-        words = (88, -6, 1.0)
+        W, H, rx = 736 + row_w + 64, 560, 30
+        words = ((_hero_words, 88, -6, 1.0),)
         cards = (736, 64, 1.0)
     alt = ("Nobel 2026 Lab. Hands-on demos of this year’s Nobel Prizes, one card per prize. Medicine: a nerve cell "
            "lit by a pulse of blue light from the tip of an optical fibre, with a spike running down its axon. Physics: "
            "strings of light sensors hanging in dark ice, a particle track with a cone of blue Cherenkov light behind it, "
            "and the sensors near the track lit up. Chemistry: a left hand drawn solid orange and its mirror image, a right "
            "hand drawn hatched teal, on either side of a dashed mirror line, with three small orange molecules above "
-           "the left hand and only one teal one above the right: one hand wins. A smaller dashed slot holds the prize still to come: Economics "
+           "the left hand and only one teal one above the right: one hand wins. Literature: a torn scrap of papyrus "
+           "with a few lines of Greek capitals, broken off at its ragged edges and around two holes, with red square "
+           "brackets where letters are lost: what survives. A smaller dashed slot holds the prize still to come: Economics "
            "on 12 October. Toy models, not research, not for lab or clinical use. Videos made "
            "with showtime, an open-source video studio for coding agents.")
     s = svg_open(W, H, "Nobel 2026 Lab: hands-on demos of this year’s Nobel Prizes", alt, T, extra_style=(
@@ -362,18 +449,17 @@ def hero(name: str, T: dict, og: bool = False) -> str:
         ".spk{stroke-dasharray:14 186;stroke-dashoffset:-40;animation:spk 5s linear infinite}"
         "@keyframes spk{0%{stroke-dashoffset:14}100%{stroke-dashoffset:-186}}"
     ))
-    s += _hero_defs(T, X) + chem_defs(chem_theme(T))
+    s += _hero_defs(T, X) + chem_defs(chem_theme(T)) + lit_defs(lit_theme(T))
     s += f'<rect width="{W}" height="{H}" rx="{rx}" fill="url(#bg)"/><rect width="{W}" height="{H}" rx="{rx}" fill="url(#dots)"/>'
     if not og:
         s += f'<rect x="1.5" y="1.5" width="{W-3}" height="{H-3}" rx="{rx-1}" fill="none" stroke="{T["border"]}" stroke-width="3"/>'
-    wx, wy, ws = words
-    s += f'<g transform="translate({wx:g},{wy:g}) scale({ws:g})">' + _hero_words(T) + '</g>'
+    for fn, wx, wy, ws in words:
+        s += f'<g transform="translate({wx:g},{wy:g}) scale({ws:g})">' + fn(T) + '</g>'
     cx0, cy0, cs = cards
     s += f'<g transform="translate({cx0:g},{cy0:g}) scale({cs:g})">'
     s += _card_medicine(T, X)
-    s += f'<g transform="translate({CARD_W + CARD_GAP},0)">' + _card_physics(T, X) + '</g>'
-    s += f'<g transform="translate({2 * (CARD_W + CARD_GAP)},0)">' + _card_chemistry(T, X) + '</g>'
-    s += f'<g transform="translate({3 * (CARD_W + CARD_GAP)},0)">' + _card_next(T, X) + '</g>'
+    for k, card in enumerate(prizes[1:] + (_card_next,), start=1):
+        s += f'<g transform="translate({k * (CARD_W + CARD_GAP)},0)">' + card(T, X) + '</g>'
     s += '</g>'
     s += SVG_CLOSE
     return s

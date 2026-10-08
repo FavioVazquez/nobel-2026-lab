@@ -1,0 +1,1117 @@
+{
+ "status": "final",
+ "label": "Educational demos made to show an open-source tool. Not research.",
+ "what": "Her books by the forms that their own bibliography lines (titles, subtitles, notes) or the Nobel Committee's essay name. A selection, as the Committee's list is.",
+ "source": {
+  "name": "Nobel Committee for Literature, \"Biobibliography\" (Anders Olsson, Chair of the Nobel Committee), section \"Bibliography – a selection\"",
+  "url": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/",
+  "accessed": "2026-10-08"
+ },
+ "selection_note": "The Committee heads its list 'Bibliography – a selection'. Counts here are counts of that selection, not of her whole output.",
+ "tag_rule": "Every tag rests on a quoted string: basis 'line' = substring of that entry's bibliography line; basis 'committee' = phrase from the Committee's essay on the same page. No tag is our own reading.",
+ "tags": {
+  "verse": "verse / poetry",
+  "essay": "essay",
+  "fiction": "novel / fiction",
+  "translation": "translation / version",
+  "drama": "plays / tragedy",
+  "opera": "opera / libretto / music",
+  "object": "book-object / artists' book / comic",
+  "collaboration": "made with another artist",
+  "performance": "performance / recording",
+  "scholarship": "scholarly thesis",
+  "classical": "in dialogue with a classical author"
+ },
+ "summary": {
+  "entries": 49,
+  "entries_works_in_english": 33,
+  "entries_other": 16,
+  "entries_with_a_form_tag": 36,
+  "entries_with_no_tag": 12,
+  "entries_with_two_or_more_form_tags": 19,
+  "entries_with_two_or_more_form_tags_titles": [
+   "Plainwater",
+   "Glass, Irony, and God",
+   "Autobiography of Red",
+   "Electra (Sophocles)",
+   "The Beauty of the Husband",
+   "Wonderwater",
+   "Decreation",
+   "Grief Lessons (Euripides)",
+   "Nox",
+   "“Electra” and other plays (Sophocles)",
+   "Antigonick (Sophokles)",
+   "Antigone (Sophokles)",
+   "Bakkhai (Euripides)",
+   "Cassandra: voix intérieures",
+   "The Mirror of Simple Souls: An Opera Installation",
+   "Troyjam",
+   "At the 92nd Street Y (audio)",
+   "The Mile-Long Opera",
+   "The Trojan Women: A Comic"
+  ],
+  "works_per_tag": {
+   "verse": 6,
+   "essay": 9,
+   "fiction": 3,
+   "translation": 11,
+   "drama": 5,
+   "opera": 4,
+   "object": 6,
+   "collaboration": 10,
+   "performance": 4,
+   "scholarship": 1,
+   "classical": 16
+  },
+  "tags_from_line_only": 61,
+  "tags_from_committee_essay": 17,
+  "first_year": 1981,
+  "last_year": 2025
+ },
+ "float_22": {
+  "chapbooks": 22,
+  "chapbooks_source": "Nobel Committee bio-bibliography, https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/: 'twenty-two chapbooks on different subjects, capable of being read in any order'",
+  "orderings": "1124000727777607680000",
+  "orderings_grouped": "1,124,000,727,777,607,680,000",
+  "orderings_digits": 22,
+  "orderings_scientific": "1.124 × 10^21",
+  "formula": "22! = 22 × 21 × ... × 2 × 1 (orderings of 22 distinct items)",
+  "years_at_one_ordering_per_second": 35620000000000.0,
+  "years_note": "22! seconds in Julian years (365.25 days); pure arithmetic",
+  "times_age_of_universe": 2583,
+  "age_of_universe_years": 13787000000.0,
+  "age_of_universe_source": "Planck Collaboration 2018, results VI, A&A 641, A6 (2020), arXiv:1807.06209: 13.787 ± 0.020 Gyr",
+  "caveat": "The number counts orders only. It says nothing about how the book is meant to be read beyond the Committee's 'any order'."
+ },
+ "works": [
+  {
+   "n": 1,
+   "section": "Works in English",
+   "title": "Odi et Amo Ergo Sum",
+   "year": 1981,
+   "bibliography_line": "Odi et Amo Ergo Sum; Thesis (Ph.D.) / Anne Carson Giacomelli. Toronto : University of Toronto, 1981",
+   "tags": [
+    "scholarship"
+   ],
+   "evidence": [
+    {
+     "tag": "scholarship",
+     "basis": "line",
+     "evidence": "Thesis (Ph.D.)"
+    },
+    {
+     "tag": "scholarship",
+     "basis": "committee",
+     "evidence": "doctoral thesis in Classics"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 2,
+   "section": "Works in English",
+   "title": "Eros the Bittersweet",
+   "year": 1986,
+   "bibliography_line": "Eros the Bittersweet: An Essay. Princeton: Princeton University Press, 1986",
+   "tags": [
+    "essay",
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "essay",
+     "basis": "line",
+     "evidence": "An Essay"
+    },
+    {
+     "tag": "essay",
+     "basis": "committee",
+     "evidence": "In her long essay Eros the Bittersweet"
+    },
+    {
+     "tag": "classical",
+     "basis": "committee",
+     "evidence": "a compound adjective from Sappho"
+    }
+   ],
+   "note": "The Committee: the book 'lays the foundation for her subsequent authorship'."
+  },
+  {
+   "n": 3,
+   "section": "Works in English",
+   "title": "Short Talks",
+   "year": 1992,
+   "bibliography_line": "Short Talks. London, Ontario: Brick Books, 1992",
+   "tags": [],
+   "evidence": [],
+   "note": "No form named on its line or in the essay."
+  },
+  {
+   "n": 4,
+   "section": "Works in English",
+   "title": "Plainwater",
+   "year": 1995,
+   "bibliography_line": "Plainwater: Essays and Poetry. New York: Knopf, 1995",
+   "tags": [
+    "verse",
+    "essay"
+   ],
+   "evidence": [
+    {
+     "tag": "essay",
+     "basis": "line",
+     "evidence": "Essays and Poetry"
+    },
+    {
+     "tag": "verse",
+     "basis": "line",
+     "evidence": "Essays and Poetry"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 5,
+   "section": "Works in English",
+   "title": "Glass, Irony, and God",
+   "year": 1995,
+   "bibliography_line": "Glass, Irony, and God / introduction by Guy Davenport. New York: New Directions, 1995",
+   "tags": [
+    "verse",
+    "essay"
+   ],
+   "evidence": [
+    {
+     "tag": "verse",
+     "basis": "committee",
+     "evidence": "the potential of the long poem"
+    },
+    {
+     "tag": "essay",
+     "basis": "committee",
+     "evidence": "transformed into an essay about abandonment"
+    }
+   ],
+   "note": "Both Committee phrases are about 'The Glass Essay', a long poem in this book."
+  },
+  {
+   "n": 6,
+   "section": "Works in English",
+   "title": "Wild Workshop",
+   "year": 1997,
+   "bibliography_line": "Wild Workshop / Ann [sic] Carson, Kay Adshead, Bridget Meeds. London: Faber and Faber, 1997. [“The Glass Essay”]",
+   "tags": [],
+   "evidence": [],
+   "note": "A shared volume (three authors on the line); the Committee notes it holds 'The Glass Essay'."
+  },
+  {
+   "n": 7,
+   "section": "Works in English",
+   "title": "Autobiography of Red",
+   "year": 1998,
+   "bibliography_line": "Autobiography of Red: A Novel in Verse. New York: Knopf, 1998",
+   "tags": [
+    "verse",
+    "fiction",
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "fiction",
+     "basis": "line",
+     "evidence": "A Novel in Verse"
+    },
+    {
+     "tag": "verse",
+     "basis": "line",
+     "evidence": "A Novel in Verse"
+    },
+    {
+     "tag": "classical",
+     "basis": "committee",
+     "evidence": "poem fragments by the sixth century BC Greek poet Stesichoros"
+    }
+   ],
+   "note": "The Committee: 'often heralded as Carson’s greatest' (its words, not ours)."
+  },
+  {
+   "n": 8,
+   "section": "Works in English",
+   "title": "Glass and God",
+   "year": 1998,
+   "bibliography_line": "Glass and God. London: Cape Poetry, 1998",
+   "tags": [],
+   "evidence": [],
+   "note": "A London edition; no form named."
+  },
+  {
+   "n": 9,
+   "section": "Works in English",
+   "title": "Economy of the Unlost",
+   "year": 1999,
+   "bibliography_line": "Economy of the Unlost: Reading Simonides of Keos with Paul Celan. Princeton: Princeton University Press, 1999",
+   "tags": [
+    "essay",
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "essay",
+     "basis": "committee",
+     "evidence": "the essay Economy of the Unlost"
+    },
+    {
+     "tag": "classical",
+     "basis": "line",
+     "evidence": "Reading Simonides of Keos with Paul Celan"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 10,
+   "section": "Works in English",
+   "title": "Men in the Off Hours",
+   "year": 2000,
+   "bibliography_line": "Men in the Off Hours. New York: Knopf, 2000",
+   "tags": [
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "classical",
+     "basis": "committee",
+     "evidence": "she aligns the historian Thucydides with Virginia Woolf"
+    }
+   ],
+   "note": "No form named; the Committee names the pairing only."
+  },
+  {
+   "n": 11,
+   "section": "Works in English",
+   "title": "Electra (Sophocles)",
+   "year": 2001,
+   "bibliography_line": "Electra / Sophocles; translated by Anne Carson; with introduction and notes by Michael Shaw. Oxford: Oxford University Press, 2001",
+   "tags": [
+    "translation",
+    "drama",
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "translation",
+     "basis": "line",
+     "evidence": "translated by Anne Carson"
+    },
+    {
+     "tag": "drama",
+     "basis": "committee",
+     "evidence": "tragedies such as Sophocles’s Electra (2001) and Antigone (2015) and Euripides’s Bakkhai (2015)"
+    },
+    {
+     "tag": "classical",
+     "basis": "line",
+     "evidence": "Electra / Sophocles"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 12,
+   "section": "Works in English",
+   "title": "The Beauty of the Husband",
+   "year": 2001,
+   "bibliography_line": "The Beauty of the Husband: A Fictional Essay in 29 Tangos . New York: Knopf, 2001",
+   "tags": [
+    "essay",
+    "fiction"
+   ],
+   "evidence": [
+    {
+     "tag": "essay",
+     "basis": "line",
+     "evidence": "A Fictional Essay in 29 Tangos"
+    },
+    {
+     "tag": "fiction",
+     "basis": "line",
+     "evidence": "A Fictional Essay in 29 Tangos"
+    }
+   ],
+   "note": "The Committee: 'twenty-nine episodes'."
+  },
+  {
+   "n": 13,
+   "section": "Works in English",
+   "title": "If Not, Winter (Sappho)",
+   "year": 2002,
+   "bibliography_line": "If Not, Winter: Fragments of Sappho / Sappho; translated by Anne Carson. New York: Knopf, 2002",
+   "tags": [
+    "translation",
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "translation",
+     "basis": "line",
+     "evidence": "translated by Anne Carson"
+    },
+    {
+     "tag": "classical",
+     "basis": "line",
+     "evidence": "Fragments of Sappho"
+    }
+   ],
+   "note": "The Committee: 'her interpretation of Sappho’s poem fragments'."
+  },
+  {
+   "n": 14,
+   "section": "Works in English",
+   "title": "Wonderwater",
+   "year": 2004,
+   "bibliography_line": "Wonderwater: Alice Offshore / Roni Horn, annotated by Anne Carson. Artists’ books. Göttingen: Steidl, 2004",
+   "tags": [
+    "object",
+    "collaboration"
+   ],
+   "evidence": [
+    {
+     "tag": "object",
+     "basis": "line",
+     "evidence": "Artists’ books"
+    },
+    {
+     "tag": "collaboration",
+     "basis": "line",
+     "evidence": "Roni Horn, annotated by Anne Carson"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 15,
+   "section": "Works in English",
+   "title": "Decreation",
+   "year": 2005,
+   "bibliography_line": "Decreation: Poetry, Essays, Opera. New York: Knopf, 2005",
+   "tags": [
+    "verse",
+    "essay",
+    "opera"
+   ],
+   "evidence": [
+    {
+     "tag": "verse",
+     "basis": "line",
+     "evidence": "Poetry, Essays, Opera"
+    },
+    {
+     "tag": "essay",
+     "basis": "line",
+     "evidence": "Poetry, Essays, Opera"
+    },
+    {
+     "tag": "opera",
+     "basis": "line",
+     "evidence": "Poetry, Essays, Opera"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 16,
+   "section": "Works in English",
+   "title": "Grief Lessons (Euripides)",
+   "year": 2006,
+   "bibliography_line": "Grief Lessons: Four Plays / Euripides; translated by Anne Carson. New York: New York Review Books, 2006",
+   "tags": [
+    "translation",
+    "drama",
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "translation",
+     "basis": "line",
+     "evidence": "translated by Anne Carson"
+    },
+    {
+     "tag": "drama",
+     "basis": "line",
+     "evidence": "Four Plays"
+    },
+    {
+     "tag": "classical",
+     "basis": "line",
+     "evidence": "Grief Lessons: Four Plays / Euripides"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 17,
+   "section": "Works in English",
+   "title": "An Oresteia",
+   "year": 2009,
+   "bibliography_line": "An Oresteia: Agamemnon by Aiskhylos, Elektra by Sophocles, Orestes by Euripides / translated by Anne Carson. New York: Faber and Faber, 2009",
+   "tags": [
+    "translation",
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "translation",
+     "basis": "line",
+     "evidence": "translated by Anne Carson"
+    },
+    {
+     "tag": "classical",
+     "basis": "line",
+     "evidence": "Agamemnon by Aiskhylos, Elektra by Sophocles, Orestes by Euripides"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 18,
+   "section": "Works in English",
+   "title": "Nox",
+   "year": 2010,
+   "bibliography_line": "Nox. New York: New Directions, 2010",
+   "tags": [
+    "translation",
+    "object",
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "object",
+     "basis": "committee",
+     "evidence": "a box containing an accordion-fold-out"
+    },
+    {
+     "tag": "object",
+     "basis": "committee",
+     "evidence": "a creation as sculptural as it is literary"
+    },
+    {
+     "tag": "translation",
+     "basis": "committee",
+     "evidence": "translation of the poem"
+    },
+    {
+     "tag": "classical",
+     "basis": "committee",
+     "evidence": "the Roman poet Catullus, with his famous elegy 101"
+    }
+   ],
+   "note": "The Committee calls it 'an epitaph'; the translated poem is Catullus 101."
+  },
+  {
+   "n": 19,
+   "section": "Works in English",
+   "title": "“Electra” and other plays (Sophocles)",
+   "year": 2010,
+   "bibliography_line": "“Electra” and other plays / Sophocles; edited by Peter Burian and Alan Shapiro; translated by Anne Carson; with introduction and notes by Michael Shaw. New York: Oxford University Press, 2010",
+   "tags": [
+    "translation",
+    "drama",
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "translation",
+     "basis": "line",
+     "evidence": "translated by Anne Carson"
+    },
+    {
+     "tag": "drama",
+     "basis": "line",
+     "evidence": "and other plays"
+    },
+    {
+     "tag": "classical",
+     "basis": "line",
+     "evidence": "“Electra” and other plays / Sophocles"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 20,
+   "section": "Works in English",
+   "title": "Antigonick (Sophokles)",
+   "year": 2012,
+   "bibliography_line": "Antigonick / Sophokles; translated by Anne Carson; illustrated by Bianca Stone; design by Robert Currie. New York: New Directions, 2012",
+   "tags": [
+    "translation",
+    "object",
+    "collaboration",
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "translation",
+     "basis": "line",
+     "evidence": "translated by Anne Carson"
+    },
+    {
+     "tag": "collaboration",
+     "basis": "line",
+     "evidence": "illustrated by Bianca Stone"
+    },
+    {
+     "tag": "object",
+     "basis": "line",
+     "evidence": "illustrated by Bianca Stone"
+    },
+    {
+     "tag": "classical",
+     "basis": "line",
+     "evidence": "Antigonick / Sophokles"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 21,
+   "section": "Works in English",
+   "title": "Red Doc>",
+   "year": 2013,
+   "bibliography_line": "Red Doc>. New York: Knopf, 2013",
+   "tags": [],
+   "evidence": [],
+   "note": "No form named on its line or in the essay."
+  },
+  {
+   "n": 22,
+   "section": "Works in English",
+   "title": "Nay Rather",
+   "year": 2013,
+   "bibliography_line": "Nay Rather. Paris: Center for Writers & Translators, American University of Paris; London: Sylph Editions, 2013",
+   "tags": [],
+   "evidence": [],
+   "note": "No form named on its line or in the essay."
+  },
+  {
+   "n": 23,
+   "section": "Works in English",
+   "title": "Iphigenia among the Taurians (Euripides)",
+   "year": 2014,
+   "bibliography_line": "Iphigenia among the Taurians / Euripides; translated by Anne Carson with an introduction by Glenn W. Most and Mark Griffith. Chicago: University of Chicago Press, 2014",
+   "tags": [
+    "translation",
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "translation",
+     "basis": "line",
+     "evidence": "translated by Anne Carson"
+    },
+    {
+     "tag": "classical",
+     "basis": "line",
+     "evidence": "Iphigenia among the Taurians / Euripides"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 24,
+   "section": "Works in English",
+   "title": "The Albertine Workout",
+   "year": 2014,
+   "bibliography_line": "The Albertine Workout. New York: New Directions, 2014",
+   "tags": [],
+   "evidence": [],
+   "note": "No form named on its line or in the essay."
+  },
+  {
+   "n": 25,
+   "section": "Works in English",
+   "title": "Hack wit",
+   "year": 2015,
+   "bibliography_line": "Hack wit / Roni Horn; with hack gloss by Anne Carson. Göttingen: Steidl, 2015",
+   "tags": [
+    "collaboration"
+   ],
+   "evidence": [
+    {
+     "tag": "collaboration",
+     "basis": "line",
+     "evidence": "Roni Horn; with hack gloss by Anne Carson"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 26,
+   "section": "Works in English",
+   "title": "Short Talks (new edition)",
+   "year": 2015,
+   "bibliography_line": "Short Talks / with a new afterword by the author and a new introduction by Margaret Christakos. London, Ontario: Brick Books, 2015",
+   "tags": [],
+   "evidence": [],
+   "note": "A new edition of the 1992 book; no form named."
+  },
+  {
+   "n": 27,
+   "section": "Works in English",
+   "title": "Antigone (Sophokles)",
+   "year": 2015,
+   "bibliography_line": "Antigone by Sophokles / translated by Anne Carson. London: Oberon, 2015",
+   "tags": [
+    "translation",
+    "drama",
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "translation",
+     "basis": "line",
+     "evidence": "translated by Anne Carson"
+    },
+    {
+     "tag": "drama",
+     "basis": "committee",
+     "evidence": "tragedies such as Sophocles’s Electra (2001) and Antigone (2015) and Euripides’s Bakkhai (2015)"
+    },
+    {
+     "tag": "classical",
+     "basis": "line",
+     "evidence": "Antigone by Sophokles"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 28,
+   "section": "Works in English",
+   "title": "Bakkhai (Euripides)",
+   "year": 2015,
+   "bibliography_line": "Bakkhai by Euripides: a new version by Anne Carson. London: Oberon, 2015",
+   "tags": [
+    "translation",
+    "drama",
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "translation",
+     "basis": "line",
+     "evidence": "a new version by Anne Carson"
+    },
+    {
+     "tag": "drama",
+     "basis": "committee",
+     "evidence": "tragedies such as Sophocles’s Electra (2001) and Antigone (2015) and Euripides’s Bakkhai (2015)"
+    },
+    {
+     "tag": "classical",
+     "basis": "line",
+     "evidence": "Bakkhai by Euripides"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 29,
+   "section": "Works in English",
+   "title": "Float",
+   "year": 2016,
+   "bibliography_line": "Float. New York: Knopf, 2016",
+   "tags": [
+    "object"
+   ],
+   "evidence": [
+    {
+     "tag": "object",
+     "basis": "committee",
+     "evidence": "twenty-two chapbooks on different subjects, capable of being read in any order"
+    }
+   ],
+   "note": "See the 22! card."
+  },
+  {
+   "n": 30,
+   "section": "Works in English",
+   "title": "Norma Jean Baker of Troy",
+   "year": 2019,
+   "bibliography_line": "Norma Jean Baker of Troy: a version of Euripides’ Helen. London: Oberon, 2019",
+   "tags": [
+    "translation",
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "translation",
+     "basis": "line",
+     "evidence": "a version of Euripides’ Helen"
+    },
+    {
+     "tag": "classical",
+     "basis": "line",
+     "evidence": "a version of Euripides’ Helen"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 31,
+   "section": "Works in English",
+   "title": "H of H playbook",
+   "year": 2021,
+   "bibliography_line": "H of H playbook. New York: New Directions, 2021",
+   "tags": [],
+   "evidence": [],
+   "note": "No form named in the essay; we do not read a form into the word 'playbook'."
+  },
+  {
+   "n": 32,
+   "section": "Works in English",
+   "title": "Wrong Norma",
+   "year": 2024,
+   "bibliography_line": "Wrong Norma. New York: New Directions, 2024",
+   "tags": [
+    "performance"
+   ],
+   "evidence": [
+    {
+     "tag": "performance",
+     "basis": "committee",
+     "evidence": "a strongly performative aspect"
+    }
+   ],
+   "note": "The Committee: 'a diverse combination of texts'."
+  },
+  {
+   "n": 33,
+   "section": "Works in English",
+   "title": "The Gender of Sound",
+   "year": 2025,
+   "bibliography_line": "The Gender of Sound. London: Silver Press, 2025 [First published in Glass, Irony, and God, New Directions, 1995]",
+   "tags": [],
+   "evidence": [],
+   "note": "First published in Glass, Irony, and God (1995), per the line; no form named."
+  },
+  {
+   "n": 34,
+   "section": "Other",
+   "title": "“Kinds of Water”",
+   "year": 1988,
+   "bibliography_line": "“Kinds of Water” in The Best American Essays 1988 / edited by Annie Dillard. New York: Ticknor & Fields, 1988",
+   "tags": [
+    "essay"
+   ],
+   "evidence": [
+    {
+     "tag": "essay",
+     "basis": "line",
+     "evidence": "The Best American Essays 1988"
+    }
+   ],
+   "note": "A piece in an anthology."
+  },
+  {
+   "n": 35,
+   "section": "Other",
+   "title": "“Chez l’Oxymoron”",
+   "year": 1989,
+   "bibliography_line": "“Chez l’Oxymoron” / Anne Carson in Performance & reality: essays from Grand street / edited by Ben Sonnenberg. New Brunswick: Rutgers University Press, 1989",
+   "tags": [
+    "essay"
+   ],
+   "evidence": [
+    {
+     "tag": "essay",
+     "basis": "line",
+     "evidence": "essays from Grand street"
+    }
+   ],
+   "note": "A piece in an anthology."
+  },
+  {
+   "n": 36,
+   "section": "Other",
+   "title": "“The Life of Towns”",
+   "year": 1990,
+   "bibliography_line": "“The Life of Towns” / Anne Carson in The Best American Poetry of 1990 / edited by Jorie Graham; David Lehman. New York: Scribner, 1990",
+   "tags": [
+    "verse"
+   ],
+   "evidence": [
+    {
+     "tag": "verse",
+     "basis": "line",
+     "evidence": "The Best American Poetry of 1990"
+    }
+   ],
+   "note": "A piece in an anthology."
+  },
+  {
+   "n": 37,
+   "section": "Other",
+   "title": "“Water Margins”",
+   "year": 1994,
+   "bibliography_line": "“Water Margins” / Anne Carson in The Journey Prize Anthology: Short fiction from the best of Canada’s new writers / edited by Douglas Glover. Toronto: McClelland & Stewart, 1994",
+   "tags": [
+    "fiction"
+   ],
+   "evidence": [
+    {
+     "tag": "fiction",
+     "basis": "line",
+     "evidence": "Short fiction"
+    }
+   ],
+   "note": "A piece in an anthology."
+  },
+  {
+   "n": 38,
+   "section": "Other",
+   "title": "Cassandra: voix intérieures",
+   "year": 1998,
+   "bibliography_line": "Cassandra: voix intérieures = voices from the inside / Freda Guttman; Sandra L. Buckley; Anne Carson; Annie Martin. [Exhibition catalog and three essays]. Montreal, Quebec: OBORA, 1998",
+   "tags": [
+    "essay",
+    "object",
+    "collaboration"
+   ],
+   "evidence": [
+    {
+     "tag": "object",
+     "basis": "line",
+     "evidence": "Exhibition catalog"
+    },
+    {
+     "tag": "essay",
+     "basis": "line",
+     "evidence": "three essays"
+    },
+    {
+     "tag": "collaboration",
+     "basis": "line",
+     "evidence": "Freda Guttman; Sandra L. Buckley; Anne Carson; Annie Martin"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 39,
+   "section": "Other",
+   "title": "The Mirror of Simple Souls (recording)",
+   "year": 1999,
+   "bibliography_line": "The Mirror of Simple Souls [sound recording]. [S.l.]: Anne Carson, 1999",
+   "tags": [
+    "performance"
+   ],
+   "evidence": [
+    {
+     "tag": "performance",
+     "basis": "line",
+     "evidence": "[sound recording]"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 40,
+   "section": "Other",
+   "title": "The Mirror of Simple Souls: An Opera Installation",
+   "year": 2003,
+   "bibliography_line": "The Mirror of Simple Souls: An Opera Installation (libretto) / images by Kim Anno; designed by Mary Jo Pauly. St. Joseph, Minnesota: One Crow Press: Literary Arts Institute of the College of St. Benedict, 2003. [This opera was also a live performance that was produced in San Francisco, New York, Toronto, and Ann Arbor, Michigan.]",
+   "tags": [
+    "opera",
+    "collaboration",
+    "performance"
+   ],
+   "evidence": [
+    {
+     "tag": "opera",
+     "basis": "line",
+     "evidence": "An Opera Installation (libretto)"
+    },
+    {
+     "tag": "performance",
+     "basis": "line",
+     "evidence": "live performance"
+    },
+    {
+     "tag": "collaboration",
+     "basis": "line",
+     "evidence": "images by Kim Anno"
+    }
+   ],
+   "note": "Performed in San Francisco, New York, Toronto and Ann Arbor, per the line."
+  },
+  {
+   "n": 41,
+   "section": "Other",
+   "title": "It (Inger Christensen), introduction",
+   "year": 2006,
+   "bibliography_line": "It / Inger Christensen; translation by Susanna Nied; introduction by Anne Carson. New York: New Directions, 2006",
+   "tags": [],
+   "evidence": [],
+   "note": "An introduction to another poet's book; no form tag."
+  },
+  {
+   "n": 42,
+   "section": "Other",
+   "title": "Troyjam",
+   "year": 2008,
+   "bibliography_line": "Troyjam: for Narrator and Orchestra / Michael Daugherty; text by Anne Carson. New York: Hendon Music: Boosey & Hawkes, 2008",
+   "tags": [
+    "opera",
+    "collaboration"
+   ],
+   "evidence": [
+    {
+     "tag": "opera",
+     "basis": "line",
+     "evidence": "for Narrator and Orchestra"
+    },
+    {
+     "tag": "collaboration",
+     "basis": "line",
+     "evidence": "Michael Daugherty; text by Anne Carson"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 43,
+   "section": "Other",
+   "title": "At the 92nd Street Y (audio)",
+   "year": 2009,
+   "bibliography_line": "Anne Carson at the 92nd Street Y Poetry Center / Anne Carson. Audible Audio Edition. 92nd Street Y, 2009. [Incl. “A Lecture on Pronouns in the form of 15 Sonnets”; “Cassandra Float Can”]",
+   "tags": [
+    "verse",
+    "performance"
+   ],
+   "evidence": [
+    {
+     "tag": "performance",
+     "basis": "line",
+     "evidence": "Audible Audio Edition"
+    },
+    {
+     "tag": "verse",
+     "basis": "line",
+     "evidence": "in the form of 15 Sonnets"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 44,
+   "section": "Other",
+   "title": "Spaces of Blank; Mask; Imprint (Michel van der Aa)",
+   "year": 2010,
+   "bibliography_line": "Spaces of Blank; Mask; Imprint / Michel van der Aa. Amsterdam: Disquiet, 2010 [Text of the 1st work by Anne Carson, Emily Dickinson, and Rozalie Hirs.]",
+   "tags": [
+    "collaboration"
+   ],
+   "evidence": [
+    {
+     "tag": "collaboration",
+     "basis": "line",
+     "evidence": "Text of the 1st work by Anne Carson, Emily Dickinson, and Rozalie Hirs"
+    }
+   ],
+   "note": "Her text for another artist's work."
+  },
+  {
+   "n": 45,
+   "section": "Other",
+   "title": "Uendelig konstant = Wildly Constant",
+   "year": 2012,
+   "bibliography_line": "Uendelig konstant = Wildly Constant / Anne Carson, Robert Currie; oversettelse til norsk ved Tonje Hødnebø. Moss: House of Foundation, 2012 [Parallell tekst på bokmål og engelsk]",
+   "tags": [
+    "collaboration"
+   ],
+   "evidence": [
+    {
+     "tag": "collaboration",
+     "basis": "line",
+     "evidence": "Anne Carson, Robert Currie"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 46,
+   "section": "Other",
+   "title": "The Blue of Distance",
+   "year": 2015,
+   "bibliography_line": "The Blue of Distance / Anne Carson, Courtenay Finn, Rebecca Solnit. New York: Artbook, 2015. [“The Possibility of Blue”]",
+   "tags": [],
+   "evidence": [],
+   "note": "A shared volume; no form named."
+  },
+  {
+   "n": 47,
+   "section": "Other",
+   "title": "If I’m Scared We Can’t Win",
+   "year": 2016,
+   "bibliography_line": "If I’m Scared We Can’t Win / Emily Berry, Anne Carson, Sophie Collins. London: Penguin Books, 2016",
+   "tags": [],
+   "evidence": [],
+   "note": "A shared volume; no form named."
+  },
+  {
+   "n": 48,
+   "section": "Other",
+   "title": "The Mile-Long Opera",
+   "year": 2018,
+   "bibliography_line": "The Mile-Long Opera: A Biography of 7 o’clock / libretto by Anne Carson and spoken text by Claudia Rankine. Composer David Lang. Directed by Elizabeth Diller and Lynsey Peisinger. New York: Red Poppy, 2018",
+   "tags": [
+    "opera",
+    "collaboration"
+   ],
+   "evidence": [
+    {
+     "tag": "opera",
+     "basis": "line",
+     "evidence": "libretto by Anne Carson"
+    },
+    {
+     "tag": "collaboration",
+     "basis": "line",
+     "evidence": "Composer David Lang"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 49,
+   "section": "Other",
+   "title": "The Trojan Women: A Comic",
+   "year": 2021,
+   "bibliography_line": "Euripides, The Trojan Women: A Comic / by Rosanna Bruno; text by Anne Carson. New York: New Directions, 2021",
+   "tags": [
+    "object",
+    "collaboration",
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "object",
+     "basis": "line",
+     "evidence": "A Comic"
+    },
+    {
+     "tag": "collaboration",
+     "basis": "line",
+     "evidence": "by Rosanna Bruno; text by Anne Carson"
+    },
+    {
+     "tag": "classical",
+     "basis": "line",
+     "evidence": "Euripides, The Trojan Women"
+    }
+   ],
+   "note": ""
+  }
+ ]
+}

@@ -1,0 +1,365 @@
+{
+ "status": "fixture",
+ "label": "Educational demos made to show an open-source tool. Not research.",
+ "what": "Her books by the forms that their own bibliography lines (titles, subtitles, notes) or the Nobel Committee's essay name. A selection, as the Committee's list is.",
+ "source": {
+  "name": "Nobel Committee for Literature, \"Biobibliography\" (Anders Olsson, Chair of the Nobel Committee), section \"Bibliography – a selection\"",
+  "url": "https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/",
+  "accessed": "2026-10-08"
+ },
+ "selection_note": "The Committee heads its list 'Bibliography – a selection'. Counts here are counts of that selection, not of her whole output.",
+ "tag_rule": "Every tag rests on a quoted string: basis 'line' = substring of that entry's bibliography line; basis 'committee' = phrase from the Committee's essay on the same page. No tag is our own reading.",
+ "tags": {
+  "verse": "verse / poetry",
+  "essay": "essay",
+  "fiction": "novel / fiction",
+  "translation": "translation / version",
+  "drama": "plays / tragedy",
+  "opera": "opera / libretto / music",
+  "object": "book-object / artists' book / comic",
+  "collaboration": "made with another artist",
+  "performance": "performance / recording",
+  "scholarship": "scholarly thesis",
+  "classical": "in dialogue with a classical author"
+ },
+ "float_22": {
+  "chapbooks": 22,
+  "chapbooks_source": "Nobel Committee bio-bibliography, https://www.nobelprize.org/prizes/literature/2026/bio-bibliography/: 'twenty-two chapbooks on different subjects, capable of being read in any order'",
+  "orderings": "1124000727777607680000",
+  "orderings_grouped": "1,124,000,727,777,607,680,000",
+  "orderings_digits": 22,
+  "orderings_scientific": "1.124 × 10^21",
+  "formula": "22! = 22 × 21 × ... × 2 × 1 (orderings of 22 distinct items)",
+  "years_at_one_ordering_per_second": 35620000000000.0,
+  "years_note": "22! seconds in Julian years (365.25 days); pure arithmetic",
+  "times_age_of_universe": 2583,
+  "age_of_universe_years": 13787000000.0,
+  "age_of_universe_source": "Planck Collaboration 2018, results VI, A&A 641, A6 (2020), arXiv:1807.06209: 13.787 ± 0.020 Gyr",
+  "caveat": "The number counts orders only. It says nothing about how the book is meant to be read beyond the Committee's 'any order'."
+ },
+ "works": [
+  {
+   "n": 1,
+   "section": "Works in English",
+   "title": "Odi et Amo Ergo Sum",
+   "year": 1981,
+   "bibliography_line": "Odi et Amo Ergo Sum; Thesis (Ph.D.) / Anne Carson Giacomelli. Toronto : University of Toronto, 1981",
+   "tags": [
+    "scholarship"
+   ],
+   "evidence": [
+    {
+     "tag": "scholarship",
+     "basis": "line",
+     "evidence": "Thesis (Ph.D.)"
+    },
+    {
+     "tag": "scholarship",
+     "basis": "committee",
+     "evidence": "doctoral thesis in Classics"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 2,
+   "section": "Works in English",
+   "title": "Eros the Bittersweet",
+   "year": 1986,
+   "bibliography_line": "Eros the Bittersweet: An Essay. Princeton: Princeton University Press, 1986",
+   "tags": [
+    "essay",
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "essay",
+     "basis": "line",
+     "evidence": "An Essay"
+    },
+    {
+     "tag": "essay",
+     "basis": "committee",
+     "evidence": "In her long essay Eros the Bittersweet"
+    },
+    {
+     "tag": "classical",
+     "basis": "committee",
+     "evidence": "a compound adjective from Sappho"
+    }
+   ],
+   "note": "The Committee: the book 'lays the foundation for her subsequent authorship'."
+  },
+  {
+   "n": 3,
+   "section": "Works in English",
+   "title": "Short Talks",
+   "year": 1992,
+   "bibliography_line": "Short Talks. London, Ontario: Brick Books, 1992",
+   "tags": [],
+   "evidence": [],
+   "note": "No form named on its line or in the essay."
+  },
+  {
+   "n": 4,
+   "section": "Works in English",
+   "title": "Plainwater",
+   "year": 1995,
+   "bibliography_line": "Plainwater: Essays and Poetry. New York: Knopf, 1995",
+   "tags": [
+    "verse",
+    "essay"
+   ],
+   "evidence": [
+    {
+     "tag": "essay",
+     "basis": "line",
+     "evidence": "Essays and Poetry"
+    },
+    {
+     "tag": "verse",
+     "basis": "line",
+     "evidence": "Essays and Poetry"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 5,
+   "section": "Works in English",
+   "title": "Glass, Irony, and God",
+   "year": 1995,
+   "bibliography_line": "Glass, Irony, and God / introduction by Guy Davenport. New York: New Directions, 1995",
+   "tags": [
+    "verse",
+    "essay"
+   ],
+   "evidence": [
+    {
+     "tag": "verse",
+     "basis": "committee",
+     "evidence": "the potential of the long poem"
+    },
+    {
+     "tag": "essay",
+     "basis": "committee",
+     "evidence": "transformed into an essay about abandonment"
+    }
+   ],
+   "note": "Both Committee phrases are about 'The Glass Essay', a long poem in this book."
+  },
+  {
+   "n": 6,
+   "section": "Works in English",
+   "title": "Wild Workshop",
+   "year": 1997,
+   "bibliography_line": "Wild Workshop / Ann [sic] Carson, Kay Adshead, Bridget Meeds. London: Faber and Faber, 1997. [“The Glass Essay”]",
+   "tags": [],
+   "evidence": [],
+   "note": "A shared volume (three authors on the line); the Committee notes it holds 'The Glass Essay'."
+  },
+  {
+   "n": 7,
+   "section": "Works in English",
+   "title": "Autobiography of Red",
+   "year": 1998,
+   "bibliography_line": "Autobiography of Red: A Novel in Verse. New York: Knopf, 1998",
+   "tags": [
+    "verse",
+    "fiction",
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "fiction",
+     "basis": "line",
+     "evidence": "A Novel in Verse"
+    },
+    {
+     "tag": "verse",
+     "basis": "line",
+     "evidence": "A Novel in Verse"
+    },
+    {
+     "tag": "classical",
+     "basis": "committee",
+     "evidence": "poem fragments by the sixth century BC Greek poet Stesichoros"
+    }
+   ],
+   "note": "The Committee: 'often heralded as Carson’s greatest' (its words, not ours)."
+  },
+  {
+   "n": 8,
+   "section": "Works in English",
+   "title": "Glass and God",
+   "year": 1998,
+   "bibliography_line": "Glass and God. London: Cape Poetry, 1998",
+   "tags": [],
+   "evidence": [],
+   "note": "A London edition; no form named."
+  },
+  {
+   "n": 9,
+   "section": "Works in English",
+   "title": "Economy of the Unlost",
+   "year": 1999,
+   "bibliography_line": "Economy of the Unlost: Reading Simonides of Keos with Paul Celan. Princeton: Princeton University Press, 1999",
+   "tags": [
+    "essay",
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "essay",
+     "basis": "committee",
+     "evidence": "the essay Economy of the Unlost"
+    },
+    {
+     "tag": "classical",
+     "basis": "line",
+     "evidence": "Reading Simonides of Keos with Paul Celan"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 10,
+   "section": "Works in English",
+   "title": "Men in the Off Hours",
+   "year": 2000,
+   "bibliography_line": "Men in the Off Hours. New York: Knopf, 2000",
+   "tags": [
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "classical",
+     "basis": "committee",
+     "evidence": "she aligns the historian Thucydides with Virginia Woolf"
+    }
+   ],
+   "note": "No form named; the Committee names the pairing only."
+  },
+  {
+   "n": 11,
+   "section": "Works in English",
+   "title": "Electra (Sophocles)",
+   "year": 2001,
+   "bibliography_line": "Electra / Sophocles; translated by Anne Carson; with introduction and notes by Michael Shaw. Oxford: Oxford University Press, 2001",
+   "tags": [
+    "translation",
+    "drama",
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "translation",
+     "basis": "line",
+     "evidence": "translated by Anne Carson"
+    },
+    {
+     "tag": "drama",
+     "basis": "committee",
+     "evidence": "tragedies such as Sophocles’s Electra (2001) and Antigone (2015) and Euripides’s Bakkhai (2015)"
+    },
+    {
+     "tag": "classical",
+     "basis": "line",
+     "evidence": "Electra / Sophocles"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 12,
+   "section": "Works in English",
+   "title": "The Beauty of the Husband",
+   "year": 2001,
+   "bibliography_line": "The Beauty of the Husband: A Fictional Essay in 29 Tangos . New York: Knopf, 2001",
+   "tags": [
+    "essay",
+    "fiction"
+   ],
+   "evidence": [
+    {
+     "tag": "essay",
+     "basis": "line",
+     "evidence": "A Fictional Essay in 29 Tangos"
+    },
+    {
+     "tag": "fiction",
+     "basis": "line",
+     "evidence": "A Fictional Essay in 29 Tangos"
+    }
+   ],
+   "note": "The Committee: 'twenty-nine episodes'."
+  },
+  {
+   "n": 13,
+   "section": "Works in English",
+   "title": "If Not, Winter (Sappho)",
+   "year": 2002,
+   "bibliography_line": "If Not, Winter: Fragments of Sappho / Sappho; translated by Anne Carson. New York: Knopf, 2002",
+   "tags": [
+    "translation",
+    "classical"
+   ],
+   "evidence": [
+    {
+     "tag": "translation",
+     "basis": "line",
+     "evidence": "translated by Anne Carson"
+    },
+    {
+     "tag": "classical",
+     "basis": "line",
+     "evidence": "Fragments of Sappho"
+    }
+   ],
+   "note": "The Committee: 'her interpretation of Sappho’s poem fragments'."
+  },
+  {
+   "n": 14,
+   "section": "Works in English",
+   "title": "Wonderwater",
+   "year": 2004,
+   "bibliography_line": "Wonderwater: Alice Offshore / Roni Horn, annotated by Anne Carson. Artists’ books. Göttingen: Steidl, 2004",
+   "tags": [
+    "object",
+    "collaboration"
+   ],
+   "evidence": [
+    {
+     "tag": "object",
+     "basis": "line",
+     "evidence": "Artists’ books"
+    },
+    {
+     "tag": "collaboration",
+     "basis": "line",
+     "evidence": "Roni Horn, annotated by Anne Carson"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "n": 29,
+   "section": "Works in English",
+   "title": "Float",
+   "year": 2016,
+   "bibliography_line": "Float. New York: Knopf, 2016",
+   "tags": [
+    "object"
+   ],
+   "evidence": [
+    {
+     "tag": "object",
+     "basis": "committee",
+     "evidence": "twenty-two chapbooks on different subjects, capable of being read in any order"
+    }
+   ],
+   "note": "See the 22! card."
+  }
+ ],
+ "note": "FIXTURE: a trimmed copy of the experiment's output (2026-10-08), kept so the page can be built and tested without it. Not a result; the page labels it 'placeholder'."
+}

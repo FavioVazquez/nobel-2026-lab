@@ -1,0 +1,8 @@
+# Grenfell and Hunt's literal English for P.Oxy. 1231 fr. 1 col. i, lines 13-34 (= Sappho fr. 16 Voigt).
+# The Oxyrhynchus Papyri, Part X (1914), p. 40, commentary note "13-34" (scan leaf 64:
+# https://archive.org/download/oxyrhynchuspapyr10gren/oxyrhynchuspapyr10gren_jp2.zip/oxyrhynchuspapyr10gren_jp2%2Foxyrhynchuspapyr10gren_0064.jp2).
+# Typed by hand from the page image, checked a second time against it. Public domain.
+# Conventions (ours): the printed line breaks are joined with single spaces; the thin space the 1914 type sets before ";"
+# is dropped; quotation marks and the apostrophe are U+2018/U+2019 as printed. The square brackets are G&H's own:
+# they mark a sentence that translates their editors' conjecture for lines 25-6, not words read on the papyrus.
+‘Some say that the fairest thing on the black earth is a host of horsemen, others of foot, others of ships; but I say that is fairest which is the object of one’s desire. And it is quite easy to make this plain to all; for Helen observing well the beauty of men judged the best to be that one who destroyed the whole glory of Troy, nor bethought herself at all of child or parents dear, but through love Cypris led her astray. [Verily the wills of mortals are easily bent when they are moved by vain thoughts.] And I now have called to mind Anactoria, far away, whose gracious step and radiant glance I would rather see than the chariots of the Lydians and the charge of accoutred knights. We know well that this cannot come to pass among men . . .’

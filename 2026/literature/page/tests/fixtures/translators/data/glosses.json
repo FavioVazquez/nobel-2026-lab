@@ -1,0 +1,18 @@
+{
+ "about": "Our choice of gloss for each LSJ headword: each 'gloss' is copied exactly from the LSJ entry named in 'from' (Perseus LSJ, CC BY-SA 4.0; see lsj_entries.json for the credit). Where the headword is a dialect form that LSJ only cross-refers ('Aeol. for ...'), the gloss comes from the entry LSJ points to, named in 'from'. 'sense' is a hint for the reader, not a quotation. 'lsj_cites_this_poem' = LSJ itself cites this line of the poem (Bergk's numbering, the same as Wharton's) in that entry; the tests check it.",
+ "glosses": {
+  "gluku/s": {
+   "from": "gluku/s",
+   "gloss": "sweet to the taste or smell"
+  },
+  "pikro/s": {
+   "from": "pikro/s",
+   "gloss": "bitter",
+   "sense": "LSJ's first sense is 'pointed, sharp, keen'"
+  },
+  "gluku/pikros": {
+   "from": "gluku/pikros",
+   "gloss": "sweetly bitter"
+  }
+ }
+}
