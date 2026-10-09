@@ -172,7 +172,7 @@ def build(ends_dir, hold_dir, fixtures=False):
         "placeholder": fixtures or any(v == "fixture" for v in inputs.values()),
         "prize": PRIZE, "ends": ends, "hold": hold, "fonts": FONTS,
         "links": {"ucdp": UCDP, "licence": LICENCE_URL, "github": GITHUB, "showtime": SHOWTIME,
-                  "ends": "../how-conflicts-end/", "hold": "../do-agreements-hold/"},
+                  "ends": GITHUB + "how-conflicts-end/", "hold": GITHUB + "do-agreements-hold/"},
     }
 
 
