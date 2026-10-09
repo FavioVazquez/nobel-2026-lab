@@ -1,0 +1,10 @@
+# Insights (how conflicts end)
+
+> **Educational demos made to show an open-source tool. Not research.** Each sentence names the field of
+> `results/how_conflicts_end.json` it comes from; a test checks the numbers.
+
+1. Between 1946 and 2023, UCDP records 507 endings of armed-conflict episodes worldwide; 127 of them, 25.0 per cent, were a peace agreement or a ceasefire agreement. (fields: `dataset.coded_years`, `terminations`, `agreement_or_ceasefire_all`, `agreement_or_ceasefire_all_pct`)
+2. Across all endings there is no steady rise in that share: a simple trend test gives -0.008 on the log-odds scale per decade, with a 95 per cent interval of -0.102 to 0.086; the share rose to 35.5 per cent in the 2000s, then fell to 17.5 per cent in the 2010s; fitted from 1989 on, the trend slopes down. (fields: `trends.agreement_or_ceasefire_all_endings`, `answer.ci_level_pct`, `answer.highest_decade`, `answer.highest_decade_pct`, `by_decade[7].decade`, `by_decade[7].agreement_or_ceasefire_pct`, `trends.agreement_or_ceasefire_since_1989.years`, `trends.agreement_or_ceasefire_since_1989.slope_log_odds_per_decade`)
+3. Most episodes now fade out rather than end with an agreement or a victory: low activity, with fighting dropping below the threshold, was 17.4 per cent of endings in the 1940s and 65.0 per cent in the 2010s. (fields: `second_view.low_activity_first_decade_pct`, `second_view.low_activity_2010s_pct`, `answer.first_decade`, `by_decade[7].decade`)
+4. When an episode does end with a clear outcome, an agreement, a ceasefire or a victory, an agreement or ceasefire has been the most common one in every complete decade since 1990, at least 61.0 per cent, against at most 38.5 per cent in each decade before 1990. (fields: `second_view.complete_decades_since_1990_min_pct`, `second_view.before_1990_max_pct`, `by_decade[5].decade`)
+5. And 61 conflicts were still active in 2024, so the answer for the 2020s is not in yet. (fields: `censoring.conflicts_active_in_last_year`, `censoring.last_year`, `censoring.note`)

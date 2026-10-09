@@ -1,0 +1,6 @@
+# Same pins as 2026/chemistry/kagan-curve (all BSD-licensed, MIT-compatible), plus openpyxl (MIT) to read UCDP's xlsx.
+# Python 3.11. No lifelines: its dependencies (pandas, autograd, formulaic) are larger than the tiny KM in holds/km.py.
+numpy==1.26.4
+matplotlib==3.9.2
+openpyxl==3.1.5
+pytest==8.3.3

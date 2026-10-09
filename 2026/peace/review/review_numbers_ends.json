@@ -1,0 +1,435 @@
+{
+ "endings": 507,
+ "epid_with_two_endings": 2,
+ "dup_detail": [
+  {
+   "start_years_differ": true,
+   "outcomes": [
+    4,
+    5
+   ]
+  },
+  {
+   "start_years_differ": true,
+   "outcomes": [
+    2,
+    3
+   ]
+  }
+ ],
+ "unique_episodes_by_epid_plus_startyear": 507,
+ "trend": [
+  {
+   "label": "agreement or ceasefire, all endings 1946-2023",
+   "n": 507,
+   "events": 127,
+   "slope_log_odds_per_decade": -0.008,
+   "ci95": [
+    -0.102,
+    0.086
+   ],
+   "odds_ratio_per_decade": 0.992,
+   "or_ci95": [
+    0.903,
+    1.089
+   ],
+   "p": 0.865,
+   "cluster_by_conflict_ci95": [
+    -0.107,
+    0.09
+   ],
+   "cluster_p": 0.872,
+   "ame_pp_per_decade": -0.15,
+   "quadratic_lr_p": 0.02
+  },
+  {
+   "label": "agreement or ceasefire, 1946-2019 (complete decades)",
+   "n": 478,
+   "events": 122,
+   "slope_log_odds_per_decade": 0.012,
+   "ci95": [
+    -0.089,
+    0.112
+   ],
+   "odds_ratio_per_decade": 1.012,
+   "or_ci95": [
+    0.915,
+    1.119
+   ],
+   "p": 0.819,
+   "cluster_by_conflict_ci95": [
+    -0.093,
+    0.116
+   ],
+   "cluster_p": 0.826,
+   "ame_pp_per_decade": 0.22,
+   "quadratic_lr_p": 0.044
+  },
+  {
+   "label": "agreement or ceasefire, 1975-2023",
+   "n": 368,
+   "events": 91,
+   "slope_log_odds_per_decade": -0.05,
+   "ci95": [
+    -0.231,
+    0.13
+   ],
+   "odds_ratio_per_decade": 0.951,
+   "or_ci95": [
+    0.794,
+    1.139
+   ],
+   "p": 0.583,
+   "cluster_by_conflict_ci95": [
+    -0.233,
+    0.132
+   ],
+   "cluster_p": 0.589,
+   "ame_pp_per_decade": -0.94,
+   "quadratic_lr_p": 0.0
+  },
+  {
+   "label": "agreement or ceasefire, 1989-2023",
+   "n": 294,
+   "events": 78,
+   "slope_log_odds_per_decade": -0.311,
+   "ci95": [
+    -0.562,
+    -0.06
+   ],
+   "odds_ratio_per_decade": 0.733,
+   "or_ci95": [
+    0.57,
+    0.942
+   ],
+   "p": 0.015,
+   "cluster_by_conflict_ci95": [
+    -0.572,
+    -0.05
+   ],
+   "cluster_p": 0.02,
+   "ame_pp_per_decade": -5.93,
+   "quadratic_lr_p": 0.006
+  },
+  {
+   "label": "peace agreement only",
+   "n": 507,
+   "events": 60,
+   "slope_log_odds_per_decade": -0.109,
+   "ci95": [
+    -0.233,
+    0.015
+   ],
+   "odds_ratio_per_decade": 0.897,
+   "or_ci95": [
+    0.792,
+    1.015
+   ],
+   "p": 0.085,
+   "cluster_by_conflict_ci95": [
+    -0.232,
+    0.015
+   ],
+   "cluster_p": 0.084,
+   "ame_pp_per_decade": -1.13,
+   "quadratic_lr_p": 0.096
+  },
+  {
+   "label": "ceasefire only",
+   "n": 507,
+   "events": 67,
+   "slope_log_odds_per_decade": 0.09,
+   "ci95": [
+    -0.034,
+    0.214
+   ],
+   "odds_ratio_per_decade": 1.094,
+   "or_ci95": [
+    0.967,
+    1.239
+   ],
+   "p": 0.154,
+   "cluster_by_conflict_ci95": [
+    -0.024,
+    0.204
+   ],
+   "cluster_p": 0.122,
+   "ame_pp_per_decade": 1.03,
+   "quadratic_lr_p": 0.089
+  },
+  {
+   "label": "low activity",
+   "n": 507,
+   "events": 209,
+   "slope_log_odds_per_decade": 0.321,
+   "ci95": [
+    0.227,
+    0.416
+   ],
+   "odds_ratio_per_decade": 1.379,
+   "or_ci95": [
+    1.255,
+    1.515
+   ],
+   "p": 0.0,
+   "cluster_by_conflict_ci95": [
+    0.214,
+    0.429
+   ],
+   "cluster_p": 0.0,
+   "ame_pp_per_decade": 7.04,
+   "quadratic_lr_p": 0.225
+  },
+  {
+   "label": "agreement or ceasefire among endings that were not low activity or actor ceases",
+   "n": 278,
+   "events": 127,
+   "slope_log_odds_per_decade": 0.273,
+   "ci95": [
+    0.149,
+    0.397
+   ],
+   "odds_ratio_per_decade": 1.314,
+   "or_ci95": [
+    1.161,
+    1.487
+   ],
+   "p": 0.0,
+   "cluster_by_conflict_ci95": [
+    0.134,
+    0.412
+   ],
+   "cluster_p": 0.0,
+   "ame_pp_per_decade": 6.3,
+   "quadratic_lr_p": 0.956
+  }
+ ],
+ "decade_homogeneity_chi2": {
+  "chi2": 13.48,
+  "dof": 8,
+  "p": 0.096
+ },
+ "fisher_1980s_vs_2000s": 0.023,
+ "decade_by_6_outcomes_chi2_p": 0.0,
+ "decade_shares_pct": {
+  "1940": {
+   "peace": 8.7,
+   "ceasefire": 13.0,
+   "low_activity": 17.4,
+   "agr_among_non_low_non_ceases": 27.8,
+   "n_non_low": 18
+  },
+  "1950": {
+   "peace": 15.0,
+   "ceasefire": 5.0,
+   "low_activity": 25.0,
+   "agr_among_non_low_non_ceases": 29.6,
+   "n_non_low": 27
+  },
+  "1960": {
+   "peace": 16.3,
+   "ceasefire": 8.2,
+   "low_activity": 24.5,
+   "agr_among_non_low_non_ceases": 33.3,
+   "n_non_low": 36
+  },
+  "1970": {
+   "peace": 21.3,
+   "ceasefire": 10.6,
+   "low_activity": 17.0,
+   "agr_among_non_low_non_ceases": 38.5,
+   "n_non_low": 39
+  },
+  "1980": {
+   "peace": 4.9,
+   "ceasefire": 11.5,
+   "low_activity": 39.3,
+   "agr_among_non_low_non_ceases": 28.6,
+   "n_non_low": 35
+  },
+  "1990": {
+   "peace": 12.1,
+   "ceasefire": 19.0,
+   "low_activity": 46.6,
+   "agr_among_non_low_non_ceases": 61.0,
+   "n_non_low": 59
+  },
+  "2000": {
+   "peace": 19.4,
+   "ceasefire": 16.1,
+   "low_activity": 41.9,
+   "agr_among_non_low_non_ceases": 64.7,
+   "n_non_low": 34
+  },
+  "2010": {
+   "peace": 5.0,
+   "ceasefire": 12.5,
+   "low_activity": 65.0,
+   "agr_among_non_low_non_ceases": 66.7,
+   "n_non_low": 21
+  },
+  "2020": {
+   "peace": 3.4,
+   "ceasefire": 13.8,
+   "low_activity": 65.5,
+   "agr_among_non_low_non_ceases": 55.6,
+   "n_non_low": 9
+  }
+ },
+ "active_2024": 61,
+ "active_2024_started_before_2020": 33,
+ "pa_conflict_years": {
+  "active_conflict_years_1975_2021": 1967,
+  "with_agreement": 156,
+  "agreement_conflict_years_not_active_that_year": 75
+ },
+ "pa_share_by_5y": {
+  "1975-1979": [
+   7,
+   177,
+   4.0
+  ],
+  "1980-1984": [
+   3,
+   212,
+   1.4
+  ],
+  "1985-1989": [
+   7,
+   209,
+   3.3
+  ],
+  "1990-1994": [
+   40,
+   247,
+   16.2
+  ],
+  "1995-1999": [
+   26,
+   201,
+   12.9
+  ],
+  "2000-2004": [
+   22,
+   178,
+   12.4
+  ],
+  "2005-2009": [
+   15,
+   176,
+   8.5
+  ],
+  "2010-2014": [
+   19,
+   186,
+   10.2
+  ],
+  "2015-2019": [
+   13,
+   270,
+   4.8
+  ],
+  "2020-2021": [
+   4,
+   111,
+   3.6
+  ]
+ },
+ "pa_trend": [
+  {
+   "label": "1975-2021",
+   "n": 1967,
+   "k": 156,
+   "slope_per_decade": 0.065,
+   "ci95_cluster": [
+    -0.071,
+    0.202
+   ],
+   "p": 0.349
+  },
+  {
+   "label": "1989-2021",
+   "n": 1410,
+   "k": 140,
+   "slope_per_decade": -0.391,
+   "ci95_cluster": [
+    -0.643,
+    -0.138
+   ],
+   "p": 0.002
+  },
+  {
+   "label": "1995-2021",
+   "n": 1122,
+   "k": 99,
+   "slope_per_decade": -0.502,
+   "ci95_cluster": [
+    -0.846,
+    -0.159
+   ],
+   "p": 0.004
+  }
+ ],
+ "pa_conflicts_per_window": [
+  [
+   "1975-1979",
+   6,
+   58,
+   10.3
+  ],
+  [
+   "1980-1984",
+   3,
+   64,
+   4.7
+  ],
+  [
+   "1985-1989",
+   7,
+   61,
+   11.5
+  ],
+  [
+   "1990-1994",
+   27,
+   92,
+   29.3
+  ],
+  [
+   "1995-1999",
+   23,
+   73,
+   31.5
+  ],
+  [
+   "2000-2004",
+   16,
+   58,
+   27.6
+  ],
+  [
+   "2005-2009",
+   12,
+   54,
+   22.2
+  ],
+  [
+   "2010-2014",
+   11,
+   63,
+   17.5
+  ],
+  [
+   "2015-2019",
+   13,
+   88,
+   14.8
+  ],
+  [
+   "2020-2021",
+   5,
+   68,
+   7.4
+  ]
+ ]
+}

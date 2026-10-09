@@ -1,0 +1,4 @@
+sans: IBMPlexSans[wdth,wght].ttf {'wdth': 100, 'wght': 400}
+sans-bold: IBMPlexSans[wdth,wght].ttf {'wdth': 100, 'wght': 600}
+serif: SourceSerif4[opsz,wght].ttf {'opsz': 36, 'wght': 600}
+italic: SourceSerif4-Italic[opsz,wght].ttf {'opsz': 20, 'wght': 400}

@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<title>How conflicts end and whether agreements hold: guess first, then see (UCDP toy models)</title>
+<meta name="description" content="Two guesses about armed conflicts and peace agreements, answered with open UCDP data, for the 2026 Nobel Peace Prize. Educational demos made to show an open-source tool. Not research.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nobel 2026 Lab">
+<meta property="og:title" content="Guess first, then see: how conflicts end, whether agreements hold">
+<meta property="og:description" content="How do armed conflicts end, and do peace agreements hold? Guess, then see the open UCDP data. Educational demos made to show an open-source tool. Not research.">
+<meta property="og:url" content="https://faviovazquez.github.io/nobel-2026-lab/2026/peace/page/">
+<meta property="og:image" content="https://faviovazquez.github.io/nobel-2026-lab/2026/peace/page/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bars by decade on a graphite ground: how armed conflict episodes ended, beside the title Guess first, then see">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+(function () { var t = null; try { t = localStorage.getItem("peace-theme"); } catch (e) {}
+  if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", t);
+  if (location.hash === "#og") document.documentElement.classList.add("og"); })();
+</script>
+<style>
+@font-face { font-family: "Peace Page Sans"; src: url("fonts/sans.woff2") format("woff2"); font-weight: 100 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Peace Page Sans"; src: url("fonts/sans-bold.woff2") format("woff2"); font-weight: 501 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Peace Page Serif"; src: url("fonts/serif.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Peace Page Serif"; src: url("fonts/italic.woff2") format("woff2"); font-weight: 100 900; font-style: italic; font-display: swap; }
+:root {
+  --bg: #1c1d1f; --bg2: #25272a; --card: #222427; --fg: #ece8e1; --soft: #cfcac1; --muted: #a39f97; --rule: rgba(236, 232, 225, .13);
+  --accent: #e8a25a; --accent-soft: rgba(232, 162, 90, .2); --second: #8e959d; --second-soft: rgba(142, 149, 157, .25);
+  --pre-bg: #43291a; --pre-fg: #ffd2ad; --focus: #f2c48d;
+  --sans: "Peace Page Sans", "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --serif: "Peace Page Serif", "Source Serif 4", Charter, "Times New Roman", serif;
+}
+:root[data-theme="light"] {
+  --bg: #f5f3ef; --bg2: #ebe8e2; --card: #fbfaf7; --fg: #1f2124; --soft: #3c3e42; --muted: #5d5a55; --rule: rgba(31, 33, 36, .13);
+  --accent: #a3560f; --accent-soft: rgba(163, 86, 15, .16); --second: #6a7079; --second-soft: rgba(106, 112, 121, .22);
+  --pre-bg: #f8dcc6; --pre-fg: #6b2c08; --focus: #a3560f;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 400 17px/1.6 var(--sans); overflow-x: hidden; font-variant-numeric: tabular-nums; }
+a { color: var(--accent); text-underline-offset: .18em; }
+:focus-visible { outline: 2.5px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+.wrap { width: min(46rem, calc(100% - 32px)); margin: 0 auto; }
+.wide { width: min(58rem, calc(100% - 32px)); margin: 0 auto; }
+header { padding: 1.1rem 0 1.4rem; position: relative; }
+.label { display: inline-block; margin: 0 0 1rem; font-weight: 600; font-size: .92rem; border: 1.5px solid var(--accent); color: var(--fg); padding: .25rem .65rem; border-radius: 6px; max-width: calc(100% - 7.5rem); }
+.prelim { background: var(--pre-bg); color: var(--pre-fg); border-radius: 8px; padding: .55rem .85rem; margin: 0 0 1rem; font-size: .95rem; }
+.prelim[hidden] { display: none; }
+.theme { position: absolute; top: 1.1rem; right: 0; font: 500 .85rem var(--sans); color: var(--fg); background: var(--card); border: 1.5px solid var(--rule); border-radius: 999px; padding: .3rem .75rem; cursor: pointer; }
+.kicker { color: var(--accent); font-weight: 600; letter-spacing: .06em; text-transform: uppercase; font-size: .85rem; margin: .4rem 0 .2rem; }
+h1, h2 { font-family: var(--serif); font-weight: 600; line-height: 1.08; letter-spacing: -.01em; }
+h1 { font-size: clamp(2.5rem, 1.6rem + 5vw, 4.4rem); margin: 0 0 .6rem; }
+h2 { font-size: clamp(1.7rem, 1.3rem + 2vw, 2.4rem); margin: .2rem 0 .6rem; }
+.sub { color: var(--soft); font-size: 1.08rem; margin: .3rem 0; }
+.how { color: var(--soft); }
+nav.toc { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; margin-top: .8rem; }
+.part { padding: 2.2rem 0 1rem; border-top: 1px solid var(--rule); }
+.room { color: var(--accent); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: .82rem; margin: 0; }
+.lede { color: var(--soft); }
+.guess { background: var(--card); border: 1.5px solid var(--rule); border-radius: 12px; padding: 1rem 1.1rem; margin: 1rem 0; }
+.guess .q { font-weight: 600; margin: 0 0 .6rem; }
+.row { display: flex; align-items: center; gap: .9rem; flex-wrap: wrap; }
+input[type=range] { flex: 1 1 12rem; accent-color: var(--accent); min-width: 0; height: 2rem; }
+output { font: 600 1.3rem var(--serif); min-width: 7.5rem; color: var(--accent); }
+button.go { font: 600 1rem var(--sans); background: var(--accent); color: var(--bg); border: 0; border-radius: 8px; padding: .55rem 1.1rem; cursor: pointer; margin-top: .7rem; }
+button.go:disabled { opacity: .45; cursor: not-allowed; }
+.reveal[hidden] { display: none; }
+.verdict { font-weight: 600; margin: .8rem 0 .2rem; }
+.big { font: 600 clamp(2.6rem, 1.8rem + 4vw, 4rem)/1 var(--serif); color: var(--accent); margin: .4rem 0 .2rem; }
+.toggle { display: inline-flex; border: 1.5px solid var(--rule); border-radius: 999px; padding: 3px; margin: 1rem 0 .4rem; flex-wrap: wrap; }
+.toggle button { font: 500 .95rem var(--sans); color: var(--soft); background: transparent; border: 0; border-radius: 999px; padding: .4rem .9rem; cursor: pointer; }
+.toggle button[aria-pressed="true"] { background: var(--accent); color: var(--bg); font-weight: 600; }
+figure.chart { margin: .4rem 0 .6rem; }
+figure.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+figcaption { color: var(--muted); font-size: .9rem; }
+.note { margin: .7rem 0; }
+details.more { margin: .8rem 0; } details.more > summary { cursor: pointer; color: var(--accent); font-weight: 600; } details.more[open] > summary { margin-bottom: .2rem; }
+.small { font-size: .9rem; } .muted { color: var(--muted); }
+.missing { color: var(--muted); font-style: italic; }
+svg text { fill: var(--muted); font: 400 12px var(--sans); }
+svg .grid { stroke: var(--rule); stroke-width: 1; }
+svg .bar { fill: var(--accent); transition: y .5s ease, height .5s ease; }
+svg .bar.partial { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.2; stroke-dasharray: 3 2; }
+svg .ci { stroke: var(--fg); stroke-width: 1.4; opacity: .7; }
+svg .low { stroke: var(--second); stroke-width: 2.2; fill: none; stroke-dasharray: 5 3; }
+svg .lowdot { fill: var(--second); }
+svg .km { fill: none; stroke-width: 2.8; }
+svg .km.sel { stroke: var(--accent); }
+svg .km.other { stroke: var(--second); stroke-width: 1.8; stroke-dasharray: 4 3; }
+svg .hmark { stroke: var(--muted); stroke-dasharray: 2 3; }
+svg .dot { fill: var(--accent); } svg .val { fill: var(--fg); font-weight: 600; font-size: 13px; }
+footer { border-top: 1px solid var(--rule); margin-top: 2rem; padding: 1.4rem 0 3rem; color: var(--soft); font-size: .92rem; }
+footer h2 { font-size: 1.3rem; } footer p { margin: .5rem 0; overflow-wrap: anywhere; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+.og body { overflow: hidden; }
+.og #hold, .og footer, .og .guess, .og nav.toc, .og .how, .og #ends .lede, .og #ends-notes, .og details.more, .og .theme { display: none !important; }
+.og #prize, .og #ends-sub, .og .toggle, .og .room, .og figcaption { display: none !important; } .og .big { font-size: 3.2rem; margin: .1rem 0; }
+.og header { padding-bottom: .2rem; } .og h1 { font-size: 3.4rem; margin-bottom: .2rem; }
+.og .wrap { width: 1100px; } .og .part { padding-top: .6rem; border: 0; } .og .verdict { display: none; }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <p class="label" id="label">Educational demos made to show an open-source tool. Not research.</p>
+  <button class="theme" id="theme" type="button"></button>
+  <div class="prelim" id="prelim" role="status" hidden></div>
+  <p class="kicker" id="kicker"></p>
+  <h1>Guess first, then see</h1>
+  <p class="sub" id="prize"></p>
+  <p class="how">Two questions about armed conflicts and peace agreements, in two rooms. Move the slider to make your guess, then reveal what the open data of the Uppsala Conflict Data Program (UCDP) say. Every number on the page comes from those data.</p>
+  <nav class="toc"><a href="#ends">How do armed conflicts end?</a><a href="#hold">Do peace agreements hold?</a><a href="#credits">Credits</a></nav>
+</header>
+<main>
+<section class="part wrap" id="ends" aria-labelledby="ends-h">
+  <p class="room">First room</p>
+  <h2 id="ends-h">How do armed conflicts end?</h2>
+  <p class="lede" id="ends-lede"></p>
+  <div class="guess" id="ends-guess"><p class="q" id="ends-q"></p><div id="ends-slider"></div><button class="go" id="ends-go" type="button" disabled>Reveal</button></div>
+  <div class="reveal" id="ends-reveal" hidden>
+    <p class="verdict" id="ends-verdict" aria-live="polite"></p>
+    <p class="big" id="ends-big"></p>
+    <p id="ends-sub"></p>
+    <div class="toggle" role="group" aria-label="Which endings to count"><button type="button" id="view-all" aria-pressed="true">All endings</button><button type="button" id="view-clear" aria-pressed="false">Clear outcomes only</button></div>
+    <figure class="chart"><div id="ends-chart"></div><figcaption id="ends-legend"></figcaption></figure>
+    <div id="ends-notes"><p class="note" id="ends-note"></p><details class="more"><summary>More on this answer</summary><p class="note" id="ends-steady"></p><p class="note muted" id="ends-trend"></p><p class="small muted" id="ends-cens"></p></details></div>
+  </div>
+</section>
+<section class="part wrap" id="hold" aria-labelledby="hold-h">
+  <p class="room">Second room</p>
+  <h2 id="hold-h">Do peace agreements hold?</h2>
+  <p class="lede" id="hold-lede"></p>
+  <div class="guess" id="hold-guess"><p class="q" id="hold-q"></p><div id="hold-slider"></div><button class="go" id="hold-go" type="button" disabled>Reveal</button></div>
+  <div class="reveal" id="hold-reveal" hidden>
+    <p class="verdict" id="hold-verdict" aria-live="polite"></p>
+    <p class="big" id="hold-big"></p>
+    <p id="hold-ci"></p>
+    <div class="toggle" role="group" aria-label="Which clock"><button type="button" id="clock-main" aria-pressed="true">From the first quiet year</button><button type="button" id="clock-strict" aria-pressed="false">From the signature</button></div>
+    <figure class="chart"><div id="hold-chart"></div><figcaption id="hold-legend"></figcaption></figure>
+    <p class="note" id="hold-note"></p>
+    <details class="more"><summary>More on this answer</summary><p class="note" id="hold-main"></p><p class="note" id="hold-never"></p><p class="note" id="hold-types"></p><p class="note muted" id="hold-dep"></p></details>
+  </div>
+</section>
+</main>
+<footer class="wrap" id="credits">
+  <h2>Credits</h2>
+  <div id="cred"></div>
+  <p>Made with <a href="https://github.com/FavioVazquez/showtime">showtime</a>. Own code, MIT licence.</p>
+  <p class="muted">Educational demos made to show an open-source tool. Not research.</p>
+</footer>
+<script src="data.js"></script>
+<script>
+(function () {
+  "use strict";
+  const D = window.NOBEL_PEACE_DATA || null;
+  const $ = (s) => document.querySelector(s);
+  const NS = "http://www.w3.org/2000/svg";
+  const root = document.documentElement;
+  const OG = root.classList.contains("og");
+  const NB = "\u00a0", MINUS = "\u2212";
+  const pct = (x) => Number(x).toFixed(1) + NB + "%";
+  const sg = (x, d) => (x < 0 ? MINUS : "+") + Math.abs(x).toFixed(d);
+  const range = (a, b) => Number(a).toFixed(1) + " to " + Number(b).toFixed(1);
+  function el(tag, attrs, parent, text) {
+    const e = document.createElementNS(NS, tag);
+    for (const k in attrs || {}) e.setAttribute(k, attrs[k]);
+    if (text != null) e.textContent = text;
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  function h(tag, text, parent, cls) {
+    const e = document.createElement(tag);
+    if (text != null) e.textContent = text;
+    if (cls) e.className = cls;
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  function link(text, href, parent) { const a = h("a", text, parent); a.href = href; return a; }
+
+  // theme: dark first, light on request (or when the system asks for it)
+  function setTheme(t) {
+    root.setAttribute("data-theme", t);
+    $("#theme").textContent = t === "dark" ? "Light theme" : "Dark theme";
+    $("#theme").setAttribute("aria-label", t === "dark" ? "Switch to the light theme" : "Switch to the dark theme");
+  }
+  setTheme(root.getAttribute("data-theme") || "dark");
+  $("#theme").addEventListener("click", () => {
+    const t = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    setTheme(t);
+    try { localStorage.setItem("peace-theme", t); } catch (e) { /* storage may be off */ }
+  });
+
+  if (!D) { h("p", "The data file (data.js) is not in this copy.", $("main"), "missing"); return; }
+  $("#label").textContent = D.tag;
+  const notFinal = Object.keys(D.inputs).filter((k) => D.inputs[k] !== "final");
+  if (D.preliminary) {
+    const p = $("#prelim"); p.hidden = false;
+    p.textContent = (D.placeholder ? "Placeholder numbers. " : "Preliminary. ") + "Not final yet: " + notFinal.map((k) => k + " (" + D.inputs[k] + ")").join(", ") + ".";
+  }
+  const P = D.prize;
+  $("#kicker").textContent = "The Nobel Peace Prize " + P.year;
+  $("#prize").textContent = P.laureate + ", \u201c" + P.citation + "\u201d.";
+  const ins = (blk, i) => (blk.insights[i] || {}).text || "";
+
+  function guessSlider(box, id, label, onPick) {
+    const row = h("div", null, box, "row");
+    const inp = document.createElement("input");
+    inp.type = "range"; inp.id = id; inp.min = 0; inp.max = 100; inp.step = 1; inp.value = 50;
+    inp.setAttribute("aria-label", label);
+    const out = h("output", "move me", null); out.id = id + "-out"; out.htmlFor = id;
+    inp.addEventListener("input", () => { out.textContent = inp.value + NB + "%"; onPick(Number(inp.value)); });
+    row.append(inp, out);
+    return inp;
+  }
+  function verdict(g, ans) {
+    const d = Math.abs(g - ans);
+    const how = d <= 5 ? "Close." : g < ans ? "Higher than your guess." : "Lower than your guess.";
+    return how + " You guessed " + g + NB + "%; the answer is " + pct(ans) + ".";
+  }
+  function widthOf(box) { return Math.max(300, Math.min(OG ? 1100 : 760, box.clientWidth || 700)); }
+  function svgBox(box, W, H, title, desc) {
+    box.textContent = "";
+    const s = el("svg", { viewBox: [0, 0, W, H].join(" "), role: "img", "aria-labelledby": box.id + "-t " + box.id + "-d" }, box);
+    el("title", { id: box.id + "-t" }, s, title);
+    el("desc", { id: box.id + "-d" }, s, desc);
+    return s;
+  }
+
+  // ---- first room: how conflicts end ------------------------------------------------------------------------
+  const E = D.ends;
+  let endsView = "all", endsGuess = null;
+  if (!E) { h("p", "This part is not in this copy: the results of the how-conflicts-end toy are missing.", $("#ends"), "missing"); $("#ends-guess").hidden = true; }
+  else {
+    $("#ends-lede").textContent = "UCDP codes how each episode of armed conflict ended, from " + E.years[0] + " to " + E.years[1] +
+      ": a peace agreement, a ceasefire agreement, a victory for either side, low activity (the fighting fades below the threshold without any of these), or one side ceasing to exist.";
+    $("#ends-q").textContent = "Of all the endings since " + E.years[0] + ", what share were a peace agreement or a ceasefire agreement?";
+    guessSlider($("#ends-slider"), "ends-guess-input", "Your guess, in per cent", (v) => { endsGuess = v; $("#ends-go").disabled = false; });
+    $("#ends-go").addEventListener("click", revealEnds);
+    $("#view-all").addEventListener("click", () => setView("all"));
+    $("#view-clear").addEventListener("click", () => setView("clear"));
+  }
+  function revealEnds() {
+    $("#ends-reveal").hidden = false;
+    $("#ends-verdict").textContent = endsGuess == null ? "" : verdict(endsGuess, E.pct);
+    $("#ends-big").textContent = pct(E.pct);
+    $("#ends-sub").textContent = E.agree + " of " + E.endings + " endings from " + E.years[0] + " to " + E.years[1] +
+      " were a peace agreement or a ceasefire agreement.";
+    $("#ends-steady").textContent = ins(E, 1);
+    $("#ends-cens").textContent = ins(E, 4);
+    setView(endsView);
+  }
+  function setView(v) {
+    endsView = v;
+    $("#view-all").setAttribute("aria-pressed", String(v === "all"));
+    $("#view-clear").setAttribute("aria-pressed", String(v === "clear"));
+    const T = E.trends, lvl = E.ci_level;
+    const tr = (t) => sg(t.slope_log_odds_per_decade, 3) + " log-odds per decade (" + lvl + NB + "% interval " +
+      t.slope_ci95[0].toFixed(3).replace("-", MINUS) + " to " + t.slope_ci95[1].toFixed(3).replace("-", MINUS) + ")";
+    if (v === "all") {
+      $("#ends-note").textContent = ins(E, 2);
+      $("#ends-trend").textContent = "Trend across all endings: " + tr(T.all) + ". Low activity: " + tr(T.low) + ".";
+    } else {
+      $("#ends-note").textContent = ins(E, 3);
+      $("#ends-trend").textContent = "Among the " + E.second.clear_outcome_endings + " endings with a clear outcome (an agreement, a ceasefire or a victory), the trend is " + tr(T.clear) + ".";
+    }
+    const part = E.decades.filter((d) => d.n_years < E.decades[1].n_years);
+    $("#ends-legend").textContent = (v === "all"
+      ? "Bars: agreement or ceasefire, share of all endings. Dashed line: low activity (faded out)."
+      : "Bars: agreement or ceasefire, share of the endings with a clear outcome.") +
+      " Whiskers: " + lvl + NB + "% interval. Starred decades have fewer years: " + part.map((d) => d.decade + " = " + d.years).join(", ") + ".";
+    endsChart();
+  }
+  function endsChart() {
+    const box = $("#ends-chart"), W = widthOf(box), H = Math.round(W * (OG ? .27 : .5)), m = { l: 44, r: 8, t: 14, b: 30 };
+    const all = endsView === "all";
+    const s = svgBox(box, W, H, all ? "How conflict episodes ended, by decade: all endings" : "How conflict episodes ended, by decade: clear outcomes only",
+      E.decades.map((d) => d.decade + ": " + pct(all ? d.pct : d.clear_pct) + (all ? ", low activity " + pct(d.low) : "")).join("; "));
+    const y = (v) => m.t + (1 - v / 100) * (H - m.t - m.b);
+    for (let v = 0; v <= 100; v += 25) {
+      el("line", { class: "grid", x1: m.l, x2: W - m.r, y1: y(v), y2: y(v) }, s);
+      el("text", { x: m.l - 6, y: y(v) + 4, "text-anchor": "end" }, s, v + NB + "%");
+    }
+    const bw = (W - m.l - m.r) / E.decades.length, full = E.decades[1].n_years;
+    const pts = [];
+    E.decades.forEach((d, i) => {
+      const val = all ? d.pct : d.clear_pct, ci = all ? d.ci : d.clear_ci, x0 = m.l + i * bw, cx = x0 + bw / 2, partial = d.n_years < full;
+      const r = el("rect", { class: "bar" + (partial ? " partial" : ""), x: x0 + bw * .18, width: bw * .64, y: y(val), height: y(0) - y(val) }, s);
+      el("title", {}, r, d.decade + " (" + d.years + "): " + pct(val) + ", " + (all ? d.agree + " of " + d.n : d.agree + " of " + d.clear_n) + " endings");
+      el("line", { class: "ci", x1: cx, x2: cx, y1: y(ci[0]), y2: y(ci[1]) }, s);
+      el("line", { class: "ci", x1: cx - 4, x2: cx + 4, y1: y(ci[1]), y2: y(ci[1]) }, s);
+      el("line", { class: "ci", x1: cx - 4, x2: cx + 4, y1: y(ci[0]), y2: y(ci[0]) }, s);
+      const lab = bw < 52 ? "\u2019" + d.decade.slice(2) : d.decade;
+      el("text", { x: cx, y: H - m.b + 18, "text-anchor": "middle" }, s, lab + (partial ? "*" : ""));
+      pts.push([cx, y(d.low)]);
+    });
+    if (all) {
+      el("polyline", { class: "low", points: pts.map((p) => p.join(",")).join(" ") }, s);
+      pts.forEach((p) => el("circle", { class: "lowdot", cx: p[0], cy: p[1], r: 3.5 }, s));
+    }
+  }
+
+  // ---- second room: do agreements hold -------------------------------------------------------------------
+  const HD = D.hold;
+  let clock = "main", holdGuess = null;
+  if (!HD) { h("p", "This part is not in this copy: the results of the do-agreements-hold toy are missing.", $("#hold"), "missing"); $("#hold-guess").hidden = true; }
+  else {
+    $("#hold-lede").textContent = "UCDP lists " + HD.agreements + " peace agreements signed from " + HD.signed_years[0] + " to " + HD.signed_years[1] +
+      ". A year counts as quiet when the conflict had fewer than " + HD.threshold + " battle-related deaths. Start the clock at the first quiet year after signing, and stop it when the fighting comes back.";
+    $("#hold-q").textContent = "Of the agreements followed by a quiet year, what share were still quiet " + HD.horizon + " years after the fighting first stopped?";
+    guessSlider($("#hold-slider"), "hold-guess-input", "Your guess, in per cent", (v) => { holdGuess = v; $("#hold-go").disabled = false; });
+    $("#hold-go").addEventListener("click", revealHold);
+    $("#clock-main").addEventListener("click", () => setClock("main"));
+    $("#clock-strict").addEventListener("click", () => setClock("strict"));
+  }
+  function revealHold() {
+    $("#hold-reveal").hidden = false;
+    $("#hold-verdict").textContent = holdGuess == null ? "" : verdict(holdGuess, HD.main.pct);
+    $("#hold-main").textContent = ins(HD, 2);
+    $("#hold-never").textContent = ins(HD, 1);
+    $("#hold-types").textContent = ins(HD, 4) + " On this clock the three types differ much less than from the signature (log-rank p = " +
+      HD.main.logrank.three_types_p + ", against " + HD.strict.logrank.three_types_p + "; both tests treat agreements as independent). The data cannot rank the types.";
+    $("#hold-dep").textContent = ins(HD, 0) + " The intervals here resample whole groups of linked conflicts (" + HD.resamples + " times).";
+    setClock(clock);
+  }
+  function setClock(c) {
+    clock = c;
+    $("#clock-main").setAttribute("aria-pressed", String(c === "main"));
+    $("#clock-strict").setAttribute("aria-pressed", String(c === "strict"));
+    const K = HD[c], lvl = HD.ci_level;
+    $("#hold-big").textContent = pct(K.pct);
+    $("#hold-ci").textContent = "still quiet " + HD.horizon + " years on, of " + K.n + " agreements; " + lvl + NB + "% interval " + range(K.ci[0], K.ci[1]) + ", allowing for linked conflicts.";
+    $("#hold-note").textContent = c === "main"
+      ? "The clock starts at the first quiet year after signing. The data cannot rank the agreement types."
+      : "Counted from the signature, fighting that never stopped counts as \u201cresumed\u201d. " + ins(HD, 3);
+    $("#hold-legend").textContent = "Share of agreements with no fighting yet in the same conflict (Kaplan-Meier). Solid: " +
+      (c === "main" ? "from the first quiet year" : "from the signing year") + "; dashed: the other clock. Whisker: " + lvl + NB + "% interval. Drawn to " + HD.figure_years + " years.";
+    kmChart();
+  }
+  function kmChart() {
+    const box = $("#hold-chart"), W = widthOf(box), H = Math.round(W * .5), m = { l: 44, r: 12, t: 14, b: 40 }, fy = HD.figure_years;
+    const K = HD[clock], O = HD[clock === "main" ? "strict" : "main"];
+    const s = svgBox(box, W, H, "Share of agreements still quiet, by years on the clock", "Kaplan-Meier curve " + (clock === "main" ? "from the first quiet year" : "from the signing year") +
+      ": " + pct(K.pct) + " still quiet at " + HD.horizon + " years (" + range(K.ci[0], K.ci[1]) + "); the other clock: " + pct(O.pct) + ".");
+    const X = (t) => m.l + t / fy * (W - m.l - m.r), Y = (v) => m.t + (1 - v) * (H - m.t - m.b);
+    for (let v = 0; v <= 1; v += .25) {
+      el("line", { class: "grid", x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v) }, s);
+      el("text", { x: m.l - 6, y: Y(v) + 4, "text-anchor": "end" }, s, Math.round(v * 100) + NB + "%");
+    }
+    for (let t = 0; t <= fy; t += 5) el("text", { x: X(t), y: H - m.b + 18, "text-anchor": "middle" }, s, String(t));
+    el("text", { x: (m.l + W - m.r) / 2, y: H - 4, "text-anchor": "middle" }, s, clock === "main" ? "years from the year before the first quiet year" : "years from the signing year");
+    el("line", { class: "hmark", x1: X(HD.horizon), x2: X(HD.horizon), y1: Y(0), y2: Y(1) }, s);
+    const path = (cv) => "M" + X(0) + "," + Y(1) + cv.map((p) => "H" + X(p[0]) + "V" + Y(p[1])).join("") + "H" + X(fy);
+    el("path", { class: "km other", d: path(O.curve) }, s);
+    el("path", { class: "km sel", d: path(K.curve) }, s);
+    const hx = X(HD.horizon);
+    el("line", { class: "ci", x1: hx, x2: hx, y1: Y(K.ci[0] / 100), y2: Y(K.ci[1] / 100) }, s);
+    el("circle", { class: "dot", cx: hx, cy: Y(K.pct / 100), r: 5 }, s);
+    el("text", { class: "val", x: hx + 9, y: Y(K.pct / 100) - 8 }, s, pct(K.pct));
+  }
+
+  // ---- credits ------------------------------------------------------------------------------------------
+  const cred = $("#cred");
+  const p1 = h("p", "Data: ", cred); link("Uppsala Conflict Data Program (UCDP)", D.links.ucdp, p1);
+  p1.append(", licensed "); link((E || HD) ? (E ? E.credit.licence : HD.credit.licence) : "CC BY", D.links.licence, p1); p1.append(".");
+  if (E) h("p", E.credit.name + ", " + E.credit.version + " (codebook: " + E.credit.codebook + "; UCDP/PRIO Armed Conflict Dataset " + E.credit.acd_version + "). Cite: " + E.credit.citation, cred);
+  if (HD) {
+    h("p", HD.credit.pa.name + " " + HD.credit.pa.version + ". Cite: " + HD.credit.pa.citation + " Codebook: " + HD.credit.pa.codebook_citation, cred);
+    if (!E || HD.credit.term.citation !== E.credit.citation) h("p", HD.credit.term.name + ", " + HD.credit.term.version + ". Cite: " + HD.credit.term.citation, cred);
+  }
+  const p2 = h("p", "The prize: ", cred); link(P.by + ", nobelprize.org", P.url, p2); p2.append(".");
+  const p3 = h("p", "The numbers come from two toys: ", cred); link("how conflicts end", D.links.ends, p3); p3.append(" and "); link("do agreements hold", D.links.hold, p3);
+  p3.append(". Global totals only; no conflict or country is named. Correlation, not cause.");
+  const p4 = h("p", "Fonts: " + D.fonts.sans + " and " + D.fonts.serif + ", " + D.fonts.licence + ", bundled as subsets (", cred); link("licence", D.fonts.file, p4); p4.append(").");
+
+  let lastW = window.innerWidth;
+  window.addEventListener("resize", () => { if (window.innerWidth === lastW) return; lastW = window.innerWidth;
+    if (E && !$("#ends-reveal").hidden) endsChart(); if (HD && !$("#hold-reveal").hidden) kmChart(); });
+  if (OG && E) revealEnds();
+  window.__peace = { endsView: () => endsView, clock: () => clock };
+})();
+</script>
+</body>
+</html>

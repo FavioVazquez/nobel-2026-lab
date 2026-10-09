@@ -1,0 +1,878 @@
+{
+ "label": "Educational demos made to show an open-source tool. Not research.",
+ "prize": "Nobel Peace Prize 2026, Navanethem Pillay, \"for her efforts to promote peace and international law\" (nobelprize.org)",
+ "datasets": {
+  "peace_agreements": {
+   "name": "UCDP Peace Agreement Dataset",
+   "version": "22.2",
+   "url": "https://ucdp.uu.se/downloads/peace/ucdp-peace-agreements-222.xlsx",
+   "sha256": "9a5666173defffe4c2937d96c5201b8e8891f289b1c32e0e24f45f517abc161a",
+   "rows": 374,
+   "codebook": "UCDP Peace Agreement Dataset Codebook v 22.1, Stina Högbladh, 2022 (the newest codebook on the page)",
+   "citation": "Pettersson, Therese; Stina Högbladh & Magnus Öberg (2019) Organized violence, 1989-2018 and peace agreements. Journal of Peace Research 56(4).",
+   "codebook_citation": "Högbladh, Stina (2022) UCDP Peace Agreement Dataset Codebook v 22.1 (https://ucdp.uu.se/downloads/)",
+   "signed_years": [
+    1975,
+    2021
+   ]
+  },
+  "termination": {
+   "name": "UCDP Conflict Termination Dataset, conflict level (active conflict-years)",
+   "version": "v.4 2024",
+   "url": "https://ucdp.uu.se/downloads/monadterm/UCDPConflictTerminationDataset_v4_2024_Conflict.csv",
+   "sha256": "6f3a739fa5c6e23ab3dde169d0d06f139677b7a9cf5ce5b2dcb3bf3ab39f9b7d",
+   "rows": 2752,
+   "citation": "Kreutz, Joakim, 2010. How and When Armed Conflicts End: Introducing the UCDP Conflict Termination Dataset. Journal of Peace Research 47(2): 243-250.",
+   "acd_version": "25.1",
+   "last_year": 2024
+  },
+  "licence": "CC BY 4.0"
+ },
+ "definition": {
+  "active": "a conflict id is active in a calendar year with at least 25 battle-related deaths; a year with fewer is quiet",
+  "battle_deaths_threshold": 25,
+  "main": "the agreement first has to bring the fighting below the threshold: the clock starts at the first calendar year after signing in which no conflict id the agreement lists is active, and runs to the next active year (counted from the year before the first quiet year, so holding at 5 years means 5 or more quiet years in a row); agreements that never got below the threshold by 2024 are reported apart",
+  "strict": "the clock starts at the signing year and runs to the first later active year, so fighting that never stopped counts as resumed",
+  "settled_late": "the first quiet year came 5 or more years after signing, which is hard to credit to the agreement",
+  "censoring": "agreements with no later active year are still holding when the data stop (2024)",
+  "unit": "one agreement; agreements in linked conflicts are not independent",
+  "figure_years": 20,
+  "intervals": "main intervals: 95 % percentile cluster bootstrap over linked conflict groups (2000 resamples, seed 2026); Greenwood log-log intervals are kept for reference and are too narrow"
+ },
+ "pa_type_counts": {
+  "Full": 77,
+  "Partial": 213,
+  "Peace process": 84
+ },
+ "horizons_years": [
+  5,
+  10
+ ],
+ "ci_level_pct": 95,
+ "dependence": {
+  "linked_groups": 72,
+  "largest_group": 34,
+  "single_agreement_groups": 24,
+  "group_sizes": [
+   34,
+   22,
+   17,
+   16,
+   15,
+   13,
+   13,
+   13,
+   12,
+   12,
+   11,
+   10,
+   10,
+   9,
+   9,
+   9,
+   8,
+   8,
+   8,
+   8,
+   6,
+   6,
+   6,
+   5,
+   5,
+   5,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   3,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "share_in_groups_of_5_or_more_pct": 77.5,
+  "bootstrap_resamples": 2000,
+  "bootstrap_seed": 2026
+ },
+ "main": {
+  "reached_a_quiet_year": 352,
+  "never_below_threshold": {
+   "All": 22,
+   "Full": 3,
+   "Partial": 13,
+   "Peace process": 6
+  },
+  "never_below_threshold_signed_2015_or_later": 14,
+  "years_from_signing_to_first_quiet_year": {
+   "1": 169,
+   "2-4": 88,
+   "5_or_more": 95
+  },
+  "groups": {
+   "All": {
+    "agreements": 352,
+    "resumed": 200,
+    "still_holding_when_data_stop": 152,
+    "resumed_the_next_year": 0,
+    "median_years": 6,
+    "median_ci95_years": [
+     5,
+     10
+    ],
+    "holding_at_5_years_pct": 52.3,
+    "holding_at_5_years_ci95_pct": [
+     46.9,
+     57.5
+    ],
+    "holding_at_10_years_pct": 43.8,
+    "holding_at_10_years_ci95_pct": [
+     38.4,
+     49.2
+    ],
+    "linked_groups": 70,
+    "median_cluster_ci95_years": [
+     3,
+     null
+    ],
+    "holding_at_5_years_cluster_ci95_pct": [
+     37.4,
+     68.1
+    ],
+    "holding_at_10_years_cluster_ci95_pct": [
+     29.2,
+     60.8
+    ],
+    "curve": [
+     {
+      "t": 0,
+      "at_risk": 352,
+      "resumed": 0,
+      "S": 1.0,
+      "lo": 1.0,
+      "hi": 1.0
+     },
+     {
+      "t": 2,
+      "at_risk": 352,
+      "resumed": 108,
+      "S": 0.6932,
+      "lo": 0.6421,
+      "hi": 0.7385
+     },
+     {
+      "t": 3,
+      "at_risk": 242,
+      "resumed": 24,
+      "S": 0.6244,
+      "lo": 0.5715,
+      "hi": 0.6727
+     },
+     {
+      "t": 4,
+      "at_risk": 207,
+      "resumed": 16,
+      "S": 0.5762,
+      "lo": 0.5224,
+      "hi": 0.6262
+     },
+     {
+      "t": 5,
+      "at_risk": 175,
+      "resumed": 16,
+      "S": 0.5235,
+      "lo": 0.4689,
+      "hi": 0.5751
+     },
+     {
+      "t": 6,
+      "at_risk": 158,
+      "resumed": 8,
+      "S": 0.497,
+      "lo": 0.4423,
+      "hi": 0.5492
+     },
+     {
+      "t": 7,
+      "at_risk": 146,
+      "resumed": 5,
+      "S": 0.48,
+      "lo": 0.4252,
+      "hi": 0.5326
+     },
+     {
+      "t": 8,
+      "at_risk": 141,
+      "resumed": 4,
+      "S": 0.4664,
+      "lo": 0.4116,
+      "hi": 0.5192
+     },
+     {
+      "t": 9,
+      "at_risk": 137,
+      "resumed": 2,
+      "S": 0.4595,
+      "lo": 0.4048,
+      "hi": 0.5124
+     },
+     {
+      "t": 10,
+      "at_risk": 131,
+      "resumed": 6,
+      "S": 0.4385,
+      "lo": 0.3839,
+      "hi": 0.4917
+     },
+     {
+      "t": 11,
+      "at_risk": 124,
+      "resumed": 1,
+      "S": 0.435,
+      "lo": 0.3804,
+      "hi": 0.4882
+     },
+     {
+      "t": 13,
+      "at_risk": 118,
+      "resumed": 1,
+      "S": 0.4313,
+      "lo": 0.3767,
+      "hi": 0.4845
+     },
+     {
+      "t": 16,
+      "at_risk": 115,
+      "resumed": 2,
+      "S": 0.4238,
+      "lo": 0.3693,
+      "hi": 0.4772
+     },
+     {
+      "t": 21,
+      "at_risk": 105,
+      "resumed": 7,
+      "S": 0.3955,
+      "lo": 0.341,
+      "hi": 0.4495
+     }
+    ]
+   },
+   "Full": {
+    "agreements": 74,
+    "resumed": 36,
+    "still_holding_when_data_stop": 38,
+    "resumed_the_next_year": 0,
+    "median_years": 21,
+    "median_ci95_years": [
+     4,
+     null
+    ],
+    "holding_at_5_years_pct": 59.0,
+    "holding_at_5_years_ci95_pct": [
+     46.9,
+     69.3
+    ],
+    "holding_at_10_years_pct": 51.0,
+    "holding_at_10_years_ci95_pct": [
+     38.7,
+     62.0
+    ],
+    "linked_groups": 43,
+    "median_cluster_ci95_years": [
+     3,
+     null
+    ],
+    "holding_at_5_years_cluster_ci95_pct": [
+     45.1,
+     77.1
+    ],
+    "holding_at_10_years_cluster_ci95_pct": [
+     33.9,
+     72.6
+    ]
+   },
+   "Partial": {
+    "agreements": 200,
+    "resumed": 117,
+    "still_holding_when_data_stop": 83,
+    "resumed_the_next_year": 0,
+    "median_years": 5,
+    "median_ci95_years": [
+     4,
+     9
+    ],
+    "holding_at_5_years_pct": 49.4,
+    "holding_at_5_years_ci95_pct": [
+     42.1,
+     56.3
+    ],
+    "holding_at_10_years_pct": 41.1,
+    "holding_at_10_years_ci95_pct": [
+     33.9,
+     48.1
+    ],
+    "linked_groups": 49,
+    "median_cluster_ci95_years": [
+     3,
+     null
+    ],
+    "holding_at_5_years_cluster_ci95_pct": [
+     32.2,
+     68.2
+    ],
+    "holding_at_10_years_cluster_ci95_pct": [
+     24.5,
+     60.4
+    ]
+   },
+   "Peace process": {
+    "agreements": 78,
+    "resumed": 47,
+    "still_holding_when_data_stop": 31,
+    "resumed_the_next_year": 0,
+    "median_years": 10,
+    "median_ci95_years": [
+     2,
+     21
+    ],
+    "holding_at_5_years_pct": 53.4,
+    "holding_at_5_years_ci95_pct": [
+     41.7,
+     63.8
+    ],
+    "holding_at_10_years_pct": 43.9,
+    "holding_at_10_years_ci95_pct": [
+     32.2,
+     54.9
+    ],
+    "linked_groups": 37,
+    "median_cluster_ci95_years": [
+     2,
+     null
+    ],
+    "holding_at_5_years_cluster_ci95_pct": [
+     33.5,
+     76.7
+    ],
+    "holding_at_10_years_cluster_ci95_pct": [
+     26.0,
+     67.3
+    ]
+   }
+  },
+  "without_settled_late": {
+   "All": {
+    "agreements": 257,
+    "resumed": 137,
+    "still_holding_when_data_stop": 120,
+    "resumed_the_next_year": 0,
+    "median_years": 10,
+    "median_ci95_years": [
+     6,
+     null
+    ],
+    "holding_at_5_years_pct": 58.3,
+    "holding_at_5_years_ci95_pct": [
+     52.0,
+     64.1
+    ],
+    "holding_at_10_years_pct": 49.6,
+    "holding_at_10_years_ci95_pct": [
+     43.3,
+     55.6
+    ],
+    "linked_groups": 66,
+    "median_cluster_ci95_years": [
+     5,
+     null
+    ],
+    "holding_at_5_years_cluster_ci95_pct": [
+     43.8,
+     72.9
+    ],
+    "holding_at_10_years_cluster_ci95_pct": [
+     34.1,
+     66.0
+    ]
+   },
+   "Full": {
+    "agreements": 53,
+    "resumed": 23,
+    "still_holding_when_data_stop": 30,
+    "resumed_the_next_year": 0,
+    "median_years": null,
+    "median_ci95_years": [
+     5,
+     null
+    ],
+    "holding_at_5_years_pct": 64.2,
+    "holding_at_5_years_ci95_pct": [
+     49.7,
+     75.4
+    ],
+    "holding_at_10_years_pct": 58.2,
+    "holding_at_10_years_ci95_pct": [
+     43.7,
+     70.2
+    ],
+    "linked_groups": 38,
+    "median_cluster_ci95_years": [
+     5,
+     null
+    ],
+    "holding_at_5_years_cluster_ci95_pct": [
+     49.0,
+     80.0
+    ],
+    "holding_at_10_years_cluster_ci95_pct": [
+     41.5,
+     76.6
+    ]
+   },
+   "Partial": {
+    "agreements": 158,
+    "resumed": 90,
+    "still_holding_when_data_stop": 68,
+    "resumed_the_next_year": 0,
+    "median_years": 7,
+    "median_ci95_years": [
+     5,
+     21
+    ],
+    "holding_at_5_years_pct": 53.7,
+    "holding_at_5_years_ci95_pct": [
+     45.5,
+     61.2
+    ],
+    "holding_at_10_years_pct": 45.0,
+    "holding_at_10_years_ci95_pct": [
+     37.0,
+     52.7
+    ],
+    "linked_groups": 44,
+    "median_cluster_ci95_years": [
+     4,
+     null
+    ],
+    "holding_at_5_years_cluster_ci95_pct": [
+     36.7,
+     70.7
+    ],
+    "holding_at_10_years_cluster_ci95_pct": [
+     26.5,
+     64.2
+    ]
+   },
+   "Peace process": {
+    "agreements": 46,
+    "resumed": 24,
+    "still_holding_when_data_stop": 22,
+    "resumed_the_next_year": 0,
+    "median_years": 21,
+    "median_ci95_years": [
+     6,
+     null
+    ],
+    "holding_at_5_years_pct": 67.3,
+    "holding_at_5_years_ci95_pct": [
+     51.7,
+     78.8
+    ],
+    "holding_at_10_years_pct": 55.1,
+    "holding_at_10_years_ci95_pct": [
+     39.3,
+     68.4
+    ],
+    "linked_groups": 30,
+    "median_cluster_ci95_years": [
+     6,
+     null
+    ],
+    "holding_at_5_years_cluster_ci95_pct": [
+     50.8,
+     81.0
+    ],
+    "holding_at_10_years_cluster_ci95_pct": [
+     36.9,
+     72.9
+    ]
+   }
+  },
+  "first_agreement_per_linked_group": {
+   "never_below_threshold": 2,
+   "All": {
+    "agreements": 70,
+    "resumed": 31,
+    "still_holding_when_data_stop": 39,
+    "resumed_the_next_year": 0,
+    "median_years": null,
+    "median_ci95_years": [
+     7,
+     null
+    ],
+    "holding_at_5_years_pct": 64.9,
+    "holding_at_5_years_ci95_pct": [
+     52.4,
+     75.0
+    ],
+    "holding_at_10_years_pct": 58.5,
+    "holding_at_10_years_ci95_pct": [
+     45.8,
+     69.3
+    ]
+   }
+  },
+  "logrank": {
+   "three_types_p": 0.34,
+   "full_vs_peace_process_p": 0.184,
+   "note": "naive: treats agreements as independent"
+  }
+ },
+ "strict": {
+  "groups": {
+   "All": {
+    "agreements": 374,
+    "resumed": 281,
+    "still_holding_when_data_stop": 93,
+    "resumed_the_next_year": 205,
+    "median_years": 1,
+    "median_ci95_years": [
+     1,
+     2
+    ],
+    "holding_at_5_years_pct": 31.5,
+    "holding_at_5_years_ci95_pct": [
+     26.9,
+     36.3
+    ],
+    "holding_at_10_years_pct": 26.5,
+    "holding_at_10_years_ci95_pct": [
+     22.1,
+     31.1
+    ],
+    "linked_groups": 72,
+    "median_cluster_ci95_years": [
+     1,
+     4
+    ],
+    "holding_at_5_years_cluster_ci95_pct": [
+     21.0,
+     44.6
+    ],
+    "holding_at_10_years_cluster_ci95_pct": [
+     17.0,
+     38.3
+    ],
+    "curve": [
+     {
+      "t": 0,
+      "at_risk": 374,
+      "resumed": 0,
+      "S": 1.0,
+      "lo": 1.0,
+      "hi": 1.0
+     },
+     {
+      "t": 1,
+      "at_risk": 374,
+      "resumed": 205,
+      "S": 0.4519,
+      "lo": 0.4008,
+      "hi": 0.5015
+     },
+     {
+      "t": 2,
+      "at_risk": 169,
+      "resumed": 17,
+      "S": 0.4064,
+      "lo": 0.3564,
+      "hi": 0.4557
+     },
+     {
+      "t": 3,
+      "at_risk": 152,
+      "resumed": 10,
+      "S": 0.3797,
+      "lo": 0.3305,
+      "hi": 0.4286
+     },
+     {
+      "t": 4,
+      "at_risk": 142,
+      "resumed": 10,
+      "S": 0.3529,
+      "lo": 0.3048,
+      "hi": 0.4014
+     },
+     {
+      "t": 5,
+      "at_risk": 131,
+      "resumed": 14,
+      "S": 0.3152,
+      "lo": 0.2687,
+      "hi": 0.3627
+     },
+     {
+      "t": 6,
+      "at_risk": 116,
+      "resumed": 8,
+      "S": 0.2935,
+      "lo": 0.2481,
+      "hi": 0.3402
+     },
+     {
+      "t": 7,
+      "at_risk": 104,
+      "resumed": 3,
+      "S": 0.285,
+      "lo": 0.2401,
+      "hi": 0.3315
+     },
+     {
+      "t": 8,
+      "at_risk": 101,
+      "resumed": 1,
+      "S": 0.2822,
+      "lo": 0.2374,
+      "hi": 0.3286
+     },
+     {
+      "t": 9,
+      "at_risk": 100,
+      "resumed": 2,
+      "S": 0.2766,
+      "lo": 0.232,
+      "hi": 0.3227
+     },
+     {
+      "t": 10,
+      "at_risk": 95,
+      "resumed": 4,
+      "S": 0.2649,
+      "lo": 0.221,
+      "hi": 0.3107
+     },
+     {
+      "t": 11,
+      "at_risk": 90,
+      "resumed": 1,
+      "S": 0.262,
+      "lo": 0.2182,
+      "hi": 0.3076
+     },
+     {
+      "t": 13,
+      "at_risk": 84,
+      "resumed": 1,
+      "S": 0.2588,
+      "lo": 0.2153,
+      "hi": 0.3044
+     },
+     {
+      "t": 16,
+      "at_risk": 81,
+      "resumed": 2,
+      "S": 0.2525,
+      "lo": 0.2092,
+      "hi": 0.2979
+     },
+     {
+      "t": 21,
+      "at_risk": 73,
+      "resumed": 3,
+      "S": 0.2421,
+      "lo": 0.1992,
+      "hi": 0.2873
+     }
+    ]
+   },
+   "Full": {
+    "agreements": 77,
+    "resumed": 50,
+    "still_holding_when_data_stop": 27,
+    "resumed_the_next_year": 34,
+    "median_years": 2,
+    "median_ci95_years": [
+     1,
+     6
+    ],
+    "holding_at_5_years_pct": 40.3,
+    "holding_at_5_years_ci95_pct": [
+     29.3,
+     50.9
+    ],
+    "holding_at_10_years_pct": 36.1,
+    "holding_at_10_years_ci95_pct": [
+     25.5,
+     46.8
+    ],
+    "linked_groups": 44,
+    "median_cluster_ci95_years": [
+     1,
+     null
+    ],
+    "holding_at_5_years_cluster_ci95_pct": [
+     26.1,
+     59.0
+    ],
+    "holding_at_10_years_cluster_ci95_pct": [
+     22.9,
+     55.4
+    ]
+   },
+   "Partial": {
+    "agreements": 213,
+    "resumed": 162,
+    "still_holding_when_data_stop": 51,
+    "resumed_the_next_year": 117,
+    "median_years": 1,
+    "median_ci95_years": [
+     1,
+     2
+    ],
+    "holding_at_5_years_pct": 30.4,
+    "holding_at_5_years_ci95_pct": [
+     24.4,
+     36.7
+    ],
+    "holding_at_10_years_pct": 25.7,
+    "holding_at_10_years_ci95_pct": [
+     20.0,
+     31.7
+    ],
+    "linked_groups": 52,
+    "median_cluster_ci95_years": [
+     1,
+     5
+    ],
+    "holding_at_5_years_cluster_ci95_pct": [
+     18.3,
+     43.9
+    ],
+    "holding_at_10_years_cluster_ci95_pct": [
+     14.9,
+     38.9
+    ]
+   },
+   "Peace process": {
+    "agreements": 84,
+    "resumed": 69,
+    "still_holding_when_data_stop": 15,
+    "resumed_the_next_year": 54,
+    "median_years": 1,
+    "median_ci95_years": [
+     1,
+     1
+    ],
+    "holding_at_5_years_pct": 26.2,
+    "holding_at_5_years_ci95_pct": [
+     17.4,
+     35.9
+    ],
+    "holding_at_10_years_pct": 19.5,
+    "holding_at_10_years_ci95_pct": [
+     11.7,
+     28.8
+    ],
+    "linked_groups": 37,
+    "median_cluster_ci95_years": [
+     1,
+     2
+    ],
+    "holding_at_5_years_cluster_ci95_pct": [
+     13.5,
+     45.1
+    ],
+    "holding_at_10_years_cluster_ci95_pct": [
+     9.9,
+     34.7
+    ]
+   }
+  },
+  "next_year_and_signing_year_both_active": 193,
+  "first_agreement_per_linked_group": {
+   "All": {
+    "agreements": 72,
+    "resumed": 48,
+    "still_holding_when_data_stop": 24,
+    "resumed_the_next_year": 34,
+    "median_years": 2,
+    "median_ci95_years": [
+     1,
+     5
+    ],
+    "holding_at_5_years_pct": 38.9,
+    "holding_at_5_years_ci95_pct": [
+     27.7,
+     49.9
+    ],
+    "holding_at_10_years_pct": 35.8,
+    "holding_at_10_years_ci95_pct": [
+     24.9,
+     46.9
+    ]
+   }
+  },
+  "logrank": {
+   "three_types_p": 0.038,
+   "full_vs_peace_process_p": 0.01,
+   "note": "naive: treats agreements as independent"
+  }
+ },
+ "signing_context": {
+  "All": {
+   "signed_in_an_active_year_pct": 71.1,
+   "next_year_active_pct": 54.8
+  },
+  "Full": {
+   "signed_in_an_active_year_pct": 66.2,
+   "next_year_active_pct": 44.2
+  },
+  "Partial": {
+   "signed_in_an_active_year_pct": 70.4,
+   "next_year_active_pct": 54.9
+  },
+  "Peace process": {
+   "signed_in_an_active_year_pct": 77.4,
+   "next_year_active_pct": 64.3
+  }
+ },
+ "status": "fixture"
+}

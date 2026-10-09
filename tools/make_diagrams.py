@@ -370,6 +370,63 @@ def _card_literature(T: dict, X: dict) -> str:
     return s
 
 
+# Peace: the colours of the Peace page (2026/peace/page), a warm room and a cool room side by side, as in the film.
+PEACE = {
+    "light": dict(warm_bg="#EFE7DB", cool_bg="#E3E6EA", pool_warm="#E8A25A", pool_cool="#8E959D", wall="#6A7079",
+                  wood="#A3560F", wood_dark="#6B3A0E", steel="#4F565E", paper="#FBFAF7", kicker="#A3560F"),
+    "dark": dict(warm_bg="#25211C", cool_bg="#1D2024", pool_warm="#E8A25A", pool_cool="#8E959D", wall="#5D636B",
+                 wood="#E8A25A", wood_dark="#B9763A", steel="#A9B0B8", paper="#ECE8E1", kicker="#E8A25A"),
+}
+
+
+def peace_theme(T: dict) -> dict:
+    return PEACE["dark" if T is THEMES["dark"] else "light"]
+
+
+def _card_peace(T: dict, X: dict) -> str:
+    """Two rooms side by side: on the left a judge's gavel on its block in warm light; on the right a table with a
+    signed sheet on it and two empty chairs facing each other in cool light. Symbolic: no person is drawn."""
+    P = peace_theme(T)
+    mid = CARD_W / 2
+    s = '<g clip-path="url(#cardclip)">'
+    s += (f'<radialGradient id="pwarm" cx="0.5" cy="0" r="0.95"><stop offset="0" stop-color="{P["pool_warm"]}" stop-opacity=".42"/>'
+          f'<stop offset="1" stop-color="{P["pool_warm"]}" stop-opacity="0"/></radialGradient>'
+          f'<radialGradient id="pcool" cx="0.5" cy="0" r="0.95"><stop offset="0" stop-color="{P["pool_cool"]}" stop-opacity=".42"/>'
+          f'<stop offset="1" stop-color="{P["pool_cool"]}" stop-opacity="0"/></radialGradient>')
+    s += f'<rect width="{mid:g}" height="{WIN_H}" fill="{P["warm_bg"]}"/><rect width="{mid:g}" height="{WIN_H}" fill="url(#pwarm)"/>'
+    s += f'<rect x="{mid:g}" width="{mid:g}" height="{WIN_H}" fill="{P["cool_bg"]}"/><rect x="{mid:g}" width="{mid:g}" height="{WIN_H}" fill="url(#pcool)"/>'
+    floor = 262
+    s += (f'<line x1="0" y1="{floor}" x2="{CARD_W}" y2="{floor}" stroke="{P["wall"]}" stroke-opacity=".55" stroke-width="2"/>')
+    # left room: the sound block and a gavel resting at an angle
+    s += (f'<rect x="22" y="{floor - 20}" width="78" height="20" rx="6" fill="{P["wood_dark"]}"/>'
+          f'<rect x="30" y="{floor - 28}" width="62" height="10" rx="4" fill="{P["wood"]}"/>')
+    s += (f'<g transform="rotate(-45 58 150)">'
+          f'<rect x="53.5" y="150" width="9" height="98" rx="4.5" fill="{P["wood_dark"]}"/>'
+          f'<rect x="21" y="134" width="74" height="32" rx="9" fill="{P["wood"]}"/>'
+          f'<rect x="31" y="134" width="6" height="32" fill="{P["wood_dark"]}" fill-opacity=".55"/>'
+          f'<rect x="79" y="134" width="6" height="32" fill="{P["wood_dark"]}" fill-opacity=".55"/></g>')
+    # right room: a table with a signed sheet, two empty chairs facing each other
+    tx0, tx1, ty = 186, 250, 214
+    s += (f'<rect x="{tx0 - 6}" y="{ty}" width="{tx1 - tx0 + 12}" height="7" rx="3" fill="{P["steel"]}"/>'
+          f'<g stroke="{P["steel"]}" stroke-width="5" stroke-linecap="round">'
+          f'<line x1="{tx0 + 2}" y1="{ty + 7}" x2="{tx0 + 2}" y2="{floor}"/><line x1="{tx1 - 2}" y1="{ty + 7}" x2="{tx1 - 2}" y2="{floor}"/></g>')
+    s += (f'<polygon points="{tx0 + 8},{ty - 1} {tx1 - 4},{ty - 1} {tx1 - 12},{ty - 9} {tx0 + 16},{ty - 9}" fill="{P["paper"]}"/>'
+          f'<path d="M{tx0 + 24} {ty - 4} q5 -5 9 0 t9 0" fill="none" stroke="{P["wood"]}" stroke-width="2" stroke-linecap="round"/>')
+
+    def chair(x_back: float, x_front: float) -> str:
+        seat = ty + 8
+        return (f'<g stroke="{P["steel"]}" stroke-width="5" stroke-linecap="round" fill="none">'
+                f'<line x1="{x_back}" y1="{seat - 46}" x2="{x_back}" y2="{floor}"/>'
+                f'<line x1="{x_back}" y1="{seat}" x2="{x_front}" y2="{seat}"/>'
+                f'<line x1="{x_front}" y1="{seat}" x2="{x_front}" y2="{floor}"/></g>')
+    s += chair(mid + 16, mid + 34) + chair(CARD_W - 16, CARD_W - 34)
+    # the wall between the rooms
+    s += f'<line x1="{mid:g}" y1="0" x2="{mid:g}" y2="{WIN_H}" stroke="{P["wall"]}" stroke-width="3"/>'
+    s += '</g>'
+    s += _hero_caption(T, "PEACE", P["kicker"], ("Two rooms: courts", "and agreements"))
+    return s
+
+
 def _card_next(T: dict, X: dict) -> str:
     """A dashed slot: the prize still to be announced joins here."""
     cx = NEXT_W / 2
@@ -413,7 +470,7 @@ def _hero_foot(T: dict) -> str:
 
 def hero(name: str, T: dict, og: bool = False) -> str:
     X = HERO_EXTRA["dark" if T is THEMES["dark"] else "light"]
-    prizes = (_card_medicine, _card_physics, _card_chemistry, _card_literature)
+    prizes = (_card_medicine, _card_physics, _card_chemistry, _card_literature, _card_peace)
     row_w = len(prizes) * (CARD_W + CARD_GAP) + NEXT_W   # the row of cards, then the slot for the prize to come
     if og:   # the 1200 x 630 share image: full bleed, everything clear of the outer 40 px
         # Five cards do not fit beside the text at a readable size, so the share image has two rows:
@@ -436,8 +493,9 @@ def hero(name: str, T: dict, og: bool = False) -> str:
            "hand drawn hatched teal, on either side of a dashed mirror line, with three small orange molecules above "
            "the left hand and only one teal one above the right: one hand wins. Literature: a torn scrap of papyrus "
            "with a few lines of Greek capitals, broken off at its ragged edges and around two holes, with red square "
-           "brackets where letters are lost: what survives. A smaller dashed slot holds the prize still to come: Economics "
-           "on 12 October. Toy models, not research, not for lab or clinical use. Videos made "
+           "brackets where letters are lost: what survives. Peace: two rooms side by side, a judge's gavel on its block in "
+           "warm light on the left, and on the right, in cool light, a table with a signed sheet and two empty chairs "
+           "facing each other. A smaller dashed slot holds the prize still to come: Economics on 12 October. Toy models, not research, not for lab or clinical use. Videos made "
            "with showtime, an open-source video studio for coding agents.")
     s = svg_open(W, H, "Nobel 2026 Lab: hands-on demos of this year’s Nobel Prizes", alt, T, extra_style=(
         ".pulse{animation:pulse 5s ease-in-out infinite}"
@@ -1645,6 +1703,20 @@ def icons() -> dict[str, str]:
           f'<line x1="8" y1="26" x2="36" y2="26"/><line x1="16" y1="38" x2="40" y2="38"/>'
           f'<line x1="8" y1="62" x2="20" y2="62"/><line x1="12" y1="74" x2="24" y2="74"/></g>'
         + f'<circle cx="62" cy="32" r="16" fill="{ONE}"/><circle cx="40" cy="68" r="14" fill="url(#h)"/>')
+    # peace (the Peace page's amber)
+    brass = "#D9883F"
+    out["station-endings"] = wrap_icon("Icon: bars by decade with a dashed line rising above them",
+        f'<path d="M10 8 V86 H90" fill="none" stroke="{slate}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
+        + "".join(f'<rect x="{x}" y="{86 - h}" width="11" height="{h}" rx="2" fill="{brass}"/>'
+                  for x, h in ((18, 22), (34, 26), (50, 34), (66, 30), (80, 18)))
+        + f'<polyline points="23,66 39,62 55,46 71,24 85,22" fill="none" stroke="{slate}" stroke-width="4" '
+          f'stroke-dasharray="6 5" stroke-linecap="round" stroke-linejoin="round"/>')
+    out["station-hold"] = wrap_icon("Icon: a falling step curve with a dot marking one point on it",
+        f'<path d="M10 8 V86 H90" fill="none" stroke="{slate}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
+        f'<path d="M12 16 H26 V36 H38 V46 H50 V52 H66 V56 H88" fill="none" stroke="{brass}" stroke-width="5" '
+        f'stroke-linejoin="round" stroke-linecap="round"/>'
+        f'<line x1="44" y1="30" x2="44" y2="66" stroke="{slate}" stroke-width="4" stroke-linecap="round"/>'
+        f'<circle cx="44" cy="46" r="7" fill="{brass}" stroke="{slate}" stroke-width="3"/>')
     return out
 
 

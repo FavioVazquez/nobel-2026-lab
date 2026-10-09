@@ -1,0 +1,4 @@
+# Same pins as 2026/chemistry/kagan-curve (all BSD-licensed, MIT-compatible). Python 3.11. No pandas: csv is enough.
+numpy==1.26.4
+matplotlib==3.9.2
+pytest==8.3.3
