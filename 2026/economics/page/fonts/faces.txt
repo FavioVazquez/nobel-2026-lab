@@ -1,0 +1,5 @@
+sans: inter-latin-wght-normal.woff2 {'wght': 400}
+sans-bold: inter-latin-wght-normal.woff2 {'wght': 600}
+serif: fraunces-latin-full-normal.woff2 {'opsz': 48, 'wght': 500, 'SOFT': 0, 'WONK': 0}
+italic: fraunces-latin-full-italic.woff2 {'opsz': 48, 'wght': 500, 'SOFT': 0, 'WONK': 0}
+mono: jetbrains-mono-latin-wght-normal.woff2 {'wght': 500}

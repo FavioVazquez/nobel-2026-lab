@@ -1,0 +1,990 @@
+{
+ "kappa": 0.17166666666666672,
+ "lambda": 0.02145833333333334,
+ "demand": {
+  "impact": {
+   "output_gap": 0.25908507909362954,
+   "inflation": 0.35228730226592553,
+   "policy_rate": 0.6579734929457031
+  },
+  "cumulative_12q": {
+   "output_gap": 0.5180436518009829,
+   "inflation": 0.7044025892475414,
+   "policy_rate": 1.3156257097718036
+  },
+  "qz_vs_stacked_max_abs": 1.6653345369377348e-16
+ },
+ "cost_push": {
+  "impact": {
+   "output_gap": -0.5130397605814452,
+   "inflation": 1.282599401453613,
+   "policy_rate": 1.6673792218896972
+  },
+  "cumulative_12q": {
+   "output_gap": -1.0258290134672938,
+   "inflation": 2.564572533668235,
+   "policy_rate": 3.3339442937687065
+  },
+  "qz_vs_stacked_max_abs": 2.220446049250313e-16
+ },
+ "cost_push_strong": {
+  "impact": {
+   "output_gap": -0.8391608391608394,
+   "inflation": 0.8391608391608392,
+   "policy_rate": 2.097902097902098
+  },
+  "cumulative_12q": {
+   "output_gap": -1.6779119318181823,
+   "inflation": 1.6779119318181817,
+   "policy_rate": 4.194779829545454
+  },
+  "qz_vs_stacked_max_abs": 5.551115123125783e-16
+ },
+ "closed_form": {
+  "demand_x0": 0.25908507909362977,
+  "demand_pi0_annual": 0.3522873022659257,
+  "cost_push_x0": -0.5130397605814451,
+  "cost_push_pi0_annual": 1.2825994014536126
+ },
+ "determinacy": {
+  "0.8": [
+   {
+    "phi_y": 0.0,
+    "moduli": [
+     0.8841494167987893,
+     1.2993522667028943
+    ],
+    "outside": 1,
+    "qz_unstable": 1,
+    "closed_form": false
+   },
+   {
+    "phi_y": 0.125,
+    "moduli": [
+     0.915062985457192,
+     1.3934386980444917
+    ],
+    "outside": 1,
+    "qz_unstable": 1,
+    "closed_form": false
+   },
+   {
+    "phi_y": 0.25,
+    "moduli": [
+     0.9354399646867286,
+     1.498061718814955
+    ],
+    "outside": 1,
+    "qz_unstable": 1,
+    "closed_form": false
+   },
+   {
+    "phi_y": 0.5,
+    "moduli": [
+     0.9590979083150213,
+     1.7244037751866623
+    ],
+    "outside": 1,
+    "qz_unstable": 1,
+    "closed_form": false
+   },
+   {
+    "phi_y": 1.0,
+    "moduli": [
+     0.9795840480647139,
+     2.20391763543697
+    ],
+    "outside": 1,
+    "qz_unstable": 1,
+    "closed_form": false
+   },
+   {
+    "phi_y": 2.0,
+    "moduli": [
+     0.9933893279759891,
+     3.190112355525695
+    ],
+    "outside": 1,
+    "qz_unstable": 1,
+    "closed_form": false
+   },
+   {
+    "phi_y": 3.0,
+    "moduli": [
+     0.9986256594153112,
+     4.184876024086372
+    ],
+    "outside": 1,
+    "qz_unstable": 1,
+    "closed_form": false
+   },
+   {
+    "phi_y": 3.4,
+    "moduli": [
+     0.9999060439930811,
+     4.583595639508602
+    ],
+    "outside": 1,
+    "qz_unstable": 1,
+    "closed_form": false
+   },
+   {
+    "phi_y": 3.5,
+    "moduli": [
+     1.000182824430674,
+     4.683318859071009
+    ],
+    "outside": 2,
+    "qz_unstable": 2,
+    "closed_form": true
+   },
+   {
+    "phi_y": 5.0,
+    "moduli": [
+     1.0030547394840499,
+     6.180446944017634
+    ],
+    "outside": 2,
+    "qz_unstable": 2,
+    "closed_form": true
+   }
+  ],
+  "1.5": [
+   {
+    "phi_y": 0.0,
+    "moduli": [
+     1.127032395364934,
+     1.127032395364934
+    ],
+    "outside": 2,
+    "qz_unstable": 2,
+    "closed_form": true
+   },
+   {
+    "phi_y": 0.125,
+    "moduli": [
+     1.1817210527297237,
+     1.1817210527297237
+    ],
+    "outside": 2,
+    "qz_unstable": 2,
+    "closed_form": true
+   },
+   {
+    "phi_y": 0.25,
+    "moduli": [
+     1.2339883600452937,
+     1.2339883600452937
+    ],
+    "outside": 2,
+    "qz_unstable": 2,
+    "closed_form": true
+   },
+   {
+    "phi_y": 0.5,
+    "moduli": [
+     1.1835016835016836,
+     1.5
+    ],
+    "outside": 2,
+    "qz_unstable": 2,
+    "closed_form": true
+   },
+   {
+    "phi_y": 1.0,
+    "moduli": [
+     1.0883943955703217,
+     2.095107287931362
+    ],
+    "outside": 2,
+    "qz_unstable": 2,
+    "closed_form": true
+   },
+   {
+    "phi_y": 2.0,
+    "moduli": [
+     1.0501090878059864,
+     3.133392595695698
+    ],
+    "outside": 2,
+    "qz_unstable": 2,
+    "closed_form": true
+   },
+   {
+    "phi_y": 3.0,
+    "moduli": [
+     1.0371874383442306,
+     4.146314245157453
+    ],
+    "outside": 2,
+    "qz_unstable": 2,
+    "closed_form": true
+   },
+   {
+    "phi_y": 3.4,
+    "moduli": [
+     1.0341026096318324,
+     4.549399073869851
+    ],
+    "outside": 2,
+    "qz_unstable": 2,
+    "closed_form": true
+   },
+   {
+    "phi_y": 3.5,
+    "moduli": [
+     1.0334388412829851,
+     4.650062842218698
+    ],
+    "outside": 2,
+    "qz_unstable": 2,
+    "closed_form": true
+   },
+   {
+    "phi_y": 5.0,
+    "moduli": [
+     1.026606198945916,
+     6.156895484555767
+    ],
+    "outside": 2,
+    "qz_unstable": 2,
+    "closed_form": true
+   }
+  ],
+  "phi_y_needed_for_0.8": 3.4333333333333305
+ },
+ "fg_rule_on": {
+  "today": {
+   "output_gap": -0.04977373057393275,
+   "inflation": 0.14181323122140274,
+   "policy_rate": 0.18783298154513772
+  },
+  "in_quarter_8": {
+   "output_gap": 0.18083182640144665,
+   "inflation": 0.12417118746232673,
+   "policy_rate": -0.7233273056057866
+  },
+  "after_quarter_8_max_abs": 0.0,
+  "path_x": [
+   -0.04977373057393275,
+   -0.04725770561243871,
+   -0.03958723789558813,
+   -0.02539349016634231,
+   -0.003338736626610291,
+   0.02775363214434607,
+   0.06873173419142728,
+   0.119910357990336,
+   0.18083182640144665,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "path_pi_annual": [
+   0.14181323122140274,
+   0.17776888169916152,
+   0.21234259887512064,
+   0.24194528844790356,
+   0.2620021734297561,
+   0.2669644167475036,
+   0.25041103300510364,
+   0.20526792140773423,
+   0.12417118746232673,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "path_i_annual": [
+   0.18783298154513772,
+   0.24302446974252295,
+   0.2987202793648869,
+   0.3502211875886842,
+   0.391333891831329,
+   0.41432344119342845,
+   0.4099824166033691,
+   0.36785706110676936,
+   -0.7233273056057866,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "by_horizon": {
+   "output_gap_today": [
+    0.18083182640144663,
+    0.119910357990336,
+    0.06873173419142728,
+    0.02775363214434607,
+    -0.003338736626610309,
+    -0.025393490166342292,
+    -0.03958723789558813,
+    -0.0472577056124387,
+    -0.04977373057393275,
+    -0.04844020604667474,
+    -0.04443404048292548,
+    -0.038766360000586815,
+    -0.03226588439294387
+   ],
+   "inflation_today": [
+    0.12417118746232673,
+    0.20526792140773417,
+    0.2504110330051036,
+    0.2669644167475036,
+    0.2620021734297562,
+    0.2419452884479035,
+    0.21234259887512064,
+    0.1777688816991615,
+    0.14181323122140274,
+    0.10713282409047205,
+    0.07555012138462516,
+    0.04817505297037596,
+    0.025537395157517396
+   ],
+   "stacked_vs_closed_form_max_abs": 4.90059381963448e-17,
+   "decay_factor_per_quarter": 0.8462233939981386
+  }
+ },
+ "fg_pegged": {
+  "output_gap_today": [
+   0.25,
+   0.29291666666666666,
+   0.38568819444444447,
+   0.5437418136574075,
+   0.7935572413560958,
+   1.1771018412105938,
+   1.7588801444743654,
+   2.636781756173599,
+   3.9585518865656413,
+   5.946655722847532,
+   8.935721086522097,
+   13.428861249746209,
+   20.182357859211184
+  ],
+  "inflation_today": [
+   0.17166666666666672,
+   0.3710861111111112,
+   0.6322144768518521,
+   0.9992617107947535,
+   1.5341783994179918,
+   2.3271132130550867,
+   3.5116064467969337,
+   5.2870805215681695,
+   7.952415345127562,
+   11.956261454698259,
+   17.97256065289645,
+   27.013986437859884,
+   40.602398970139646
+  ],
+  "output_gap_ratio": [
+   1.0,
+   1.1716666666666666,
+   1.5427527777777779,
+   2.17496725462963,
+   3.1742289654243834,
+   4.708407364842375,
+   7.035520577897461,
+   10.547127024694396,
+   15.834207546262565,
+   23.786622891390127,
+   35.74288434608839,
+   53.715444998984836,
+   80.72943143684473
+  ],
+  "inflation_ratio": [
+   1.0,
+   2.1616666666666666,
+   3.682802777777778,
+   5.82094200462963,
+   8.936961550007716,
+   13.555999299350015,
+   20.455959884253975,
+   30.798527310105833,
+   46.32474958326734,
+   69.6481249788248,
+   104.69452807512492,
+   157.3630277933585,
+   236.5188289522697
+  ]
+ },
+ "fg_real_rate": {
+  "output_gap_today": [
+   0.25,
+   0.25,
+   0.25,
+   0.25,
+   0.25,
+   0.25,
+   0.25,
+   0.25,
+   0.25,
+   0.25,
+   0.25,
+   0.25,
+   0.25
+  ],
+  "inflation_today": [
+   0.17166666666666672,
+   0.3416166666666668,
+   0.5098671666666668,
+   0.676435161666667,
+   0.8413374767166669,
+   1.0045907686161668,
+   1.166211527596672,
+   1.326216078987372,
+   1.484620584864165,
+   1.6414410456821902,
+   1.796693301892035,
+   1.9503930355397814,
+   2.1025557718510504
+  ],
+  "inflation_ratio": [
+   1.0,
+   1.9900000000000002,
+   2.9700999999999995,
+   3.9403990000000007,
+   4.90099501,
+   5.851985059899999,
+   6.793465209301,
+   7.72553055720799,
+   8.64827525163591,
+   9.561792499119552,
+   10.466174574128356,
+   11.361512828387072,
+   12.247897700103202
+  ]
+ },
+ "toy_vs_ours_max_abs": {
+  "demand": 1.6653345369377348e-16,
+  "cost_push": 2.220446049250313e-16,
+  "cost_push_strong": 4.440892098500626e-16,
+  "fg_rule_on_path": 1.1102230246251565e-16,
+  "fg_rule_on_by_horizon": 5.551115123125783e-17,
+  "fg_pegged_by_horizon": 7.105427357601002e-15
+ },
+ "json_checks": [
+  {
+   "field": "demand_shock.impact.output_gap",
+   "json": 0.259,
+   "ours": 0.259,
+   "ok": true
+  },
+  {
+   "field": "demand_shock.impact.inflation",
+   "json": 0.352,
+   "ours": 0.352,
+   "ok": true
+  },
+  {
+   "field": "demand_shock.impact.policy_rate",
+   "json": 0.658,
+   "ours": 0.658,
+   "ok": true
+  },
+  {
+   "field": "demand_shock.cumulative_12q.output_gap",
+   "json": 0.518,
+   "ours": 0.518,
+   "ok": true
+  },
+  {
+   "field": "demand_shock.cumulative_12q.inflation",
+   "json": 0.704,
+   "ours": 0.704,
+   "ok": true
+  },
+  {
+   "field": "demand_shock.cumulative_12q.policy_rate",
+   "json": 1.316,
+   "ours": 1.316,
+   "ok": true
+  },
+  {
+   "field": "cost_push_shock.baseline.impact.output_gap",
+   "json": -0.513,
+   "ours": -0.513,
+   "ok": true
+  },
+  {
+   "field": "cost_push_shock.baseline.impact.inflation",
+   "json": 1.283,
+   "ours": 1.283,
+   "ok": true
+  },
+  {
+   "field": "cost_push_shock.baseline.impact.policy_rate",
+   "json": 1.667,
+   "ours": 1.667,
+   "ok": true
+  },
+  {
+   "field": "cost_push_shock.baseline.cumulative_12q.output_gap",
+   "json": -1.026,
+   "ours": -1.026,
+   "ok": true
+  },
+  {
+   "field": "cost_push_shock.baseline.cumulative_12q.inflation",
+   "json": 2.565,
+   "ours": 2.565,
+   "ok": true
+  },
+  {
+   "field": "cost_push_shock.baseline.cumulative_12q.policy_rate",
+   "json": 3.334,
+   "ours": 3.334,
+   "ok": true
+  },
+  {
+   "field": "cost_push_shock.strong.impact.output_gap",
+   "json": -0.839,
+   "ours": -0.839,
+   "ok": true
+  },
+  {
+   "field": "cost_push_shock.strong.impact.inflation",
+   "json": 0.839,
+   "ours": 0.839,
+   "ok": true
+  },
+  {
+   "field": "cost_push_shock.strong.impact.policy_rate",
+   "json": 2.098,
+   "ours": 2.098,
+   "ok": true
+  },
+  {
+   "field": "cost_push_shock.strong.cumulative_12q.output_gap",
+   "json": -1.678,
+   "ours": -1.678,
+   "ok": true
+  },
+  {
+   "field": "cost_push_shock.strong.cumulative_12q.inflation",
+   "json": 1.678,
+   "ours": 1.678,
+   "ok": true
+  },
+  {
+   "field": "cost_push_shock.strong.cumulative_12q.policy_rate",
+   "json": 4.195,
+   "ours": 4.195,
+   "ok": true
+  },
+  {
+   "field": "taylor_principle.active.eigenvalue_moduli",
+   "json": 1.182,
+   "ours": 1.182,
+   "ok": true
+  },
+  {
+   "field": "taylor_principle.active.eigenvalue_moduli",
+   "json": 1.182,
+   "ours": 1.182,
+   "ok": true
+  },
+  {
+   "field": "taylor_principle.active.outside_unit_circle",
+   "json": 2,
+   "ours": 2,
+   "ok": true
+  },
+  {
+   "field": "taylor_principle.passive.eigenvalue_moduli",
+   "json": 0.915,
+   "ours": 0.915,
+   "ok": true
+  },
+  {
+   "field": "taylor_principle.passive.eigenvalue_moduli",
+   "json": 1.393,
+   "ours": 1.393,
+   "ok": true
+  },
+  {
+   "field": "taylor_principle.passive.outside_unit_circle",
+   "json": 1,
+   "ours": 1,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.today.output_gap",
+   "json": -0.05,
+   "ours": -0.05,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.in_quarter.output_gap",
+   "json": 0.181,
+   "ours": 0.181,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.today.inflation",
+   "json": 0.142,
+   "ours": 0.142,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.in_quarter.inflation",
+   "json": 0.124,
+   "ours": 0.124,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.today.policy_rate",
+   "json": 0.188,
+   "ours": 0.188,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.in_quarter.policy_rate",
+   "json": -0.723,
+   "ours": -0.723,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.output_gap_today[0]",
+   "json": 0.181,
+   "ours": 0.181,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.inflation_today[0]",
+   "json": 0.124,
+   "ours": 0.124,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.output_gap_today[1]",
+   "json": 0.12,
+   "ours": 0.12,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.inflation_today[1]",
+   "json": 0.205,
+   "ours": 0.205,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.output_gap_today[2]",
+   "json": 0.069,
+   "ours": 0.069,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.inflation_today[2]",
+   "json": 0.25,
+   "ours": 0.25,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.output_gap_today[3]",
+   "json": 0.028,
+   "ours": 0.028,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.inflation_today[3]",
+   "json": 0.267,
+   "ours": 0.267,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.output_gap_today[4]",
+   "json": -0.003,
+   "ours": -0.003,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.inflation_today[4]",
+   "json": 0.262,
+   "ours": 0.262,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.output_gap_today[5]",
+   "json": -0.025,
+   "ours": -0.025,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.inflation_today[5]",
+   "json": 0.242,
+   "ours": 0.242,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.output_gap_today[6]",
+   "json": -0.04,
+   "ours": -0.04,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.inflation_today[6]",
+   "json": 0.212,
+   "ours": 0.212,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.output_gap_today[7]",
+   "json": -0.047,
+   "ours": -0.047,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.inflation_today[7]",
+   "json": 0.178,
+   "ours": 0.178,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.output_gap_today[8]",
+   "json": -0.05,
+   "ours": -0.05,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.inflation_today[8]",
+   "json": 0.142,
+   "ours": 0.142,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.output_gap_today[9]",
+   "json": -0.048,
+   "ours": -0.048,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.inflation_today[9]",
+   "json": 0.107,
+   "ours": 0.107,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.output_gap_today[10]",
+   "json": -0.044,
+   "ours": -0.044,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.inflation_today[10]",
+   "json": 0.076,
+   "ours": 0.076,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.output_gap_today[11]",
+   "json": -0.039,
+   "ours": -0.039,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.inflation_today[11]",
+   "json": 0.048,
+   "ours": 0.048,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.output_gap_today[12]",
+   "json": -0.032,
+   "ours": -0.032,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.rule_on.by_horizon.inflation_today[12]",
+   "json": 0.026,
+   "ours": 0.026,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.output_gap_ratio[0]",
+   "json": 1.0,
+   "ours": 1.0,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.inflation_ratio[0]",
+   "json": 1.0,
+   "ours": 1.0,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.output_gap_ratio[1]",
+   "json": 1.172,
+   "ours": 1.172,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.inflation_ratio[1]",
+   "json": 2.162,
+   "ours": 2.162,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.output_gap_ratio[2]",
+   "json": 1.543,
+   "ours": 1.543,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.inflation_ratio[2]",
+   "json": 3.683,
+   "ours": 3.683,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.output_gap_ratio[3]",
+   "json": 2.175,
+   "ours": 2.175,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.inflation_ratio[3]",
+   "json": 5.821,
+   "ours": 5.821,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.output_gap_ratio[4]",
+   "json": 3.174,
+   "ours": 3.174,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.inflation_ratio[4]",
+   "json": 8.937,
+   "ours": 8.937,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.output_gap_ratio[5]",
+   "json": 4.708,
+   "ours": 4.708,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.inflation_ratio[5]",
+   "json": 13.556,
+   "ours": 13.556,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.output_gap_ratio[6]",
+   "json": 7.036,
+   "ours": 7.036,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.inflation_ratio[6]",
+   "json": 20.456,
+   "ours": 20.456,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.output_gap_ratio[7]",
+   "json": 10.547,
+   "ours": 10.547,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.inflation_ratio[7]",
+   "json": 30.799,
+   "ours": 30.799,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.output_gap_ratio[8]",
+   "json": 15.834,
+   "ours": 15.834,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.inflation_ratio[8]",
+   "json": 46.325,
+   "ours": 46.325,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.output_gap_ratio[9]",
+   "json": 23.787,
+   "ours": 23.787,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.inflation_ratio[9]",
+   "json": 69.648,
+   "ours": 69.648,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.output_gap_ratio[10]",
+   "json": 35.743,
+   "ours": 35.743,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.inflation_ratio[10]",
+   "json": 104.695,
+   "ours": 104.695,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.output_gap_ratio[11]",
+   "json": 53.715,
+   "ours": 53.715,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.inflation_ratio[11]",
+   "json": 157.363,
+   "ours": 157.363,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.output_gap_ratio[12]",
+   "json": 80.729,
+   "ours": 80.729,
+   "ok": true
+  },
+  {
+   "field": "forward_guidance.pegged_puzzle.by_horizon.inflation_ratio[12]",
+   "json": 236.519,
+   "ours": 236.519,
+   "ok": true
+  },
+  {
+   "field": "demand_shock.paths.output_gap (4 dp)",
+   "json": "17 values",
+   "ours": "max abs diff 4.8e-05",
+   "ok": true
+  },
+  {
+   "field": "demand_shock.paths.inflation (4 dp)",
+   "json": "17 values",
+   "ours": "max abs diff 4.8e-05",
+   "ok": true
+  },
+  {
+   "field": "demand_shock.paths.policy_rate (4 dp)",
+   "json": "17 values",
+   "ours": "max abs diff 4.7e-05",
+   "ok": true
+  }
+ ],
+ "json_checks_failed": []
+}

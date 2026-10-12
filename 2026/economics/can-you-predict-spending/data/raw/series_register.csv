@@ -1,0 +1,11 @@
+%SeriesCode,SeriesLabel,MetricName,CalculationType,DefaultScale,TableId:LineNo,SeriesCodeParents
+A067RX,"Disposable personal income","Chained Dollars","Level",-6,T11706:16|T20100:37|T20600:37,NONE
+B230RC,"Population (midperiod, thousands)","Persons","Level",-3,T20100:40|T20600:40|T70100:18,NONE
+DDURRA,"Durable goods","Fisher Quantity Index","Level",0,T10103:4|T10503:4|T20303:3|T20403:3|T20803:3|U20403:3,NONE
+DDURRC,"Durable goods","Current Dollars","Level",-6,T10105:4|T10505:4|T20305:3|T20405:3|T20805:3|U20305:3|U20405:3,DGDSRC
+DNDGRA,"Nondurable goods","Fisher Quantity Index","Level",0,T10103:5|T10503:9|T20303:8|T20403:25|T20803:8|U20403:72,NONE
+DNDGRC,"Nondurable goods","Current Dollars","Level",-6,T10105:5|T10505:9|T20305:8|T20405:25|T20805:8|U20305:8|U20405:72,DGDSRC
+DPCERA,"Personal consumption expenditures","Fisher Quantity Index","Level",0,T10103:2|T10503:2|T20303:1|T20403:1|T20503:1|T20803:1|U20403:1,NONE
+DPCERX,"Personal consumption expenditures","Chained Dollars","Level",-6,OECD10206:3|T10106:2|T10506:2|T20306:1|T20406:1|T20506:1|T20806:1|U20306:1|U20306:29|U20406:1,NONE
+DSERRA,"Services","Fisher Quantity Index","Level",0,T10103:6|T10503:14|T20303:13|T20403:47|T20803:13|U20403:150,NONE
+DSERRC,"Services","Current Dollars","Level",-6,T10105:6|T10505:14|T20305:13|T20405:47|T20805:13|U20305:13|U20405:150,DPCERC

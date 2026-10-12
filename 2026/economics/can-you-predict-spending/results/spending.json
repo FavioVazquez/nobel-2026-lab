@@ -1,0 +1,5352 @@
+{
+  "label": "Educational demos made to show an open-source tool. Not research.",
+  "prize": "Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 2026, Robert E. Hall and Michael Woodford, \"for microeconomic foundations of macroeconomic stabilisation\" (nobelprize.org press release, 12 October 2026)",
+  "committee": {
+    "source": "The Royal Swedish Academy of Sciences, popular information on the 2026 prize in economic sciences",
+    "hall": "Hall's hypothesis was that changes in consumption could not be predicted because they depend on new – and thus unpredictable – information.",
+    "hall_mishkin": "They used microdata for a number of individual households, showing that around 80 per cent of them made their consumption decisions in line with the theory, while the rest lived hand-to-mouth.",
+    "sb_source": "Scientific background on the 2026 prize in economic sciences, PDF p. 25 (printed p. 23)",
+    "sb_hall_mishkin": "allow a fraction of consumption to move hand in hand with current income and estimate this hand-to-mouth fraction in the panel data to be 20% (whereas the other 80% follow the prediction of the rational-expectations, permanent-income hypothesis)",
+    "sb_hall_mishkin_pct": 20,
+    "sb_hall_mishkin_sample": "food consumption, 2,309 US families (Panel Study of Income Dynamics), 1969-1975"
+  },
+  "citations": {
+    "hall_1978": "Hall, Robert E., 1978. Stochastic Implications of the Life Cycle-Permanent Income Hypothesis: Theory and Evidence. Journal of Political Economy 86(6): 971-987.",
+    "campbell_mankiw_1989": "Campbell, John Y. and N. Gregory Mankiw, 1989. Consumption, Income, and Interest Rates: Reinterpreting the Time Series Evidence. NBER Macroeconomics Annual 1989, Volume 4, edited by Olivier Jean Blanchard and Stanley Fischer, MIT Press: 185-246.",
+    "hall_mishkin_1982": "Hall, Robert E. and Frederic S. Mishkin, 1982. The Sensitivity of Consumption to Transitory Income: Estimates from Panel Data on Households. Econometrica 50(2): 461-481.",
+    "mankiw_1982": "Mankiw, N. Gregory, 1982. Hall's Consumption Hypothesis and Durable Goods. Journal of Monetary Economics 10(3): 417-425.",
+    "staiger_stock_1997": "Staiger, Douglas and James H. Stock, 1997. Instrumental Variables Regression with Weak Instruments. Econometrica 65(3): 557-586.",
+    "anderson_rubin_1949": "Anderson, T. W. and Herman Rubin, 1949. Estimation of the Parameters of a Single Equation in a Complete System of Stochastic Equations. Annals of Mathematical Statistics 20(1): 46-63.",
+    "working_1960": "Working, Holbrook, 1960. Note on the Correlation of First Differences of Averages in a Random Chain. Econometrica 28(4): 916-918.",
+    "newey_west_1987": "Newey, Whitney K. and Kenneth D. West, 1987. A Simple, Positive Semi-Definite, Heteroskedasticity and Autocorrelation Consistent Covariance Matrix. Econometrica 55(3): 703-708.",
+    "montiel_olea_pflueger_2013": "Montiel Olea, José Luis and Carolin Pflueger, 2013. A Robust Test for Weak Instruments. Journal of Business & Economic Statistics 31(3): 358-369."
+  },
+  "method": {
+    "checked_against": "statsmodels 0.14.4 and SciPy 1.15.2, to 1e-8 (tests/statsmodels_reference.json); neither is a dependency",
+    "hac": "Newey-West (Bartlett kernel), 4 lags, no small-sample factor; F tests use F(q, n - k)",
+    "iv": "two-stage least squares; HAC covariance from the structural residuals; 95 % interval = lambda +/- 1.96 standard errors",
+    "effective_F": "Montiel Olea and Pflueger (2013): pi' Z'Z pi / tr(V Z'Z), V = HAC covariance of the first-stage coefficients pi, constant partialled out",
+    "strong_rule": "instruments are called strong only if the effective F (Montiel Olea and Pflueger 2013; HAC, Bartlett, 4 lags) is above 10; the classic first-stage F assumes homoskedastic, serially uncorrelated errors. Their own conservative 5 % test for a worst-case bias below 10 % needs an effective F above 23.11",
+    "anderson_rubin": "Anderson-Rubin (1949) 95 % set: the values lambda0 at which the instruments do not predict dc - lambda0 * dy (HAC Wald F below its 5 % critical value), searched on a grid of step 0.001 from -10 to 20. It stays valid however weak the instruments are, but it tests lambda0 together with the model's other restrictions, so it can exclude the two-stage least squares estimate, or be empty when the model with a constant lambda is rejected at every value. Its HAC F test rejects too often in samples this size (see the control), so the HAC set is likely too narrow; the same set with the classic (homoskedastic) F is reported next to it"
+  },
+  "data": {
+    "series": {
+      "DNDGRA": {
+        "title": "Nondurable goods",
+        "metric": "Fisher Quantity Index",
+        "units": "index, 2017 = 100, seasonally adjusted",
+        "frequency": "quarterly",
+        "table": "Table 1.1.3. Real Gross Domestic Product, Quantity Indexes, line 5",
+        "role": "headline",
+        "register": {
+          "%SeriesCode": "DNDGRA",
+          "SeriesLabel": "Nondurable goods",
+          "MetricName": "Fisher Quantity Index",
+          "CalculationType": "Level",
+          "DefaultScale": "0",
+          "TableId:LineNo": "T10103:5|T10503:9|T20303:8|T20403:25|T20803:8|U20403:72",
+          "SeriesCodeParents": "NONE"
+        },
+        "file": "data/raw/DNDGRA.csv",
+        "sha256": "d16bfe90360b46ef4196457f5884a86cb64affed9aaaef7ed5e2ea3531a776e3",
+        "rows": 318,
+        "first": "1947Q1",
+        "last": "2026Q2"
+      },
+      "DSERRA": {
+        "title": "Services",
+        "metric": "Fisher Quantity Index",
+        "units": "index, 2017 = 100, seasonally adjusted",
+        "frequency": "quarterly",
+        "table": "Table 1.1.3. Real Gross Domestic Product, Quantity Indexes, line 6",
+        "role": "headline",
+        "register": {
+          "%SeriesCode": "DSERRA",
+          "SeriesLabel": "Services",
+          "MetricName": "Fisher Quantity Index",
+          "CalculationType": "Level",
+          "DefaultScale": "0",
+          "TableId:LineNo": "T10103:6|T10503:14|T20303:13|T20403:47|T20803:13|U20403:150",
+          "SeriesCodeParents": "NONE"
+        },
+        "file": "data/raw/DSERRA.csv",
+        "sha256": "f1b2ef747fea3ca64d4c50f4c96201a05708388eb6d12b545f58ff5536b6ed80",
+        "rows": 318,
+        "first": "1947Q1",
+        "last": "2026Q2"
+      },
+      "DNDGRC": {
+        "title": "Nondurable goods",
+        "metric": "Current Dollars",
+        "units": "millions of current dollars, seasonally adjusted at annual rates",
+        "frequency": "quarterly",
+        "table": "Table 1.1.5. Gross Domestic Product, line 5",
+        "role": "headline",
+        "register": {
+          "%SeriesCode": "DNDGRC",
+          "SeriesLabel": "Nondurable goods",
+          "MetricName": "Current Dollars",
+          "CalculationType": "Level",
+          "DefaultScale": "-6",
+          "TableId:LineNo": "T10105:5|T10505:9|T20305:8|T20405:25|T20805:8|U20305:8|U20405:72",
+          "SeriesCodeParents": "DGDSRC"
+        },
+        "file": "data/raw/DNDGRC.csv",
+        "sha256": "df6bc21bcb274efc3ab753312fe7e1a9c8febfe263f3e0d548be1d8a2a6e6a9f",
+        "rows": 318,
+        "first": "1947Q1",
+        "last": "2026Q2"
+      },
+      "DSERRC": {
+        "title": "Services",
+        "metric": "Current Dollars",
+        "units": "millions of current dollars, seasonally adjusted at annual rates",
+        "frequency": "quarterly",
+        "table": "Table 1.1.5. Gross Domestic Product, line 6",
+        "role": "headline",
+        "register": {
+          "%SeriesCode": "DSERRC",
+          "SeriesLabel": "Services",
+          "MetricName": "Current Dollars",
+          "CalculationType": "Level",
+          "DefaultScale": "-6",
+          "TableId:LineNo": "T10105:6|T10505:14|T20305:13|T20405:47|T20805:13|U20305:13|U20405:150",
+          "SeriesCodeParents": "DPCERC"
+        },
+        "file": "data/raw/DSERRC.csv",
+        "sha256": "e8938caf82827170e0da2ada16469352fab90a2cace306a7bfd5f4635653ff80",
+        "rows": 318,
+        "first": "1947Q1",
+        "last": "2026Q2"
+      },
+      "DPCERX": {
+        "title": "Personal consumption expenditures",
+        "metric": "Chained Dollars",
+        "units": "millions of chained 2017 dollars, seasonally adjusted at annual rates",
+        "frequency": "quarterly",
+        "table": "Table 1.1.6. Real Gross Domestic Product, Chained Dollars, line 2",
+        "role": "robustness",
+        "register": {
+          "%SeriesCode": "DPCERX",
+          "SeriesLabel": "Personal consumption expenditures",
+          "MetricName": "Chained Dollars",
+          "CalculationType": "Level",
+          "DefaultScale": "-6",
+          "TableId:LineNo": "OECD10206:3|T10106:2|T10506:2|T20306:1|T20406:1|T20506:1|T20806:1|U20306:1|U20306:29|U20406:1",
+          "SeriesCodeParents": "NONE"
+        },
+        "file": "data/raw/DPCERX.csv",
+        "sha256": "9db45a59d7e8baa39cd28065355ae4bba1d9e6f63568c30ad4222a5e10504846",
+        "rows": 318,
+        "first": "1947Q1",
+        "last": "2026Q2"
+      },
+      "A067RX": {
+        "title": "Disposable personal income",
+        "metric": "Chained Dollars",
+        "units": "millions of chained 2017 dollars, seasonally adjusted at annual rates",
+        "frequency": "quarterly",
+        "table": "Table 2.1. Personal Income and Its Disposition, line 37",
+        "role": "headline",
+        "register": {
+          "%SeriesCode": "A067RX",
+          "SeriesLabel": "Disposable personal income",
+          "MetricName": "Chained Dollars",
+          "CalculationType": "Level",
+          "DefaultScale": "-6",
+          "TableId:LineNo": "T11706:16|T20100:37|T20600:37",
+          "SeriesCodeParents": "NONE"
+        },
+        "file": "data/raw/A067RX.csv",
+        "sha256": "42c285954c1bb28464c5609f9cca7c4135cba122850004b858af9416323a36c3",
+        "rows": 318,
+        "first": "1947Q1",
+        "last": "2026Q2"
+      },
+      "B230RC": {
+        "title": "Population (midperiod, thousands)",
+        "metric": "Persons",
+        "units": "thousands",
+        "frequency": "quarterly",
+        "table": "Table 2.1. Personal Income and Its Disposition, line 40",
+        "role": "headline",
+        "register": {
+          "%SeriesCode": "B230RC",
+          "SeriesLabel": "Population (midperiod, thousands)",
+          "MetricName": "Persons",
+          "CalculationType": "Level",
+          "DefaultScale": "-3",
+          "TableId:LineNo": "T20100:40|T20600:40|T70100:18",
+          "SeriesCodeParents": "NONE"
+        },
+        "file": "data/raw/B230RC.csv",
+        "sha256": "5974215a2096fb97dedabe0b3b2292a98b0d3303f4c210ef6b524bfbe7f5af86",
+        "rows": 318,
+        "first": "1947Q1",
+        "last": "2026Q2"
+      },
+      "DDURRA": {
+        "title": "Durable goods",
+        "metric": "Fisher Quantity Index",
+        "units": "index, 2017 = 100, seasonally adjusted",
+        "frequency": "quarterly",
+        "table": "Table 1.1.3. Real Gross Domestic Product, Quantity Indexes, line 4",
+        "role": "check",
+        "register": {
+          "%SeriesCode": "DDURRA",
+          "SeriesLabel": "Durable goods",
+          "MetricName": "Fisher Quantity Index",
+          "CalculationType": "Level",
+          "DefaultScale": "0",
+          "TableId:LineNo": "T10103:4|T10503:4|T20303:3|T20403:3|T20803:3|U20403:3",
+          "SeriesCodeParents": "NONE"
+        },
+        "file": "data/raw/DDURRA.csv",
+        "sha256": "3cbe95397b7f3697df56e02790aaa42ddbd9f649b5b4094dec7302d6a8caa3f7",
+        "rows": 318,
+        "first": "1947Q1",
+        "last": "2026Q2"
+      },
+      "DDURRC": {
+        "title": "Durable goods",
+        "metric": "Current Dollars",
+        "units": "millions of current dollars, seasonally adjusted at annual rates",
+        "frequency": "quarterly",
+        "table": "Table 1.1.5. Gross Domestic Product, line 4",
+        "role": "check",
+        "register": {
+          "%SeriesCode": "DDURRC",
+          "SeriesLabel": "Durable goods",
+          "MetricName": "Current Dollars",
+          "CalculationType": "Level",
+          "DefaultScale": "-6",
+          "TableId:LineNo": "T10105:4|T10505:4|T20305:3|T20405:3|T20805:3|U20305:3|U20405:3",
+          "SeriesCodeParents": "DGDSRC"
+        },
+        "file": "data/raw/DDURRC.csv",
+        "sha256": "f86345888fe2e556743ed2635aa754a50b9ffd29ae75cb389dfad317d5ca1e16",
+        "rows": 318,
+        "first": "1947Q1",
+        "last": "2026Q2"
+      },
+      "DPCERA": {
+        "title": "Personal consumption expenditures",
+        "metric": "Fisher Quantity Index",
+        "units": "index, 2017 = 100, seasonally adjusted",
+        "frequency": "quarterly",
+        "table": "Table 1.1.3. Real Gross Domestic Product, Quantity Indexes, line 2",
+        "role": "check",
+        "register": {
+          "%SeriesCode": "DPCERA",
+          "SeriesLabel": "Personal consumption expenditures",
+          "MetricName": "Fisher Quantity Index",
+          "CalculationType": "Level",
+          "DefaultScale": "0",
+          "TableId:LineNo": "T10103:2|T10503:2|T20303:1|T20403:1|T20503:1|T20803:1|U20403:1",
+          "SeriesCodeParents": "NONE"
+        },
+        "file": "data/raw/DPCERA.csv",
+        "sha256": "1aa86e6671815e8dbf7fada169e4d7b2dbfa0c3c50bd533f6ea5bf04c76e04f4",
+        "rows": 318,
+        "first": "1947Q1",
+        "last": "2026Q2"
+      }
+    },
+    "source": "Source: U.S. Bureau of Economic Analysis",
+    "downloaded": "2026-10-12",
+    "end_quarter": "2026Q2",
+    "vintage": {
+      "last_modified": "Wed, 30 Sep 2026 12:30:02 GMT",
+      "release_date": "2026-09-30",
+      "releases": [
+        "GDP (Third Estimate), Industries, Corporate Profits, State GDP, and State Personal Income, 2nd Quarter 2026; State PCE, 2025",
+        "Personal Income and Outlays, August 2026"
+      ],
+      "schedule": "https://www.bea.gov/news/schedule/full"
+    },
+    "bulk": {
+      "NipaDataQ.txt": {
+        "bytes": 35414945,
+        "sha256": "7a577c587cecc4b9e07b2edae2684ed565e7aef477a563c2a03d076f55d848b8",
+        "url": "https://apps.bea.gov/national/Release/TXT/NipaDataQ.txt",
+        "committed": false
+      },
+      "SeriesRegister.txt": {
+        "bytes": 960482,
+        "sha256": "159175ff182598eaa0b99ac09724b8c0c7844276c52dab0cd946f21c5dc50f6d",
+        "url": "https://apps.bea.gov/national/Release/TXT/SeriesRegister.txt",
+        "committed": false
+      }
+    },
+    "register_extract": {
+      "file": "data/raw/series_register.csv",
+      "sha256": "18ff51ce56b0e1a7671bad4f313c370296d907c42804bd40aa0ab599bd4284b9"
+    },
+    "licence": {
+      "bea_url": "https://www.bea.gov/help/faq/147",
+      "bea_faq": "Are the information and data presented on the BEA web site copyright-protected?",
+      "bea_line": "Unless stated otherwise, the information posted on this web site is in the public domain and may be used or reproduced without specific permission. A citation such as \"Source: U.S. Bureau of Economic Analysis\" would be appreciated."
+    },
+    "derived": {
+      "file": "data/quarterly.csv",
+      "sha256": "a0a7d2d5467436d3f277dea3a51ed5f8384dfb1a10cbeeab135781fbcbfde38e",
+      "quarters": 299,
+      "first": "1951Q4",
+      "last": "2026Q2",
+      "columns": [
+        "quarter",
+        "nds_real",
+        "pce_real",
+        "dpi_real",
+        "population",
+        "log_c_pc",
+        "log_pce_pc",
+        "log_y_pc"
+      ]
+    },
+    "fisher": {
+      "formula": "relative_t = sqrt(L_t x P_t), L_t = sum_i v_i,t-1 r_i,t / sum_i v_i,t-1, P_t = sum_i v_i,t / sum_i (v_i,t / r_i,t), with r_i,t = q_i,t / q_i,t-1 (q: BEA's quantity index, v: BEA's current-dollar value); the level is the chained product of the relatives, scaled so that its 2017 average equals the 2017 average of current-dollar non-durables plus services (chained 2017 dollars)",
+      "parts": {
+        "nds": [
+          [
+            "DNDGRA",
+            "DNDGRC"
+          ],
+          [
+            "DSERRA",
+            "DSERRC"
+          ]
+        ],
+        "pce_check": [
+          [
+            "DDURRA",
+            "DDURRC"
+          ],
+          [
+            "DNDGRA",
+            "DNDGRC"
+          ],
+          [
+            "DSERRA",
+            "DSERRC"
+          ]
+        ]
+      },
+      "reference_year": "2017"
+    },
+    "fisher_check": {
+      "what": "Fisher chain of DDURRA, DNDGRA, DSERRA (weights DDURRC, DNDGRC, DSERRC) against BEA's DPCERA",
+      "max_abs_dlog": 0.000182,
+      "at": "1955Q1",
+      "mean_abs_dlog": 2.17e-05,
+      "quarters": 317,
+      "tolerance": 0.0002,
+      "passes": true
+    },
+    "choices": {
+      "consumption": "real spending on non-durable goods and services, Fisher-chained from BEA's quantity indexes DNDGRA and DSERRA with the current-dollar values DNDGRC and DSERRC (chained 2017 dollars)",
+      "why_nds": "Hall (1978) and Campbell and Mankiw (1989) used spending on non-durable goods and services, and so do we. BEA's quarterly file has chained-dollar non-durables (DNDGRX) and services (DSERRX) only from 2007Q1, and chained-dollar components do not add up to a total; but it has BEA's Fisher quantity indexes (DNDGRA, DSERRA) and current-dollar values (DNDGRC, DSERRC) from 1947Q1, which is all a Fisher chain needs. The same formula applied to durables, non-durables and services reproduces BEA's own total-PCE quantity index (DPCERA) (see fisher_check). Total real PCE (DPCERX), which includes durable goods, is kept as a robustness check; under Hall's hypothesis spending on durables need not be a random walk (Mankiw 1982)",
+      "robustness": "total real personal consumption expenditures (DPCERX), which includes durable goods",
+      "income": "real disposable personal income (A067RX), quarterly",
+      "population": "B230RC, quarterly",
+      "why_population": "B230RC is the population line of NIPA Table 2.1 (line 40), the one BEA itself uses for its per-capita income and spending series (Table 7.1, Selected Per Capita Product and Income Series)",
+      "start": "1951Q4",
+      "why_start": "the regressions start in 1953Q1, the start of Campbell and Mankiw's sample (1953:1 to 1986:4); with four lags of quarterly growth they need data from 1951Q4. BEA's quarterly series, income included, start in 1947Q1",
+      "chained_2017_check": "chained dollars equal current dollars in the reference year: the 2017 average of DPCERX equals that of current-dollar PCE (DPCERC) in this vintage, 13,290,625.5 million",
+      "per_capita": "chained 2017 dollars per person (annual rate); growth = 100 x change in the log, in log points (about per cent)"
+    }
+  },
+  "sample": {
+    "growth_quarters": 298,
+    "regression_quarters": [
+      "1953Q1",
+      "2026Q2"
+    ],
+    "n": 294,
+    "lags": 4,
+    "iv_lags": [
+      2,
+      3,
+      4
+    ],
+    "hac_lags": 4,
+    "split_year": 1990,
+    "halves": {
+      "first": [
+        "1953Q1",
+        "1989Q4"
+      ],
+      "second": [
+        "1990Q1",
+        "2026Q2"
+      ]
+    },
+    "pre_2020_end": "2019Q4",
+    "cm_window": [
+      "1953Q1",
+      "1986Q4"
+    ],
+    "ci_level_pct": 95
+  },
+  "hall": {
+    "full": {
+      "quarters": [
+        "1953Q1",
+        "2026Q2"
+      ],
+      "n": 294,
+      "r2_pct": 11.9,
+      "r2_adj_pct": 9.4,
+      "p_all_lags": 4.45e-08,
+      "F_all_lags": 6.73,
+      "p_income_lags": 0.0106,
+      "F_income_lags": 3.35,
+      "p_consumption_lags": 0.96,
+      "F_consumption_lags": 0.16,
+      "df_all": [
+        8,
+        285
+      ],
+      "df_income": [
+        4,
+        285
+      ],
+      "coef": [
+        0.0025,
+        -0.0353,
+        0.0005,
+        -0.0228,
+        0.0358,
+        0.2361,
+        0.1191,
+        0.0592,
+        0.0011
+      ],
+      "se_hac": [
+        0.0007,
+        0.1152,
+        0.0912,
+        0.1215,
+        0.0711,
+        0.1039,
+        0.0658,
+        0.0438,
+        0.0413
+      ],
+      "lags_2_4": {
+        "r2_pct": 2.9,
+        "r2_adj_pct": 0.9,
+        "p": 0.00239,
+        "F": 3.49
+      }
+    },
+    "first_half": {
+      "quarters": [
+        "1953Q1",
+        "1989Q4"
+      ],
+      "n": 148,
+      "r2_pct": 15.8,
+      "r2_adj_pct": 11.0,
+      "p_all_lags": 9.78e-08,
+      "F_all_lags": 7.0,
+      "p_income_lags": 0.42,
+      "F_income_lags": 0.98,
+      "p_consumption_lags": 0.0325,
+      "F_consumption_lags": 2.71,
+      "df_all": [
+        8,
+        139
+      ],
+      "df_income": [
+        4,
+        139
+      ],
+      "coef": [
+        0.0033,
+        0.2791,
+        0.0275,
+        0.1236,
+        -0.0861,
+        0.0725,
+        -0.0181,
+        0.0044,
+        -0.0199
+      ],
+      "se_hac": [
+        0.0007,
+        0.0895,
+        0.0967,
+        0.091,
+        0.0846,
+        0.0578,
+        0.0494,
+        0.0399,
+        0.0523
+      ],
+      "lags_2_4": {
+        "r2_pct": 4.8,
+        "r2_adj_pct": 0.7,
+        "p": 0.0727,
+        "F": 1.98
+      }
+    },
+    "second_half": {
+      "quarters": [
+        "1990Q1",
+        "2026Q2"
+      ],
+      "n": 146,
+      "r2_pct": 14.0,
+      "r2_adj_pct": 9.0,
+      "p_all_lags": 0.0198,
+      "F_all_lags": 2.38,
+      "p_income_lags": 0.0336,
+      "F_income_lags": 2.69,
+      "p_consumption_lags": 0.595,
+      "F_consumption_lags": 0.7,
+      "df_all": [
+        8,
+        137
+      ],
+      "df_income": [
+        4,
+        137
+      ],
+      "coef": [
+        0.0011,
+        -0.047,
+        0.0202,
+        -0.0421,
+        0.1021,
+        0.2942,
+        0.1648,
+        0.0859,
+        0.0265
+      ],
+      "se_hac": [
+        0.0014,
+        0.1132,
+        0.1105,
+        0.1654,
+        0.1251,
+        0.1604,
+        0.0897,
+        0.0569,
+        0.0526
+      ],
+      "lags_2_4": {
+        "r2_pct": 2.9,
+        "r2_adj_pct": -1.3,
+        "p": 0.0218,
+        "F": 2.57
+      }
+    },
+    "pre_2020": {
+      "quarters": [
+        "1953Q1",
+        "2019Q4"
+      ],
+      "n": 268,
+      "r2_pct": 22.0,
+      "r2_adj_pct": 19.6,
+      "p_all_lags": 1.61e-14,
+      "F_all_lags": 11.97,
+      "p_income_lags": 0.297,
+      "F_income_lags": 1.23,
+      "p_consumption_lags": 3.16e-06,
+      "F_consumption_lags": 8.18,
+      "df_all": [
+        8,
+        259
+      ],
+      "df_income": [
+        4,
+        259
+      ],
+      "coef": [
+        0.0022,
+        0.3132,
+        0.0888,
+        0.2116,
+        -0.0839,
+        0.0493,
+        -0.0216,
+        -0.0232,
+        -0.0156
+      ],
+      "se_hac": [
+        0.0004,
+        0.0702,
+        0.08,
+        0.074,
+        0.0671,
+        0.0364,
+        0.0329,
+        0.0286,
+        0.0349
+      ],
+      "lags_2_4": {
+        "r2_pct": 11.5,
+        "r2_adj_pct": 9.4,
+        "p": 2.68e-05,
+        "F": 5.42
+      }
+    },
+    "out_of_sample": {
+      "method": "each quarter from 1990 on is predicted by the regression fitted on all earlier quarters; R^2 against the mean of all earlier quarters (negative = worse than that mean)",
+      "from": "1990Q1",
+      "full_r2_pct": -116.0,
+      "pre_2020_r2_pct": 32.7,
+      "lags_2_4_full_r2_pct": -17.0,
+      "lags_2_4_pre_2020_r2_pct": 23.7,
+      "mean_dc_pct_before": 0.55,
+      "mean_dc_pct_after_to_2019": 0.35,
+      "benchmark_note": "the benchmark is the average of all earlier quarters; average growth was lower after 1990 than before"
+    },
+    "p_floor": 0.001,
+    "time_aggregation": "Quarterly figures are averages over the quarter, so even if spending followed a random walk, its change from one quarter to the next would be correlated with the previous change (Working 1960), and the first lag would predict it under Hall's hypothesis; lags two to four are not affected (Campbell and Mankiw 1989, p. 190)",
+    "hall_1978": {
+      "consumption_page": 979,
+      "consumption": "consumption of nondurables and services in 1972 dollars from the U.S. National Income and Product Accounts divided by the population",
+      "sample": "1948-1977, quarterly",
+      "income_test_page": 982,
+      "income_test": "Table 3, equation 3.2: consumption per person on its first lag and four lags of real disposable income per person, in levels",
+      "income_test_F": 2.0,
+      "income_test_crit_5pct": 2.4,
+      "income_test_quote": "The F-statistic for the joint predictive value of all four lagged income variables is 2.0, somewhat less than the critical value of 2.4 at the 5 percent level.",
+      "ours": "the growth-rate version: the change in log consumption per person on lags of its own growth and of income growth"
+    },
+    "plain": "Using spending and income growth from two to four quarters back, a regression explains 11.5 % of the quarter-to-quarter changes in US spending per person on non-durables and services, 1953Q1 to 2019Q4 (in-sample; 9.4 % adjusted for the number of lags), and 2.9 % for 1953Q1 to 2026Q2. With the most recent quarter added (lags 1-4) the shares are 22.0 % and 11.9 %, but part of that is the averaging within quarters.",
+    "series": {
+      "quarters": [
+        "1953Q1",
+        "1953Q2",
+        "1953Q3",
+        "1953Q4",
+        "1954Q1",
+        "1954Q2",
+        "1954Q3",
+        "1954Q4",
+        "1955Q1",
+        "1955Q2",
+        "1955Q3",
+        "1955Q4",
+        "1956Q1",
+        "1956Q2",
+        "1956Q3",
+        "1956Q4",
+        "1957Q1",
+        "1957Q2",
+        "1957Q3",
+        "1957Q4",
+        "1958Q1",
+        "1958Q2",
+        "1958Q3",
+        "1958Q4",
+        "1959Q1",
+        "1959Q2",
+        "1959Q3",
+        "1959Q4",
+        "1960Q1",
+        "1960Q2",
+        "1960Q3",
+        "1960Q4",
+        "1961Q1",
+        "1961Q2",
+        "1961Q3",
+        "1961Q4",
+        "1962Q1",
+        "1962Q2",
+        "1962Q3",
+        "1962Q4",
+        "1963Q1",
+        "1963Q2",
+        "1963Q3",
+        "1963Q4",
+        "1964Q1",
+        "1964Q2",
+        "1964Q3",
+        "1964Q4",
+        "1965Q1",
+        "1965Q2",
+        "1965Q3",
+        "1965Q4",
+        "1966Q1",
+        "1966Q2",
+        "1966Q3",
+        "1966Q4",
+        "1967Q1",
+        "1967Q2",
+        "1967Q3",
+        "1967Q4",
+        "1968Q1",
+        "1968Q2",
+        "1968Q3",
+        "1968Q4",
+        "1969Q1",
+        "1969Q2",
+        "1969Q3",
+        "1969Q4",
+        "1970Q1",
+        "1970Q2",
+        "1970Q3",
+        "1970Q4",
+        "1971Q1",
+        "1971Q2",
+        "1971Q3",
+        "1971Q4",
+        "1972Q1",
+        "1972Q2",
+        "1972Q3",
+        "1972Q4",
+        "1973Q1",
+        "1973Q2",
+        "1973Q3",
+        "1973Q4",
+        "1974Q1",
+        "1974Q2",
+        "1974Q3",
+        "1974Q4",
+        "1975Q1",
+        "1975Q2",
+        "1975Q3",
+        "1975Q4",
+        "1976Q1",
+        "1976Q2",
+        "1976Q3",
+        "1976Q4",
+        "1977Q1",
+        "1977Q2",
+        "1977Q3",
+        "1977Q4",
+        "1978Q1",
+        "1978Q2",
+        "1978Q3",
+        "1978Q4",
+        "1979Q1",
+        "1979Q2",
+        "1979Q3",
+        "1979Q4",
+        "1980Q1",
+        "1980Q2",
+        "1980Q3",
+        "1980Q4",
+        "1981Q1",
+        "1981Q2",
+        "1981Q3",
+        "1981Q4",
+        "1982Q1",
+        "1982Q2",
+        "1982Q3",
+        "1982Q4",
+        "1983Q1",
+        "1983Q2",
+        "1983Q3",
+        "1983Q4",
+        "1984Q1",
+        "1984Q2",
+        "1984Q3",
+        "1984Q4",
+        "1985Q1",
+        "1985Q2",
+        "1985Q3",
+        "1985Q4",
+        "1986Q1",
+        "1986Q2",
+        "1986Q3",
+        "1986Q4",
+        "1987Q1",
+        "1987Q2",
+        "1987Q3",
+        "1987Q4",
+        "1988Q1",
+        "1988Q2",
+        "1988Q3",
+        "1988Q4",
+        "1989Q1",
+        "1989Q2",
+        "1989Q3",
+        "1989Q4",
+        "1990Q1",
+        "1990Q2",
+        "1990Q3",
+        "1990Q4",
+        "1991Q1",
+        "1991Q2",
+        "1991Q3",
+        "1991Q4",
+        "1992Q1",
+        "1992Q2",
+        "1992Q3",
+        "1992Q4",
+        "1993Q1",
+        "1993Q2",
+        "1993Q3",
+        "1993Q4",
+        "1994Q1",
+        "1994Q2",
+        "1994Q3",
+        "1994Q4",
+        "1995Q1",
+        "1995Q2",
+        "1995Q3",
+        "1995Q4",
+        "1996Q1",
+        "1996Q2",
+        "1996Q3",
+        "1996Q4",
+        "1997Q1",
+        "1997Q2",
+        "1997Q3",
+        "1997Q4",
+        "1998Q1",
+        "1998Q2",
+        "1998Q3",
+        "1998Q4",
+        "1999Q1",
+        "1999Q2",
+        "1999Q3",
+        "1999Q4",
+        "2000Q1",
+        "2000Q2",
+        "2000Q3",
+        "2000Q4",
+        "2001Q1",
+        "2001Q2",
+        "2001Q3",
+        "2001Q4",
+        "2002Q1",
+        "2002Q2",
+        "2002Q3",
+        "2002Q4",
+        "2003Q1",
+        "2003Q2",
+        "2003Q3",
+        "2003Q4",
+        "2004Q1",
+        "2004Q2",
+        "2004Q3",
+        "2004Q4",
+        "2005Q1",
+        "2005Q2",
+        "2005Q3",
+        "2005Q4",
+        "2006Q1",
+        "2006Q2",
+        "2006Q3",
+        "2006Q4",
+        "2007Q1",
+        "2007Q2",
+        "2007Q3",
+        "2007Q4",
+        "2008Q1",
+        "2008Q2",
+        "2008Q3",
+        "2008Q4",
+        "2009Q1",
+        "2009Q2",
+        "2009Q3",
+        "2009Q4",
+        "2010Q1",
+        "2010Q2",
+        "2010Q3",
+        "2010Q4",
+        "2011Q1",
+        "2011Q2",
+        "2011Q3",
+        "2011Q4",
+        "2012Q1",
+        "2012Q2",
+        "2012Q3",
+        "2012Q4",
+        "2013Q1",
+        "2013Q2",
+        "2013Q3",
+        "2013Q4",
+        "2014Q1",
+        "2014Q2",
+        "2014Q3",
+        "2014Q4",
+        "2015Q1",
+        "2015Q2",
+        "2015Q3",
+        "2015Q4",
+        "2016Q1",
+        "2016Q2",
+        "2016Q3",
+        "2016Q4",
+        "2017Q1",
+        "2017Q2",
+        "2017Q3",
+        "2017Q4",
+        "2018Q1",
+        "2018Q2",
+        "2018Q3",
+        "2018Q4",
+        "2019Q1",
+        "2019Q2",
+        "2019Q3",
+        "2019Q4",
+        "2020Q1",
+        "2020Q2",
+        "2020Q3",
+        "2020Q4",
+        "2021Q1",
+        "2021Q2",
+        "2021Q3",
+        "2021Q4",
+        "2022Q1",
+        "2022Q2",
+        "2022Q3",
+        "2022Q4",
+        "2023Q1",
+        "2023Q2",
+        "2023Q3",
+        "2023Q4",
+        "2024Q1",
+        "2024Q2",
+        "2024Q3",
+        "2024Q4",
+        "2025Q1",
+        "2025Q2",
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "dc_pct": [
+        0.424,
+        0.44,
+        -0.625,
+        -0.771,
+        0.518,
+        0.316,
+        1.026,
+        0.947,
+        0.68,
+        0.87,
+        0.393,
+        1.506,
+        0.623,
+        -0.037,
+        0.107,
+        0.558,
+        0.048,
+        0.216,
+        0.591,
+        -0.209,
+        -0.879,
+        0.804,
+        1.151,
+        0.545,
+        0.831,
+        0.79,
+        0.464,
+        0.489,
+        0.01,
+        0.493,
+        -0.835,
+        0.157,
+        0.466,
+        1.009,
+        -0.214,
+        1.147,
+        0.529,
+        0.653,
+        0.428,
+        0.535,
+        0.163,
+        0.421,
+        0.986,
+        0.322,
+        1.319,
+        1.295,
+        1.225,
+        0.506,
+        0.786,
+        0.989,
+        1.077,
+        2.21,
+        0.65,
+        0.76,
+        0.467,
+        0.188,
+        0.753,
+        0.626,
+        0.455,
+        0.39,
+        1.519,
+        1.178,
+        1.128,
+        0.371,
+        0.759,
+        0.579,
+        0.344,
+        0.705,
+        0.736,
+        0.027,
+        0.617,
+        0.429,
+        0.269,
+        0.403,
+        0.173,
+        0.898,
+        0.901,
+        1.54,
+        1.095,
+        1.546,
+        0.791,
+        -0.049,
+        0.334,
+        -0.181,
+        -0.858,
+        0.113,
+        0.146,
+        -0.366,
+        0.434,
+        1.344,
+        0.375,
+        0.515,
+        1.272,
+        0.782,
+        0.777,
+        0.976,
+        0.497,
+        -0.017,
+        0.569,
+        1.104,
+        0.894,
+        0.969,
+        0.444,
+        0.515,
+        0.561,
+        0.051,
+        0.368,
+        0.408,
+        -0.195,
+        -1.19,
+        0.323,
+        0.825,
+        -0.237,
+        0.365,
+        -0.181,
+        0.013,
+        0.188,
+        0.076,
+        0.392,
+        1.107,
+        0.775,
+        1.083,
+        1.235,
+        0.855,
+        0.188,
+        1.048,
+        0.61,
+        0.742,
+        1.218,
+        0.66,
+        0.911,
+        0.577,
+        0.486,
+        0.481,
+        0.391,
+        0.763,
+        0.952,
+        0.702,
+        0.392,
+        0.466,
+        1.069,
+        0.648,
+        0.986,
+        0.648,
+        0.409,
+        0.101,
+        0.482,
+        0.723,
+        0.096,
+        0.566,
+        0.255,
+        -0.824,
+        -0.346,
+        0.551,
+        -0.001,
+        -0.173,
+        1.288,
+        0.339,
+        0.554,
+        0.73,
+        0.006,
+        0.281,
+        0.764,
+        0.339,
+        0.693,
+        0.438,
+        0.395,
+        0.416,
+        0.329,
+        0.568,
+        0.305,
+        0.237,
+        0.645,
+        0.479,
+        0.263,
+        0.306,
+        0.542,
+        0.276,
+        0.963,
+        0.674,
+        0.777,
+        0.992,
+        0.753,
+        0.463,
+        0.897,
+        0.753,
+        0.604,
+        1.196,
+        0.626,
+        1.127,
+        0.566,
+        0.629,
+        -0.069,
+        0.005,
+        -0.034,
+        0.353,
+        0.221,
+        0.266,
+        0.093,
+        0.534,
+        0.336,
+        0.417,
+        0.707,
+        0.334,
+        0.614,
+        0.372,
+        0.714,
+        0.765,
+        0.446,
+        0.661,
+        0.406,
+        0.403,
+        0.462,
+        0.36,
+        0.269,
+        0.629,
+        0.29,
+        -0.071,
+        0.332,
+        0.096,
+        0.07,
+        0.186,
+        -0.687,
+        -0.352,
+        -0.511,
+        -0.675,
+        -0.029,
+        -0.081,
+        0.306,
+        0.453,
+        0.401,
+        0.149,
+        0.145,
+        0.014,
+        0.025,
+        -0.286,
+        0.345,
+        -0.004,
+        -0.131,
+        -0.022,
+        0.273,
+        0.093,
+        0.137,
+        0.646,
+        0.027,
+        0.456,
+        0.68,
+        0.839,
+        0.457,
+        0.35,
+        0.417,
+        0.166,
+        0.505,
+        0.275,
+        0.27,
+        0.195,
+        0.608,
+        0.25,
+        0.275,
+        0.612,
+        0.533,
+        0.399,
+        0.273,
+        0.183,
+        0.178,
+        0.495,
+        0.837,
+        0.486,
+        -1.533,
+        -10.171,
+        7.372,
+        1.384,
+        1.701,
+        3.322,
+        1.751,
+        0.682,
+        0.08,
+        0.825,
+        0.172,
+        0.144,
+        0.497,
+        0.04,
+        0.356,
+        0.655,
+        0.307,
+        0.576,
+        0.585,
+        0.676,
+        0.236,
+        0.349,
+        0.846,
+        0.39,
+        0.106,
+        0.773
+      ],
+      "fitted_lags_1_4_full_pct": [
+        0.806,
+        0.75,
+        0.67,
+        0.238,
+        0.038,
+        0.132,
+        0.124,
+        0.284,
+        0.618,
+        0.702,
+        0.886,
+        0.867,
+        0.634,
+        0.556,
+        0.473,
+        0.4,
+        0.539,
+        0.344,
+        0.351,
+        0.292,
+        0.016,
+        -0.151,
+        0.106,
+        0.597,
+        0.66,
+        0.491,
+        0.623,
+        0.259,
+        0.316,
+        0.402,
+        0.333,
+        0.266,
+        0.099,
+        0.345,
+        0.495,
+        0.638,
+        0.735,
+        0.657,
+        0.531,
+        0.427,
+        0.413,
+        0.454,
+        0.474,
+        0.503,
+        0.648,
+        0.772,
+        1.056,
+        0.789,
+        0.688,
+        0.606,
+        0.605,
+        0.928,
+        0.908,
+        0.755,
+        0.404,
+        0.561,
+        0.564,
+        0.694,
+        0.573,
+        0.523,
+        0.47,
+        0.645,
+        0.75,
+        0.457,
+        0.477,
+        0.316,
+        0.475,
+        0.739,
+        0.603,
+        0.588,
+        0.589,
+        0.69,
+        0.329,
+        0.629,
+        0.69,
+        0.542,
+        0.518,
+        0.398,
+        0.449,
+        0.729,
+        1.307,
+        0.919,
+        0.688,
+        0.435,
+        0.549,
+        -0.057,
+        -0.181,
+        -0.025,
+        0.05,
+        0.097,
+        1.164,
+        0.29,
+        0.386,
+        0.443,
+        0.457,
+        0.439,
+        0.417,
+        0.319,
+        0.444,
+        0.598,
+        0.784,
+        0.595,
+        0.564,
+        0.5,
+        0.436,
+        0.552,
+        0.113,
+        0.201,
+        0.184,
+        0.272,
+        0.03,
+        0.313,
+        0.519,
+        0.292,
+        0.216,
+        0.691,
+        0.402,
+        0.355,
+        0.331,
+        0.344,
+        0.301,
+        0.437,
+        0.425,
+        0.63,
+        0.856,
+        0.961,
+        0.888,
+        0.776,
+        0.557,
+        0.266,
+        0.636,
+        0.279,
+        0.501,
+        0.58,
+        0.686,
+        0.514,
+        0.279,
+        0.348,
+        -0.019,
+        0.49,
+        0.644,
+        0.8,
+        0.696,
+        0.585,
+        0.565,
+        0.575,
+        0.285,
+        0.326,
+        0.391,
+        0.469,
+        0.437,
+        0.272,
+        -0.015,
+        0.121,
+        0.293,
+        0.288,
+        0.366,
+        0.663,
+        0.606,
+        0.38,
+        0.333,
+        0.288,
+        0.264,
+        0.197,
+        0.293,
+        0.34,
+        0.489,
+        0.404,
+        0.59,
+        0.532,
+        0.37,
+        0.421,
+        0.374,
+        0.469,
+        0.483,
+        0.458,
+        0.389,
+        0.447,
+        0.469,
+        0.523,
+        0.65,
+        0.838,
+        0.791,
+        0.637,
+        0.496,
+        0.525,
+        0.318,
+        0.343,
+        0.493,
+        0.733,
+        0.661,
+        0.706,
+        0.503,
+        0.527,
+        0.277,
+        0.746,
+        0.003,
+        0.642,
+        0.515,
+        0.42,
+        0.343,
+        0.242,
+        0.443,
+        0.677,
+        0.477,
+        0.381,
+        0.481,
+        0.429,
+        0.549,
+        -0.006,
+        0.268,
+        0.273,
+        0.444,
+        0.716,
+        0.511,
+        0.334,
+        0.461,
+        0.485,
+        0.435,
+        0.301,
+        0.236,
+        0.267,
+        0.702,
+        -0.01,
+        0.322,
+        0.207,
+        0.386,
+        -0.05,
+        0.087,
+        0.217,
+        0.623,
+        0.504,
+        0.412,
+        0.489,
+        0.281,
+        0.332,
+        0.288,
+        0.578,
+        0.538,
+        0.14,
+        0.776,
+        -0.504,
+        0.031,
+        0.098,
+        0.266,
+        0.483,
+        0.591,
+        0.606,
+        0.647,
+        0.706,
+        0.488,
+        0.425,
+        0.388,
+        0.449,
+        0.261,
+        0.315,
+        0.386,
+        0.518,
+        0.601,
+        0.522,
+        0.471,
+        0.54,
+        0.551,
+        0.609,
+        0.598,
+        0.667,
+        0.378,
+        0.395,
+        0.363,
+        0.49,
+        2.933,
+        0.353,
+        0.023,
+        1.953,
+        -0.277,
+        -0.319,
+        -0.66,
+        -0.652,
+        -0.346,
+        0.297,
+        0.536,
+        1.059,
+        0.856,
+        0.637,
+        0.551,
+        0.534,
+        0.477,
+        0.376,
+        0.336,
+        0.333,
+        0.414,
+        0.361,
+        0.306,
+        0.391
+      ],
+      "fitted_lags_2_4_pre_2020_pct": [
+        0.862,
+        0.645,
+        0.495,
+        0.389,
+        0.223,
+        -0.014,
+        0.274,
+        0.52,
+        0.579,
+        0.705,
+        0.572,
+        0.524,
+        0.466,
+        0.597,
+        0.717,
+        0.367,
+        0.263,
+        0.404,
+        0.404,
+        0.313,
+        0.464,
+        0.396,
+        0.098,
+        0.318,
+        0.741,
+        0.595,
+        0.504,
+        0.601,
+        0.539,
+        0.478,
+        0.402,
+        0.368,
+        0.219,
+        0.132,
+        0.453,
+        0.593,
+        0.416,
+        0.388,
+        0.605,
+        0.472,
+        0.492,
+        0.469,
+        0.422,
+        0.374,
+        0.558,
+        0.535,
+        0.555,
+        0.762,
+        0.718,
+        0.573,
+        0.501,
+        0.624,
+        0.661,
+        0.89,
+        0.823,
+        0.513,
+        0.531,
+        0.391,
+        0.42,
+        0.535,
+        0.468,
+        0.434,
+        0.65,
+        0.827,
+        0.715,
+        0.58,
+        0.511,
+        0.567,
+        0.441,
+        0.436,
+        0.541,
+        0.412,
+        0.349,
+        0.48,
+        0.4,
+        0.381,
+        0.338,
+        0.468,
+        0.665,
+        0.785,
+        0.828,
+        0.732,
+        0.653,
+        0.324,
+        0.303,
+        0.297,
+        0.058,
+        0.166,
+        0.451,
+        0.289,
+        0.317,
+        0.639,
+        0.598,
+        0.405,
+        0.699,
+        0.71,
+        0.584,
+        0.647,
+        0.598,
+        0.373,
+        0.362,
+        0.587,
+        0.655,
+        0.627,
+        0.561,
+        0.453,
+        0.49,
+        0.412,
+        0.383,
+        0.496,
+        0.34,
+        0.001,
+        0.095,
+        0.553,
+        0.388,
+        0.287,
+        0.327,
+        0.195,
+        0.294,
+        0.35,
+        0.374,
+        0.603,
+        0.696,
+        0.66,
+        0.751,
+        0.675,
+        0.4,
+        0.422,
+        0.567,
+        0.504,
+        0.686,
+        0.685,
+        0.596,
+        0.581,
+        0.491,
+        0.428,
+        0.417,
+        0.51,
+        0.665,
+        0.673,
+        0.53,
+        0.442,
+        0.527,
+        0.591,
+        0.565,
+        0.6,
+        0.465,
+        0.366,
+        0.401,
+        0.555,
+        0.442,
+        0.385,
+        0.459,
+        0.186,
+        0.058,
+        0.362,
+        0.416,
+        0.226,
+        0.485,
+        0.607,
+        0.411,
+        0.558,
+        0.455,
+        0.338,
+        0.526,
+        0.547,
+        0.501,
+        0.515,
+        0.436,
+        0.424,
+        0.406,
+        0.44,
+        0.465,
+        0.386,
+        0.448,
+        0.509,
+        0.41,
+        0.38,
+        0.45,
+        0.443,
+        0.509,
+        0.605,
+        0.518,
+        0.576,
+        0.587,
+        0.501,
+        0.54,
+        0.631,
+        0.569,
+        0.661,
+        0.641,
+        0.58,
+        0.591,
+        0.484,
+        0.371,
+        0.244,
+        0.246,
+        0.339,
+        0.394,
+        0.372,
+        0.299,
+        0.407,
+        0.487,
+        0.435,
+        0.492,
+        0.459,
+        0.45,
+        0.493,
+        0.488,
+        0.574,
+        0.551,
+        0.543,
+        0.551,
+        0.434,
+        0.432,
+        0.405,
+        0.384,
+        0.47,
+        0.466,
+        0.29,
+        0.32,
+        0.391,
+        0.328,
+        0.313,
+        0.163,
+        0.05,
+        0.141,
+        0.004,
+        0.147,
+        0.31,
+        0.373,
+        0.429,
+        0.422,
+        0.362,
+        0.325,
+        0.304,
+        0.282,
+        0.235,
+        0.264,
+        0.328,
+        0.223,
+        0.229,
+        0.367,
+        0.43,
+        0.431,
+        0.444,
+        0.433,
+        0.34,
+        0.476,
+        0.559,
+        0.506,
+        0.394,
+        0.418,
+        0.403,
+        0.403,
+        0.448,
+        0.397,
+        0.386,
+        0.427,
+        0.434,
+        0.341,
+        0.437,
+        0.507,
+        0.444,
+        0.375,
+        0.329,
+        0.302,
+        0.386
+      ]
+    }
+  },
+  "lambda": {
+    "instrument_sets": {
+      "both": "income and consumption growth, lags 2-4",
+      "income": "income growth, lags 2-4",
+      "consumption": "consumption growth, lags 2-4",
+      "row8": "income and consumption growth, lags 2-4, plus log(c / y) lagged two quarters"
+    },
+    "hac_lags": 4,
+    "weak_F_rule": 10,
+    "strong_rule": "instruments are called strong only if the effective F (Montiel Olea and Pflueger 2013; HAC, Bartlett, 4 lags) is above 10; the classic first-stage F assumes homoskedastic, serially uncorrelated errors. Their own conservative 5 % test for a worst-case bias below 10 % needs an effective F above 23.11",
+    "mop_critical_value_tau10": 23.11,
+    "full": {
+      "quarters": [
+        "1953Q1",
+        "2026Q2"
+      ],
+      "n": 294,
+      "ols": {
+        "lambda": -0.167,
+        "se_hac": 0.181
+      },
+      "both": {
+        "lambda": -0.052,
+        "se_hac": 0.053,
+        "ci95": [
+          -0.156,
+          0.052
+        ],
+        "lambda_pct": -5.2,
+        "ci95_pct": [
+          -15.6,
+          5.2
+        ],
+        "p_lambda_zero": 0.326,
+        "first_stage_F": 23.28,
+        "first_stage_F_hac": 12.82,
+        "effective_F": 14.31,
+        "effective_F_above_10": true,
+        "weak": false,
+        "passes_mop_tau10": false,
+        "first_stage_r2_adj_pct": 31.3,
+        "instruments": 6,
+        "anderson_rubin": {
+          "set95": [],
+          "set95_pct": [],
+          "empty": true,
+          "bounded": true,
+          "open_at_grid_end": false,
+          "contains_2sls": false,
+          "exceeds_1": false,
+          "crit_F": 2.13,
+          "df": [
+            6,
+            287
+          ],
+          "min_F": 3.49,
+          "min_at": -0.007,
+          "limit_F": 12.82,
+          "classic_set95": [
+            [
+              -0.184,
+              0.114
+            ]
+          ],
+          "classic_set95_pct": [
+            [
+              -18.4,
+              11.4
+            ]
+          ],
+          "classic_empty": false,
+          "classic_bounded": true
+        }
+      },
+      "income": {
+        "lambda": 0.018,
+        "se_hac": 0.093,
+        "ci95": [
+          -0.164,
+          0.2
+        ],
+        "lambda_pct": 1.8,
+        "ci95_pct": [
+          -16.4,
+          20.0
+        ],
+        "p_lambda_zero": 0.846,
+        "first_stage_F": 13.37,
+        "first_stage_F_hac": 4.12,
+        "effective_F": 2.97,
+        "effective_F_above_10": false,
+        "weak": true,
+        "passes_mop_tau10": false,
+        "first_stage_r2_adj_pct": 11.2,
+        "instruments": 3,
+        "anderson_rubin": {
+          "set95": [
+            [
+              0.114,
+              2.206
+            ]
+          ],
+          "set95_pct": [
+            [
+              11.4,
+              220.6
+            ]
+          ],
+          "empty": false,
+          "bounded": true,
+          "open_at_grid_end": false,
+          "contains_2sls": false,
+          "exceeds_1": true,
+          "crit_F": 2.636,
+          "df": [
+            3,
+            290
+          ],
+          "min_F": 1.16,
+          "min_at": 0.489,
+          "limit_F": 4.12,
+          "classic_set95": [
+            [
+              -0.158,
+              0.298
+            ]
+          ],
+          "classic_set95_pct": [
+            [
+              -15.8,
+              29.8
+            ]
+          ],
+          "classic_empty": false,
+          "classic_bounded": true
+        }
+      },
+      "consumption": {
+        "lambda": -0.082,
+        "se_hac": 0.065,
+        "ci95": [
+          -0.21,
+          0.046
+        ],
+        "lambda_pct": -8.2,
+        "ci95_pct": [
+          -21.0,
+          4.6
+        ],
+        "p_lambda_zero": 0.208,
+        "first_stage_F": 41.96,
+        "first_stage_F_hac": 21.6,
+        "effective_F": 15.73,
+        "effective_F_above_10": true,
+        "weak": false,
+        "passes_mop_tau10": false,
+        "first_stage_r2_adj_pct": 29.5,
+        "instruments": 3,
+        "anderson_rubin": {
+          "set95": [
+            [
+              -0.246,
+              0.031
+            ]
+          ],
+          "set95_pct": [
+            [
+              -24.6,
+              3.1
+            ]
+          ],
+          "empty": false,
+          "bounded": true,
+          "open_at_grid_end": false,
+          "contains_2sls": true,
+          "exceeds_1": false,
+          "crit_F": 2.636,
+          "df": [
+            3,
+            290
+          ],
+          "min_F": 0.41,
+          "min_at": -0.109,
+          "limit_F": 21.6,
+          "classic_set95": [
+            [
+              -0.252,
+              0.105
+            ]
+          ],
+          "classic_set95_pct": [
+            [
+              -25.2,
+              10.5
+            ]
+          ],
+          "classic_empty": false,
+          "classic_bounded": true
+        }
+      },
+      "row8": {
+        "lambda": -0.052,
+        "se_hac": 0.057,
+        "ci95": [
+          -0.164,
+          0.059
+        ],
+        "lambda_pct": -5.2,
+        "ci95_pct": [
+          -16.4,
+          5.9
+        ],
+        "p_lambda_zero": 0.357,
+        "first_stage_F": 20.84,
+        "first_stage_F_hac": 12.95,
+        "effective_F": 12.73,
+        "effective_F_above_10": true,
+        "weak": false,
+        "passes_mop_tau10": false,
+        "first_stage_r2_adj_pct": 32.2,
+        "instruments": 7,
+        "anderson_rubin": {
+          "set95": [],
+          "set95_pct": [],
+          "empty": true,
+          "bounded": true,
+          "open_at_grid_end": false,
+          "contains_2sls": false,
+          "exceeds_1": false,
+          "crit_F": 2.042,
+          "df": [
+            7,
+            286
+          ],
+          "min_F": 3.89,
+          "min_at": -0.032,
+          "limit_F": 12.95,
+          "classic_set95": [
+            [
+              -0.205,
+              0.138
+            ]
+          ],
+          "classic_set95_pct": [
+            [
+              -20.5,
+              13.8
+            ]
+          ],
+          "classic_empty": false,
+          "classic_bounded": true
+        }
+      }
+    },
+    "first_half": {
+      "quarters": [
+        "1953Q1",
+        "1989Q4"
+      ],
+      "n": 148,
+      "ols": {
+        "lambda": 0.324,
+        "se_hac": 0.054
+      },
+      "both": {
+        "lambda": 0.25,
+        "se_hac": 0.12,
+        "ci95": [
+          0.015,
+          0.485
+        ],
+        "lambda_pct": 25.0,
+        "ci95_pct": [
+          1.5,
+          48.5
+        ],
+        "p_lambda_zero": 0.0371,
+        "first_stage_F": 2.47,
+        "first_stage_F_hac": 3.64,
+        "effective_F": 3.43,
+        "effective_F_above_10": false,
+        "weak": true,
+        "passes_mop_tau10": false,
+        "first_stage_r2_adj_pct": 5.7,
+        "instruments": 6,
+        "anderson_rubin": {
+          "set95": [
+            [
+              -0.076,
+              0.732
+            ]
+          ],
+          "set95_pct": [
+            [
+              -7.6,
+              73.2
+            ]
+          ],
+          "empty": false,
+          "bounded": true,
+          "open_at_grid_end": false,
+          "contains_2sls": true,
+          "exceeds_1": false,
+          "crit_F": 2.163,
+          "df": [
+            6,
+            141
+          ],
+          "min_F": 1.57,
+          "min_at": 0.3,
+          "limit_F": 3.64,
+          "classic_set95": [
+            [
+              -1.438,
+              0.794
+            ]
+          ],
+          "classic_set95_pct": [
+            [
+              -143.8,
+              79.4
+            ]
+          ],
+          "classic_empty": false,
+          "classic_bounded": true
+        }
+      },
+      "income": {
+        "lambda": 0.522,
+        "se_hac": 0.213,
+        "ci95": [
+          0.105,
+          0.94
+        ],
+        "lambda_pct": 52.2,
+        "ci95_pct": [
+          10.5,
+          94.0
+        ],
+        "p_lambda_zero": 0.0142,
+        "first_stage_F": 1.05,
+        "first_stage_F_hac": 2.13,
+        "effective_F": 1.92,
+        "effective_F_above_10": false,
+        "weak": true,
+        "passes_mop_tau10": false,
+        "first_stage_r2_adj_pct": 0.1,
+        "instruments": 3,
+        "anderson_rubin": {
+          "set95": [
+            [
+              -10.0,
+              20.0
+            ]
+          ],
+          "set95_pct": [
+            [
+              -1000.0,
+              2000.0
+            ]
+          ],
+          "empty": false,
+          "bounded": false,
+          "open_at_grid_end": true,
+          "contains_2sls": true,
+          "exceeds_1": true,
+          "crit_F": 2.667,
+          "df": [
+            3,
+            144
+          ],
+          "min_F": 0.2,
+          "min_at": 0.568,
+          "limit_F": 2.13,
+          "classic_set95": [
+            [
+              -10.0,
+              20.0
+            ]
+          ],
+          "classic_set95_pct": [
+            [
+              -1000.0,
+              2000.0
+            ]
+          ],
+          "classic_empty": false,
+          "classic_bounded": false
+        }
+      },
+      "consumption": {
+        "lambda": 0.41,
+        "se_hac": 0.156,
+        "ci95": [
+          0.105,
+          0.716
+        ],
+        "lambda_pct": 41.0,
+        "ci95_pct": [
+          10.5,
+          71.6
+        ],
+        "p_lambda_zero": 0.00852,
+        "first_stage_F": 2.37,
+        "first_stage_F_hac": 3.46,
+        "effective_F": 2.77,
+        "effective_F_above_10": false,
+        "weak": true,
+        "passes_mop_tau10": false,
+        "first_stage_r2_adj_pct": 2.7,
+        "instruments": 3,
+        "anderson_rubin": {
+          "set95": [
+            [
+              0.342,
+              0.733
+            ]
+          ],
+          "set95_pct": [
+            [
+              34.2,
+              73.3
+            ]
+          ],
+          "empty": false,
+          "bounded": true,
+          "open_at_grid_end": false,
+          "contains_2sls": true,
+          "exceeds_1": false,
+          "crit_F": 2.667,
+          "df": [
+            3,
+            144
+          ],
+          "min_F": 2.22,
+          "min_at": 0.516,
+          "limit_F": 3.46,
+          "classic_set95": [
+            [
+              -10.0,
+              20.0
+            ]
+          ],
+          "classic_set95_pct": [
+            [
+              -1000.0,
+              2000.0
+            ]
+          ],
+          "classic_empty": false,
+          "classic_bounded": false
+        }
+      },
+      "row8": {
+        "lambda": 0.225,
+        "se_hac": 0.134,
+        "ci95": [
+          -0.038,
+          0.487
+        ],
+        "lambda_pct": 22.5,
+        "ci95_pct": [
+          -3.8,
+          48.7
+        ],
+        "p_lambda_zero": 0.0941,
+        "first_stage_F": 2.19,
+        "first_stage_F_hac": 3.43,
+        "effective_F": 2.71,
+        "effective_F_above_10": false,
+        "weak": true,
+        "passes_mop_tau10": false,
+        "first_stage_r2_adj_pct": 5.4,
+        "instruments": 7,
+        "anderson_rubin": {
+          "set95": [
+            [
+              -0.088,
+              0.479
+            ]
+          ],
+          "set95_pct": [
+            [
+              -8.8,
+              47.9
+            ]
+          ],
+          "empty": false,
+          "bounded": true,
+          "open_at_grid_end": false,
+          "contains_2sls": true,
+          "exceeds_1": false,
+          "crit_F": 2.076,
+          "df": [
+            7,
+            140
+          ],
+          "min_F": 1.68,
+          "min_at": 0.233,
+          "limit_F": 3.43,
+          "classic_set95": [
+            [
+              -4.214,
+              0.749
+            ]
+          ],
+          "classic_set95_pct": [
+            [
+              -421.4,
+              74.9
+            ]
+          ],
+          "classic_empty": false,
+          "classic_bounded": true
+        }
+      }
+    },
+    "second_half": {
+      "quarters": [
+        "1990Q1",
+        "2026Q2"
+      ],
+      "n": 146,
+      "ols": {
+        "lambda": -0.309,
+        "se_hac": 0.197
+      },
+      "both": {
+        "lambda": -0.057,
+        "se_hac": 0.056,
+        "ci95": [
+          -0.168,
+          0.053
+        ],
+        "lambda_pct": -5.7,
+        "ci95_pct": [
+          -16.8,
+          5.3
+        ],
+        "p_lambda_zero": 0.31,
+        "first_stage_F": 21.14,
+        "first_stage_F_hac": 113.84,
+        "effective_F": 23.79,
+        "effective_F_above_10": true,
+        "weak": false,
+        "passes_mop_tau10": true,
+        "first_stage_r2_adj_pct": 45.5,
+        "instruments": 6,
+        "anderson_rubin": {
+          "set95": [],
+          "set95_pct": [],
+          "empty": true,
+          "bounded": true,
+          "open_at_grid_end": false,
+          "contains_2sls": false,
+          "exceeds_1": false,
+          "crit_F": 2.164,
+          "df": [
+            6,
+            139
+          ],
+          "min_F": 2.53,
+          "min_at": -0.018,
+          "limit_F": 113.84,
+          "classic_set95": [
+            [
+              -0.264,
+              0.259
+            ]
+          ],
+          "classic_set95_pct": [
+            [
+              -26.4,
+              25.9
+            ]
+          ],
+          "classic_empty": false,
+          "classic_bounded": true
+        }
+      },
+      "income": {
+        "lambda": -0.018,
+        "se_hac": 0.073,
+        "ci95": [
+          -0.162,
+          0.126
+        ],
+        "lambda_pct": -1.8,
+        "ci95_pct": [
+          -16.2,
+          12.6
+        ],
+        "p_lambda_zero": 0.803,
+        "first_stage_F": 9.27,
+        "first_stage_F_hac": 3.26,
+        "effective_F": 2.72,
+        "effective_F_above_10": false,
+        "weak": true,
+        "passes_mop_tau10": false,
+        "first_stage_r2_adj_pct": 14.6,
+        "instruments": 3,
+        "anderson_rubin": {
+          "set95": [
+            [
+              -0.032,
+              4.419
+            ]
+          ],
+          "set95_pct": [
+            [
+              -3.2,
+              441.9
+            ]
+          ],
+          "empty": false,
+          "bounded": true,
+          "open_at_grid_end": false,
+          "contains_2sls": true,
+          "exceeds_1": true,
+          "crit_F": 2.668,
+          "df": [
+            3,
+            142
+          ],
+          "min_F": 0.77,
+          "min_at": 0.313,
+          "limit_F": 3.26,
+          "classic_set95": [
+            [
+              -0.291,
+              0.535
+            ]
+          ],
+          "classic_set95_pct": [
+            [
+              -29.1,
+              53.5
+            ]
+          ],
+          "classic_empty": false,
+          "classic_bounded": true
+        }
+      },
+      "consumption": {
+        "lambda": -0.063,
+        "se_hac": 0.064,
+        "ci95": [
+          -0.189,
+          0.062
+        ],
+        "lambda_pct": -6.3,
+        "ci95_pct": [
+          -18.9,
+          6.2
+        ],
+        "p_lambda_zero": 0.323,
+        "first_stage_F": 40.29,
+        "first_stage_F_hac": 187.25,
+        "effective_F": 42.86,
+        "effective_F_above_10": true,
+        "weak": false,
+        "passes_mop_tau10": true,
+        "first_stage_r2_adj_pct": 44.8,
+        "instruments": 3,
+        "anderson_rubin": {
+          "set95": [
+            [
+              -0.214,
+              0.043
+            ]
+          ],
+          "set95_pct": [
+            [
+              -21.4,
+              4.3
+            ]
+          ],
+          "empty": false,
+          "bounded": true,
+          "open_at_grid_end": false,
+          "contains_2sls": true,
+          "exceeds_1": false,
+          "crit_F": 2.668,
+          "df": [
+            3,
+            142
+          ],
+          "min_F": 0.45,
+          "min_at": -0.088,
+          "limit_F": 187.25,
+          "classic_set95": [
+            [
+              -0.256,
+              0.194
+            ]
+          ],
+          "classic_set95_pct": [
+            [
+              -25.6,
+              19.4
+            ]
+          ],
+          "classic_empty": false,
+          "classic_bounded": true
+        }
+      },
+      "row8": {
+        "lambda": -0.067,
+        "se_hac": 0.057,
+        "ci95": [
+          -0.179,
+          0.046
+        ],
+        "lambda_pct": -6.7,
+        "ci95_pct": [
+          -17.9,
+          4.6
+        ],
+        "p_lambda_zero": 0.245,
+        "first_stage_F": 18.5,
+        "first_stage_F_hac": 61.14,
+        "effective_F": 22.69,
+        "effective_F_above_10": true,
+        "weak": false,
+        "passes_mop_tau10": false,
+        "first_stage_r2_adj_pct": 45.8,
+        "instruments": 7,
+        "anderson_rubin": {
+          "set95": [],
+          "set95_pct": [],
+          "empty": true,
+          "bounded": true,
+          "open_at_grid_end": false,
+          "contains_2sls": false,
+          "exceeds_1": false,
+          "crit_F": 2.077,
+          "df": [
+            7,
+            138
+          ],
+          "min_F": 3.59,
+          "min_at": -0.025,
+          "limit_F": 61.14,
+          "classic_set95": [
+            [
+              -0.275,
+              0.26
+            ]
+          ],
+          "classic_set95_pct": [
+            [
+              -27.5,
+              26.0
+            ]
+          ],
+          "classic_empty": false,
+          "classic_bounded": true
+        }
+      }
+    },
+    "pre_2020": {
+      "quarters": [
+        "1953Q1",
+        "2019Q4"
+      ],
+      "n": 268,
+      "ols": {
+        "lambda": 0.254,
+        "se_hac": 0.049
+      },
+      "both": {
+        "lambda": 0.509,
+        "se_hac": 0.117,
+        "ci95": [
+          0.279,
+          0.739
+        ],
+        "lambda_pct": 50.9,
+        "ci95_pct": [
+          27.9,
+          73.9
+        ],
+        "p_lambda_zero": 1.45e-05,
+        "first_stage_F": 3.95,
+        "first_stage_F_hac": 5.01,
+        "effective_F": 4.86,
+        "effective_F_above_10": false,
+        "weak": true,
+        "passes_mop_tau10": false,
+        "first_stage_r2_adj_pct": 6.2,
+        "instruments": 6,
+        "anderson_rubin": {
+          "set95": [
+            [
+              0.558,
+              1.031
+            ]
+          ],
+          "set95_pct": [
+            [
+              55.8,
+              103.1
+            ]
+          ],
+          "empty": false,
+          "bounded": true,
+          "open_at_grid_end": false,
+          "contains_2sls": false,
+          "exceeds_1": true,
+          "crit_F": 2.133,
+          "df": [
+            6,
+            261
+          ],
+          "min_F": 1.87,
+          "min_at": 0.756,
+          "limit_F": 5.01,
+          "classic_set95": [
+            [
+              0.426,
+              1.248
+            ]
+          ],
+          "classic_set95_pct": [
+            [
+              42.6,
+              124.8
+            ]
+          ],
+          "classic_empty": false,
+          "classic_bounded": true
+        }
+      },
+      "income": {
+        "lambda": 0.438,
+        "se_hac": 0.187,
+        "ci95": [
+          0.072,
+          0.804
+        ],
+        "lambda_pct": 43.8,
+        "ci95_pct": [
+          7.2,
+          80.4
+        ],
+        "p_lambda_zero": 0.0189,
+        "first_stage_F": 2.81,
+        "first_stage_F_hac": 3.52,
+        "effective_F": 4.16,
+        "effective_F_above_10": false,
+        "weak": true,
+        "passes_mop_tau10": false,
+        "first_stage_r2_adj_pct": 2.0,
+        "instruments": 3,
+        "anderson_rubin": {
+          "set95": [
+            [
+              0.056,
+              2.782
+            ]
+          ],
+          "set95_pct": [
+            [
+              5.6,
+              278.2
+            ]
+          ],
+          "empty": false,
+          "bounded": true,
+          "open_at_grid_end": false,
+          "contains_2sls": true,
+          "exceeds_1": true,
+          "crit_F": 2.639,
+          "df": [
+            3,
+            264
+          ],
+          "min_F": 1.28,
+          "min_at": 0.364,
+          "limit_F": 3.52,
+          "classic_set95": [
+            [
+              0.094,
+              6.521
+            ]
+          ],
+          "classic_set95_pct": [
+            [
+              9.4,
+              652.1
+            ]
+          ],
+          "classic_empty": false,
+          "classic_bounded": true
+        }
+      },
+      "consumption": {
+        "lambda": 0.734,
+        "se_hac": 0.15,
+        "ci95": [
+          0.439,
+          1.028
+        ],
+        "lambda_pct": 73.4,
+        "ci95_pct": [
+          43.9,
+          102.8
+        ],
+        "p_lambda_zero": 1.04e-06,
+        "first_stage_F": 4.89,
+        "first_stage_F_hac": 6.69,
+        "effective_F": 5.34,
+        "effective_F_above_10": false,
+        "weak": true,
+        "passes_mop_tau10": false,
+        "first_stage_r2_adj_pct": 4.2,
+        "instruments": 3,
+        "anderson_rubin": {
+          "set95": [
+            [
+              0.477,
+              1.389
+            ]
+          ],
+          "set95_pct": [
+            [
+              47.7,
+              138.9
+            ]
+          ],
+          "empty": false,
+          "bounded": true,
+          "open_at_grid_end": false,
+          "contains_2sls": true,
+          "exceeds_1": true,
+          "crit_F": 2.639,
+          "df": [
+            3,
+            264
+          ],
+          "min_F": 0.77,
+          "min_at": 0.762,
+          "limit_F": 6.69,
+          "classic_set95": [
+            [
+              0.45,
+              2.206
+            ]
+          ],
+          "classic_set95_pct": [
+            [
+              45.0,
+              220.6
+            ]
+          ],
+          "classic_empty": false,
+          "classic_bounded": true
+        }
+      },
+      "row8": {
+        "lambda": 0.517,
+        "se_hac": 0.119,
+        "ci95": [
+          0.284,
+          0.75
+        ],
+        "lambda_pct": 51.7,
+        "ci95_pct": [
+          28.4,
+          75.0
+        ],
+        "p_lambda_zero": 1.36e-05,
+        "first_stage_F": 3.47,
+        "first_stage_F_hac": 4.39,
+        "effective_F": 4.14,
+        "effective_F_above_10": false,
+        "weak": true,
+        "passes_mop_tau10": false,
+        "first_stage_r2_adj_pct": 6.1,
+        "instruments": 7,
+        "anderson_rubin": {
+          "set95": [
+            [
+              0.505,
+              1.184
+            ]
+          ],
+          "set95_pct": [
+            [
+              50.5,
+              118.4
+            ]
+          ],
+          "empty": false,
+          "bounded": true,
+          "open_at_grid_end": false,
+          "contains_2sls": true,
+          "exceeds_1": true,
+          "crit_F": 2.045,
+          "df": [
+            7,
+            260
+          ],
+          "min_F": 1.62,
+          "min_at": 0.768,
+          "limit_F": 4.39,
+          "classic_set95": [
+            [
+              0.397,
+              1.467
+            ]
+          ],
+          "classic_set95_pct": [
+            [
+              39.7,
+              146.7
+            ]
+          ],
+          "classic_empty": false,
+          "classic_bounded": true
+        }
+      }
+    },
+    "cm_window": {
+      "quarters": [
+        "1953Q1",
+        "1986Q4"
+      ],
+      "n": 136,
+      "ols": {
+        "lambda": 0.34,
+        "se_hac": 0.055
+      },
+      "both": {
+        "lambda": 0.298,
+        "se_hac": 0.122,
+        "ci95": [
+          0.06,
+          0.536
+        ],
+        "lambda_pct": 29.8,
+        "ci95_pct": [
+          6.0,
+          53.6
+        ],
+        "p_lambda_zero": 0.0143,
+        "first_stage_F": 2.11,
+        "first_stage_F_hac": 3.13,
+        "effective_F": 2.89,
+        "effective_F_above_10": false,
+        "weak": true,
+        "passes_mop_tau10": false,
+        "first_stage_r2_adj_pct": 4.7,
+        "instruments": 6,
+        "anderson_rubin": {
+          "set95": [
+            [
+              0.033,
+              0.985
+            ]
+          ],
+          "set95_pct": [
+            [
+              3.3,
+              98.5
+            ]
+          ],
+          "empty": false,
+          "bounded": true,
+          "open_at_grid_end": false,
+          "contains_2sls": true,
+          "exceeds_1": false,
+          "crit_F": 2.17,
+          "df": [
+            6,
+            129
+          ],
+          "min_F": 1.44,
+          "min_at": 0.472,
+          "limit_F": 3.13,
+          "classic_set95": [
+            [
+              -10.0,
+              20.0
+            ]
+          ],
+          "classic_set95_pct": [
+            [
+              -1000.0,
+              2000.0
+            ]
+          ],
+          "classic_empty": false,
+          "classic_bounded": false
+        }
+      },
+      "income": {
+        "lambda": 0.607,
+        "se_hac": 0.233,
+        "ci95": [
+          0.15,
+          1.064
+        ],
+        "lambda_pct": 60.7,
+        "ci95_pct": [
+          15.0,
+          106.4
+        ],
+        "p_lambda_zero": 0.00926,
+        "first_stage_F": 0.89,
+        "first_stage_F_hac": 1.83,
+        "effective_F": 1.68,
+        "effective_F_above_10": false,
+        "weak": true,
+        "passes_mop_tau10": false,
+        "first_stage_r2_adj_pct": -0.3,
+        "instruments": 3,
+        "anderson_rubin": {
+          "set95": [
+            [
+              -10.0,
+              20.0
+            ]
+          ],
+          "set95_pct": [
+            [
+              -1000.0,
+              2000.0
+            ]
+          ],
+          "empty": false,
+          "bounded": false,
+          "open_at_grid_end": true,
+          "contains_2sls": true,
+          "exceeds_1": true,
+          "crit_F": 2.673,
+          "df": [
+            3,
+            132
+          ],
+          "min_F": 0.08,
+          "min_at": 0.632,
+          "limit_F": 1.83,
+          "classic_set95": [
+            [
+              -10.0,
+              20.0
+            ]
+          ],
+          "classic_set95_pct": [
+            [
+              -1000.0,
+              2000.0
+            ]
+          ],
+          "classic_empty": false,
+          "classic_bounded": false
+        }
+      },
+      "consumption": {
+        "lambda": 0.446,
+        "se_hac": 0.157,
+        "ci95": [
+          0.138,
+          0.754
+        ],
+        "lambda_pct": 44.6,
+        "ci95_pct": [
+          13.8,
+          75.4
+        ],
+        "p_lambda_zero": 0.0045,
+        "first_stage_F": 2.23,
+        "first_stage_F_hac": 3.38,
+        "effective_F": 2.64,
+        "effective_F_above_10": false,
+        "weak": true,
+        "passes_mop_tau10": false,
+        "first_stage_r2_adj_pct": 2.7,
+        "instruments": 3,
+        "anderson_rubin": {
+          "set95": [
+            [
+              0.382,
+              0.819
+            ]
+          ],
+          "set95_pct": [
+            [
+              38.2,
+              81.9
+            ]
+          ],
+          "empty": false,
+          "bounded": true,
+          "open_at_grid_end": false,
+          "contains_2sls": true,
+          "exceeds_1": false,
+          "crit_F": 2.673,
+          "df": [
+            3,
+            132
+          ],
+          "min_F": 2.18,
+          "min_at": 0.558,
+          "limit_F": 3.38,
+          "classic_set95": [
+            [
+              -10.0,
+              20.0
+            ]
+          ],
+          "classic_set95_pct": [
+            [
+              -1000.0,
+              2000.0
+            ]
+          ],
+          "classic_empty": false,
+          "classic_bounded": false
+        }
+      },
+      "row8": {
+        "lambda": 0.275,
+        "se_hac": 0.135,
+        "ci95": [
+          0.01,
+          0.539
+        ],
+        "lambda_pct": 27.5,
+        "ci95_pct": [
+          1.0,
+          53.9
+        ],
+        "p_lambda_zero": 0.0418,
+        "first_stage_F": 1.86,
+        "first_stage_F_hac": 2.94,
+        "effective_F": 2.27,
+        "effective_F_above_10": false,
+        "weak": true,
+        "passes_mop_tau10": false,
+        "first_stage_r2_adj_pct": 4.3,
+        "instruments": 7,
+        "anderson_rubin": {
+          "set95": [
+            [
+              0.033,
+              0.626
+            ]
+          ],
+          "set95_pct": [
+            [
+              3.3,
+              62.6
+            ]
+          ],
+          "empty": false,
+          "bounded": true,
+          "open_at_grid_end": false,
+          "contains_2sls": true,
+          "exceeds_1": false,
+          "crit_F": 2.082,
+          "df": [
+            7,
+            128
+          ],
+          "min_F": 1.6,
+          "min_at": 0.384,
+          "limit_F": 2.94,
+          "classic_set95": [
+            [
+              -10.0,
+              20.0
+            ]
+          ],
+          "classic_set95_pct": [
+            [
+              -1000.0,
+              2000.0
+            ]
+          ],
+          "classic_empty": false,
+          "classic_bounded": false
+        }
+      }
+    },
+    "anderson_rubin": "Anderson-Rubin (1949) 95 % set: the values lambda0 at which the instruments do not predict dc - lambda0 * dy (HAC Wald F below its 5 % critical value), searched on a grid of step 0.001 from -10 to 20. It stays valid however weak the instruments are, but it tests lambda0 together with the model's other restrictions, so it can exclude the two-stage least squares estimate, or be empty when the model with a constant lambda is rejected at every value. Its HAC F test rejects too often in samples this size (see the control), so the HAC set is likely too narrow; the same set with the classic (homoskedastic) F is reported next to it",
+    "published": {
+      "page": 192,
+      "table": "Table 1, UNITED STATES 1953-1986",
+      "sample": "1953:1 to 1986:4",
+      "consumption": "non-durables and services per capita, 1982 dollars",
+      "income": "disposable personal income per capita, 1982 dollars",
+      "iv_rows": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "time_aggregation_page": 190,
+      "time_aggregation": "We deal with this problem by lagging the instruments more than one period, so there is at least a two-period time gap between the instruments and the variables in equation (1.4).",
+      "time_aggregation_serial_correlation": 0.25,
+      "about_half_page": 195,
+      "about_half": "When we use instruments that are jointly significant for predicting income growth at the 5% level or better, we get estimates of λ, the fraction of the population that consumes its current income, of about 0.5.",
+      "about_half_note": "the symbol is lambda (λ) on the printed page; the PDF's text layer renders it as \"A\"",
+      "conclusion_page": 208,
+      "conclusion": "We have estimated that each group of consumers receives about 50 percent of income",
+      "rows": {
+        "1": {
+          "instruments": "none (OLS)",
+          "lambda": 0.316,
+          "se": 0.04,
+          "ci95": [
+            0.238,
+            0.394
+          ]
+        },
+        "2": {
+          "instruments": "income growth lags 2-4",
+          "lambda": 0.417,
+          "se": 0.235,
+          "ci95": [
+            -0.044,
+            0.878
+          ]
+        },
+        "3": {
+          "instruments": "income growth lags 2-6",
+          "lambda": 0.506,
+          "se": 0.176,
+          "ci95": [
+            0.161,
+            0.851
+          ]
+        },
+        "4": {
+          "instruments": "consumption growth lags 2-4",
+          "lambda": 0.419,
+          "se": 0.161,
+          "ci95": [
+            0.103,
+            0.735
+          ]
+        },
+        "5": {
+          "instruments": "consumption growth lags 2-6",
+          "lambda": 0.523,
+          "se": 0.131,
+          "ci95": [
+            0.266,
+            0.78
+          ]
+        },
+        "6": {
+          "instruments": "interest-rate changes lags 2-4",
+          "lambda": 0.698,
+          "se": 0.235,
+          "ci95": [
+            0.237,
+            1.159
+          ]
+        },
+        "7": {
+          "instruments": "interest-rate changes lags 2-6",
+          "lambda": 0.584,
+          "se": 0.137,
+          "ci95": [
+            0.315,
+            0.853
+          ]
+        },
+        "8": {
+          "instruments": "income and consumption growth lags 2-4, c - y lagged 2",
+          "lambda": 0.351,
+          "se": 0.119,
+          "ci95": [
+            0.118,
+            0.584
+          ]
+        },
+        "9": {
+          "instruments": "row 8 plus interest-rate changes lags 2-4",
+          "lambda": 0.469,
+          "se": 0.106,
+          "ci95": [
+            0.261,
+            0.677
+          ]
+        }
+      },
+      "url": "https://www.nber.org/chapters/c10965",
+      "iv_range": [
+        0.351,
+        0.698
+      ],
+      "iv_range_pct": [
+        35.1,
+        69.8
+      ]
+    },
+    "comparison": [
+      {
+        "instruments": "income growth, lags 2-4",
+        "their_row": "2",
+        "their_sample": "1953:1 to 1986:4",
+        "their_lambda": 0.417,
+        "their_se": 0.235,
+        "our_sample": [
+          "1953Q1",
+          "1986Q4"
+        ],
+        "our_lambda": 0.607,
+        "our_se": 0.233,
+        "our_ci95": [
+          0.15,
+          1.064
+        ],
+        "our_first_stage_F": 0.89,
+        "our_effective_F": 1.68
+      },
+      {
+        "instruments": "consumption growth, lags 2-4",
+        "their_row": "4",
+        "their_sample": "1953:1 to 1986:4",
+        "their_lambda": 0.419,
+        "their_se": 0.161,
+        "our_sample": [
+          "1953Q1",
+          "1986Q4"
+        ],
+        "our_lambda": 0.446,
+        "our_se": 0.157,
+        "our_ci95": [
+          0.138,
+          0.754
+        ],
+        "our_first_stage_F": 2.23,
+        "our_effective_F": 2.64
+      },
+      {
+        "instruments": "income and consumption growth, lags 2-4, plus log(c / y) lagged two quarters",
+        "their_row": "8",
+        "their_sample": "1953:1 to 1986:4",
+        "their_lambda": 0.351,
+        "their_se": 0.119,
+        "our_sample": [
+          "1953Q1",
+          "1986Q4"
+        ],
+        "our_lambda": 0.275,
+        "our_se": 0.135,
+        "our_ci95": [
+          0.01,
+          0.539
+        ],
+        "our_first_stage_F": 1.86,
+        "our_effective_F": 2.27
+      }
+    ],
+    "comparison_note": "same window (1953:1 to 1986:4), same consumption concept (non-durables and services) and the same instruments as their rows 2, 4 and 8; their data are the 1989 vintage in 1982 dollars, ours BEA's release of 30 September 2026, Fisher-chained in 2017 dollars, and their standard errors are not computed the way ours are"
+  },
+  "robustness_total_pce": {
+    "consumption": "total real personal consumption expenditures (DPCERX), which includes durable goods",
+    "hall": {
+      "full": {
+        "quarters": [
+          "1953Q1",
+          "2026Q2"
+        ],
+        "n": 294,
+        "r2_pct": 16.4,
+        "r2_adj_pct": 14.0,
+        "p_all_lags": 3.62e-13,
+        "F_all_lags": 10.71,
+        "p_income_lags": 0.0112,
+        "F_income_lags": 3.32,
+        "p_consumption_lags": 0.92,
+        "F_consumption_lags": 0.23,
+        "df_all": [
+          8,
+          285
+        ],
+        "df_income": [
+          4,
+          285
+        ],
+        "coef": [
+          0.0027,
+          0.0009,
+          0.0371,
+          -0.0347,
+          0.0058,
+          0.3202,
+          0.1242,
+          0.067,
+          -0.0301
+        ],
+        "se_hac": [
+          0.0008,
+          0.1074,
+          0.0862,
+          0.1197,
+          0.0651,
+          0.1241,
+          0.0819,
+          0.0676,
+          0.0454
+        ],
+        "lags_2_4": {
+          "r2_pct": 3.5,
+          "r2_adj_pct": 1.5,
+          "p": 0.00388,
+          "F": 3.28
+        }
+      },
+      "first_half": {
+        "quarters": [
+          "1953Q1",
+          "1989Q4"
+        ],
+        "n": 148,
+        "r2_pct": 16.4,
+        "r2_adj_pct": 11.5,
+        "p_all_lags": 2.41e-08,
+        "F_all_lags": 7.55,
+        "p_income_lags": 0.0489,
+        "F_income_lags": 2.45,
+        "p_consumption_lags": 0.146,
+        "F_consumption_lags": 1.73,
+        "df_all": [
+          8,
+          139
+        ],
+        "df_income": [
+          4,
+          139
+        ],
+        "coef": [
+          0.0038,
+          0.1446,
+          0.1137,
+          0.124,
+          -0.0916,
+          0.2049,
+          -0.0257,
+          -0.0376,
+          -0.0789
+        ],
+        "se_hac": [
+          0.001,
+          0.0765,
+          0.096,
+          0.086,
+          0.0824,
+          0.0769,
+          0.0895,
+          0.0848,
+          0.0834
+        ],
+        "lags_2_4": {
+          "r2_pct": 6.7,
+          "r2_adj_pct": 2.7,
+          "p": 0.0482,
+          "F": 2.18
+        }
+      },
+      "second_half": {
+        "quarters": [
+          "1990Q1",
+          "2026Q2"
+        ],
+        "n": 146,
+        "r2_pct": 19.9,
+        "r2_adj_pct": 15.2,
+        "p_all_lags": 9.01e-06,
+        "F_all_lags": 5.28,
+        "p_income_lags": 0.0208,
+        "F_income_lags": 3.0,
+        "p_consumption_lags": 0.442,
+        "F_consumption_lags": 0.94,
+        "df_all": [
+          8,
+          137
+        ],
+        "df_income": [
+          4,
+          137
+        ],
+        "coef": [
+          0.0015,
+          -0.0144,
+          0.0342,
+          -0.0925,
+          0.1234,
+          0.3857,
+          0.1479,
+          0.0976,
+          0.0239
+        ],
+        "se_hac": [
+          0.0015,
+          0.1168,
+          0.1018,
+          0.1765,
+          0.1294,
+          0.185,
+          0.0899,
+          0.0643,
+          0.0579
+        ],
+        "lags_2_4": {
+          "r2_pct": 3.4,
+          "r2_adj_pct": -0.8,
+          "p": 0.00138,
+          "F": 3.85
+        }
+      },
+      "pre_2020": {
+        "quarters": [
+          "1953Q1",
+          "2019Q4"
+        ],
+        "n": 268,
+        "r2_pct": 19.7,
+        "r2_adj_pct": 17.2,
+        "p_all_lags": 8.33e-13,
+        "F_all_lags": 10.55,
+        "p_income_lags": 0.00883,
+        "F_income_lags": 3.47,
+        "p_consumption_lags": 0.00136,
+        "F_consumption_lags": 4.58,
+        "df_all": [
+          8,
+          259
+        ],
+        "df_income": [
+          4,
+          259
+        ],
+        "coef": [
+          0.0029,
+          0.1932,
+          0.1581,
+          0.1677,
+          -0.1014,
+          0.154,
+          -0.0277,
+          -0.0516,
+          -0.0499
+        ],
+        "se_hac": [
+          0.0006,
+          0.0657,
+          0.0787,
+          0.07,
+          0.0657,
+          0.0464,
+          0.0542,
+          0.0511,
+          0.0498
+        ],
+        "lags_2_4": {
+          "r2_pct": 10.2,
+          "r2_adj_pct": 8.1,
+          "p": 0.00198,
+          "F": 3.58
+        }
+      },
+      "out_of_sample": {
+        "method": "each quarter from 1990 on is predicted by the regression fitted on all earlier quarters; R^2 against the mean of all earlier quarters (negative = worse than that mean)",
+        "from": "1990Q1",
+        "full_r2_pct": -49.4,
+        "pre_2020_r2_pct": 27.6,
+        "lags_2_4_full_r2_pct": -8.3,
+        "lags_2_4_pre_2020_r2_pct": 19.1,
+        "mean_dc_pct_before": 0.6,
+        "mean_dc_pct_after_to_2019": 0.43,
+        "benchmark_note": "the benchmark is the average of all earlier quarters; average growth was lower after 1990 than before"
+      },
+      "p_floor": 0.001
+    },
+    "lambda": {
+      "instrument_sets": {
+        "both": "income and consumption growth, lags 2-4",
+        "income": "income growth, lags 2-4",
+        "consumption": "consumption growth, lags 2-4",
+        "row8": "income and consumption growth, lags 2-4, plus log(c / y) lagged two quarters"
+      },
+      "hac_lags": 4,
+      "weak_F_rule": 10,
+      "strong_rule": "instruments are called strong only if the effective F (Montiel Olea and Pflueger 2013; HAC, Bartlett, 4 lags) is above 10; the classic first-stage F assumes homoskedastic, serially uncorrelated errors. Their own conservative 5 % test for a worst-case bias below 10 % needs an effective F above 23.11",
+      "mop_critical_value_tau10": 23.11,
+      "full": {
+        "quarters": [
+          "1953Q1",
+          "2026Q2"
+        ],
+        "n": 294,
+        "ols": {
+          "lambda": -0.109,
+          "se_hac": 0.184
+        },
+        "both": {
+          "lambda": -0.011,
+          "se_hac": 0.066,
+          "ci95": [
+            -0.141,
+            0.119
+          ],
+          "lambda_pct": -1.1,
+          "ci95_pct": [
+            -14.1,
+            11.9
+          ],
+          "p_lambda_zero": 0.867,
+          "first_stage_F": 18.11,
+          "first_stage_F_hac": 6.29,
+          "effective_F": 6.68,
+          "effective_F_above_10": false,
+          "weak": true,
+          "passes_mop_tau10": false,
+          "first_stage_r2_adj_pct": 26.0,
+          "instruments": 6,
+          "anderson_rubin": {
+            "set95": [],
+            "set95_pct": [],
+            "empty": true,
+            "bounded": true,
+            "open_at_grid_end": false,
+            "contains_2sls": false,
+            "exceeds_1": false,
+            "crit_F": 2.13,
+            "df": [
+              6,
+              287
+            ],
+            "min_F": 2.88,
+            "min_at": 0.193,
+            "limit_F": 6.29,
+            "classic_set95": [
+              [
+                -0.131,
+                0.145
+              ]
+            ],
+            "classic_set95_pct": [
+              [
+                -13.1,
+                14.5
+              ]
+            ],
+            "classic_empty": false,
+            "classic_bounded": true
+          }
+        },
+        "income": {
+          "lambda": 0.07,
+          "se_hac": 0.119,
+          "ci95": [
+            -0.164,
+            0.303
+          ],
+          "lambda_pct": 7.0,
+          "ci95_pct": [
+            -16.4,
+            30.3
+          ],
+          "p_lambda_zero": 0.56,
+          "first_stage_F": 13.37,
+          "first_stage_F_hac": 4.12,
+          "effective_F": 2.97,
+          "effective_F_above_10": false,
+          "weak": true,
+          "passes_mop_tau10": false,
+          "first_stage_r2_adj_pct": 11.2,
+          "instruments": 3,
+          "anderson_rubin": {
+            "set95": [
+              [
+                -0.036,
+                2.629
+              ]
+            ],
+            "set95_pct": [
+              [
+                -3.6,
+                262.9
+              ]
+            ],
+            "empty": false,
+            "bounded": true,
+            "open_at_grid_end": false,
+            "contains_2sls": true,
+            "exceeds_1": true,
+            "crit_F": 2.636,
+            "df": [
+              3,
+              290
+            ],
+            "min_F": 1.08,
+            "min_at": 0.464,
+            "limit_F": 4.12,
+            "classic_set95": [
+              [
+                -0.185,
+                0.424
+              ]
+            ],
+            "classic_set95_pct": [
+              [
+                -18.5,
+                42.4
+              ]
+            ],
+            "classic_empty": false,
+            "classic_bounded": true
+          }
+        },
+        "consumption": {
+          "lambda": -0.049,
+          "se_hac": 0.073,
+          "ci95": [
+            -0.193,
+            0.095
+          ],
+          "lambda_pct": -4.9,
+          "ci95_pct": [
+            -19.3,
+            9.5
+          ],
+          "p_lambda_zero": 0.502,
+          "first_stage_F": 31.26,
+          "first_stage_F_hac": 5.41,
+          "effective_F": 6.3,
+          "effective_F_above_10": false,
+          "weak": true,
+          "passes_mop_tau10": false,
+          "first_stage_r2_adj_pct": 23.7,
+          "instruments": 3,
+          "anderson_rubin": {
+            "set95": [
+              [
+                -0.311,
+                -0.042
+              ]
+            ],
+            "set95_pct": [
+              [
+                -31.1,
+                -4.2
+              ]
+            ],
+            "empty": false,
+            "bounded": true,
+            "open_at_grid_end": false,
+            "contains_2sls": true,
+            "exceeds_1": false,
+            "crit_F": 2.636,
+            "df": [
+              3,
+              290
+            ],
+            "min_F": 1.61,
+            "min_at": -0.157,
+            "limit_F": 5.41,
+            "classic_set95": [
+              [
+                -0.163,
+                0.079
+              ]
+            ],
+            "classic_set95_pct": [
+              [
+                -16.3,
+                7.9
+              ]
+            ],
+            "classic_empty": false,
+            "classic_bounded": true
+          }
+        },
+        "row8": {
+          "lambda": -0.029,
+          "se_hac": 0.065,
+          "ci95": [
+            -0.156,
+            0.098
+          ],
+          "lambda_pct": -2.9,
+          "ci95_pct": [
+            -15.6,
+            9.8
+          ],
+          "p_lambda_zero": 0.655,
+          "first_stage_F": 15.66,
+          "first_stage_F_hac": 5.23,
+          "effective_F": 6.3,
+          "effective_F_above_10": false,
+          "weak": true,
+          "passes_mop_tau10": false,
+          "first_stage_r2_adj_pct": 25.9,
+          "instruments": 7,
+          "anderson_rubin": {
+            "set95": [],
+            "set95_pct": [],
+            "empty": true,
+            "bounded": true,
+            "open_at_grid_end": false,
+            "contains_2sls": false,
+            "exceeds_1": false,
+            "crit_F": 2.042,
+            "df": [
+              7,
+              286
+            ],
+            "min_F": 2.92,
+            "min_at": 0.509,
+            "limit_F": 5.23,
+            "classic_set95": [],
+            "classic_set95_pct": [],
+            "classic_empty": true,
+            "classic_bounded": true
+          }
+        }
+      },
+      "first_half": {
+        "quarters": [
+          "1953Q1",
+          "1989Q4"
+        ],
+        "n": 148,
+        "ols": {
+          "lambda": 0.481,
+          "se_hac": 0.094
+        },
+        "both": {
+          "lambda": 0.476,
+          "se_hac": 0.205,
+          "ci95": [
+            0.074,
+            0.879
+          ],
+          "lambda_pct": 47.6,
+          "ci95_pct": [
+            7.4,
+            87.9
+          ],
+          "p_lambda_zero": 0.0203,
+          "first_stage_F": 1.88,
+          "first_stage_F_hac": 2.84,
+          "effective_F": 2.07,
+          "effective_F_above_10": false,
+          "weak": true,
+          "passes_mop_tau10": false,
+          "first_stage_r2_adj_pct": 3.5,
+          "instruments": 6,
+          "anderson_rubin": {
+            "set95": [
+              [
+                -0.328,
+                -0.034
+              ],
+              [
+                0.833,
+                1.61
+              ]
+            ],
+            "set95_pct": [
+              [
+                -32.8,
+                -3.4
+              ],
+              [
+                83.3,
+                161.0
+              ]
+            ],
+            "empty": false,
+            "bounded": true,
+            "open_at_grid_end": false,
+            "contains_2sls": false,
+            "exceeds_1": true,
+            "crit_F": 2.163,
+            "df": [
+              6,
+              141
+            ],
+            "min_F": 1.95,
+            "min_at": 1.145,
+            "limit_F": 2.84,
+            "classic_set95": [
+              [
+                -10.0,
+                20.0
+              ]
+            ],
+            "classic_set95_pct": [
+              [
+                -1000.0,
+                2000.0
+              ]
+            ],
+            "classic_empty": false,
+            "classic_bounded": false
+          }
+        },
+        "income": {
+          "lambda": 1.036,
+          "se_hac": 0.41,
+          "ci95": [
+            0.232,
+            1.84
+          ],
+          "lambda_pct": 103.6,
+          "ci95_pct": [
+            23.2,
+            184.0
+          ],
+          "p_lambda_zero": 0.0115,
+          "first_stage_F": 1.05,
+          "first_stage_F_hac": 2.13,
+          "effective_F": 1.92,
+          "effective_F_above_10": false,
+          "weak": true,
+          "passes_mop_tau10": false,
+          "first_stage_r2_adj_pct": 0.1,
+          "instruments": 3,
+          "anderson_rubin": {
+            "set95": [
+              [
+                -10.0,
+                20.0
+              ]
+            ],
+            "set95_pct": [
+              [
+                -1000.0,
+                2000.0
+              ]
+            ],
+            "empty": false,
+            "bounded": false,
+            "open_at_grid_end": true,
+            "contains_2sls": true,
+            "exceeds_1": true,
+            "crit_F": 2.667,
+            "df": [
+              3,
+              144
+            ],
+            "min_F": 0.02,
+            "min_at": 1.029,
+            "limit_F": 2.13,
+            "classic_set95": [
+              [
+                -10.0,
+                20.0
+              ]
+            ],
+            "classic_set95_pct": [
+              [
+                -1000.0,
+                2000.0
+              ]
+            ],
+            "classic_empty": false,
+            "classic_bounded": false
+          }
+        },
+        "consumption": {
+          "lambda": 0.577,
+          "se_hac": 0.327,
+          "ci95": [
+            -0.063,
+            1.218
+          ],
+          "lambda_pct": 57.7,
+          "ci95_pct": [
+            -6.3,
+            121.8
+          ],
+          "p_lambda_zero": 0.0772,
+          "first_stage_F": 1.55,
+          "first_stage_F_hac": 1.69,
+          "effective_F": 1.23,
+          "effective_F_above_10": false,
+          "weak": true,
+          "passes_mop_tau10": false,
+          "first_stage_r2_adj_pct": 1.1,
+          "instruments": 3,
+          "anderson_rubin": {
+            "set95": [
+              [
+                -10.0,
+                -0.203
+              ],
+              [
+                2.326,
+                20.0
+              ]
+            ],
+            "set95_pct": [
+              [
+                -1000.0,
+                -20.3
+              ],
+              [
+                232.6,
+                2000.0
+              ]
+            ],
+            "empty": false,
+            "bounded": false,
+            "open_at_grid_end": true,
+            "contains_2sls": false,
+            "exceeds_1": true,
+            "crit_F": 2.667,
+            "df": [
+              3,
+              144
+            ],
+            "min_F": 1.61,
+            "min_at": -4.386,
+            "limit_F": 1.69,
+            "classic_set95": [
+              [
+                -10.0,
+                -0.233
+              ],
+              [
+                0.91,
+                20.0
+              ]
+            ],
+            "classic_set95_pct": [
+              [
+                -1000.0,
+                -23.3
+              ],
+              [
+                91.0,
+                2000.0
+              ]
+            ],
+            "classic_empty": false,
+            "classic_bounded": false
+          }
+        },
+        "row8": {
+          "lambda": 0.488,
+          "se_hac": 0.202,
+          "ci95": [
+            0.092,
+            0.885
+          ],
+          "lambda_pct": 48.8,
+          "ci95_pct": [
+            9.2,
+            88.5
+          ],
+          "p_lambda_zero": 0.0158,
+          "first_stage_F": 1.6,
+          "first_stage_F_hac": 2.41,
+          "effective_F": 1.66,
+          "effective_F_above_10": false,
+          "weak": true,
+          "passes_mop_tau10": false,
+          "first_stage_r2_adj_pct": 2.8,
+          "instruments": 7,
+          "anderson_rubin": {
+            "set95": [],
+            "set95_pct": [],
+            "empty": true,
+            "bounded": true,
+            "open_at_grid_end": false,
+            "contains_2sls": false,
+            "exceeds_1": false,
+            "crit_F": 2.076,
+            "df": [
+              7,
+              140
+            ],
+            "min_F": 2.38,
+            "min_at": -4.695,
+            "limit_F": 2.41,
+            "classic_set95": [
+              [
+                -10.0,
+                20.0
+              ]
+            ],
+            "classic_set95_pct": [
+              [
+                -1000.0,
+                2000.0
+              ]
+            ],
+            "classic_empty": false,
+            "classic_bounded": false
+          }
+        }
+      },
+      "second_half": {
+        "quarters": [
+          "1990Q1",
+          "2026Q2"
+        ],
+        "n": 146,
+        "ols": {
+          "lambda": -0.276,
+          "se_hac": 0.191
+        },
+        "both": {
+          "lambda": -0.04,
+          "se_hac": 0.066,
+          "ci95": [
+            -0.17,
+            0.09
+          ],
+          "lambda_pct": -4.0,
+          "ci95_pct": [
+            -17.0,
+            9.0
+          ],
+          "p_lambda_zero": 0.544,
+          "first_stage_F": 19.19,
+          "first_stage_F_hac": 44.83,
+          "effective_F": 17.21,
+          "effective_F_above_10": true,
+          "weak": false,
+          "passes_mop_tau10": false,
+          "first_stage_r2_adj_pct": 42.9,
+          "instruments": 6,
+          "anderson_rubin": {
+            "set95": [],
+            "set95_pct": [],
+            "empty": true,
+            "bounded": true,
+            "open_at_grid_end": false,
+            "contains_2sls": false,
+            "exceeds_1": false,
+            "crit_F": 2.164,
+            "df": [
+              6,
+              139
+            ],
+            "min_F": 3.85,
+            "min_at": 0.006,
+            "limit_F": 44.83,
+            "classic_set95": [
+              [
+                -0.25,
+                0.279
+              ]
+            ],
+            "classic_set95_pct": [
+              [
+                -25.0,
+                27.9
+              ]
+            ],
+            "classic_empty": false,
+            "classic_bounded": true
+          }
+        },
+        "income": {
+          "lambda": 0.019,
+          "se_hac": 0.086,
+          "ci95": [
+            -0.149,
+            0.187
+          ],
+          "lambda_pct": 1.9,
+          "ci95_pct": [
+            -14.9,
+            18.7
+          ],
+          "p_lambda_zero": 0.826,
+          "first_stage_F": 9.27,
+          "first_stage_F_hac": 3.26,
+          "effective_F": 2.72,
+          "effective_F_above_10": false,
+          "weak": true,
+          "passes_mop_tau10": false,
+          "first_stage_r2_adj_pct": 14.6,
+          "instruments": 3,
+          "anderson_rubin": {
+            "set95": [
+              [
+                -0.073,
+                3.85
+              ]
+            ],
+            "set95_pct": [
+              [
+                -7.3,
+                385.0
+              ]
+            ],
+            "empty": false,
+            "bounded": true,
+            "open_at_grid_end": false,
+            "contains_2sls": true,
+            "exceeds_1": true,
+            "crit_F": 2.668,
+            "df": [
+              3,
+              142
+            ],
+            "min_F": 1.04,
+            "min_at": 0.33,
+            "limit_F": 3.26,
+            "classic_set95": [
+              [
+                -0.256,
+                0.579
+              ]
+            ],
+            "classic_set95_pct": [
+              [
+                -25.6,
+                57.9
+              ]
+            ],
+            "classic_empty": false,
+            "classic_bounded": true
+          }
+        },
+        "consumption": {
+          "lambda": -0.047,
+          "se_hac": 0.072,
+          "ci95": [
+            -0.189,
+            0.095
+          ],
+          "lambda_pct": -4.7,
+          "ci95_pct": [
+            -18.9,
+            9.5
+          ],
+          "p_lambda_zero": 0.514,
+          "first_stage_F": 37.35,
+          "first_stage_F_hac": 100.75,
+          "effective_F": 26.72,
+          "effective_F_above_10": true,
+          "weak": false,
+          "passes_mop_tau10": true,
+          "first_stage_r2_adj_pct": 42.9,
+          "instruments": 3,
+          "anderson_rubin": {
+            "set95": [
+              [
+                -0.241,
+                0.009
+              ]
+            ],
+            "set95_pct": [
+              [
+                -24.1,
+                0.9
+              ]
+            ],
+            "empty": false,
+            "bounded": true,
+            "open_at_grid_end": false,
+            "contains_2sls": true,
+            "exceeds_1": false,
+            "crit_F": 2.668,
+            "df": [
+              3,
+              142
+            ],
+            "min_F": 1.2,
+            "min_at": -0.12,
+            "limit_F": 100.75,
+            "classic_set95": [
+              [
+                -0.237,
+                0.205
+              ]
+            ],
+            "classic_set95_pct": [
+              [
+                -23.7,
+                20.5
+              ]
+            ],
+            "classic_empty": false,
+            "classic_bounded": true
+          }
+        },
+        "row8": {
+          "lambda": -0.069,
+          "se_hac": 0.068,
+          "ci95": [
+            -0.203,
+            0.064
+          ],
+          "lambda_pct": -6.9,
+          "ci95_pct": [
+            -20.3,
+            6.4
+          ],
+          "p_lambda_zero": 0.308,
+          "first_stage_F": 17.93,
+          "first_stage_F_hac": 29.56,
+          "effective_F": 21.88,
+          "effective_F_above_10": true,
+          "weak": false,
+          "passes_mop_tau10": false,
+          "first_stage_r2_adj_pct": 45.0,
+          "instruments": 7,
+          "anderson_rubin": {
+            "set95": [],
+            "set95_pct": [],
+            "empty": true,
+            "bounded": true,
+            "open_at_grid_end": false,
+            "contains_2sls": false,
+            "exceeds_1": false,
+            "crit_F": 2.077,
+            "df": [
+              7,
+              138
+            ],
+            "min_F": 5.72,
+            "min_at": -0.032,
+            "limit_F": 29.56,
+            "classic_set95": [
+              [
+                -0.254,
+                0.218
+              ]
+            ],
+            "classic_set95_pct": [
+              [
+                -25.4,
+                21.8
+              ]
+            ],
+            "classic_empty": false,
+            "classic_bounded": true
+          }
+        }
+      },
+      "pre_2020": {
+        "quarters": [
+          "1953Q1",
+          "2019Q4"
+        ],
+        "n": 268,
+        "ols": {
+          "lambda": 0.34,
+          "se_hac": 0.078
+        },
+        "both": {
+          "lambda": 0.66,
+          "se_hac": 0.175,
+          "ci95": [
+            0.318,
+            1.003
+          ],
+          "lambda_pct": 66.0,
+          "ci95_pct": [
+            31.8,
+            100.3
+          ],
+          "p_lambda_zero": 0.000156,
+          "first_stage_F": 3.45,
+          "first_stage_F_hac": 4.07,
+          "effective_F": 3.59,
+          "effective_F_above_10": false,
+          "weak": true,
+          "passes_mop_tau10": false,
+          "first_stage_r2_adj_pct": 5.2,
+          "instruments": 6,
+          "anderson_rubin": {
+            "set95": [
+              [
+                0.966,
+                1.261
+              ]
+            ],
+            "set95_pct": [
+              [
+                96.6,
+                126.1
+              ]
+            ],
+            "empty": false,
+            "bounded": true,
+            "open_at_grid_end": false,
+            "contains_2sls": false,
+            "exceeds_1": true,
+            "crit_F": 2.133,
+            "df": [
+              6,
+              261
+            ],
+            "min_F": 2.07,
+            "min_at": 1.098,
+            "limit_F": 4.07,
+            "classic_set95": [
+              [
+                0.742,
+                1.697
+              ]
+            ],
+            "classic_set95_pct": [
+              [
+                74.2,
+                169.7
+              ]
+            ],
+            "classic_empty": false,
+            "classic_bounded": true
+          }
+        },
+        "income": {
+          "lambda": 0.651,
+          "se_hac": 0.296,
+          "ci95": [
+            0.07,
+            1.232
+          ],
+          "lambda_pct": 65.1,
+          "ci95_pct": [
+            7.0,
+            123.2
+          ],
+          "p_lambda_zero": 0.0281,
+          "first_stage_F": 2.81,
+          "first_stage_F_hac": 3.52,
+          "effective_F": 4.16,
+          "effective_F_above_10": false,
+          "weak": true,
+          "passes_mop_tau10": false,
+          "first_stage_r2_adj_pct": 2.0,
+          "instruments": 3,
+          "anderson_rubin": {
+            "set95": [
+              [
+                0.019,
+                4.67
+              ]
+            ],
+            "set95_pct": [
+              [
+                1.9,
+                467.0
+              ]
+            ],
+            "empty": false,
+            "bounded": true,
+            "open_at_grid_end": false,
+            "contains_2sls": true,
+            "exceeds_1": true,
+            "crit_F": 2.639,
+            "df": [
+              3,
+              264
+            ],
+            "min_F": 0.36,
+            "min_at": 0.603,
+            "limit_F": 3.52,
+            "classic_set95": [
+              [
+                -0.13,
+                11.093
+              ]
+            ],
+            "classic_set95_pct": [
+              [
+                -13.0,
+                1109.3
+              ]
+            ],
+            "classic_empty": false,
+            "classic_bounded": true
+          }
+        },
+        "consumption": {
+          "lambda": 0.993,
+          "se_hac": 0.249,
+          "ci95": [
+            0.505,
+            1.481
+          ],
+          "lambda_pct": 99.3,
+          "ci95_pct": [
+            50.5,
+            148.1
+          ],
+          "p_lambda_zero": 6.71e-05,
+          "first_stage_F": 3.61,
+          "first_stage_F_hac": 3.57,
+          "effective_F": 2.89,
+          "effective_F_above_10": false,
+          "weak": true,
+          "passes_mop_tau10": false,
+          "first_stage_r2_adj_pct": 2.9,
+          "instruments": 3,
+          "anderson_rubin": {
+            "set95": [
+              [
+                0.89,
+                2.549
+              ]
+            ],
+            "set95_pct": [
+              [
+                89.0,
+                254.9
+              ]
+            ],
+            "empty": false,
+            "bounded": true,
+            "open_at_grid_end": false,
+            "contains_2sls": true,
+            "exceeds_1": true,
+            "crit_F": 2.639,
+            "df": [
+              3,
+              264
+            ],
+            "min_F": 1.75,
+            "min_at": 1.258,
+            "limit_F": 3.57,
+            "classic_set95": [
+              [
+                0.791,
+                4.877
+              ]
+            ],
+            "classic_set95_pct": [
+              [
+                79.1,
+                487.7
+              ]
+            ],
+            "classic_empty": false,
+            "classic_bounded": true
+          }
+        },
+        "row8": {
+          "lambda": 0.712,
+          "se_hac": 0.179,
+          "ci95": [
+            0.361,
+            1.064
+          ],
+          "lambda_pct": 71.2,
+          "ci95_pct": [
+            36.1,
+            106.4
+          ],
+          "p_lambda_zero": 7.07e-05,
+          "first_stage_F": 3.06,
+          "first_stage_F_hac": 3.53,
+          "effective_F": 3.25,
+          "effective_F_above_10": false,
+          "weak": true,
+          "passes_mop_tau10": false,
+          "first_stage_r2_adj_pct": 5.1,
+          "instruments": 7,
+          "anderson_rubin": {
+            "set95": [],
+            "set95_pct": [],
+            "empty": true,
+            "bounded": true,
+            "open_at_grid_end": false,
+            "contains_2sls": false,
+            "exceeds_1": false,
+            "crit_F": 2.045,
+            "df": [
+              7,
+              260
+            ],
+            "min_F": 2.11,
+            "min_at": 1.069,
+            "limit_F": 3.53,
+            "classic_set95": [
+              [
+                0.797,
+                2.257
+              ]
+            ],
+            "classic_set95_pct": [
+              [
+                79.7,
+                225.7
+              ]
+            ],
+            "classic_empty": false,
+            "classic_bounded": true
+          }
+        }
+      },
+      "cm_window": {
+        "quarters": [
+          "1953Q1",
+          "1986Q4"
+        ],
+        "n": 136,
+        "ols": {
+          "lambda": 0.512,
+          "se_hac": 0.098
+        },
+        "both": {
+          "lambda": 0.41,
+          "se_hac": 0.21,
+          "ci95": [
+            -0.001,
+            0.822
+          ],
+          "lambda_pct": 41.0,
+          "ci95_pct": [
+            -0.1,
+            82.2
+          ],
+          "p_lambda_zero": 0.0508,
+          "first_stage_F": 1.85,
+          "first_stage_F_hac": 2.56,
+          "effective_F": 1.97,
+          "effective_F_above_10": false,
+          "weak": true,
+          "passes_mop_tau10": false,
+          "first_stage_r2_adj_pct": 3.7,
+          "instruments": 6,
+          "anderson_rubin": {
+            "set95": [
+              [
+                -0.952,
+                -0.063
+              ],
+              [
+                0.907,
+                1.628
+              ]
+            ],
+            "set95_pct": [
+              [
+                -95.2,
+                -6.3
+              ],
+              [
+                90.7,
+                162.8
+              ]
+            ],
+            "empty": false,
+            "bounded": true,
+            "open_at_grid_end": false,
+            "contains_2sls": false,
+            "exceeds_1": true,
+            "crit_F": 2.17,
+            "df": [
+              6,
+              129
+            ],
+            "min_F": 2.03,
+            "min_at": 1.198,
+            "limit_F": 2.56,
+            "classic_set95": [
+              [
+                -10.0,
+                20.0
+              ]
+            ],
+            "classic_set95_pct": [
+              [
+                -1000.0,
+                2000.0
+              ]
+            ],
+            "classic_empty": false,
+            "classic_bounded": false
+          }
+        },
+        "income": {
+          "lambda": 1.116,
+          "se_hac": 0.455,
+          "ci95": [
+            0.224,
+            2.008
+          ],
+          "lambda_pct": 111.6,
+          "ci95_pct": [
+            22.4,
+            200.8
+          ],
+          "p_lambda_zero": 0.0142,
+          "first_stage_F": 0.89,
+          "first_stage_F_hac": 1.83,
+          "effective_F": 1.68,
+          "effective_F_above_10": false,
+          "weak": true,
+          "passes_mop_tau10": false,
+          "first_stage_r2_adj_pct": -0.3,
+          "instruments": 3,
+          "anderson_rubin": {
+            "set95": [
+              [
+                -10.0,
+                20.0
+              ]
+            ],
+            "set95_pct": [
+              [
+                -1000.0,
+                2000.0
+              ]
+            ],
+            "empty": false,
+            "bounded": false,
+            "open_at_grid_end": true,
+            "contains_2sls": true,
+            "exceeds_1": true,
+            "crit_F": 2.673,
+            "df": [
+              3,
+              132
+            ],
+            "min_F": 0.01,
+            "min_at": 1.125,
+            "limit_F": 1.83,
+            "classic_set95": [
+              [
+                -10.0,
+                20.0
+              ]
+            ],
+            "classic_set95_pct": [
+              [
+                -1000.0,
+                2000.0
+              ]
+            ],
+            "classic_empty": false,
+            "classic_bounded": false
+          }
+        },
+        "consumption": {
+          "lambda": 0.49,
+          "se_hac": 0.296,
+          "ci95": [
+            -0.089,
+            1.069
+          ],
+          "lambda_pct": 49.0,
+          "ci95_pct": [
+            -8.9,
+            106.9
+          ],
+          "p_lambda_zero": 0.0974,
+          "first_stage_F": 1.81,
+          "first_stage_F_hac": 1.94,
+          "effective_F": 1.42,
+          "effective_F_above_10": false,
+          "weak": true,
+          "passes_mop_tau10": false,
+          "first_stage_r2_adj_pct": 1.8,
+          "instruments": 3,
+          "anderson_rubin": {
+            "set95": [
+              [
+                -10.0,
+                -0.215
+              ],
+              [
+                2.904,
+                20.0
+              ]
+            ],
+            "set95_pct": [
+              [
+                -1000.0,
+                -21.5
+              ],
+              [
+                290.4,
+                2000.0
+              ]
+            ],
+            "empty": false,
+            "bounded": false,
+            "open_at_grid_end": true,
+            "contains_2sls": false,
+            "exceeds_1": true,
+            "crit_F": 2.673,
+            "df": [
+              3,
+              132
+            ],
+            "min_F": 1.82,
+            "min_at": -3.107,
+            "limit_F": 1.94,
+            "classic_set95": [
+              [
+                -10.0,
+                -0.165
+              ],
+              [
+                1.286,
+                20.0
+              ]
+            ],
+            "classic_set95_pct": [
+              [
+                -1000.0,
+                -16.5
+              ],
+              [
+                128.6,
+                2000.0
+              ]
+            ],
+            "classic_empty": false,
+            "classic_bounded": false
+          }
+        },
+        "row8": {
+          "lambda": 0.442,
+          "se_hac": 0.201,
+          "ci95": [
+            0.048,
+            0.836
+          ],
+          "lambda_pct": 44.2,
+          "ci95_pct": [
+            4.8,
+            83.6
+          ],
+          "p_lambda_zero": 0.0279,
+          "first_stage_F": 1.59,
+          "first_stage_F_hac": 2.15,
+          "effective_F": 1.56,
+          "effective_F_above_10": false,
+          "weak": true,
+          "passes_mop_tau10": false,
+          "first_stage_r2_adj_pct": 2.9,
+          "instruments": 7,
+          "anderson_rubin": {
+            "set95": [],
+            "set95_pct": [],
+            "empty": true,
+            "bounded": true,
+            "open_at_grid_end": false,
+            "contains_2sls": false,
+            "exceeds_1": false,
+            "crit_F": 2.082,
+            "df": [
+              7,
+              128
+            ],
+            "min_F": 2.13,
+            "min_at": -6.952,
+            "limit_F": 2.15,
+            "classic_set95": [
+              [
+                -10.0,
+                0.345
+              ],
+              [
+                1.172,
+                20.0
+              ]
+            ],
+            "classic_set95_pct": [
+              [
+                -1000.0,
+                34.5
+              ],
+              [
+                117.2,
+                2000.0
+              ]
+            ],
+            "classic_empty": false,
+            "classic_bounded": false
+          }
+        }
+      },
+      "anderson_rubin": "Anderson-Rubin (1949) 95 % set: the values lambda0 at which the instruments do not predict dc - lambda0 * dy (HAC Wald F below its 5 % critical value), searched on a grid of step 0.001 from -10 to 20. It stays valid however weak the instruments are, but it tests lambda0 together with the model's other restrictions, so it can exclude the two-stage least squares estimate, or be empty when the model with a constant lambda is rejected at every value. Its HAC F test rejects too often in samples this size (see the control), so the HAC set is likely too narrow; the same set with the classic (homoskedastic) F is reported next to it"
+    }
+  },
+  "pandemic": {
+    "quarters": {
+      "2020Q1": {
+        "dc_pct": -1.5,
+        "dy_pct": 0.5,
+        "dc_change_pct": -1.5,
+        "dy_change_pct": 0.5,
+        "dc_total_pce_pct": -1.8
+      },
+      "2020Q2": {
+        "dc_pct": -10.2,
+        "dy_pct": 9.4,
+        "dc_change_pct": -9.7,
+        "dy_change_pct": 9.9,
+        "dc_total_pce_pct": -9.1
+      },
+      "2020Q3": {
+        "dc_pct": 7.4,
+        "dy_pct": -3.5,
+        "dc_change_pct": 7.7,
+        "dy_change_pct": -3.5,
+        "dc_total_pce_pct": 8.5
+      },
+      "2020Q4": {
+        "dc_pct": 1.4,
+        "dy_pct": -2.1,
+        "dc_change_pct": 1.4,
+        "dy_change_pct": -2.1,
+        "dc_total_pce_pct": 1.3
+      },
+      "2021Q1": {
+        "dc_pct": 1.7,
+        "dy_pct": 11.6,
+        "dc_change_pct": 1.7,
+        "dy_change_pct": 12.3,
+        "dc_total_pce_pct": 2.3
+      },
+      "2021Q2": {
+        "dc_pct": 3.3,
+        "dy_pct": -8.1,
+        "dc_change_pct": 3.4,
+        "dy_change_pct": -7.7,
+        "dc_total_pce_pct": 3.4
+      }
+    },
+    "sd_quarters": [
+      "1952Q1",
+      "2019Q4"
+    ],
+    "sd_dc_pct_before_2020": 0.47,
+    "sd_dy_pct_before_2020": 0.86,
+    "note": "dc_pct, dy_pct: growth in log points (about per cent) from the previous quarter, per person (dc: non-durables and services; dc_total_pce: total PCE); *_change_pct: the same change in per cent; sd_*: standard deviation of quarterly growth over sd_quarters"
+  },
+  "control": {
+    "params": {
+      "seed": 2026,
+      "lambda": 0.3,
+      "rho": 0.8,
+      "rho_weak": 0.3,
+      "growth": 0.005,
+      "sd_income": 0.008,
+      "surprise_share": 0.5,
+      "sd_news": 0.004,
+      "burn_in": 200,
+      "reps": 1000
+    },
+    "n_growth_quarters": 298,
+    "n_regression": 294,
+    "example": {
+      "lambda_true": 0.3,
+      "lambda": 0.326,
+      "ci95": [
+        0.28,
+        0.372
+      ],
+      "first_stage_F": 34.85,
+      "effective_F": 36.11,
+      "ols_lambda": 0.431,
+      "r2_pct": 32.8,
+      "p_all_lags": 2.21e-27,
+      "p_income_lags": 0.00548,
+      "covered": true
+    },
+    "cases": {
+      "hand_to_mouth": {
+        "lambda_true": 0.3,
+        "rho": 0.8,
+        "reps": 1000,
+        "hall_reject_pct": 100.0,
+        "income_lags_reject_pct": 73.6,
+        "median_r2_pct": 23.0,
+        "median_r2_lags_2_4_pct": 14.8,
+        "ar_coverage_pct": 90.3,
+        "median_lambda": 0.303,
+        "lambda_p5": 0.251,
+        "lambda_p95": 0.34,
+        "ci95_coverage_pct": 94.7,
+        "median_first_stage_F": 31.8,
+        "median_effective_F": 31.1,
+        "weak_pct": 0.0,
+        "median_ci_width": 0.104,
+        "lambda_hist": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          45,
+          409,
+          527,
+          19,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "random_walk": {
+        "lambda_true": 0.0,
+        "rho": 0.8,
+        "reps": 1000,
+        "hall_reject_pct": 12.3,
+        "income_lags_reject_pct": 7.6,
+        "median_r2_pct": 2.5,
+        "median_r2_lags_2_4_pct": 1.9,
+        "ar_coverage_pct": 90.1,
+        "median_lambda": 0.004,
+        "lambda_p5": -0.08,
+        "lambda_p95": 0.055,
+        "ci95_coverage_pct": 94.9,
+        "median_first_stage_F": 32.4,
+        "median_effective_F": 31.2,
+        "weak_pct": 0.1,
+        "median_ci_width": 0.151,
+        "lambda_hist": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          4,
+          22,
+          89,
+          342,
+          466,
+          73,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hand_to_mouth_weak": {
+        "lambda_true": 0.3,
+        "rho": 0.3,
+        "reps": 1000,
+        "hall_reject_pct": 37.4,
+        "income_lags_reject_pct": 14.6,
+        "median_r2_pct": 3.8,
+        "median_r2_lags_2_4_pct": 1.9,
+        "ar_coverage_pct": 91.8,
+        "median_lambda": 0.526,
+        "lambda_p5": 0.288,
+        "lambda_p95": 0.794,
+        "ci95_coverage_pct": 57.5,
+        "median_first_stage_F": 1.2,
+        "median_effective_F": 1.3,
+        "weak_pct": 100.0,
+        "median_ci_width": 0.533,
+        "lambda_hist": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          4,
+          2,
+          1,
+          3,
+          4,
+          7,
+          13,
+          27,
+          49,
+          73,
+          91,
+          148,
+          148,
+          135,
+          88,
+          76,
+          53,
+          31,
+          16,
+          17,
+          9,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "random_walk_weak": {
+        "lambda_true": 0.0,
+        "rho": 0.3,
+        "reps": 1000,
+        "hall_reject_pct": 15.1,
+        "income_lags_reject_pct": 9.2,
+        "median_r2_pct": 2.5,
+        "median_r2_lags_2_4_pct": 1.8,
+        "ar_coverage_pct": 88.9,
+        "median_lambda": 0.325,
+        "lambda_p5": -0.056,
+        "lambda_p95": 0.707,
+        "ci95_coverage_pct": 55.1,
+        "median_first_stage_F": 1.2,
+        "median_effective_F": 1.3,
+        "weak_pct": 100.0,
+        "median_ci_width": 0.763,
+        "lambda_hist": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          3,
+          3,
+          6,
+          4,
+          2,
+          8,
+          13,
+          12,
+          9,
+          26,
+          37,
+          44,
+          67,
+          83,
+          114,
+          113,
+          83,
+          89,
+          68,
+          69,
+          45,
+          24,
+          22,
+          19,
+          10,
+          6,
+          6,
+          4,
+          2,
+          1,
+          2,
+          1,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "hist_bins": [
+      -1.0,
+      -0.95,
+      -0.9,
+      -0.85,
+      -0.8,
+      -0.75,
+      -0.7,
+      -0.65,
+      -0.6,
+      -0.55,
+      -0.5,
+      -0.45,
+      -0.4,
+      -0.35,
+      -0.3,
+      -0.25,
+      -0.2,
+      -0.15,
+      -0.1,
+      -0.05,
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0,
+      1.05,
+      1.1,
+      1.15,
+      1.2,
+      1.25,
+      1.3,
+      1.35,
+      1.4,
+      1.45,
+      1.5,
+      1.55,
+      1.6,
+      1.65,
+      1.7,
+      1.75,
+      1.8,
+      1.85,
+      1.9,
+      1.95,
+      2.0
+    ],
+    "test_level_pct": 5
+  },
+  "guess": {
+    "a": {
+      "question": "From the last year of data, how much of next quarter's change in US consumer spending can be predicted? (0-100 %)",
+      "reads_as": "predictors = spending and income growth per person two to four quarters back; share of the variance of next quarter's growth in spending on non-durables and services explained (R^2, in-sample)",
+      "answer_pct": 11.5,
+      "quarters": [
+        "1953Q1",
+        "2019Q4"
+      ],
+      "adjusted_pct": 9.4,
+      "p": 2.68e-05,
+      "full_sample_pct": 2.9,
+      "full_sample_quarters": [
+        "1953Q1",
+        "2026Q2"
+      ],
+      "full_sample_p": 0.00239,
+      "out_of_sample_pct": 23.7,
+      "out_of_sample_full_pct": -17.0,
+      "secondary_lags_1_4_pct": 22.0,
+      "secondary_lags_1_4_full_pct": 11.9,
+      "income_lags_p": 0.297,
+      "total_pce_pct": 10.2,
+      "total_pce_p": 0.00198,
+      "total_pce_income_lags_p": 0.00883,
+      "why_lags_2_4": "Quarterly figures are averages over the quarter, so even if spending followed a random walk, its change from one quarter to the next would be correlated with the previous change (Working 1960), and the first lag would predict it under Hall's hypothesis; lags two to four are not affected (Campbell and Mankiw 1989, p. 190)",
+      "why_to_2019": "2020-2021 are left out because in those quarters spending and income per person moved by many times their usual quarterly change, often in opposite directions (2020Q2: spending -10.2, income +9.4 log points; before 2020 the standard deviation of quarterly growth was 0.47 for spending and 0.86 for income), so a few quarters dominate the fit; with lags they also reach into the following quarters, so the sample stops at 2019Q4. The full sample is reported next to it.",
+      "hall_benchmark_pct": 0
+    },
+    "b": {
+      "question": "What share of income goes to households who spend as they earn?",
+      "reads_as": "Campbell and Mankiw's lambda: the instrumental-variables slope of consumption growth on income growth (aggregate data)",
+      "published": {
+        "campbell_mankiw_about_pct": 50,
+        "campbell_mankiw_quote": "We have estimated that each group of consumers receives about 50 percent of income",
+        "campbell_mankiw_page": 208,
+        "campbell_mankiw_table1_iv_range": [
+          0.351,
+          0.698
+        ],
+        "campbell_mankiw_table1_page": 192,
+        "campbell_mankiw_sample": "1953:1 to 1986:4",
+        "hall_mishkin_pct": 20,
+        "hall_mishkin_quote": "allow a fraction of consumption to move hand in hand with current income and estimate this hand-to-mouth fraction in the panel data to be 20% (whereas the other 80% follow the prediction of the rational-expectations, permanent-income hypothesis)",
+        "hall_mishkin_source": "Scientific background on the 2026 prize in economic sciences, PDF p. 25 (printed p. 23)",
+        "hall_mishkin_sample": "food consumption, 2,309 US families (Panel Study of Income Dynamics), 1969-1975"
+      },
+      "ours": {
+        "headline": "very uncertain on these data",
+        "quarters": [
+          "1953Q1",
+          "2019Q4"
+        ],
+        "instruments": "income and consumption growth, lags 2-4",
+        "ci95_pct": [
+          27.9,
+          73.9
+        ],
+        "first_stage_F": 3.95,
+        "first_stage_F_hac": 5.01,
+        "effective_F": 4.86,
+        "effective_F_above_10": false,
+        "weak_F_rule": 10,
+        "strong_rule": "instruments are called strong only if the effective F (Montiel Olea and Pflueger 2013; HAC, Bartlett, 4 lags) is above 10; the classic first-stage F assumes homoskedastic, serially uncorrelated errors. Their own conservative 5 % test for a worst-case bias below 10 % needs an effective F above 23.11",
+        "anderson_rubin_set95_pct": [
+          [
+            55.8,
+            103.1
+          ]
+        ],
+        "anderson_rubin_contains_2sls": false,
+        "anderson_rubin_classic_set95_pct": [
+          [
+            42.6,
+            124.8
+          ]
+        ],
+        "anderson_rubin_exceeds_100": true,
+        "share_above_100_impossible": true,
+        "share_max_pct": 100,
+        "with_2020_2026_quarters": [
+          "1953Q1",
+          "2026Q2"
+        ],
+        "with_2020_2026_ci95_pct": [
+          -15.6,
+          5.2
+        ],
+        "with_2020_2026_first_stage_F": 23.28,
+        "with_2020_2026_first_stage_F_hac": 12.82,
+        "with_2020_2026_effective_F": 14.31,
+        "with_2020_2026_effective_F_above_10": true,
+        "with_2020_2026_passes_mop_tau10": false,
+        "mop_critical_value_tau10": 23.11,
+        "with_2020_2026_anderson_rubin_empty": true,
+        "with_2020_2026_anderson_rubin_classic_set95_pct": [
+          [
+            -18.4,
+            11.4
+          ]
+        ],
+        "total_pce_ci95_pct": [
+          31.8,
+          100.3
+        ],
+        "total_pce_effective_F": 3.59,
+        "no_point_headline": "the point estimate is in lambda.pre_2020.both; it is not a headline here"
+      }
+    }
+  }
+}

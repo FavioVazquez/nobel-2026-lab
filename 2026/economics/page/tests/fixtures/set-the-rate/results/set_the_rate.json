@@ -1,0 +1,561 @@
+{
+ "label": "Educational demos made to show an open-source tool. Not research.",
+ "prize": "Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 2026, Robert E. Hall and Michael Woodford, \"for microeconomic foundations of macroeconomic stabilisation\" (nobelprize.org press release, 12 October 2026)",
+ "committee_quote": "for microeconomic foundations of macroeconomic stabilisation",
+ "citations": {
+  "woodford_2003": "Woodford, Michael, 2003. Interest and Prices: Foundations of a Theory of Monetary Policy. Princeton University Press.",
+  "clarida_gali_gertler_1999": "Clarida, Richard, Jordi Galí and Mark Gertler, 1999. The Science of Monetary Policy: A New Keynesian Perspective. Journal of Economic Literature 37(4): 1661-1707.",
+  "gali_2015": "Galí, Jordi, 2015. Monetary Policy, Inflation, and the Business Cycle: An Introduction to the New Keynesian Framework and Its Applications, second edition. Princeton University Press.",
+  "blanchard_kahn_1980": "Blanchard, Olivier Jean and Charles M. Kahn, 1980. The Solution of Linear Difference Models under Rational Expectations. Econometrica 48(5): 1305-1311.",
+  "del_negro_giannoni_patterson_2023": "Del Negro, Marco, Marc P. Giannoni and Christina Patterson, 2023. The Forward Guidance Puzzle. Journal of Political Economy Macroeconomics 1(1): 43-79.",
+  "del_negro_giannoni_patterson_2015": "Del Negro, Marco, Marc Giannoni and Christina Patterson, 2012, revised 2015. The Forward Guidance Puzzle. Federal Reserve Bank of New York Staff Reports 574 (the earlier version; published 2023).",
+  "bullard_mitra_2002": "Bullard, James and Kaushik Mitra, 2002. Learning about Monetary Policy Rules. Journal of Monetary Economics 49(6): 1105-1129.",
+  "mckay_nakamura_steinsson_2016": "McKay, Alisdair, Emi Nakamura and Jón Steinsson, 2016. The Power of Forward Guidance Revisited. American Economic Review 106(10): 3133-3158."
+ },
+ "dois": {
+  "clarida_gali_gertler_1999": "10.1257/jel.37.4.1661",
+  "blanchard_kahn_1980": "10.2307/1912186",
+  "mckay_nakamura_steinsson_2016": "10.1257/aer.20150063",
+  "del_negro_giannoni_patterson_2023": "10.1086/724214",
+  "bullard_mitra_2002": "10.1016/s0304-3932(02)00144-7"
+ },
+ "python": "3.11",
+ "units": {
+  "time": "quarters; today is quarter 0",
+  "output_gap": "per cent of potential output",
+  "inflation": "percentage points at an annual rate (4 x the quarterly rate)",
+  "policy_rate": "percentage points at an annual rate, deviation from steady state"
+ },
+ "calibration": {
+  "source": "Galí (2015), ch. 3, pp. 67-70 (checked against J. Pfeifer's Dynare replication Gali_2015_chapter_3.mod)",
+  "beta": 0.99,
+  "sigma": 1.0,
+  "phi_labour": 5.0,
+  "alpha": 0.25,
+  "epsilon": 9.0,
+  "theta": 0.75,
+  "kappa": 0.172,
+  "phi_pi": 1.5,
+  "phi_y": 0.125,
+  "rho_demand": 0.5,
+  "rho_cost_push": 0.5,
+  "sources": {
+   "beta": "Galí (2015), ch. 3, pp. 67-70 (checked against J. Pfeifer's Dynare replication Gali_2015_chapter_3.mod)",
+   "sigma": "Galí (2015), ch. 3, pp. 67-70 (checked against J. Pfeifer's Dynare replication Gali_2015_chapter_3.mod)",
+   "kappa": "Galí (2015), ch. 3, pp. 67-70 (checked against J. Pfeifer's Dynare replication Gali_2015_chapter_3.mod): kappa from beta, sigma, phi, alpha, epsilon, theta",
+   "phi_pi": "Galí (2015), ch. 3, pp. 67-70 (checked against J. Pfeifer's Dynare replication Gali_2015_chapter_3.mod)",
+   "phi_y": "Galí (2015), ch. 3, pp. 67-70 (checked against J. Pfeifer's Dynare replication Gali_2015_chapter_3.mod) (0.5/4 at quarterly rates); Galí's rule responds to output's deviation from steady state; here no shock moves natural output, so that equals the output gap",
+   "rho_demand": "Galí (2015), ch. 3, pp. 67-70 (checked against J. Pfeifer's Dynare replication Gali_2015_chapter_3.mod) (discount-rate shock)",
+   "rho_cost_push": "our choice, set equal to rho_demand; the model has no cost-push shock in that chapter"
+  },
+  "shock_pp": 1,
+  "horizon_quarters": 16,
+  "cumulate_quarters": 12,
+  "phi_pi_strong": 3,
+  "phi_pi_passive": 0.8,
+  "tolerance": "1e-10"
+ },
+ "demand_shock": {
+  "label": "spending shock (households less patient)",
+  "shock": "households become less patient (Galí's discount-rate shock), a demand shift: the natural rate of interest rises 1 percentage point a year on impact",
+  "committee_note": "the committee's scientific background (p. 29) presents natural-rate shocks as representing supply shocks, such as those to productivity; a productivity shock would also move the natural rate and is not modelled here",
+  "phi_pi": 1.5,
+  "impact": {
+   "output_gap": 0.259,
+   "inflation": 0.352,
+   "policy_rate": 0.658
+  },
+  "cumulative_12q": {
+   "output_gap": 0.518,
+   "inflation": 0.704,
+   "policy_rate": 1.316
+  },
+  "paths": {
+   "output_gap": [
+    0.2591,
+    0.1295,
+    0.0648,
+    0.0324,
+    0.0162,
+    0.0081,
+    0.004,
+    0.002,
+    0.001,
+    0.0005,
+    0.0003,
+    0.0001,
+    0.0001,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "inflation": [
+    0.3523,
+    0.1761,
+    0.0881,
+    0.044,
+    0.022,
+    0.011,
+    0.0055,
+    0.0028,
+    0.0014,
+    0.0007,
+    0.0003,
+    0.0002,
+    0.0001,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "policy_rate": [
+    0.658,
+    0.329,
+    0.1645,
+    0.0822,
+    0.0411,
+    0.0206,
+    0.0103,
+    0.0051,
+    0.0026,
+    0.0013,
+    0.0006,
+    0.0003,
+    0.0002,
+    0.0001,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "max_residual_below_tol": true
+ },
+ "cost_push_shock": {
+  "shock": "the cost-push term adds 1 percentage point a year to the Phillips curve on impact; inflation itself rises by more because firms expect the shock to last. The model has no energy sector; the cost-push term stands in for any rise in firms' costs",
+  "baseline": {
+   "phi_pi": 1.5,
+   "impact": {
+    "output_gap": -0.513,
+    "inflation": 1.283,
+    "policy_rate": 1.667
+   },
+   "cumulative_12q": {
+    "output_gap": -1.026,
+    "inflation": 2.565,
+    "policy_rate": 3.334
+   },
+   "paths": {
+    "output_gap": [
+     -0.513,
+     -0.2565,
+     -0.1283,
+     -0.0641,
+     -0.0321,
+     -0.016,
+     -0.008,
+     -0.004,
+     -0.002,
+     -0.001,
+     -0.0005,
+     -0.0003,
+     -0.0001,
+     -0.0001,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "inflation": [
+     1.2826,
+     0.6413,
+     0.3206,
+     0.1603,
+     0.0802,
+     0.0401,
+     0.02,
+     0.01,
+     0.005,
+     0.0025,
+     0.0013,
+     0.0006,
+     0.0003,
+     0.0002,
+     0.0001,
+     0.0,
+     0.0
+    ],
+    "policy_rate": [
+     1.6674,
+     0.8337,
+     0.4168,
+     0.2084,
+     0.1042,
+     0.0521,
+     0.0261,
+     0.013,
+     0.0065,
+     0.0033,
+     0.0016,
+     0.0008,
+     0.0004,
+     0.0002,
+     0.0001,
+     0.0001,
+     0.0
+    ]
+   },
+   "max_residual_below_tol": true
+  },
+  "strong": {
+   "phi_pi": 3,
+   "impact": {
+    "output_gap": -0.839,
+    "inflation": 0.839,
+    "policy_rate": 2.098
+   },
+   "cumulative_12q": {
+    "output_gap": -1.678,
+    "inflation": 1.678,
+    "policy_rate": 4.195
+   },
+   "paths": {
+    "output_gap": [
+     -0.8392,
+     -0.4196,
+     -0.2098,
+     -0.1049,
+     -0.0524,
+     -0.0262,
+     -0.0131,
+     -0.0066,
+     -0.0033,
+     -0.0016,
+     -0.0008,
+     -0.0004,
+     -0.0002,
+     -0.0001,
+     -0.0001,
+     0.0,
+     0.0
+    ],
+    "inflation": [
+     0.8392,
+     0.4196,
+     0.2098,
+     0.1049,
+     0.0524,
+     0.0262,
+     0.0131,
+     0.0066,
+     0.0033,
+     0.0016,
+     0.0008,
+     0.0004,
+     0.0002,
+     0.0001,
+     0.0001,
+     0.0,
+     0.0
+    ],
+    "policy_rate": [
+     2.0979,
+     1.049,
+     0.5245,
+     0.2622,
+     0.1311,
+     0.0656,
+     0.0328,
+     0.0164,
+     0.0082,
+     0.0041,
+     0.002,
+     0.001,
+     0.0005,
+     0.0003,
+     0.0001,
+     0.0001,
+     0.0
+    ]
+   },
+   "max_residual_below_tol": true
+  },
+  "trade_off": {
+   "inflation_up": true,
+   "gap_down": true,
+   "strong_lowers_inflation": true,
+   "strong_widens_gap": true
+  }
+ },
+ "taylor_principle": {
+  "active": {
+   "phi_pi": 1.5,
+   "phi_y": 0.125,
+   "eigenvalue_moduli": [
+    1.182,
+    1.182
+   ],
+   "outside_unit_circle": 2,
+   "forward_looking_variables": 2,
+   "unique_bounded_solution": true,
+   "bullard_mitra_condition_holds": true,
+   "plain": "The rate rises more than one for one with inflation, and the model has exactly one bounded path after any shock."
+  },
+  "passive": {
+   "phi_pi": 0.8,
+   "phi_y": 0.125,
+   "eigenvalue_moduli": [
+    0.915,
+    1.393
+   ],
+   "outside_unit_circle": 1,
+   "forward_looking_variables": 2,
+   "unique_bounded_solution": false,
+   "bullard_mitra_condition_holds": false,
+   "plain": "The rate rises less than one for one with inflation, and the model has many bounded paths, so the three equations alone do not say which one the economy follows."
+  }
+ },
+ "forward_guidance": {
+  "quarter": 8,
+  "cut_pp": 1,
+  "rule_on": {
+   "announcement": "today (quarter 0) the central bank announces a one-quarter shift of 1 percentage point a year down in the intercept of its rule, in quarter 8 only; the rule stays on in every quarter; perfect foresight and rational expectations after the announcement",
+   "today": {
+    "output_gap": -0.05,
+    "inflation": 0.142,
+    "policy_rate": 0.188
+   },
+   "in_quarter": {
+    "output_gap": 0.181,
+    "inflation": 0.124,
+    "policy_rate": -0.723
+   },
+   "paths": {
+    "output_gap": [
+     -0.0498,
+     -0.0473,
+     -0.0396,
+     -0.0254,
+     -0.0033,
+     0.0278,
+     0.0687,
+     0.1199,
+     0.1808,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "inflation": [
+     0.1418,
+     0.1778,
+     0.2123,
+     0.2419,
+     0.262,
+     0.267,
+     0.2504,
+     0.2053,
+     0.1242,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "policy_rate": [
+     0.1878,
+     0.243,
+     0.2987,
+     0.3502,
+     0.3913,
+     0.4143,
+     0.41,
+     0.3679,
+     -0.7233,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "intercept_shift": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     -1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "by_horizon": {
+    "quarters": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ],
+    "output_gap_today": [
+     0.181,
+     0.12,
+     0.069,
+     0.028,
+     -0.003,
+     -0.025,
+     -0.04,
+     -0.047,
+     -0.05,
+     -0.048,
+     -0.044,
+     -0.039,
+     -0.032
+    ],
+    "inflation_today": [
+     0.124,
+     0.205,
+     0.25,
+     0.267,
+     0.262,
+     0.242,
+     0.212,
+     0.178,
+     0.142,
+     0.107,
+     0.076,
+     0.048,
+     0.026
+    ]
+   },
+   "grows_with_horizon": {
+    "output_gap": false,
+    "inflation": false
+   },
+   "shrinks_with_horizon": {
+    "output_gap": false,
+    "inflation": false
+   },
+   "inflation_peak": {
+    "quarter": 3,
+    "inflation_today": 0.267
+   },
+   "output_gap_negative_from_quarter": 4,
+   "max_residual_below_tol": true
+  },
+  "pegged_puzzle": {
+   "announcement": "the nominal policy rate is held at its steady-state value until the promised quarter, is 1 percentage point a year lower in that quarter only, then follows the rule",
+   "reported_as": "today's response for a cut promised h quarters ahead, divided by today's response to the same cut made today (h = 0)",
+   "by_horizon": {
+    "quarters": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ],
+    "output_gap_ratio": [
+     1.0,
+     1.172,
+     1.543,
+     2.175,
+     3.174,
+     4.708,
+     7.036,
+     10.547,
+     15.834,
+     23.787,
+     35.743,
+     53.715,
+     80.729
+    ],
+    "inflation_ratio": [
+     1.0,
+     2.162,
+     3.683,
+     5.821,
+     8.937,
+     13.556,
+     20.456,
+     30.799,
+     46.325,
+     69.648,
+     104.695,
+     157.363,
+     236.519
+    ]
+   },
+   "at_quarter": {
+    "quarter": 8,
+    "output_gap_ratio": 15.834,
+    "inflation_ratio": 46.325
+   },
+   "last": {
+    "quarter": 12,
+    "output_gap_ratio": 80.729,
+    "inflation_ratio": 236.519
+   },
+   "grows_with_horizon": true,
+   "max_residual_below_tol": true,
+   "published_version": "Del Negro, Giannoni and Patterson (2023), the version the committee's scientific background cites (p. 46)",
+   "puzzle": "in this textbook model, with the nominal rate held still until the promised quarter, the response today grows with how far ahead the promised cut is; Del Negro, Giannoni and Patterson (2012, 2015; published 2023) call this the forward guidance puzzle and McKay, Nakamura and Steinsson (2016) also find it implausible"
+  }
+ },
+ "guess": {
+  "a": {
+   "question": "An energy-price shock raises firms' costs. In this model, does the rule raise or lower the policy rate?",
+   "answer": "raise",
+   "because": "inflation goes up more than the output gap goes down, weighted by the rule",
+   "policy_rate_impact": 1.667
+  },
+  "b": {
+   "question": "If the rate rises less than one for one with inflation (0.8), what happens in the model?",
+   "answer": "no unique bounded solution: the model allows many paths, so it does not pin down what happens",
+   "outside_unit_circle": 1,
+   "needed": 2
+  },
+  "c": {
+   "question": "A promise about the rate two years from now: does it move inflation today?",
+   "answer": "yes",
+   "variant": "rule_on",
+   "inflation_today": 0.142,
+   "output_gap_today": -0.05,
+   "caveat": "with the nominal rate held still until the promised quarter (pegged_puzzle) the effect today grows with the horizon: the forward guidance puzzle"
+  }
+ },
+ "status": "fixture"
+}

@@ -427,6 +427,62 @@ def _card_peace(T: dict, X: dict) -> str:
     return s
 
 
+# Economics: the colours of the Economics page (2026/economics/page), ledger paper, green ink, one crimson accent.
+ECON = {
+    "light": dict(bg="#F2EDDD", rule="#2E6054", ink="#1B3A30", soft="#3F5A50", accent="#8A1538", paper="#F7F3E6"),
+    "dark": dict(bg="#13201B", rule="#9DB0A5", ink="#ECE5D0", soft="#A8B5AA", accent="#EC8597", paper="#182922"),
+}
+
+
+def econ_theme(T: dict) -> dict:
+    return ECON["dark" if T is THEMES["dark"] else "light"]
+
+
+def _card_economics(T: dict, X: dict) -> str:
+    """Three parts linked in a loop on ledger paper: households, firms and a bank, each a small box, joined by
+    arrows that run round (spending, prices, the rate). Symbolic: no person is drawn."""
+    P = econ_theme(T)
+    s = '<g clip-path="url(#cardclip)">'
+    s += f'<rect width="{CARD_W}" height="{WIN_H}" fill="{P["bg"]}"/>'
+    # ledger rules and a margin line
+    s += "".join(f'<line x1="0" y1="{y}" x2="{CARD_W}" y2="{y}" stroke="{P["rule"]}" stroke-opacity=".16" stroke-width="1.5"/>'
+                 for y in range(28, WIN_H, 28))
+    s += f'<line x1="40" y1="0" x2="40" y2="{WIN_H}" stroke="{P["accent"]}" stroke-opacity=".3" stroke-width="2"/>'
+    # a short line of spending dots across the top, the last one hollow (the next quarter, to guess)
+    dots = (0.42, 0.58, 0.5, 0.66, 0.6, 0.74, 0.68)
+    for i, v in enumerate(dots):
+        x, y = 70 + i * 28, 60 - (v - 0.4) * 60
+        s += f'<circle cx="{x}" cy="{y:.1f}" r="5.5" fill="{P["ink"]}"/>'
+    s += f'<circle cx="{70 + len(dots) * 28}" cy="44" r="5.5" fill="none" stroke="{P["accent"]}" stroke-width="2.5" stroke-dasharray="3 3"/>'
+    nodes = {"hh": (92, 238), "firm": (198, 238), "bank": (145, 128)}
+    w, h = 62, 46
+
+    def box(k: str, accent: bool = False) -> str:
+        cx, cy = nodes[k]
+        col = P["accent"] if accent else P["ink"]
+        return (f'<rect x="{cx - w / 2:g}" y="{cy - h / 2:g}" width="{w}" height="{h}" rx="8" fill="{P["paper"]}" '
+                f'stroke="{col}" stroke-width="3"/>')
+    # arrows round the loop: bank -> households (the rate), households -> firms (spending), firms -> bank (prices)
+    def arrow(x1, y1, x2, y2, bend):
+        mx, my = (x1 + x2) / 2 + bend[0], (y1 + y2) / 2 + bend[1]
+        return (f'<path d="M{x1} {y1} Q{mx:g} {my:g} {x2} {y2}" fill="none" stroke="{P["accent"]}" stroke-width="3.5" '
+                f'stroke-linecap="round"/>')
+    s += arrow(124, 150, 100, 212, (-20, 0)) + arrow(124, 238, 166, 238, (0, 18)) + arrow(206, 212, 170, 152, (22, 0))
+    # arrow heads
+    s += (f'<polygon points="100,216 93,203 107,205" fill="{P["accent"]}"/>'
+          f'<polygon points="170,238 158,231 158,245" fill="{P["accent"]}"/>'
+          f'<polygon points="166,150 172,163 160,160" fill="{P["accent"]}"/>')
+    s += box("hh") + box("firm") + box("bank", True)
+    # tiny marks inside the boxes: a row of dots (households), a price tag bar (firms), a dial (bank)
+    s += "".join(f'<circle cx="{78 + i * 14}" cy="238" r="4" fill="{P["ink"]}"/>' for i in range(3))
+    s += f'<rect x="178" y="231" width="40" height="14" rx="3" fill="none" stroke="{P["ink"]}" stroke-width="2.5"/>'
+    s += (f'<path d="M127 138 A18 18 0 0 1 163 138" fill="none" stroke="{P["accent"]}" stroke-width="3" stroke-linecap="round"/>'
+          f'<line x1="145" y1="138" x2="154" y2="126" stroke="{P["accent"]}" stroke-width="3" stroke-linecap="round"/>')
+    s += '</g>'
+    s += _hero_caption(T, "ECONOMICS", P["accent"], ("Three parts, one", "loop: a lab"))
+    return s
+
+
 def _card_next(T: dict, X: dict) -> str:
     """A dashed slot: the prize still to be announced joins here."""
     cx = NEXT_W / 2
@@ -470,10 +526,10 @@ def _hero_foot(T: dict) -> str:
 
 def hero(name: str, T: dict, og: bool = False) -> str:
     X = HERO_EXTRA["dark" if T is THEMES["dark"] else "light"]
-    prizes = (_card_medicine, _card_physics, _card_chemistry, _card_literature, _card_peace)
-    row_w = len(prizes) * (CARD_W + CARD_GAP) + NEXT_W   # the row of cards, then the slot for the prize to come
+    prizes = (_card_medicine, _card_physics, _card_chemistry, _card_literature, _card_peace, _card_economics)
+    row_w = len(prizes) * CARD_W + (len(prizes) - 1) * CARD_GAP   # the six cards (the lab is complete: no slot to come)
     if og:   # the 1200 x 630 share image: full bleed, everything clear of the outer 40 px
-        # Five cards do not fit beside the text at a readable size, so the share image has two rows:
+        # Six cards do not fit beside the text at a readable size, so the share image has two rows:
         # the name on the left and the pill and credit on the right, then the cards across the full width.
         W, H, rx = 1200, 630, 0
         ws, gap = .64, 50                      # gap: room for the Medicine card's fibre above its card
@@ -495,7 +551,8 @@ def hero(name: str, T: dict, og: bool = False) -> str:
            "with a few lines of Greek capitals, broken off at its ragged edges and around two holes, with red square "
            "brackets where letters are lost: what survives. Peace: two rooms side by side, a judge's gavel on its block in "
            "warm light on the left, and on the right, in cool light, a table with a signed sheet and two empty chairs "
-           "facing each other. A smaller dashed slot holds the prize still to come: Economics on 12 October. Toy models, not research, not for lab or clinical use. Videos made "
+           "facing each other. Economics: ledger paper with three small boxes, households, firms and a bank, joined by "
+           "crimson arrows in a loop, and a row of dots above them with the last one hollow, the one to guess. Toy models, not research, not for lab or clinical use. Videos made "
            "with showtime, an open-source video studio for coding agents.")
     s = svg_open(W, H, "Nobel 2026 Lab: hands-on demos of this year’s Nobel Prizes", alt, T, extra_style=(
         ".pulse{animation:pulse 5s ease-in-out infinite}"
@@ -516,7 +573,7 @@ def hero(name: str, T: dict, og: bool = False) -> str:
     cx0, cy0, cs = cards
     s += f'<g transform="translate({cx0:g},{cy0:g}) scale({cs:g})">'
     s += _card_medicine(T, X)
-    for k, card in enumerate(prizes[1:] + (_card_next,), start=1):
+    for k, card in enumerate(prizes[1:], start=1):
         s += f'<g transform="translate({k * (CARD_W + CARD_GAP)},0)">' + card(T, X) + '</g>'
     s += '</g>'
     s += SVG_CLOSE
@@ -1717,6 +1774,17 @@ def icons() -> dict[str, str]:
         f'stroke-linejoin="round" stroke-linecap="round"/>'
         f'<line x1="44" y1="30" x2="44" y2="66" stroke="{slate}" stroke-width="4" stroke-linecap="round"/>'
         f'<circle cx="44" cy="46" r="7" fill="{brass}" stroke="{slate}" stroke-width="3"/>')
+    # economics (the Economics page's ledger green and crimson)
+    crim = "#C23B5C"
+    out["station-rate"] = wrap_icon("Icon: three small boxes joined by arrows in a loop",
+        f'<rect x="34" y="8" width="32" height="24" rx="5" fill="none" stroke="{slate}" stroke-width="5"/>'
+        f'<rect x="8" y="62" width="32" height="24" rx="5" fill="none" stroke="{slate}" stroke-width="5"/>'
+        f'<rect x="60" y="62" width="32" height="24" rx="5" fill="none" stroke="{slate}" stroke-width="5"/>'
+        f'<path d="M34 24 Q18 34 22 58 M44 74 H56 M78 58 Q84 36 68 28" fill="none" stroke="{crim}" stroke-width="5" stroke-linecap="round"/>')
+    out["station-spending"] = wrap_icon("Icon: a row of dots, the last one hollow, above a flat line",
+        f'<path d="M10 8 V86 H90" fill="none" stroke="{slate}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
+        + "".join(f'<circle cx="{x}" cy="{y}" r="6" fill="{crim}"/>' for x, y in ((20, 58), (34, 44), (48, 52), (62, 36), (74, 42)))
+        + f'<circle cx="86" cy="28" r="6" fill="none" stroke="{crim}" stroke-width="3.5" stroke-dasharray="4 3"/>')
     return out
 
 

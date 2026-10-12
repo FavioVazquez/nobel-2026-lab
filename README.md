@@ -2,13 +2,13 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
-    <img alt="Nobel 2026 Lab. Hands-on demos of this year's Nobel Prizes, one card per prize. Medicine: a nerve cell lit by a pulse of blue light from the tip of an optical fibre. Physics: strings of light sensors in dark ice, a particle track with a cone of blue light behind it, and the sensors near the track lit up. Chemistry: a left hand drawn solid orange and its mirror image, a right hand drawn hatched teal, on either side of a dashed mirror line, with three small orange molecules above the left hand and only one teal one above the right: one hand wins. Literature: a torn scrap of papyrus with a few lines of Greek capitals, broken off at its ragged edges and around two holes, with red square brackets where letters are lost. Peace: two rooms side by side, a judge's gavel on its block in warm light on the left, and on the right, in cool light, a table with a signed sheet and two empty chairs facing each other. A smaller dashed slot holds the prize still to come: Economics on 12 October. Toy models, not research, not for lab or clinical use. Videos made with showtime, an open-source video studio for coding agents." src="assets/hero-light.svg" width="100%">
+    <img alt="Nobel 2026 Lab. Hands-on demos of this year's Nobel Prizes, one card per prize. Medicine: a nerve cell lit by a pulse of blue light from the tip of an optical fibre. Physics: strings of light sensors in dark ice, a particle track with a cone of blue light behind it, and the sensors near the track lit up. Chemistry: a left hand drawn solid orange and its mirror image, a right hand drawn hatched teal, on either side of a dashed mirror line, with three small orange molecules above the left hand and only one teal one above the right: one hand wins. Literature: a torn scrap of papyrus with a few lines of Greek capitals, broken off at its ragged edges and around two holes, with red square brackets where letters are lost. Peace: two rooms side by side, a judge's gavel on its block in warm light on the left, and on the right, in cool light, a table with a signed sheet and two empty chairs facing each other. Economics: ledger paper with three small boxes, households, firms and a bank, joined by crimson arrows in a loop, and a row of dots above them with the last one hollow, the one to guess. Toy models, not research, not for lab or clinical use. Videos made with showtime, an open-source video studio for coding agents." src="assets/hero-light.svg" width="100%">
   </picture>
 </p>
 
 > **Educational demos made to show an open-source tool. Not research, and not for any lab or clinical use.**
 
-<p align="center"><b>Live:</b> <a href="https://faviovazquez.github.io/nobel-2026-lab/">the lab's site</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/medicine/video/interactive/">the Medicine video that asks</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/physics/video/interactive/">the Physics video that asks</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/physics/glashow/">a real 6 PeV event in 3D</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/chemistry/page/">the Chemistry page</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/chemistry/video/exports/nobel-2026-chemistry.mp4">the Chemistry video</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/literature/page/">the Literature page</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/literature/video/exports/nobel-2026-literature.mp4">the Literature video</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/peace/page/">the Peace page</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/peace/video/exports/nobel-2026-peace.mp4">the Peace video</a></p>
+<p align="center"><b>Live:</b> <a href="https://faviovazquez.github.io/nobel-2026-lab/">the lab's site</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/medicine/video/interactive/">the Medicine video that asks</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/physics/video/interactive/">the Physics video that asks</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/physics/glashow/">a real 6 PeV event in 3D</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/chemistry/page/">the Chemistry page</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/chemistry/video/exports/nobel-2026-chemistry.mp4">the Chemistry video</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/literature/page/">the Literature page</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/literature/video/exports/nobel-2026-literature.mp4">the Literature video</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/peace/page/">the Peace page</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/peace/video/exports/nobel-2026-peace.mp4">the Peace video</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/economics/page/">the Economics page</a> · <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/economics/video/exports/economics-2026-lab.mp4">the Economics video</a></p>
 
 <p align="center">
   <a href="#what-is-this"><b>What is this</b></a> ·
@@ -19,6 +19,7 @@
   <a href="#chemistry-the-stations"><b>Chemistry</b></a> ·
   <a href="#literature-the-stations"><b>Literature</b></a> ·
   <a href="#peace-the-stations"><b>Peace</b></a> ·
+  <a href="#economics-the-stations"><b>Economics</b></a> ·
   <a href="#what-is-real-and-what-is-a-toy"><b>Real or toy?</b></a> ·
   <a href="#rerun-it-yourself"><b>Rerun it</b></a> ·
   <a href="#glossary"><b>Glossary</b></a>
@@ -49,7 +50,7 @@ Every video in this lab, including the versions that stop and ask, was made with
 | Chemistry | Mirror-image molecules: Henri B. Kagan and Kenso Soai, for non-linear effects and autocatalysis in asymmetric synthesis (announced 7 October) | [2026/chemistry](2026/chemistry/README.md) | done: facts, claims ledger (39 claims), toy models, page and video |
 | Literature | Anne Carson, "for her bold and inventive oeuvre that, in playful dialogue with the classical tradition, has created new forms for contemporary literature" (announced 8 October) | [2026/literature](2026/literature/README.md) | done: facts, claims ledger (72 claims), the survival ledger, fragments, translators, the forms shelf, page and video; independent review done, findings fixed |
 | Peace | Navi Pillay, "for her efforts to promote peace and international law" (announced 9 October) | [2026/peace](2026/peace/README.md) | done: facts, claims ledger, how conflicts end, do agreements hold, page and video; independent review of the toys done, findings fixed |
-| Economics | to be announced on 12 October | none yet | coming |
+| Economics | Robert E. Hall and Michael Woodford, "for microeconomic foundations of macroeconomic stabilisation" (announced 12 October) | [2026/economics](2026/economics/README.md) | done: facts, claims ledger, set the rate, can you predict spending?, page and video; independent review of the toys done, findings fixed |
 
 The Nobel announcements run from 5 to 12 October 2026 ([nobelprize.org](https://www.nobelprize.org/prizes/medicine/2026/press-release/)). A folder is added only when its prize has been announced and its facts are sourced. The year index is in [2026/README.md](2026/README.md).
 
@@ -310,6 +311,45 @@ The 2026 Nobel Peace Prize went to Navi Pillay, "for her efforts to promote peac
 
 </details>
 
+## Economics: the stations
+
+The 2026 prize in economic sciences went to Robert E. Hall and Michael Woodford, "for microeconomic foundations of macroeconomic stabilisation". The film draws their ideas as a living diagram, and the two toys are a textbook model you can run and a test on real national accounts. We take no side on any policy, central bank or school of economics; the committee's words are quoted as its own, credited.
+
+<table>
+  <tr>
+    <td width="96" valign="top"><img src="assets/icons/station-rate.svg" alt="Icon: three small boxes joined by arrows in a loop" width="72"></td>
+    <td valign="top"><b>1. Set the rate</b> <i>(ready)</i><br>
+    The three-equation New Keynesian model of Woodford's 2003 book, with a textbook calibration: a spending burst, a cost shock under a weaker and a stronger rule (inflation +1.283 against +0.839 points on impact, the output gap -0.513 against -0.839 per cent), the condition on how strongly the rate must answer inflation, and a promise about the rate two years out, with the forward guidance puzzle as its stated limit. Pure simulation, no data, no forecast. Code and results: <a href="2026/economics/set-the-rate/README.md">set-the-rate</a>.</td>
+  </tr>
+  <tr>
+    <td width="96" valign="top"><img src="assets/icons/station-spending.svg" alt="Icon: a row of dots, the last one hollow, above a flat line" width="72"></td>
+    <td valign="top"><b>2. Can you predict spending?</b> <i>(ready)</i><br>
+    Hall's test on BEA's public-domain US national accounts: spending and income two to four quarters back explain 11.5 % of next quarter's change in spending on non-durables and services per person (1953Q1 to 2019Q4) and 2.9 % when 2020 to 2026 are included; the share of income that goes to households who spend as they earn is estimated only very uncertainly on these data. With a simulated control and tests against statsmodels. Code and results: <a href="2026/economics/can-you-predict-spending/README.md">can-you-predict-spending</a>.</td>
+  </tr>
+  <tr>
+    <td width="96" valign="top"><img src="assets/icons/station-page.svg" alt="Icon: a web page with a slider" width="72"></td>
+    <td valign="top"><b>3. The interactive page</b> <i>(ready)</i><br>
+    Guess first, then see: how much of next quarter's spending change the past predicts, what share of income goes to households who spend as they earn, and three questions about the lab. <a href="https://faviovazquez.github.io/nobel-2026-lab/2026/economics/page/">Try it online</a>, or open <a href="2026/economics/page/index.html"><code>2026/economics/page/index.html</code></a> from a copy.</td>
+  </tr>
+  <tr>
+    <td width="96" valign="top"><img src="assets/icons/station-video.svg" alt="Icon: a video frame with a play button" width="72"></td>
+    <td valign="top"><b>4. The video</b> <i>(ready)</i><br>
+    A 2:48 explainer drawn as a living diagram: Hall's question, the older machine, the three equations wired in a loop, and the lab run four ways. It asks no questions. Every fact in it comes from the <a href="2026/economics/CLAIMS.md">claims ledger</a>. <a href="2026/economics/video/exports/economics-2026-lab.mp4">Watch the MP4</a>; files and credits: <a href="2026/economics/video/README.md">video</a>.</td>
+  </tr>
+</table>
+
+<details open>
+<summary><b>Station 1 in pictures: a cost shock under two rules</b></summary>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="2026/economics/set-the-rate/results/cost_push_shock_dark.png">
+    <img alt="Three small charts of the textbook model after a cost shock, quarters 0 to 12: inflation, the output gap and the policy rate, each for the weaker rule and the stronger rule. Inflation rises less and the output gap falls further under the stronger rule." src="2026/economics/set-the-rate/results/cost_push_shock_light.png" width="720">
+  </picture>
+</p>
+
+</details>
+
 ## What is real, and what is a toy
 
 <table>
@@ -320,7 +360,7 @@ The 2026 Nobel Peace Prize went to Navi Pillay, "for her efforts to promote peac
   </tr>
   <tr>
     <td valign="top"><b>Every prize</b></td>
-    <td valign="top">The prize, the people, the dates and the papers. Every sentence is sourced in the prize's FACTS.md and checked in its CLAIMS.md: <a href="2026/medicine/CLAIMS.md">Medicine</a>, <a href="2026/physics/CLAIMS.md">Physics</a>, <a href="2026/chemistry/CLAIMS.md">Chemistry</a>, <a href="2026/literature/CLAIMS.md">Literature</a>, <a href="2026/peace/CLAIMS.md">Peace</a>.</td>
+    <td valign="top">The prize, the people, the dates and the papers. Every sentence is sourced in the prize's FACTS.md and checked in its CLAIMS.md: <a href="2026/medicine/CLAIMS.md">Medicine</a>, <a href="2026/physics/CLAIMS.md">Physics</a>, <a href="2026/chemistry/CLAIMS.md">Chemistry</a>, <a href="2026/literature/CLAIMS.md">Literature</a>, <a href="2026/peace/CLAIMS.md">Peace</a>, <a href="2026/economics/CLAIMS.md">Economics</a>.</td>
     <td valign="top">Every model we built. The outputs are for learning. They are not checked against experiments, and they must not be used to plan an experiment, a device or a treatment. Each model's README lists every simplification.</td>
   </tr>
   <tr>
@@ -347,6 +387,11 @@ The 2026 Nobel Peace Prize went to Navi Pillay, "for her efforts to promote peac
     <td valign="top"><b>Peace</b></td>
     <td valign="top">The committee's words, quoted and credited; her career and the court record, from the ICTR's judgments, UN documents and the ICJ's reports; the open UCDP data on how conflict episodes ended and on peace agreements, as UCDP coded them.</td>
     <td valign="top">Not a model but our own counts on open data: agreement and ceasefire counted together, "clear outcome", the clock that starts at the first quiet year, groups of linked conflicts. Global totals only, correlation, not cause. They do not say why a conflict ended or what any agreement, court or person caused.</td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Economics</b></td>
+    <td valign="top">The committee's words, quoted and credited; the prize, the laureates and the papers; US national accounts from BEA's public bulk files, as BEA published them.</td>
+    <td valign="top">A textbook model with an illustrative calibration, not fitted to any economy, and our own regressions on one data set. They show what the model does and what one test finds; they are not forecasts or advice and say nothing about what any central bank should do.</td>
   </tr>
 </table>
 
@@ -376,7 +421,8 @@ Everything runs on an ordinary laptop processor, with no GPU and no accounts. Af
 - **Chemistry**, Kagan's curve, Soai's amplifier and the mirror race: each runs in seconds, from its own folder; the steps are in [2026/chemistry](2026/chemistry/README.md#rerun-and-check).
 - **Literature**, the survival ledger, the fragments, the translators and the forms shelf: each runs in seconds, from its own folder; the steps are in [2026/literature](2026/literature/README.md#rerun-and-check).
 - **Peace**, how conflicts end and do agreements hold: each runs in seconds, from its own folder; the steps are in [2026/peace](2026/peace/README.md#rerun-and-check).
-- The pages need nothing: open `2026/medicine/page/index.html`, `2026/physics/page/index.html`, `2026/chemistry/page/index.html`, `2026/literature/page/index.html` or `2026/peace/page/index.html` in a browser.
+- **Economics**, set the rate and can you predict spending?: each runs in under a minute, from its own folder; the steps are in [2026/economics](2026/economics/README.md#rerun-and-check).
+- The pages need nothing: open `2026/medicine/page/index.html`, `2026/physics/page/index.html`, `2026/chemistry/page/index.html`, `2026/literature/page/index.html`, `2026/peace/page/index.html` or `2026/economics/page/index.html` or `2026/economics/page/index.html` in a browser.
 - Check every link, picture and source in this repository, offline: `python3 tools/check_links.py`
 - Rebuild the pictures: `python3 tools/make_diagrams.py`
 
@@ -411,6 +457,10 @@ Everything runs on an ordinary laptop processor, with no GPU and no accounts. Af
 | UCDP | The Uppsala Conflict Data Program, which records armed conflicts worldwide. It counts an armed conflict from 25 battle-related deaths in a year. |
 | Low activity | UCDP's outcome when the fighting falls below 25 battle-related deaths a year with no agreement and no victory: the conflict fades out. |
 | Kaplan-Meier | A way to draw how many items "survive" over time when some are still being watched when the data stop. |
+| Output gap | Actual output minus the output the economy would produce if prices were fully flexible (the committee's wording). |
+| Natural rate | The interest rate that neither speeds nor slows spending; in the model, the rate that would hold if prices were fully flexible. |
+| Forward guidance | Announcing a path for future interest rates. The forward guidance puzzle: in the simple model, promises about rates far ahead have implausibly strong effects today. |
+| Hand-to-mouth | Households whose spending tracks their current income. |
 | Judge ad hoc | A judge chosen by one party for one case at the International Court of Justice, beside the Court's 15 elected members. |
 
 ## Licence and credit
@@ -434,5 +484,11 @@ Data and media used by the Peace demos:
 - Uppsala Conflict Data Program, CC BY 4.0. UCDP Conflict Termination Dataset v.4 2024: Kreutz, Joakim (2010) How and When Armed Conflicts End: Introducing the UCDP Conflict Termination Dataset. Journal of Peace Research 47(2): 243-250. UCDP Peace Agreement Dataset 22.2: Pettersson, Therese; Stina Högbladh & Magnus Öberg (2019) Organized violence, 1989-2018 and peace agreements. Journal of Peace Research 56(4); codebook: Högbladh, Stina (2022) UCDP Peace Agreement Dataset Codebook v 22.1.
 - The Nobel Prize API v2.1, CC0; the Norwegian Nobel Committee's press release is quoted with attribution.
 - In the video: footage "Após 20 anos da Conferência de Viena, direitos humanos são mais importantes do que nunca, diz ONU", ONU Brasil / UN Human Rights (2013), CC BY 3.0, via Wikimedia Commons (an excerpt, English captions ours); photo by Eric Bridiers, U.S. Mission Geneva (2012), CC BY 2.0, via Wikimedia Commons, cropped; music: Grieg, Holberg Suite, "Air", United States Marine Band, public domain. The full credits are in [the video's README](2026/peace/video/README.md#credits).
+
+Data and media used by the Economics demos:
+
+- US national accounts: BEA's NIPA bulk files (NipaDataQ.txt and SeriesRegister.txt, release of 30 September 2026), public domain per BEA FAQ 147, extracted into small CSVs and sha256-pinned; real non-durables and services per person, Fisher-chained from BEA's quantity indexes.
+- The Nobel Prize API v2.1, CC0; the Royal Swedish Academy of Sciences' press release, popular information and scientific background are quoted with attribution.
+- In the video: music by Erik Satie, "Gymnopédie No. 1", performed by Robin Alciatore for Musopen, public domain (via Wikimedia Commons); voice synthetic, Kokoro-82M (bm_george), Apache-2.0.
 
 Every video here was made with [showtime](https://github.com/FavioVazquez/showtime), an open-source video studio for coding agents.

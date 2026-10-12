@@ -1,0 +1,5 @@
+# Same pins as the peace toys and the economics kit (BSD-licensed, MIT-compatible). Python 3.11. No pandas, no
+# statsmodels: the regressions are written in NumPy and checked against stored statsmodels 0.14.4 results.
+numpy==1.26.4
+matplotlib==3.9.2
+pytest==8.3.3

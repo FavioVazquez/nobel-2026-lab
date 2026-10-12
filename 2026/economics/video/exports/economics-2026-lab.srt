@@ -1,0 +1,290 @@
+1
+00:00:00,430 --> 00:00:02,520
+Here is one household's spending,
+
+2
+00:00:02,651 --> 00:00:03,800
+quarter by quarter.
+
+3
+00:00:04,100 --> 00:00:05,747
+Try to predict the next one.
+
+4
+00:00:07,003 --> 00:00:09,571
+This year's economics prize went to Robert
+
+5
+00:00:09,637 --> 00:00:11,173
+Hall and Michael Woodford,
+
+6
+00:00:11,473 --> 00:00:13,664
+for separate pieces of one idea.
+
+7
+00:00:14,113 --> 00:00:16,443
+Robert Hall turned the question around.
+
+8
+00:00:16,717 --> 00:00:19,288
+A household that looks
+ahead changes spending
+
+9
+00:00:19,338 --> 00:00:20,893
+only when news arrives.
+
+10
+00:00:21,177 --> 00:00:22,824
+And news can't be predicted,
+
+11
+00:00:22,894 --> 00:00:24,423
+so neither can the change.
+
+12
+00:00:25,244 --> 00:00:28,674
+In 1978 he tested it on US data:
+
+13
+00:00:28,934 --> 00:00:30,581
+little predicted the change.
+
+14
+00:00:30,824 --> 00:00:32,161
+It became a benchmark.
+
+15
+00:00:32,644 --> 00:00:34,840
+Then, with Mishkin, he measured the
+
+16
+00:00:34,903 --> 00:00:37,021
+exceptions: in their sample,
+
+17
+00:00:37,134 --> 00:00:39,546
+about a fifth of spending tracked income.
+
+18
+00:00:40,383 --> 00:00:41,933
+That was Hall's piece.
+
+19
+00:00:42,183 --> 00:00:44,536
+Woodford's starts with an older machine.
+
+20
+00:00:45,015 --> 00:00:48,015
+Older models ran on
+links between big totals.
+
+21
+00:00:48,400 --> 00:00:50,988
+In the oil crises of
+the nineteen seventies,
+
+22
+00:00:51,094 --> 00:00:53,035
+the committee writes, they broke.
+
+23
+00:00:53,709 --> 00:00:56,739
+Robert Lucas argued
+models needed foundations:
+
+24
+00:00:57,043 --> 00:00:58,590
+the decisions themselves.
+
+25
+00:00:59,910 --> 00:01:01,930
+Woodford, with Julio Rotemberg,
+
+26
+00:01:02,085 --> 00:01:04,261
+building on Taylor, Calvo and others,
+
+27
+00:01:04,463 --> 00:01:06,110
+put it into three equations.
+
+28
+00:01:07,034 --> 00:01:09,455
+One. Households look ahead:
+
+29
+00:01:09,505 --> 00:01:11,805
+they spend more today
+when the real rate is
+
+30
+00:01:11,852 --> 00:01:14,326
+below the natural rate,
+which neither speeds
+
+31
+00:01:14,376 --> 00:01:15,705
+nor slows spending.
+
+32
+00:01:16,135 --> 00:01:17,586
+Knut Wicksell's idea.
+
+33
+00:01:18,435 --> 00:01:20,805
+Two. Changing prices is costly,
+
+34
+00:01:20,985 --> 00:01:22,867
+so firms set them looking ahead.
+
+35
+00:01:23,245 --> 00:01:25,868
+Inflation rises when output runs above its
+
+36
+00:01:25,918 --> 00:01:26,918
+natural level:
+
+37
+00:01:27,006 --> 00:01:28,043
+the output gap.
+
+38
+00:01:28,892 --> 00:01:31,186
+Three. The central bank follows a rule:
+
+39
+00:01:31,292 --> 00:01:33,709
+when inflation rises, raise the rate.
+
+40
+00:01:34,568 --> 00:01:38,190
+Wire them up, and each
+part moves the next.
+
+41
+00:01:39,444 --> 00:01:40,934
+Now it's a laboratory.
+
+42
+00:01:41,194 --> 00:01:42,841
+Send in a burst of spending:
+
+43
+00:01:42,924 --> 00:01:44,474
+households want more, now.
+
+44
+00:01:45,455 --> 00:01:47,835
+The gap opens, inflation rises,
+
+45
+00:01:47,885 --> 00:01:49,297
+the rule lifts the rate,
+
+46
+00:01:49,405 --> 00:01:50,549
+and spending cools.
+
+47
+00:01:51,715 --> 00:01:53,775
+An energy-cost shock hits firms:
+
+48
+00:01:54,035 --> 00:01:55,945
+inflation up, output down.
+
+49
+00:01:56,195 --> 00:01:58,019
+The rule still raises the rate.
+
+50
+00:01:59,028 --> 00:02:00,028
+Turn the rule up:
+
+51
+00:02:00,098 --> 00:02:01,768
+inflation rises less;
+
+52
+00:02:01,907 --> 00:02:02,966
+the dip is deeper.
+
+53
+00:02:04,103 --> 00:02:07,056
+If inflation rises one
+point and the rate less
+
+54
+00:02:07,105 --> 00:02:09,843
+than one point, the
+model loses its anchor:
+
+55
+00:02:10,153 --> 00:02:11,798
+many paths are possible.
+
+56
+00:02:13,160 --> 00:02:15,000
+The wires carry words too.
+
+57
+00:02:15,050 --> 00:02:16,590
+To people who look ahead,
+
+58
+00:02:16,753 --> 00:02:18,150
+a promise is news.
+
+59
+00:02:18,486 --> 00:02:20,808
+A lower rate promised two years out moves
+
+60
+00:02:20,858 --> 00:02:21,858
+prices now.
+
+61
+00:02:23,049 --> 00:02:24,873
+Hold the rate still until then,
+
+62
+00:02:24,923 --> 00:02:26,389
+and in this simple model,
+
+63
+00:02:26,439 --> 00:02:27,939
+the further out the promise,
+
+64
+00:02:27,989 --> 00:02:29,470
+the bigger today's effect,
+
+65
+00:02:29,520 --> 00:02:30,629
+implausibly so:
+
+66
+00:02:30,919 --> 00:02:32,566
+the forward guidance puzzle.
+
+67
+00:02:33,819 --> 00:02:35,519
+A laboratory, not an oracle:
+
+68
+00:02:35,757 --> 00:02:38,195
+it leaves out the floor
+on rates near zero,
+
+69
+00:02:38,245 --> 00:02:40,769
+investment, and any real central bank.
+
+70
+00:02:41,139 --> 00:02:44,551
+Its core: an economy built
+from decisions that look ahead.
